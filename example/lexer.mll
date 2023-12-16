@@ -14,6 +14,7 @@ let whitespace = ' ' | '\t'
 let newline = "\r\n" | '\r' | '\n'
 let ident = ['A'-'Z' 'a'-'z' '0'-'9' '_']*
 
+
 rule next_token = parse
   | eof { EOF }
   | whitespace+
@@ -26,6 +27,12 @@ rule next_token = parse
   (* YOUR TOKENS HERE... *)
   | '(' { LPAR }
   | ')' { RPAR }
+  (* /* | '[' { LBRA } */ *)
+  (* /* | ']' { RBRA } */ *)
+  (* /* | '{' { LCUR } */ *)
+  (* /* | '}' { RCUR } */ *)
+  (* /* | '*' { STAR } */ *)
+  (* /* | ',' { COMMA }	 */ *)
 
   (* lex identifiers last, so keywords are not lexed as identifiers *)
   | ident as atom { ATOM atom }

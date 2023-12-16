@@ -1,5 +1,7 @@
 (ocamllex (modules lexer))
+(ocamllex (modules sentenceLexer))
 (menhir (modules menhir_parser))
+(menhir (modules sentenceParser))
 
 (library
   (name example)
@@ -10,3 +12,4 @@
   (preprocess (pps ppx_jane))
   (inline_tests)
 )
+
