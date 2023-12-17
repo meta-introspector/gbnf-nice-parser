@@ -1,29 +1,17 @@
-(lang dune 1.10)
-
+(lang dune 3.12)
 (using menhir 2.0)
-
 (generate_opam_files true)
-
-(name nice_parser)
-
+(name gbnf_nice_parser)
 (version 1.0.0)
-
-(license MIT)
-
+(license GPL)
 (source
- (github smolkaj/nice-parser))
-
-(authors "Steffen Smolka <steffen.smolka@gmail.com>")
-
-(maintainers "Steffen Smolka <steffen.smolka@gmail.com>")
-
-(documentation "https://smolkaj.github.io/nice-parser/nice_parser/")
-
+ (github meta-introspector/nice-parser))
+(authors "Mike Dupont <jmikedupont2@gmail.com>")
 (package
- (name nice_parser)
- (synopsis "Nice parsers without the boilerplate")
+ (name gbnf_nice_parser)
+ (synopsis "Using Nice parsers without the boilerplate to parse gbnf")
  (description
-  "Nice_parser wraps your {menhir, ocamlyacc}-generated parser in a sane interface, eliminating boilerplate code.")
+  "GBNF_Nice_parser wraps your {menhir, ocamlyacc}-generated parser in a sane interface, eliminating boilerplate code.")
  (depends
   (ocaml
    (>= 4.08.0))
