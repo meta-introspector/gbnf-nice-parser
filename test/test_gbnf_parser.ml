@@ -1,100 +1,55 @@
 open Gbnf_parser
 
 (* let open Segment in *)
-  (* let c = Error.new_category() in *)
-  (* Read and segment the file. *)
-  (* let segments : (tag * string * Lexing.lexbuf) list = segment filename in *)
-  (* Process the segments, two by two. We expect one segment to contain
-     a non-empty series of sentences, and the next segment to contain
-     free-form text. *)
-  (* let rec loop accu segments = *)
-  (*   match segments with *)
-  (*   | [] -> *)
-  (*       List.rev accu *)
-  (*   | (Whitespace, comments, _) :: segments -> *)
-  (*       loop (mkcomment comments accu) segments *)
-  (*   | (Segment, _, lexbuf) :: segments -> *)
-(*       (\* Read a series of located sentences. *\) *)
+ (* let c = Error.new_category() in *)
+ (* Read and segment the file. *)
+ (* let segments : (tag * string * Lexing.lexbuf) list = segment filename in *)
+ (* Process the segments, two by two. We expect one segment to contain
+   a non-empty series of sentences, and the next segment to contain
+   free-form text. *)
+ (* let rec loop accu segments = *)
+ (*  match segments with *)
+ (*  | [] -> *)
+ (*    List.rev accu *)
+ (*  | (Whitespace, comments, _) :: segments -> *)
+ (*    loop (mkcomment comments accu) segments *)
+ (*  | (Segment, _, lexbuf) :: segments -> *)
+(*    (\* Read a series of located sentences. *\) *)
 
 
 let () =
-  let inputstr = {codesample|
-root  ::= (expr "=" ws term "\n")+
-expr  ::= term ([-+*/] term)*
-term  ::= ident | num | "(" ws expr ")" ws
-ident ::= [a-z] [a-z0-9_]* ws
-num   ::= [0-9]+ ws
-ws    ::= [ \t\n]* |codesample} in
-  let lexbuf = Lexing.from_string inputstr in
-  (* let lexbuf =  Lexing.lexbuf "Hello world " in *)
-  match SentenceParser.entry SentenceLexer.lex lexbuf with
-  | exception Parsing.Parse_error ->
-     Error.error
-       [Positions.cpos lexbuf]
-       "ill-formed sentence."
-  | elements ->
-     (print_endline (Batteries.dump elements));
-     
-     (* [elements] is a list of located raw sentences or comments.
-        Validate it. Any sentences that do not pass validation are
-               removed (and error messages are emitted). In an effort to
-               be robust, we continue. If there remain zero sentences,
-               then this entry is removed entirely. *)
-     (* validate_entry c  *)
-     (* let elements = elements in *)
-            (* In principle, we should now find a segment of whitespace
-               followed with a segment of text. By construction, the two
-               kinds of segments alternate. *)
-  (*    match segments with *)
-  (*           | (Whitespace, delimiter, _) :: *)
-  (*             (Segment, message, _) :: *)
-  (*             segments -> *)
-  (*               if count_things elements = 0 then *)
-  (*                 (\* There remain zero sentences. Skip this entry. *\) *)
-  (*                 loop accu segments *)
-  (*               else *)
-  (*                 (\* Accumulate this entry. *\) *)
-  (*                 let run = { elements; delimiter; message } in *)
-  (*                 loop (Thing run :: accu) segments *)
-  (*           | [] *)
-  (*           | [ _ ] -> *)
-  (*               Error.error *)
-  (*                 (Positions.one (Lexing.lexeme_end_p lexbuf)) *)
+ let inputstr = {codesample|
+letter ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" 
+digit ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" 
+symbol ::= "[" | "]" | "{" | "}" | "(" | ")" | "<" | ">" | "'" | "=" | "|" | "." | "," | ";" | "-" | "+" | "*" | "?" | "\n" | "\t" | "\r" 
+character ::= letter | digit | symbol | "_" | " " 
+identifier ::= letter ( letter | digit | "_" )
+S ::= ( " " | "\n" | "\t" | "\r" )
+terminal ::= "'" character "'" ( character "'" ) "'"
+terminator ::= (";" | ".")
+term ::= "(" S rhs S ")" | "[" S rhs S "]" | "{" S rhs S "}" | terminal | identifier 
+factor ::= term S "?" | term S "*" | term S "+" | term S "-" S term | term S 
+concatenation ::= ( S factor S "," ? ) + 
+alternation ::= ( S concatenation S "|" ? ) + 
+rhs ::= alternation 
+lhs ::= identifier 
+rule ::= lhs S "=" S rhs S terminator 
+root ::= ( S rule S ) * 
+                 |codesample} in
 
-  (*           | (Segment, _, _) :: _ *)
-  (*           | (Whitespace, _, _) :: (Whitespace, _, _) :: _ -> *)
-  (*               (\* Should not happen, thanks to the alternation between the *)
-  (*                  two kinds of segments. *\) *)
-  (*               assert false *)
-  (* in *)
-  (* let runs = stats (loop [] segments) in *)
-  (* if strict then Error.exit_if c; *)
-  (* runs *)
-
-
-(* let process (line : string) = *)
-(*   let linebuf = Lexing.from_string line in *)
-(*   try *)
-(*     (\* Run the parser on this line of input. *\) *)
-
-(*   with *)
-(*   | Lexer.Error msg -> *)
-(*   | Parser.Error -> *)
-(* let process (optional_line : string option) = *)
-(*   match optional_line with *)
-(*   | None -> *)
-(*       () *)
-(*   | Some line -> *)
-(*       process line *)
-
-(* let rec repeat channel = *)
-(*   (\* Attempt to read one line. *\) *)
-(*   let optional_line, continue = SentenceLexer.lex channel in *)
-(*   process optional_line; *)
-(*   if continue then *)
-(*     repeat channel *)
-  
-(* let () = *)
-(*   repeat (Lexing.from_channel stdin) *)
-
-
+ let lexbuf = Lexing.from_string inputstr in
+ match SentenceParser.entry SentenceLexer.lex lexbuf with
+ | exception Parsing.Parse_error ->
+ Error.error
+ [Positions.cpos lexbuf]
+ "ill-formed sentence."
+ | elements ->
+ (print_endline (Batteries.dump elements));
+ | exception e ->
+ let msg = Printexc.to_string e in
+ let curr = lexbuf.Lexing.lex_curr_p in
+ let line = curr.Lexing.pos_lnum in
+ let cnum = curr.Lexing.pos_cnum - curr.Lexing.pos_bol in
+ print_endline (Batteries.dump ["error",e, msg, lexbuf, line,cnum])
+ ;
+ 

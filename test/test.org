@@ -1,0 +1,492 @@
+
+influenced_architecture(a, d)
+Architecture a is influenced by declaration d
+
+Extensions
+
+Modeling composite declarations from multiple individuals
+Assigning quantifiers or values to model power differentials between declarations
+Showing propagation of a declaration’s influence through architectural components
+
+Goal
+
+Formalize the sociopolitical processes and mechanisms by which state actors shape and control computer system architectures, integrating individual human decisions and declarations as key drivers of this influence.
+
+The formalism sets up a rigorous framework to reason about the interplay between social, political, and technical control flows in this domain. Let me know if you have any other questions!
+[11:41 AM]
+that is a starting point to understand our context
+[11:42 AM]
+dont know if i can share this https://claude.ai/chat/b26f749d-8fe7-480f-8bf0-78a3c4388209
+Claude
+Talk to Claude, an AI assistant from Anthropic
+￼
+[11:42 AM]
+ok back to caml
+￼
+Mike D. — Today at 11:45 AM
+basically bnf grammars are similar to this q leanring @Deadsg https://chat.openai.com/share/dc9e1d49-dec0-40c6-890d-f381f6166ec0
+ChatGPT
+A conversational AI system that listens, learns, and challenges
+￼
+[11:45 AM]
+so q learning can be related to the q stuff you were working on
+￼
+Bart — Today at 11:51 AM
+Claude was a nogo
+￼
+1
+[11:52 AM]
+You might have to copy pasta
+[11:54 AM]
+Ok, read through those briefly
+￼
+Mike D. — Today at 11:54 AM
+https://github.com/meta-introspector/time/issues/2
+GitHub
+Continuations and Authoritarian Control
+ · Issue #2 · meta-introspe...
+Continuations and Authoritarian Control Pasted content 14.77 KB • 99 extracted lines M You raise thoughtful perspectives exploring the complex interplay between technology, governance, and societal...
+￼
+￼
+Deadsg — Today at 11:54 AM
+I have a functinoal q learning loop already
+[11:55 AM]
+was very hard to get working
+￼
+Mike D. — Today at 11:55 AM
+Well a grammar a ebnf grammar basically defines the structure of the Q architecture
+[11:55 AM]
+It's not the same but it's similar and it's application
+￼
+Deadsg — Today at 12:11 PM
+in the q loop the q table does that exact thing
+￼
+1
+￼
+Mike D. — Today at 12:11 PM
+So when we get this BNF compiler working we can then translate the grammar into a q table
+[12:11 PM]
+Basically pre-train the table
+￼
+Mike D. — Today at 12:19 PM
+https://repo.or.cz/sqlgg.git lifting terms from this sql grammar
+[12:19 PM]
+also menir can generate text based on the grammar as well
+[12:19 PM]
+so we can use it to generate test data for training neural networks on the fly
+￼
+Bart — Today at 12:20 PM
+￼
+￼
+Mike D. — Today at 12:23 PM
+so the more abstract the grammar, like q or bnf, the harder it is to generate, because like integration in math it is like the 3 derivative
+￼
+Bart — Today at 12:23 PM
+RIght
+[12:24 PM]
+maybe specific tuned AI's replacing code that would be too stilted that could be refined to get some outputs
+[12:24 PM]
+or even prompts
+[12:25 PM]
+I saw that there was interresting output from Mark and your prompts
+￼
+Mike D. — Today at 12:26 PM
+yes, turning code into grammars and back, this is the idea of the combinators
+[12:26 PM]
+I read today somewhere there is the mark of the beast combinator for haskell but i cannot find it for  @Mysticmarks (edited)
+￼
+Bart — Today at 12:34 PM
+https://hackage.haskell.org/packages/
+￼
+Mike D. — Today at 12:35 PM
+grep -o  -P -e '"([^A-Z0-9a-z"]+)"' ebnf.ebnf  | sort -u | xargs echo
+        |         |    |     |  ' ( ) * + , - . ; < = > ? [ ] _ { | }
+[12:36 PM]
+that extracts the non char symbols out of a gbnf grammar using grep
+￼
+Bart — Today at 12:38 PM
+somethings a little off cause it has extra pipes and whitespace but you can sort unique or otherway round
+[12:39 PM]
+that still leaves all the different? whitespaces
+￼
+Mike D. — Today at 12:42 PM
+yes the extra pipe with spaces around them
+[12:42 PM]
+anyway, i added more tokens here
+[12:43 PM]
+https://github.com/meta-introspector/gbnf-nice-parser/blob/main/lib/sentenceLexer.mll#L74
+GitHub
+gbnf-nice-parser/lib/sentenceLexer.mll at main · meta-introspector/...
+Nice parsers in OCaml without the boilerplate. Contribute to meta-introspector/gbnf-nice-parser development by creating an account on GitHub.
+￼
+[12:43 PM]
+lifting from the sql, now getting a parse error not a lex error
+[12:43 PM]
+wow my screen is so huge
+￼
+[12:44 PM]
+￼
+[12:44 PM]
+dune test
+File "test/dune", line 2, characters 7-23:
+2 |  (name test_gbnf_parser)
+           ^^^^^^^^^^^^^^^^
+Fatal error: exception Gbnf_parser.SentenceParser.MenhirBasics.Error
+[12:44 PM]
+so we can run dune test and get some error, now to add in a catch
+￼
+@Mike D.
+I read today somewhere there is the mark of the beast combinator for haskell but i cannot find it for @Mysticmarks (edited)
+￼
+Mysticmarks — Today at 1:03 PM
+LMAO
+￼
+Bart — Today at 1:05 PM
+oh Mark of the beast, got it
+[1:07 PM]
+Oh, I was reading how to see what is installed and found all these under OPAM
+￼
+￼
+1
+[1:09 PM]
+Are we decompiling?
+￼
+Mike D. — Today at 1:17 PM
+wow mark, chatgpt and 
+
+Rate this interaction.
+TASK:
+convert this grammar into ocaml menhir mly
+```
+letter ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" 
+digit ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" 
+symbol ::= "[" | "]" | "{" | "}" | "(" | ")" | "<" | ">" | "'" | "=" | "|" | "." | "," | ";" | "-" | "+" | "*" | "?" | "\n" | "\t" | "\r" 
+character ::= letter | digit | symbol | "_" | " " 
+identifier ::= letter ( letter | digit | "_" )
+S ::= ( " " | "\n" | "\t" | "\r" )
+terminal ::= "'" character "'" ( character "'" ) "'"
+terminator ::= (";" | ".")
+term ::= "(" S rhs S ")" | "[" S rhs S "]" | "{" S rhs S "}" | terminal | identifier 
+factor ::= term S "?" | term S "*" | term S "+" | term S "-" S term | term S 
+concatenation ::= ( S factor S "," ? ) + 
+alternation ::= ( S concatenation S "|" ? ) + 
+rhs ::= alternation 
+lhs ::= identifier 
+rule ::= lhs S "=" S rhs S terminator 
+root ::= ( S rule S ) * 
+```
+OUTPUT1: ```
+%token <char> LETTER
+%token <char> DIGIT
+%token <char> SYMBOL
+%token <char> CHAR
+%token <string> IDENTIFIER
+%token <string> S
+%token <string> TERMINAL
+%token <string> TERMINATOR
+
+%start <rule> start %%
+
+rule: 
+  | LHS S "=" S RHS S TERMINATOR { $4 }
+
+LHS: 
+  | IDENTIFIER {}
+
+RHS: 
+  | ALTERNATION {}
+
+ALTERNATION: 
+  | (S CONCATENATION S "|" ? )+ { $2 }
+
+CONCATENATION: 
+  | (S FACTOR S "," ? )+ { $2 }
+
+FACTOR: 
+  | TERM S "?" { Expr.star ($1) }
+  | TERM S "*" { Expr.mul ($1) }
+  | TERM S "+" { Expr.add ($1) }
+  | TERM S "-" S TERM { Expr.sub ($1 $3) }
+  | TERM S { $1 }
+
+TERM: 
+  | "(" S RHS S ")" {}
+  | "[" S RHS S "]" {}
+  | "{" S RHS S "}" {}
+  | TERMINAL {}
+  | IDENTIFIER { Var ($1) }
+
+TERMINAL: 
+  | "'" CHAR "'" (CHAR "'" )"'" { Str.from_string ([ $2, $4 ]) }
+
+CHAR: 
+  | LETTER {}
+  | DIGIT {}
+  | SYMBOL {}
+  | "_" {}
+  | " " {}
+
+LETTER: 
+  | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" {}
+
+DIGIT: 
+  | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" {}
+
+SYMBOL: 
+  | "[" | "]" | "{" | "}" | "(" | ")" | "<" | ">" | "'" | "=" | "|" | "." | "," | ";" | "-" | "+" | "*" | "?" | "\n" | "\t" | "\r" {}
+
+S: 
+  | " " | "\n" | "\t" | "\r" {}
+
+TERMINATOR: 
+  | ";" | "." {}
+```
+chatgpt :
+```
+%{
+open Parsing
+%}
+
+%token <char> LETTER
+%token <char> DIGIT
+%token <char> SYMBOL
+%token UNDERSCORE SPACE NEWLINE TAB CARRIAGE_RETURN
+%token TERMINAL_IDENTIFIER TERMINAL_STRING
+%token <char> TERMINATOR
+%token <char> SEMICOLON PERIOD
+%token <char> QUESTION ASTERISK PLUS MINUS COMMA PIPE
+
+%token EOF
+
+%start <unit> root
+
+%%
+
+letter:
+  | 'A' .. 'Z' | 'a' .. 'z' { $1 }
+
+digit:
+  | '0' .. '9' { $1 }
+
+symbol:
+  | '[' { $1 }
+  | ']' { $1 }
+  | '{' { $1 }
+  | '}' { $1 }
+  | '(' { $1 }
+  | ')' { $1 }
+  | '<' { $1 }
+  | '>' { $1 }
+  | '\'' { $1 }
+  | '=' { $1 }
+  | '|' { $1 }
+  | '.' { $1 }
+  | ',' { $1 }
+  | ';' { $1 }
+  | '-' { $1 }
+  | '+' { $1 }
+  | '*' { $1 }
+  | '?' { $1 }
+  | '\n' { $1 }
+  | '\t' { $1 }
+  | '\r' { $1 }
+
+character:
+  | letter { $1 }
+  | digit { $1 }
+  | symbol { $1 }
+  | '_' { $1 }
+  | ' ' { $1 }
+
+identifier:
+  | letter (letter | digit | '_') { $1 }
+
+S:
+  | ' ' { () }
+  | '\n' { () }
+  | '\t' { () }
+  | '\r' { () }
+
+terminal:
+  | '\'' character '\'' { $2 }
+
+terminator:
+  | ';' { $1 }
+  | '.' { $1 }
+
+term:
+  | '(' S rhs S ')' { $3 }
+  | '[' S rhs S ']' { $3 }
+  | '{' S rhs S '}' { $3 }
+  | terminal { $1 }
+  | identifier { $1 }
+
+factor:
+  | term S '?' { $1 }
+  | term S '*' { $1 }
+  | term S '+' { $1 }
+  | term S '-' S term { $1 }
+  | term { $1 }
+
+concatenation:
+  | (S factor S ','?) + { List.map (fun (_, f, _) -> f) $1 }
+
+alternation:
+  | (S concatenation S '|'?) + { List.map (fun (_, c, _) -> c) $1 }
+
+rhs:
+  | alternation { $1 }
+
+lhs:
+  | identifier { $1 }
+
+rule:
+  | lhs S '=' S rhs S terminator { () }
+
+root:
+  | (S rule S)* EOF { () }
+```
+
+
+
+
+create a menhir lexer from this simple grammar
+```css
+%token <char> LETTER
+%token <char> DIGIT
+%token <char> SYMBOL
+%token <char> CHAR
+%token <string> IDENTIFIER
+%token <string> S
+%token <string> TERMINAL
+%token <string> TERMINATOR
+
+%start <rule> start %%
+
+rule: 
+  | LHS S "=" S RHS S TERMINATOR { $4 }
+
+LHS: 
+  | IDENTIFIER {}
+
+RHS: 
+  | ALTERNATION {}
+
+ALTERNATION: 
+  | (S CONCATENATION S "|" ? )+ { $2 }
+
+CONCATENATION: 
+  | (S FACTOR S "," ? )+ { $2 }
+
+FACTOR: 
+  | TERM S "?" { Expr.star ($1) }
+  | TERM S "*" { Expr.mul ($1) }
+  | TERM S "+" { Expr.add ($1) }
+  | TERM S "-" S TERM { Expr.sub ($1 $3) }
+  | TERM S { $1 }
+
+TERM: 
+  | "(" S RHS S ")" {}
+  | "[" S RHS S "]" {}
+  | "{" S RHS S "}" {}
+  | TERMINAL {}
+  | IDENTIFIER { Var ($1) }
+
+TERMINAL: 
+  | "'" CHAR "'" (CHAR "'" )"'" { Str.from_string ([ $2, $4 ]) }
+
+CHAR: 
+  | LETTER {}
+  | DIGIT {}
+  | SYMBOL {}
+  | "_" {}
+  | " " {}
+
+LETTER: 
+  | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" {}
+
+DIGIT: 
+  | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" {}
+
+SYMBOL: 
+  | "[" | "]" | "{" | "}" | "(" | ")" | "<" | ">" | "'" | "=" | "|" | "." | "," | ";" | "-" | "+" | "*" | "?" | "\n" | "\t" | "\r" {}
+
+S: 
+  | " " | "\n" | "\t" | "\r" {}
+
+TERMINATOR: 
+  | ";" | "." {}
+
+
+
+Lexer from chatgpt 
+%{
+open Lexing
+open Parser
+%}
+
+%token <char> LETTER
+%token <char> DIGIT
+%token <char> SYMBOL
+%token UNDERSCORE SPACE NEWLINE TAB CARRIAGE_RETURN
+%token TERMINAL_IDENTIFIER TERMINAL_STRING
+%token <char> TERMINATOR
+%token <char> SEMICOLON PERIOD
+%token <char> QUESTION ASTERISK PLUS MINUS COMMA PIPE
+
+%start <unit> root
+
+%%
+
+rule lexer = parse
+  | ['A'-'Z' 'a'-'z'] as c {
+      LETTER (c, c)
+    }
+  | ['0'-'9'] as c {
+      DIGIT (c, c)
+    }
+  | ['[' ']' '{' '}' '(' ')' '<' '>' '\'' '=' '|' '.' ',' ';' '-' '+' '*' '?' '\n' '\t' '\r'] as c {
+      SYMBOL (c, c)
+    }
+  | '_' as c {
+      UNDERSCORE (c, c)
+    }
+  | ' ' as c {
+      SPACE (c, c)
+    }
+  | '\n' as c {
+      NEWLINE (c, c)
+    }
+  | '\t' as c {
+      TAB (c, c)
+    }
+  | '\r' as c {
+      CARRIAGE_RETURN (c, c)
+    }
+  | '\'' ['A'-'Z' 'a'-'z' '0'-'9' '[' ']' '{' '}' '(' ')' '<' '>' '\'' '=' '|' '.' ',' ';' '-' '+' '*' '?' '\n' '\t' '\r' ' '] '\'' as c {
+      TERMINAL_STRING (String.sub c 1 (String.length c - 2), c)
+    }
+  | ';' as c {
+      SEMICOLON (c, c)
+    }
+  | '.' as c {
+      PERIOD (c, c)
+    }
+  | eof {
+      EOF
+    }
+  | _ {
+      failwith ("Unexpected character: " ^ Lexing.lexeme lexbuf)
+    }
+
+and eof = parse
+  | eof {
+      EOF
+    }
+  | _ {
+      failwith "Lexer error: unexpected character after EOF"
+    }
+
+and root = parse
+  | lexer { root lexbuf }
+
