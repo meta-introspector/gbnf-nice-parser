@@ -1,2 +1,15 @@
+(ocamllex (modules sentenceLexer))
+(menhir (modules sentenceParser)
+ (flags --cmly
+        --dump
+        --explain
+        --log-grammar 99
+        --log-automaton 9
+        --log-code 99
+        --log-grammar 99
+        --reference-graph))
+
 (library
- (name gbnf_parser))
+ (name gbnf_parser)
+ (libraries  batteries)
+)

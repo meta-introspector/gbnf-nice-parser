@@ -26,6 +26,10 @@
 /* Tokens. COLON EQUALS*/
 
 %token  COLONCOLONEQUALS EOF EOL
+%token LBRACE RBRACE
+%token LCURLY RCURLY
+%token PIPE GT LT MINUS
+%token LPAREN RPAREN COMMA DOT NULL 
 %token<SentenceParserAux.raw_symbol> TERMINAL
 %token<SentenceParserAux.raw_symbol> NONTERMINAL
 %token<string> COMMENT

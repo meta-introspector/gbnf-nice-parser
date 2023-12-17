@@ -68,7 +68,28 @@ rule lex = parse
       { EOF }
   (* A colon. *)
   | "::="
-      { COLONCOLONEQUALS }
+{ COLONCOLONEQUALS }
+     
+  (* from https://repo.or.cz/sqlgg.git  ~/2023/12/17/sqlgg/lib/sql_lexer.mll *)
+  | '('                { LPAREN }
+  | ')'                { RPAREN }
+  | ','   { COMMA }
+  | '|'   { PIPE }
+  | '['   { LBRACE }
+  | ']'   { RBRACE }
+  | '>'   { GT }
+  | '<'   { GT }
+  | '-'   { MINUS }
+  | '{'   { LCURLY  }
+  | '}'   { RCURLY  }
+
   | _
-      { error2 lexbuf "unexpected character.\n\
-                       (I believe I am reading a sentence, but may be off.)" }
+      {
+	(print_endline "DEBUG");
+        let curr = lexbuf.Lexing.lex_curr_p in
+        let line = curr.Lexing.pos_lnum in
+        let cnum = curr.Lexing.pos_cnum - curr.Lexing.pos_bol in
+        let tok = Lexing.lexeme lexbuf in
+	(print_endline (Batteries.dump ((line,cnum,tok))));
+      	error2 lexbuf "unexpected character.\n\
+                       (I believe I am reading a sentence, but may be off.)"	}
