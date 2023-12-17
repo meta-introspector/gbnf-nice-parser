@@ -15,7 +15,14 @@ let read_messages   =
   (*       loop (mkcomment comments accu) segments *)
   (*   | (Segment, _, lexbuf) :: segments -> *)
   (*       (\* Read a series of located sentences. *\) *)
-  let lexbuf = Lexing.from_string "hello world" in
+  let lexbuf = Lexing.from_string {codesample|
+root  ::= (expr "=" ws term "\n")+
+expr  ::= term ([-+*/] term)*
+term  ::= ident | num | "(" ws expr ")" ws
+ident ::= [a-z] [a-z0-9_]* ws
+num   ::= [0-9]+ ws
+ws    ::= [ \t\n]*
+|codesample} in
   (* let lexbuf =  Lexing.lexbuf "Hello world " in *)
   match SentenceParser.entry SentenceLexer.lex lexbuf with
   | exception Parsing.Parse_error ->

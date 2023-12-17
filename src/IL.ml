@@ -11,7 +11,7 @@
 (*                                                                            *)
 (******************************************************************************)
 
-open Positions
+open Grammar.Positions
 
 (* Abstract syntax of the language used for code production. *)
 

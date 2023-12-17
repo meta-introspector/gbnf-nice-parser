@@ -5,7 +5,7 @@ let printf = Stdlib.Printf.printf
 let () = begin
 
   (* enable pretty error messages *)
-Example.Parser.pp_exceptions ();
+Grammar.SentenceParser.Parser.pp_exceptions ();
 
   let s1 = "(a b (c d) e)" in
   let s2 = "(long_atom_with_0123)" in
@@ -17,7 +17,7 @@ Example.Parser.pp_exceptions ();
   in
   List.iter [s1; s2; s3 ] ~f:(fun s ->
     printf "\nTrying to parse \"%s\".\n" s;
-    Example.Parser.parse_string s
+Grammar.SentenceParser.parse_string s
     |> Example.Ast.sexp_of_sexp
     |> Sexp.to_string_hum
     |> printf "-> %s\n";
