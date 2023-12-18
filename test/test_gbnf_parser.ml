@@ -1,4 +1,7 @@
 open Gbnf_parser
+open Gbnf_parser.SentenceParser
+       (* .MenhirBasics.Error *)
+(* include MenhirBasics *)
 
 (* let open Segment in *)
  (* let c = Error.new_category() in *)
@@ -44,13 +47,19 @@ root ::= ( S rule S ) *
  Error.error
  [Positions.cpos lexbuf]
  "ill-formed sentence."
- | elements ->
- (print_endline (Batteries.dump elements));
+ | elements ->    (print_endline (Batteries.dump elements)); 
+ | MenhirBasics.Error e ->
+    print_endline (Batteries.dump ["error",e ])
+    
  | exception e ->
- let msg = Printexc.to_string e in
- let curr = lexbuf.Lexing.lex_curr_p in
- let line = curr.Lexing.pos_lnum in
- let cnum = curr.Lexing.pos_cnum - curr.Lexing.pos_bol in
- print_endline (Batteries.dump ["error",e, msg, lexbuf, line,cnum])
+    let stacktrace = Printexc.get_raw_backtrace () in
+    let msg = Printexc.to_string e in
+    let curr = lexbuf.Lexing.lex_curr_p in
+    let line = curr.Lexing.pos_lnum in
+    let cnum = curr.Lexing.pos_cnum - curr.Lexing.pos_bol in
+    print_endline (Batteries.dump ["error",e,
+                                   "stack", stacktrace,
+                                   "msg",msg, "line",line,"cnum",cnum,"tett",lexbuf])
+
  ;
  
