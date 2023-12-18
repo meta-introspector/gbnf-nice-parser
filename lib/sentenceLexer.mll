@@ -80,8 +80,8 @@ rule ruleInQuotes acc = parse
   | eof
       { EOF }
   (* A colon. *)
-  | "::="
-{ COLONCOLONEQUALS }
+  | "::=" { COLONCOLONEQUALS }
+
      
   (* from https://repo.or.cz/sqlgg.git  ~/2023/12/17/sqlgg/lib/sql_lexer.mll *)
   | '('                { LPAREN }

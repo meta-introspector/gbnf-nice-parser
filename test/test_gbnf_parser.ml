@@ -1,6 +1,8 @@
 open Gbnf_parser
-open Gbnf_parser.SentenceParser
-       (* .MenhirBasics.Error *)
+(* open Gbnf_parser.SentenceParser *)
+
+
+(* .MenhirBasics.Error *)
 (* include MenhirBasics *)
 
 (* let open Segment in *)
@@ -22,6 +24,7 @@ open Gbnf_parser.SentenceParser
 
 let () =
  let inputstr = {codesample|
+lettera ::= "A"
 letter ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" 
 digit ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" 
 symbol ::= "[" | "]" | "{" | "}" | "(" | ")" | "<" | ">" | "'" | "=" | "|" | "." | "," | ";" | "-" | "+" | "*" | "?" | "\n" | "\t" | "\r" 
@@ -48,8 +51,8 @@ root ::= ( S rule S ) *
  [Positions.cpos lexbuf]
  "ill-formed sentence."
  | elements ->    (print_endline (Batteries.dump elements)); 
- | MenhirBasics.Error e ->
-    print_endline (Batteries.dump ["error",e ])
+ (* ;; | MenhirBasics.Error e -> *)
+ (* ;;    print_endline (Batteries.dump ["error",e ]) *)
     
  | exception e ->
     let stacktrace = Printexc.get_raw_backtrace () in
