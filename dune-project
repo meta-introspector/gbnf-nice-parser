@@ -1,4 +1,4 @@
-(lang dune 3.13)
+(lang dune 3.5)
 
 (name gbnf_parser)
 (using menhir 2.0)

@@ -105,7 +105,7 @@ optional_sentence:
 /* A sentence is a pair of an optional non-terminal start symbol and a list
    of terminal symbols. It is terminated by a newline. */
 sentence:
-| NONTERMINAL; COLONCOLONEQUALS; terminals EOL
+| NONTERMINAL COLONCOLONEQUALS terminals EOL
     { Some $1, $3 }
 | terminals EOL
     { None, $1 }
