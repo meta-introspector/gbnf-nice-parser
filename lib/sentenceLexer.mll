@@ -26,6 +26,7 @@
 
 }
 
+
 let newline   = ('\010' | '\013' | "\013\010")
 
 let whitespace = [ ' ' '\t' ';' ]
@@ -38,11 +39,23 @@ let identchar = ['A'-'Z' 'a'-'z' '_' '\192'-'\214' '\216'-'\246' '\248'-'\255' '
 
 let autocomment = "##" [^'\010''\013']* newline
 
+
 let comment = "#" [^'\010''\013']* newline
+
 
 let skip = newline whitespace* newline
 
-rule lex = parse
+
+
+rule ruleInQuotes acc = parse
+         | '"'	        { acc }
+           | eof	        { error2 lexbuf "no terminating quote" }
+           (* | '\n'        { advance_line lexbuf; error lexbuf "EOL before terminating quote" } *)
+           | "\"\""      { ruleInQuotes (acc^"\"") lexbuf }
+           | [^'"' '\n']+ as s { ruleInQuotes (acc^s) lexbuf }
+           | _		{ error2 lexbuf "ruleInQuotes" }
+  and
+    lex = parse
   (* An identifier that begins with an lowercase letter is considered a
      non-terminal symbol. It should be a start symbol. *)
   | (lowercase identchar *) as lid
@@ -73,6 +86,7 @@ rule lex = parse
   (* from https://repo.or.cz/sqlgg.git  ~/2023/12/17/sqlgg/lib/sql_lexer.mll *)
   | '('                { LPAREN }
   | ')'                { RPAREN }
+  | '"' { Lexer.keep_lexeme_start lexbuf (fun () -> (IDENT (Lexer.ident (ruleInQuotes "" lexbuf)))) }
   | ','   { COMMA }
   | '|'   { PIPE }
   | '['   { LBRACE }

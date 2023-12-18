@@ -35,6 +35,7 @@ rhs ::= alternation
 lhs ::= identifier 
 rule ::= lhs S "=" S rhs S terminator 
 root ::= ( S rule S ) * 
+
                  |codesample} in
 
  let lexbuf = Lexing.from_string inputstr in
