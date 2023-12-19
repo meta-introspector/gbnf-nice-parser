@@ -46,7 +46,7 @@ rule ::= lhs S "=" S rhs S terminator
 root ::= ( S rule S ) *
 |codesample} in                 
  let lexbuf = Lexing.from_string inputstr in
- match SentenceParser.entry SentenceLexer.lex lexbuf with
+ match SentenceParser.optional_sentence SentenceLexer.lex lexbuf with
     | exception Parsing.Parse_error ->
        Error.error
          [Positions.cpos lexbuf]
