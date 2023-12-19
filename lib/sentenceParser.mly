@@ -113,6 +113,19 @@ sentence:
 /* A list of terminal symbols. */
 terminals:
 |
-    { [] }
-| TERMINAL terminals
-    { $1 :: $2 }
+    { (print_endline "EMPTY"); []       }
+| TERMINAL terminals /* (Lexer.extract_string_from_terminal */
+    {
+      (print_endline "TERMINAL terminals");
+      (print_endline (Batteries.dump  $1));      
+      (print_endline (Batteries.dump $2 ));
+      []
+    }
+| IDENT terminals /*for quoted tokens*/
+    {
+      (print_endline "IDENT terminals");
+      (print_endline (Batteries.dump $1));
+      (print_endline (Batteries.dump $2));
+      [];
+    } 
+    /* { $1 :: $2 } */

@@ -52,14 +52,14 @@ rule ruleInQuotes acc = parse
            | eof	        { error2 lexbuf "no terminating quote" }
            (* | '\n'        { advance_line lexbuf; error lexbuf "EOL before terminating quote" } *)
            | "\"\""      { (print_endline "ruleinquotes"); ruleInQuotes (acc^"\"") lexbuf }
-           | [^'"' '\n']+ as s { (print_endline "other"); ruleInQuotes (acc^s) lexbuf }
+           | [^'"' '\n']+ as s { (print_endline ("notspace:" ^ acc^s)); ruleInQuotes (acc^s) lexbuf }
            | _		{ error2 lexbuf "ruleInQuotes" }
   and
     lex = parse
   (* An identifier that begins with an lowercase letter is considered a
      non-terminal symbol. It should be a start symbol. *)
   | (lowercase identchar *) as lid
-      { 	(print_endline "ID"); NONTERMINAL (lid, lexbuf.lex_start_p, lexbuf.lex_curr_p) }
+      { 	(print_endline ("ID" ^lid)); NONTERMINAL (lid, lexbuf.lex_start_p, lexbuf.lex_curr_p) }
   (* An identifier that begins with an uppercase letter is considered a
      terminal symbol. *)
   | (uppercase identchar *) as uid
@@ -80,13 +80,13 @@ rule ruleInQuotes acc = parse
   | eof
       { EOF }
   (* A colon. *)
-  | "::=" { (print_endline "COLONCOLONEQUALS"); COLONCOLONEQUALS }
+  | "::=" as s { (print_endline ("COLONCOLONEQUALS:" ^s)); COLONCOLONEQUALS }
 
      
   (* from https://repo.or.cz/sqlgg.git  ~/2023/12/17/sqlgg/lib/sql_lexer.mll *)
   | '('                { (print_endline "lparn"); LPAREN }
   | ')'                { (print_endline "rparn"); RPAREN }
-  | '"' { Lexer.keep_lexeme_start lexbuf (fun () -> (IDENT (Lexer.ident (ruleInQuotes "" lexbuf)))) }
+  | '"' {  (print_endline "open"); Lexer.keep_lexeme_start lexbuf (fun () -> (IDENT (Lexer.ident (ruleInQuotes "" lexbuf)))) }
   | ','   { (print_endline "COMMA"); COMMA }
   | '|'   { (print_endline "PIPE"); PIPE }
   | '['   { (print_endline "LBRACE"); LBRACE }
@@ -104,6 +104,6 @@ rule ruleInQuotes acc = parse
         let line = curr.Lexing.pos_lnum in
         let cnum = curr.Lexing.pos_cnum - curr.Lexing.pos_bol in
         let tok = Lexing.lexeme lexbuf in
-	(print_endline (Batteries.dump ((line,cnum,tok))));
+(print_endline (Batteries.dump ((line,cnum,tok))));
       	error2 lexbuf "unexpected character.\n\
                        (I believe I am reading a sentence, but may be off.)"	}
