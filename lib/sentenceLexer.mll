@@ -48,22 +48,22 @@ let skip = newline whitespace* newline
 
 
 rule ruleInQuotes acc = parse
-         | '"'	        { acc }
+         | '"'	        { 	(print_endline "endquote"); acc;  }
            | eof	        { error2 lexbuf "no terminating quote" }
            (* | '\n'        { advance_line lexbuf; error lexbuf "EOL before terminating quote" } *)
-           | "\"\""      { ruleInQuotes (acc^"\"") lexbuf }
-           | [^'"' '\n']+ as s { ruleInQuotes (acc^s) lexbuf }
+           | "\"\""      { (print_endline "ruleinquotes"); ruleInQuotes (acc^"\"") lexbuf }
+           | [^'"' '\n']+ as s { (print_endline "other"); ruleInQuotes (acc^s) lexbuf }
            | _		{ error2 lexbuf "ruleInQuotes" }
   and
     lex = parse
   (* An identifier that begins with an lowercase letter is considered a
      non-terminal symbol. It should be a start symbol. *)
   | (lowercase identchar *) as lid
-      { NONTERMINAL (lid, lexbuf.lex_start_p, lexbuf.lex_curr_p) }
+      { 	(print_endline "ID"); NONTERMINAL (lid, lexbuf.lex_start_p, lexbuf.lex_curr_p) }
   (* An identifier that begins with an uppercase letter is considered a
      terminal symbol. *)
   | (uppercase identchar *) as uid
-      { TERMINAL (uid, lexbuf.lex_start_p, lexbuf.lex_curr_p) }
+      { (print_endline "ID2"); TERMINAL (uid, lexbuf.lex_start_p, lexbuf.lex_curr_p) }
   (* Whitespace is ignored. *)
   | whitespace
       { lex lexbuf }
@@ -72,7 +72,7 @@ rule ruleInQuotes acc = parse
       { new_line lexbuf; EOL }
   (* An auto-generated comment is ignored. *)
   | autocomment
-      { new_line lexbuf; lex lexbuf }
+      { (print_endline "comment"); new_line lexbuf; lex lexbuf }
   (* A manually-written comment is preserved. *)
   | comment as c
       { new_line lexbuf; COMMENT c }
@@ -80,22 +80,22 @@ rule ruleInQuotes acc = parse
   | eof
       { EOF }
   (* A colon. *)
-  | "::=" { COLONCOLONEQUALS }
+  | "::=" { (print_endline "COLONCOLONEQUALS"); COLONCOLONEQUALS }
 
      
   (* from https://repo.or.cz/sqlgg.git  ~/2023/12/17/sqlgg/lib/sql_lexer.mll *)
-  | '('                { LPAREN }
-  | ')'                { RPAREN }
+  | '('                { (print_endline "lparn"); LPAREN }
+  | ')'                { (print_endline "rparn"); RPAREN }
   | '"' { Lexer.keep_lexeme_start lexbuf (fun () -> (IDENT (Lexer.ident (ruleInQuotes "" lexbuf)))) }
-  | ','   { COMMA }
-  | '|'   { PIPE }
-  | '['   { LBRACE }
-  | ']'   { RBRACE }
-  | '>'   { GT }
-  | '<'   { GT }
-  | '-'   { MINUS }
-  | '{'   { LCURLY  }
-  | '}'   { RCURLY  }
+  | ','   { (print_endline "COMMA"); COMMA }
+  | '|'   { (print_endline "PIPE"); PIPE }
+  | '['   { (print_endline "LBRACE"); LBRACE }
+  | ']'   { (print_endline "RBRACE"); RBRACE }
+  | '>'   { (print_endline "HT");GT }
+  | '<'   { (print_endline "LT"); LT }
+  | '-'   { (print_endline "MINUS");MINUS }
+  | '{'   { (print_endline "LCURLY");LCURLY  }
+  | '}'   { (print_endline "RCURLY"); RCURLY  }
 
   | _
       {

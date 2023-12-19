@@ -1,6 +1,7 @@
 (ocamllex (modules sentenceLexer))
 (menhir (modules sentenceParser)
  (flags --cmly
+   --table	
         --dump
         --explain
         --log-grammar 99
@@ -8,8 +9,12 @@
         --log-code 99
         --log-grammar 99
         --reference-graph))
+(rule
+ (targets sentence_messages.ml)
+ (deps sentenceParser.messages sentenceParser.mly)
+ (action  (with-stdout-to %{targets} (run menhir --compile-errors %{deps}))))
 
 (library
  (name gbnf_parser)
- (libraries  batteries)
-)
+
+ (libraries  batteries menhirLib))

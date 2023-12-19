@@ -1,4 +1,7 @@
 open Gbnf_parser
+module E = MenhirLib.ErrorReports
+module L = MenhirLib.LexerUtil
+
 (* open Gbnf_parser.SentenceParser *)
 
 
@@ -22,47 +25,42 @@ open Gbnf_parser
 (*    (\* Read a series of located sentences. *\) *)
 
 
+(*   let inputstr2 = {codesample| *)
+(* lettera ::= "A" *)
+(* letter ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z"  *)
+(* digit ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"  *)
+(* symbol ::= "[" | "]" | "{" | "}" | "(" | ")" | "<" | ">" | "'" | "=" | "|" | "." | "," | ";" | "-" | "+" | "*" | "?" | "\n" | "\t" | "\r"  *)
+(* character ::= letter | digit | symbol | "_" | " "  *)
+(* identifier ::= letter ( letter | digit | "_" ) *)
+(* S ::= ( " " | "\n" | "\t" | "\r" ) *)
+(* terminal ::= "'" character "'" ( character "'" ) "'" *)
+(* terminator ::= (";" | ".") *)
+(* term ::= "(" S rhs S ")" | "[" S rhs S "]" | "{" S rhs S "}" | terminal | identifier  *)
+(* factor ::= term S "?" | term S "*" | term S "+" | term S "-" S term | term S  *)
+(* concatenation ::= ( S factor S "," ? ) +  *)
+(* alternation ::= ( S concatenation S "|" ? ) +  *)
+(* rhs ::= alternation  *)
+(* lhs ::= identifier  *)
+(* rule ::= lhs S "=" S rhs S terminator  *)
+(* root ::= ( S rule S ) *  *)
+(*                  |codesample} in *)
+
 let () =
- let inputstr = {codesample|
-lettera ::= "A"
-letter ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" 
-digit ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" 
-symbol ::= "[" | "]" | "{" | "}" | "(" | ")" | "<" | ">" | "'" | "=" | "|" | "." | "," | ";" | "-" | "+" | "*" | "?" | "\n" | "\t" | "\r" 
-character ::= letter | digit | symbol | "_" | " " 
-identifier ::= letter ( letter | digit | "_" )
-S ::= ( " " | "\n" | "\t" | "\r" )
-terminal ::= "'" character "'" ( character "'" ) "'"
-terminator ::= (";" | ".")
-term ::= "(" S rhs S ")" | "[" S rhs S "]" | "{" S rhs S "}" | terminal | identifier 
-factor ::= term S "?" | term S "*" | term S "+" | term S "-" S term | term S 
-concatenation ::= ( S factor S "," ? ) + 
-alternation ::= ( S concatenation S "|" ? ) + 
-rhs ::= alternation 
-lhs ::= identifier 
-rule ::= lhs S "=" S rhs S terminator 
-root ::= ( S rule S ) * 
-
-                 |codesample} in
-
+ let inputstr = {codesample|lettera ::= "Ab"
+|codesample} in                 
  let lexbuf = Lexing.from_string inputstr in
  match SentenceParser.entry SentenceLexer.lex lexbuf with
- | exception Parsing.Parse_error ->
- Error.error
- [Positions.cpos lexbuf]
- "ill-formed sentence."
- | elements ->    (print_endline (Batteries.dump elements)); 
- (* ;; | MenhirBasics.Error e -> *)
- (* ;;    print_endline (Batteries.dump ["error",e ]) *)
-    
- | exception e ->
-    let stacktrace = Printexc.get_raw_backtrace () in
-    let msg = Printexc.to_string e in
-    let curr = lexbuf.Lexing.lex_curr_p in
-    let line = curr.Lexing.pos_lnum in
-    let cnum = curr.Lexing.pos_cnum - curr.Lexing.pos_bol in
-    print_endline (Batteries.dump ["error",e,
-                                   "stack", stacktrace,
-                                   "msg",msg, "line",line,"cnum",cnum,"tett",lexbuf])
-
- ;
- 
+    | exception Parsing.Parse_error ->
+       Error.error
+         [Positions.cpos lexbuf]
+         "ill-formed sentence."
+    | elements ->    (print_endline (Batteries.dump elements)); 
+    | exception e ->
+       let stacktrace = Printexc.get_raw_backtrace () in
+       let msg = Printexc.to_string e in
+       let curr = lexbuf.Lexing.lex_curr_p in
+       let line = curr.Lexing.pos_lnum in
+       let cnum = curr.Lexing.pos_cnum - curr.Lexing.pos_bol in
+       print_endline (Batteries.dump ["error",e,
+                                      "stack", stacktrace,
+                                      "msg",msg, "line",line,"cnum",cnum,"tett",lexbuf]);
