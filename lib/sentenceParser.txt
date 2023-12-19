@@ -1,0 +1,108 @@
+optional_sentence: NONTERMINAL COLONCOLONEQUALS RPAREN
+##
+## Ends in an error in state: 19.
+##
+## sentence -> NONTERMINAL COLONCOLONEQUALS . terminals EOL [ # ]
+##
+## The known suffix of the stack is as follows:
+## NONTERMINAL COLONCOLONEQUALS
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+optional_sentence: NONTERMINAL TERMINAL
+##
+## Ends in an error in state: 18.
+##
+## sentence -> NONTERMINAL . COLONCOLONEQUALS terminals EOL [ # ]
+##
+## The known suffix of the stack is as follows:
+## NONTERMINAL
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+optional_sentence: RPAREN
+##
+## Ends in an error in state: 17.
+##
+## optional_sentence' -> . optional_sentence [ # ]
+##
+## The known suffix of the stack is as follows:
+##
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+entry: COMMENT RPAREN
+##
+## Ends in an error in state: 7.
+##
+## located_sentences_or_comments -> COMMENT . located_sentences_or_comments [ EOF ]
+##
+## The known suffix of the stack is as follows:
+## COMMENT
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+entry: EOL RPAREN
+##
+## Ends in an error in state: 12.
+##
+## located_sentences_or_comments -> located_sentence . located_sentences_or_comments [ EOF ]
+##
+## The known suffix of the stack is as follows:
+## located_sentence
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+entry: NONTERMINAL COLONCOLONEQUALS RPAREN
+##
+## Ends in an error in state: 4.
+##
+## sentence -> NONTERMINAL COLONCOLONEQUALS . terminals EOL [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+##
+## The known suffix of the stack is as follows:
+## NONTERMINAL COLONCOLONEQUALS
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+entry: NONTERMINAL TERMINAL
+##
+## Ends in an error in state: 3.
+##
+## sentence -> NONTERMINAL . COLONCOLONEQUALS terminals EOL [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+##
+## The known suffix of the stack is as follows:
+## NONTERMINAL
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+entry: RPAREN
+##
+## Ends in an error in state: 0.
+##
+## entry' -> . entry [ # ]
+##
+## The known suffix of the stack is as follows:
+##
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+entry: TERMINAL RPAREN
+##
+## Ends in an error in state: 1.
+##
+## terminals -> TERMINAL . terminals [ EOL ]
+##
+## The known suffix of the stack is as follows:
+## TERMINAL
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+

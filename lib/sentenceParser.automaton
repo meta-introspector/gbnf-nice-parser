@@ -1,0 +1,303 @@
+State 0:
+## Known stack suffix:
+##
+## LR(1) items:
+entry' -> . entry [ # ]
+## Transitions:
+-- On TERMINAL shift to state 1
+-- On NONTERMINAL shift to state 3
+-- On COMMENT shift to state 7
+-- On terminals shift to state 8
+-- On sentence shift to state 10
+-- On located_sentences_or_comments shift to state 14
+-- On located_sentence shift to state 12
+-- On entry shift to state 16
+## Reductions:
+-- On EOF
+--   reduce production located_sentences_or_comments ->
+-- On EOL
+--   reduce production terminals ->
+
+State 1:
+## Known stack suffix:
+## TERMINAL
+## LR(1) items:
+terminals -> TERMINAL . terminals [ EOL ]
+## Transitions:
+-- On TERMINAL shift to state 1
+-- On terminals shift to state 2
+## Reductions:
+-- On EOL
+--   reduce production terminals ->
+
+State 2:
+## Known stack suffix:
+## TERMINAL terminals
+## LR(1) items:
+terminals -> TERMINAL terminals . [ EOL ]
+## Transitions:
+## Reductions:
+-- On EOL
+--   reduce production terminals -> TERMINAL terminals
+
+State 3:
+## Known stack suffix:
+## NONTERMINAL
+## LR(1) items:
+sentence -> NONTERMINAL . COLONCOLONEQUALS terminals EOL [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+## Transitions:
+-- On COLONCOLONEQUALS shift to state 4
+## Reductions:
+
+State 4:
+## Known stack suffix:
+## NONTERMINAL COLONCOLONEQUALS
+## LR(1) items:
+sentence -> NONTERMINAL COLONCOLONEQUALS . terminals EOL [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+## Transitions:
+-- On TERMINAL shift to state 1
+-- On terminals shift to state 5
+## Reductions:
+-- On EOL
+--   reduce production terminals ->
+
+State 5:
+## Known stack suffix:
+## NONTERMINAL COLONCOLONEQUALS terminals
+## LR(1) items:
+sentence -> NONTERMINAL COLONCOLONEQUALS terminals . EOL [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+## Transitions:
+-- On EOL shift to state 6
+## Reductions:
+
+State 6:
+## Known stack suffix:
+## NONTERMINAL COLONCOLONEQUALS terminals EOL
+## LR(1) items:
+sentence -> NONTERMINAL COLONCOLONEQUALS terminals EOL . [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+## Transitions:
+## Reductions:
+-- On TERMINAL NONTERMINAL EOL EOF COMMENT
+--   reduce production sentence -> NONTERMINAL COLONCOLONEQUALS terminals EOL
+
+State 7:
+## Known stack suffix:
+## COMMENT
+## LR(1) items:
+located_sentences_or_comments -> COMMENT . located_sentences_or_comments [ EOF ]
+## Transitions:
+-- On TERMINAL shift to state 1
+-- On NONTERMINAL shift to state 3
+-- On COMMENT shift to state 7
+-- On terminals shift to state 8
+-- On sentence shift to state 10
+-- On located_sentences_or_comments shift to state 11
+-- On located_sentence shift to state 12
+## Reductions:
+-- On EOF
+--   reduce production located_sentences_or_comments ->
+-- On EOL
+--   reduce production terminals ->
+
+State 8:
+## Known stack suffix:
+## terminals
+## LR(1) items:
+sentence -> terminals . EOL [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+## Transitions:
+-- On EOL shift to state 9
+## Reductions:
+
+State 9:
+## Known stack suffix:
+## terminals EOL
+## LR(1) items:
+sentence -> terminals EOL . [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+## Transitions:
+## Reductions:
+-- On TERMINAL NONTERMINAL EOL EOF COMMENT
+--   reduce production sentence -> terminals EOL
+
+State 10:
+## Known stack suffix:
+## sentence
+## LR(1) items:
+located_sentence -> sentence . [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+## Transitions:
+## Reductions:
+-- On TERMINAL NONTERMINAL EOL EOF COMMENT
+--   reduce production located_sentence -> sentence
+
+State 11:
+## Known stack suffix:
+## COMMENT located_sentences_or_comments
+## LR(1) items:
+located_sentences_or_comments -> COMMENT located_sentences_or_comments . [ EOF ]
+## Transitions:
+## Reductions:
+-- On EOF
+--   reduce production located_sentences_or_comments -> COMMENT located_sentences_or_comments
+
+State 12:
+## Known stack suffix:
+## located_sentence
+## LR(1) items:
+located_sentences_or_comments -> located_sentence . located_sentences_or_comments [ EOF ]
+## Transitions:
+-- On TERMINAL shift to state 1
+-- On NONTERMINAL shift to state 3
+-- On COMMENT shift to state 7
+-- On terminals shift to state 8
+-- On sentence shift to state 10
+-- On located_sentences_or_comments shift to state 13
+-- On located_sentence shift to state 12
+## Reductions:
+-- On EOF
+--   reduce production located_sentences_or_comments ->
+-- On EOL
+--   reduce production terminals ->
+
+State 13:
+## Known stack suffix:
+## located_sentence located_sentences_or_comments
+## LR(1) items:
+located_sentences_or_comments -> located_sentence located_sentences_or_comments . [ EOF ]
+## Transitions:
+## Reductions:
+-- On EOF
+--   reduce production located_sentences_or_comments -> located_sentence located_sentences_or_comments
+
+State 14:
+## Known stack suffix:
+## located_sentences_or_comments
+## LR(1) items:
+entry -> located_sentences_or_comments . EOF [ # ]
+## Transitions:
+-- On EOF shift to state 15
+## Reductions:
+
+State 15:
+## Known stack suffix:
+## located_sentences_or_comments EOF
+## LR(1) items:
+entry -> located_sentences_or_comments EOF . [ # ]
+## Transitions:
+## Reductions:
+-- On #
+--   reduce production entry -> located_sentences_or_comments EOF
+
+State 16:
+## Known stack suffix:
+## entry
+## LR(1) items:
+entry' -> entry . [ # ]
+## Transitions:
+## Reductions:
+-- On #
+--   accept entry
+
+State 17:
+## Known stack suffix:
+##
+## LR(1) items:
+optional_sentence' -> . optional_sentence [ # ]
+## Transitions:
+-- On TERMINAL shift to state 1
+-- On NONTERMINAL shift to state 18
+-- On EOF shift to state 22
+-- On terminals shift to state 23
+-- On sentence shift to state 25
+-- On optional_sentence shift to state 26
+## Reductions:
+-- On EOL
+--   reduce production terminals ->
+
+State 18:
+## Known stack suffix:
+## NONTERMINAL
+## LR(1) items:
+sentence -> NONTERMINAL . COLONCOLONEQUALS terminals EOL [ # ]
+## Transitions:
+-- On COLONCOLONEQUALS shift to state 19
+## Reductions:
+
+State 19:
+## Known stack suffix:
+## NONTERMINAL COLONCOLONEQUALS
+## LR(1) items:
+sentence -> NONTERMINAL COLONCOLONEQUALS . terminals EOL [ # ]
+## Transitions:
+-- On TERMINAL shift to state 1
+-- On terminals shift to state 20
+## Reductions:
+-- On EOL
+--   reduce production terminals ->
+
+State 20:
+## Known stack suffix:
+## NONTERMINAL COLONCOLONEQUALS terminals
+## LR(1) items:
+sentence -> NONTERMINAL COLONCOLONEQUALS terminals . EOL [ # ]
+## Transitions:
+-- On EOL shift to state 21
+## Reductions:
+
+State 21:
+## Known stack suffix:
+## NONTERMINAL COLONCOLONEQUALS terminals EOL
+## LR(1) items:
+sentence -> NONTERMINAL COLONCOLONEQUALS terminals EOL . [ # ]
+## Transitions:
+## Reductions:
+-- On #
+--   reduce production sentence -> NONTERMINAL COLONCOLONEQUALS terminals EOL
+
+State 22:
+## Known stack suffix:
+## EOF
+## LR(1) items:
+optional_sentence -> EOF . [ # ]
+## Transitions:
+## Reductions:
+-- On #
+--   reduce production optional_sentence -> EOF
+
+State 23:
+## Known stack suffix:
+## terminals
+## LR(1) items:
+sentence -> terminals . EOL [ # ]
+## Transitions:
+-- On EOL shift to state 24
+## Reductions:
+
+State 24:
+## Known stack suffix:
+## terminals EOL
+## LR(1) items:
+sentence -> terminals EOL . [ # ]
+## Transitions:
+## Reductions:
+-- On #
+--   reduce production sentence -> terminals EOL
+
+State 25:
+## Known stack suffix:
+## sentence
+## LR(1) items:
+optional_sentence -> sentence . [ # ]
+## Transitions:
+## Reductions:
+-- On #
+--   reduce production optional_sentence -> sentence
+
+State 26:
+## Known stack suffix:
+## optional_sentence
+## LR(1) items:
+optional_sentence' -> optional_sentence . [ # ]
+## Transitions:
+## Reductions:
+-- On #
+--   accept optional_sentence
+

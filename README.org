@@ -1,0 +1,61 @@
+We are developing an ocaml parser for the GBNFgrammar language and intend
+on deeply integrating this into the llama.cpp code via embedding ocaml plugins which we have poc for.
+
+* introduction
+
+GBNF is Another innovative ebnf format for defining grammar rules for constraining output of llms.
+
+It is specified in text and implementation in C++ and it is not yet very easy to debug errors when developing grammars.
+we are developing a parser to parse the grammar, later we want to be able to convert and generate gramars and test code and train models based on grammars.
+
+Here is the documentation of GBNF https://github.com/ggerganov/llama.cpp/blob/master/grammars/README.md
+Here is the source code that implements it https://github.com/ggerganov/llama.cpp/blob/a7aee47b98e45539d491071b25778b833b77e387/common/grammar-parser.cpp#L9C1-L9C1
+
+And here is the grammar that I extracted from it
+[[test/test.gbnf][test/test.gbnf]]
+
+* Goals
+We will later proove that its implementation is valid and connect the code to the proof.
+we can use this proof to expand a bridge between the proof system and how the gbnf is used
+to restrict the output of the llm.
+The proof will guide our system to logically connect the grammar with the intent of the users
+to the source code to the execution of the code in a woven tapestry or tape.
+Later will will visualize the execution of the llm and show how the tesors contribute to the tokens and how those fit in the grammar
+and how the grammar constrains the output. We will allow the user to fine tune grammars on text to create more customized rules.
+
+* Overview
+This is a high level overview of the entire project with its context.
+
+** the heros journey
+*** the complexity of compilers
+** Math
+*** Context free grammar (start, rules, non-terminals, terminals)
+*** Left Right Parser using DFA Deterministic Finite Automaton
+*** Shift/Reduce
+*** Linear Algebra
+** HW
+*** Raid Disks
+*** Ram
+*** GPU
+*** CPU
+** Infra
+*** Clusters
+*** Services
+*** Deployments
+** Code
+** Languages
+*** Machine Languages and assemblers and toolchains
+*** C/C++ Gcc, LLVM, compcert
+*** Bash, Sed, Awk
+*** yacc/lex
+*** ocaml
+*** menhir
+*** tensorflow torch/keras
+** Large Language Models
+*** Mistral
+** Large Language Driver
+*** Llama.cpp
+** Large Language User Interface
+*** ollama
+*** gpt4all
+*** lollms
