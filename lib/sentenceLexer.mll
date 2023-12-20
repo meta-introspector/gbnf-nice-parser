@@ -569,40 +569,40 @@ rule main = parse
         HEADER (mk_stretch stretchpos closingpos false [])
       ) }
 | "{"
-    { savestart lexbuf (fun lexbuf ->
-        let openingpos = lexeme_start_p lexbuf in
-        let stretchpos = lexeme_end_p lexbuf in
-        let closingpos, monsters = action false openingpos [] lexbuf in
-        let xx = (Action.from_il_expr (EVar "None")) in
-        let raw_action2 _ _ = xx in 
-        ACTION (raw_action2)
-        )}
-        (* Gather all of the identifiers that the semantic action may use
-               to refer to a semantic value. This includes the identifiers
-               that are explicitly bound by the user (these appear in the
-               array [producers]) and the identifiers [_i] when the semantic
-               action uses [$i]. *)
-            (* let ids = *)
-            (*   StringSet.union (gather_oids producers) (\* (gather_monsters monsters) *\) *)
-            (* in *)
-            (* (\* Extract a stretch of text. *\) *)
-            (* let stretch = mk_stretch stretchpos closingpos true monsters in *)
-            (* Build a semantic action. *)
-            (* Action.from_stretch None None *)
+    (* { savestart lexbuf (fun lexbuf -> *)
+    (*     let openingpos = lexeme_start_p lexbuf in *)
+    (*     let stretchpos = lexeme_end_p lexbuf in *)
+    (*     let closingpos, monsters = action false openingpos [] lexbuf in *)
+    (*     let xx = (Action.from_il_expr (EVar "None")) in *)
+    (*     let raw_action2 _ _ = xx in  *)
+    (*     ACTION (raw_action2) *)
+    (*     )} *)
+    (*     (\* Gather all of the identifiers that the semantic action may use *)
+    (*            to refer to a semantic value. This includes the identifiers *)
+    (*            that are explicitly bound by the user (these appear in the *)
+    (*            array [producers]) and the identifiers [_i] when the semantic *)
+    (*            action uses [$i]. *\) *)
+    (*         (\* let ids = *\) *)
+    (*         (\*   StringSet.union (gather_oids producers) (\\* (gather_monsters monsters) *\\) *\) *)
+    (*         (\* in *\) *)
+    (*         (\* (\\* Extract a stretch of text. *\\) *\) *)
+    (*         (\* let stretch = mk_stretch stretchpos closingpos true monsters in *\) *)
+    (*         (\* Build a semantic action. *\) *)
+    (*         (\* Action.from_stretch None None *\) *)
 
-| ('%'? as percent) "[@" (attributechar+ as id) whitespace*
-    { let openingpos = lexeme_start_p lexbuf in
-      let stretchpos = lexeme_end_p lexbuf in
-      let closingpos = attribute openingpos lexbuf in
-      let pos = Positions.import (openingpos, lexeme_end_p lexbuf) in
-      let attr = mk_stretch stretchpos closingpos false [] in
-      if percent = "" then
-        (* No [%] sign: this is a normal attribute. *)
-        ATTRIBUTE (Positions.with_pos pos id, attr)
-      else
-        (* A [%] sign is present: this is a grammar-wide attribute. *)
-        GRAMMARATTRIBUTE (Positions.with_pos pos id, attr)
-    }
+(* | ('%'? as percent) "[@" (attributechar+ as id) whitespace* *)
+(*     { let openingpos = lexeme_start_p lexbuf in *)
+(*       let stretchpos = lexeme_end_p lexbuf in *)
+(*       let closingpos = attribute openingpos lexbuf in *)
+(*       let pos = Positions.import (openingpos, lexeme_end_p lexbuf) in *)
+(*       let attr = mk_stretch stretchpos closingpos false [] in *)
+(*       if percent = "" then *)
+(*         (\* No [%] sign: this is a normal attribute. *\) *)
+(*         ATTRIBUTE (Positions.with_pos pos id, attr) *)
+(*       else *)
+(*         (\* A [%] sign is present: this is a grammar-wide attribute. *\) *)
+(*         GRAMMARATTRIBUTE (Positions.with_pos pos id, attr) *)
+(*     } *)
 | eof
     { EOF }
 | _
@@ -667,10 +667,10 @@ and action percent openingpos monsters = parse
 | '('
     { let _, monsters = parentheses (lexeme_start_p lexbuf) monsters lexbuf in
       action percent openingpos monsters lexbuf }
-| '$' (['0'-'9']+ as i)
-    { let i = int_of_string (lexeme_start_p lexbuf) i in
-      let monster = dollar (cpos lexbuf) i in
-      action percent openingpos (monster :: monsters) lexbuf }
+(* | '$' (['0'-'9']+ as i) *)
+(*     { let i = int_of_string (lexeme_start_p lexbuf) i in *)
+(*       let monster = dollar (cpos lexbuf) i in *)
+(*       action percent openingpos (monster :: monsters) lexbuf } *)
 | poskeyword
     { let monster = position (cpos lexbuf) where flavor i x in
       action percent openingpos (monster :: monsters) lexbuf }
@@ -711,10 +711,10 @@ and parentheses openingpos monsters = parse
 | '{'
     { let _, monsters = action false (lexeme_start_p lexbuf) monsters lexbuf in
       parentheses openingpos monsters lexbuf }
-| '$' (['0'-'9']+ as i)
-    { let i = int_of_string (lexeme_start_p lexbuf) i in
-      let monster = dollar (cpos lexbuf) i in
-      parentheses openingpos (monster :: monsters) lexbuf }
+(* | '$' (['0'-'9']+ as i) *)
+(*     { let i = int_of_string (lexeme_start_p lexbuf) i in *)
+(*       let monster = dollar (cpos lexbuf) i in *)
+(*       parentheses openingpos (monster :: monsters) lexbuf } *)
 | poskeyword
     { let monster = position (cpos lexbuf) where flavor i x in
       parentheses openingpos (monster :: monsters) lexbuf }
