@@ -59,43 +59,28 @@ rule ruleInQuotes acc = parse
   (* An identifier that begins with an lowercase letter is considered a
      non-terminal symbol. It should be a start symbol. *)
   | (lowercase identchar *) as lid
-      { 	(print_endline ("ID" ^lid)); NONTERMINAL (lid, lexbuf.lex_start_p, lexbuf.lex_curr_p) }
   (* An identifier that begins with an uppercase letter is considered a
      terminal symbol. *)
-  | (uppercase identchar *) as uid
-      { (print_endline "ID2"); TERMINAL (uid, lexbuf.lex_start_p, lexbuf.lex_curr_p) }
   (* Whitespace is ignored. *)
   | whitespace
       { lex lexbuf }
   (* The end of a line is translated to [EOL]. *)
-  | newline
-      { new_line lexbuf; EOL }
+
   (* An auto-generated comment is ignored. *)
   | autocomment
       { (print_endline "comment"); new_line lexbuf; lex lexbuf }
   (* A manually-written comment is preserved. *)
-  | comment as c
-      { new_line lexbuf; COMMENT c }
+
   (* The end of file is translated to [EOF]. *)
   | eof
       { EOF }
-  (* A colon. *)
-  | "::=" as s { (print_endline ("COLONCOLONEQUALS:" ^s)); COLONCOLONEQUALS }
+
 
      
   (* from https://repo.or.cz/sqlgg.git  ~/2023/12/17/sqlgg/lib/sql_lexer.mll *)
   | '('                { (print_endline "lparn"); LPAREN }
   | ')'                { (print_endline "rparn"); RPAREN }
-  | '"' {  (print_endline "open"); Lexer.keep_lexeme_start lexbuf (fun () -> (IDENT (Lexer.ident (ruleInQuotes "" lexbuf)))) }
-  | ','   { (print_endline "COMMA"); COMMA }
-  | '|'   { (print_endline "PIPE"); PIPE }
-  | '['   { (print_endline "LBRACE"); LBRACE }
-  | ']'   { (print_endline "RBRACE"); RBRACE }
-  | '>'   { (print_endline "HT");GT }
-  | '<'   { (print_endline "LT"); LT }
-  | '-'   { (print_endline "MINUS");MINUS }
-  | '{'   { (print_endline "LCURLY");LCURLY  }
-  | '}'   { (print_endline "RCURLY"); RCURLY  }
+
 
   | _
       {

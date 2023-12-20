@@ -235,7 +235,7 @@ type pattern =
   (* Patterns: as in the manual. *)
 
 type raw_action =
-  Settings.dollars -> identifier option array -> action
+  identifier option array -> action
   (* Ugly type produced by the lexer for an ACTION token. *)
 
 type expression =

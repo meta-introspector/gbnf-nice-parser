@@ -41,7 +41,7 @@ type t = {
 let from_stretch xs s =
   {
     expr      = IL.ETextual s;
-    standard  = s.Stretch.stretch_filename = Settings.stdlib_filename;
+    standard  = s.Stretch.stretch_filename = "fixme";
     semvars   = xs;
     keywords  = KeywordSet.of_list s.Stretch.stretch_keywords
   }
