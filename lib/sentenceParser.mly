@@ -93,20 +93,33 @@ located_sentences_or_comments:
 
 /* A located sentence. */
 located_sentence: sentence
-  { locate_sentence $1 }
+    { (print_endline (Batteries.dump ("sentence", $1)));
+      locate_sentence $1 }
 
 /* An optional sentence. */
 optional_sentence:
 | EOF
     { None }
 | sentence
-    { Some $1 }
+    {
+      (print_endline (Batteries.dump  ("optional_sentence" , $1)));
+      Some $1 }
 
 /* A sentence is a pair of an optional non-terminal start symbol and a list
    of terminal symbols. It is terminated by a newline. */
+production_groups:
+  /* epsilon */
+    { [] }
+| production_groups BAR production_group
+    { $3 :: $1 }
+
 sentence:
 | NONTERMINAL COLONCOLONEQUALS terminals EOL
-    { Some $1, $3 }
+    {
+      (print_endline (Batteries.dump ("nonterminal", $1)));
+      (print_endline (Batteries.dump ("terminals1" ,  $3)));
+      Some $1, $3
+    }
 | terminals EOL
     { None, $1 }
 
@@ -117,15 +130,15 @@ terminals:
 | TERMINAL terminals /* (Lexer.extract_string_from_terminal */
     {
       (print_endline "TERMINAL terminals");
-      (print_endline (Batteries.dump  $1));      
-      (print_endline (Batteries.dump $2 ));
+      (print_endline (Batteries.dump  ("terminal",$1)));      
+      (print_endline (Batteries.dump ("terminals2",$2) ));
       []
     }
 | IDENT terminals /*for quoted tokens*/
     {
       (print_endline "IDENT terminals");
-      (print_endline (Batteries.dump $1));
-      (print_endline (Batteries.dump $2));
+      (print_endline (Batteries.dump ("ident", $1)));
+      (print_endline (Batteries.dump ("terminals3", $2)));
       [];
     } 
     /* { $1 :: $2 } */

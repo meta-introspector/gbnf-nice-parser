@@ -15,6 +15,9 @@
  (deps sentenceParser.messages sentenceParser.mly)
  (action  (with-stdout-to %{targets} (run menhir --compile-errors %{deps}))))
 
+; # TODO FIXME:
+; # menhir --list-errors ./lib/sentenceParser.mly  > lib/sentenceParser.messages
+
 (library
  (name gbnf_parser)
 
