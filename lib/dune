@@ -10,10 +10,11 @@
         --log-code 99
         --log-grammar 99
         --reference-graph))
-(rule
- (targets sentence_messages.ml)
- (deps sentenceParser.messages sentenceParser.mly)
- (action  (with-stdout-to %{targets} (run menhir --compile-errors %{deps}))))
+; (rule
+;   (alias msg)
+;  (targets sentence_messages.ml)
+;  (deps sentenceParser.messages sentenceParser.mly)
+;  (action  (with-stdout-to %{targets} (run menhir --compile-errors %{deps}))))
 
 ; # TODO FIXME:
 ; # menhir --list-errors ./lib/sentenceParser.mly  > lib/sentenceParser.messages

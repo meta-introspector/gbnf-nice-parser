@@ -2,302 +2,2410 @@ State 0:
 ## Known stack suffix:
 ##
 ## LR(1) items:
-entry' -> . entry [ # ]
+grammar' -> . grammar [ # ]
 ## Transitions:
--- On TERMINAL shift to state 1
--- On NONTERMINAL shift to state 3
--- On COMMENT shift to state 7
--- On terminals shift to state 8
--- On sentence shift to state 10
--- On located_sentences_or_comments shift to state 14
--- On located_sentence shift to state 12
--- On entry shift to state 16
+-- On TYPE shift to state 1
+-- On TOKEN shift to state 24
+-- On START shift to state 36
+-- On SEMI shift to state 42
+-- On RIGHT shift to state 43
+-- On PUBLIC shift to state 44
+-- On PERCENTATTRIBUTE shift to state 45
+-- On PARAMETER shift to state 50
+-- On ON_ERROR_REDUCE shift to state 52
+-- On NONASSOC shift to state 54
+-- On LET shift to state 55
+-- On LEFT shift to state 56
+-- On INLINE shift to state 57
+-- On HEADER shift to state 58
+-- On GRAMMARATTRIBUTE shift to state 59
+-- On EOF shift to state 60
+-- On COLON shift to state 61
+-- On priority_keyword shift to state 62
+-- On list(declaration) shift to state 67
+-- On grammar shift to state 191
+-- On declaration shift to state 192
 ## Reductions:
--- On EOF
---   reduce production located_sentences_or_comments ->
--- On EOL
---   reduce production terminals ->
+-- On PERCENTPERCENT
+--   reduce production list(declaration) ->
 
 State 1:
 ## Known stack suffix:
-## TERMINAL
+## TYPE
 ## LR(1) items:
-terminals -> TERMINAL . terminals [ EOL ]
+declaration -> TYPE . OCAMLTYPE separated_nonempty_list(option(COMMA),strict_actual) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
 ## Transitions:
--- On TERMINAL shift to state 1
--- On terminals shift to state 2
+-- On OCAMLTYPE shift to state 2
 ## Reductions:
--- On EOL
---   reduce production terminals ->
 
 State 2:
 ## Known stack suffix:
-## TERMINAL terminals
+## TYPE OCAMLTYPE
 ## LR(1) items:
-terminals -> TERMINAL terminals . [ EOL ]
+declaration -> TYPE OCAMLTYPE . separated_nonempty_list(option(COMMA),strict_actual) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
 ## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 5
+-- On symbol shift to state 6
+-- On strict_actual shift to state 19
+-- On separated_nonempty_list(option(COMMA),strict_actual) shift to state 23
 ## Reductions:
--- On EOL
---   reduce production terminals -> TERMINAL terminals
 
 State 3:
 ## Known stack suffix:
-## NONTERMINAL
+## UID
 ## LR(1) items:
-sentence -> NONTERMINAL . COLONCOLONEQUALS terminals EOL [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+symbol -> UID . [ UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE OCAMLTYPE NONASSOC LPAREN LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON BAR ATTRIBUTE ACTION ]
 ## Transitions:
--- On COLONCOLONEQUALS shift to state 4
 ## Reductions:
+-- On UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE OCAMLTYPE NONASSOC LPAREN LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON BAR ATTRIBUTE ACTION
+--   reduce production symbol -> UID
 
 State 4:
 ## Known stack suffix:
-## NONTERMINAL COLONCOLONEQUALS
+## QID
 ## LR(1) items:
-sentence -> NONTERMINAL COLONCOLONEQUALS . terminals EOL [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+symbol -> QID . [ UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE OCAMLTYPE NONASSOC LPAREN LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON BAR ATTRIBUTE ACTION ]
 ## Transitions:
--- On TERMINAL shift to state 1
--- On terminals shift to state 5
 ## Reductions:
--- On EOL
---   reduce production terminals ->
+-- On UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE OCAMLTYPE NONASSOC LPAREN LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON BAR ATTRIBUTE ACTION
+--   reduce production symbol -> QID
 
 State 5:
 ## Known stack suffix:
-## NONTERMINAL COLONCOLONEQUALS terminals
+## LID
 ## LR(1) items:
-sentence -> NONTERMINAL COLONCOLONEQUALS terminals . EOL [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+symbol -> LID . [ UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE OCAMLTYPE NONASSOC LPAREN LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON BAR ATTRIBUTE ACTION ]
 ## Transitions:
--- On EOL shift to state 6
 ## Reductions:
+-- On UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE OCAMLTYPE NONASSOC LPAREN LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON BAR ATTRIBUTE ACTION
+--   reduce production symbol -> LID
 
 State 6:
 ## Known stack suffix:
-## NONTERMINAL COLONCOLONEQUALS terminals EOL
+## symbol
 ## LR(1) items:
-sentence -> NONTERMINAL COLONCOLONEQUALS terminals EOL . [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+strict_actual -> symbol . loption(delimited(LPAREN,separated_nonempty_list(COMMA,strict_actual),RPAREN)) [ UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON ATTRIBUTE ]
 ## Transitions:
+-- On LPAREN shift to state 7
+-- On loption(delimited(LPAREN,separated_nonempty_list(COMMA,strict_actual),RPAREN)) shift to state 18
 ## Reductions:
--- On TERMINAL NONTERMINAL EOL EOF COMMENT
---   reduce production sentence -> NONTERMINAL COLONCOLONEQUALS terminals EOL
+-- On UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON ATTRIBUTE
+--   reduce production loption(delimited(LPAREN,separated_nonempty_list(COMMA,strict_actual),RPAREN)) ->
 
 State 7:
 ## Known stack suffix:
-## COMMENT
+## LPAREN
 ## LR(1) items:
-located_sentences_or_comments -> COMMENT . located_sentences_or_comments [ EOF ]
+loption(delimited(LPAREN,separated_nonempty_list(COMMA,strict_actual),RPAREN)) -> LPAREN . separated_nonempty_list(COMMA,strict_actual) RPAREN [ UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON ATTRIBUTE ]
 ## Transitions:
--- On TERMINAL shift to state 1
--- On NONTERMINAL shift to state 3
--- On COMMENT shift to state 7
--- On terminals shift to state 8
--- On sentence shift to state 10
--- On located_sentences_or_comments shift to state 11
--- On located_sentence shift to state 12
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 5
+-- On symbol shift to state 6
+-- On strict_actual shift to state 8
+-- On separated_nonempty_list(COMMA,strict_actual) shift to state 16
 ## Reductions:
--- On EOF
---   reduce production located_sentences_or_comments ->
--- On EOL
---   reduce production terminals ->
 
 State 8:
 ## Known stack suffix:
-## terminals
+## strict_actual
 ## LR(1) items:
-sentence -> terminals . EOL [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+separated_nonempty_list(COMMA,strict_actual) -> strict_actual . [ RPAREN ]
+separated_nonempty_list(COMMA,strict_actual) -> strict_actual . COMMA separated_nonempty_list(COMMA,strict_actual) [ RPAREN ]
+strict_actual -> strict_actual . located(modifier) [ STAR RPAREN QUESTION PLUS COMMA ]
 ## Transitions:
--- On EOL shift to state 9
+-- On STAR shift to state 9
+-- On QUESTION shift to state 10
+-- On PLUS shift to state 11
+-- On COMMA shift to state 12
+-- On modifier shift to state 14
+-- On located(modifier) shift to state 15
 ## Reductions:
+-- On RPAREN
+--   reduce production separated_nonempty_list(COMMA,strict_actual) -> strict_actual
 
 State 9:
 ## Known stack suffix:
-## terminals EOL
+## STAR
 ## LR(1) items:
-sentence -> terminals EOL . [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+modifier -> STAR . [ UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON BAR ATTRIBUTE ACTION ]
 ## Transitions:
 ## Reductions:
--- On TERMINAL NONTERMINAL EOL EOF COMMENT
---   reduce production sentence -> terminals EOL
+-- On UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON BAR ATTRIBUTE ACTION
+--   reduce production modifier -> STAR
 
 State 10:
 ## Known stack suffix:
-## sentence
+## QUESTION
 ## LR(1) items:
-located_sentence -> sentence . [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+modifier -> QUESTION . [ UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON BAR ATTRIBUTE ACTION ]
 ## Transitions:
 ## Reductions:
--- On TERMINAL NONTERMINAL EOL EOF COMMENT
---   reduce production located_sentence -> sentence
+-- On UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON BAR ATTRIBUTE ACTION
+--   reduce production modifier -> QUESTION
 
 State 11:
 ## Known stack suffix:
-## COMMENT located_sentences_or_comments
+## PLUS
 ## LR(1) items:
-located_sentences_or_comments -> COMMENT located_sentences_or_comments . [ EOF ]
+modifier -> PLUS . [ UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON BAR ATTRIBUTE ACTION ]
 ## Transitions:
 ## Reductions:
--- On EOF
---   reduce production located_sentences_or_comments -> COMMENT located_sentences_or_comments
+-- On UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON BAR ATTRIBUTE ACTION
+--   reduce production modifier -> PLUS
 
 State 12:
 ## Known stack suffix:
-## located_sentence
+## strict_actual COMMA
 ## LR(1) items:
-located_sentences_or_comments -> located_sentence . located_sentences_or_comments [ EOF ]
+separated_nonempty_list(COMMA,strict_actual) -> strict_actual COMMA . separated_nonempty_list(COMMA,strict_actual) [ RPAREN ]
 ## Transitions:
--- On TERMINAL shift to state 1
--- On NONTERMINAL shift to state 3
--- On COMMENT shift to state 7
--- On terminals shift to state 8
--- On sentence shift to state 10
--- On located_sentences_or_comments shift to state 13
--- On located_sentence shift to state 12
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 5
+-- On symbol shift to state 6
+-- On strict_actual shift to state 8
+-- On separated_nonempty_list(COMMA,strict_actual) shift to state 13
 ## Reductions:
--- On EOF
---   reduce production located_sentences_or_comments ->
--- On EOL
---   reduce production terminals ->
 
 State 13:
 ## Known stack suffix:
-## located_sentence located_sentences_or_comments
+## strict_actual COMMA separated_nonempty_list(COMMA,strict_actual)
 ## LR(1) items:
-located_sentences_or_comments -> located_sentence located_sentences_or_comments . [ EOF ]
+separated_nonempty_list(COMMA,strict_actual) -> strict_actual COMMA separated_nonempty_list(COMMA,strict_actual) . [ RPAREN ]
 ## Transitions:
 ## Reductions:
--- On EOF
---   reduce production located_sentences_or_comments -> located_sentence located_sentences_or_comments
+-- On RPAREN
+--   reduce production separated_nonempty_list(COMMA,strict_actual) -> strict_actual COMMA separated_nonempty_list(COMMA,strict_actual)
 
 State 14:
 ## Known stack suffix:
-## located_sentences_or_comments
+## modifier
 ## LR(1) items:
-entry -> located_sentences_or_comments . EOF [ # ]
+located(modifier) -> modifier . [ UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON BAR ATTRIBUTE ACTION ]
 ## Transitions:
--- On EOF shift to state 15
 ## Reductions:
+-- On UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON BAR ATTRIBUTE ACTION
+--   reduce production located(modifier) -> modifier
 
 State 15:
 ## Known stack suffix:
-## located_sentences_or_comments EOF
+## strict_actual located(modifier)
 ## LR(1) items:
-entry -> located_sentences_or_comments EOF . [ # ]
+strict_actual -> strict_actual located(modifier) . [ UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON ATTRIBUTE ]
 ## Transitions:
 ## Reductions:
--- On #
---   reduce production entry -> located_sentences_or_comments EOF
+-- On UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON ATTRIBUTE
+--   reduce production strict_actual -> strict_actual located(modifier)
 
 State 16:
 ## Known stack suffix:
-## entry
+## LPAREN separated_nonempty_list(COMMA,strict_actual)
 ## LR(1) items:
-entry' -> entry . [ # ]
+loption(delimited(LPAREN,separated_nonempty_list(COMMA,strict_actual),RPAREN)) -> LPAREN separated_nonempty_list(COMMA,strict_actual) . RPAREN [ UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON ATTRIBUTE ]
 ## Transitions:
+-- On RPAREN shift to state 17
 ## Reductions:
--- On #
---   accept entry
 
 State 17:
 ## Known stack suffix:
-##
+## LPAREN separated_nonempty_list(COMMA,strict_actual) RPAREN
 ## LR(1) items:
-optional_sentence' -> . optional_sentence [ # ]
+loption(delimited(LPAREN,separated_nonempty_list(COMMA,strict_actual),RPAREN)) -> LPAREN separated_nonempty_list(COMMA,strict_actual) RPAREN . [ UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON ATTRIBUTE ]
 ## Transitions:
--- On TERMINAL shift to state 1
--- On NONTERMINAL shift to state 18
--- On EOF shift to state 22
--- On terminals shift to state 23
--- On sentence shift to state 25
--- On optional_sentence shift to state 26
 ## Reductions:
--- On EOL
---   reduce production terminals ->
+-- On UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON ATTRIBUTE
+--   reduce production loption(delimited(LPAREN,separated_nonempty_list(COMMA,strict_actual),RPAREN)) -> LPAREN separated_nonempty_list(COMMA,strict_actual) RPAREN
 
 State 18:
 ## Known stack suffix:
-## NONTERMINAL
+## symbol loption(delimited(LPAREN,separated_nonempty_list(COMMA,strict_actual),RPAREN))
 ## LR(1) items:
-sentence -> NONTERMINAL . COLONCOLONEQUALS terminals EOL [ # ]
+strict_actual -> symbol loption(delimited(LPAREN,separated_nonempty_list(COMMA,strict_actual),RPAREN)) . [ UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON ATTRIBUTE ]
 ## Transitions:
--- On COLONCOLONEQUALS shift to state 19
 ## Reductions:
+-- On UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON ATTRIBUTE
+--   reduce production strict_actual -> symbol loption(delimited(LPAREN,separated_nonempty_list(COMMA,strict_actual),RPAREN))
 
 State 19:
 ## Known stack suffix:
-## NONTERMINAL COLONCOLONEQUALS
+## strict_actual
 ## LR(1) items:
-sentence -> NONTERMINAL COLONCOLONEQUALS . terminals EOL [ # ]
+separated_nonempty_list(option(COMMA),strict_actual) -> strict_actual . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ATTRIBUTE ]
+separated_nonempty_list(option(COMMA),strict_actual) -> strict_actual . option(COMMA) separated_nonempty_list(option(COMMA),strict_actual) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ATTRIBUTE ]
+strict_actual -> strict_actual . located(modifier) [ UID TYPE TOKEN START STAR SEMI RIGHT QUESTION QID PUBLIC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON ATTRIBUTE ]
 ## Transitions:
--- On TERMINAL shift to state 1
--- On terminals shift to state 20
+-- On STAR shift to state 9
+-- On QUESTION shift to state 10
+-- On PLUS shift to state 11
+-- On COMMA shift to state 20
+-- On option(COMMA) shift to state 21
+-- On modifier shift to state 14
+-- On located(modifier) shift to state 15
 ## Reductions:
--- On EOL
---   reduce production terminals ->
+-- On UID QID LID
+--   reduce production option(COMMA) ->
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ATTRIBUTE
+--   reduce production separated_nonempty_list(option(COMMA),strict_actual) -> strict_actual
 
 State 20:
 ## Known stack suffix:
-## NONTERMINAL COLONCOLONEQUALS terminals
+## COMMA
 ## LR(1) items:
-sentence -> NONTERMINAL COLONCOLONEQUALS terminals . EOL [ # ]
+option(COMMA) -> COMMA . [ UID QID LID ]
 ## Transitions:
--- On EOL shift to state 21
 ## Reductions:
+-- On UID QID LID
+--   reduce production option(COMMA) -> COMMA
 
 State 21:
 ## Known stack suffix:
-## NONTERMINAL COLONCOLONEQUALS terminals EOL
+## strict_actual option(COMMA)
 ## LR(1) items:
-sentence -> NONTERMINAL COLONCOLONEQUALS terminals EOL . [ # ]
+separated_nonempty_list(option(COMMA),strict_actual) -> strict_actual option(COMMA) . separated_nonempty_list(option(COMMA),strict_actual) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ATTRIBUTE ]
 ## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 5
+-- On symbol shift to state 6
+-- On strict_actual shift to state 19
+-- On separated_nonempty_list(option(COMMA),strict_actual) shift to state 22
 ## Reductions:
--- On #
---   reduce production sentence -> NONTERMINAL COLONCOLONEQUALS terminals EOL
 
 State 22:
 ## Known stack suffix:
-## EOF
+## strict_actual option(COMMA) separated_nonempty_list(option(COMMA),strict_actual)
 ## LR(1) items:
-optional_sentence -> EOF . [ # ]
+separated_nonempty_list(option(COMMA),strict_actual) -> strict_actual option(COMMA) separated_nonempty_list(option(COMMA),strict_actual) . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ATTRIBUTE ]
 ## Transitions:
 ## Reductions:
--- On #
---   reduce production optional_sentence -> EOF
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ATTRIBUTE
+--   reduce production separated_nonempty_list(option(COMMA),strict_actual) -> strict_actual option(COMMA) separated_nonempty_list(option(COMMA),strict_actual)
 
 State 23:
 ## Known stack suffix:
-## terminals
+## TYPE OCAMLTYPE separated_nonempty_list(option(COMMA),strict_actual)
 ## LR(1) items:
-sentence -> terminals . EOL [ # ]
+declaration -> TYPE OCAMLTYPE separated_nonempty_list(option(COMMA),strict_actual) . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
 ## Transitions:
--- On EOL shift to state 24
 ## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production declaration -> TYPE OCAMLTYPE separated_nonempty_list(option(COMMA),strict_actual)
 
 State 24:
 ## Known stack suffix:
-## terminals EOL
+## TOKEN
 ## LR(1) items:
-sentence -> terminals EOL . [ # ]
+declaration -> TOKEN . option(OCAMLTYPE) separated_nonempty_list(option(COMMA),terminal_alias_attrs) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
 ## Transitions:
+-- On OCAMLTYPE shift to state 25
+-- On option(OCAMLTYPE) shift to state 26
 ## Reductions:
--- On #
---   reduce production sentence -> terminals EOL
+-- On UID
+--   reduce production option(OCAMLTYPE) ->
 
 State 25:
 ## Known stack suffix:
-## sentence
+## OCAMLTYPE
 ## LR(1) items:
-optional_sentence -> sentence . [ # ]
+option(OCAMLTYPE) -> OCAMLTYPE . [ UID LID ]
 ## Transitions:
 ## Reductions:
--- On #
---   reduce production optional_sentence -> sentence
+-- On UID LID
+--   reduce production option(OCAMLTYPE) -> OCAMLTYPE
 
 State 26:
 ## Known stack suffix:
-## optional_sentence
+## TOKEN option(OCAMLTYPE)
 ## LR(1) items:
-optional_sentence' -> optional_sentence . [ # ]
+declaration -> TOKEN option(OCAMLTYPE) . separated_nonempty_list(option(COMMA),terminal_alias_attrs) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+-- On UID shift to state 27
+-- On separated_nonempty_list(option(COMMA),terminal_alias_attrs) shift to state 35
+## Reductions:
+
+State 27:
+## Known stack suffix:
+## UID
+## LR(1) items:
+separated_nonempty_list(option(COMMA),terminal_alias_attrs) -> UID . option(QID) list(ATTRIBUTE) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+separated_nonempty_list(option(COMMA),terminal_alias_attrs) -> UID . option(QID) list(ATTRIBUTE) option(COMMA) separated_nonempty_list(option(COMMA),terminal_alias_attrs) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+-- On QID shift to state 28
+-- On option(QID) shift to state 29
+## Reductions:
+-- On UID TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON ATTRIBUTE
+--   reduce production option(QID) ->
+
+State 28:
+## Known stack suffix:
+## QID
+## LR(1) items:
+option(QID) -> QID . [ UID TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON ATTRIBUTE ]
+## Transitions:
+## Reductions:
+-- On UID TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON ATTRIBUTE
+--   reduce production option(QID) -> QID
+
+State 29:
+## Known stack suffix:
+## UID option(QID)
+## LR(1) items:
+separated_nonempty_list(option(COMMA),terminal_alias_attrs) -> UID option(QID) . list(ATTRIBUTE) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+separated_nonempty_list(option(COMMA),terminal_alias_attrs) -> UID option(QID) . list(ATTRIBUTE) option(COMMA) separated_nonempty_list(option(COMMA),terminal_alias_attrs) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+-- On ATTRIBUTE shift to state 30
+-- On list(ATTRIBUTE) shift to state 32
+## Reductions:
+-- On UID TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COMMA COLON
+--   reduce production list(ATTRIBUTE) ->
+
+State 30:
+## Known stack suffix:
+## ATTRIBUTE
+## LR(1) items:
+list(ATTRIBUTE) -> ATTRIBUTE . list(ATTRIBUTE) [ UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LPAREN LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EQUALEQUAL EOF COMMA COLONEQUAL COLON BAR ACTION ]
+## Transitions:
+-- On ATTRIBUTE shift to state 30
+-- On list(ATTRIBUTE) shift to state 31
+## Reductions:
+-- On UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LPAREN LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EQUALEQUAL EOF COMMA COLONEQUAL COLON BAR ACTION
+--   reduce production list(ATTRIBUTE) ->
+
+State 31:
+## Known stack suffix:
+## ATTRIBUTE list(ATTRIBUTE)
+## LR(1) items:
+list(ATTRIBUTE) -> ATTRIBUTE list(ATTRIBUTE) . [ UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LPAREN LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EQUALEQUAL EOF COMMA COLONEQUAL COLON BAR ACTION ]
+## Transitions:
+## Reductions:
+-- On UID TYPE TOKEN START STAR SEMI RPAREN RIGHT QUESTION QID PUBLIC PREC PLUS PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LPAREN LID LET LEFT INLINE HEADER GRAMMARATTRIBUTE EQUALEQUAL EOF COMMA COLONEQUAL COLON BAR ACTION
+--   reduce production list(ATTRIBUTE) -> ATTRIBUTE list(ATTRIBUTE)
+
+State 32:
+## Known stack suffix:
+## UID option(QID) list(ATTRIBUTE)
+## LR(1) items:
+separated_nonempty_list(option(COMMA),terminal_alias_attrs) -> UID option(QID) list(ATTRIBUTE) . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+separated_nonempty_list(option(COMMA),terminal_alias_attrs) -> UID option(QID) list(ATTRIBUTE) . option(COMMA) separated_nonempty_list(option(COMMA),terminal_alias_attrs) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+-- On COMMA shift to state 20
+-- On option(COMMA) shift to state 33
+## Reductions:
+-- On UID
+--   reduce production option(COMMA) ->
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production separated_nonempty_list(option(COMMA),terminal_alias_attrs) -> UID option(QID) list(ATTRIBUTE)
+
+State 33:
+## Known stack suffix:
+## UID option(QID) list(ATTRIBUTE) option(COMMA)
+## LR(1) items:
+separated_nonempty_list(option(COMMA),terminal_alias_attrs) -> UID option(QID) list(ATTRIBUTE) option(COMMA) . separated_nonempty_list(option(COMMA),terminal_alias_attrs) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+-- On UID shift to state 27
+-- On separated_nonempty_list(option(COMMA),terminal_alias_attrs) shift to state 34
+## Reductions:
+
+State 34:
+## Known stack suffix:
+## UID option(QID) list(ATTRIBUTE) option(COMMA) separated_nonempty_list(option(COMMA),terminal_alias_attrs)
+## LR(1) items:
+separated_nonempty_list(option(COMMA),terminal_alias_attrs) -> UID option(QID) list(ATTRIBUTE) option(COMMA) separated_nonempty_list(option(COMMA),terminal_alias_attrs) . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production separated_nonempty_list(option(COMMA),terminal_alias_attrs) -> UID option(QID) list(ATTRIBUTE) option(COMMA) separated_nonempty_list(option(COMMA),terminal_alias_attrs)
+
+State 35:
+## Known stack suffix:
+## TOKEN option(OCAMLTYPE) separated_nonempty_list(option(COMMA),terminal_alias_attrs)
+## LR(1) items:
+declaration -> TOKEN option(OCAMLTYPE) separated_nonempty_list(option(COMMA),terminal_alias_attrs) . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production declaration -> TOKEN option(OCAMLTYPE) separated_nonempty_list(option(COMMA),terminal_alias_attrs)
+
+State 36:
+## Known stack suffix:
+## START
+## LR(1) items:
+declaration -> START . option(OCAMLTYPE) separated_nonempty_list(option(COMMA),nonterminal) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+-- On OCAMLTYPE shift to state 25
+-- On option(OCAMLTYPE) shift to state 37
+## Reductions:
+-- On LID
+--   reduce production option(OCAMLTYPE) ->
+
+State 37:
+## Known stack suffix:
+## START option(OCAMLTYPE)
+## LR(1) items:
+declaration -> START option(OCAMLTYPE) . separated_nonempty_list(option(COMMA),nonterminal) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+-- On LID shift to state 38
+-- On separated_nonempty_list(option(COMMA),nonterminal) shift to state 41
+## Reductions:
+
+State 38:
+## Known stack suffix:
+## LID
+## LR(1) items:
+separated_nonempty_list(option(COMMA),nonterminal) -> LID . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+separated_nonempty_list(option(COMMA),nonterminal) -> LID . option(COMMA) separated_nonempty_list(option(COMMA),nonterminal) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+-- On COMMA shift to state 20
+-- On option(COMMA) shift to state 39
+## Reductions:
+-- On LID
+--   reduce production option(COMMA) ->
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production separated_nonempty_list(option(COMMA),nonterminal) -> LID
+
+State 39:
+## Known stack suffix:
+## LID option(COMMA)
+## LR(1) items:
+separated_nonempty_list(option(COMMA),nonterminal) -> LID option(COMMA) . separated_nonempty_list(option(COMMA),nonterminal) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+-- On LID shift to state 38
+-- On separated_nonempty_list(option(COMMA),nonterminal) shift to state 40
+## Reductions:
+
+State 40:
+## Known stack suffix:
+## LID option(COMMA) separated_nonempty_list(option(COMMA),nonterminal)
+## LR(1) items:
+separated_nonempty_list(option(COMMA),nonterminal) -> LID option(COMMA) separated_nonempty_list(option(COMMA),nonterminal) . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production separated_nonempty_list(option(COMMA),nonterminal) -> LID option(COMMA) separated_nonempty_list(option(COMMA),nonterminal)
+
+State 41:
+## Known stack suffix:
+## START option(OCAMLTYPE) separated_nonempty_list(option(COMMA),nonterminal)
+## LR(1) items:
+declaration -> START option(OCAMLTYPE) separated_nonempty_list(option(COMMA),nonterminal) . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production declaration -> START option(OCAMLTYPE) separated_nonempty_list(option(COMMA),nonterminal)
+
+State 42:
+## Known stack suffix:
+## SEMI
+## LR(1) items:
+declaration -> SEMI . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production declaration -> SEMI
+
+State 43:
+## Known stack suffix:
+## RIGHT
+## LR(1) items:
+priority_keyword -> RIGHT . [ UID QID LID ]
+## Transitions:
+## Reductions:
+-- On UID QID LID
+--   reduce production priority_keyword -> RIGHT
+
+State 44:
+## Known stack suffix:
+## PUBLIC
+## LR(1) items:
+declaration -> PUBLIC . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production declaration -> PUBLIC
+
+State 45:
+## Known stack suffix:
+## PERCENTATTRIBUTE
+## LR(1) items:
+declaration -> PERCENTATTRIBUTE . separated_nonempty_list(option(COMMA),strict_actual) nonempty_list(ATTRIBUTE) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 5
+-- On symbol shift to state 6
+-- On strict_actual shift to state 19
+-- On separated_nonempty_list(option(COMMA),strict_actual) shift to state 46
+## Reductions:
+
+State 46:
+## Known stack suffix:
+## PERCENTATTRIBUTE separated_nonempty_list(option(COMMA),strict_actual)
+## LR(1) items:
+declaration -> PERCENTATTRIBUTE separated_nonempty_list(option(COMMA),strict_actual) . nonempty_list(ATTRIBUTE) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+-- On ATTRIBUTE shift to state 47
+-- On nonempty_list(ATTRIBUTE) shift to state 49
+## Reductions:
+
+State 47:
+## Known stack suffix:
+## ATTRIBUTE
+## LR(1) items:
+nonempty_list(ATTRIBUTE) -> ATTRIBUTE . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+nonempty_list(ATTRIBUTE) -> ATTRIBUTE . nonempty_list(ATTRIBUTE) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+-- On ATTRIBUTE shift to state 47
+-- On nonempty_list(ATTRIBUTE) shift to state 48
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production nonempty_list(ATTRIBUTE) -> ATTRIBUTE
+
+State 48:
+## Known stack suffix:
+## ATTRIBUTE nonempty_list(ATTRIBUTE)
+## LR(1) items:
+nonempty_list(ATTRIBUTE) -> ATTRIBUTE nonempty_list(ATTRIBUTE) . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production nonempty_list(ATTRIBUTE) -> ATTRIBUTE nonempty_list(ATTRIBUTE)
+
+State 49:
+## Known stack suffix:
+## PERCENTATTRIBUTE separated_nonempty_list(option(COMMA),strict_actual) nonempty_list(ATTRIBUTE)
+## LR(1) items:
+declaration -> PERCENTATTRIBUTE separated_nonempty_list(option(COMMA),strict_actual) nonempty_list(ATTRIBUTE) . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production declaration -> PERCENTATTRIBUTE separated_nonempty_list(option(COMMA),strict_actual) nonempty_list(ATTRIBUTE)
+
+State 50:
+## Known stack suffix:
+## PARAMETER
+## LR(1) items:
+declaration -> PARAMETER . OCAMLTYPE [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+-- On OCAMLTYPE shift to state 51
+## Reductions:
+
+State 51:
+## Known stack suffix:
+## PARAMETER OCAMLTYPE
+## LR(1) items:
+declaration -> PARAMETER OCAMLTYPE . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production declaration -> PARAMETER OCAMLTYPE
+
+State 52:
+## Known stack suffix:
+## ON_ERROR_REDUCE
+## LR(1) items:
+declaration -> ON_ERROR_REDUCE . separated_nonempty_list(option(COMMA),strict_actual) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 5
+-- On symbol shift to state 6
+-- On strict_actual shift to state 19
+-- On separated_nonempty_list(option(COMMA),strict_actual) shift to state 53
+## Reductions:
+
+State 53:
+## Known stack suffix:
+## ON_ERROR_REDUCE separated_nonempty_list(option(COMMA),strict_actual)
+## LR(1) items:
+declaration -> ON_ERROR_REDUCE separated_nonempty_list(option(COMMA),strict_actual) . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production declaration -> ON_ERROR_REDUCE separated_nonempty_list(option(COMMA),strict_actual)
+
+State 54:
+## Known stack suffix:
+## NONASSOC
+## LR(1) items:
+priority_keyword -> NONASSOC . [ UID QID LID ]
+## Transitions:
+## Reductions:
+-- On UID QID LID
+--   reduce production priority_keyword -> NONASSOC
+
+State 55:
+## Known stack suffix:
+## LET
+## LR(1) items:
+declaration -> LET . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production declaration -> LET
+
+State 56:
+## Known stack suffix:
+## LEFT
+## LR(1) items:
+priority_keyword -> LEFT . [ UID QID LID ]
+## Transitions:
+## Reductions:
+-- On UID QID LID
+--   reduce production priority_keyword -> LEFT
+
+State 57:
+## Known stack suffix:
+## INLINE
+## LR(1) items:
+declaration -> INLINE . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production declaration -> INLINE
+
+State 58:
+## Known stack suffix:
+## HEADER
+## LR(1) items:
+declaration -> HEADER . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production declaration -> HEADER
+
+State 59:
+## Known stack suffix:
+## GRAMMARATTRIBUTE
+## LR(1) items:
+declaration -> GRAMMARATTRIBUTE . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production declaration -> GRAMMARATTRIBUTE
+
+State 60:
+## Known stack suffix:
+## EOF
+## LR(1) items:
+declaration -> EOF . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production declaration -> EOF
+
+State 61:
+## Known stack suffix:
+## COLON
+## LR(1) items:
+declaration -> COLON . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production declaration -> COLON
+
+State 62:
+## Known stack suffix:
+## priority_keyword
+## LR(1) items:
+declaration -> priority_keyword . separated_nonempty_list(option(COMMA),symbol) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 5
+-- On symbol shift to state 63
+-- On separated_nonempty_list(option(COMMA),symbol) shift to state 66
+## Reductions:
+
+State 63:
+## Known stack suffix:
+## symbol
+## LR(1) items:
+separated_nonempty_list(option(COMMA),symbol) -> symbol . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+separated_nonempty_list(option(COMMA),symbol) -> symbol . option(COMMA) separated_nonempty_list(option(COMMA),symbol) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+-- On COMMA shift to state 20
+-- On option(COMMA) shift to state 64
+## Reductions:
+-- On UID QID LID
+--   reduce production option(COMMA) ->
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production separated_nonempty_list(option(COMMA),symbol) -> symbol
+
+State 64:
+## Known stack suffix:
+## symbol option(COMMA)
+## LR(1) items:
+separated_nonempty_list(option(COMMA),symbol) -> symbol option(COMMA) . separated_nonempty_list(option(COMMA),symbol) [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 5
+-- On symbol shift to state 63
+-- On separated_nonempty_list(option(COMMA),symbol) shift to state 65
+## Reductions:
+
+State 65:
+## Known stack suffix:
+## symbol option(COMMA) separated_nonempty_list(option(COMMA),symbol)
+## LR(1) items:
+separated_nonempty_list(option(COMMA),symbol) -> symbol option(COMMA) separated_nonempty_list(option(COMMA),symbol) . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production separated_nonempty_list(option(COMMA),symbol) -> symbol option(COMMA) separated_nonempty_list(option(COMMA),symbol)
+
+State 66:
+## Known stack suffix:
+## priority_keyword separated_nonempty_list(option(COMMA),symbol)
+## LR(1) items:
+declaration -> priority_keyword separated_nonempty_list(option(COMMA),symbol) . [ TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON ]
+## Transitions:
+## Reductions:
+-- On TYPE TOKEN START SEMI RIGHT PUBLIC PERCENTPERCENT PERCENTATTRIBUTE PARAMETER ON_ERROR_REDUCE NONASSOC LET LEFT INLINE HEADER GRAMMARATTRIBUTE EOF COLON
+--   reduce production declaration -> priority_keyword separated_nonempty_list(option(COMMA),symbol)
+
+State 67:
+## Known stack suffix:
+## list(declaration)
+## LR(1) items:
+grammar -> list(declaration) . PERCENTPERCENT list(rule) postlude [ # ]
+## Transitions:
+-- On PERCENTPERCENT shift to state 68
+## Reductions:
+
+State 68:
+## Known stack suffix:
+## list(declaration) PERCENTPERCENT
+## LR(1) items:
+grammar -> list(declaration) PERCENTPERCENT . list(rule) postlude [ # ]
+## Transitions:
+-- On PUBLIC shift to state 69
+-- On INLINE shift to state 71
+-- On old_rule shift to state 73
+-- On new_rule shift to state 74
+-- On list(rule) shift to state 187
+-- On flags shift to state 76
+-- On boption(PUBLIC) shift to state 131
+## Reductions:
+-- On LET
+--   reduce production boption(PUBLIC) ->
+-- On UID QID LID
+--   reduce production flags ->
+-- On PERCENTPERCENT EOF
+--   reduce production list(rule) ->
+
+State 69:
+## Known stack suffix:
+## PUBLIC
+## LR(1) items:
+boption(PUBLIC) -> PUBLIC . [ LET ]
+flags -> PUBLIC . [ UID QID LID ]
+flags -> PUBLIC . INLINE [ UID QID LID ]
+## Transitions:
+-- On INLINE shift to state 70
+## Reductions:
+-- On LET
+--   reduce production boption(PUBLIC) -> PUBLIC
+-- On UID QID LID
+--   reduce production flags -> PUBLIC
+
+State 70:
+## Known stack suffix:
+## PUBLIC INLINE
+## LR(1) items:
+flags -> PUBLIC INLINE . [ UID QID LID ]
+## Transitions:
+## Reductions:
+-- On UID QID LID
+--   reduce production flags -> PUBLIC INLINE
+
+State 71:
+## Known stack suffix:
+## INLINE
+## LR(1) items:
+flags -> INLINE . [ UID QID LID ]
+flags -> INLINE . PUBLIC [ UID QID LID ]
+## Transitions:
+-- On PUBLIC shift to state 72
+## Reductions:
+-- On UID QID LID
+--   reduce production flags -> INLINE
+
+State 72:
+## Known stack suffix:
+## INLINE PUBLIC
+## LR(1) items:
+flags -> INLINE PUBLIC . [ UID QID LID ]
+## Transitions:
+## Reductions:
+-- On UID QID LID
+--   reduce production flags -> INLINE PUBLIC
+
+State 73:
+## Known stack suffix:
+## old_rule
+## LR(1) items:
+list(rule) -> old_rule . list(rule) [ PERCENTPERCENT EOF ]
+## Transitions:
+-- On PUBLIC shift to state 69
+-- On INLINE shift to state 71
+-- On old_rule shift to state 73
+-- On new_rule shift to state 74
+-- On list(rule) shift to state 186
+-- On flags shift to state 76
+-- On boption(PUBLIC) shift to state 131
+## Reductions:
+-- On LET
+--   reduce production boption(PUBLIC) ->
+-- On UID QID LID
+--   reduce production flags ->
+-- On PERCENTPERCENT EOF
+--   reduce production list(rule) ->
+
+State 74:
+## Known stack suffix:
+## new_rule
+## LR(1) items:
+list(rule) -> new_rule . list(rule) [ PERCENTPERCENT EOF ]
+## Transitions:
+-- On PUBLIC shift to state 69
+-- On INLINE shift to state 71
+-- On old_rule shift to state 73
+-- On new_rule shift to state 74
+-- On list(rule) shift to state 75
+-- On flags shift to state 76
+-- On boption(PUBLIC) shift to state 131
+## Reductions:
+-- On LET
+--   reduce production boption(PUBLIC) ->
+-- On UID QID LID
+--   reduce production flags ->
+-- On PERCENTPERCENT EOF
+--   reduce production list(rule) ->
+
+State 75:
+## Known stack suffix:
+## new_rule list(rule)
+## LR(1) items:
+list(rule) -> new_rule list(rule) . [ PERCENTPERCENT EOF ]
+## Transitions:
+## Reductions:
+-- On PERCENTPERCENT EOF
+--   reduce production list(rule) -> new_rule list(rule)
+
+State 76:
+## Known stack suffix:
+## flags
+## LR(1) items:
+old_rule -> flags . symbol list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) COLON optional_bar separated_nonempty_list(BAR,production_group) list(SEMI) [ UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF ]
+## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 5
+-- On symbol shift to state 77
+## Reductions:
+
+State 77:
+## Known stack suffix:
+## flags symbol
+## LR(1) items:
+old_rule -> flags symbol . list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) COLON optional_bar separated_nonempty_list(BAR,production_group) list(SEMI) [ UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF ]
+## Transitions:
+-- On ATTRIBUTE shift to state 30
+-- On list(ATTRIBUTE) shift to state 78
+## Reductions:
+-- On LPAREN COLON
+--   reduce production list(ATTRIBUTE) ->
+
+State 78:
+## Known stack suffix:
+## flags symbol list(ATTRIBUTE)
+## LR(1) items:
+old_rule -> flags symbol list(ATTRIBUTE) . loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) COLON optional_bar separated_nonempty_list(BAR,production_group) list(SEMI) [ UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF ]
+## Transitions:
+-- On LPAREN shift to state 79
+-- On loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) shift to state 85
+## Reductions:
+-- On COLON
+--   reduce production loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) ->
+
+State 79:
+## Known stack suffix:
+## LPAREN
+## LR(1) items:
+loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) -> LPAREN . separated_nonempty_list(COMMA,symbol) RPAREN [ EQUALEQUAL COLONEQUAL COLON ]
+## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 5
+-- On symbol shift to state 80
+-- On separated_nonempty_list(COMMA,symbol) shift to state 83
+## Reductions:
+
+State 80:
+## Known stack suffix:
+## symbol
+## LR(1) items:
+separated_nonempty_list(COMMA,symbol) -> symbol . [ RPAREN ]
+separated_nonempty_list(COMMA,symbol) -> symbol . COMMA separated_nonempty_list(COMMA,symbol) [ RPAREN ]
+## Transitions:
+-- On COMMA shift to state 81
+## Reductions:
+-- On RPAREN
+--   reduce production separated_nonempty_list(COMMA,symbol) -> symbol
+
+State 81:
+## Known stack suffix:
+## symbol COMMA
+## LR(1) items:
+separated_nonempty_list(COMMA,symbol) -> symbol COMMA . separated_nonempty_list(COMMA,symbol) [ RPAREN ]
+## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 5
+-- On symbol shift to state 80
+-- On separated_nonempty_list(COMMA,symbol) shift to state 82
+## Reductions:
+
+State 82:
+## Known stack suffix:
+## symbol COMMA separated_nonempty_list(COMMA,symbol)
+## LR(1) items:
+separated_nonempty_list(COMMA,symbol) -> symbol COMMA separated_nonempty_list(COMMA,symbol) . [ RPAREN ]
+## Transitions:
+## Reductions:
+-- On RPAREN
+--   reduce production separated_nonempty_list(COMMA,symbol) -> symbol COMMA separated_nonempty_list(COMMA,symbol)
+
+State 83:
+## Known stack suffix:
+## LPAREN separated_nonempty_list(COMMA,symbol)
+## LR(1) items:
+loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) -> LPAREN separated_nonempty_list(COMMA,symbol) . RPAREN [ EQUALEQUAL COLONEQUAL COLON ]
+## Transitions:
+-- On RPAREN shift to state 84
+## Reductions:
+
+State 84:
+## Known stack suffix:
+## LPAREN separated_nonempty_list(COMMA,symbol) RPAREN
+## LR(1) items:
+loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) -> LPAREN separated_nonempty_list(COMMA,symbol) RPAREN . [ EQUALEQUAL COLONEQUAL COLON ]
+## Transitions:
+## Reductions:
+-- On EQUALEQUAL COLONEQUAL COLON
+--   reduce production loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) -> LPAREN separated_nonempty_list(COMMA,symbol) RPAREN
+
+State 85:
+## Known stack suffix:
+## flags symbol list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN))
+## LR(1) items:
+old_rule -> flags symbol list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) . COLON optional_bar separated_nonempty_list(BAR,production_group) list(SEMI) [ UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF ]
+## Transitions:
+-- On COLON shift to state 86
+## Reductions:
+
+State 86:
+## Known stack suffix:
+## flags symbol list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) COLON
+## LR(1) items:
+old_rule -> flags symbol list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) COLON . optional_bar separated_nonempty_list(BAR,production_group) list(SEMI) [ UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF ]
+## Transitions:
+-- On BAR shift to state 87
+-- On optional_bar shift to state 88
+## Reductions:
+-- On UID QID PREC LID ACTION
+--   reduce production optional_bar ->
+
+State 87:
+## Known stack suffix:
+## BAR
+## LR(1) items:
+optional_bar -> BAR . [ UID QID PREC LID BAR ACTION ]
+## Transitions:
+## Reductions:
+-- On UID QID PREC LID BAR ACTION
+--   reduce production optional_bar -> BAR
+
+State 88:
+## Known stack suffix:
+## flags symbol list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) COLON optional_bar
+## LR(1) items:
+old_rule -> flags symbol list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) COLON optional_bar . separated_nonempty_list(BAR,production_group) list(SEMI) [ UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF ]
+## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 89
+-- On symbol shift to state 91
+-- On separated_nonempty_list(BAR,production_group) shift to state 129
+-- On separated_nonempty_list(BAR,production) shift to state 98
+-- On production_group shift to state 103
+-- On production shift to state 106
+-- On producer shift to state 109
+-- On list(producer) shift to state 117
+-- On actual shift to state 111
+## Reductions:
+-- On PREC BAR ACTION
+--   reduce production list(producer) ->
+
+State 89:
+## Known stack suffix:
+## LID
+## LR(1) items:
+producer -> LID . EQUAL actual list(ATTRIBUTE) list(SEMI) [ UID QID PREC LID BAR ACTION ]
+symbol -> LID . [ UID STAR SEMI RPAREN QUESTION QID PREC PLUS LPAREN LID COMMA BAR ATTRIBUTE ACTION ]
+## Transitions:
+-- On EQUAL shift to state 90
+## Reductions:
+-- On UID STAR SEMI RPAREN QUESTION QID PREC PLUS LPAREN LID COMMA BAR ATTRIBUTE ACTION
+--   reduce production symbol -> LID
+
+State 90:
+## Known stack suffix:
+## LID EQUAL
+## LR(1) items:
+producer -> LID EQUAL . actual list(ATTRIBUTE) list(SEMI) [ UID QID PREC LID BAR ACTION ]
+## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 5
+-- On symbol shift to state 91
+-- On actual shift to state 126
+## Reductions:
+
+State 91:
+## Known stack suffix:
+## symbol
+## LR(1) items:
+actual -> symbol . loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN)) [ UID STAR SEMI QUESTION QID PREC PLUS LID BAR ATTRIBUTE ACTION ]
+## Transitions:
+-- On LPAREN shift to state 92
+-- On loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN)) shift to state 125
+## Reductions:
+-- On UID STAR SEMI QUESTION QID PREC PLUS LID BAR ATTRIBUTE ACTION
+--   reduce production loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN)) ->
+
+State 92:
+## Known stack suffix:
+## LPAREN
+## LR(1) items:
+loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN)) -> LPAREN . separated_nonempty_list(COMMA,lax_actual) RPAREN [ UID STAR SEMI RPAREN QUESTION QID PREC PLUS LID COMMA BAR ATTRIBUTE ACTION ]
+## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 89
+-- On symbol shift to state 93
+-- On separated_nonempty_list(COMMA,lax_actual) shift to state 95
+-- On separated_nonempty_list(BAR,production_group) shift to state 97
+-- On separated_nonempty_list(BAR,production) shift to state 98
+-- On production_group shift to state 103
+-- On production shift to state 106
+-- On producer shift to state 109
+-- On located(branches) shift to state 119
+-- On list(producer) shift to state 117
+-- On lax_actual shift to state 120
+-- On actual shift to state 123
+## Reductions:
+-- On PREC BAR ACTION
+--   reduce production list(producer) ->
+
+State 93:
+## Known stack suffix:
+## symbol
+## LR(1) items:
+actual -> symbol . loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN)) [ UID STAR SEMI QUESTION QID PREC PLUS LID BAR ATTRIBUTE ACTION ]
+lax_actual -> symbol . loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN)) [ RPAREN COMMA ]
+## Transitions:
+-- On LPAREN shift to state 92
+-- On loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN)) shift to state 94
+## Reductions:
+-- On UID STAR SEMI RPAREN QUESTION QID PREC PLUS LID COMMA BAR ATTRIBUTE ACTION
+--   reduce production loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN)) ->
+
+State 94:
+## Known stack suffix:
+## symbol loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN))
+## LR(1) items:
+actual -> symbol loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN)) . [ UID STAR SEMI QUESTION QID PREC PLUS LID BAR ATTRIBUTE ACTION ]
+lax_actual -> symbol loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN)) . [ RPAREN COMMA ]
+## Transitions:
+## Reductions:
+-- On UID STAR SEMI QUESTION QID PREC PLUS LID BAR ATTRIBUTE ACTION
+--   reduce production actual -> symbol loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN))
+-- On RPAREN COMMA
+--   reduce production lax_actual -> symbol loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN))
+
+State 95:
+## Known stack suffix:
+## LPAREN separated_nonempty_list(COMMA,lax_actual)
+## LR(1) items:
+loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN)) -> LPAREN separated_nonempty_list(COMMA,lax_actual) . RPAREN [ UID STAR SEMI RPAREN QUESTION QID PREC PLUS LID COMMA BAR ATTRIBUTE ACTION ]
+## Transitions:
+-- On RPAREN shift to state 96
+## Reductions:
+
+State 96:
+## Known stack suffix:
+## LPAREN separated_nonempty_list(COMMA,lax_actual) RPAREN
+## LR(1) items:
+loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN)) -> LPAREN separated_nonempty_list(COMMA,lax_actual) RPAREN . [ UID STAR SEMI RPAREN QUESTION QID PREC PLUS LID COMMA BAR ATTRIBUTE ACTION ]
+## Transitions:
+## Reductions:
+-- On UID STAR SEMI RPAREN QUESTION QID PREC PLUS LID COMMA BAR ATTRIBUTE ACTION
+--   reduce production loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN)) -> LPAREN separated_nonempty_list(COMMA,lax_actual) RPAREN
+
+State 97:
+## Known stack suffix:
+## separated_nonempty_list(BAR,production_group)
+## LR(1) items:
+located(branches) -> separated_nonempty_list(BAR,production_group) . [ RPAREN COMMA ]
+## Transitions:
+## Reductions:
+-- On RPAREN COMMA
+--   reduce production located(branches) -> separated_nonempty_list(BAR,production_group)
+
+State 98:
+## Known stack suffix:
+## separated_nonempty_list(BAR,production)
+## LR(1) items:
+production_group -> separated_nonempty_list(BAR,production) . ACTION [ UID SEMI RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+production_group -> separated_nonempty_list(BAR,production) . ACTION precedence [ UID SEMI RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+-- On ACTION shift to state 99
+## Reductions:
+
+State 99:
+## Known stack suffix:
+## separated_nonempty_list(BAR,production) ACTION
+## LR(1) items:
+production_group -> separated_nonempty_list(BAR,production) ACTION . [ UID SEMI RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+production_group -> separated_nonempty_list(BAR,production) ACTION . precedence [ UID SEMI RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+-- On PREC shift to state 100
+-- On precedence shift to state 102
+## Reductions:
+-- On UID SEMI RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production production_group -> separated_nonempty_list(BAR,production) ACTION
+
+State 100:
+## Known stack suffix:
+## PREC
+## LR(1) items:
+precedence -> PREC . symbol [ UID SEMI RPAREN QID PUBLIC PERCENTPERCENT OCAMLTYPE LID LET INLINE EOF COMMA BAR ACTION ]
+## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 5
+-- On symbol shift to state 101
+## Reductions:
+
+State 101:
+## Known stack suffix:
+## PREC symbol
+## LR(1) items:
+precedence -> PREC symbol . [ UID SEMI RPAREN QID PUBLIC PERCENTPERCENT OCAMLTYPE LID LET INLINE EOF COMMA BAR ACTION ]
+## Transitions:
+## Reductions:
+-- On UID SEMI RPAREN QID PUBLIC PERCENTPERCENT OCAMLTYPE LID LET INLINE EOF COMMA BAR ACTION
+--   reduce production precedence -> PREC symbol
+
+State 102:
+## Known stack suffix:
+## separated_nonempty_list(BAR,production) ACTION precedence
+## LR(1) items:
+production_group -> separated_nonempty_list(BAR,production) ACTION precedence . [ UID SEMI RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+## Reductions:
+-- On UID SEMI RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production production_group -> separated_nonempty_list(BAR,production) ACTION precedence
+
+State 103:
+## Known stack suffix:
+## production_group
+## LR(1) items:
+separated_nonempty_list(BAR,production_group) -> production_group . [ UID SEMI RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA ]
+separated_nonempty_list(BAR,production_group) -> production_group . BAR separated_nonempty_list(BAR,production_group) [ UID SEMI RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA ]
+## Transitions:
+-- On BAR shift to state 104
+## Reductions:
+-- On UID SEMI RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA
+--   reduce production separated_nonempty_list(BAR,production_group) -> production_group
+
+State 104:
+## Known stack suffix:
+## production_group BAR
+## LR(1) items:
+separated_nonempty_list(BAR,production_group) -> production_group BAR . separated_nonempty_list(BAR,production_group) [ UID SEMI RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA ]
+## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 89
+-- On symbol shift to state 91
+-- On separated_nonempty_list(BAR,production_group) shift to state 105
+-- On separated_nonempty_list(BAR,production) shift to state 98
+-- On production_group shift to state 103
+-- On production shift to state 106
+-- On producer shift to state 109
+-- On list(producer) shift to state 117
+-- On actual shift to state 111
+## Reductions:
+-- On PREC BAR ACTION
+--   reduce production list(producer) ->
+
+State 105:
+## Known stack suffix:
+## production_group BAR separated_nonempty_list(BAR,production_group)
+## LR(1) items:
+separated_nonempty_list(BAR,production_group) -> production_group BAR separated_nonempty_list(BAR,production_group) . [ UID SEMI RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA ]
+## Transitions:
+## Reductions:
+-- On UID SEMI RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA
+--   reduce production separated_nonempty_list(BAR,production_group) -> production_group BAR separated_nonempty_list(BAR,production_group)
+
+State 106:
+## Known stack suffix:
+## production
+## LR(1) items:
+separated_nonempty_list(BAR,production) -> production . [ ACTION ]
+separated_nonempty_list(BAR,production) -> production . BAR separated_nonempty_list(BAR,production) [ ACTION ]
+## Transitions:
+-- On BAR shift to state 107
+## Reductions:
+-- On ACTION
+--   reduce production separated_nonempty_list(BAR,production) -> production
+
+State 107:
+## Known stack suffix:
+## production BAR
+## LR(1) items:
+separated_nonempty_list(BAR,production) -> production BAR . separated_nonempty_list(BAR,production) [ ACTION ]
+## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 89
+-- On symbol shift to state 91
+-- On separated_nonempty_list(BAR,production) shift to state 108
+-- On production shift to state 106
+-- On producer shift to state 109
+-- On list(producer) shift to state 117
+-- On actual shift to state 111
+## Reductions:
+-- On PREC BAR ACTION
+--   reduce production list(producer) ->
+
+State 108:
+## Known stack suffix:
+## production BAR separated_nonempty_list(BAR,production)
+## LR(1) items:
+separated_nonempty_list(BAR,production) -> production BAR separated_nonempty_list(BAR,production) . [ ACTION ]
+## Transitions:
+## Reductions:
+-- On ACTION
+--   reduce production separated_nonempty_list(BAR,production) -> production BAR separated_nonempty_list(BAR,production)
+
+State 109:
+## Known stack suffix:
+## producer
+## LR(1) items:
+list(producer) -> producer . list(producer) [ PREC BAR ACTION ]
+## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 89
+-- On symbol shift to state 91
+-- On producer shift to state 109
+-- On list(producer) shift to state 110
+-- On actual shift to state 111
+## Reductions:
+-- On PREC BAR ACTION
+--   reduce production list(producer) ->
+
+State 110:
+## Known stack suffix:
+## producer list(producer)
+## LR(1) items:
+list(producer) -> producer list(producer) . [ PREC BAR ACTION ]
+## Transitions:
+## Reductions:
+-- On PREC BAR ACTION
+--   reduce production list(producer) -> producer list(producer)
+
+State 111:
+## Known stack suffix:
+## actual
+## LR(1) items:
+actual -> actual . located(modifier) [ UID STAR SEMI QUESTION QID PREC PLUS LID BAR ATTRIBUTE ACTION ]
+producer -> actual . list(ATTRIBUTE) list(SEMI) [ UID QID PREC LID BAR ACTION ]
+## Transitions:
+-- On STAR shift to state 9
+-- On QUESTION shift to state 10
+-- On PLUS shift to state 11
+-- On ATTRIBUTE shift to state 30
+-- On modifier shift to state 14
+-- On located(modifier) shift to state 112
+-- On list(ATTRIBUTE) shift to state 113
+## Reductions:
+-- On UID SEMI QID PREC LID BAR ACTION
+--   reduce production list(ATTRIBUTE) ->
+
+State 112:
+## Known stack suffix:
+## actual located(modifier)
+## LR(1) items:
+actual -> actual located(modifier) . [ UID STAR SEMI QUESTION QID PREC PLUS LID BAR ATTRIBUTE ACTION ]
+## Transitions:
+## Reductions:
+-- On UID STAR SEMI QUESTION QID PREC PLUS LID BAR ATTRIBUTE ACTION
+--   reduce production actual -> actual located(modifier)
+
+State 113:
+## Known stack suffix:
+## actual list(ATTRIBUTE)
+## LR(1) items:
+producer -> actual list(ATTRIBUTE) . list(SEMI) [ UID QID PREC LID BAR ACTION ]
+## Transitions:
+-- On SEMI shift to state 114
+-- On list(SEMI) shift to state 116
+## Reductions:
+-- On UID QID PREC LID BAR ACTION
+--   reduce production list(SEMI) ->
+
+State 114:
+## Known stack suffix:
+## SEMI
+## LR(1) items:
+list(SEMI) -> SEMI . list(SEMI) [ UID QID PUBLIC PREC PERCENTPERCENT LID LET INLINE EOF BAR ACTION ]
+## Transitions:
+-- On SEMI shift to state 114
+-- On list(SEMI) shift to state 115
+## Reductions:
+-- On UID QID PUBLIC PREC PERCENTPERCENT LID LET INLINE EOF BAR ACTION
+--   reduce production list(SEMI) ->
+
+State 115:
+## Known stack suffix:
+## SEMI list(SEMI)
+## LR(1) items:
+list(SEMI) -> SEMI list(SEMI) . [ UID QID PUBLIC PREC PERCENTPERCENT LID LET INLINE EOF BAR ACTION ]
+## Transitions:
+## Reductions:
+-- On UID QID PUBLIC PREC PERCENTPERCENT LID LET INLINE EOF BAR ACTION
+--   reduce production list(SEMI) -> SEMI list(SEMI)
+
+State 116:
+## Known stack suffix:
+## actual list(ATTRIBUTE) list(SEMI)
+## LR(1) items:
+producer -> actual list(ATTRIBUTE) list(SEMI) . [ UID QID PREC LID BAR ACTION ]
+## Transitions:
+## Reductions:
+-- On UID QID PREC LID BAR ACTION
+--   reduce production producer -> actual list(ATTRIBUTE) list(SEMI)
+
+State 117:
+## Known stack suffix:
+## list(producer)
+## LR(1) items:
+production -> list(producer) . [ BAR ACTION ]
+production -> list(producer) . precedence [ BAR ACTION ]
+## Transitions:
+-- On PREC shift to state 100
+-- On precedence shift to state 118
+## Reductions:
+-- On BAR ACTION
+--   reduce production production -> list(producer)
+
+State 118:
+## Known stack suffix:
+## list(producer) precedence
+## LR(1) items:
+production -> list(producer) precedence . [ BAR ACTION ]
+## Transitions:
+## Reductions:
+-- On BAR ACTION
+--   reduce production production -> list(producer) precedence
+
+State 119:
+## Known stack suffix:
+## located(branches)
+## LR(1) items:
+lax_actual -> located(branches) . [ RPAREN COMMA ]
+## Transitions:
+## Reductions:
+-- On RPAREN COMMA
+--   reduce production lax_actual -> located(branches)
+
+State 120:
+## Known stack suffix:
+## lax_actual
+## LR(1) items:
+separated_nonempty_list(COMMA,lax_actual) -> lax_actual . [ RPAREN ]
+separated_nonempty_list(COMMA,lax_actual) -> lax_actual . COMMA separated_nonempty_list(COMMA,lax_actual) [ RPAREN ]
+## Transitions:
+-- On COMMA shift to state 121
+## Reductions:
+-- On RPAREN
+--   reduce production separated_nonempty_list(COMMA,lax_actual) -> lax_actual
+
+State 121:
+## Known stack suffix:
+## lax_actual COMMA
+## LR(1) items:
+separated_nonempty_list(COMMA,lax_actual) -> lax_actual COMMA . separated_nonempty_list(COMMA,lax_actual) [ RPAREN ]
+## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 89
+-- On symbol shift to state 93
+-- On separated_nonempty_list(COMMA,lax_actual) shift to state 122
+-- On separated_nonempty_list(BAR,production_group) shift to state 97
+-- On separated_nonempty_list(BAR,production) shift to state 98
+-- On production_group shift to state 103
+-- On production shift to state 106
+-- On producer shift to state 109
+-- On located(branches) shift to state 119
+-- On list(producer) shift to state 117
+-- On lax_actual shift to state 120
+-- On actual shift to state 123
+## Reductions:
+-- On PREC BAR ACTION
+--   reduce production list(producer) ->
+
+State 122:
+## Known stack suffix:
+## lax_actual COMMA separated_nonempty_list(COMMA,lax_actual)
+## LR(1) items:
+separated_nonempty_list(COMMA,lax_actual) -> lax_actual COMMA separated_nonempty_list(COMMA,lax_actual) . [ RPAREN ]
+## Transitions:
+## Reductions:
+-- On RPAREN
+--   reduce production separated_nonempty_list(COMMA,lax_actual) -> lax_actual COMMA separated_nonempty_list(COMMA,lax_actual)
+
+State 123:
+## Known stack suffix:
+## actual
+## LR(1) items:
+actual -> actual . located(modifier) [ UID STAR SEMI QUESTION QID PREC PLUS LID BAR ATTRIBUTE ACTION ]
+lax_actual -> actual . located(modifier) [ RPAREN COMMA ]
+producer -> actual . list(ATTRIBUTE) list(SEMI) [ UID QID PREC LID BAR ACTION ]
+## Transitions:
+-- On STAR shift to state 9
+-- On QUESTION shift to state 10
+-- On PLUS shift to state 11
+-- On ATTRIBUTE shift to state 30
+-- On modifier shift to state 14
+-- On located(modifier) shift to state 124
+-- On list(ATTRIBUTE) shift to state 113
+## Reductions:
+-- On UID SEMI QID PREC LID BAR ACTION
+--   reduce production list(ATTRIBUTE) ->
+
+State 124:
+## Known stack suffix:
+## actual located(modifier)
+## LR(1) items:
+actual -> actual located(modifier) . [ UID STAR SEMI QUESTION QID PREC PLUS LID BAR ATTRIBUTE ACTION ]
+lax_actual -> actual located(modifier) . [ RPAREN COMMA ]
+## Transitions:
+## Reductions:
+-- On UID STAR SEMI QUESTION QID PREC PLUS LID BAR ATTRIBUTE ACTION
+--   reduce production actual -> actual located(modifier)
+-- On RPAREN COMMA
+--   reduce production lax_actual -> actual located(modifier)
+
+State 125:
+## Known stack suffix:
+## symbol loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN))
+## LR(1) items:
+actual -> symbol loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN)) . [ UID STAR SEMI QUESTION QID PREC PLUS LID BAR ATTRIBUTE ACTION ]
+## Transitions:
+## Reductions:
+-- On UID STAR SEMI QUESTION QID PREC PLUS LID BAR ATTRIBUTE ACTION
+--   reduce production actual -> symbol loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN))
+
+State 126:
+## Known stack suffix:
+## LID EQUAL actual
+## LR(1) items:
+actual -> actual . located(modifier) [ UID STAR SEMI QUESTION QID PREC PLUS LID BAR ATTRIBUTE ACTION ]
+producer -> LID EQUAL actual . list(ATTRIBUTE) list(SEMI) [ UID QID PREC LID BAR ACTION ]
+## Transitions:
+-- On STAR shift to state 9
+-- On QUESTION shift to state 10
+-- On PLUS shift to state 11
+-- On ATTRIBUTE shift to state 30
+-- On modifier shift to state 14
+-- On located(modifier) shift to state 112
+-- On list(ATTRIBUTE) shift to state 127
+## Reductions:
+-- On UID SEMI QID PREC LID BAR ACTION
+--   reduce production list(ATTRIBUTE) ->
+
+State 127:
+## Known stack suffix:
+## LID EQUAL actual list(ATTRIBUTE)
+## LR(1) items:
+producer -> LID EQUAL actual list(ATTRIBUTE) . list(SEMI) [ UID QID PREC LID BAR ACTION ]
+## Transitions:
+-- On SEMI shift to state 114
+-- On list(SEMI) shift to state 128
+## Reductions:
+-- On UID QID PREC LID BAR ACTION
+--   reduce production list(SEMI) ->
+
+State 128:
+## Known stack suffix:
+## LID EQUAL actual list(ATTRIBUTE) list(SEMI)
+## LR(1) items:
+producer -> LID EQUAL actual list(ATTRIBUTE) list(SEMI) . [ UID QID PREC LID BAR ACTION ]
+## Transitions:
+## Reductions:
+-- On UID QID PREC LID BAR ACTION
+--   reduce production producer -> LID EQUAL actual list(ATTRIBUTE) list(SEMI)
+
+State 129:
+## Known stack suffix:
+## flags symbol list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) COLON optional_bar separated_nonempty_list(BAR,production_group)
+## LR(1) items:
+old_rule -> flags symbol list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) COLON optional_bar separated_nonempty_list(BAR,production_group) . list(SEMI) [ UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF ]
+## Transitions:
+-- On SEMI shift to state 114
+-- On list(SEMI) shift to state 130
+## Reductions:
+-- On UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF
+--   reduce production list(SEMI) ->
+
+State 130:
+## Known stack suffix:
+## flags symbol list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) COLON optional_bar separated_nonempty_list(BAR,production_group) list(SEMI)
+## LR(1) items:
+old_rule -> flags symbol list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) COLON optional_bar separated_nonempty_list(BAR,production_group) list(SEMI) . [ UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF ]
+## Transitions:
+## Reductions:
+-- On UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF
+--   reduce production old_rule -> flags symbol list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) COLON optional_bar separated_nonempty_list(BAR,production_group) list(SEMI)
+
+State 131:
+## Known stack suffix:
+## boption(PUBLIC)
+## LR(1) items:
+new_rule -> boption(PUBLIC) . LET LID list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) equality_symbol expression [ UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF ]
+## Transitions:
+-- On LET shift to state 132
+## Reductions:
+
+State 132:
+## Known stack suffix:
+## boption(PUBLIC) LET
+## LR(1) items:
+new_rule -> boption(PUBLIC) LET . LID list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) equality_symbol expression [ UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF ]
+## Transitions:
+-- On LID shift to state 133
+## Reductions:
+
+State 133:
+## Known stack suffix:
+## boption(PUBLIC) LET LID
+## LR(1) items:
+new_rule -> boption(PUBLIC) LET LID . list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) equality_symbol expression [ UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF ]
+## Transitions:
+-- On ATTRIBUTE shift to state 30
+-- On list(ATTRIBUTE) shift to state 134
+## Reductions:
+-- On LPAREN EQUALEQUAL COLONEQUAL
+--   reduce production list(ATTRIBUTE) ->
+
+State 134:
+## Known stack suffix:
+## boption(PUBLIC) LET LID list(ATTRIBUTE)
+## LR(1) items:
+new_rule -> boption(PUBLIC) LET LID list(ATTRIBUTE) . loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) equality_symbol expression [ UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF ]
+## Transitions:
+-- On LPAREN shift to state 79
+-- On loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) shift to state 135
+## Reductions:
+-- On EQUALEQUAL COLONEQUAL
+--   reduce production loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) ->
+
+State 135:
+## Known stack suffix:
+## boption(PUBLIC) LET LID list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN))
+## LR(1) items:
+new_rule -> boption(PUBLIC) LET LID list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) . equality_symbol expression [ UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF ]
+## Transitions:
+-- On EQUALEQUAL shift to state 136
+-- On COLONEQUAL shift to state 137
+-- On equality_symbol shift to state 138
+## Reductions:
+
+State 136:
+## Known stack suffix:
+## EQUALEQUAL
+## LR(1) items:
+equality_symbol -> EQUALEQUAL . [ UNDERSCORE UID TILDE QID PREC OCAMLTYPE LPAREN LID BAR ACTION ]
+## Transitions:
+## Reductions:
+-- On UNDERSCORE UID TILDE QID PREC OCAMLTYPE LPAREN LID BAR ACTION
+--   reduce production equality_symbol -> EQUALEQUAL
+
+State 137:
+## Known stack suffix:
+## COLONEQUAL
+## LR(1) items:
+equality_symbol -> COLONEQUAL . [ UNDERSCORE UID TILDE QID PREC OCAMLTYPE LPAREN LID BAR ACTION ]
+## Transitions:
+## Reductions:
+-- On UNDERSCORE UID TILDE QID PREC OCAMLTYPE LPAREN LID BAR ACTION
+--   reduce production equality_symbol -> COLONEQUAL
+
+State 138:
+## Known stack suffix:
+## boption(PUBLIC) LET LID list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) equality_symbol
+## LR(1) items:
+new_rule -> boption(PUBLIC) LET LID list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) equality_symbol . expression [ UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF ]
+## Transitions:
+-- On UNDERSCORE shift to state 139
+-- On UID shift to state 3
+-- On TILDE shift to state 140
+-- On QID shift to state 4
+-- On PREC shift to state 100
+-- On OCAMLTYPE shift to state 141
+-- On LPAREN shift to state 142
+-- On LID shift to state 150
+-- On BAR shift to state 151
+-- On ACTION shift to state 152
+-- On symbol_expression shift to state 153
+-- On symbol shift to state 155
+-- On reversed_preceded_or_separated_nonempty_llist(BAR,branch) shift to state 159
+-- On raw_seq_expression shift to state 161
+-- On precedence shift to state 162
+-- On pattern shift to state 164
+-- On located(symbol_expression) shift to state 168
+-- On located(raw_seq_expression) shift to state 176
+-- On located(choice_expression) shift to state 177
+-- On expression shift to state 185
+-- On action_expression shift to state 172
+-- On action shift to state 173
+## Reductions:
+
+State 139:
+## Known stack suffix:
+## UNDERSCORE
+## LR(1) items:
+pattern -> UNDERSCORE . [ RPAREN EQUAL COMMA ]
+## Transitions:
+## Reductions:
+-- On RPAREN EQUAL COMMA
+--   reduce production pattern -> UNDERSCORE
+
+State 140:
+## Known stack suffix:
+## TILDE
+## LR(1) items:
+pattern -> TILDE . [ RPAREN EQUAL COMMA ]
+## Transitions:
+## Reductions:
+-- On RPAREN EQUAL COMMA
+--   reduce production pattern -> TILDE
+
+State 141:
+## Known stack suffix:
+## OCAMLTYPE
+## LR(1) items:
+action -> OCAMLTYPE . [ UID RPAREN QID PUBLIC PREC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+## Reductions:
+-- On UID RPAREN QID PUBLIC PREC PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production action -> OCAMLTYPE
+
+State 142:
+## Known stack suffix:
+## LPAREN
+## LR(1) items:
+pattern -> LPAREN . loption(separated_nonempty_list(COMMA,pattern)) RPAREN [ RPAREN EQUAL COMMA ]
+## Transitions:
+-- On UNDERSCORE shift to state 139
+-- On TILDE shift to state 140
+-- On LPAREN shift to state 142
+-- On LID shift to state 143
+-- On separated_nonempty_list(COMMA,pattern) shift to state 144
+-- On pattern shift to state 145
+-- On loption(separated_nonempty_list(COMMA,pattern)) shift to state 148
+## Reductions:
+-- On RPAREN
+--   reduce production loption(separated_nonempty_list(COMMA,pattern)) ->
+
+State 143:
+## Known stack suffix:
+## LID
+## LR(1) items:
+pattern -> LID . [ RPAREN COMMA ]
+## Transitions:
+## Reductions:
+-- On RPAREN COMMA
+--   reduce production pattern -> LID
+
+State 144:
+## Known stack suffix:
+## separated_nonempty_list(COMMA,pattern)
+## LR(1) items:
+loption(separated_nonempty_list(COMMA,pattern)) -> separated_nonempty_list(COMMA,pattern) . [ RPAREN ]
+## Transitions:
+## Reductions:
+-- On RPAREN
+--   reduce production loption(separated_nonempty_list(COMMA,pattern)) -> separated_nonempty_list(COMMA,pattern)
+
+State 145:
+## Known stack suffix:
+## pattern
+## LR(1) items:
+separated_nonempty_list(COMMA,pattern) -> pattern . [ RPAREN ]
+separated_nonempty_list(COMMA,pattern) -> pattern . COMMA separated_nonempty_list(COMMA,pattern) [ RPAREN ]
+## Transitions:
+-- On COMMA shift to state 146
+## Reductions:
+-- On RPAREN
+--   reduce production separated_nonempty_list(COMMA,pattern) -> pattern
+
+State 146:
+## Known stack suffix:
+## pattern COMMA
+## LR(1) items:
+separated_nonempty_list(COMMA,pattern) -> pattern COMMA . separated_nonempty_list(COMMA,pattern) [ RPAREN ]
+## Transitions:
+-- On UNDERSCORE shift to state 139
+-- On TILDE shift to state 140
+-- On LPAREN shift to state 142
+-- On LID shift to state 143
+-- On separated_nonempty_list(COMMA,pattern) shift to state 147
+-- On pattern shift to state 145
+## Reductions:
+
+State 147:
+## Known stack suffix:
+## pattern COMMA separated_nonempty_list(COMMA,pattern)
+## LR(1) items:
+separated_nonempty_list(COMMA,pattern) -> pattern COMMA separated_nonempty_list(COMMA,pattern) . [ RPAREN ]
+## Transitions:
+## Reductions:
+-- On RPAREN
+--   reduce production separated_nonempty_list(COMMA,pattern) -> pattern COMMA separated_nonempty_list(COMMA,pattern)
+
+State 148:
+## Known stack suffix:
+## LPAREN loption(separated_nonempty_list(COMMA,pattern))
+## LR(1) items:
+pattern -> LPAREN loption(separated_nonempty_list(COMMA,pattern)) . RPAREN [ RPAREN EQUAL COMMA ]
+## Transitions:
+-- On RPAREN shift to state 149
+## Reductions:
+
+State 149:
+## Known stack suffix:
+## LPAREN loption(separated_nonempty_list(COMMA,pattern)) RPAREN
+## LR(1) items:
+pattern -> LPAREN loption(separated_nonempty_list(COMMA,pattern)) RPAREN . [ RPAREN EQUAL COMMA ]
+## Transitions:
+## Reductions:
+-- On RPAREN EQUAL COMMA
+--   reduce production pattern -> LPAREN loption(separated_nonempty_list(COMMA,pattern)) RPAREN
+
+State 150:
+## Known stack suffix:
+## LID
+## LR(1) items:
+pattern -> LID . [ EQUAL ]
+symbol -> LID . [ UID STAR SEMI RPAREN QUESTION QID PUBLIC PLUS PERCENTPERCENT LPAREN LID LET INLINE EOF COMMA BAR ATTRIBUTE ]
+## Transitions:
+## Reductions:
+-- On EQUAL
+--   reduce production pattern -> LID
+-- On UID STAR SEMI RPAREN QUESTION QID PUBLIC PLUS PERCENTPERCENT LPAREN LID LET INLINE EOF COMMA BAR ATTRIBUTE
+--   reduce production symbol -> LID
+
+State 151:
+## Known stack suffix:
+## BAR
+## LR(1) items:
+reversed_preceded_or_separated_nonempty_llist(BAR,branch) -> BAR . located(raw_seq_expression) [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+-- On UNDERSCORE shift to state 139
+-- On UID shift to state 3
+-- On TILDE shift to state 140
+-- On QID shift to state 4
+-- On PREC shift to state 100
+-- On OCAMLTYPE shift to state 141
+-- On LPAREN shift to state 142
+-- On LID shift to state 150
+-- On ACTION shift to state 152
+-- On symbol_expression shift to state 153
+-- On symbol shift to state 155
+-- On raw_seq_expression shift to state 161
+-- On precedence shift to state 162
+-- On pattern shift to state 164
+-- On located(symbol_expression) shift to state 168
+-- On located(raw_seq_expression) shift to state 184
+-- On action_expression shift to state 172
+-- On action shift to state 173
+## Reductions:
+
+State 152:
+## Known stack suffix:
+## ACTION
+## LR(1) items:
+action -> ACTION . [ UID RPAREN QID PUBLIC PREC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+## Reductions:
+-- On UID RPAREN QID PUBLIC PREC PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production action -> ACTION
+
+State 153:
+## Known stack suffix:
+## symbol_expression
+## LR(1) items:
+located(symbol_expression) -> symbol_expression . [ STAR QUESTION PLUS ]
+raw_seq_expression -> symbol_expression . SEMI located(raw_seq_expression) [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+raw_seq_expression -> symbol_expression . [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+-- On SEMI shift to state 154
+## Reductions:
+-- On STAR QUESTION PLUS
+--   reduce production located(symbol_expression) -> symbol_expression
+-- On UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production raw_seq_expression -> symbol_expression
+
+State 154:
+## Known stack suffix:
+## symbol_expression SEMI
+## LR(1) items:
+raw_seq_expression -> symbol_expression SEMI . located(raw_seq_expression) [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+-- On UNDERSCORE shift to state 139
+-- On UID shift to state 3
+-- On TILDE shift to state 140
+-- On QID shift to state 4
+-- On PREC shift to state 100
+-- On OCAMLTYPE shift to state 141
+-- On LPAREN shift to state 142
+-- On LID shift to state 150
+-- On ACTION shift to state 152
+-- On symbol_expression shift to state 153
+-- On symbol shift to state 155
+-- On raw_seq_expression shift to state 161
+-- On precedence shift to state 162
+-- On pattern shift to state 164
+-- On located(symbol_expression) shift to state 168
+-- On located(raw_seq_expression) shift to state 183
+-- On action_expression shift to state 172
+-- On action shift to state 173
+## Reductions:
+
+State 155:
+## Known stack suffix:
+## symbol
+## LR(1) items:
+symbol_expression -> symbol . loption(delimited(LPAREN,separated_nonempty_list(COMMA,expression),RPAREN)) list(ATTRIBUTE) [ UID STAR SEMI RPAREN QUESTION QID PUBLIC PLUS PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+-- On LPAREN shift to state 156
+-- On loption(delimited(LPAREN,separated_nonempty_list(COMMA,expression),RPAREN)) shift to state 181
+## Reductions:
+-- On UID STAR SEMI RPAREN QUESTION QID PUBLIC PLUS PERCENTPERCENT LID LET INLINE EOF COMMA BAR ATTRIBUTE
+--   reduce production loption(delimited(LPAREN,separated_nonempty_list(COMMA,expression),RPAREN)) ->
+
+State 156:
+## Known stack suffix:
+## LPAREN
+## LR(1) items:
+loption(delimited(LPAREN,separated_nonempty_list(COMMA,expression),RPAREN)) -> LPAREN . separated_nonempty_list(COMMA,expression) RPAREN [ UID STAR SEMI RPAREN QUESTION QID PUBLIC PLUS PERCENTPERCENT LID LET INLINE EOF COMMA BAR ATTRIBUTE ]
+## Transitions:
+-- On UNDERSCORE shift to state 139
+-- On UID shift to state 3
+-- On TILDE shift to state 140
+-- On QID shift to state 4
+-- On PREC shift to state 100
+-- On OCAMLTYPE shift to state 141
+-- On LPAREN shift to state 142
+-- On LID shift to state 150
+-- On BAR shift to state 151
+-- On ACTION shift to state 152
+-- On symbol_expression shift to state 153
+-- On symbol shift to state 155
+-- On separated_nonempty_list(COMMA,expression) shift to state 157
+-- On reversed_preceded_or_separated_nonempty_llist(BAR,branch) shift to state 159
+-- On raw_seq_expression shift to state 161
+-- On precedence shift to state 162
+-- On pattern shift to state 164
+-- On located(symbol_expression) shift to state 168
+-- On located(raw_seq_expression) shift to state 176
+-- On located(choice_expression) shift to state 177
+-- On expression shift to state 178
+-- On action_expression shift to state 172
+-- On action shift to state 173
+## Reductions:
+
+State 157:
+## Known stack suffix:
+## LPAREN separated_nonempty_list(COMMA,expression)
+## LR(1) items:
+loption(delimited(LPAREN,separated_nonempty_list(COMMA,expression),RPAREN)) -> LPAREN separated_nonempty_list(COMMA,expression) . RPAREN [ UID STAR SEMI RPAREN QUESTION QID PUBLIC PLUS PERCENTPERCENT LID LET INLINE EOF COMMA BAR ATTRIBUTE ]
+## Transitions:
+-- On RPAREN shift to state 158
+## Reductions:
+
+State 158:
+## Known stack suffix:
+## LPAREN separated_nonempty_list(COMMA,expression) RPAREN
+## LR(1) items:
+loption(delimited(LPAREN,separated_nonempty_list(COMMA,expression),RPAREN)) -> LPAREN separated_nonempty_list(COMMA,expression) RPAREN . [ UID STAR SEMI RPAREN QUESTION QID PUBLIC PLUS PERCENTPERCENT LID LET INLINE EOF COMMA BAR ATTRIBUTE ]
+## Transitions:
+## Reductions:
+-- On UID STAR SEMI RPAREN QUESTION QID PUBLIC PLUS PERCENTPERCENT LID LET INLINE EOF COMMA BAR ATTRIBUTE
+--   reduce production loption(delimited(LPAREN,separated_nonempty_list(COMMA,expression),RPAREN)) -> LPAREN separated_nonempty_list(COMMA,expression) RPAREN
+
+State 159:
+## Known stack suffix:
+## reversed_preceded_or_separated_nonempty_llist(BAR,branch)
+## LR(1) items:
+located(choice_expression) -> reversed_preceded_or_separated_nonempty_llist(BAR,branch) . [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA ]
+reversed_preceded_or_separated_nonempty_llist(BAR,branch) -> reversed_preceded_or_separated_nonempty_llist(BAR,branch) . BAR located(raw_seq_expression) [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+-- On BAR shift to state 160
+## Reductions:
+-- On UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA
+--   reduce production located(choice_expression) -> reversed_preceded_or_separated_nonempty_llist(BAR,branch)
+
+State 160:
+## Known stack suffix:
+## reversed_preceded_or_separated_nonempty_llist(BAR,branch) BAR
+## LR(1) items:
+reversed_preceded_or_separated_nonempty_llist(BAR,branch) -> reversed_preceded_or_separated_nonempty_llist(BAR,branch) BAR . located(raw_seq_expression) [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+-- On UNDERSCORE shift to state 139
+-- On UID shift to state 3
+-- On TILDE shift to state 140
+-- On QID shift to state 4
+-- On PREC shift to state 100
+-- On OCAMLTYPE shift to state 141
+-- On LPAREN shift to state 142
+-- On LID shift to state 150
+-- On ACTION shift to state 152
+-- On symbol_expression shift to state 153
+-- On symbol shift to state 155
+-- On raw_seq_expression shift to state 161
+-- On precedence shift to state 162
+-- On pattern shift to state 164
+-- On located(symbol_expression) shift to state 168
+-- On located(raw_seq_expression) shift to state 175
+-- On action_expression shift to state 172
+-- On action shift to state 173
+## Reductions:
+
+State 161:
+## Known stack suffix:
+## raw_seq_expression
+## LR(1) items:
+located(raw_seq_expression) -> raw_seq_expression . [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+## Reductions:
+-- On UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production located(raw_seq_expression) -> raw_seq_expression
+
+State 162:
+## Known stack suffix:
+## precedence
+## LR(1) items:
+action_expression -> precedence . action [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+-- On OCAMLTYPE shift to state 141
+-- On ACTION shift to state 152
+-- On action shift to state 163
+## Reductions:
+
+State 163:
+## Known stack suffix:
+## precedence action
+## LR(1) items:
+action_expression -> precedence action . [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+## Reductions:
+-- On UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production action_expression -> precedence action
+
+State 164:
+## Known stack suffix:
+## pattern
+## LR(1) items:
+raw_seq_expression -> pattern . EQUAL symbol_expression SEMI located(raw_seq_expression) [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+-- On EQUAL shift to state 165
+## Reductions:
+
+State 165:
+## Known stack suffix:
+## pattern EQUAL
+## LR(1) items:
+raw_seq_expression -> pattern EQUAL . symbol_expression SEMI located(raw_seq_expression) [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+-- On UID shift to state 3
+-- On QID shift to state 4
+-- On LID shift to state 5
+-- On symbol_expression shift to state 166
+-- On symbol shift to state 155
+-- On located(symbol_expression) shift to state 168
+## Reductions:
+
+State 166:
+## Known stack suffix:
+## pattern EQUAL symbol_expression
+## LR(1) items:
+located(symbol_expression) -> symbol_expression . [ STAR QUESTION PLUS ]
+raw_seq_expression -> pattern EQUAL symbol_expression . SEMI located(raw_seq_expression) [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+-- On SEMI shift to state 167
+## Reductions:
+-- On STAR QUESTION PLUS
+--   reduce production located(symbol_expression) -> symbol_expression
+
+State 167:
+## Known stack suffix:
+## pattern EQUAL symbol_expression SEMI
+## LR(1) items:
+raw_seq_expression -> pattern EQUAL symbol_expression SEMI . located(raw_seq_expression) [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+-- On UNDERSCORE shift to state 139
+-- On UID shift to state 3
+-- On TILDE shift to state 140
+-- On QID shift to state 4
+-- On PREC shift to state 100
+-- On OCAMLTYPE shift to state 141
+-- On LPAREN shift to state 142
+-- On LID shift to state 150
+-- On ACTION shift to state 152
+-- On symbol_expression shift to state 153
+-- On symbol shift to state 155
+-- On raw_seq_expression shift to state 161
+-- On precedence shift to state 162
+-- On pattern shift to state 164
+-- On located(symbol_expression) shift to state 168
+-- On located(raw_seq_expression) shift to state 171
+-- On action_expression shift to state 172
+-- On action shift to state 173
+## Reductions:
+
+State 168:
+## Known stack suffix:
+## located(symbol_expression)
+## LR(1) items:
+symbol_expression -> located(symbol_expression) . located(modifier) list(ATTRIBUTE) [ UID STAR SEMI RPAREN QUESTION QID PUBLIC PLUS PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+-- On STAR shift to state 9
+-- On QUESTION shift to state 10
+-- On PLUS shift to state 11
+-- On modifier shift to state 14
+-- On located(modifier) shift to state 169
+## Reductions:
+
+State 169:
+## Known stack suffix:
+## located(symbol_expression) located(modifier)
+## LR(1) items:
+symbol_expression -> located(symbol_expression) located(modifier) . list(ATTRIBUTE) [ UID STAR SEMI RPAREN QUESTION QID PUBLIC PLUS PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+-- On ATTRIBUTE shift to state 30
+-- On list(ATTRIBUTE) shift to state 170
+## Reductions:
+-- On UID STAR SEMI RPAREN QUESTION QID PUBLIC PLUS PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production list(ATTRIBUTE) ->
+
+State 170:
+## Known stack suffix:
+## located(symbol_expression) located(modifier) list(ATTRIBUTE)
+## LR(1) items:
+symbol_expression -> located(symbol_expression) located(modifier) list(ATTRIBUTE) . [ UID STAR SEMI RPAREN QUESTION QID PUBLIC PLUS PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+## Reductions:
+-- On UID STAR SEMI RPAREN QUESTION QID PUBLIC PLUS PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production symbol_expression -> located(symbol_expression) located(modifier) list(ATTRIBUTE)
+
+State 171:
+## Known stack suffix:
+## pattern EQUAL symbol_expression SEMI located(raw_seq_expression)
+## LR(1) items:
+raw_seq_expression -> pattern EQUAL symbol_expression SEMI located(raw_seq_expression) . [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+## Reductions:
+-- On UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production raw_seq_expression -> pattern EQUAL symbol_expression SEMI located(raw_seq_expression)
+
+State 172:
+## Known stack suffix:
+## action_expression
+## LR(1) items:
+raw_seq_expression -> action_expression . [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+## Reductions:
+-- On UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production raw_seq_expression -> action_expression
+
+State 173:
+## Known stack suffix:
+## action
+## LR(1) items:
+action_expression -> action . [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+action_expression -> action . precedence [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+-- On PREC shift to state 100
+-- On precedence shift to state 174
+## Reductions:
+-- On UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production action_expression -> action
+
+State 174:
+## Known stack suffix:
+## action precedence
+## LR(1) items:
+action_expression -> action precedence . [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+## Reductions:
+-- On UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production action_expression -> action precedence
+
+State 175:
+## Known stack suffix:
+## reversed_preceded_or_separated_nonempty_llist(BAR,branch) BAR located(raw_seq_expression)
+## LR(1) items:
+reversed_preceded_or_separated_nonempty_llist(BAR,branch) -> reversed_preceded_or_separated_nonempty_llist(BAR,branch) BAR located(raw_seq_expression) . [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+## Reductions:
+-- On UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production reversed_preceded_or_separated_nonempty_llist(BAR,branch) -> reversed_preceded_or_separated_nonempty_llist(BAR,branch) BAR located(raw_seq_expression)
+
+State 176:
+## Known stack suffix:
+## located(raw_seq_expression)
+## LR(1) items:
+reversed_preceded_or_separated_nonempty_llist(BAR,branch) -> located(raw_seq_expression) . [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+## Reductions:
+-- On UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production reversed_preceded_or_separated_nonempty_llist(BAR,branch) -> located(raw_seq_expression)
+
+State 177:
+## Known stack suffix:
+## located(choice_expression)
+## LR(1) items:
+expression -> located(choice_expression) . [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA ]
+## Transitions:
+## Reductions:
+-- On UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA
+--   reduce production expression -> located(choice_expression)
+
+State 178:
+## Known stack suffix:
+## expression
+## LR(1) items:
+separated_nonempty_list(COMMA,expression) -> expression . [ RPAREN ]
+separated_nonempty_list(COMMA,expression) -> expression . COMMA separated_nonempty_list(COMMA,expression) [ RPAREN ]
+## Transitions:
+-- On COMMA shift to state 179
+## Reductions:
+-- On RPAREN
+--   reduce production separated_nonempty_list(COMMA,expression) -> expression
+
+State 179:
+## Known stack suffix:
+## expression COMMA
+## LR(1) items:
+separated_nonempty_list(COMMA,expression) -> expression COMMA . separated_nonempty_list(COMMA,expression) [ RPAREN ]
+## Transitions:
+-- On UNDERSCORE shift to state 139
+-- On UID shift to state 3
+-- On TILDE shift to state 140
+-- On QID shift to state 4
+-- On PREC shift to state 100
+-- On OCAMLTYPE shift to state 141
+-- On LPAREN shift to state 142
+-- On LID shift to state 150
+-- On BAR shift to state 151
+-- On ACTION shift to state 152
+-- On symbol_expression shift to state 153
+-- On symbol shift to state 155
+-- On separated_nonempty_list(COMMA,expression) shift to state 180
+-- On reversed_preceded_or_separated_nonempty_llist(BAR,branch) shift to state 159
+-- On raw_seq_expression shift to state 161
+-- On precedence shift to state 162
+-- On pattern shift to state 164
+-- On located(symbol_expression) shift to state 168
+-- On located(raw_seq_expression) shift to state 176
+-- On located(choice_expression) shift to state 177
+-- On expression shift to state 178
+-- On action_expression shift to state 172
+-- On action shift to state 173
+## Reductions:
+
+State 180:
+## Known stack suffix:
+## expression COMMA separated_nonempty_list(COMMA,expression)
+## LR(1) items:
+separated_nonempty_list(COMMA,expression) -> expression COMMA separated_nonempty_list(COMMA,expression) . [ RPAREN ]
+## Transitions:
+## Reductions:
+-- On RPAREN
+--   reduce production separated_nonempty_list(COMMA,expression) -> expression COMMA separated_nonempty_list(COMMA,expression)
+
+State 181:
+## Known stack suffix:
+## symbol loption(delimited(LPAREN,separated_nonempty_list(COMMA,expression),RPAREN))
+## LR(1) items:
+symbol_expression -> symbol loption(delimited(LPAREN,separated_nonempty_list(COMMA,expression),RPAREN)) . list(ATTRIBUTE) [ UID STAR SEMI RPAREN QUESTION QID PUBLIC PLUS PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+-- On ATTRIBUTE shift to state 30
+-- On list(ATTRIBUTE) shift to state 182
+## Reductions:
+-- On UID STAR SEMI RPAREN QUESTION QID PUBLIC PLUS PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production list(ATTRIBUTE) ->
+
+State 182:
+## Known stack suffix:
+## symbol loption(delimited(LPAREN,separated_nonempty_list(COMMA,expression),RPAREN)) list(ATTRIBUTE)
+## LR(1) items:
+symbol_expression -> symbol loption(delimited(LPAREN,separated_nonempty_list(COMMA,expression),RPAREN)) list(ATTRIBUTE) . [ UID STAR SEMI RPAREN QUESTION QID PUBLIC PLUS PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+## Reductions:
+-- On UID STAR SEMI RPAREN QUESTION QID PUBLIC PLUS PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production symbol_expression -> symbol loption(delimited(LPAREN,separated_nonempty_list(COMMA,expression),RPAREN)) list(ATTRIBUTE)
+
+State 183:
+## Known stack suffix:
+## symbol_expression SEMI located(raw_seq_expression)
+## LR(1) items:
+raw_seq_expression -> symbol_expression SEMI located(raw_seq_expression) . [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+## Reductions:
+-- On UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production raw_seq_expression -> symbol_expression SEMI located(raw_seq_expression)
+
+State 184:
+## Known stack suffix:
+## BAR located(raw_seq_expression)
+## LR(1) items:
+reversed_preceded_or_separated_nonempty_llist(BAR,branch) -> BAR located(raw_seq_expression) . [ UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR ]
+## Transitions:
+## Reductions:
+-- On UID RPAREN QID PUBLIC PERCENTPERCENT LID LET INLINE EOF COMMA BAR
+--   reduce production reversed_preceded_or_separated_nonempty_llist(BAR,branch) -> BAR located(raw_seq_expression)
+
+State 185:
+## Known stack suffix:
+## boption(PUBLIC) LET LID list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) equality_symbol expression
+## LR(1) items:
+new_rule -> boption(PUBLIC) LET LID list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) equality_symbol expression . [ UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF ]
+## Transitions:
+## Reductions:
+-- On UID QID PUBLIC PERCENTPERCENT LID LET INLINE EOF
+--   reduce production new_rule -> boption(PUBLIC) LET LID list(ATTRIBUTE) loption(delimited(LPAREN,separated_nonempty_list(COMMA,symbol),RPAREN)) equality_symbol expression
+
+State 186:
+## Known stack suffix:
+## old_rule list(rule)
+## LR(1) items:
+list(rule) -> old_rule list(rule) . [ PERCENTPERCENT EOF ]
+## Transitions:
+## Reductions:
+-- On PERCENTPERCENT EOF
+--   reduce production list(rule) -> old_rule list(rule)
+
+State 187:
+## Known stack suffix:
+## list(declaration) PERCENTPERCENT list(rule)
+## LR(1) items:
+grammar -> list(declaration) PERCENTPERCENT list(rule) . postlude [ # ]
+## Transitions:
+-- On PERCENTPERCENT shift to state 188
+-- On EOF shift to state 189
+-- On postlude shift to state 190
+## Reductions:
+
+State 188:
+## Known stack suffix:
+## PERCENTPERCENT
+## LR(1) items:
+postlude -> PERCENTPERCENT . [ # ]
 ## Transitions:
 ## Reductions:
 -- On #
---   accept optional_sentence
+--   reduce production postlude -> PERCENTPERCENT
+
+State 189:
+## Known stack suffix:
+## EOF
+## LR(1) items:
+postlude -> EOF . [ # ]
+## Transitions:
+## Reductions:
+-- On #
+--   reduce production postlude -> EOF
+
+State 190:
+## Known stack suffix:
+## list(declaration) PERCENTPERCENT list(rule) postlude
+## LR(1) items:
+grammar -> list(declaration) PERCENTPERCENT list(rule) postlude . [ # ]
+## Transitions:
+## Reductions:
+-- On #
+--   reduce production grammar -> list(declaration) PERCENTPERCENT list(rule) postlude
+
+State 191:
+## Known stack suffix:
+## grammar
+## LR(1) items:
+grammar' -> grammar . [ # ]
+## Transitions:
+## Reductions:
+-- On #
+--   accept grammar
+
+State 192:
+## Known stack suffix:
+## declaration
+## LR(1) items:
+list(declaration) -> declaration . list(declaration) [ PERCENTPERCENT ]
+## Transitions:
+-- On TYPE shift to state 1
+-- On TOKEN shift to state 24
+-- On START shift to state 36
+-- On SEMI shift to state 42
+-- On RIGHT shift to state 43
+-- On PUBLIC shift to state 44
+-- On PERCENTATTRIBUTE shift to state 45
+-- On PARAMETER shift to state 50
+-- On ON_ERROR_REDUCE shift to state 52
+-- On NONASSOC shift to state 54
+-- On LET shift to state 55
+-- On LEFT shift to state 56
+-- On INLINE shift to state 57
+-- On HEADER shift to state 58
+-- On GRAMMARATTRIBUTE shift to state 59
+-- On EOF shift to state 60
+-- On COLON shift to state 61
+-- On priority_keyword shift to state 62
+-- On list(declaration) shift to state 193
+-- On declaration shift to state 192
+## Reductions:
+-- On PERCENTPERCENT
+--   reduce production list(declaration) ->
+
+State 193:
+## Known stack suffix:
+## declaration list(declaration)
+## LR(1) items:
+list(declaration) -> declaration list(declaration) . [ PERCENTPERCENT ]
+## Transitions:
+## Reductions:
+-- On PERCENTPERCENT
+--   reduce production list(declaration) -> declaration list(declaration)
 

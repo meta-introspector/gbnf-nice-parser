@@ -1,4 +1,10 @@
 (test
  (name test_gbnf_parser)
- (modes byte exe)	
+ (modes byte exe)
+  (modules test_gbnf_parser)
+ (libraries gbnf_parser menhirLib batteries))
+(test
+ (name test_gbnf_parser2)
+ (modes byte exe)
+ (modules test_gbnf_parser2)
  (libraries gbnf_parser menhirLib batteries))
