@@ -177,7 +177,7 @@ grammar:
   /* PERCENTPERCENT */
   rs = rule*
     {
-      (print_endline (Batteries.dump rs));
+      (print_endline (Batteries.dump ("DEBUG:rs",rs)));
       {
         pg_filename          = ""; (* filled in by the caller *)
         pg_rules             = rs;
@@ -194,12 +194,12 @@ declaration:
 
 | h = HEADER /* lexically delimited by %{ ... %} */
     {
-      (print_endline (Batteries.dump ("h", h)));
+      (print_endline (Batteries.dump ("DEBUG:h", h)));
       [ with_loc $loc (DCode h) ] }
 
 | TOKEN ty = OCAMLTYPE? ts = clist(terminal_alias_attrs)
     {
-      (print_endline (Batteries.dump ("token", ty)));
+      (print_endline (Batteries.dump ("DEBUG:token", ty)));
       List.map (Positions.map (fun (terminal, alias, attrs) ->
         DToken (ty, terminal, alias, attrs)
       )) ts }
@@ -291,7 +291,9 @@ symbol:
   id = LID
 | id = UID
 | id = QID
-    { id }
+    {
+      (print_endline (Batteries.dump ("DEBUG:ID", id)));
+      id }
 
 /* ------------------------------------------------------------------------- */
 /* Terminals must begin with an uppercase letter. Nonterminals that are
@@ -302,7 +304,8 @@ symbol:
 
 %inline terminal_alias_attrs:
   id = UID alias = QID? attrs = ATTRIBUTE*
-    { let alias = Option.map Positions.value alias in
+    { (print_endline (Batteries.dump ("DEBUG:attributes", id)));
+      let alias = Option.map Positions.value alias in
       Positions.map (fun uid -> uid, alias, attrs) id }
 
 %inline nonterminal:
@@ -333,8 +336,8 @@ old_rule:
 COLONCOLONEQUAL
   optional_bar
   branches = branches
-  SEMI*
-    {
+	       {
+		 (print_endline (Batteries.dump ("DEBUG:branches", branches)));
       let public, inline = flags in
       let rule = {
         pr_public_flag = public;
@@ -408,7 +411,8 @@ precedence:
 
 production:
   producers = producer* oprec = ioption(precedence)
-    { producers,
+    { (print_endline (Batteries.dump ("DEBUG:production", producers)));
+      producers,
       oprec,
       ParserAux.new_production_level(),
       Positions.import $loc
@@ -428,8 +432,11 @@ production:
    empty [option] or to shift. */
 
 producer:
-| id = ioption(terminated(LID, EQUAL)) p = actual attrs = ATTRIBUTE* SEMI*
-    { position (with_loc $loc ()), id, p, attrs }
+| id = ioption(terminated(LID, EQUAL)) p = actual attrs = ATTRIBUTE* 
+    {
+      (print_endline (Batteries.dump ("DEBUG:producer", id,"p",p,"attrs",attrs)));
+      
+      position (with_loc $loc ()), id, p, attrs }
 
 /* ------------------------------------------------------------------------- */
 /* The ideal syntax of actual parameters includes:
@@ -527,7 +534,9 @@ new_rule:
   rule_formals    = plist(symbol)
   rule_inline     = equality_symbol
   rule_rhs        = expression
-    {{
+    {
+      (print_endline (Batteries.dump ("DEBUG:new_rule", rule_lhs)));
+      {
        rule_public;
        rule_inline;
        rule_lhs;
@@ -703,7 +712,8 @@ pattern:
 
 %inline plist(X):
   params = loption(delimited(LPAREN, separated_nonempty_list(COMMA, X), RPAREN))
-    { params }
+    { (print_endline (Batteries.dump ("DEBUG:params", params)));
+	params }
 
 (* -------------------------------------------------------------------------- *)
 

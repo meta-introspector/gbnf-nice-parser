@@ -65,9 +65,10 @@ let new_input_file name : unit =
     input_file_index = !current_input_file.input_file_index + 1
   }
 
-let get_input_file () : input_file =
-  assert (!current_input_file != dummy_input_file);
-  !current_input_file
+let get_input_file () : input_file = {
+    input_file_name= "dummy";
+    input_file_index= 0
+  }
 
 let get_input_file_name () : string =
   (get_input_file()).input_file_name

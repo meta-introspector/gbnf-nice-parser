@@ -530,7 +530,15 @@ rule main = parse
 | ":="
     { COLONEQUAL }
 | "::="
-    { COLONCOLONEQUAL }
+    {
+      (print_endline "DEBUG");
+      let curr = lexbuf.Lexing.lex_curr_p in
+      let line = curr.Lexing.pos_lnum in
+      let cnum = curr.Lexing.pos_cnum - curr.Lexing.pos_bol in
+      let tok = Lexing.lexeme lexbuf in
+      (print_endline (Batteries.dump ((line,cnum,tok))));
+
+      COLONCOLONEQUAL }
 | "=="
     { EQUALEQUAL }
 | "let"
