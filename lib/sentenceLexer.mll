@@ -529,6 +529,8 @@ rule main = parse
     { UNDERSCORE }
 | ":="
     { COLONEQUAL }
+| "::="
+    { COLONCOLONEQUAL }
 | "=="
     { EQUALEQUAL }
 | "let"

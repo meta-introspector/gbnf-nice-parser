@@ -129,6 +129,7 @@ let unparenthesize (o : Stretch.t option) : Stretch.t option =
   TILDE            "~"
   UNDERSCORE       "_"
   COLONEQUAL       ":="
+  COLONCOLONEQUAL  "::="
   EQUALEQUAL       "=="
 
 /* ------------------------------------------------------------------------- */
@@ -329,7 +330,7 @@ old_rule:
   symbol = symbol          /* the symbol that is being defined */
   attributes = ATTRIBUTE*
   params = plist(symbol)   /* formal parameters */
-  COLON
+COLONCOLONEQUAL
   optional_bar
   branches = branches
   SEMI*
