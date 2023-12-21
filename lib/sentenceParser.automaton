@@ -4,18 +4,19 @@ State 0:
 ## LR(1) items:
 grammar' -> . grammar [ # ]
 ## Transitions:
--- On PUBLIC shift to state 1
--- On LET shift to state 3
--- On INLINE shift to state 4
--- On EOF shift to state 6
--- On COLON shift to state 7
--- On old_rule shift to state 8
--- On list(old_rule) shift to state 31
--- On grammar shift to state 32
--- On flags shift to state 12
+-- On UID shift to state 1
+-- On QID shift to state 2
+-- On PUBLIC shift to state 3
+-- On LID shift to state 4
+-- On LET shift to state 5
+-- On INLINE shift to state 6
+-- On EOF shift to state 7
+-- On COLON shift to state 8
+-- On symbol shift to state 9
+-- On old_rule shift to state 18
+-- On list(old_rule) shift to state 20
+-- On grammar shift to state 21
 ## Reductions:
--- On UID QID LID
---   reduce production flags ->
 -- On #
 --   reduce production list(old_rule) ->
 ** End-of-stream conflict on UID QID PUBLIC LID LET INLINE EOF COLON
@@ -26,35 +27,45 @@ grammar' -> . grammar [ # ]
 
 State 1:
 ## Known stack suffix:
-## PUBLIC
+## UID
 ## LR(1) items:
-flags -> PUBLIC . [ UID QID LID ]
-flags -> PUBLIC . INLINE [ UID QID LID ]
-grammar -> PUBLIC . [ # ]
+symbol -> UID . [ UID QID NEWLINE LID COLONCOLONEQUAL BAR ]
 ## Transitions:
--- On INLINE shift to state 2
 ## Reductions:
--- On UID QID LID
---   reduce production flags -> PUBLIC
--- On #
---   reduce production grammar -> PUBLIC
-** End-of-stream conflict on UID QID LID INLINE
-**   There is a tension between
-**   (1) reducing production grammar -> PUBLIC
-**   without even requesting a lookahead token, and
-**   (2) testing whether the lookahead token is a member of the above set.
+-- On UID QID NEWLINE LID COLONCOLONEQUAL BAR
+--   reduce production symbol -> UID
 
 State 2:
 ## Known stack suffix:
-## PUBLIC INLINE
+## QID
 ## LR(1) items:
-flags -> PUBLIC INLINE . [ UID QID LID ]
+symbol -> QID . [ UID QID NEWLINE LID COLONCOLONEQUAL BAR ]
 ## Transitions:
 ## Reductions:
--- On UID QID LID
---   reduce production flags -> PUBLIC INLINE
+-- On UID QID NEWLINE LID COLONCOLONEQUAL BAR
+--   reduce production symbol -> QID
 
 State 3:
+## Known stack suffix:
+## PUBLIC
+## LR(1) items:
+grammar -> PUBLIC . [ # ]
+## Transitions:
+## Reductions:
+-- On #
+--   reduce production grammar -> PUBLIC
+
+State 4:
+## Known stack suffix:
+## LID
+## LR(1) items:
+symbol -> LID . [ UID QID NEWLINE LID COLONCOLONEQUAL BAR ]
+## Transitions:
+## Reductions:
+-- On UID QID NEWLINE LID COLONCOLONEQUAL BAR
+--   reduce production symbol -> LID
+
+State 5:
 ## Known stack suffix:
 ## LET
 ## LR(1) items:
@@ -64,37 +75,17 @@ grammar -> LET . [ # ]
 -- On #
 --   reduce production grammar -> LET
 
-State 4:
+State 6:
 ## Known stack suffix:
 ## INLINE
 ## LR(1) items:
-flags -> INLINE . [ UID QID LID ]
-flags -> INLINE . PUBLIC [ UID QID LID ]
 grammar -> INLINE . [ # ]
 ## Transitions:
--- On PUBLIC shift to state 5
 ## Reductions:
--- On UID QID LID
---   reduce production flags -> INLINE
 -- On #
 --   reduce production grammar -> INLINE
-** End-of-stream conflict on UID QID PUBLIC LID
-**   There is a tension between
-**   (1) reducing production grammar -> INLINE
-**   without even requesting a lookahead token, and
-**   (2) testing whether the lookahead token is a member of the above set.
 
-State 5:
-## Known stack suffix:
-## INLINE PUBLIC
-## LR(1) items:
-flags -> INLINE PUBLIC . [ UID QID LID ]
-## Transitions:
-## Reductions:
--- On UID QID LID
---   reduce production flags -> INLINE PUBLIC
-
-State 6:
+State 7:
 ## Known stack suffix:
 ## EOF
 ## LR(1) items:
@@ -104,7 +95,7 @@ grammar -> EOF . [ # ]
 -- On #
 --   reduce production grammar -> EOF
 
-State 7:
+State 8:
 ## Known stack suffix:
 ## COLON
 ## LR(1) items:
@@ -114,53 +105,137 @@ grammar -> COLON . [ # ]
 -- On #
 --   reduce production grammar -> COLON
 
-State 8:
+State 9:
+## Known stack suffix:
+## symbol
+## LR(1) items:
+old_rule -> symbol . COLONCOLONEQUAL separated_nonempty_list(BAR,nonempty_list(symbol)) NEWLINE [ UID QID LID # ]
+## Transitions:
+-- On COLONCOLONEQUAL shift to state 10
+## Reductions:
+
+State 10:
+## Known stack suffix:
+## symbol COLONCOLONEQUAL
+## LR(1) items:
+old_rule -> symbol COLONCOLONEQUAL . separated_nonempty_list(BAR,nonempty_list(symbol)) NEWLINE [ UID QID LID # ]
+## Transitions:
+-- On UID shift to state 1
+-- On QID shift to state 2
+-- On LID shift to state 4
+-- On symbol shift to state 11
+-- On separated_nonempty_list(BAR,nonempty_list(symbol)) shift to state 13
+-- On nonempty_list(symbol) shift to state 15
+## Reductions:
+
+State 11:
+## Known stack suffix:
+## symbol
+## LR(1) items:
+nonempty_list(symbol) -> symbol . [ NEWLINE BAR ]
+nonempty_list(symbol) -> symbol . nonempty_list(symbol) [ NEWLINE BAR ]
+## Transitions:
+-- On UID shift to state 1
+-- On QID shift to state 2
+-- On LID shift to state 4
+-- On symbol shift to state 11
+-- On nonempty_list(symbol) shift to state 12
+## Reductions:
+-- On NEWLINE BAR
+--   reduce production nonempty_list(symbol) -> symbol
+
+State 12:
+## Known stack suffix:
+## symbol nonempty_list(symbol)
+## LR(1) items:
+nonempty_list(symbol) -> symbol nonempty_list(symbol) . [ NEWLINE BAR ]
+## Transitions:
+## Reductions:
+-- On NEWLINE BAR
+--   reduce production nonempty_list(symbol) -> symbol nonempty_list(symbol)
+
+State 13:
+## Known stack suffix:
+## symbol COLONCOLONEQUAL separated_nonempty_list(BAR,nonempty_list(symbol))
+## LR(1) items:
+old_rule -> symbol COLONCOLONEQUAL separated_nonempty_list(BAR,nonempty_list(symbol)) . NEWLINE [ UID QID LID # ]
+## Transitions:
+-- On NEWLINE shift to state 14
+## Reductions:
+
+State 14:
+## Known stack suffix:
+## symbol COLONCOLONEQUAL separated_nonempty_list(BAR,nonempty_list(symbol)) NEWLINE
+## LR(1) items:
+old_rule -> symbol COLONCOLONEQUAL separated_nonempty_list(BAR,nonempty_list(symbol)) NEWLINE . [ UID QID LID # ]
+## Transitions:
+## Reductions:
+-- On UID QID LID #
+--   reduce production old_rule -> symbol COLONCOLONEQUAL separated_nonempty_list(BAR,nonempty_list(symbol)) NEWLINE
+** End-of-stream conflict on UID QID LID
+**   There is a tension between
+**   (1) reducing production old_rule -> symbol COLONCOLONEQUAL separated_nonempty_list(BAR,nonempty_list(symbol)) NEWLINE
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 15:
+## Known stack suffix:
+## nonempty_list(symbol)
+## LR(1) items:
+separated_nonempty_list(BAR,nonempty_list(symbol)) -> nonempty_list(symbol) . [ NEWLINE ]
+separated_nonempty_list(BAR,nonempty_list(symbol)) -> nonempty_list(symbol) . BAR separated_nonempty_list(BAR,nonempty_list(symbol)) [ NEWLINE ]
+## Transitions:
+-- On BAR shift to state 16
+## Reductions:
+-- On NEWLINE
+--   reduce production separated_nonempty_list(BAR,nonempty_list(symbol)) -> nonempty_list(symbol)
+
+State 16:
+## Known stack suffix:
+## nonempty_list(symbol) BAR
+## LR(1) items:
+separated_nonempty_list(BAR,nonempty_list(symbol)) -> nonempty_list(symbol) BAR . separated_nonempty_list(BAR,nonempty_list(symbol)) [ NEWLINE ]
+## Transitions:
+-- On UID shift to state 1
+-- On QID shift to state 2
+-- On LID shift to state 4
+-- On symbol shift to state 11
+-- On separated_nonempty_list(BAR,nonempty_list(symbol)) shift to state 17
+-- On nonempty_list(symbol) shift to state 15
+## Reductions:
+
+State 17:
+## Known stack suffix:
+## nonempty_list(symbol) BAR separated_nonempty_list(BAR,nonempty_list(symbol))
+## LR(1) items:
+separated_nonempty_list(BAR,nonempty_list(symbol)) -> nonempty_list(symbol) BAR separated_nonempty_list(BAR,nonempty_list(symbol)) . [ NEWLINE ]
+## Transitions:
+## Reductions:
+-- On NEWLINE
+--   reduce production separated_nonempty_list(BAR,nonempty_list(symbol)) -> nonempty_list(symbol) BAR separated_nonempty_list(BAR,nonempty_list(symbol))
+
+State 18:
 ## Known stack suffix:
 ## old_rule
 ## LR(1) items:
 list(old_rule) -> old_rule . list(old_rule) [ # ]
 ## Transitions:
--- On PUBLIC shift to state 9
--- On INLINE shift to state 10
--- On old_rule shift to state 8
--- On list(old_rule) shift to state 11
--- On flags shift to state 12
+-- On UID shift to state 1
+-- On QID shift to state 2
+-- On LID shift to state 4
+-- On symbol shift to state 9
+-- On old_rule shift to state 18
+-- On list(old_rule) shift to state 19
 ## Reductions:
--- On UID QID LID
---   reduce production flags ->
 -- On #
 --   reduce production list(old_rule) ->
-** End-of-stream conflict on UID QID PUBLIC LID INLINE
+** End-of-stream conflict on UID QID LID
 **   There is a tension between
 **   (1) reducing production list(old_rule) ->
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 9:
-## Known stack suffix:
-## PUBLIC
-## LR(1) items:
-flags -> PUBLIC . [ UID QID LID ]
-flags -> PUBLIC . INLINE [ UID QID LID ]
-## Transitions:
--- On INLINE shift to state 2
-## Reductions:
--- On UID QID LID
---   reduce production flags -> PUBLIC
-
-State 10:
-## Known stack suffix:
-## INLINE
-## LR(1) items:
-flags -> INLINE . [ UID QID LID ]
-flags -> INLINE . PUBLIC [ UID QID LID ]
-## Transitions:
--- On PUBLIC shift to state 5
-## Reductions:
--- On UID QID LID
---   reduce production flags -> INLINE
-
-State 11:
+State 19:
 ## Known stack suffix:
 ## old_rule list(old_rule)
 ## LR(1) items:
@@ -170,229 +245,7 @@ list(old_rule) -> old_rule list(old_rule) . [ # ]
 -- On #
 --   reduce production list(old_rule) -> old_rule list(old_rule)
 
-State 12:
-## Known stack suffix:
-## flags
-## LR(1) items:
-old_rule -> flags . symbol COLONCOLONEQUAL separated_nonempty_list(BAR,production_group) NEWLINE [ UID QID PUBLIC LID INLINE # ]
-## Transitions:
--- On UID shift to state 13
--- On QID shift to state 14
--- On LID shift to state 15
--- On symbol shift to state 16
-## Reductions:
-
-State 13:
-## Known stack suffix:
-## UID
-## LR(1) items:
-symbol -> UID . [ COLONCOLONEQUAL ]
-## Transitions:
-## Reductions:
--- On COLONCOLONEQUAL
---   reduce production symbol -> UID
-
-State 14:
-## Known stack suffix:
-## QID
-## LR(1) items:
-symbol -> QID . [ COLONCOLONEQUAL ]
-## Transitions:
-## Reductions:
--- On COLONCOLONEQUAL
---   reduce production symbol -> QID
-
-State 15:
-## Known stack suffix:
-## LID
-## LR(1) items:
-symbol -> LID . [ COLONCOLONEQUAL ]
-## Transitions:
-## Reductions:
--- On COLONCOLONEQUAL
---   reduce production symbol -> LID
-
-State 16:
-## Known stack suffix:
-## flags symbol
-## LR(1) items:
-old_rule -> flags symbol . COLONCOLONEQUAL separated_nonempty_list(BAR,production_group) NEWLINE [ UID QID PUBLIC LID INLINE # ]
-## Transitions:
--- On COLONCOLONEQUAL shift to state 17
-## Reductions:
-
-State 17:
-## Known stack suffix:
-## flags symbol COLONCOLONEQUAL
-## LR(1) items:
-old_rule -> flags symbol COLONCOLONEQUAL . separated_nonempty_list(BAR,production_group) NEWLINE [ UID QID PUBLIC LID INLINE # ]
-## Transitions:
--- On LID shift to state 18
--- On separated_nonempty_list(BAR,production_group) shift to state 19
--- On separated_nonempty_list(BAR,production) shift to state 21
--- On production_group shift to state 22
--- On production shift to state 25
--- On producer shift to state 28
--- On list(producer) shift to state 30
-## Reductions:
--- On NEWLINE BAR
---   reduce production list(producer) ->
-
-State 18:
-## Known stack suffix:
-## LID
-## LR(1) items:
-producer -> LID . [ NEWLINE LID BAR ]
-## Transitions:
-## Reductions:
--- On NEWLINE LID BAR
---   reduce production producer -> LID
-
-State 19:
-## Known stack suffix:
-## flags symbol COLONCOLONEQUAL separated_nonempty_list(BAR,production_group)
-## LR(1) items:
-old_rule -> flags symbol COLONCOLONEQUAL separated_nonempty_list(BAR,production_group) . NEWLINE [ UID QID PUBLIC LID INLINE # ]
-## Transitions:
--- On NEWLINE shift to state 20
-## Reductions:
-
 State 20:
-## Known stack suffix:
-## flags symbol COLONCOLONEQUAL separated_nonempty_list(BAR,production_group) NEWLINE
-## LR(1) items:
-old_rule -> flags symbol COLONCOLONEQUAL separated_nonempty_list(BAR,production_group) NEWLINE . [ UID QID PUBLIC LID INLINE # ]
-## Transitions:
-## Reductions:
--- On UID QID PUBLIC LID INLINE #
---   reduce production old_rule -> flags symbol COLONCOLONEQUAL separated_nonempty_list(BAR,production_group) NEWLINE
-** End-of-stream conflict on UID QID PUBLIC LID INLINE
-**   There is a tension between
-**   (1) reducing production old_rule -> flags symbol COLONCOLONEQUAL separated_nonempty_list(BAR,production_group) NEWLINE
-**   without even requesting a lookahead token, and
-**   (2) testing whether the lookahead token is a member of the above set.
-
-State 21:
-## Known stack suffix:
-## separated_nonempty_list(BAR,production)
-## LR(1) items:
-production_group -> separated_nonempty_list(BAR,production) . [ NEWLINE BAR ]
-## Transitions:
-## Reductions:
--- On NEWLINE BAR
---   reduce production production_group -> separated_nonempty_list(BAR,production)
-
-State 22:
-## Known stack suffix:
-## production_group
-## LR(1) items:
-separated_nonempty_list(BAR,production_group) -> production_group . [ NEWLINE ]
-separated_nonempty_list(BAR,production_group) -> production_group . BAR separated_nonempty_list(BAR,production_group) [ NEWLINE ]
-## Transitions:
--- On BAR shift to state 23
-## Reductions:
--- On NEWLINE
---   reduce production separated_nonempty_list(BAR,production_group) -> production_group
-
-State 23:
-## Known stack suffix:
-## production_group BAR
-## LR(1) items:
-separated_nonempty_list(BAR,production_group) -> production_group BAR . separated_nonempty_list(BAR,production_group) [ NEWLINE ]
-## Transitions:
--- On LID shift to state 18
--- On separated_nonempty_list(BAR,production_group) shift to state 24
--- On separated_nonempty_list(BAR,production) shift to state 21
--- On production_group shift to state 22
--- On production shift to state 25
--- On producer shift to state 28
--- On list(producer) shift to state 30
-## Reductions:
--- On NEWLINE BAR
---   reduce production list(producer) ->
-
-State 24:
-## Known stack suffix:
-## production_group BAR separated_nonempty_list(BAR,production_group)
-## LR(1) items:
-separated_nonempty_list(BAR,production_group) -> production_group BAR separated_nonempty_list(BAR,production_group) . [ NEWLINE ]
-## Transitions:
-## Reductions:
--- On NEWLINE
---   reduce production separated_nonempty_list(BAR,production_group) -> production_group BAR separated_nonempty_list(BAR,production_group)
-
-State 25:
-## Known stack suffix:
-## production
-## LR(1) items:
-separated_nonempty_list(BAR,production) -> production . [ NEWLINE BAR ]
-separated_nonempty_list(BAR,production) -> production . BAR separated_nonempty_list(BAR,production) [ NEWLINE BAR ]
-## Transitions:
--- On BAR shift to state 26
-## Reductions:
--- On NEWLINE BAR
---   reduce production separated_nonempty_list(BAR,production) -> production
-** Conflict on BAR
-
-State 26:
-## Known stack suffix:
-## production BAR
-## LR(1) items:
-separated_nonempty_list(BAR,production) -> production BAR . separated_nonempty_list(BAR,production) [ NEWLINE BAR ]
-## Transitions:
--- On LID shift to state 18
--- On separated_nonempty_list(BAR,production) shift to state 27
--- On production shift to state 25
--- On producer shift to state 28
--- On list(producer) shift to state 30
-## Reductions:
--- On NEWLINE BAR
---   reduce production list(producer) ->
-
-State 27:
-## Known stack suffix:
-## production BAR separated_nonempty_list(BAR,production)
-## LR(1) items:
-separated_nonempty_list(BAR,production) -> production BAR separated_nonempty_list(BAR,production) . [ NEWLINE BAR ]
-## Transitions:
-## Reductions:
--- On NEWLINE BAR
---   reduce production separated_nonempty_list(BAR,production) -> production BAR separated_nonempty_list(BAR,production)
-
-State 28:
-## Known stack suffix:
-## producer
-## LR(1) items:
-list(producer) -> producer . list(producer) [ NEWLINE BAR ]
-## Transitions:
--- On LID shift to state 18
--- On producer shift to state 28
--- On list(producer) shift to state 29
-## Reductions:
--- On NEWLINE BAR
---   reduce production list(producer) ->
-
-State 29:
-## Known stack suffix:
-## producer list(producer)
-## LR(1) items:
-list(producer) -> producer list(producer) . [ NEWLINE BAR ]
-## Transitions:
-## Reductions:
--- On NEWLINE BAR
---   reduce production list(producer) -> producer list(producer)
-
-State 30:
-## Known stack suffix:
-## list(producer)
-## LR(1) items:
-production -> list(producer) . [ NEWLINE BAR ]
-## Transitions:
-## Reductions:
--- On NEWLINE BAR
---   reduce production production -> list(producer)
-
-State 31:
 ## Known stack suffix:
 ## list(old_rule)
 ## LR(1) items:
@@ -402,7 +255,7 @@ grammar -> list(old_rule) . [ # ]
 -- On #
 --   reduce production grammar -> list(old_rule)
 
-State 32:
+State 21:
 ## Known stack suffix:
 ## grammar
 ## LR(1) items:
