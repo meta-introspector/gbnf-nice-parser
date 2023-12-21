@@ -424,15 +424,10 @@ production:
     {
       (* oprec = ioption(precedence) *)
       (print_endline (Batteries.dump ("DEBUG:production", producers)));
-
-      producers,         (* ParserAux.early_producers *)
-      (* (\* oprec, *\) *)
-      (* string located option  *)
-      None,
-      (* on_error_reduce_level *)
-      ParserAux.new_production_level(),
-      (* Positions.t*)
-      Positions.import $loc 
+      (* ParserAux.early_producers *) producers,        
+      (* (\* oprec, *\) *) (* string located option  *)      None,
+      (* on_error_reduce_level *)      ParserAux.new_production_level(),
+      (* Positions.t*)      Positions.import $loc 
     }
 
 /* ------------------------------------------------------------------------- */
