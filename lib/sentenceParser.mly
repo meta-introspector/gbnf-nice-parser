@@ -155,7 +155,7 @@ WHITESPACE
 
 %on_error_reduce separated_nonempty_list(COMMA,symbol)
 %on_error_reduce separated_nonempty_list(COMMA,pattern)
-%on_error_reduce loption(delimited(LPAREN,separated_nonempty_list(COMMA,lax_actual),RPAREN))
+
 %on_error_reduce loption(delimited(LPAREN,separated_nonempty_list(COMMA,expression),RPAREN))
 
 %%
@@ -164,7 +164,6 @@ WHITESPACE
 /* A grammar consists of  rules */
 
 grammar:
-  /* ds = flatten(declaration*) */
   rs = old_rule*
     {
       (* (print_endline (Batteries.dump ("DEBUG:rs",rs))); *)
@@ -271,9 +270,7 @@ symbol:
 old_rule:
   flags = flags            /* flags */
   symbol = symbol          /* the symbol that is being defined */
-  params = plist(symbol)   /* formal parameters */
 COLONCOLONEQUAL
-  optional_bar
 branches = branches
 NEWLINE
 	       {
@@ -285,7 +282,7 @@ NEWLINE
                  }
     }
 
-(* %inline *) branches:
+%inline branches:
   prods = separated_nonempty_list(BAR, production_group)
     {
       (print_endline (Batteries.dump ("DEBUG:branches",prods)));
@@ -352,82 +349,45 @@ production:
       (* Positions.t*)      Positions.import $loc 
     }
 
-/* ------------------------------------------------------------------------- */
-/* A producer is an actual parameter, possibly preceded by a
-   binding, and possibly followed with attributes.
-
-   Because both [ioption] and [terminated] are defined as inlined by
-   the standard library, this definition expands to two productions,
-   one of which begins with id = LID, the other of which begins with
-   p = actual. The token LID is in FIRST(actual),
-   but the LR(1) formalism can deal with that. If [option] was used
-   instead of [ioption], an LR(1) conflict would arise -- looking
-   ahead at LID would not allow determining whether to reduce an
-   empty [option] or to shift. */
 
 producer:
-| id = ioption(terminated(LID, EQUAL)) p = actual 
+| id = LID
     {
-      (print_endline (Batteries.dump ("DEBUG:producer", id,"p",p)));
+      (print_endline (Batteries.dump ("DEBUG:producer", id)));
       
       (* position (with_loc $loc ()), id, p } *)
     }
 
-/* ------------------------------------------------------------------------- */
-/* The ideal syntax of actual parameters includes:
-   1. a symbol, optionally applied to a list of actual parameters;
-   2. an actual parameter followed with a modifier;
-   3. an anonymous rule. (Not delimited by parentheses! Otherwise
-      one would often end up writing two pairs of parentheses.) */
+(* %inline generic_actual(A, B): *)
+(* (\* 1- *\) *)
+(*   symbol = symbol actuals = plist(A) *)
+(*     { Parameters.app symbol actuals } *)
+(* (\* 2- *\) *)
+(* | p = B m = located(modifier) *)
+(*     { ParameterApp (m, [ p ]) } *)
 
-/* In order to avoid a few ambiguities, we restrict this ideal syntax as
-   follows:
-   a. Within a %type declaration, we use [strict_actual], which
-      allows 1- and 2- (this is undocumented; the documentation says we
-      require a symbol) but not 3-, which would not make semantic sense
-      anyway.
-   b. Within a producer, we use [actual], which allows 1- and
-      2- but not 3-. Case 3- is allowed by switching to [lax_actual]
-      within the actual arguments of an application, which are clearly
-      delimited by parentheses and commas.
-   c. In front of a modifier, we can never allow [lax_actual],
-      as this would create an ambiguity: basically, [A | B?] could be
-      interpreted either as [(A | B)?] or as [A | (B?)].
-*/
 
-%inline generic_actual(A, B):
-(* 1- *)
-  symbol = symbol actuals = plist(A)
-    { Parameters.app symbol actuals }
-(* 2- *)
-| p = B m = located(modifier)
-    { ParameterApp (m, [ p ]) }
+(* actual: *)
+(*   p = generic_actual(lax_actual, actual) *)
+(*     { p } *)
 
-strict_actual:
-  p = generic_actual(strict_actual, strict_actual)
-    { p }
+(* lax_actual: *)
+(*   p = generic_actual(lax_actual, /* cannot be lax_ */ actual) *)
+(*     { p } *)
+(* (\* 3- *\) *)
+(* | /* leading bar disallowed */ *)
+(*   branches = located(branches) *)
+(*     { ParameterAnonymous branches } *)
+(*     (\* 2016/05/18: we used to eliminate anonymous rules on the fly during *)
+(*        parsing. However, when an anonymous rule appears in a parameterized *)
+(*        definition, the fresh nonterminal symbol that is created should be *)
+(*        parameterized. This was not done, and is not easy to do on the fly, *)
+(*        as it requires inherited attributes (or a way of simulating them). *)
+(*        We now use explicit abstract syntax for anonymous rules. *\) *)
 
-actual:
-  p = generic_actual(lax_actual, actual)
-    { p }
-
-lax_actual:
-  p = generic_actual(lax_actual, /* cannot be lax_ */ actual)
-    { p }
-(* 3- *)
-| /* leading bar disallowed */
-  branches = located(branches)
-    { ParameterAnonymous branches }
-    (* 2016/05/18: we used to eliminate anonymous rules on the fly during
-       parsing. However, when an anonymous rule appears in a parameterized
-       definition, the fresh nonterminal symbol that is created should be
-       parameterized. This was not done, and is not easy to do on the fly,
-       as it requires inherited attributes (or a way of simulating them).
-       We now use explicit abstract syntax for anonymous rules. *)
-
-/* ------------------------------------------------------------------------- */
-/* The "?", "+", and "*" modifiers are short-hands for applications of
-   certain parameterized nonterminals, defined in the standard library. */
+(* /* ------------------------------------------------------------------------- */ *)
+(* /* The "?", "+", and "*" modifiers are short-hands for applications of *)
+(*    certain parameterized nonterminals, defined in the standard library. */ *)
 
 modifier:
   QUESTION
@@ -605,8 +565,6 @@ pattern:
 
 (* ------------------------------------------------------------------------- *)
 
-(* Formal and actual parameter lists can be absent. When present, they must
-   be nonempty, and are delimited with parentheses and separated with commas. *)
 
 %inline plist(X):
   params = loption(delimited(LPAREN, separated_nonempty_list(COMMA, X), RPAREN))
