@@ -17,9 +17,7 @@ open Syntax
 
 type early_producer =
   Positions.t *
-  identifier located option *
-  parameter *
-  attributes
+  identifier located option 
 
 type early_producers =
   early_producer list
@@ -88,16 +86,16 @@ end)
 
 (* [normalize_producer i p] assigns a name of the form [_i]
    to the unnamed producer [p]. *)
-let normalize_producer i (pos, opt_identifier, parameter, attrs) =
-  let id =
-    match opt_identifier with
-      | Some id -> id
-      | None -> Positions.with_pos pos ("_" ^ string_of_int (i + 1))
-  in
-  (id, parameter, attrs)
+(* let normalize_producer i (pos, opt_identifier) = *)
+(*   let id = *)
+(*     match opt_identifier with *)
+(*       | Some id -> id *)
+(*       | None -> Positions.with_pos pos ("_" ^ string_of_int (i + 1)) *)
+(*   in *)
+(*   (id) *)
 
-let normalize_producers (producers : early_producers) : producer list =
-  List.mapi normalize_producer producers
+(* let normalize_producers (producers : early_producers) : producer list = *)
+(*   List.mapi normalize_producer producers *)
 
 let override pos o1 o2 =
   match o1, o2 with
@@ -113,10 +111,10 @@ let override pos o1 o2 =
    .. List.length producers]. The output array [p] is such that
    [p.(idx) = Some x] if [idx] must be referred to using [x], not
    [$(idx + 1)]. *)
-let producer_names (producers : early_producers) =
-  producers
-  |> List.map (fun (_, oid, _, _) -> Option.map Positions.value oid)
-  |> Array.of_list
+(* let producer_names (producers : early_producers) = *)
+(*   producers *)
+(*   |> List.map (fun (_, oid, _, _) -> Option.map Positions.value oid) *)
+(*   |> Array.of_list *)
 
 (* Check that a stretch contains an OCaml lowercase or uppercase identifier,
    and convert this stretch to a string. The stretch may be empty, too. *)

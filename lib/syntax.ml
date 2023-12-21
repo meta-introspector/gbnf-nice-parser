@@ -195,9 +195,9 @@ and parameterized_branch =
     {
       pr_branch_position           : Positions.t;
       pr_producers                 : producer list;
-      pr_action                    : action;
-      pr_branch_prec_annotation    : branch_prec_annotation;
-      pr_branch_production_level   : branch_production_level
+      (* pr_action                    : action; *)
+      (* pr_branch_prec_annotation    : branch_prec_annotation; *)
+      (* pr_branch_production_level   : branch_production_level *)
     }
 
 (* ------------------------------------------------------------------------ *)
@@ -206,13 +206,13 @@ and parameterized_branch =
 
 type parameterized_rule =
     {
-      pr_public_flag       : bool;
-      pr_inline_flag       : bool;
+      (* pr_public_flag       : bool; *)
+      (* pr_inline_flag       : bool; *)
       pr_nt                : nonterminal;
       pr_positions         : Positions.t list;
-      pr_attributes        : attributes;
-      pr_parameters        : symbol list;
-      pr_branches          : parameterized_branch list;
+      (* pr_attributes        : attributes; *)
+      (* pr_parameters        : symbol list; *)
+      pr_branches           : parameterized_branch list;
     }
 
 (* ------------------------------------------------------------------------ *)
@@ -279,7 +279,7 @@ type rule =
     rule_public: bool;
     rule_inline: bool;
     rule_lhs: symbol located;
-    rule_attributes: attributes;
+    (* rule_attributes: attributes; *)
     rule_formals: symbol located list;
     rule_rhs: expression;
   }
@@ -334,9 +334,9 @@ type declaration =
 type partial_grammar =
     {
       pg_filename          : filename;
-      pg_postlude          : postlude option;
-      pg_declarations      : declaration located list;
-      pg_rules             : parameterized_rule list;
+      (* pg_postlude          : postlude option; *)
+      (* pg_declarations      : declaration located list; *)
+       pg_rules             : parameterized_rule list; 
     }
 
 (* ------------------------------------------------------------------------ *)

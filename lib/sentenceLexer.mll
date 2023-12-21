@@ -430,7 +430,7 @@ let directives =
     "public", PUBLIC;
     "parameter", PARAMETER;
     "inline", INLINE;
-    "attribute", PERCENTATTRIBUTE;
+
     "on_error_reduce", ON_ERROR_REDUCE;
   ]
 
@@ -486,23 +486,7 @@ let syntaxerror =
 (* The lexer. *)
 
 rule main = parse
-| "%" (identchar+ as directive)
-{
-  (print_endline (Batteries.dump (("directive",directive))));
-  try Hashtbl.find directives directive
-      with Not_found -> error2 lexbuf "unknown directive: %s." directive }
-| "%%"
-    { (* The token [PERCENTPERCENT] carries a stretch that contains
-         everything that follows %% in the input file. This string
-         must be created lazily. The parser decides (based on the
-         context) whether this stretch is needed. If it is indeed
-         needed, then constructing this stretch drives the lexer
-         to the end of the file. *)
-      PERCENTPERCENT (lazy (
-        let openingpos = lexeme_end_p lexbuf in
-        let closingpos = finish lexbuf in
-        mk_stretch openingpos closingpos false []
-      )) }
+
 | ";"
     { SEMI }
 | ":"
@@ -583,14 +567,7 @@ rule main = parse
     { ocamlcomment (lexeme_start_p lexbuf) lexbuf; main lexbuf }
 | "<"
     { savestart lexbuf (ocamltype (lexeme_end_p lexbuf)) }
-| "%{"
-    { savestart lexbuf (fun lexbuf ->
-        let openingpos = lexeme_start_p lexbuf in
-        let stretchpos = lexeme_end_p lexbuf in
-        let closingpos, monsters = action true openingpos [] lexbuf in
-        no_monsters monsters;
-        HEADER (mk_stretch stretchpos closingpos false [])
-      ) }
+
 | "{"
     (* { savestart lexbuf (fun lexbuf -> *)
     (*     let openingpos = lexeme_start_p lexbuf in *)
@@ -768,32 +745,32 @@ and parentheses openingpos monsters = parse
    brackets and nested parentheses are also kept track of, so as to better
    report errors when they are not balanced. *)
 
-and attribute openingpos = parse
-| '['
-    { let _ = attribute (lexeme_start_p lexbuf) lexbuf in
-      attribute openingpos lexbuf }
-| ']'
-    { lexeme_start_p lexbuf }
-| '{'
-    { let _, _ = action false (lexeme_start_p lexbuf) [] lexbuf in
-      attribute openingpos lexbuf }
-| '('
-    { let _, _ = parentheses (lexeme_start_p lexbuf) [] lexbuf in
-      attribute openingpos lexbuf }
-| '"'
-    { string (lexeme_start_p lexbuf) lexbuf; attribute openingpos lexbuf }
-| "'"
-    { char lexbuf; attribute openingpos lexbuf }
-| "(*"
-    { ocamlcomment (lexeme_start_p lexbuf) lexbuf; attribute openingpos lexbuf }
-| newline
-    {       (print_endline "NL6");	new_line lexbuf; attribute openingpos lexbuf }
-| '}'
-| ')'
-| eof
-    { error1 openingpos "unbalanced opening bracket." }
-| _
-    { attribute openingpos lexbuf }
+(* and attribute openingpos = parse *)
+(* | '[' *)
+(*     { let _ = attribute (lexeme_start_p lexbuf) lexbuf in *)
+(*       attribute openingpos lexbuf } *)
+(* | ']' *)
+(*     { lexeme_start_p lexbuf } *)
+(* | '{' *)
+(*     { let _, _ = action false (lexeme_start_p lexbuf) [] lexbuf in *)
+(*       attribute openingpos lexbuf } *)
+(* | '(' *)
+(*     { let _, _ = parentheses (lexeme_start_p lexbuf) [] lexbuf in *)
+(*       attribute openingpos lexbuf } *)
+(* | '"' *)
+(*     { string (lexeme_start_p lexbuf) lexbuf; attribute openingpos lexbuf } *)
+(* | "'" *)
+(*     { char lexbuf; attribute openingpos lexbuf } *)
+(* | "(\*" *)
+(*     { ocamlcomment (lexeme_start_p lexbuf) lexbuf; attribute openingpos lexbuf } *)
+(* | newline *)
+(*     {       (print_endline "NL6");	new_line lexbuf; attribute openingpos lexbuf } *)
+(* | '}' *)
+(* | ')' *)
+(* | eof *)
+(*     { error1 openingpos "unbalanced opening bracket." } *)
+(* | _ *)
+(*     { attribute openingpos lexbuf } *)
 
 (* ------------------------------------------------------------------------ *)
 

@@ -390,9 +390,9 @@ and production_aux
         pr_branch_position         = context.pos;
         pr_producers               = producers context;
         (* FIXME pr_action                  = context.bindings action; *)
-        pr_action                  = (Action.from_il_expr (EVar "None"));
-        pr_branch_prec_annotation  = prec;
-        pr_branch_production_level = level;
+        (* pr_action                  = (Action.from_il_expr (EVar "None")); *)
+        (* pr_branch_prec_annotation  = prec; *)
+        (* pr_branch_production_level = level; *)
       }
 
   (* | EAction (XAPointFree oid, prec) -> *)
@@ -466,11 +466,11 @@ and productions (e : expression) : parameterized_branch list =
 
 let rule (rule : rule) : parameterized_rule =
   {
-    pr_public_flag = rule.rule_public;
-    pr_inline_flag = rule.rule_inline;
+    (* pr_public_flag = rule.rule_public; *)
+    (* pr_inline_flag = rule.rule_inline; *)
     pr_nt          = Positions.value rule.rule_lhs;
     pr_positions   = [ Positions.position rule.rule_lhs ];
-    pr_attributes  = rule.rule_attributes;
-    pr_parameters  = List.map Positions.value rule.rule_formals;
+    (* pr_attributes  = rule.rule_attributes; *)
+    (* pr_parameters  = List.map Positions.value rule.rule_formals; *)
     pr_branches    = productions rule.rule_rhs
   }
