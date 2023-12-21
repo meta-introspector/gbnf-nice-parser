@@ -30,6 +30,7 @@ open Positions
 (* An injection of symbol expressions into choice expressions. *)
 
 let inject (e : symbol_expression located) : expression =
+  (print_endline (Batteries.dump ("DEBUG:inject", e)));
   Positions.pmap (fun pos e ->
     let branch =
       Branch (
@@ -100,7 +101,9 @@ let unparenthesize (o : Stretch.t option) : Stretch.t option =
   PARAMETER        "%parameter"
   ON_ERROR_REDUCE  "%on_error_reduce"
   PERCENTATTRIBUTE "%attribute"
-  SEMI             ";"
+SEMI             ";"
+NEWLINE
+WHITESPACE
 
 %token <string Positions.located>
   LID              "lident"
@@ -318,10 +321,13 @@ symbol:
 
 %inline rule:
   old_rule
-    { $1 }
+    {
+      (print_endline (Batteries.dump ($1)));
+      $1 }
 | new_rule
     /* The new syntax is converted on the fly to the old syntax. */
-    { NewRuleSyntax.rule $1 }
+    { (print_endline (Batteries.dump ($1)));
+      NewRuleSyntax.rule $1 }
 
 /* ------------------------------------------------------------------------- */
 /* A rule defines a symbol. It is optionally declared %public, and optionally
@@ -335,7 +341,8 @@ old_rule:
   params = plist(symbol)   /* formal parameters */
 COLONCOLONEQUAL
   optional_bar
-  branches = branches
+branches = branches
+NEWLINE
 	       {
 		 (print_endline (Batteries.dump ("DEBUG:branches", branches)));
       let public, inline = flags in
@@ -353,7 +360,9 @@ COLONCOLONEQUAL
 
 %inline branches:
   prods = separated_nonempty_list(BAR, production_group)
-    { List.flatten prods }
+    {
+      (print_endline (Batteries.dump ("DEBUG:branches",prods)));
+      List.flatten prods }
 
 flags:
   /* epsilon */
@@ -380,6 +389,7 @@ production_group:
   action = ACTION
   oprec2 = ioption(precedence)
     {
+      (print_endline (Batteries.dump ("DEBUG:production_group", productions)));
       (* If multiple productions share a single semantic action, check
          that all of them bind the same names. *)
       (* ParserAux.check_production_group productions; *)
@@ -410,12 +420,14 @@ precedence:
    precedence declaration. */
 
 production:
-  producers = producer* oprec = ioption(precedence)
-    { (print_endline (Batteries.dump ("DEBUG:production", producers)));
-      producers,
-      oprec,
-      ParserAux.new_production_level(),
-      Positions.import $loc
+  producers = producer* 
+    {
+      (* oprec = ioption(precedence) *)
+      (print_endline (Batteries.dump ("DEBUG:production", producers)))
+      (* producers, *)
+      (* (\* oprec, *\) *)
+      (* ParserAux.new_production_level(), *)
+      (* Positions.import $loc *)
     }
 
 /* ------------------------------------------------------------------------- */
@@ -534,6 +546,7 @@ new_rule:
   rule_formals    = plist(symbol)
   rule_inline     = equality_symbol
   rule_rhs        = expression
+NEWLINE
     {
       (print_endline (Batteries.dump ("DEBUG:new_rule", rule_lhs)));
       {
@@ -580,7 +593,9 @@ expression:
 
 %inline branch:
   e = seq_expression
-    { Branch (e, ParserAux.new_production_level()) }
+    {
+      (print_endline (Batteries.dump ("DEBUG:branch", e)));
+      Branch (e, ParserAux.new_production_level()) }
 
 /* A sequence expression takes one of the following forms:
 

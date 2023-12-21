@@ -562,10 +562,21 @@ rule main = parse
       let pos = import (openingpos, lexbuf.lex_curr_p) in
       QID (with_pos pos id) }
 | "//" [^ '\010' '\013']* newline (* skip C++ style comment *)
-| newline
-    { new_line lexbuf; main lexbuf }
+| newline 
+     { NEWLINE }
+(*       (print_endline "NL1");	 *)
+(*       (print_endline (Batteries.dump lexbuf));	 *)
+(*       (print_endline "NL2");	 *)
+(*       main lexbuf;  } *)
 | whitespace+
-    { main lexbuf }
+    {
+     (* (print_endline "WS1"); *)
+     (*      (print_endline (Batteries.dump lexbuf)); *)
+     (* (print_endline "WS2"); *)
+      (*      main lexbuf ; *)
+      (* WHITESPACE *)
+      main lexbuf ; 
+    }
 | "/*"
     { comment (lexeme_start_p lexbuf) lexbuf; main lexbuf }
 | "(*"
@@ -626,7 +637,8 @@ rule main = parse
 
 and comment openingpos = parse
 | newline
-    { new_line lexbuf; comment openingpos lexbuf }
+    {       (print_endline "NL2");	
+new_line lexbuf; comment openingpos lexbuf }
 | "*/"
     { () }
 | eof
@@ -649,7 +661,7 @@ and ocamltype openingpos = parse
 | "(*"
     { ocamlcomment (lexeme_start_p lexbuf) lexbuf; ocamltype openingpos lexbuf }
 | newline
-    { new_line lexbuf; ocamltype openingpos lexbuf }
+    {       (print_endline "NL3");	new_line lexbuf; ocamltype openingpos lexbuf }
 | eof
     { error1 openingpos "unterminated OCaml type." }
 | _
@@ -701,7 +713,7 @@ and action percent openingpos monsters = parse
     { ocamlcomment (lexeme_start_p lexbuf) lexbuf;
       action percent openingpos monsters lexbuf }
 | newline
-    { new_line lexbuf;
+    {       (print_endline "NL4");	new_line lexbuf;
       action percent openingpos monsters lexbuf }
 | ')'
 | eof
@@ -742,7 +754,7 @@ and parentheses openingpos monsters = parse
 | "(*"
     { ocamlcomment (lexeme_start_p lexbuf) lexbuf; parentheses openingpos monsters lexbuf }
 | newline
-    { new_line lexbuf; parentheses openingpos monsters lexbuf }
+    {       (print_endline "NL5");	new_line lexbuf; parentheses openingpos monsters lexbuf }
 | '}'
 | eof
     { error1 openingpos "unbalanced opening parenthesis." }
@@ -775,7 +787,7 @@ and attribute openingpos = parse
 | "(*"
     { ocamlcomment (lexeme_start_p lexbuf) lexbuf; attribute openingpos lexbuf }
 | newline
-    { new_line lexbuf; attribute openingpos lexbuf }
+    {       (print_endline "NL6");	new_line lexbuf; attribute openingpos lexbuf }
 | '}'
 | ')'
 | eof
@@ -801,7 +813,7 @@ and ocamlcomment openingpos = parse
 | "'"
     { char lexbuf; ocamlcomment openingpos lexbuf }
 | newline
-    { new_line lexbuf; ocamlcomment openingpos lexbuf }
+    {       (print_endline "NL7");	new_line lexbuf; ocamlcomment openingpos lexbuf }
 | eof
     { error1 openingpos "unterminated OCaml comment." }
 | _
@@ -816,7 +828,7 @@ and string openingpos = parse
     { () }
 | '\\' newline
 | newline
-    { new_line lexbuf; string openingpos lexbuf }
+    {       (print_endline "NL8");	new_line lexbuf; string openingpos lexbuf }
 | '\\' _
     (* Upon finding a backslash, skip the character that follows,
        unless it is a newline. Pretty crude, but should work. *)
@@ -846,7 +858,7 @@ and record_string openingpos buffer = parse
 | '\\' _
     { error2 lexbuf "illegal backslash escape in string." }
 | newline
-    { error2 lexbuf "illegal newline in string." }
+    {       (print_endline "NL9");	error2 lexbuf "illegal newline in string." }
 | eof
     { error1 openingpos "unterminated string." }
 | _ as c
@@ -873,7 +885,7 @@ and decode_string buffer = parse
 
 and char = parse
 | '\\'? newline "'"
-   { new_line lexbuf }
+   {       (print_endline "NL10");	new_line lexbuf }
 | [^ '\\' '\''] "'"
 | '\\' _ "'"
 | '\\' ['0'-'9'] ['0'-'9'] ['0'-'9'] "'"
@@ -890,7 +902,7 @@ and char = parse
 
 and finish = parse
 | newline
-    { new_line lexbuf; finish lexbuf }
+    {       (print_endline "NL11");	new_line lexbuf; finish lexbuf }
 | eof
     { lexeme_start_p lexbuf }
 | _
