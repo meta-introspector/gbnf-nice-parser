@@ -169,20 +169,19 @@ let unparenthesize (o : Stretch.t option) : Stretch.t option =
 %%
 
 /* ------------------------------------------------------------------------- */
-/* A grammar consists of declarations and rules, followed by an optional
-   postlude, which we do not parse. */
+/* A grammar consists of  rules */
 
 grammar:
-  ds = flatten(declaration*)
-  PERCENTPERCENT
+  /* ds = flatten(declaration*) */
+  /* PERCENTPERCENT */
   rs = rule*
-  t = postlude
     {
+      (print_endline (Batteries.dump rs));
       {
         pg_filename          = ""; (* filled in by the caller *)
-        pg_declarations      = ds;
         pg_rules             = rs;
-        pg_postlude          = t
+	pg_postlude = None;
+	pg_declarations = [];
       }
     }
 
@@ -193,10 +192,14 @@ grammar:
 declaration:
 
 | h = HEADER /* lexically delimited by %{ ... %} */
-    { [ with_loc $loc (DCode h) ] }
+    {
+      (print_endline (Batteries.dump ("h", h)));
+      [ with_loc $loc (DCode h) ] }
 
 | TOKEN ty = OCAMLTYPE? ts = clist(terminal_alias_attrs)
-    { List.map (Positions.map (fun (terminal, alias, attrs) ->
+    {
+      (print_endline (Batteries.dump ("token", ty)));
+      List.map (Positions.map (fun (terminal, alias, attrs) ->
         DToken (ty, terminal, alias, attrs)
       )) ts }
 
@@ -688,7 +691,6 @@ pattern:
 | LPAREN ps = separated_list(COMMA, pattern) RPAREN
     { SemPatTuple ps }
 
-(* -------------------------------------------------------------------------- *)
 (* -------------------------------------------------------------------------- *)
 
 (* Generic definitions. *)

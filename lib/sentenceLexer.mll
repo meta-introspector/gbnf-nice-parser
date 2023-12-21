@@ -487,7 +487,9 @@ let syntaxerror =
 
 rule main = parse
 | "%" (identchar+ as directive)
-    { try Hashtbl.find directives directive
+{
+  (print_endline (Batteries.dump (("directive",directive))));
+  try Hashtbl.find directives directive
       with Not_found -> error2 lexbuf "unknown directive: %s." directive }
 | "%%"
     { (* The token [PERCENTPERCENT] carries a stretch that contains
