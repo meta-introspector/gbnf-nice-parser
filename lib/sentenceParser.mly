@@ -132,7 +132,7 @@ WHITESPACE
 /* A grammar consists of  rules */
 
 grammar:
-  rs =  separated_nonempty_list(NEWLINE, old_rule)
+  rs =  separated_nonempty_list(NEWLINE+, old_rule)
     {
       (* (print_endline (Batteries.dump ("DEBUG:rs",rs))); *)
       { 
@@ -193,7 +193,6 @@ old_rule:
   symbol = symbol          /* the symbol that is being defined */
 COLONCOLONEQUAL
   branches = separated_nonempty_list(BAR, symbol+)
-NEWLINE
 	       {
 		 (print_endline (Batteries.dump ("DEBUG:branches", branches)));
                  {
