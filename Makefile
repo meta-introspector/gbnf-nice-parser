@@ -8,7 +8,10 @@ compile:
 	rm -f lib/sentenceParser.cmly lib/sentenceParser.ml lib/sentenceParser.mli
 	dune clean
 	dune build
-	dot ./lib/sentenceParser.dot -Tpng -Gsize=8.5,11 -Gdpi=300 -Grankdir=LR -o sentenceParser.png  
-	dot ./lib/sentenceParser.dot -Tsvg -Gsize=8.5,11 -Gdpi=300 -Grankdir=LR -o sentenceParser.svg 
+	dot ./lib/sentenceParser.dot -Tpng -Gsize=8.5,11 -Gdpi=300 -Grankdir=LR -Gorientation="[lL]*" -o sentenceParser.png  
+	dot ./lib/sentenceParser.dot -Tsvg -Gsize=8.5,11 -Gdpi=300 -Grankdir=LR -Gorientation="[lL]*" -o sentenceParser.svg 
 
 	dune test || echo skip
+
+sentenceParser.png  : ./lib/sentenceParser.dot
+	dot ./lib/sentenceParser.dot -Tpng -Gsize=8.5,11 -Gdpi=300 -Grankdir=LR -Gorientation="[lL]*" -o sentenceParser.png  

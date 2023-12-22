@@ -89,7 +89,6 @@ WHITESPACE
 
 %token <string Positions.located>
   LID              "lident"
-  UID              "UIdent"
   QID              "\"alias\""
 
 %token <Stretch.ocamltype>
@@ -160,18 +159,20 @@ grammar:
 
 
 symbol:
-  id = LID
-| id = UID
-| id = QID
+id = LID
     {
-      (print_endline (Batteries.dump ("DEBUG:ID", id)));
+      (print_endline (Batteries.dump ("DEBUG:LID", id)));
+      id }
+  | id = QID
+    {
+      (print_endline (Batteries.dump ("DEBUG:QID", id)));
       id }
 
 old_rule:
 symbol = symbol
 /* the symbol that is being defined */
 COLONCOLONEQUAL
-/* optional_bar */
+/* optional_bar  */
 branches = branches(* separated_nonempty_list(BAR, symbol+) *)
     {
       (print_endline (Batteries.dump ("DEBUG:branches", branches)));
@@ -183,7 +184,7 @@ branches = branches(* separated_nonempty_list(BAR, symbol+) *)
     }
 
 %inline branch:
-  e = seq_expression
+  e = expression
     { Branch (e, ParserAux.new_production_level()) }
 
 
@@ -195,14 +196,13 @@ optional_bar:
 
 
 production:
-  producers = producer* 
+  producers = producer
     {
-      (* oprec = ioption(precedence) *)
-      (print_endline (Batteries.dump ("DEBUG:production", producers)));
-      (* ParserAux.early_producers *) producers,        
-      (* (\* oprec, *\) *) (* string located option  *)      None,
-      (* on_error_reduce_level *)      ParserAux.new_production_level(),
-      (* Positions.t*)      Positions.import $loc 
+      (print_endline (Batteries.dump ("DEBUG:production", producers)))
+    }
+  | delimited(LPAREN, nonempty_list(producer), RPAREN)
+    {
+      (print_endline (Batteries.dump ("DEBUG:production", $1)))
     }
 
 actual :
@@ -238,11 +238,6 @@ postlude:
   EOF
     { None }
 
-
-%inline plist(X):
-  params = loption(delimited(LPAREN, separated_nonempty_list(COMMA, X), RPAREN))
-    { (print_endline (Batteries.dump ("DEBUG:params", params)));
-	params }
 
 
 reversed_preceded_or_separated_nonempty_llist(delimiter, X):
@@ -288,42 +283,47 @@ located(X):
 /*       productions */
 /*     } */
 
-%inline choice_expression:
-  branches = preceded_or_separated_nonempty_llist(BAR, branch)
-    { EChoice branches }
+/* %inline choice_expression: */
+/*   branches = preceded_or_separated_nonempty_llist(BAR, branch) */
+/*     { EChoice branches } */
 
 
-%inline continuation:
-  SEMI e2 = seq_expression
-/* |   e2 = action_expression */
-    { e2 }
+/* %inline continuation: */
+/*   SEMI e2 = seq_expression */
+/* /\* |   e2 = action_expression *\/ */
+/*     { e2 } */
 
 
-%inline seq_expression:
-  e = located(raw_seq_expression)
-    { e }
+/* %inline seq_expression: */
+/*   e = located(raw_seq_expression) */
+/*     { e } */
 
 
-raw_seq_expression:
-|                    e1 = symbol_expression e2 = continuation
-    { ECons (SemPatWildcard, e1, e2) }
-(* | p1 = pattern EQUAL e1 = symbol_expression e2 = continuation *)
-(*     { ECons (p1, e1, e2) } *)
-| e = symbol_expression
-    { ESingleton e }
-(* | e = action_expression *)
-(*     { e } *)
+/* raw_seq_expression: */
+/* |                    e1 = symbol_expression e2 = continuation */
+/*     { ECons (SemPatWildcard, e1, e2) } */
+/* (* | p1 = pattern EQUAL e1 = symbol_expression e2 = continuation *) */
+/* (*     { ECons (p1, e1, e2) } *) */
+/* | e = symbol_expression */
+/*     { ESingleton e } */
+/* (* | e = action_expression *) */
+/* (*     { e } *) */
 
 expression:
-  | LPAREN list(expression) RPAREN {
-(print_endline (Batteries.dump ("DEBUG:rs",$2)))
-}
+/*   | LPAREN list(expression) RPAREN { */
+/* (print_endline (Batteries.dump ("DEBUG:rs",$2))) */
+/* } */
   /* | LID { (print_endline (Batteries.dump ("DEBUG:rs",$1)));  } */
 /* | QID { (print_endline (Batteries.dump ("DEBUG:rs",$1)));  } */
-| branches = preceded_or_separated_nonempty_llist(BAR, symbol)
+  | e = expression m = modifier
     {
-	       (print_endline (Batteries.dump ("DEBUG:branches", branches)))
+	       (print_endline (Batteries.dump ("DEBUG:branches", e,m )))
 	     }
+
+  /* | branches = preceded_or_separated_nonempty_llist(BAR, symbol) */
+  /*   { */
+  /* 	       (print_endline (Batteries.dump ("DEBUG:branches", branches))) */
+  /* 	     } */
   | branches = symbol
     {
       (print_endline (Batteries.dump ("DEBUG:branches", branches)))
@@ -332,11 +332,13 @@ expression:
   (* | literal { Lit $1 } *)
   ;
 
-symbol_expression:
-| symbol = symbol es = plist(expression) 
-    { ESymbol (symbol, es) }
-| e = located(symbol_expression) m = located(modifier) 
-    { ESymbol (m, [ inject e ]) }
+/* symbol_expression: */
+/* /\* | symbol = symbol es = plist(expression)  *\/ */
+/* /\*     {   (print_endline (Batteries.dump ("DEBUG:rs",symbol, es))) } *\/ */
+/* | e = located(symbol_expression) m = located(modifier)  */
+/*     { */
+/*        (print_endline (Batteries.dump ("DEBUG:rs",e,m))) */
+/*     } */
 
 
 

@@ -527,14 +527,11 @@ rule main = parse
     { EQUALEQUAL }
 | "let"
     { LET }
-| (lowercase identchar *) as id
-    { if Hashtbl.mem reserved id then
-        error2 lexbuf "this is an OCaml reserved word."
-      else
-        LID (with_pos (cpos lexbuf) id)
+| ( identchar *) as id
+    { 
+      LID (with_pos (cpos lexbuf) id)
     }
-| (uppercase identchar *) as id
-    { UID (with_pos (cpos lexbuf) id) }
+
 (* Quoted strings are used as aliases for tokens. *)
 (* A quoted string is stored as is -- with the quotes
    and with its escape sequences. *)
