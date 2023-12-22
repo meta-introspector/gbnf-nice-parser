@@ -9,3 +9,5 @@ compile:
 	dune clean
 	dune build
 	dune test
+	dot ./lib/sentenceParser.dot -Tpng -o sentenceParser.png 
+	dot ./lib/sentenceParser.dot -Tsvg -o sentenceParser.svg
