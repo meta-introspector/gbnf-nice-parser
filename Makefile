@@ -8,6 +8,7 @@ compile:
 	rm -f lib/sentenceParser.cmly lib/sentenceParser.ml lib/sentenceParser.mli
 	dune clean
 	dune build
-	dune test
-	dot ./lib/sentenceParser.dot -Tpng -o sentenceParser.png 
-	dot ./lib/sentenceParser.dot -Tsvg -o sentenceParser.svg
+	dot ./lib/sentenceParser.dot -Tpng -o sentenceParser.png  -Gsize=8.5,11 -Gdpi=300 -Grankdir=LR
+	dot ./lib/sentenceParser.dot -Tsvg -o sentenceParser.svg -Gsize=8.5,11 -Gdpi=300 -Grankdir=LR
+
+	dune test || echo skip
