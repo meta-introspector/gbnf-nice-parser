@@ -234,6 +234,10 @@ actual :
     {
       (print_endline (Batteries.dump ("DEBUG:branches", branches)))
     }
+  | branches = expression
+    {
+      (print_endline (Batteries.dump ("DEBUG:branches", branches)))
+    }
   /* branches = located(branches) */
   /*              { */
   /*                (print_endline (Batteries.dump ("DEBUG:branches", branches))); */
@@ -337,8 +341,11 @@ raw_seq_expression:
 (*     { e } *)
 
 expression:
-  | LPAREN list(expression) RPAREN { List $2 }
-  | LID { Sym $1 }
+  | LPAREN list(expression) RPAREN {
+(print_endline (Batteries.dump ("DEBUG:rs",$2)))
+}
+  | LID { (print_endline (Batteries.dump ("DEBUG:rs",$1)));  }
+  | QID { (print_endline (Batteries.dump ("DEBUG:rs",$1)));  }
   (* | literal { Lit $1 } *)
   ;
 

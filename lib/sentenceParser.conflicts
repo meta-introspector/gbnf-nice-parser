@@ -1,5 +1,5 @@
 
-** Conflict (shift/reduce) in state 14.
+** Conflict (shift/reduce) in state 23.
 ** Token involved: BAR
 ** This state is reached from grammar after reading:
 
@@ -14,7 +14,7 @@ old_rule
 symbol COLONCOLONEQUAL optional_bar separated_nonempty_list(BAR,production_group) 
                                     (?)
 
-** In state 14, looking ahead at BAR, reducing production
+** In state 23, looking ahead at BAR, reducing production
 ** separated_nonempty_list(BAR,production) -> production
 ** is permitted because of the following sub-derivation:
 
@@ -22,9 +22,81 @@ production_group BAR separated_nonempty_list(BAR,production_group) // lookahead 
 separated_nonempty_list(BAR,production) // lookahead token is inherited
 production . 
 
-** In state 14, looking ahead at BAR, shifting is permitted
+** In state 23, looking ahead at BAR, shifting is permitted
 ** because of the following sub-derivation:
 
 production_group 
 separated_nonempty_list(BAR,production) 
 production . BAR separated_nonempty_list(BAR,production) 
+
+** Conflict (reduce/reduce) in state 16.
+** Tokens involved: UID QID NEWLINE LPAREN LID BAR #
+** The following explanations concentrate on token UID.
+** This state is reached from grammar after reading:
+
+symbol COLONCOLONEQUAL optional_bar LID
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+grammar 
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
+old_rule 
+symbol COLONCOLONEQUAL optional_bar separated_nonempty_list(BAR,production_group) 
+                                    production_group 
+                                    separated_nonempty_list(BAR,production) 
+                                    production 
+                                    list(producer) 
+                                    producer list(producer) // lookahead token appears because list(producer) can begin with UID
+                                    actual // lookahead token is inherited
+                                    (?)
+
+** In state 16, looking ahead at UID, reducing production
+** expression -> LID
+** is permitted because of the following sub-derivation:
+
+expression // lookahead token is inherited
+LID . 
+
+** In state 16, looking ahead at UID, reducing production
+** symbol -> LID
+** is permitted because of the following sub-derivation:
+
+symbol // lookahead token is inherited
+LID . 
+
+** Conflict (reduce/reduce) in state 8.
+** Tokens involved: UID QID NEWLINE LPAREN LID BAR #
+** The following explanations concentrate on token UID.
+** This state is reached from grammar after reading:
+
+symbol COLONCOLONEQUAL optional_bar QID
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+grammar 
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
+old_rule 
+symbol COLONCOLONEQUAL optional_bar separated_nonempty_list(BAR,production_group) 
+                                    production_group 
+                                    separated_nonempty_list(BAR,production) 
+                                    production 
+                                    list(producer) 
+                                    producer list(producer) // lookahead token appears because list(producer) can begin with UID
+                                    actual // lookahead token is inherited
+                                    (?)
+
+** In state 8, looking ahead at UID, reducing production
+** expression -> QID
+** is permitted because of the following sub-derivation:
+
+expression // lookahead token is inherited
+QID . 
+
+** In state 8, looking ahead at UID, reducing production
+** symbol -> QID
+** is permitted because of the following sub-derivation:
+
+symbol // lookahead token is inherited
+QID . 
