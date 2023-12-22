@@ -826,14 +826,6 @@ and record_string openingpos buffer = parse
     { (* This escape sequence is recognized as such, but not decoded. *)
       Buffer.add_string buffer sequence;
       record_string openingpos buffer lexbuf }
-| '\\' 'n'
-    (* We disallow this escape sequence in a token alias because we wish
-       to use this string (unescaped) when we print a concrete sentence
-       in a .messages file (see [Interpret]), and we want this sentence
-       to fit on a single line. *)
-    { error2 lexbuf "'\\n' is not permitted in a token alias." }
-| '\\' _
-    { error2 lexbuf "illegal backslash escape in string." }
 | newline
     {       (print_endline "NL9");	error2 lexbuf "illegal newline in string." }
 | eof
