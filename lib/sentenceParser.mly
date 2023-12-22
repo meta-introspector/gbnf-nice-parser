@@ -192,10 +192,10 @@ symbol:
 (*       NewRuleSyntax.rule $1 } *)
 
 old_rule:
-symbol = symbol
+symbol = LID
 /* the symbol that is being defined */
 COLONCOLONEQUAL
-optional_bar
+/* optional_bar */
 branches = branches(* separated_nonempty_list(BAR, symbol+) *)
     {
       (print_endline (Batteries.dump ("DEBUG:branches", branches)));
@@ -230,10 +230,6 @@ production:
     }
 
 actual :
-  | branches = symbol
-    {
-      (print_endline (Batteries.dump ("DEBUG:branches", branches)))
-    }
   | branches = expression
     {
       (print_endline (Batteries.dump ("DEBUG:branches", branches)))
@@ -305,14 +301,16 @@ located(X):
 (*       [](\* prods *\) *)
 
 %inline branches:
-  prods = separated_nonempty_list(BAR, production_group)
-    { List.flatten prods }
-
-production_group:
-  productions = separated_nonempty_list(BAR, production)
-    {
-      productions
+  prods = separated_nonempty_list(BAR, production)
+    { 
+      (print_endline (Batteries.dump ("DEBUG:branches",prods)))
     }
+
+/* production_group: */
+/*   productions = separated_nonempty_list(BAR, production) */
+/*     { */
+/*       productions */
+/*     } */
 
 %inline choice_expression:
   branches = preceded_or_separated_nonempty_llist(BAR, branch)
@@ -344,8 +342,13 @@ expression:
   | LPAREN list(expression) RPAREN {
 (print_endline (Batteries.dump ("DEBUG:rs",$2)))
 }
-  | LID { (print_endline (Batteries.dump ("DEBUG:rs",$1)));  }
-  | QID { (print_endline (Batteries.dump ("DEBUG:rs",$1)));  }
+  /* | LID { (print_endline (Batteries.dump ("DEBUG:rs",$1)));  } */
+  /* | QID { (print_endline (Batteries.dump ("DEBUG:rs",$1)));  } */
+  | branches = symbol
+    {
+      (print_endline (Batteries.dump ("DEBUG:branches", branches)))
+    }
+
   (* | literal { Lit $1 } *)
   ;
 
