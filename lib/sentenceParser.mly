@@ -75,6 +75,8 @@ let unparenthesize (o : Stretch.t option) : Stretch.t option =
   INLINE           "%inline"
   LPAREN           "("
   RPAREN           ")"
+  LBRACE "["
+  RBRACE "]"
   COMMA            ","
   QUESTION         "?"
   STAR             "*"
@@ -190,24 +192,24 @@ symbol:
 (*       NewRuleSyntax.rule $1 } *)
 
 old_rule:
-  symbol = symbol          /* the symbol that is being defined */
+symbol = symbol
+/* the symbol that is being defined */
 COLONCOLONEQUAL
-  branches = separated_nonempty_list(BAR, symbol+)
-	       {
-		 (print_endline (Batteries.dump ("DEBUG:branches", branches)));
-                 {
-                   pr_nt          = Positions.value symbol;
-                   pr_positions   = [ Positions.position symbol ];
-                   pr_branches    =  [] (*Fixme should be brancheS*)
-                 }
+optional_bar
+branches = branches(* separated_nonempty_list(BAR, symbol+) *)
+    {
+      (print_endline (Batteries.dump ("DEBUG:branches", branches)));
+      {
+        pr_nt          = Positions.value symbol;
+        pr_positions   = [ Positions.position symbol ];
+        pr_branches    =  [] (*Fixme should be brancheS*)
+      }
     }
 
-(* branches: *)
-(*   prods = production_group *)
-(*     { *)
-(*       (print_endline (Batteries.dump ("DEBUG:branches",prods))); *)
-(*       [](\* prods *\) *)
-(*     } *)
+%inline branch:
+  e = seq_expression
+    { Branch (e, ParserAux.new_production_level()) }
+
 
 
 optional_bar:
@@ -227,45 +229,26 @@ production:
       (* Positions.t*)      Positions.import $loc 
     }
 
+actual :
+  | branches = symbol
+    {
+      (print_endline (Batteries.dump ("DEBUG:branches", branches)))
+    }
+  /* branches = located(branches) */
+  /*              { */
+  /*                (print_endline (Batteries.dump ("DEBUG:branches", branches))); */
+  /*                (* ParameterAnonymous branches *) */
+                 
+  /*              } */
 
 producer:
-| id = LID
+| id = actual
     {
       (print_endline (Batteries.dump ("DEBUG:producer", id)));
       
-      (* position (with_loc $loc ()), id, p } *)
     }
 
-(* %inline generic_actual(A, B): *)
-(* (\* 1- *\) *)
-(*   symbol = symbol actuals = plist(A) *)
-(*     { Parameters.app symbol actuals } *)
-(* (\* 2- *\) *)
-(* | p = B m = located(modifier) *)
-(*     { ParameterApp (m, [ p ]) } *)
 
-
-(* actual: *)
-(*   p = generic_actual(lax_actual, actual) *)
-(*     { p } *)
-
-(* lax_actual: *)
-(*   p = generic_actual(lax_actual, /* cannot be lax_ */ actual) *)
-(*     { p } *)
-(* (\* 3- *\) *)
-(* | /* leading bar disallowed */ *)
-(*   branches = located(branches) *)
-(*     { ParameterAnonymous branches } *)
-(*     (\* 2016/05/18: we used to eliminate anonymous rules on the fly during *)
-(*        parsing. However, when an anonymous rule appears in a parameterized *)
-(*        definition, the fresh nonterminal symbol that is created should be *)
-(*        parameterized. This was not done, and is not easy to do on the fly, *)
-(*        as it requires inherited attributes (or a way of simulating them). *)
-(*        We now use explicit abstract syntax for anonymous rules. *\) *)
-
-(* /* ------------------------------------------------------------------------- */ *)
-(* /* The "?", "+", and "*" modifiers are short-hands for applications of *)
-(*    certain parameterized nonterminals, defined in the standard library. */ *)
 
 modifier:
   QUESTION
@@ -275,14 +258,9 @@ modifier:
 | STAR
     { "list" }
 
-/* ------------------------------------------------------------------------- */
-/* A postlude is announced by %%, but is optional. */
-
 postlude:
   EOF
     { None }
-
-
 
 
 %inline plist(X):
@@ -313,5 +291,63 @@ preceded_or_separated_llist(delimiter, X):
 located(X):
   x = X
     { with_loc $loc x }
+
+
+(*    now to re-introduce   --------------------------------------------------*)
+(* branches: *)
+(*   prods = production_group *)
+(*     { *)
+(*       (print_endline (Batteries.dump ("DEBUG:branches",prods))); *)
+(*       [](\* prods *\) *)
+
+%inline branches:
+  prods = separated_nonempty_list(BAR, production_group)
+    { List.flatten prods }
+
+production_group:
+  productions = separated_nonempty_list(BAR, production)
+    {
+      productions
+    }
+
+%inline choice_expression:
+  branches = preceded_or_separated_nonempty_llist(BAR, branch)
+    { EChoice branches }
+
+
+%inline continuation:
+  SEMI e2 = seq_expression
+/* |   e2 = action_expression */
+    { e2 }
+
+
+%inline seq_expression:
+  e = located(raw_seq_expression)
+    { e }
+
+
+raw_seq_expression:
+|                    e1 = symbol_expression e2 = continuation
+    { ECons (SemPatWildcard, e1, e2) }
+(* | p1 = pattern EQUAL e1 = symbol_expression e2 = continuation *)
+(*     { ECons (p1, e1, e2) } *)
+| e = symbol_expression
+    { ESingleton e }
+(* | e = action_expression *)
+(*     { e } *)
+
+expression:
+  | LPAREN list(expression) RPAREN { List $2 }
+  | LID { Sym $1 }
+  (* | literal { Lit $1 } *)
+  ;
+
+symbol_expression:
+| symbol = symbol es = plist(expression) 
+    { ESymbol (symbol, es) }
+| e = located(symbol_expression) m = located(modifier) 
+    { ESymbol (m, [ inject e ]) }
+
+
 
 %%
