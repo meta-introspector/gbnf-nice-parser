@@ -122,26 +122,32 @@ WHITESPACE
 
 %on_error_reduce old_rule
 
-%on_error_reduce separated_nonempty_list(COMMA,symbol)
-
 
 
 
 %%
 
 /* ------------------------------------------------------------------------- */
-/* A grammar consists of  rules */
+/* A grammar consists of  rules 
+taken from https://github.com/dmbaturin/bnfgen
+*/
+rules:
+  | {}
+  | old_rule {
+	(print_endline (Batteries.dump ("DEBUG:rs",$1)))
+      }
+  | old_rule NEWLINE+ old_rule {
+			  (print_endline (Batteries.dump ("DEBUG:rs",$1,$3)))
+			}
 
 grammar:
-  rs =  separated_nonempty_list(NEWLINE+, old_rule)
+  rs =  rules
     {
-      (* (print_endline (Batteries.dump ("DEBUG:rs",rs))); *)
-      { 
-        pg_filename          = ""; (* filled in by the caller *)           
-        pg_rules             = rs;
-      (*   pg_postlude = None; *)
-      (*   pg_declarations = []; *)
-      } 
+      (print_endline (Batteries.dump ("DEBUG:rs",rs)));
+      {
+        pg_filename          = ""; (* filled in by the caller *)
+        pg_rules             = [];
+      }
     }
 
 %inline rule_specific_token:

@@ -7,10 +7,17 @@ grammar' -> . grammar [ # ]
 -- On QID shift to state 1
 -- On LID shift to state 2
 -- On symbol shift to state 3
--- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 22
+-- On rules shift to state 22
 -- On old_rule shift to state 23
 -- On grammar shift to state 28
 ## Reductions:
+-- On #
+--   reduce production rules ->
+** End-of-stream conflict on QID LID
+**   There is a tension between
+**   (1) reducing production rules ->
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
 
 State 1:
 ## Known stack suffix:
@@ -326,29 +333,29 @@ production -> producer . [ NEWLINE BAR # ]
 
 State 22:
 ## Known stack suffix:
-## separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
+## rules
 ## LR(1) items:
-grammar -> separated_nonempty_list(nonempty_list(NEWLINE),old_rule) . [ # ]
+grammar -> rules . [ # ]
 ## Transitions:
 ## Reductions:
 -- On #
---   reduce production grammar -> separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
+--   reduce production grammar -> rules
 
 State 23:
 ## Known stack suffix:
 ## old_rule
 ## LR(1) items:
-separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule . [ # ]
-separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule . nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule) [ # ]
+rules -> old_rule . [ # ]
+rules -> old_rule . nonempty_list(NEWLINE) old_rule [ # ]
 ## Transitions:
 -- On NEWLINE shift to state 24
 -- On nonempty_list(NEWLINE) shift to state 26
 ## Reductions:
 -- On #
---   reduce production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule
+--   reduce production rules -> old_rule
 ** End-of-stream conflict on NEWLINE
 **   There is a tension between
-**   (1) reducing production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule
+**   (1) reducing production rules -> old_rule
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
@@ -379,24 +386,23 @@ State 26:
 ## Known stack suffix:
 ## old_rule nonempty_list(NEWLINE)
 ## LR(1) items:
-separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) . separated_nonempty_list(nonempty_list(NEWLINE),old_rule) [ # ]
+rules -> old_rule nonempty_list(NEWLINE) . old_rule [ # ]
 ## Transitions:
 -- On QID shift to state 1
 -- On LID shift to state 2
 -- On symbol shift to state 3
--- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 27
--- On old_rule shift to state 23
+-- On old_rule shift to state 27
 ## Reductions:
 
 State 27:
 ## Known stack suffix:
-## old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
+## old_rule nonempty_list(NEWLINE) old_rule
 ## LR(1) items:
-separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule) . [ # ]
+rules -> old_rule nonempty_list(NEWLINE) old_rule . [ # ]
 ## Transitions:
 ## Reductions:
 -- On #
---   reduce production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
+--   reduce production rules -> old_rule nonempty_list(NEWLINE) old_rule
 
 State 28:
 ## Known stack suffix:
