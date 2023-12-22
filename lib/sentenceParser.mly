@@ -177,10 +177,6 @@ symbol:
 (*   id = LID *)
 (*     { id } *)
 
-/* ------------------------------------------------------------------------- */
-/* A rule is expressed either in the traditional (yacc-style) syntax or in
-   the new syntax. */
-
 (* %inline rule: *)
 (*   old_rule *)
 (*     { *)
@@ -343,7 +339,11 @@ expression:
 (print_endline (Batteries.dump ("DEBUG:rs",$2)))
 }
   /* | LID { (print_endline (Batteries.dump ("DEBUG:rs",$1)));  } */
-  /* | QID { (print_endline (Batteries.dump ("DEBUG:rs",$1)));  } */
+/* | QID { (print_endline (Batteries.dump ("DEBUG:rs",$1)));  } */
+| branches = preceded_or_separated_nonempty_llist(BAR, symbol)
+    {
+	       (print_endline (Batteries.dump ("DEBUG:branches", branches)))
+	     }
   | branches = symbol
     {
       (print_endline (Batteries.dump ("DEBUG:branches", branches)))

@@ -1,0 +1,174 @@
+
+** Conflict (shift/reduce) in state 21.
+** Token involved: BAR
+** This state is reached from grammar after reading:
+
+LID COLONCOLONEQUAL producer
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+grammar 
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
+old_rule 
+LID COLONCOLONEQUAL separated_nonempty_list(BAR,production) 
+                    (?)
+
+** In state 21, looking ahead at BAR, reducing production
+** list(producer) ->
+** is permitted because of the following sub-derivation:
+
+production BAR separated_nonempty_list(BAR,production) // lookahead token appears
+list(producer) // lookahead token is inherited
+producer list(producer) // lookahead token is inherited
+         . 
+
+** In state 21, looking ahead at BAR, shifting is permitted
+** because of the following sub-derivation:
+
+production 
+list(producer) 
+producer list(producer) 
+         producer list(producer) 
+         actual 
+         expression 
+         reversed_preceded_or_separated_nonempty_llist(BAR,symbol) 
+         . BAR symbol 
+
+** Conflict (shift/reduce) in state 19.
+** Token involved: BAR
+** This state is reached from grammar after reading:
+
+LID COLONCOLONEQUAL production BAR
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+grammar 
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
+old_rule 
+LID COLONCOLONEQUAL separated_nonempty_list(BAR,production) 
+                    production BAR separated_nonempty_list(BAR,production) 
+                                   (?)
+
+** In state 19, looking ahead at BAR, reducing production
+** list(producer) ->
+** is permitted because of the following sub-derivation:
+
+production BAR separated_nonempty_list(BAR,production) // lookahead token appears
+list(producer) // lookahead token is inherited
+. 
+
+** In state 19, looking ahead at BAR, shifting is permitted
+** because of the following sub-derivation:
+
+production 
+list(producer) 
+producer list(producer) 
+actual 
+expression 
+reversed_preceded_or_separated_nonempty_llist(BAR,symbol) 
+. BAR symbol 
+
+** Conflict (shift/reduce) in state 10.
+** Token involved: BAR
+** This state is reached from grammar after reading:
+
+LID COLONCOLONEQUAL reversed_preceded_or_separated_nonempty_llist(BAR,symbol)
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+grammar 
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
+old_rule 
+LID COLONCOLONEQUAL separated_nonempty_list(BAR,production) 
+                    production 
+                    list(producer) 
+                    (?)
+
+** In state 10, looking ahead at BAR, reducing production
+** expression -> reversed_preceded_or_separated_nonempty_llist(BAR,symbol)
+** is permitted because of the following sub-derivation:
+
+producer list(producer) // lookahead token appears because list(producer) can begin with BAR
+actual // lookahead token is inherited
+expression // lookahead token is inherited
+reversed_preceded_or_separated_nonempty_llist(BAR,symbol) . 
+
+** In state 10, looking ahead at BAR, shifting is permitted
+** because of the following sub-derivation:
+
+producer list(producer) 
+actual 
+expression 
+reversed_preceded_or_separated_nonempty_llist(BAR,symbol) 
+reversed_preceded_or_separated_nonempty_llist(BAR,symbol) . BAR symbol 
+
+** Conflict (reduce/reduce) in state 9.
+** Tokens involved: UID RPAREN QID NEWLINE LPAREN LID BAR #
+** The following explanations concentrate on token UID.
+** This state is reached from grammar after reading:
+
+LID COLONCOLONEQUAL symbol
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+grammar 
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
+old_rule 
+LID COLONCOLONEQUAL separated_nonempty_list(BAR,production) 
+                    production 
+                    list(producer) 
+                    producer list(producer) // lookahead token appears because list(producer) can begin with UID
+                    actual // lookahead token is inherited
+                    expression // lookahead token is inherited
+                    (?)
+
+** In state 9, looking ahead at UID, reducing production
+** expression -> symbol
+** is permitted because of the following sub-derivation:
+
+symbol . 
+
+** In state 9, looking ahead at UID, reducing production
+** reversed_preceded_or_separated_nonempty_llist(BAR,symbol) -> symbol
+** is permitted because of the following sub-derivation:
+
+reversed_preceded_or_separated_nonempty_llist(BAR,symbol) // lookahead token is inherited
+symbol . 
+
+** Conflict (shift/reduce) in state 2.
+** Token involved: BAR
+** This state is reached from grammar after reading:
+
+LID COLONCOLONEQUAL
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+grammar 
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
+old_rule 
+LID COLONCOLONEQUAL separated_nonempty_list(BAR,production) 
+                    (?)
+
+** In state 2, looking ahead at BAR, reducing production
+** list(producer) ->
+** is permitted because of the following sub-derivation:
+
+production BAR separated_nonempty_list(BAR,production) // lookahead token appears
+list(producer) // lookahead token is inherited
+. 
+
+** In state 2, looking ahead at BAR, shifting is permitted
+** because of the following sub-derivation:
+
+production 
+list(producer) 
+producer list(producer) 
+actual 
+expression 
+reversed_preceded_or_separated_nonempty_llist(BAR,symbol) 
+. BAR symbol 
