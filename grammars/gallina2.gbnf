@@ -1,0 +1,2274 @@
+
+'|}' ::= test_pipe_closedcurly "|" "}" 
+
+arg ::= test_lpar_id_coloneq "(" identref ":=" lconstr ")"
+  | test_lpar_id_coloneq "(" natural ":=" lconstr ")"
+  | term LEVEL "9" ] 
+
+arg_specs ::= "/"
+  | "&"
+  | "(" LIST1 argument_spec ")" LIST0 scope_delimiter
+  | "[" LIST1 argument_spec "]" LIST0 scope_delimiter
+  | "{" LIST1 argument_spec "}" LIST0 scope_delimiter
+  | argument_spec 
+
+args_modifier ::=
+  IDENT "simpl" IDENT "nomatch"
+  | IDENT "simpl" IDENT "never"
+  | IDENT "default" IDENT "implicits"
+  | IDENT "rename"
+  | IDENT "assert"
+  | IDENT "extra" IDENT "scopes"
+  | IDENT "clear" IDENT "bidirectionality" IDENT "hint"
+  | IDENT "clear" IDENT "scopes" IDENT "and" IDENT "implicits"
+  | IDENT "clear" IDENT "scopes"
+  | IDENT "clear" IDENT "implicits" IDENT "and" IDENT "scopes"
+  | IDENT "clear" IDENT "implicits" 
+
+argument_spec ::=  OPT "!" name LIST0 scope_delimiter 
+
+array_elems ::=  LIST0 lconstr SEP ";" 
+
+as_ipat ::=
+  "as" simple_intropattern
+  |  ] 
+
+as_name ::=
+  "as" ident
+  |  ] 
+
+as_or_and_ipat ::=
+  "as" equality_intropattern
+  | "as" or_and_intropattern_loc
+  |  ] 
+
+as_return_type ::=
+  OPT( OPT ( "as" name )? case_type ) ] 
+
+assum_coe ::=
+  [ "(" assumpt ")" ] 
+
+assum_list ::=
+  [ LIST1 assum_coe
+  | assumpt ] 
+
+assumpt ::=
+  [ LIST1 ident_decl of_type lconstr ] 
+
+assumption_token ::=
+  [ "Hypothesis"
+  | "Variable"
+  | "Axiom"
+  | "Parameter"
+  | IDENT "Conjecture" ] 
+
+assumptions_token ::=
+  [ IDENT "Hypotheses"
+  | IDENT "Variables"
+  | IDENT "Axioms"
+  | IDENT "Parameters"
+  | IDENT "Conjectures" ] 
+
+at_level_opt ::=
+  [ "at" level
+  |  ] 
+
+atomic_constr ::=
+  [ "_"
+  | "?" "[" identref "]"
+  | "?" "[" pattern_ident "]"
+  | sort
+  | string
+  | pattern_ident evar_instance ] 
+
+attr_value ::=
+  [ "=" IDENT
+  | "=" string
+  | "(" attribute_list ")"
+  |  ] 
+
+attribute ::=
+  [ IDENT "using" attr_value
+  | ident attr_value ] 
+
+attribute_list ::=
+  [ LIST0 attribute SEP "," ] 
+
+auto_using ::=
+  [ IDENT "using" LIST1 uconstr SEP [ "," ]
+  |  ] 
+
+bigint ::=
+  [ bignat
+  | test_minus_nat "-" bignat ] 
+
+bignat ::=
+  [ NUMBER ] 
+
+binder ::=
+  [ name
+  | closed_binder ] 
+
+binder_constr ::=
+  [ "exists2" "'" pattern LEVEL "0" ":" term LEVEL "200" "," term LEVEL
+    "200" "&" term LEVEL "200"
+  | "exists2" "'" pattern LEVEL "0" "," term LEVEL "200" "&" term LEVEL
+    "200"
+  | "exists2" name ":" term LEVEL "200" "," term LEVEL "200" "&" term
+    LEVEL "200"
+  | "exists2" name "," term LEVEL "200" "&" term LEVEL "200"
+  | "exists" "!" open_binders "," term LEVEL "200"
+  | "exists" open_binders "," term LEVEL "200"
+  | "forall" open_binders "," term LEVEL "200"
+  | "fun" open_binders "=>" term LEVEL "200"
+  | "let" "fix" fix_decl "in" term LEVEL "200"
+  | "let" "cofix" cofix_body "in" term LEVEL "200"
+  | "let" "'" pattern LEVEL "200" ":=" term LEVEL "200" "in" term LEVEL
+    "200"
+  | "let" "'" pattern LEVEL "200" ":=" term LEVEL "200" case_type "in";
+    term LEVEL "200"
+  | "let" "'" pattern LEVEL "200" "in" pattern LEVEL "200" ":=" term
+    LEVEL "200" case_type "in" term LEVEL "200"
+  | "let" name binders let_type_cstr ":=" term LEVEL "200" "in" term
+    LEVEL "200"
+  | "let" [ "(" LIST0 name SEP "," ")" | "()" ] as_return_type ":=";
+    term LEVEL "200" "in" term LEVEL "200"
+  | "if" term LEVEL "200" as_return_type "then" term LEVEL "200" "else";
+    term LEVEL "200"
+  | "fix" fix_decls
+  | "cofix" cofix_decls ] 
+
+binder_interp ::=
+  [ "as" IDENT "ident"
+  | "as" IDENT "name"
+  | "as" IDENT "pattern"
+  | "as" IDENT "strict" IDENT "pattern" ] 
+
+binder_tactic is
+[ RIGHTA
+  [ "fun" LIST1 input_fun "=>" ltac_expr LEVEL "5"
+  | "let" [ IDENT "rec" |  ] LIST1 let_clause SEP "with" "in" ltac_expr
+    LEVEL "5" ] 
+
+binders ::=
+  [ binders ] ]
+or
+[ LEFTA
+  [ LIST0 binder ] 
+
+binders_fixannot ::=
+  [ check_fixannot fixannot
+  | binder SELF
+  |  ] 
+
+bindings ::=
+  [ test_lpar_idnum_coloneq LIST1 simple_binding
+  | LIST1 constr ] 
+
+bindings_with_parameters ::=
+  [ lpar_id_colon "(" ident LIST0 simple_binder ":=" lconstr ")" ] 
+
+branches ::=
+  [ OPT "|" LIST0 eqn SEP "|" ] 
+
+by_arg_tac ::=
+  [ IDENT "by" ltac_expr LEVEL "3"
+  |  ] 
+
+by_notation ::=
+  [ ne_string OPT [ "%" IDENT ] ] 
+
+by_tactic ::=
+  [ "by" ltac_expr LEVEL "3"
+  |  ] 
+
+case_item ::=
+  [ term LEVEL "100" OPT [ "as" name ] OPT [ "in" pattern LEVEL "200" ] ] 
+
+case_type ::=
+  [ "return" term LEVEL "100" ] 
+
+check_fixannot is
+[ <parser> 
+
+check_module_type ::=
+  [ "<:" module_type_inl ] 
+
+check_module_types ::=
+  [ LIST0 check_module_type ] 
+
+clause ::=
+  [ "in" in_clause
+  | occs
+  |  ] 
+
+clause_dft_all ::=
+  [ "in" in_clause
+  |  ] 
+
+closed_binder ::=
+  [ "(" name ":=" lconstr ")"
+  | "(" name ":" lconstr "|" lconstr ")"
+  | "(" name ":" lconstr ")"
+  | "(" name ":" lconstr ":=" lconstr ")"
+  | "(" name LIST1 name ":" lconstr ")"
+  | "{" name "}"
+  | "{" name ":" lconstr "}"
+  | "{" name LIST1 name ":" lconstr "}"
+  | "{" name LIST1 name "}"
+  | "[" name "]"
+  | "[" name ":" lconstr "]"
+  | "[" name LIST1 name ":" lconstr "]"
+  | "[" name LIST1 name "]"
+  | "`(" LIST1 typeclass_constraint SEP "," ")"
+  | "`{" LIST1 typeclass_constraint SEP "," "}"
+  | "`[" LIST1 typeclass_constraint SEP "," "]"
+  | "'" pattern LEVEL "0" ] 
+
+coercion_class ::=
+  [ IDENT "Funclass"
+  | IDENT "Sortclass"
+  | smart_global ] 
+
+cofix_body ::=
+  [ identref binders type_cstr ":=" term LEVEL "200" ] 
+
+cofix_decls ::=
+  [ cofix_body "with" LIST1 cofix_body SEP "with" "for" identref
+  | cofix_body ] 
+
+cofix_definition ::=
+  [ ident_decl binders type_cstr OPT [ ":=" lconstr ] decl_notations ] 
+
+cofixdecl ::=
+  [ "(" ident LIST0 simple_binder ":" lconstr ")" ] 
+
+command ::=
+  [ IDENT "String" IDENT "Notation" reference reference reference;
+    OPT string_option ":" preident
+  | IDENT "Number" IDENT "Notation" reference reference reference;
+    OPT number_options ":" preident
+  | IDENT "infoH" tactic
+  | IDENT "Optimize" IDENT "Heap"
+  | IDENT "Optimize" IDENT "Proof"
+  | IDENT "Unshelve"
+  | IDENT "Derive" IDENT "Dependent" IDENT "Inversion_clear" ident;
+    "with" constr IDENT "Sort" sort_family
+  | IDENT "Derive" IDENT "Dependent" IDENT "Inversion" ident "with";
+    constr IDENT "Sort" sort_family
+  | IDENT "Derive" IDENT "Inversion" ident "with" constr IDENT "Sort";
+    sort_family
+  | IDENT "Derive" IDENT "Inversion" ident "with" constr
+  | IDENT "Derive" IDENT "Inversion_clear" ident "with" constr IDENT
+    "Sort" sort_family
+  | IDENT "Derive" IDENT "Inversion_clear" ident "with" constr
+  | IDENT "Typeclasses" IDENT "eauto" ":=" debug eauto_search_strategy;
+    OPT natural
+  | IDENT "Typeclasses" IDENT "Opaque" LIST1 reference
+  | IDENT "Typeclasses" IDENT "Transparent" LIST1 reference
+  | IDENT "Preterm" IDENT "of" identref
+  | IDENT "Preterm"
+  | IDENT "Obligations" IDENT "of" identref
+  | IDENT "Obligations"
+  | IDENT "Admit" IDENT "Obligations" IDENT "of" identref
+  | IDENT "Admit" IDENT "Obligations"
+  | IDENT "Solve" IDENT "All" IDENT "Obligations" "with" tactic
+  | IDENT "Solve" IDENT "All" IDENT "Obligations"
+  | IDENT "Solve" IDENT "Obligations" "with" tactic
+  | IDENT "Solve" IDENT "Obligations" IDENT "of" identref "with" tactic
+  | IDENT "Solve" IDENT "Obligations" IDENT "of" identref
+  | IDENT "Solve" IDENT "Obligations"
+  | IDENT "Final" IDENT "Obligation" IDENT "of" identref withtac
+  | IDENT "Final" IDENT "Obligation" withtac
+  | IDENT "Next" IDENT "Obligation" IDENT "of" identref withtac
+  | IDENT "Next" IDENT "Obligation" withtac
+  | IDENT "Obligation" IDENT "Tactic" ":=" tactic
+  | IDENT "Obligation" natural ":" lconstr withtac
+  | IDENT "Obligation" natural IDENT "of" identref ":" lconstr withtac
+  | IDENT "Obligation" natural IDENT "of" identref withtac
+  | IDENT "Obligation" natural withtac
+  | IDENT "Ltac" LIST1 tacdef_body SEP "with"
+  | IDENT "Tactic" IDENT "Notation" OPT ltac_tactic_level;
+    LIST1 ltac_production_item ":=" tactic
+  | IDENT "Goal" lconstr
+  | IDENT "Proof" "with" tactic OPT [ IDENT "using" section_subset_expr ]
+  | IDENT "Proof" IDENT "using" section_subset_expr "with" tactic
+  | IDENT "Proof" IDENT "using" section_subset_expr
+  | IDENT "Proof" IDENT "Mode" string
+  | IDENT "Proof" lconstr
+  | IDENT "Proof"
+  | IDENT "Abort" IDENT "All"
+  | IDENT "Abort"
+  | IDENT "Admitted"
+  | IDENT "Qed"
+  | IDENT "Save" identref
+  | IDENT "Defined" identref
+  | IDENT "Defined"
+  | IDENT "Restart"
+  | IDENT "Undo" IDENT "To" natural
+  | IDENT "Undo" natural
+  | IDENT "Undo"
+  | IDENT "Focus" natural
+  | IDENT "Focus"
+  | IDENT "Unfocus"
+  | IDENT "Unfocused"
+  | IDENT "Show" IDENT "Obligation" IDENT "Tactic"
+  | IDENT "Show" IDENT "Ltac" IDENT "Profile" IDENT "CutOff" integer
+  | IDENT "Show" IDENT "Ltac" IDENT "Profile" string
+  | IDENT "Show" IDENT "Ltac" IDENT "Profile"
+  | IDENT "Show" IDENT "Existentials"
+  | IDENT "Show" IDENT "Universes"
+  | IDENT "Show" IDENT "Conjectures"
+  | IDENT "Show" IDENT "Proof"
+  | IDENT "Show" IDENT "Intro"
+  | IDENT "Show" IDENT "Intros"
+  | IDENT "Show" IDENT "Match" reference
+  | IDENT "Show" natural
+  | IDENT "Show" ident
+  | IDENT "Show"
+  | IDENT "Guarded"
+  | IDENT "Validate" IDENT "Proof"
+  | IDENT "Create" IDENT "HintDb" IDENT [ IDENT "discriminated" |  ]
+  | IDENT "Hint" IDENT "Rewrite" orient LIST1 constr "using" tactic;
+    ":" LIST0 preident
+  | IDENT "Hint" IDENT "Rewrite" orient LIST1 constr "using" tactic
+  | IDENT "Hint" IDENT "Rewrite" orient LIST1 constr ":" LIST0 preident
+  | IDENT "Hint" IDENT "Rewrite" orient LIST1 constr
+  | IDENT "Hint" IDENT "Cut" "[" hints_path "]" opthints
+  | IDENT "Hint" hint opt_hintbases
+  | IDENT "Reset" IDENT "Ltac" IDENT "Profile"
+  | IDENT "Reset" IDENT "Initial"
+  | IDENT "Reset" identref
+  | IDENT "Back" natural
+  | IDENT "Back"
+  | IDENT "Debug" IDENT "On"
+  | IDENT "Debug" IDENT "Off"
+  | IDENT "Comments" LIST0 comment
+  | IDENT "Pwd"
+  | IDENT "Cd" ne_string
+  | IDENT "Cd"
+  | IDENT "Load" [ IDENT "Verbose" |  ] [ IDENT | ne_string ]
+  | IDENT "Declare" IDENT "Equivalent" IDENT "Keys" constr constr
+  | IDENT "Declare" IDENT "Right" IDENT "Step" constr
+  | IDENT "Declare" IDENT "Left" IDENT "Step" constr
+  | IDENT "Declare" IDENT "Morphism" constr ":" identref
+  | IDENT "Declare" IDENT "Reduction" IDENT ":=" red_expr
+  | IDENT "Declare" IDENT "Custom" IDENT "Entry" IDENT
+  | IDENT "Declare" IDENT "Instance" ident_decl binders ":" term LEVEL
+    "200" hint_info
+  | IDENT "Declare" IDENT "Scope" IDENT
+  | IDENT "Declare" IDENT "ML" IDENT "Module" LIST1 ne_string
+  | IDENT "Locate" IDENT "Ltac" reference
+  | IDENT "Locate" locatable
+  | "Type" lconstr
+  | IDENT "Inspect" natural
+  | "Set" IDENT "Firstorder" IDENT "Solver" tactic
+  | "Set" setting_name option_setting
+  | IDENT "Unset" setting_name
+  | IDENT "Print" IDENT "Firstorder" IDENT "Solver"
+  | IDENT "Print" IDENT "Equivalent" IDENT "Keys"
+  | IDENT "Print" IDENT "Rewrite" IDENT "HintDb" preident
+  | IDENT "Print" IDENT "Ltac" IDENT "Signatures"
+  | IDENT "Print" IDENT "Ltac" reference
+  | IDENT "Print" IDENT "Module" "Type" global
+  | IDENT "Print" IDENT "Module" global
+  | IDENT "Print" IDENT "Namespace" dirpath
+  | IDENT "Print" IDENT "Table" setting_name
+  | IDENT "Print" printable
+  | IDENT "Print" smart_global OPT univ_name_list
+  | IDENT "Add" IDENT "Morphism" constr "with" IDENT "signature";
+    lconstr "as" identref
+  | IDENT "Add" IDENT "Morphism" constr ":" identref
+  | IDENT "Add" IDENT "Setoid" constr constr constr "as" identref
+  | IDENT "Add" IDENT "Parametric" IDENT "Morphism" binders ":" constr;
+    "with" IDENT "signature" lconstr "as" identref
+  | IDENT "Add" IDENT "Parametric" IDENT "Setoid" binders ":" constr;
+    constr constr "as" identref
+  | IDENT "Add" IDENT "Parametric" IDENT "Relation" binders ":" constr;
+    constr IDENT "transitivity" IDENT "proved" "by" constr "as";
+    identref
+  | IDENT "Add" IDENT "Parametric" IDENT "Relation" binders ":" constr;
+    constr IDENT "symmetry" IDENT "proved" "by" constr IDENT
+    "transitivity" IDENT "proved" "by" constr "as" identref
+  | IDENT "Add" IDENT "Parametric" IDENT "Relation" binders ":" constr;
+    constr IDENT "symmetry" IDENT "proved" "by" constr "as" identref
+  | IDENT "Add" IDENT "Parametric" IDENT "Relation" binders ":" constr;
+    constr "as" identref
+  | IDENT "Add" IDENT "Parametric" IDENT "Relation" binders ":" constr;
+    constr IDENT "reflexivity" IDENT "proved" "by" constr IDENT
+    "transitivity" IDENT "proved" "by" constr "as" identref
+  | IDENT "Add" IDENT "Parametric" IDENT "Relation" binders ":" constr;
+    constr IDENT "reflexivity" IDENT "proved" "by" constr "as" identref
+  | IDENT "Add" IDENT "Parametric" IDENT "Relation" binders ":" constr;
+    constr IDENT "reflexivity" IDENT "proved" "by" constr IDENT
+    "symmetry" IDENT "proved" "by" constr IDENT "transitivity" IDENT
+    "proved" "by" constr "as" identref
+  | IDENT "Add" IDENT "Parametric" IDENT "Relation" binders ":" constr;
+    constr IDENT "reflexivity" IDENT "proved" "by" constr IDENT
+    "symmetry" IDENT "proved" "by" constr "as" identref
+  | IDENT "Add" IDENT "Relation" constr constr IDENT "transitivity";
+    IDENT "proved" "by" constr "as" identref
+  | IDENT "Add" IDENT "Relation" constr constr IDENT "symmetry" IDENT
+    "proved" "by" constr IDENT "transitivity" IDENT "proved" "by";
+    constr "as" identref
+  | IDENT "Add" IDENT "Relation" constr constr IDENT "symmetry" IDENT
+    "proved" "by" constr "as" identref
+  | IDENT "Add" IDENT "Relation" constr constr "as" identref
+  | IDENT "Add" IDENT "Relation" constr constr IDENT "reflexivity" IDENT
+    "proved" "by" constr IDENT "transitivity" IDENT "proved" "by";
+    constr "as" identref
+  | IDENT "Add" IDENT "Relation" constr constr IDENT "reflexivity" IDENT
+    "proved" "by" constr "as" identref
+  | IDENT "Add" IDENT "Relation" constr constr IDENT "reflexivity" IDENT
+    "proved" "by" constr IDENT "symmetry" IDENT "proved" "by" constr;
+    IDENT "transitivity" IDENT "proved" "by" constr "as" identref
+  | IDENT "Add" IDENT "Relation" constr constr IDENT "reflexivity" IDENT
+    "proved" "by" constr IDENT "symmetry" IDENT "proved" "by" constr;
+    "as" identref
+  | IDENT "Add" IDENT IDENT LIST1 table_value
+  | IDENT "Add" IDENT LIST1 table_value
+  | IDENT "Test" setting_name "for" LIST1 table_value
+  | IDENT "Test" setting_name
+  | IDENT "Remove" IDENT "Hints" LIST1 global opt_hintbases
+  | IDENT "Remove" IDENT IDENT LIST1 table_value
+  | IDENT "Remove" IDENT LIST1 table_value ] 
+
+command_entry is
+[ <parser> 
+
+comment ::=
+  [ STRING
+  | constr
+  | natural ] 
+
+comparison ::=
+  [ "="
+  | "<"
+  | "<="
+  | ">"
+  | ">=" ] 
+
+concl_occ ::=
+  [ "*" occs
+  |  ] 
+
+constr ::=
+  [ "@" global univ_annot
+  | term LEVEL "8" ] 
+
+constr_eval ::=
+  [ IDENT "eval" red_expr "in" constr
+  | IDENT "context" identref "[" lconstr "]"
+  | IDENT "type" IDENT "of" constr ] 
+
+constr_pattern ::=
+  [ constr ] 
+
+constr_with_bindings ::=
+  [ constr with_bindings ] 
+
+constr_with_bindings_arg ::=
+  [ ">" constr_with_bindings
+  | constr_with_bindings ] 
+
+constructor ::=
+  [ quoted_attributes identref constructor_type ] 
+
+constructor_type ::=
+  [ binders [ of_type_inst lconstr |  ] ] 
+
+constructors_or_record ::=
+  [ "|" LIST1 constructor SEP "|"
+  | "{" record_fields "}" default_inhabitant_ident
+  | quoted_attributes identref "{" record_fields "}";
+    default_inhabitant_ident
+  | quoted_attributes identref constructor_type "|";
+    LIST1 constructor SEP "|"
+  | quoted_attributes identref constructor_type ] 
+
+conversion ::=
+  [ constr "with" constr
+  | constr "at" occs_nums "with" constr
+  | constr ] 
+
+cpattern ::=
+  [ lconstr ] 
+
+cumul_ident_decl ::=
+  [ identref OPT cumul_univ_decl ] 
+
+cumul_univ_decl ::=
+  [ "@{" LIST0 variance_identref [ "+" |  ];
+    [ "|" LIST0 univ_constraint SEP "," [ "+" |  ] "}" | [ "}" | '|}' ] ] ] 
+
+debug ::=
+  [ IDENT "debug"
+  |  ] 
+
+decl_notations ::=
+  [ "where" LIST1 notation_declaration SEP [ decl_sep ]
+  |  ] 
+
+decl_sep ::=
+  [ IDENT "and" ] 
+
+decorated_vernac ::=
+  [ quoted_attributes vernac ] 
+
+def_body ::=
+  [ binders ":=" reduce lconstr
+  | binders ":" lconstr ":=" reduce lconstr
+  | binders ":" lconstr ] 
+
+def_token ::=
+  [ "Definition"
+  | IDENT "Example"
+  | IDENT "SubClass" ] 
+
+default_inhabitant_ident ::=
+  [ "as" identref
+  |  ] 
+
+delta_flag ::=
+  [ "-" "[" LIST1 smart_global "]"
+  | "[" LIST1 smart_global "]"
+  |  ] 
+
+destruction_arg ::=
+  [ natural
+  | lpar_id_coloneq constr_with_bindings
+  | constr_with_bindings_arg ] 
+
+dirpath ::=
+  [ ident LIST0 field ] 
+
+eauto_search_strategy ::=
+  [ "(" eauto_search_strategy_name ")"
+  |  ] 
+
+eauto_search_strategy_name ::=
+  [ IDENT "bfs"
+  | IDENT "dfs" ] 
+
+eliminator ::=
+  [ "using" constr_with_bindings ] 
+
+enable_enable_disable ::=
+  [ IDENT "Enable"
+  | IDENT "Disable" ] 
+
+enable_notation_flag ::=
+  [ IDENT "all"
+  | IDENT "only" IDENT "parsing"
+  | IDENT "only" IDENT "printing"
+  | "in" IDENT "custom" identref
+  | "in" IDENT "constr" ] 
+
+enable_notation_flags ::=
+  [ "(" LIST1 enable_notation_flag SEP "," ")"
+  |  ] 
+
+enable_notation_interpretation ::=
+  [ ":=" constr
+  |  ] 
+
+enable_notation_rule ::=
+  [ ne_string
+  | global LIST0 ident
+  |  ] 
+
+eqn ::=
+  [ LIST1 mult_pattern SEP "|" "=>" lconstr ] 
+
+eqn_ipat ::=
+  [ IDENT "eqn" ":" naming_intropattern
+  |  ] 
+
+equality_intropattern ::=
+  [ "->"
+  | "<-"
+  | test_leftsquarebracket_equal "[" "=" intropatterns "]" ] 
+
+evar_instance ::=
+  [ "@{" LIST1 inst SEP ";" "}"
+  |  ] 
+
+explicit_subentry ::=
+  [ IDENT "ident"
+  | IDENT "name"
+  | IDENT "global"
+  | IDENT "bigint"
+  | IDENT "binder"
+  | IDENT "constr" at_level_opt OPT binder_interp
+  | IDENT "constr"
+  | IDENT "pattern" "at" IDENT "level" natural
+  | IDENT "pattern"
+  | IDENT "strict" IDENT "pattern" "at" IDENT "level" natural
+  | IDENT "strict" IDENT "pattern"
+  | IDENT "closed" IDENT "binder"
+  | IDENT "custom" IDENT at_level_opt OPT binder_interp ] 
+
+export_token ::=
+  [ IDENT "Import" OPT import_categories
+  | IDENT "Export" OPT import_categories
+  |  ] 
+
+ext_module_expr ::=
+  [ "<+" module_expr_inl ] 
+
+ext_module_type ::=
+  [ "<+" module_type_inl ] 
+
+failkw ::=
+  [ IDENT "fail"
+  | IDENT "gfail" ] 
+
+field ::=
+  [ FIELD ] 
+
+field_body ::=
+  [ binders ":=" lconstr
+  | binders of_type_inst lconstr ":=" lconstr
+  | binders of_type_inst lconstr ] 
+
+field_def ::=
+  [ global binders ":=" lconstr ] 
+
+fields ::=
+  [ field SELF
+  | field ] 
+
+fields_def ::=
+  [ field_def ";" SELF
+  | field_def
+  |  ] 
+
+filtered_import ::=
+  [ global "(" LIST1 one_import_filter_name SEP "," ")"
+  | global ] 
+
+finite_token ::=
+  [ IDENT "Variant"
+  | IDENT "Record"
+  | IDENT "Structure"
+  | IDENT "Class" ] 
+
+firstorder_using ::=
+  [ "using" LIST1 reference SEP [ "," ]
+  |  ] 
+
+fix_decl ::=
+  [ identref binders_fixannot type_cstr ":=" term LEVEL "200" ] 
+
+fix_decls ::=
+  [ fix_decl "with" LIST1 fix_decl SEP "with" "for" identref
+  | fix_decl ] 
+
+fix_definition ::=
+  [ ident_decl binders_fixannot type_cstr OPT [ ":=" lconstr ];
+    decl_notations ] 
+
+fixannot ::=
+  [ "{" IDENT "struct" identref "}"
+  | "{" IDENT "wf" constr identref "}"
+  | "{" IDENT "measure" constr OPT identref OPT constr "}" ] 
+
+fixdecl ::=
+  [ "(" ident LIST0 simple_binder struct_annot ":" lconstr ")" ] 
+
+for_each_goal ::=
+  [ ".." tactic_then_last
+  | "|" SELF
+  | ltac_expr "|" SELF
+  | ltac_expr ".." tactic_then_last
+  | ltac_expr
+  |  ] 
+
+fresh_id ::=
+  [ STRING
+  | qualid ] 
+
+fullyqualid ::=
+  [ ident fields
+  | ident ] 
+
+functor_app_annot ::=
+  [ "[" IDENT "inline" "at" IDENT "level" natural "]"
+  | "[" IDENT "no" IDENT "inline" "]"
+  |  ] 
+
+gallina ::=
+  [ "Fixpoint" LIST1 fix_definition SEP "with"
+  | "CoFixpoint" LIST1 cofix_definition SEP "with"
+  | IDENT "Let" "Fixpoint" LIST1 fix_definition SEP "with"
+  | IDENT "Let" "CoFixpoint" LIST1 cofix_definition SEP "with"
+  | IDENT "Let" ident_decl def_body
+  | IDENT "Scheme" IDENT "Equality" IDENT "for" smart_global
+  | IDENT "Scheme" IDENT "Boolean" IDENT "Equality" IDENT "for";
+    smart_global
+  | IDENT "Scheme" LIST1 scheme SEP "with"
+  | IDENT "Combined" IDENT "Scheme" identref IDENT "from";
+    LIST1 identref SEP ","
+  | IDENT "Register" IDENT "Inline" global
+  | IDENT "Register" global "as" qualid
+  | IDENT "Primitive" ident_decl OPT [ ":" lconstr ] ":=" register_token
+  | IDENT "Universe" LIST1 identref
+  | IDENT "Universes" LIST1 identref
+  | IDENT "Constraint" LIST1 univ_constraint SEP ","
+  | thm_token ident_decl binders ":" lconstr;
+    LIST0 [ "with" ident_decl binders ":" lconstr ]
+  | assumption_token inline assum_list
+  | assumptions_token inline assum_list
+  | def_token ident_decl def_body
+  | finite_token inductive_or_record_definition
+  | inductive_token LIST1 inductive_or_record_definition SEP "with" ] 
+
+gallina_ext ::=
+  [ IDENT "Transparent" LIST1 smart_global
+  | IDENT "Opaque" LIST1 smart_global
+  | IDENT "Strategy" LIST1 [ strategy_level "[" LIST1 smart_global "]" ]
+  | IDENT "Canonical" OPT [ IDENT "Structure" ] global;
+    OPT [ OPT univ_decl def_body ]
+  | IDENT "Canonical" OPT [ IDENT "Structure" ] by_notation
+  | IDENT "Identity" IDENT "Coercion" identref ":" coercion_class ">->";
+    coercion_class
+  | IDENT "Coercion" global ":" coercion_class ">->" coercion_class
+  | IDENT "Coercion" global OPT [ OPT univ_decl def_body ]
+  | IDENT "Coercion" by_notation ":" coercion_class ">->" coercion_class
+  | IDENT "Context" LIST1 binder
+  | IDENT "Instance" instance_name ":" term LEVEL "200" hint_info;
+    [ ":=" "{" record_declaration "}" | ":=" lconstr |  ]
+  | IDENT "Existing" IDENT "Instance" global hint_info
+  | IDENT "Existing" IDENT "Instances" LIST1 global OPT [ "|" natural ]
+  | IDENT "Existing" IDENT "Class" global
+  | IDENT "Arguments" smart_global LIST0 arg_specs;
+    OPT [ "," LIST1 [ LIST0 implicits_alt ] SEP "," ];
+    OPT [ ":" LIST1 args_modifier SEP "," ]
+  | IDENT "Implicit" "Type" reserv_list
+  | IDENT "Implicit" IDENT "Types" reserv_list
+  | IDENT "Generalizable";
+    [ IDENT "All" IDENT "Variables" | IDENT "No" IDENT "Variables"
+    | [ "Variable" | IDENT "Variables" ] LIST1 identref ]
+  | IDENT "Module" "Type" identref LIST0 module_binder;
+    check_module_types is_module_type
+  | IDENT "Module" export_token identref LIST0 module_binder;
+    of_module_type is_module_expr
+  | IDENT "Declare" IDENT "Module" export_token identref;
+    LIST0 module_binder ":" module_type_inl
+  | IDENT "Section" identref
+  | IDENT "End" identref
+  | IDENT "Collection" identref ":=" section_subset_expr
+  | IDENT "Require" export_token LIST1 filtered_import
+  | IDENT "From" global IDENT "Extra" IDENT "Dependency" ne_string;
+    OPT [ "as" IDENT ]
+  | IDENT "From" global IDENT "Require" export_token;
+    LIST1 filtered_import
+  | IDENT "Import" OPT import_categories LIST1 filtered_import
+  | IDENT "Export" "Set" setting_name option_setting
+  | IDENT "Export" IDENT "Unset" setting_name
+  | IDENT "Export" OPT import_categories LIST1 filtered_import
+  | IDENT "Include" "Type" module_type_inl LIST0 ext_module_type
+  | IDENT "Include" module_type_inl LIST0 ext_module_expr ] 
+
+global ::=
+  [ reference ] 
+
+hint ::=
+  [ IDENT "Extern" natural OPT constr_pattern "=>" tactic
+  | IDENT "Resolve" "->" LIST1 global OPT natural
+  | IDENT "Resolve" "<-" LIST1 global OPT natural
+  | IDENT "Resolve" LIST1 reference_or_constr hint_info
+  | IDENT "Immediate" LIST1 reference_or_constr
+  | IDENT "Variables" IDENT "Transparent"
+  | IDENT "Variables" IDENT "Opaque"
+  | IDENT "Constants" IDENT "Transparent"
+  | IDENT "Constants" IDENT "Opaque"
+  | IDENT "Transparent" LIST1 global
+  | IDENT "Opaque" LIST1 global
+  | IDENT "Mode" global mode
+  | IDENT "Unfold" LIST1 global
+  | IDENT "Constructors" LIST1 global ] 
+
+hint_info ::=
+  [ "|" OPT natural OPT constr_pattern
+  |  ] 
+
+hintbases ::=
+  [ "with" "*"
+  | "with" LIST1 preident
+  |  ] 
+
+hints_path ::=
+  [ SELF "*"
+  | SELF "|" SELF
+  | SELF SELF
+  | "(" SELF ")"
+  | IDENT "emp"
+  | IDENT "eps"
+  | hints_path_atom ] 
+
+hints_path_atom ::=
+  [ "_"
+  | LIST1 global ] 
+
+hloc ::=
+  [ "in" "|-" "*"
+  | "in" "(" IDENT "type" IDENT "of" ident ")"
+  | "in" "(" IDENT "value" IDENT "of" ident ")"
+  | "in" ident
+  |  ] 
+
+hyp ::=
+  [ identref ] 
+
+hypident ::=
+  [ "(" IDENT "type" IDENT "of" id_or_meta ")"
+  | "(" IDENT "value" IDENT "of" id_or_meta ")"
+  | id_or_meta ] 
+
+hypident_occ ::=
+  [ hypident occs ] 
+
+id_or_meta ::=
+  [ identref ] 
+
+ident ::=
+  [ IDENT ] ]
+or
+[ LEFTA
+  [ ident ] 
+
+ident_decl ::=
+  [ identref OPT univ_decl ] 
+
+identref ::=
+  [ ident ] 
+
+implicits_alt ::=
+  [ "[" LIST1 name "]"
+  | "{" LIST1 name "}"
+  | name ] 
+
+import_categories ::=
+  [ OPT "-" "(" LIST1 qualid SEP "," ")" ] 
+
+in_clause ::=
+  [ "*" "|-" concl_occ
+  | "*" occs
+  | "|-" concl_occ
+  | LIST1 hypident_occ SEP "," "|-" concl_occ
+  | LIST1 hypident_occ SEP "," ] 
+
+in_hyp_as ::=
+  [ "in" LIST1 [ id_or_meta as_ipat ] SEP ","
+  |  ] 
+
+in_hyp_list ::=
+  [ "in" LIST1 id_or_meta
+  |  ] 
+
+induction_clause ::=
+  [ destruction_arg as_or_and_ipat eqn_ipat opt_clause ] 
+
+induction_clause_list ::=
+  [ LIST1 induction_clause SEP "," OPT eliminator opt_clause ] 
+
+inductive_or_record_definition ::=
+  [ opt_coercion cumul_ident_decl binders OPT [ "|" binders ];
+    OPT [ ":" lconstr ] opt_constructors_or_fields decl_notations ] 
+
+inductive_token ::=
+  [ IDENT "Inductive"
+  | IDENT "CoInductive" ] 
+
+inline ::=
+  [ IDENT "Inline" "(" natural ")"
+  | IDENT "Inline"
+  |  ] 
+
+input_fun ::=
+  [ "_"
+  | ident ] 
+
+inst ::=
+  [ identref ":=" lconstr ] 
+
+instance_name ::=
+  [ ident_decl binders
+  |  ] 
+
+int_or_var ::=
+  [ integer
+  | identref ] 
+
+integer ::=
+  [ bigint ] 
+
+intropattern ::=
+  [ "*"
+  | "**"
+  | simple_intropattern ] 
+
+intropatterns ::=
+  [ LIST0 intropattern ] 
+
+is_module_expr ::=
+  [ ":=" module_expr_inl LIST0 ext_module_expr
+  |  ] 
+
+is_module_type ::=
+  [ ":=" module_type_inl LIST0 ext_module_type
+  |  ] 
+
+lconstr ::=
+  [ term LEVEL "200" ] 
+
+legacy_attr ::=
+  [ IDENT "Local"
+  | IDENT "Global"
+  | IDENT "Polymorphic"
+  | IDENT "Monomorphic"
+  | IDENT "Cumulative"
+  | IDENT "NonCumulative"
+  | IDENT "Private"
+  | IDENT "Program" ] 
+
+let_clause ::=
+  [ [ "_" ] ":=" ltac_expr
+  | identref ":=" ltac_expr
+  | identref LIST1 input_fun ":=" ltac_expr ] 
+
+let_type_cstr ::=
+  [ OPT [ ":" lconstr ] ] 
+
+level ::=
+  [ IDENT "level" natural
+  | IDENT "next" IDENT "level" ] 
+
+locatable ::=
+  [ IDENT "Term" smart_global
+  | IDENT "File" ne_string
+  | IDENT "Library" global
+  | IDENT "Module" global
+  | smart_global ] 
+
+lookup_at_as_comma is
+[ <parser> 
+
+lpar_id_colon is
+[ <parser> ]
+or
+[ <parser> 
+
+lpar_id_coloneq is
+[ <parser> ]
+or
+[ <parser> 
+
+lstring ::=
+  [ string ] 
+
+ltac_def_kind ::=
+  [ ":="
+  | "::=" ] 
+
+ltac_expr is
+[ "5" RIGHTA
+  [ binder_tactic ]
+| "4" LEFTA
+  [ SELF ";" binder_tactic
+  | SELF ";" SELF
+  | SELF ";" tactic_then_locality for_each_goal "]" ]
+| "3" RIGHTA
+  [ IDENT "try" SELF
+  | IDENT "do" nat_or_var SELF
+  | IDENT "timeout" nat_or_var SELF
+  | IDENT "time" OPT string SELF
+  | IDENT "repeat" SELF
+  | IDENT "progress" SELF
+  | IDENT "once" SELF
+  | IDENT "exactly_once" SELF
+  | IDENT "abstract" NEXT "using" ident
+  | IDENT "abstract" NEXT
+  | IDENT "only" selector ":" SELF ]
+| "2" RIGHTA
+  [ SELF "+" binder_tactic
+  | SELF "+" SELF
+  | SELF "||" binder_tactic
+  | SELF "||" SELF
+  | IDENT "tryif" SELF "then" SELF "else" SELF ]
+| "1" RIGHTA
+  [ IDENT "first" "[" LIST0 ltac_expr SEP "|" "]"
+  | IDENT "solve" "[" LIST0 ltac_expr SEP "|" "]"
+  | IDENT "idtac" LIST0 message_token
+  | match_key IDENT "goal" "with" match_context_list "end"
+  | match_key IDENT "reverse" IDENT "goal" "with" match_context_list;
+    "end"
+  | match_key SELF "with" match_list "end"
+  | failkw [ nat_or_var |  ] LIST0 message_token
+  | simple_tactic
+  | tactic_value
+  | reference LIST0 tactic_arg ]
+| "0" LEFTA
+  [ "(" SELF ")"
+  | "[" ">" for_each_goal "]"
+  | tactic_atom ] 
+
+ltac_production_item ::=
+  [ string
+  | ident "(" ident OPT ltac_production_sep ")"
+  | ident ] 
+
+ltac_production_sep ::=
+  [ "," string ] 
+
+ltac_tactic_level ::=
+  [ "(" "at" IDENT "level" natural ")" ] 
+
+match_context_list ::=
+  [ "|" LIST1 match_context_rule SEP "|"
+  | LIST1 match_context_rule SEP "|" ] 
+
+match_context_rule ::=
+  [ "[" LIST0 match_hyp SEP "," "|-" match_pattern "]" "=>" ltac_expr
+  | "_" "=>" ltac_expr
+  | LIST0 match_hyp SEP "," "|-" match_pattern "=>" ltac_expr ] 
+
+match_hyp ::=
+  [ name ":" match_pattern
+  | name ":=" "[" match_pattern "]" ":" match_pattern
+  | name ":=" match_pattern ] 
+
+match_key ::=
+  [ "match"
+  | IDENT "lazymatch"
+  | IDENT "multimatch" ] 
+
+match_list ::=
+  [ "|" LIST1 match_rule SEP "|"
+  | LIST1 match_rule SEP "|" ] 
+
+match_pattern ::=
+  [ IDENT "context" OPT ident "[" cpattern "]"
+  | cpattern ] 
+
+match_rule ::=
+  [ "_" "=>" ltac_expr
+  | match_pattern "=>" ltac_expr ] 
+
+message_token ::=
+  [ STRING
+  | identref
+  | natural ] 
+
+mode ::=
+  [ LIST1 [ "+" | "!" | "-" ] ] 
+
+module_binder ::=
+  [ "(" export_token LIST1 identref ":" module_type_inl ")" ] 
+
+module_expr ::=
+  [ SELF module_expr_atom
+  | module_expr_atom ] 
+
+module_expr_atom ::=
+  [ "(" SELF ")"
+  | qualid ] 
+
+module_expr_inl ::=
+  [ "!" module_expr
+  | module_expr functor_app_annot ] 
+
+module_type ::=
+  [ SELF "with" with_declaration
+  | SELF module_expr_atom
+  | "(" SELF ")"
+  | qualid ] 
+
+module_type_inl ::=
+  [ "!" module_type
+  | module_type functor_app_annot ] 
+
+mult_pattern ::=
+  [ LIST1 (pattern LEVEL "200") SEP "," ] 
+
+name ::=
+  [ IDENT "_"
+  | ident ] 
+
+naming_intropattern ::=
+  [ "?"
+  | pattern_ident
+  | ident ] 
+
+nat_or_var ::=
+  [ natural
+  | identref ] 
+
+natural ::=
+  [ bignat ] 
+
+ne_intropatterns ::=
+  [ LIST1 intropattern ] 
+
+ne_lstring ::=
+  [ ne_string ] 
+
+ne_string ::=
+  [ STRING ] 
+
+notation_declaration ::=
+  [ lstring ":=" constr syntax_modifiers OPT [ ":" IDENT ] ] 
+
+number_modifier ::=
+  [ IDENT "warning" IDENT "after" bignat
+  | IDENT "abstract" IDENT "after" bignat
+  | number_string_via ] 
+
+number_options ::=
+  [ "(" LIST1 number_modifier SEP [ "," ] ")" ] 
+
+number_string_mapping ::=
+  [ "[" reference "]" "=>" reference
+  | reference "=>" reference ] 
+
+number_string_via ::=
+  [ IDENT "via" reference IDENT "mapping" "[";
+    LIST1 number_string_mapping SEP [ "," ] "]" ] 
+
+occs ::=
+  [ "at" occs_nums
+  |  ] 
+
+occs_nums ::=
+  [ "-" LIST1 nat_or_var
+  | LIST1 nat_or_var ] 
+
+occurrences ::=
+  [ LIST1 integer
+  | hyp ] 
+
+of_module_type ::=
+  [ ":" module_type_inl
+  | check_module_types ] 
+
+of_type ::=
+  [ ":>"
+  | ":" ">"
+  | ":" ] 
+
+of_type_inst ::=
+  [ ":>"
+  | "::"
+  | "::>"
+  | ":" ">"
+  | ":" ] 
+
+one_import_filter_name ::=
+  [ global OPT [ "(" ".." ")" ] ] 
+
+open_binders ::=
+  [ name ".." name
+  | name LIST0 name ":" lconstr
+  | name LIST0 name binders
+  | closed_binder binders ] 
+
+opt_clause ::=
+  [ "in" in_clause
+  | "at" occs_nums
+  |  ] 
+
+opt_coercion ::=
+  [ ">"
+  |  ] 
+
+opt_constructors_or_fields ::=
+  [ ":=" constructors_or_record
+  | ":="
+  |  ] 
+
+opt_hintbases ::=
+  [ ":" LIST1 [ IDENT ]
+  |  ] 
+
+opt_scope ::=
+  [ ":" IDENT "no" IDENT "scope"
+  | ":" IDENT
+  |  ] 
+
+opthints ::=
+  [ ":" LIST1 preident
+  |  ] 
+
+option_setting ::=
+  [ STRING
+  | integer
+  |  ] 
+
+or_and_intropattern ::=
+  [ "[" LIST1 intropatterns SEP "|" "]"
+  | "()"
+  | "(" simple_intropattern ")"
+  | "(" simple_intropattern "," LIST1 simple_intropattern SEP "," ")"
+  | "(" simple_intropattern "&" LIST1 simple_intropattern SEP "&" ")" ] 
+
+or_and_intropattern_loc ::=
+  [ or_and_intropattern
+  | identref ] 
+
+orient ::=
+  [ "->"
+  | "<-"
+  |  ] 
+
+orient_rw ::=
+  [ "->"
+  | "<-"
+  |  ] 
+
+oriented_rewriter ::=
+  [ orient_rw rewriter ] 
+
+pattern is
+[ "200" RIGHTA
+  [ "exists2" "'" pattern LEVEL "0" ":" pattern LEVEL "200" "," pattern
+    LEVEL "200" "&" pattern LEVEL "200"
+  | "exists2" "'" pattern LEVEL "0" "," pattern LEVEL "200" "&" pattern
+    LEVEL "200"
+  | "exists2" name ":" pattern LEVEL "200" "," pattern LEVEL "200" "&";
+    pattern LEVEL "200"
+  | "exists2" name "," pattern LEVEL "200" "&" pattern LEVEL "200"
+  | "exists" "!" open_binders "," pattern LEVEL "200"
+  | "exists" open_binders "," pattern LEVEL "200" ]
+| "100" RIGHTA
+  [ SELF ":" term LEVEL "200" ]
+| "99" RIGHTA
+  [ SELF "->" pattern LEVEL "200" ]
+| "95" RIGHTA
+  [ SELF "<->" NEXT ]
+| "90" RIGHTA
+  [  ]
+| "85" RIGHTA
+  [ SELF "\\/" pattern LEVEL "85" ]
+| "80" RIGHTA
+  [ SELF "/\\" pattern LEVEL "80" ]
+| "75" RIGHTA
+  [ "~" pattern LEVEL "75" ]
+| "70" RIGHTA
+  [ SELF ">" NEXT
+  | SELF ">=" NEXT
+  | SELF "<" NEXT "<=" NEXT
+  | SELF "<" NEXT "<" NEXT
+  | SELF "<" NEXT
+  | SELF "<=" NEXT "<" NEXT
+  | SELF "<=" NEXT "<=" NEXT
+  | SELF "<=" NEXT
+  | SELF "<>" NEXT ":>" NEXT
+  | SELF "<>" NEXT
+  | SELF "=" NEXT "=" NEXT
+  | SELF "=" NEXT ":>" NEXT
+  | SELF "=" NEXT ]
+| "60" RIGHTA
+  [ SELF "++" pattern LEVEL "60"
+  | SELF "::" pattern LEVEL "60" ]
+| "50" LEFTA
+  [ SELF "||" NEXT
+  | SELF "-" NEXT
+  | SELF "+" NEXT ]
+| "40" LEFTA
+  [ SELF "&&" NEXT
+  | SELF "/" NEXT
+  | SELF "*" NEXT ]
+| "35" RIGHTA
+  [ "/" pattern LEVEL "35"
+  | "-" pattern LEVEL "35" ]
+| "30" RIGHTA
+  [ SELF "^" pattern LEVEL "30" ]
+| "10" LEFTA
+  [ SELF "as" name
+  | SELF LIST1 NEXT
+  | "@" reference LIST0 NEXT ]
+| "1" LEFTA
+  [ SELF "%" IDENT ]
+| "0" LEFTA
+  [ "{" "'" pattern LEVEL "0" "&" pattern LEVEL "200" "&" pattern LEVEL
+    "200" "}"
+  | "{" "'" pattern LEVEL "0" "&" pattern LEVEL "200" "}"
+  | "{" "'" pattern LEVEL "0" ":" pattern LEVEL "200" "&" pattern LEVEL
+    "200" "&" pattern LEVEL "200" "}"
+  | "{" "'" pattern LEVEL "0" ":" pattern LEVEL "200" "&" pattern LEVEL
+    "200" "}"
+  | "{" "'" pattern LEVEL "0" ":" pattern LEVEL "200" "|" pattern LEVEL
+    "200" "&" pattern LEVEL "200" "}"
+  | "{" "'" pattern LEVEL "0" ":" pattern LEVEL "200" "|" pattern LEVEL
+    "200" "}"
+  | "{" "'" pattern LEVEL "0" "|" pattern LEVEL "200" "&" pattern LEVEL
+    "200" "}"
+  | "{" "'" pattern LEVEL "0" "|" pattern LEVEL "200" "}"
+  | "{" pattern LEVEL "99" "&" pattern LEVEL "200" "&" pattern LEVEL
+    "200" "}"
+  | "{" pattern LEVEL "99" "&" pattern LEVEL "200" "}"
+  | "{" pattern LEVEL "99" ":" pattern LEVEL "200" "&" pattern LEVEL
+    "200" "&" pattern LEVEL "200" "}"
+  | "{" pattern LEVEL "99" ":" pattern LEVEL "200" "&" pattern LEVEL
+    "200" "}"
+  | "{" pattern LEVEL "99" ":" pattern LEVEL "200" "|" pattern LEVEL
+    "200" "&" pattern LEVEL "200" "}"
+  | "{" pattern LEVEL "99" ":" pattern LEVEL "200" "|" pattern LEVEL
+    "200" "}"
+  | "{" pattern LEVEL "99" "|" pattern LEVEL "200" "&" pattern LEVEL
+    "200" "}"
+  | "{" pattern LEVEL "99" "|" pattern LEVEL "200" "}"
+  | "{" pattern LEVEL "99" "}"
+  | "{|" record_patterns '|}'
+  | "_"
+  | "(" pattern LEVEL "200" "," pattern LEVEL "200" "," LIST1 (pattern
+    LEVEL "200") SEP "," ")"
+  | "(" pattern LEVEL "200" "," pattern LEVEL "200" ")"
+  | "(" pattern LEVEL "200" ")"
+  | "(" pattern LEVEL "200" "|" LIST1 (pattern LEVEL "200") SEP "|" ")"
+  | NUMBER
+  | reference
+  | string ] 
+
+pattern_ident ::=
+  [ LEFTQMARK ident ] 
+
+pattern_occ ::=
+  [ constr occs ] 
+
+preident ::=
+  [ IDENT ] 
+
+printable ::=
+  [ IDENT "Term" smart_global OPT univ_name_list
+  | IDENT "Section" global
+  | IDENT "Grammar" LIST0 IDENT
+  | IDENT "Custom" IDENT "Grammar" IDENT
+  | IDENT "Keywords"
+  | IDENT "LoadPath" OPT dirpath
+  | IDENT "Libraries"
+  | IDENT "Notation" string IDENT "in" IDENT "custom" IDENT
+  | IDENT "Notation" string
+  | IDENT "ML" IDENT "Path"
+  | IDENT "ML" IDENT "Modules"
+  | IDENT "Debug" IDENT "GC"
+  | IDENT "Graph"
+  | IDENT "Classes"
+  | IDENT "Typeclasses"
+  | IDENT "Instances" smart_global
+  | IDENT "Coercions"
+  | IDENT "Coercion" IDENT "Paths" coercion_class coercion_class
+  | IDENT "Canonical" IDENT "Projections" LIST0 smart_global
+  | IDENT "Typing" IDENT "Flags"
+  | IDENT "Tables"
+  | IDENT "Options"
+  | IDENT "Hint" "*"
+  | IDENT "Hint" smart_global
+  | IDENT "Hint"
+  | IDENT "HintDb" IDENT
+  | IDENT "Scopes"
+  | IDENT "Scope" IDENT
+  | IDENT "Visibility" OPT IDENT
+  | IDENT "Implicit" smart_global
+  | IDENT "Assumptions" smart_global
+  | IDENT "Opaque" IDENT "Dependencies" smart_global
+  | IDENT "Transparent" IDENT "Dependencies" smart_global
+  | IDENT "All" IDENT "Dependencies" smart_global
+  | IDENT "All"
+  | IDENT "Strategy" smart_global
+  | IDENT "Strategies"
+  | IDENT "Registered"
+  | [ IDENT "Sorted" |  ] IDENT "Universes" OPT printunivs_subgraph;
+    OPT ne_string ] 
+
+printunivs_subgraph ::=
+  [ IDENT "Subgraph" "(" LIST0 reference ")" ] 
+
+qualid ::=
+  [ reference ] 
+
+quantified_hypothesis ::=
+  [ ident
+  | natural ] 
+
+quoted_attributes ::=
+  [ LIST0 [ "#[" attribute_list "]" ] ] 
+
+range_selector ::=
+  [ natural "-" natural
+  | natural ] 
+
+range_selector_or_nth ::=
+  [ natural "-" natural OPT [ "," LIST1 range_selector SEP "," ]
+  | natural OPT [ "," LIST1 range_selector SEP "," ] ] 
+
+record_binder ::=
+  [ name field_body
+  | name ] 
+
+record_declaration ::=
+  [ fields_def ] 
+
+record_field ::=
+  [ quoted_attributes record_binder OPT [ "|" natural ] decl_notations ] 
+
+record_fields ::=
+  [ record_field ";" SELF
+  | record_field
+  |  ] 
+
+record_pattern ::=
+  [ global ":=" pattern LEVEL "200" ] 
+
+record_patterns ::=
+  [ record_pattern ";" SELF
+  | record_pattern
+  |  ] 
+
+red_expr ::=
+  [ IDENT "red"
+  | IDENT "hnf"
+  | IDENT "simpl" delta_flag OPT ref_or_pattern_occ
+  | IDENT "cbv" strategy_flag
+  | IDENT "cbn" strategy_flag
+  | IDENT "lazy" strategy_flag
+  | IDENT "compute" delta_flag
+  | IDENT "vm_compute" OPT ref_or_pattern_occ
+  | IDENT "native_compute" OPT ref_or_pattern_occ
+  | IDENT "unfold" LIST1 unfold_occ SEP ","
+  | IDENT "fold" LIST1 constr
+  | IDENT "pattern" LIST1 pattern_occ SEP ","
+  | IDENT ] 
+
+red_flag ::=
+  [ IDENT "beta"
+  | IDENT "iota"
+  | IDENT "match"
+  | IDENT "fix"
+  | IDENT "cofix"
+  | IDENT "zeta"
+  | IDENT "delta" delta_flag ] 
+
+reduce ::=
+  [ IDENT "Eval" red_expr "in"
+  |  ] 
+
+ref_or_pattern_occ ::=
+  [ smart_global occs
+  | constr occs ] 
+
+reference ::=
+  [ ident fields
+  | ident ] 
+
+reference_or_constr ::=
+  [ global
+  | constr ] 
+
+register_token ::=
+  [ test_hash_ident "#" IDENT ] 
+
+rename ::=
+  [ ident IDENT "into" ident ] 
+
+reserv_list ::=
+  [ LIST1 reserv_tuple
+  | simple_reserv ] 
+
+reserv_tuple ::=
+  [ "(" simple_reserv ")" ] 
+
+rewriter ::=
+  [ "!" constr_with_bindings_arg
+  | [ "?" | LEFTQMARK ] constr_with_bindings_arg
+  | natural "!" constr_with_bindings_arg
+  | natural [ "?" | LEFTQMARK ] constr_with_bindings_arg
+  | natural constr_with_bindings_arg
+  | constr_with_bindings_arg ] 
+
+rewstrategy ::=
+  [ SELF ";" SELF
+  | "<-" constr
+  | IDENT "subterms" SELF
+  | IDENT "subterm" SELF
+  | IDENT "innermost" SELF
+  | IDENT "outermost" SELF
+  | IDENT "bottomup" SELF
+  | IDENT "topdown" SELF
+  | IDENT "id"
+  | IDENT "fail"
+  | IDENT "refl"
+  | IDENT "progress" SELF
+  | IDENT "try" SELF
+  | IDENT "any" SELF
+  | IDENT "repeat" SELF
+  | "(" SELF ")"
+  | IDENT "choice" LIST1 SELF
+  | IDENT "old_hints" preident
+  | IDENT "hints" preident
+  | IDENT "terms" LIST0 constr
+  | IDENT "eval" red_expr
+  | IDENT "fold" constr
+  | constr ] 
+
+scheme ::=
+  [ scheme_kind
+  | identref ":=" scheme_kind ] 
+
+scheme_kind ::=
+  [ scheme_type "for" smart_global IDENT "Sort" sort_family ] 
+
+scheme_type ::=
+  [ IDENT "Induction"
+  | IDENT "Minimality"
+  | IDENT "Elimination"
+  | IDENT "Case" ] 
+
+scope_delimiter ::=
+  [ "%" IDENT ] 
+
+section_subset_expr ::=
+  [ test_only_starredidentrefs LIST0 starredidentref
+  | ssexpr ] 
+
+selector ::=
+  [ range_selector_or_nth
+  | test_bracket_ident "[" ident "]" ] 
+
+setting_name ::=
+  [ LIST1 [ IDENT ] ] 
+
+simple_binder ::=
+  [ "(" LIST1 name ":" lconstr ")"
+  | name ] 
+
+simple_binding ::=
+  [ "(" identref ":=" lconstr ")"
+  | "(" natural ":=" lconstr ")" ] 
+
+simple_intropattern ::=
+  [ simple_intropattern_closed LIST0 [ "%" term LEVEL "0" ] ] 
+
+simple_intropattern_closed ::=
+  [ "_"
+  | equality_intropattern
+  | or_and_intropattern
+  | naming_intropattern ] 
+
+simple_reserv ::=
+  [ LIST1 identref ":" lconstr ] 
+
+simple_tactic ::=
+  [ IDENT "gintuition" OPT tactic
+  | IDENT "firstorder" OPT tactic "with" LIST1 preident
+  | IDENT "firstorder" OPT tactic firstorder_using "with" LIST1 preident
+  | IDENT "firstorder" OPT tactic firstorder_using
+  | IDENT "congruence" OPT natural "with" LIST1 constr
+  | IDENT "congruence" OPT natural
+  | IDENT "dintuition" tactic
+  | IDENT "dintuition"
+  | IDENT "intuition" tactic
+  | IDENT "intuition"
+  | IDENT "assert_fails" ltac_expr LEVEL "3"
+  | IDENT "inversion_sigma" hyp "as" simple_intropattern
+  | IDENT "inversion_sigma" hyp
+  | IDENT "inversion_sigma"
+  | IDENT "now" tactic
+  | IDENT "rewrite_all" "<-" constr
+  | IDENT "rewrite_all" constr
+  | IDENT "destruct_with_eqn" ":" ident ident
+  | IDENT "destruct_with_eqn" ":" ident constr
+  | IDENT "destruct_with_eqn" ident
+  | IDENT "destruct_with_eqn" constr
+  | IDENT "clearbody" LIST1 hyp
+  | IDENT "clear" IDENT "dependent" hyp
+  | IDENT "clear" "-" LIST1 hyp
+  | IDENT "clear" LIST0 hyp
+  | IDENT "revert" IDENT "dependent" hyp
+  | IDENT "revert" LIST1 hyp
+  | IDENT "rename" LIST1 rename SEP ","
+  | IDENT "move" hyp "at" IDENT "top"
+  | IDENT "move" hyp "at" IDENT "bottom"
+  | IDENT "move" hyp IDENT "after" hyp
+  | IDENT "move" hyp IDENT "before" hyp
+  | IDENT "intro" "at" IDENT "top"
+  | IDENT "intro" "at" IDENT "bottom"
+  | IDENT "intro" IDENT "after" hyp
+  | IDENT "intro" IDENT "before" hyp
+  | IDENT "intro" ident "at" IDENT "top"
+  | IDENT "intro" ident "at" IDENT "bottom"
+  | IDENT "intro" ident IDENT "after" hyp
+  | IDENT "intro" ident IDENT "before" hyp
+  | IDENT "intro" ident
+  | IDENT "intro"
+  | IDENT "eexists" LIST1 bindings SEP ","
+  | IDENT "eexists"
+  | "exists" LIST1 bindings SEP ","
+  | "exists"
+  | IDENT "esplit" "with" bindings
+  | IDENT "split" "with" bindings
+  | IDENT "symmetry" "in" in_clause
+  | IDENT "specialize" constr_with_bindings "as" simple_intropattern
+  | IDENT "specialize" constr_with_bindings
+  | IDENT "econstructor" nat_or_var "with" bindings
+  | IDENT "econstructor" nat_or_var
+  | IDENT "econstructor"
+  | IDENT "constructor" nat_or_var "with" bindings
+  | IDENT "constructor" nat_or_var
+  | IDENT "constructor"
+  | IDENT "eright" "with" bindings
+  | IDENT "right" "with" bindings
+  | IDENT "eleft" "with" bindings
+  | IDENT "left" "with" bindings
+  | IDENT "exact" uconstr
+  | IDENT "with_strategy" strategy_level_or_var "[" LIST1 smart_global;
+    "]" ltac_expr LEVEL "3"
+  | IDENT "guard" test
+  | IDENT "swap" int_or_var int_or_var
+  | IDENT "cycle" int_or_var
+  | IDENT "unshelve" ltac_expr LEVEL "1"
+  | IDENT "transparent_abstract" ltac_expr LEVEL "3" "using" ident
+  | IDENT "transparent_abstract" ltac_expr LEVEL "3"
+  | IDENT "destauto" "in" hyp
+  | IDENT "destauto"
+  | IDENT "specialize_eqs" hyp
+  | IDENT "generalize_eqs_vars" hyp
+  | IDENT "generalize_eqs" hyp
+  | IDENT "stepr" constr "by" tactic
+  | IDENT "stepr" constr
+  | IDENT "stepl" constr "by" tactic
+  | IDENT "stepl" constr
+  | IDENT "instantiate" "(" ident ":=" lconstr ")"
+  | IDENT "instantiate" "(" natural ":=" lconstr ")" hloc
+  | IDENT "evar" test_lpar_id_colon "(" ident ":" lconstr ")"
+  | IDENT "evar" constr
+  | IDENT "subst" LIST1 hyp
+  | IDENT "subst"
+  | IDENT "notypeclasses" IDENT "refine" uconstr
+  | IDENT "refine" uconstr
+  | IDENT "autorewrite" "*" "with" LIST1 preident clause "using" tactic
+  | IDENT "autorewrite" "*" "with" LIST1 preident clause
+  | IDENT "autorewrite" "with" LIST1 preident clause "using" tactic
+  | IDENT "autorewrite" "with" LIST1 preident clause
+  | IDENT "contradiction" OPT constr_with_bindings
+  | IDENT "decompose" "[" LIST1 constr "]" constr
+  | IDENT "decompose" IDENT "record" constr
+  | IDENT "decompose" IDENT "sum" constr
+  | IDENT "cutrewrite" orient constr "in" hyp
+  | IDENT "cutrewrite" orient constr
+  | IDENT "einjection" "as" LIST0 simple_intropattern
+  | IDENT "einjection" destruction_arg "as" LIST0 simple_intropattern
+  | IDENT "einjection" destruction_arg
+  | IDENT "einjection"
+  | IDENT "injection" "as" LIST0 simple_intropattern
+  | IDENT "injection" destruction_arg "as" LIST0 simple_intropattern
+  | IDENT "injection" destruction_arg
+  | IDENT "injection"
+  | IDENT "ediscriminate" destruction_arg
+  | IDENT "ediscriminate"
+  | IDENT "discriminate" destruction_arg
+  | IDENT "discriminate"
+  | IDENT "esimplify_eq" destruction_arg
+  | IDENT "esimplify_eq"
+  | IDENT "simplify_eq" destruction_arg
+  | IDENT "simplify_eq"
+  | IDENT "replace" "<-" uconstr clause
+  | IDENT "replace" "->" uconstr clause
+  | IDENT "replace" uconstr "with" constr clause by_arg_tac
+  | IDENT "replace" uconstr clause
+  | IDENT "assert_succeeds" ltac_expr LEVEL "3"
+  | IDENT "unify" constr constr "with" preident
+  | IDENT "unify" constr constr
+  | IDENT "autounfold_one" hintbases "in" hyp
+  | IDENT "autounfold_one" hintbases
+  | IDENT "autounfold" hintbases clause
+  | IDENT "dfs" IDENT "eauto" OPT nat_or_var auto_using hintbases
+  | IDENT "info_eauto" OPT nat_or_var auto_using hintbases
+  | IDENT "eauto" OPT nat_or_var auto_using hintbases
+  | IDENT "info_auto" OPT nat_or_var auto_using hintbases
+  | IDENT "auto" OPT nat_or_var auto_using hintbases
+  | IDENT "debug" IDENT "eauto" OPT nat_or_var auto_using hintbases
+  | IDENT "debug" IDENT "auto" OPT nat_or_var auto_using hintbases
+  | IDENT "debug" IDENT "trivial" auto_using hintbases
+  | IDENT "info_trivial" auto_using hintbases
+  | IDENT "trivial" auto_using hintbases
+  | IDENT "autoapply" constr "with" preident
+  | IDENT "head_of_constr" ident constr
+  | IDENT "typeclasses" IDENT "eauto" IDENT "bfs" OPT nat_or_var "with";
+    LIST1 preident
+  | IDENT "typeclasses" IDENT "eauto" IDENT "bfs" OPT nat_or_var
+  | IDENT "typeclasses" IDENT "eauto" IDENT "dfs" OPT nat_or_var "with";
+    LIST1 preident
+  | IDENT "typeclasses" IDENT "eauto" IDENT "dfs" OPT nat_or_var
+  | IDENT "typeclasses" IDENT "eauto" IDENT "best_effort" OPT nat_or_var;
+    "with" LIST1 preident
+  | IDENT "typeclasses" IDENT "eauto" IDENT "best_effort" OPT nat_or_var
+  | IDENT "typeclasses" IDENT "eauto" OPT nat_or_var "with";
+    LIST1 preident
+  | IDENT "typeclasses" IDENT "eauto" OPT nat_or_var
+  | IDENT "decide" IDENT "equality"
+  | IDENT "decide" constr "with" constr
+  | IDENT "setoid_transitivity" constr
+  | IDENT "setoid_etransitivity"
+  | IDENT "setoid_symmetry" "in" hyp
+  | IDENT "setoid_symmetry"
+  | IDENT "setoid_rewrite" orient constr_with_bindings "at" occurrences;
+    "in" hyp
+  | IDENT "setoid_rewrite" orient constr_with_bindings "at" occurrences
+  | IDENT "setoid_rewrite" orient constr_with_bindings "in" hyp "at";
+    occurrences
+  | IDENT "setoid_rewrite" orient constr_with_bindings "in" hyp
+  | IDENT "setoid_rewrite" orient constr_with_bindings
+  | IDENT "substitute" orient constr_with_bindings
+  | IDENT "rewrite_strat" rewstrategy "in" hyp
+  | IDENT "rewrite_strat" rewstrategy
+  | IDENT "rewrite_db" preident "in" hyp
+  | IDENT "rewrite_db" preident
+  | IDENT "finish_timing" "(" string ")" OPT string
+  | IDENT "finish_timing" OPT string
+  | IDENT "restart_timer" OPT string
+  | IDENT "show" IDENT "ltac" IDENT "profile" IDENT "cutoff" integer
+  | IDENT "show" IDENT "ltac" IDENT "profile" string
+  | IDENT "show" IDENT "ltac" IDENT "profile"
+  | IDENT "reset" IDENT "ltac" IDENT "profile"
+  | IDENT "stop" IDENT "ltac" IDENT "profiling"
+  | IDENT "start" IDENT "ltac" IDENT "profiling"
+  | IDENT "intros" IDENT "until" quantified_hypothesis
+  | IDENT "intros" ne_intropatterns
+  | IDENT "intros"
+  | IDENT "eintros" ne_intropatterns
+  | IDENT "eintros"
+  | IDENT "apply" "<-" constr "in" hyp
+  | IDENT "apply" "<-" constr
+  | IDENT "apply" "->" constr "in" hyp
+  | IDENT "apply" "->" constr
+  | IDENT "apply" LIST1 constr_with_bindings_arg SEP "," in_hyp_as
+  | IDENT "eapply" LIST1 constr_with_bindings_arg SEP "," in_hyp_as
+  | IDENT "elim" constr_with_bindings_arg OPT eliminator
+  | IDENT "eelim" constr_with_bindings_arg OPT eliminator
+  | IDENT "case" induction_clause_list
+  | IDENT "ecase" induction_clause_list
+  | "fix" ident natural "with" LIST1 fixdecl
+  | "fix" ident natural
+  | "cofix" ident "with" LIST1 cofixdecl
+  | "cofix" ident
+  | IDENT "set" bindings_with_parameters clause
+  | IDENT "set" constr as_name clause
+  | IDENT "eset" bindings_with_parameters clause
+  | IDENT "eset" constr as_name clause
+  | IDENT "remember" constr as_name eqn_ipat clause_dft_all
+  | IDENT "eremember" constr as_name eqn_ipat clause_dft_all
+  | IDENT "assert" lpar_id_coloneq "(" identref ":=" lconstr ")"
+  | IDENT "assert" test_lpar_id_colon "(" identref ":" lconstr ")";
+    by_tactic
+  | IDENT "assert" constr as_ipat by_tactic
+  | IDENT "eassert" lpar_id_coloneq "(" identref ":=" lconstr ")"
+  | IDENT "eassert" test_lpar_id_colon "(" identref ":" lconstr ")";
+    by_tactic
+  | IDENT "eassert" constr as_ipat by_tactic
+  | IDENT "pose" IDENT "proof" lpar_id_coloneq "(" identref ":=";
+    lconstr ")"
+  | IDENT "pose" IDENT "proof" lconstr as_ipat
+  | IDENT "pose" bindings_with_parameters
+  | IDENT "pose" constr as_name
+  | IDENT "epose" IDENT "proof" lpar_id_coloneq "(" identref ":=";
+    lconstr ")"
+  | IDENT "epose" IDENT "proof" lconstr as_ipat
+  | IDENT "epose" bindings_with_parameters
+  | IDENT "epose" constr as_name
+  | IDENT "enough" test_lpar_id_colon "(" identref ":" lconstr ")";
+    by_tactic
+  | IDENT "enough" constr as_ipat by_tactic
+  | IDENT "eenough" test_lpar_id_colon "(" identref ":" lconstr ")";
+    by_tactic
+  | IDENT "eenough" constr as_ipat by_tactic
+  | IDENT "generalize" IDENT "dependent" constr
+  | IDENT "generalize" constr LIST1 constr
+  | IDENT "generalize" constr lookup_at_as_comma occs as_name;
+    LIST0 [ "," pattern_occ as_name ]
+  | IDENT "generalize" constr
+  | IDENT "induction" induction_clause_list
+  | IDENT "einduction" induction_clause_list
+  | IDENT "destruct" induction_clause_list
+  | IDENT "edestruct" induction_clause_list
+  | IDENT "rewrite" "*" orient uconstr "in" hyp "at" occurrences;
+    by_arg_tac
+  | IDENT "rewrite" "*" orient uconstr "in" hyp by_arg_tac
+  | IDENT "rewrite" "*" orient uconstr "at" occurrences "in" hyp;
+    by_arg_tac
+  | IDENT "rewrite" "*" orient uconstr "at" occurrences by_arg_tac
+  | IDENT "rewrite" "*" orient uconstr by_arg_tac
+  | IDENT "rewrite" LIST1 oriented_rewriter SEP "," clause by_tactic
+  | IDENT "erewrite" LIST1 oriented_rewriter SEP "," clause by_tactic
+  | IDENT "dependent" IDENT "destruction" ident
+  | IDENT "dependent" IDENT "induction" ident
+  | IDENT "dependent" IDENT "generalize_eqs_vars" hyp
+  | IDENT "dependent" IDENT "generalize_eqs" hyp
+  | IDENT "dependent" IDENT "rewrite" orient constr "in" hyp
+  | IDENT "dependent" IDENT "rewrite" orient constr
+  | IDENT "dependent";
+    [ IDENT "simple" IDENT "inversion" | IDENT "inversion"
+    | IDENT "inversion_clear" ] quantified_hypothesis as_or_and_ipat;
+    OPT [ "with" constr ]
+  | IDENT "simple" IDENT "congruence" OPT natural "with" LIST1 constr
+  | IDENT "simple" IDENT "congruence" OPT natural
+  | IDENT "simple" IDENT "destruct" quantified_hypothesis
+  | IDENT "simple" IDENT "induction" quantified_hypothesis
+  | IDENT "simple" IDENT "subst"
+  | IDENT "simple" IDENT "notypeclasses" IDENT "refine" uconstr
+  | IDENT "simple" IDENT "refine" uconstr
+  | IDENT "simple" IDENT "injection" destruction_arg
+  | IDENT "simple" IDENT "injection"
+  | IDENT "simple" IDENT "apply" LIST1 constr_with_bindings_arg SEP ",";
+    in_hyp_as
+  | IDENT "simple" IDENT "eapply" LIST1 constr_with_bindings_arg SEP ",";
+    in_hyp_as
+  | IDENT "simple" IDENT "inversion" quantified_hypothesis as_or_and_ipat;
+    in_hyp_list
+  | IDENT "inversion_clear" quantified_hypothesis as_or_and_ipat;
+    in_hyp_list
+  | IDENT "inversion" quantified_hypothesis "using" constr in_hyp_list
+  | IDENT "inversion" quantified_hypothesis as_or_and_ipat in_hyp_list
+  | IDENT "red" clause
+  | IDENT "hnf" clause
+  | IDENT "simpl" delta_flag OPT ref_or_pattern_occ clause
+  | IDENT "cbv" strategy_flag clause
+  | IDENT "cbn" strategy_flag clause
+  | IDENT "lazy" strategy_flag clause
+  | IDENT "compute" delta_flag clause
+  | IDENT "vm_compute" OPT ref_or_pattern_occ clause
+  | IDENT "native_compute" OPT ref_or_pattern_occ clause
+  | IDENT "unfold" LIST1 unfold_occ SEP "," clause
+  | IDENT "fold" LIST1 constr clause
+  | IDENT "pattern" LIST1 pattern_occ SEP "," clause
+  | IDENT "change" conversion clause
+  | IDENT "change_no_check" conversion clause ] 
+
+smart_global ::=
+  [ reference
+  | by_notation ] 
+
+sort ::=
+  [ "Set"
+  | "Prop"
+  | "SProp"
+  | "Type" "@{" "_" "}"
+  | "Type" "@{" universe "}"
+  | "Type" ] 
+
+sort_family ::=
+  [ "Set"
+  | "Prop"
+  | "SProp"
+  | "Type" ] 
+
+ssexpr is
+[ "35" LEFTA
+  [ "-" SELF ]
+| "50" LEFTA
+  [ SELF "-" SELF
+  | SELF "+" SELF ]
+| "0" LEFTA
+  [ "()"
+  | "(" test_only_starredidentrefs LIST0 starredidentref ")" "*"
+  | "(" test_only_starredidentrefs LIST0 starredidentref ")"
+  | "(" SELF ")" "*"
+  | "(" SELF ")"
+  | starredidentref ] 
+
+starredidentref ::=
+  [ "Type" "*"
+  | "Type"
+  | identref "*"
+  | identref ] 
+
+strategy_flag ::=
+  [ LIST1 red_flag
+  | delta_flag ] 
+
+strategy_level ::=
+  [ IDENT "expand"
+  | IDENT "opaque"
+  | IDENT "transparent"
+  | integer ] 
+
+strategy_level_or_var ::=
+  [ strategy_level
+  | identref ] 
+
+string ::=
+  [ STRING ] 
+
+string_option ::=
+  [ "(" number_string_via ")" ] 
+
+struct_annot ::=
+  [ "{" IDENT "struct" name "}"
+  |  ] 
+
+subprf ::=
+  [ "{"
+  | "}"
+  | BULLET ] 
+
+syntax_command ::=
+  [ IDENT "Open" IDENT "Scope" IDENT
+  | IDENT "Close" IDENT "Scope" IDENT
+  | IDENT "Delimit" IDENT "Scope" IDENT "with" IDENT
+  | IDENT "Undelimit" IDENT "Scope" IDENT
+  | IDENT "Bind" IDENT "Scope" IDENT "with" LIST1 coercion_class
+  | IDENT "Infix" notation_declaration
+  | IDENT "Notation" identref LIST0 ident ":=" constr syntax_modifiers
+  | IDENT "Notation" notation_declaration
+  | IDENT "Reserved" IDENT "Infix" ne_lstring syntax_modifiers
+  | IDENT "Reserved" IDENT "Notation" ne_lstring syntax_modifiers
+  | enable_enable_disable IDENT "Notation" enable_notation_rule;
+    enable_notation_interpretation enable_notation_flags opt_scope ] 
+
+syntax_modifier ::=
+  [ "at" IDENT "level" natural
+  | "in" IDENT "custom" IDENT "at" IDENT "level" natural
+  | "in" IDENT "custom" IDENT
+  | IDENT "left" IDENT "associativity"
+  | IDENT "right" IDENT "associativity"
+  | IDENT "no" IDENT "associativity"
+  | IDENT "only" IDENT "printing"
+  | IDENT "only" IDENT "parsing"
+  | IDENT "format" lstring
+  | IDENT "," LIST1 IDENT SEP ",";
+    [ "at" level | "in" IDENT "scope" IDENT ]
+  | IDENT "at" level OPT binder_interp
+  | IDENT "in" IDENT "scope" IDENT
+  | IDENT binder_interp
+  | IDENT explicit_subentry ] 
+
+syntax_modifiers ::=
+  [ "(" LIST1 [ syntax_modifier ] SEP "," ")"
+  |  ] 
+
+table_value ::=
+  [ STRING
+  | global ] 
+
+tacdef_body ::=
+  [ global LIST1 input_fun ltac_def_kind ltac_expr
+  | global ltac_def_kind ltac_expr ] 
+
+tactic ::=
+  [ ltac_expr ] 
+
+tactic_arg ::=
+  [ "()"
+  | tactic_value
+  | constr ] 
+
+tactic_atom ::=
+  [ "()"
+  | integer
+  | reference ] 
+
+tactic_then_last ::=
+  [ "|" LIST0 (OPT ltac_expr) SEP "|"
+  |  ] 
+
+tactic_then_locality ::=
+  [ "[" OPT ">" ] 
+
+tactic_value ::=
+  [ IDENT "firstorder_using" ":" "(" firstorder_using ")"
+  | IDENT "test" ":" "(" test ")"
+  | IDENT "comparison" ":" "(" comparison ")"
+  | IDENT "opthints" ":" "(" opthints ")"
+  | IDENT "hints_path" ":" "(" hints_path ")"
+  | IDENT "hints_path_atom" ":" "(" hints_path_atom ")"
+  | IDENT "auto_using" ":" "(" auto_using ")"
+  | IDENT "hintbases" ":" "(" hintbases ")"
+  | IDENT "eauto_search_strategy" ":" "(" eauto_search_strategy ")"
+  | IDENT "eauto_search_strategy_name" ":" "(" eauto_search_strategy_name;
+    ")"
+  | IDENT "debug" ":" "(" debug ")"
+  | IDENT "rewstrategy" ":" "(" rewstrategy ")"
+  | IDENT "glob_constr_with_bindings" ":" "(" constr_with_bindings ")"
+  | IDENT "strategy_level_or_var" ":" "(" strategy_level_or_var ")"
+  | IDENT "strategy_level" ":" "(" strategy_level ")"
+  | IDENT "test_lpar_id_colon" ":" "(" test_lpar_id_colon ")"
+  | IDENT "in_clause" ":" "(" in_clause ")"
+  | IDENT "by_arg_tac" ":" "(" by_arg_tac ")"
+  | IDENT "rename" ":" "(" rename ")"
+  | IDENT "hloc" ":" "(" hloc ")"
+  | IDENT "lglob" ":" "(" lconstr ")"
+  | IDENT "lconstr" ":" "(" lconstr ")"
+  | IDENT "glob" ":" "(" constr ")"
+  | IDENT "occurrences" ":" "(" occurrences ")"
+  | IDENT "natural" ":" "(" natural ")"
+  | IDENT "orient" ":" "(" orient ")"
+  | IDENT "ltac" ":" "(" ltac_expr LEVEL "5" ")"
+  | IDENT "open_constr" ":" "(" lconstr ")"
+  | IDENT "ipattern" ":" "(" simple_intropattern ")"
+  | IDENT "constr" ":" "(" lconstr ")"
+  | IDENT "uconstr" ":" "(" lconstr ")"
+  | IDENT "reference" ":" "(" reference ")"
+  | IDENT "ident" ":" "(" ident ")"
+  | IDENT "smart_global" ":" "(" smart_global ")"
+  | IDENT "string" ":" "(" string ")"
+  | IDENT "integer" ":" "(" integer ")"
+  | IDENT "fresh" LIST0 fresh_id
+  | IDENT "type_term" uconstr
+  | IDENT "numgoals"
+  | constr_eval ] 
+
+term is
+[ "200" RIGHTA
+  [ binder_constr ]
+| "100" RIGHTA
+  [ SELF "<:" term LEVEL "200"
+  | SELF "<<:" term LEVEL "200"
+  | SELF ":>" term LEVEL "200"
+  | SELF ":" term LEVEL "200" ]
+| "99" RIGHTA
+  [ SELF "->" term LEVEL "200" ]
+| "95" RIGHTA
+  [ SELF "<->" NEXT ]
+| "90" RIGHTA
+  [  ]
+| "85" RIGHTA
+  [ SELF "\\/" term LEVEL "85" ]
+| "80" RIGHTA
+  [ SELF "/\\" term LEVEL "80" ]
+| "75" RIGHTA
+  [ "~" term LEVEL "75" ]
+| "70" RIGHTA
+  [ SELF ">" NEXT
+  | SELF ">=" NEXT
+  | SELF "<" NEXT "<=" NEXT
+  | SELF "<" NEXT "<" NEXT
+  | SELF "<" NEXT
+  | SELF "<=" NEXT "<" NEXT
+  | SELF "<=" NEXT "<=" NEXT
+  | SELF "<=" NEXT
+  | SELF "<>" NEXT ":>" NEXT
+  | SELF "<>" NEXT
+  | SELF "=" NEXT "=" NEXT
+  | SELF "=" NEXT ":>" NEXT
+  | SELF "=" NEXT ]
+| "60" RIGHTA
+  [ SELF "++" term LEVEL "60"
+  | SELF "::" term LEVEL "60" ]
+| "50" LEFTA
+  [ SELF "||" NEXT
+  | SELF "-" NEXT
+  | SELF "+" NEXT ]
+| "40" LEFTA
+  [ SELF "&&" NEXT
+  | SELF "/" NEXT
+  | SELF "*" NEXT ]
+| "35" RIGHTA
+  [ "/" term LEVEL "35"
+  | "-" term LEVEL "35" ]
+| "30" RIGHTA
+  [ SELF "^" term LEVEL "30" ]
+| "10" LEFTA
+  [ SELF LIST1 arg
+  | "@" global univ_annot LIST0 NEXT
+  | "@" pattern_ident LIST1 identref ]
+| "9" LEFTA
+  [ ".." term LEVEL "0" ".." ]
+| "8" LEFTA
+  [  ]
+| "1" LEFTA
+  [ SELF ".(" "@" global univ_annot LIST0 (term LEVEL "9") ")"
+  | SELF ".(" global univ_annot LIST0 arg ")"
+  | SELF "%" IDENT ]
+| "0" LEFTA
+  [ IDENT "ltac" ":" "(" ltac_expr ")"
+  | "(" term LEVEL "200" "," term LEVEL "200" "," LIST1 (term LEVEL
+    "200") SEP "," ")"
+  | "(" term LEVEL "200" "," term LEVEL "200" ")"
+  | "(" term LEVEL "200" ")"
+  | "{|" record_declaration '|}'
+  | "{" "'" pattern LEVEL "0" "&" term LEVEL "200" "&" term LEVEL
+    "200" "}"
+  | "{" "'" pattern LEVEL "0" "&" term LEVEL "200" "}"
+  | "{" "'" pattern LEVEL "0" ":" term LEVEL "200" "&" term LEVEL
+    "200" "&" term LEVEL "200" "}"
+  | "{" "'" pattern LEVEL "0" ":" term LEVEL "200" "&" term LEVEL
+    "200" "}"
+  | "{" "'" pattern LEVEL "0" ":" term LEVEL "200" "|" term LEVEL
+    "200" "&" term LEVEL "200" "}"
+  | "{" "'" pattern LEVEL "0" ":" term LEVEL "200" "|" term LEVEL
+    "200" "}"
+  | "{" "'" pattern LEVEL "0" "|" term LEVEL "200" "&" term LEVEL
+    "200" "}"
+  | "{" "'" pattern LEVEL "0" "|" term LEVEL "200" "}"
+  | "{" term LEVEL "99" "&" term LEVEL "200" "&" term LEVEL "200" "}"
+  | "{" term LEVEL "99" "&" term LEVEL "200" "}"
+  | "{" term LEVEL "99" ":" term LEVEL "200" "&" term LEVEL "200" "&";
+    term LEVEL "200" "}"
+  | "{" term LEVEL "99" ":" term LEVEL "200" "&" term LEVEL "200" "}"
+  | "{" term LEVEL "99" ":" term LEVEL "200" "|" term LEVEL "200" "&";
+    term LEVEL "200" "}"
+  | "{" term LEVEL "99" ":" term LEVEL "200" "|" term LEVEL "200" "}"
+  | "{" term LEVEL "99" "|" term LEVEL "200" "&" term LEVEL "200" "}"
+  | "{" term LEVEL "99" "|" term LEVEL "200" "}"
+  | "{" term LEVEL "99" "}"
+  | "{" binder_constr "}"
+  | "`{" term LEVEL "200" "}"
+  | "`(" term LEVEL "200" ")"
+  | NUMBER
+  | atomic_constr
+  | term_match
+  | ident fields univ_annot
+  | ident univ_annot
+  | test_array_opening "[" "|" array_elems "|" lconstr type_cstr;
+    test_array_closing "|" "]" univ_annot ] 
+
+term_match ::=
+  [ "match" LIST1 case_item SEP "," OPT case_type "with" branches "end" ] 
+
+test ::=
+  [ int_or_var comparison int_or_var ] 
+
+test_array_closing is
+[ <parser> 
+
+test_array_opening is
+[ <parser> 
+
+test_bracket_ident is
+[ <parser> 
+
+test_hash_ident is
+[ <parser> 
+
+test_leftsquarebracket_equal is
+[ <parser> 
+
+test_lpar_id_colon ::=
+  [ lpar_id_colon ] 
+
+test_lpar_id_coloneq is
+[ <parser> ]
+or
+[ <parser> 
+
+test_lpar_idnum_coloneq is
+[ <parser> 
+
+test_minus_nat is
+[ <parser> 
+
+test_name_colon is
+[ <parser> 
+
+test_only_starredidentrefs is
+[ <parser> 
+
+test_pipe_closedcurly is
+[ <parser> 
+
+test_variance_ident is
+[ <parser> 
+
+thm_token ::=
+  [ "Theorem"
+  | IDENT "Lemma"
+  | IDENT "Fact"
+  | IDENT "Remark"
+  | IDENT "Corollary"
+  | IDENT "Proposition"
+  | IDENT "Property" ] 
+
+type_cstr ::=
+  [ ":" lconstr
+  |  ] 
+
+typeclass_constraint ::=
+  [ "!" term LEVEL "200"
+  | "{" name "}" ":" [ "!" |  ] term LEVEL "200"
+  | test_name_colon name ":" [ "!" |  ] term LEVEL "200"
+  | term LEVEL "200" ] 
+
+uconstr ::=
+  [ constr ] 
+
+unfold_occ ::=
+  [ smart_global occs ] 
+
+univ_annot ::=
+  [ "@{" LIST0 universe_level "}"
+  |  ] 
+
+univ_constraint ::=
+  [ universe_name [ "<" | "=" | "<=" ] universe_name ] 
+
+univ_decl ::=
+  [ "@{" LIST0 identref [ "+" |  ];
+    [ "|" LIST0 univ_constraint SEP "," [ "+" |  ] "}" | [ "}" | '|}' ] ] ] 
+
+univ_name_list ::=
+  [ "@{" LIST0 name "}" ] 
+
+universe ::=
+  [ IDENT "max" "(" LIST1 universe_expr SEP "," ")"
+  | universe_expr ] 
+
+universe_expr ::=
+  [ universe_name universe_increment ] 
+
+universe_increment ::=
+  [ "+" natural
+  |  ] 
+
+universe_level ::=
+  [ "Set"
+  | "Prop"
+  | "Type"
+  | "_"
+  | global ] 
+
+universe_name ::=
+  [ "Set"
+  | "Prop"
+  | global ] 
+
+variance ::=
+  [ "+"
+  | "="
+  | "*" ] 
+
+variance_identref ::=
+  [ identref
+  | test_variance_ident variance identref ] 
+
+vernac ::=
+  [ LIST0 legacy_attr vernac_aux ] 
+
+vernac_aux ::=
+  [ gallina "."
+  | gallina_ext "."
+  | command "."
+  | syntax_command "."
+  | subprf ]
+| LEFTA
+  [ command_entry ] 
+
+vernac_control ::=
+  [ IDENT "Time" SELF
+  | IDENT "Redirect" ne_string SELF
+  | IDENT "Timeout" natural SELF
+  | IDENT "Fail" SELF
+  | IDENT "Succeed" SELF
+  | decorated_vernac ] 
+
+with_bindings ::=
+  [ "with" bindings
+  |  ] 
+
+with_declaration ::=
+  [ "Definition" fullyqualid OPT univ_decl ":=" lconstr
+  | IDENT "Module" fullyqualid ":=" qualid ] 
+
+withtac ::=
+  [ "with" tactic
+  |  ]

@@ -1,0 +1,56 @@
+comma ::= ","
+term         ::=  forall binders comma term
+                  | fun binders "=>" term
+                  | fix fix_bodies
+                  | cofix cofix_bodies
+                  | let ident "[" binders "]" "[:" term"]" ":=" term "in" term
+                  | let fix fix_body "in" term
+                  | let cofix cofix_body in term
+                  | let ( [name , … , name] ) [dep_ret_type] := term in term
+                  | let ' pattern [in term] := term [return_type] in term
+                  | if term [dep_ret_type] then term else term
+                  | term : term
+                  | term <: term
+                  | term :>
+                  | term -> term
+                  | term arg … arg
+                  | @ qualid [term … term]
+                  | term % ident
+                  | match match_item , … , match_item [return_type] with
+                    [[|] equation | … | equation] end
+                  | qualid
+                  | sort
+                  | num
+                  | _
+                  | ( term )
+arg          ::=  term
+                  | ( ident := term )
+binders      ::=  binder … binder
+binder       ::=  name
+                  | ( name … name : term )
+                  | ( name [: term] := term )
+                  | ' pattern
+name         ::=  ident | _
+qualid       ::=  ident | qualid access_ident
+sort         ::=  Prop | Set | Type
+fix_bodies   ::=  fix_body
+                  | fix_body with fix_body with … with fix_body for ident
+cofix_bodies ::=  cofix_body
+                  | cofix_body with cofix_body with … with cofix_body for ident
+fix_body     ::=  ident binders [annotation] [: term] := term
+cofix_body   ::=  ident [binders] [: term] := term
+annotation   ::=  { struct ident }
+match_item   ::=  term [as name] [in qualid [pattern … pattern]]
+dep_ret_type ::=  [as name] return_type
+return_type  ::=  return term
+equation     ::=  mult_pattern | … | mult_pattern => term
+mult_pattern ::=  pattern , … , pattern
+pattern      ::=  qualid pattern … pattern
+                  | @ qualid pattern … pattern
+                  | pattern as ident
+                  | pattern % ident
+                  | qualid
+                  | _
+                  | num
+                  | ( or_pattern , … , or_pattern )
+or_pattern   ::=  pattern | … | pattern
