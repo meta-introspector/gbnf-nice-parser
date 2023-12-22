@@ -1,6 +1,40 @@
 We are developing an ocaml parser for the GBNF grammar language and intend
 on deeply integrating this into the llama.cpp code via embedding ocaml plugins which we have poc for.
 
+* Goals
+
+** parse in existing grammars
+
+*** Import gbnf examples
+search github like this
+https://github.com/search?q=path%3A*.gbnf&type=code
+
+example:
+https://github.com/compatibl/confirms/blob/main/grammar/frequency.gbnf
+
+
+** convert to menhir grammars
+*** generate dot files and checks using existing menhir code
+*** emit menhir parser for gbnf
+
+*** emit gbnf for menhir parser
+*** convert other bnf formats
+
+*** convert antlr formats
+
+
+** later proofs
+We will later prove that its implementation is valid and connect the
+code to the proof.  we can use this proof to expand a bridge between
+the proof system and how the gbnf is used to restrict the output of
+the llm.  The proof will guide our system to logically connect the
+grammar with the intent of the users to the source code to the
+execution of the code in a woven tapestry or tape.  Later will will
+visualize the execution of the llm and show how the tesors contribute
+to the tokens and how those fit in the grammar and how the grammar
+constrains the output. We will allow the user to fine tune grammars on
+text to create more customized rules.
+
 * introduction
 
 GBNF is Another innovative ebnf format for defining grammar rules for constraining output of llms.
@@ -14,14 +48,14 @@ Here is the source code that implements it https://github.com/ggerganov/llama.cp
 And here is the grammar that I extracted from it
 [[test/test.gbnf][test/test.gbnf]]
 
-* Goals
-We will later proove that its implementation is valid and connect the code to the proof.
-we can use this proof to expand a bridge between the proof system and how the gbnf is used
-to restrict the output of the llm.
-The proof will guide our system to logically connect the grammar with the intent of the users
-to the source code to the execution of the code in a woven tapestry or tape.
-Later will will visualize the execution of the llm and show how the tesors contribute to the tokens and how those fit in the grammar
-and how the grammar constrains the output. We will allow the user to fine tune grammars on text to create more customized rules.
+* testing
+
+run on one file.
+
+#+begin_src sh
+dune exec bin/main.exe ./test/codesample.txt
+#+end_src
+
 
 * Overview
 This is a high level overview of the entire project with its context.
@@ -59,13 +93,4 @@ This is a high level overview of the entire project with its context.
 *** ollama
 *** gpt4all
 *** lollms
-
-* testing
-
-run on one file.
-
-#+begin_src sh
-dune exec bin/main.exe ./test/codesample.txt
-#+end_src
-
 
