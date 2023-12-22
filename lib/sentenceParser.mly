@@ -167,28 +167,8 @@ symbol:
       (print_endline (Batteries.dump ("DEBUG:ID", id)));
       id }
 
-(* %inline terminal_alias_attrs: *)
-(*   id = UID alias = QID? attrs = ATTRIBUTE* *)
-(*     { (print_endline (Batteries.dump ("DEBUG:attributes", id))); *)
-(*       let alias = Option.map Positions.value alias in *)
-(*       Positions.map (fun uid -> uid, alias, attrs) id } *)
-
-(* %inline nonterminal: *)
-(*   id = LID *)
-(*     { id } *)
-
-(* %inline rule: *)
-(*   old_rule *)
-(*     { *)
-(*       (print_endline (Batteries.dump ($1))); *)
-(*       $1 } *)
-(* | new_rule *)
-(*     /* The new syntax is converted on the fly to the old syntax. */ *)
-(*     { (print_endline (Batteries.dump ($1))); *)
-(*       NewRuleSyntax.rule $1 } *)
-
 old_rule:
-symbol = LID
+symbol = symbol
 /* the symbol that is being defined */
 COLONCOLONEQUAL
 /* optional_bar */
