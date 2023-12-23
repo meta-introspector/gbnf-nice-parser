@@ -75,13 +75,6 @@ old_rule -> symbol COLONCOLONEQUAL . rhs [ NEWLINE # ]
 -- On factor shift to state 17
 -- On concatenation shift to state 19
 ## Reductions:
--- On NEWLINE #
---   reduce production rhs ->
-** End-of-stream conflict on QID NEWLINE LPAREN LID LBRACE
-**   There is a tension between
-**   (1) reducing production rhs ->
-**   without even requesting a lookahead token, and
-**   (2) testing whether the lookahead token is a member of the above set.
 
 State 5:
 ## Known stack suffix:
@@ -100,8 +93,6 @@ term -> LPAREN . rhs RPAREN [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPARE
 -- On factor shift to state 17
 -- On concatenation shift to state 19
 ## Reductions:
--- On RPAREN
---   reduce production rhs ->
 
 State 6:
 ## Known stack suffix:
@@ -120,8 +111,6 @@ term -> LBRACE . rhs RBRACE [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPARE
 -- On factor shift to state 17
 -- On concatenation shift to state 19
 ## Reductions:
--- On RBRACE
---   reduce production rhs ->
 
 State 7:
 ## Known stack suffix:

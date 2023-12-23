@@ -251,7 +251,6 @@ concatenation:
 rhs:
   | concatenation {}
   | concatenation BAR concatenation{}
-  |  {}
 
 /* expression: */
 /*   | prods = expression BAR expression */
