@@ -58,7 +58,9 @@ let unparenthesize (o : Stretch.t option) : Stretch.t option =
 
 /* ------------------------------------------------------------------------- */
 /* Tokens. */
-
+%token <int> Tchar
+%token DASH "-"
+%token CARET "^"
 %token
   TOKEN            "%token"
   TYPE             "%type"
@@ -110,7 +112,6 @@ WHITESPACE
 %start <Syntax.partial_grammar> grammar
 
 
-%nonassoc no_optional_bar
 %nonassoc BAR
 
 /* ------------------------------------------------------------------------- */
@@ -178,10 +179,9 @@ old_rule:
 symbol = symbol
 /* the symbol that is being defined */
 COLONCOLONEQUAL
-/* optional_bar  */
-branches = branches(* separated_nonempty_list(BAR, symbol+) *)
+branches = rhs(* separated_nonempty_list(BAR, symbol+) *)
     {
-      (print_endline (Batteries.dump ("DEBUG:branches", branches)));
+      (print_endline (Batteries.dump ("DEBUG:branches1", branches)));
       {
         pr_nt          = Positions.value symbol;
         pr_positions   = [ Positions.position symbol ];
@@ -189,46 +189,9 @@ branches = branches(* separated_nonempty_list(BAR, symbol+) *)
       }
     }
 
-%inline branch:
-  e = expression
-    { Branch (e, ParserAux.new_production_level()) }
 
 
 
-optional_bar:
-  /* epsilon */ %prec no_optional_bar
-| BAR
-    { () }
-
-
-production:
-  producers = producer
-    {
-      (print_endline (Batteries.dump ("DEBUG:production", producers)))
-    }
-  | delimited(LPAREN, nonempty_list(producer), RPAREN)
-    {
-      (print_endline (Batteries.dump ("DEBUG:production", $1)))
-    }
-
-actual :
-  | branches = expression
-    {
-      (print_endline (Batteries.dump ("DEBUG:branches", branches)))
-    }
-  /* branches = located(branches) */
-  /*              { */
-  /*                (print_endline (Batteries.dump ("DEBUG:branches", branches))); */
-  /*                (* ParameterAnonymous branches *) */
-                 
-  /*              } */
-
-producer:
-| id = actual
-    {
-      (print_endline (Batteries.dump ("DEBUG:producer", id)));
-      
-    }
 
 
 
@@ -269,74 +232,63 @@ located(X):
   x = X
     { with_loc $loc x }
 
+term:
+  | "(" rhs  ")" {}
+  | "[" rhs  "]" {}
+  /* | "{" rhs  "}" {} */
+  | symbol {}
 
-(*    now to re-introduce   --------------------------------------------------*)
-(* branches: *)
-(*   prods = production_group *)
-(*     { *)
-(*       (print_endline (Batteries.dump ("DEBUG:branches",prods))); *)
-(*       [](\* prods *\) *)
+factor:
+  | term "?" {}
+  | term "*" {}
+  | term "+" {}
+  | term "-" term {}
+  | term  {}
 
-%inline branches:
-  prods = separated_nonempty_list(BAR, production)
-    { 
-      (print_endline (Batteries.dump ("DEBUG:branches",prods)))
-    }
+concatenation:
+  | factor + {}
 
-/* production_group: */
-/*   productions = separated_nonempty_list(BAR, production) */
-/*     { */
-/*       productions */
+rhs:
+  | concatenation {}
+  | concatenation BAR concatenation{}
+  |  {}
+
+/* expression: */
+/*   | prods = expression BAR expression */
+/*     {  */
+/*       (print_endline (Batteries.dump ("DEBUG:branches2",prods))) */
+/*     } */
+/*   | prods = expression expression */
+/*     {  */
+/*       (print_endline (Batteries.dump ("DEBUG:branches2",prods))) */
 /*     } */
 
-/* %inline choice_expression: */
-/*   branches = preceded_or_separated_nonempty_llist(BAR, branch) */
-/*     { EChoice branches } */
+/*   /\* | expression expression  { (print_endline (Batteries.dump ("DEBUG:rs",$1))) } *\/ */
+/*   | LPAREN expression RPAREN { (print_endline (Batteries.dump ("DEBUG:rs",$2))) } */
+/*   | LBRACE list(char_class) RBRACE { (print_endline (Batteries.dump ("DEBUG:rs",$2))) } */
+/*   | e = expression m = modifier    {	       (print_endline (Batteries.dump ("DEBUG:branches3", e,m )))     } */
+/*   | branches = symbol   {      (print_endline (Batteries.dump ("DEBUG:branches4", branches)))    } */
+/* ; */
 
-
-/* %inline continuation: */
-/*   SEMI e2 = seq_expression */
-/* /\* |   e2 = action_expression *\/ */
-/*     { e2 } */
-
-
-/* %inline seq_expression: */
-/*   e = located(raw_seq_expression) */
-/*     { e } */
-
-
-/* raw_seq_expression: */
-/* |                    e1 = symbol_expression e2 = continuation */
-/*     { ECons (SemPatWildcard, e1, e2) } */
-/* (* | p1 = pattern EQUAL e1 = symbol_expression e2 = continuation *) */
-/* (*     { ECons (p1, e1, e2) } *) */
-/* | e = symbol_expression */
-/*     { ESingleton e } */
-/* (* | e = action_expression *) */
-/* (*     { e } *) */
-
-expression:
-/*   | LPAREN list(expression) RPAREN { */
-/* (print_endline (Batteries.dump ("DEBUG:rs",$2))) */
-/* } */
-  /* | LID { (print_endline (Batteries.dump ("DEBUG:rs",$1)));  } */
-/* | QID { (print_endline (Batteries.dump ("DEBUG:rs",$1)));  } */
-  | e = expression m = modifier
-    {
-	       (print_endline (Batteries.dump ("DEBUG:branches", e,m )))
-	     }
-
-  /* | branches = preceded_or_separated_nonempty_llist(BAR, symbol) */
-  /*   { */
-  /* 	       (print_endline (Batteries.dump ("DEBUG:branches", branches))) */
-  /* 	     } */
-  | branches = symbol
-    {
-      (print_endline (Batteries.dump ("DEBUG:branches", branches)))
-    }
-
-  (* | literal { Lit $1 } *)
-  ;
+(* ocaml/lex/parser.mly *)
+char_class:
+    CARET char_class1
+    /* { Cset.complement $2 } */
+{   (print_endline (Batteries.dump ("DEBUG:rs",$2))) }
+  | char_class1
+    /* { $1 } */
+    {   (print_endline (Batteries.dump ("DEBUG:rs",$1))) }
+;
+char_class1:
+    Tchar DASH Tchar
+    /* { Cset.interval $1 $3 } */
+    {   (print_endline (Batteries.dump ("DEBUG:rs",$1,$2))) }
+  | Tchar
+    /* Cset.singleton $1 */
+    {   (print_endline (Batteries.dump ("DEBUG:rs",$1))) }
+  /* | char_class1 char_class1 %prec CONCAT */
+  /*       { Cset.union $1 $2 } */
+;
 
 /* symbol_expression: */
 /* /\* | symbol = symbol es = plist(expression)  *\/ */

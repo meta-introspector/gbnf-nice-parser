@@ -509,6 +509,10 @@ rule main = parse
     { PLUS }
 | "~"
     { TILDE }
+| "-"
+    { DASH }
+| "^"
+    { CARET }
 | "_"
     { UNDERSCORE }
 | ":="

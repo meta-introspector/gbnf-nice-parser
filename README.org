@@ -146,12 +146,6 @@ dune exec bin/main.exe ./test/codesample.txt
 ** Error analysis 
 
 Lets consider this test:
-#+begin_src sh
-       for x in grammars/*.gbnf;
-       do echo $x;
-          dune exec bin/main.exe  $x > $x.out 2>&1;
-       done
-#+end_src
 
 *** mistral output
 This script tests a grammar parser by running the executable `main.exe` on each grammar file in the `grammars/` directory and captures any output to a file with the same name as the input file, but with a `.out` extension.
@@ -170,16 +164,69 @@ The output is then piped to `sort`, `uniq -c` and finally `sort -n`. The options
 This will give us a list of all unique states along with their count in the order of increasing count.
 #+end_src
 
+*** Commands
+
+#+begin_src sh
+       for x in grammars/*.gbnf;
+       do echo $x;
+          dune exec bin/main.exe  $x > $x.out 2>&1;
+       done
+#+end_src
+
+#+RESULTS:
+| grammars/arithmetic.gbnf                          |
+| grammars/assistant.gbnf                           |
+| grammars/c.gbnf                                   |
+| grammars/charm.gbnf                               |
+| grammars/chat.gbnf                                |
+| grammars/chess.gbnf                               |
+| grammars/colors.gbnf                              |
+| grammars/commands.gbnf                            |
+| grammars/commands_kwargs.gbnf                     |
+| grammars/elixir.gbnf                              |
+| grammars/elixir_no_left_recursion.gbnf            |
+| grammars/gallina.gbnf                             |
+| grammars/gallina2.gbnf                            |
+| grammars/gen_function_calling.gbnf                |
+| grammars/generated_grammar.gbnf                   |
+| grammars/grammar-3.gbnf                           |
+| grammars/grammar.gbnf                             |
+| grammars/hazel.gbnf                               |
+| grammars/japanese.gbnf                            |
+| grammars/json.gbnf                                |
+| grammars/json_arr.gbnf                            |
+| grammars/json_converse.gbnf                       |
+| grammars/json_func_calls_with_inner_thoughts.gbnf |
+| grammars/json_only_reply.gbnf                     |
+| grammars/list.gbnf                                |
+| grammars/multi-tool.gbnf                          |
+| grammars/pinnacle_turn_d.gbnf                     |
+| grammars/pinnacle_turn_s.gbnf                     |
+| grammars/primitive.gbnf                           |
+| grammars/question_grammar.gbnf                    |
+| grammars/segfault.gbnf                            |
+| grammars/segfault_fixed.gbnf                      |
+| grammars/syllable-count.gbnf                      |
+| grammars/test_grammar.gbnf                        |
+| grammars/tools.gbnf                               |
+| grammars/w++.gbnf                                 |
+| grammars/yaml.gbnf                                |
+
 #+begin_src sh
   grep -h -C3 error  grammars/*.out|grep State  |sort |uniq -c |sort -n
 #+end_src
 
 #+RESULTS:
-| 1 | State |  0: |
-| 1 | State |  7: |
-| 3 | State |  5: |
-| 5 | State |  9: |
-| 9 | State | 18: |
+|  1 | State |  0: |
+|  1 | State | 10: |
+|  1 | State |  5: |
+| 14 | State | 19: |
+
+total of 17 errors, most common is
+| 14 | State 19:  |
+
+Previouly it was 
+| 9  | State | 18: |
 
 That tells you the state 18 has the most errors 9.
 
