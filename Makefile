@@ -3,6 +3,8 @@ duneTest:
 test1:
 	menhir --trace -v --interpret  ./lib/sentenceParser.mly < test/test.gbnf
 
+testall:
+	for x in grammars/*.gbnf; do echo $x; dune exec bin/main.exe  $x > $x.out 2>&1; done
 compile:
 	menhir --cmly --table --trace --dump --explain --log-grammar 99 --log-automaton 9 --log-code 99 --log-grammar 99 --reference-graph lib/sentenceParser.mly	
 	rm -f lib/sentenceParser.cmly lib/sentenceParser.ml lib/sentenceParser.mli

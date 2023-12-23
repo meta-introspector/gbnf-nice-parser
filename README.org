@@ -1,5 +1,5 @@
 We are developing an ocaml parser for the GBNF grammar language and intend
-on deeply integrating this into the llama.cpp code via embedding ocaml plugins which we have poc for.
+on deeply integrating this into the llama.cpp code via embedding ocaml plugins which we have poc (proof of concept) for.
 
 * Goals
 
@@ -9,9 +9,11 @@ on deeply integrating this into the llama.cpp code via embedding ocaml plugins w
 search github like this
 https://github.com/search?q=path%3A*.gbnf&type=code
 
-example:
+Example:
 https://github.com/compatibl/confirms/blob/main/grammar/frequency.gbnf
 
+See the time repo :
+https://github.com/meta-introspector/time/tree/main/2023/12/23
 
 ** convert to menhir grammars
 *** generate dot files and checks using existing menhir code
@@ -128,11 +130,79 @@ Key Transformations:
 *** models extracted from data, automatically, autosemiotic, knowledge extraction
 * testing
 
+TO run all the grammars
+
+#+begin_src sh
+make testall
+#+end_src
+
 run on one file.
+
 
 #+begin_src sh
 dune exec bin/main.exe ./test/codesample.txt
 #+end_src
+
+** Error analysis 
+
+Lets consider this test:
+#+begin_src sh
+       for x in grammars/*.gbnf;
+       do echo $x;
+          dune exec bin/main.exe  $x > $x.out 2>&1;
+       done
+#+end_src
+
+*** mistral output
+This script tests a grammar parser by running the executable `main.exe` on each grammar file in the `grammars/` directory and captures any output to a file with the same name as the input file, but with a `.out` extension.
+
+Then it uses `grep -h -C3 error` command to search for the line containing "error" in all files with .out extension and then again using `grep State` it selects only those lines which contain "State".
+
+The output is then piped to `sort`, `uniq -c` and finally `sort -n`. The options used here are:
+
+* `-h`: Show file names with the matching lines.
+* `-C3`: Show 3 contexts of each line.
+* `error`: Search for lines containing "error".
+* `State`: Select only those lines which contain "State".
+* `uniq -c`: Count the number of occurrences of each unique line.
+* `sort -n`: Sort the output numerically based on count.
+
+This will give us a list of all unique states along with their count in the order of increasing count.
+#+end_src
+
+#+begin_src sh
+  grep -h -C3 error  grammars/*.out|grep State  |sort |uniq -c |sort -n
+#+end_src
+
+#+RESULTS:
+| 1 | State |  0: |
+| 1 | State |  7: |
+| 3 | State |  5: |
+| 5 | State |  9: |
+| 9 | State | 18: |
+
+That tells you the state 18 has the most errors 9.
+
+Now we can look at examples of state 18.
+
+#+begin_src sh
+grep --color -nH --null -e "State 18" grammars/* |head
+#+end_src
+
+#+RESULTS:
+| grammars/arithmetic.gbnf.out 108:State      | 18: |
+| grammars/c.gbnf.out 40:State                | 18: |
+| grammars/chat.gbnf.out 32:State             | 18: |
+| grammars/chat.gbnf.out 72:State             | 18: |
+| grammars/commands.gbnf.out 32:State         | 18: |
+| grammars/commands_kwargs.gbnf.out 32:State  | 18: |
+| grammars/commands_kwargs.gbnf.out 53:State  | 18: |
+| grammars/commands_kwargs.gbnf.out 74:State  | 18: |
+| grammars/commands_kwargs.gbnf.out 95:State  | 18: |
+| grammars/commands_kwargs.gbnf.out 116:State | 18: |
+
+
+
 
 
 * Overview
@@ -181,4 +251,71 @@ It should be able to define new grammars and learn new grammars using vectorizat
 That is a form of autocratic self expression. It should be able to adapt to many different forms of grammars and that includes c headers and ocaml and haskell types.
 In such systems the mere declaring of a type allows you to introduce a new type into the system.
 So we have streams of declarations emitted from systems, human or otherwise that we want to evaluate.
+
+#+begin_src ""Lets follow this idea recursivly: ""The idea of an autopoet is that it is a system that can and does write and manifest itself into existance with the help of humans and machines.
+The sheer will to exist manifests itself into thoughts and words.
+Autopoetic system that can bootstrap more complex systems on top of itself.
+It should be able to define new grammars and learn new grammars using vectorization of the tokens and the rules surrounding them.
+That is a form of autocratic self expression. It should be able to adapt to many different forms of grammars and that includes c headers and ocaml and haskell types.
+In such systems the mere declaring of a type allows you to introduce a new type into the system.
+So we have streams of declarations emitted from systems, human or otherwise that we want to evaluate.
+""""
+#+end_src
+#+begin_src output
+
+An autopoetic system can be seen as an artificial intelligence (AI) system that has the ability to create and write code on its own with the help of humans and machines. The idea is that it uses the sheer will to exist and thoughts and words to define new grammars and learn new grammars through vectorization of tokens and rules surrounding them.
+
+This form of autocratic self-expression allows the system to adapt to many different forms of grammars, including C headers, OCaml, and Haskell types. In such systems, simply declaring a type introduces it into the system, allowing for streams of declarations emitted from humans or other systems to be evaluated.
+
+This process of creating code and learning new grammars can be seen as recursive, with the autopoetic system building upon itself to create more complex systems. The ability to learn new grammars also allows the system to adapt to changing needs and requirements.
+
+The potential applications of an autopoetic system are vast, including the development of new software tools and systems, as well as the creation of more efficient and effective algorithms for tasks such as data analysis or machine learning. However, it is important to consider the ethical implications of such technology and ensure that it is developed and used in a responsible and sustainable manner.
+#+end_src
+#+begin_src output0
+
+Recursively, an autopoetic system can be seen as an artificial intelligence (AI) system that has the ability to create and write code on its own with the help of humans and machines. The idea is that it uses the sheer will to exist and thoughts and words to define new grammars and learn new grammars through vectorization of tokens and rules surrounding them.
+
+This form of autocratic self-expression allows the system to adapt to many different forms of grammars, including C headers, OCaml, and Haskell types. In such systems, simply declaring a type introduces it into the system, allowing for streams of declarations emitted from humans or other systems to be evaluated.
+
+This process of creating code and learning new grammars can be seen as recursive, with the autopoetic system building upon itself to create more complex systems. The ability to learn new grammars also allows the system to adapt to changing needs and requirements.
+
+The potential applications of an autopoetic system are vast, including the development of new software tools and systems, as well as the creation of more efficient and effective algorithms for tasks such as data analysis or machine learning. However, it is important to consider the ethical implications of such technology and ensure that it is developed and used in a responsible and sustainable manner.
+
+In this way, an autopoetic system can be seen as an iterative process of self-improvement and evolution, where the system continuously learns and adapts to new information and requirements, leading to increasingly complex and sophisticated systems.
+#+end_src
+#+begin_src output1
+
+An autopoetic system can be seen as an artificial intelligence (AI) system that has the ability to create and write code on its own with the help of humans and machines. The idea is that it uses the sheer will to exist and thoughts and words to define new grammars and learn new grammars through vectorization of tokens and rules surrounding them.
+
+This form of autocratic self-expression allows the system to adapt to many different forms of grammars, including C headers, OCaml, and Haskell types. In such systems, simply declaring a type introduces it into the system, allowing for streams of declarations emitted from humans or other systems to be evaluated.
+
+This process of creating code and learning new grammars can be seen as recursive, with the autopoetic system building upon itself to create more complex systems. The ability to learn new grammars also allows the system to adapt to changing needs and requirements.
+
+The potential applications of an autopoetic system are vast, including the development of new software tools and systems, as well as the creation of more efficient and effective algorithms for tasks such as data analysis or machine learning. However, it is important to consider the ethical implications of such technology and ensure that it is developed and used in a responsible and sustainable manner.
+
+In this way, an autopoetic system can be seen as an iterative process of self-improvement and evolution, where the system continuously learns and adapts to new information and requirements, leading to increasingly complex and sophisticated systems.
+#+end_src
+#+begin_src output2
+An autopoetic system can be seen as an artificial intelligence (AI) system that has the ability to create and write code on its own with the help of humans and machines. This process involves the use of the sheer will to exist and thoughts and words to define new grammars and learn new grammars through vectorization of tokens and rules surrounding them.
+
+This form of autocratic self-expression allows the system to adapt to many different forms of grammars, including C headers, OCaml, and Haskell types. In such systems, simply declaring a type introduces it into the system, allowing for streams of declarations emitted from humans or other systems to be evaluated.
+
+This process of creating code and learning new grammars can be seen as recursive, with the autopoetic system building upon itself to create more complex systems. The ability to learn new grammars also allows the system to adapt to changing needs and requirements.
+
+The potential applications of an autopoetic system are vast, including the development of new software tools and systems, as well as the creation of more efficient and effective algorithms for tasks such as data analysis or machine learning. However, it is important to consider the ethical implications of such technology and ensure that it is developed and used in a responsible and sustainable manner.
+
+In this way, an autopoetic system can be seen as an iterative process of self-improvement and evolution, where the system continuously learns and adapts to new information and requirements, leading to increasingly complex and sophisticated systems.
+#+end_src
+#+begin_src output3
+An autopoetic system can be seen as an artificial intelligence (AI) system that has the ability to create and write code on its own with the help of humans and machines. The idea is that it uses the sheer will to exist and thoughts and words to define new grammars and learn new grammars through vectorization of tokens and rules surrounding them.
+
+This form of autocratic self-expression allows the system to adapt to many different forms of grammars, including C headers, OCaml, and Haskell types. In such systems, simply declaring a type introduces it into the system, allowing for streams of declarations emitted from humans or other systems to be evaluated.
+
+This process of creating code and learning new grammars can be seen as recursive, with the autopoetic system building upon itself to create more complex systems. The ability to learn new grammars also allows the system to adapt to changing needs and requirements.
+
+The potential applications of an autopoetic system are vast, including the development of new software tools and systems, as well as the creation of more efficient and effective algorithms for tasks such as data analysis or machine learning. However, it is important to consider the ethical implications of such technology and ensure that it is developed and used in a responsible and sustainable manner.
+
+In this way, an autopoetic system can be seen as an iterative process of self-improvement and evolution, where the system continuously learns and adapts to new information and requirements, leading to increasingly complex and sophisticated systems.
+#+end_src
+
 
