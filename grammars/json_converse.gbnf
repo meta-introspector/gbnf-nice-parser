@@ -1,0 +1,15 @@
+root    ::= restricted-json
+
+restricted-json ::= object-list
+
+object-list ::= object 
+
+object  ::= "{" ws interlocutor-key ":" ws string ws "," ws reply-key ":" ws string ws "}"
+
+interlocutor-key ::= "\"Interlocutor\""
+reply-key ::= "\"Reply\""
+
+string  ::= "\"" ( [^"\\] | "\\" (["\\/bfnrt] | "u" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F]) )* "\""
+
+ws      ::= [ \t\n\r]*
+
