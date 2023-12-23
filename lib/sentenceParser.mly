@@ -58,7 +58,7 @@ let unparenthesize (o : Stretch.t option) : Stretch.t option =
 
 /* ------------------------------------------------------------------------- */
 /* Tokens. */
-
+%nonassoc high
 %token <int> Tchar
 %token DASH "-"
 %token CARET "^"
@@ -207,18 +207,31 @@ located(X):
   x = X
     { with_loc $loc x }
 
-%inline term:
-  | "(" rhs  ")" {}
-  | "[" rhs  "]" {}
-  /* | "{" rhs  "}" {} */
+/* %inline */ term:
+/* | "{" rhs  "}" {} */
+  /* | complexterms {} */
   | LID {}
   | QID {}
 
-termfactor:
+
+/* complexterms: */
+/*   | group1 {} */
+/*   | class1  {} */
+
+/* group1: */
+  | "(" rhs  ")" {}
+
+/* class1: */
+  | "[" rhs  "]" {}
+
+
+
+%inline  termfactor:
   | term   {}
 
-%inline factor:
-  | termfactor {}
+/*  */ factor:
+
+   | termfactor  {} 
   | term "?" {}
   | term "*" {}
   | term "+" {}
@@ -226,11 +239,14 @@ termfactor:
 
 
 concatenation:
-  | factor + {}
+  | factor  {}
+  | factor factor {}
 
-alternation1:
-  | concatenation  BAR  {}
+%inline simplealt:
   | concatenation  {}
+alternation1:  
+  | simplealt {}
+  | concatenation  BAR  {}
 
 alternation:
   | alternation1+ {}
