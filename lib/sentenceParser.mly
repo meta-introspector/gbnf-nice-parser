@@ -58,23 +58,15 @@ let unparenthesize (o : Stretch.t option) : Stretch.t option =
 
 /* ------------------------------------------------------------------------- */
 /* Tokens. */
+
 %token <int> Tchar
 %token DASH "-"
 %token CARET "^"
 %token
-  TOKEN            "%token"
-  TYPE             "%type"
-  LEFT             "%left"
-  RIGHT            "%right"
-  NONASSOC         "%nonassoc"
-  START            "%start"
-  PREC             "%prec"
-  PUBLIC           "%public"
   COLON            ":"
   BAR              "|"
   EOF              ""
   EQUAL            "="
-  INLINE           "%inline"
   LPAREN           "("
   RPAREN           ")"
   LBRACE "["
@@ -83,8 +75,6 @@ let unparenthesize (o : Stretch.t option) : Stretch.t option =
   QUESTION         "?"
   STAR             "*"
   PLUS             "+"
-  PARAMETER        "%parameter"
-  ON_ERROR_REDUCE  "%on_error_reduce"
 SEMI             ";"
 NEWLINE
 WHITESPACE
@@ -100,19 +90,14 @@ WHITESPACE
 
 /* For the new rule syntax: */
 %token
-  LET              "let"
   TILDE            "~"
   UNDERSCORE       "_"
-  COLONEQUAL       ":="
   COLONCOLONEQUAL  "::="
-  EQUALEQUAL       "=="
+
 
 (* %type <ParserAux.early_producer> producer *)
 (* %type <ParserAux.early_production> production *)
 %start <Syntax.partial_grammar> grammar
-
-
-%nonassoc BAR
 
 /* ------------------------------------------------------------------------- */
 /* On-error-reduce declarations. */
@@ -120,10 +105,6 @@ WHITESPACE
 /* These declarations reduce the number of states where an error can occur,
    thus reduce the number of syntax error messages that we have to write in
    parserMessages.messages. */
-
-%on_error_reduce old_rule
-
-
 
 
 %%
@@ -133,13 +114,10 @@ WHITESPACE
 taken from https://github.com/dmbaturin/bnfgen
 */
 rules:
-  | {}
-  | old_rule {
-	(print_endline (Batteries.dump ("DEBUG:rs",$1)))
-      }
-  | old_rule NEWLINE+ old_rule {
-			  (print_endline (Batteries.dump ("DEBUG:rs",$1,$3)))
-			}
+separated_nonempty_list(NEWLINE+, old_rule) {
+			 (print_endline (Batteries.dump ("DEBUG:OLDRULE",$1)))
+		       }
+
 
 grammar:
   rs =  rules
@@ -151,16 +129,13 @@ grammar:
       }
     }
 
-%inline rule_specific_token:
-| PUBLIC
-| INLINE
+rule_specific_token:
 | COLON
-| LET
 | EOF
     { () }
 
 
-%inline clist(X):
+ clist(X):
   xs = separated_nonempty_list(COMMA?, X)
     { xs }
 
@@ -176,7 +151,7 @@ id = LID
       id }
 
 old_rule:
-symbol = symbol
+symbol = LID
 /* the symbol that is being defined */
 COLONCOLONEQUAL
 branches = rhs(* separated_nonempty_list(BAR, symbol+) *)
@@ -217,7 +192,7 @@ reversed_preceded_or_separated_nonempty_llist(delimiter, X):
   x = X
     { x :: xs }
 
-%inline preceded_or_separated_nonempty_llist(delimiter, X):
+ preceded_or_separated_nonempty_llist(delimiter, X):
   xs = rev(reversed_preceded_or_separated_nonempty_llist(delimiter, X))
     { xs }
 
@@ -232,25 +207,86 @@ located(X):
   x = X
     { with_loc $loc x }
 
-term:
+%inline term:
   | "(" rhs  ")" {}
   | "[" rhs  "]" {}
   /* | "{" rhs  "}" {} */
-  | symbol {}
+  | LID {}
+  | QID {}
 
-factor:
+termfactor:
+  | term   {}
+
+%inline factor:
+  | termfactor {}
   | term "?" {}
   | term "*" {}
   | term "+" {}
   | term "-" term {}
-  | term  {}
+
 
 concatenation:
   | factor + {}
 
+alternation1:
+  | concatenation  BAR  {}
+  | concatenation  {}
+
+alternation:
+  | alternation1+ {}
+
 rhs:
-  | concatenation {}
-  | concatenation BAR concatenation{}
+  | alternation {}
+
+
+
+
+/* ===EBNF=== */
+
+/* from wikipedia Even EBNF can be described using EBNF. Consider below grammar (using conventions such as "-" to indicate set disjunction, "+" to indicate one or more matches, and "?" for optionality): */
+
+/* <syntaxhighlight lang="ebnf"> */
+/* letter = "A" | "B" | "C" | "D" | "E" | "F" | "G" */
+
+/* digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ; */
+
+/* symbol = "[" | "]" | "{" | "}" | "(" | ")" | "<" | ">" */
+/*        | "'" | '"' | "=" | "|" | "." | "," | ";" | "-"  */
+/*        | "+" | "*" | "?" | "\n" | "\t" | "\r" | "\f" | "\b" ; */
+
+/* character = letter | digit | symbol | "_" | " " ; */
+/* identifier = letter , { letter | digit | "_" } ; */
+
+/* S = { " " | "\n" | "\t" | "\r" | "\f" | "\b" } ; */
+
+/* terminal = "'" , character - "'" , { character - "'" } , "'" */
+/*          | '"' , character - '"' , { character - '"' } , '"' ; */
+
+/* terminator = ";" | "." ; */
+
+/* term = "(" , S , rhs , S , ")" */
+/*      | "[" , S , rhs , S , "]" */
+/*      | "{" , S , rhs , S , "}" */
+/*      | terminal */
+/*      | identifier ; */
+
+/* factor = term , S , "?" */
+/*        | term , S , "*" */
+/*        | term , S , "+" */
+/*        | term , S , "-" , S , term */
+/*        | term , S ; */
+
+/* concatenation = ( S , factor , S , "," ? ) + ; */
+/* alternation = ( S , concatenation , S , "|" ? ) + ; */
+
+/* rhs = alternation ; */
+/* lhs = identifier ; */
+
+/* rule = lhs , S , "=" , S , rhs , S , terminator ; */
+
+/* grammar = ( S , rule , S ) * ; */
+
+/* </syntaxhighlight> */
 
 /* expression: */
 /*   | prods = expression BAR expression */
@@ -285,7 +321,7 @@ char_class1:
   | Tchar
     /* Cset.singleton $1 */
     {   (print_endline (Batteries.dump ("DEBUG:rs",$1))) }
-  /* | char_class1 char_class1 %prec CONCAT */
+  /* | char_class1 char_class1  CONCAT */
   /*       { Cset.union $1 $2 } */
 ;
 

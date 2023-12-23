@@ -4,393 +4,1846 @@ State 0:
 ## LR(1) items:
 grammar' -> . grammar [ # ]
 ## Transitions:
--- On QID shift to state 1
--- On LID shift to state 2
--- On symbol shift to state 3
--- On rules shift to state 25
--- On old_rule shift to state 26
--- On grammar shift to state 31
+-- On LID shift to state 1
+-- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 97
+-- On rules shift to state 98
+-- On old_rule shift to state 99
+-- On grammar shift to state 104
 ## Reductions:
--- On #
---   reduce production rules ->
-** End-of-stream conflict on QID LID
-**   There is a tension between
-**   (1) reducing production rules ->
-**   without even requesting a lookahead token, and
-**   (2) testing whether the lookahead token is a member of the above set.
 
 State 1:
 ## Known stack suffix:
-## QID
+## LID
 ## LR(1) items:
-symbol -> QID . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH COLONCOLONEQUAL BAR # ]
+old_rule -> LID . COLONCOLONEQUAL rhs [ NEWLINE # ]
 ## Transitions:
+-- On COLONCOLONEQUAL shift to state 2
 ## Reductions:
--- On STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH COLONCOLONEQUAL BAR #
---   reduce production symbol -> QID
-** End-of-stream conflict on STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH COLONCOLONEQUAL BAR
-**   There is a tension between
-**   (1) reducing production symbol -> QID
-**   without even requesting a lookahead token, and
-**   (2) testing whether the lookahead token is a member of the above set.
 
 State 2:
 ## Known stack suffix:
-## LID
+## LID COLONCOLONEQUAL
 ## LR(1) items:
-symbol -> LID . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH COLONCOLONEQUAL BAR # ]
+old_rule -> LID COLONCOLONEQUAL . rhs [ NEWLINE # ]
 ## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On rhs shift to state 96
+-- On nonempty_list(factor) shift to state 26
+-- On nonempty_list(alternation1) shift to state 27
+-- On concatenation shift to state 28
+-- On alternation1 shift to state 30
+-- On alternation shift to state 32
 ## Reductions:
--- On STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH COLONCOLONEQUAL BAR #
---   reduce production symbol -> LID
-** End-of-stream conflict on STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH COLONCOLONEQUAL BAR
-**   There is a tension between
-**   (1) reducing production symbol -> LID
-**   without even requesting a lookahead token, and
-**   (2) testing whether the lookahead token is a member of the above set.
 
 State 3:
 ## Known stack suffix:
-## symbol
+## QID
 ## LR(1) items:
-old_rule -> symbol . COLONCOLONEQUAL rhs [ NEWLINE # ]
+nonempty_list(factor) -> QID . QUESTION [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID . STAR [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID . PLUS [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID . DASH LPAREN rhs RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID . DASH LBRACE rhs RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID . DASH LID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID . DASH QID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID . QUESTION nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID . STAR nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID . PLUS nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID . DASH LPAREN rhs RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID . DASH LBRACE rhs RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID . DASH LID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID . DASH QID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+termfactor -> QID . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
--- On COLONCOLONEQUAL shift to state 4
+-- On STAR shift to state 4
+-- On QUESTION shift to state 79
+-- On PLUS shift to state 81
+-- On DASH shift to state 83
 ## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production termfactor -> QID
+** End-of-stream conflict on STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR
+**   There is a tension between
+**   (1) reducing production termfactor -> QID
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
 
 State 4:
 ## Known stack suffix:
-## symbol COLONCOLONEQUAL
+## QID STAR
 ## LR(1) items:
-old_rule -> symbol COLONCOLONEQUAL . rhs [ NEWLINE # ]
+nonempty_list(factor) -> QID STAR . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID STAR . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
--- On QID shift to state 1
+-- On QID shift to state 3
 -- On LPAREN shift to state 5
--- On LID shift to state 2
--- On LBRACE shift to state 6
--- On term shift to state 7
--- On symbol shift to state 13
--- On rhs shift to state 24
--- On nonempty_list(factor) shift to state 16
--- On factor shift to state 17
--- On concatenation shift to state 19
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 78
 ## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> QID STAR
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> QID STAR
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
 
 State 5:
 ## Known stack suffix:
 ## LPAREN
 ## LR(1) items:
-term -> LPAREN . rhs RPAREN [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR # ]
+nonempty_list(factor) -> LPAREN . rhs RPAREN QUESTION [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN . rhs RPAREN STAR [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN . rhs RPAREN PLUS [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN . rhs RPAREN DASH LPAREN rhs RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN . rhs RPAREN DASH LBRACE rhs RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN . rhs RPAREN DASH LID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN . rhs RPAREN DASH QID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN . rhs RPAREN QUESTION nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN . rhs RPAREN STAR nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN . rhs RPAREN PLUS nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN . rhs RPAREN DASH LPAREN rhs RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN . rhs RPAREN DASH LBRACE rhs RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN . rhs RPAREN DASH LID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN . rhs RPAREN DASH QID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+termfactor -> LPAREN . rhs RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
--- On QID shift to state 1
+-- On QID shift to state 3
 -- On LPAREN shift to state 5
--- On LID shift to state 2
--- On LBRACE shift to state 6
--- On term shift to state 7
--- On symbol shift to state 13
--- On rhs shift to state 22
--- On nonempty_list(factor) shift to state 16
--- On factor shift to state 17
--- On concatenation shift to state 19
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On rhs shift to state 57
+-- On nonempty_list(factor) shift to state 26
+-- On nonempty_list(alternation1) shift to state 27
+-- On concatenation shift to state 28
+-- On alternation1 shift to state 30
+-- On alternation shift to state 32
 ## Reductions:
 
 State 6:
 ## Known stack suffix:
-## LBRACE
+## LID
 ## LR(1) items:
-term -> LBRACE . rhs RBRACE [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR # ]
+nonempty_list(factor) -> LID . QUESTION [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID . STAR [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID . PLUS [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID . DASH LPAREN rhs RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID . DASH LBRACE rhs RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID . DASH LID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID . DASH QID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID . QUESTION nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID . STAR nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID . PLUS nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID . DASH LPAREN rhs RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID . DASH LBRACE rhs RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID . DASH LID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID . DASH QID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+termfactor -> LID . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
--- On QID shift to state 1
--- On LPAREN shift to state 5
--- On LID shift to state 2
--- On LBRACE shift to state 6
--- On term shift to state 7
--- On symbol shift to state 13
--- On rhs shift to state 14
--- On nonempty_list(factor) shift to state 16
--- On factor shift to state 17
--- On concatenation shift to state 19
+-- On STAR shift to state 7
+-- On QUESTION shift to state 40
+-- On PLUS shift to state 42
+-- On DASH shift to state 44
 ## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production termfactor -> LID
+** End-of-stream conflict on STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR
+**   There is a tension between
+**   (1) reducing production termfactor -> LID
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
 
 State 7:
 ## Known stack suffix:
-## term
+## LID STAR
 ## LR(1) items:
-factor -> term . QUESTION [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
-factor -> term . STAR [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
-factor -> term . PLUS [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
-factor -> term . DASH term [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
-factor -> term . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID STAR . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID STAR . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
--- On STAR shift to state 8
--- On QUESTION shift to state 9
--- On PLUS shift to state 10
--- On DASH shift to state 11
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 39
 ## Reductions:
 -- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
---   reduce production factor -> term
-** End-of-stream conflict on STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR
+--   reduce production nonempty_list(factor) -> LID STAR
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
 **   There is a tension between
-**   (1) reducing production factor -> term
+**   (1) reducing production nonempty_list(factor) -> LID STAR
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
 State 8:
 ## Known stack suffix:
-## term STAR
+## LBRACE
 ## LR(1) items:
-factor -> term STAR . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE . rhs RBRACE QUESTION [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE . rhs RBRACE STAR [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE . rhs RBRACE PLUS [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE . rhs RBRACE DASH LPAREN rhs RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE . rhs RBRACE DASH LBRACE rhs RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE . rhs RBRACE DASH LID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE . rhs RBRACE DASH QID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE . rhs RBRACE QUESTION nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE . rhs RBRACE STAR nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE . rhs RBRACE PLUS nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE . rhs RBRACE DASH LPAREN rhs RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE . rhs RBRACE DASH LBRACE rhs RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE . rhs RBRACE DASH LID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE . rhs RBRACE DASH QID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+termfactor -> LBRACE . rhs RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On rhs shift to state 11
+-- On nonempty_list(factor) shift to state 26
+-- On nonempty_list(alternation1) shift to state 27
+-- On concatenation shift to state 28
+-- On alternation1 shift to state 30
+-- On alternation shift to state 32
 ## Reductions:
--- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
---   reduce production factor -> term STAR
-** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
-**   There is a tension between
-**   (1) reducing production factor -> term STAR
-**   without even requesting a lookahead token, and
-**   (2) testing whether the lookahead token is a member of the above set.
 
 State 9:
 ## Known stack suffix:
-## term QUESTION
+## termfactor
 ## LR(1) items:
-factor -> term QUESTION . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> termfactor . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> termfactor . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 10
 ## Reductions:
 -- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
---   reduce production factor -> term QUESTION
+--   reduce production nonempty_list(factor) -> termfactor
+** Conflict on QID LPAREN LID LBRACE
 ** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
 **   There is a tension between
-**   (1) reducing production factor -> term QUESTION
+**   (1) reducing production nonempty_list(factor) -> termfactor
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
 State 10:
 ## Known stack suffix:
-## term PLUS
+## termfactor nonempty_list(factor)
 ## LR(1) items:
-factor -> term PLUS . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> termfactor nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
 ## Reductions:
 -- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
---   reduce production factor -> term PLUS
+--   reduce production nonempty_list(factor) -> termfactor nonempty_list(factor)
 ** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
 **   There is a tension between
-**   (1) reducing production factor -> term PLUS
+**   (1) reducing production nonempty_list(factor) -> termfactor nonempty_list(factor)
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
 State 11:
 ## Known stack suffix:
-## term DASH
+## LBRACE rhs
 ## LR(1) items:
-factor -> term DASH . term [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs . RBRACE QUESTION [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs . RBRACE STAR [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs . RBRACE PLUS [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs . RBRACE DASH LPAREN rhs RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs . RBRACE DASH LBRACE rhs RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs . RBRACE DASH LID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs . RBRACE DASH QID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs . RBRACE QUESTION nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs . RBRACE STAR nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs . RBRACE PLUS nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs . RBRACE DASH LPAREN rhs RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs . RBRACE DASH LBRACE rhs RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs . RBRACE DASH LID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs . RBRACE DASH QID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+termfactor -> LBRACE rhs . RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
--- On QID shift to state 1
--- On LPAREN shift to state 5
--- On LID shift to state 2
--- On LBRACE shift to state 6
--- On term shift to state 12
--- On symbol shift to state 13
+-- On RBRACE shift to state 12
 ## Reductions:
 
 State 12:
 ## Known stack suffix:
-## term DASH term
+## LBRACE rhs RBRACE
 ## LR(1) items:
-factor -> term DASH term . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE . QUESTION [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE . STAR [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE . PLUS [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE . DASH LPAREN rhs RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE . DASH LBRACE rhs RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE . DASH LID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE . DASH QID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE . QUESTION nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE . STAR nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE . PLUS nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE . DASH LPAREN rhs RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE . DASH LBRACE rhs RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE . DASH LID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE . DASH QID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+termfactor -> LBRACE rhs RBRACE . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
+-- On STAR shift to state 13
+-- On QUESTION shift to state 15
+-- On PLUS shift to state 17
+-- On DASH shift to state 19
 ## Reductions:
 -- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
---   reduce production factor -> term DASH term
-** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+--   reduce production termfactor -> LBRACE rhs RBRACE
+** End-of-stream conflict on STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR
 **   There is a tension between
-**   (1) reducing production factor -> term DASH term
+**   (1) reducing production termfactor -> LBRACE rhs RBRACE
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
 State 13:
 ## Known stack suffix:
-## symbol
+## LBRACE rhs RBRACE STAR
 ## LR(1) items:
-term -> symbol . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE STAR . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE STAR . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 14
 ## Reductions:
--- On STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR #
---   reduce production term -> symbol
-** End-of-stream conflict on STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LBRACE rhs RBRACE STAR
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
 **   There is a tension between
-**   (1) reducing production term -> symbol
+**   (1) reducing production nonempty_list(factor) -> LBRACE rhs RBRACE STAR
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
 State 14:
 ## Known stack suffix:
-## LBRACE rhs
+## LBRACE rhs RBRACE STAR nonempty_list(factor)
 ## LR(1) items:
-term -> LBRACE rhs . RBRACE [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE STAR nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
--- On RBRACE shift to state 15
 ## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LBRACE rhs RBRACE STAR nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LBRACE rhs RBRACE STAR nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
 
 State 15:
 ## Known stack suffix:
-## LBRACE rhs RBRACE
+## LBRACE rhs RBRACE QUESTION
 ## LR(1) items:
-term -> LBRACE rhs RBRACE . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE QUESTION . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE QUESTION . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 16
 ## Reductions:
--- On STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR #
---   reduce production term -> LBRACE rhs RBRACE
-** End-of-stream conflict on STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LBRACE rhs RBRACE QUESTION
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
 **   There is a tension between
-**   (1) reducing production term -> LBRACE rhs RBRACE
+**   (1) reducing production nonempty_list(factor) -> LBRACE rhs RBRACE QUESTION
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
 State 16:
 ## Known stack suffix:
-## nonempty_list(factor)
+## LBRACE rhs RBRACE QUESTION nonempty_list(factor)
 ## LR(1) items:
-concatenation -> nonempty_list(factor) . [ RPAREN RBRACE NEWLINE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE QUESTION nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
 ## Reductions:
--- On RPAREN RBRACE NEWLINE BAR #
---   reduce production concatenation -> nonempty_list(factor)
-** End-of-stream conflict on RPAREN RBRACE NEWLINE BAR
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LBRACE rhs RBRACE QUESTION nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
 **   There is a tension between
-**   (1) reducing production concatenation -> nonempty_list(factor)
+**   (1) reducing production nonempty_list(factor) -> LBRACE rhs RBRACE QUESTION nonempty_list(factor)
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
 State 17:
 ## Known stack suffix:
-## factor
+## LBRACE rhs RBRACE PLUS
 ## LR(1) items:
-nonempty_list(factor) -> factor . [ RPAREN RBRACE NEWLINE BAR # ]
-nonempty_list(factor) -> factor . nonempty_list(factor) [ RPAREN RBRACE NEWLINE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE PLUS . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE PLUS . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
--- On QID shift to state 1
+-- On QID shift to state 3
 -- On LPAREN shift to state 5
--- On LID shift to state 2
--- On LBRACE shift to state 6
--- On term shift to state 7
--- On symbol shift to state 13
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
 -- On nonempty_list(factor) shift to state 18
--- On factor shift to state 17
 ## Reductions:
--- On RPAREN RBRACE NEWLINE BAR #
---   reduce production nonempty_list(factor) -> factor
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LBRACE rhs RBRACE PLUS
+** Conflict on QID LPAREN LID LBRACE
 ** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
 **   There is a tension between
-**   (1) reducing production nonempty_list(factor) -> factor
+**   (1) reducing production nonempty_list(factor) -> LBRACE rhs RBRACE PLUS
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
 State 18:
 ## Known stack suffix:
-## factor nonempty_list(factor)
+## LBRACE rhs RBRACE PLUS nonempty_list(factor)
 ## LR(1) items:
-nonempty_list(factor) -> factor nonempty_list(factor) . [ RPAREN RBRACE NEWLINE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE PLUS nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
 ## Reductions:
--- On RPAREN RBRACE NEWLINE BAR #
---   reduce production nonempty_list(factor) -> factor nonempty_list(factor)
-** End-of-stream conflict on RPAREN RBRACE NEWLINE BAR
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LBRACE rhs RBRACE PLUS nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
 **   There is a tension between
-**   (1) reducing production nonempty_list(factor) -> factor nonempty_list(factor)
+**   (1) reducing production nonempty_list(factor) -> LBRACE rhs RBRACE PLUS nonempty_list(factor)
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
 State 19:
 ## Known stack suffix:
-## concatenation
+## LBRACE rhs RBRACE DASH
 ## LR(1) items:
-rhs -> concatenation . [ RPAREN RBRACE NEWLINE # ]
-rhs -> concatenation . BAR concatenation [ RPAREN RBRACE NEWLINE # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH . LPAREN rhs RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH . LBRACE rhs RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH . LID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH . QID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH . LPAREN rhs RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH . LBRACE rhs RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH . LID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH . QID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
--- On BAR shift to state 20
+-- On QID shift to state 20
+-- On LPAREN shift to state 22
+-- On LID shift to state 33
+-- On LBRACE shift to state 35
 ## Reductions:
--- On RPAREN RBRACE NEWLINE #
---   reduce production rhs -> concatenation
-** End-of-stream conflict on RPAREN RBRACE NEWLINE BAR
-**   There is a tension between
-**   (1) reducing production rhs -> concatenation
-**   without even requesting a lookahead token, and
-**   (2) testing whether the lookahead token is a member of the above set.
 
 State 20:
 ## Known stack suffix:
-## concatenation BAR
+## LBRACE rhs RBRACE DASH QID
 ## LR(1) items:
-rhs -> concatenation BAR . concatenation [ RPAREN RBRACE NEWLINE # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH QID . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH QID . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
--- On QID shift to state 1
+-- On QID shift to state 3
 -- On LPAREN shift to state 5
--- On LID shift to state 2
--- On LBRACE shift to state 6
--- On term shift to state 7
--- On symbol shift to state 13
--- On nonempty_list(factor) shift to state 16
--- On factor shift to state 17
--- On concatenation shift to state 21
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 21
 ## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LBRACE rhs RBRACE DASH QID
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LBRACE rhs RBRACE DASH QID
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
 
 State 21:
 ## Known stack suffix:
-## concatenation BAR concatenation
+## LBRACE rhs RBRACE DASH QID nonempty_list(factor)
 ## LR(1) items:
-rhs -> concatenation BAR concatenation . [ RPAREN RBRACE NEWLINE # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH QID nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
 ## Reductions:
--- On RPAREN RBRACE NEWLINE #
---   reduce production rhs -> concatenation BAR concatenation
-** End-of-stream conflict on RPAREN RBRACE NEWLINE
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LBRACE rhs RBRACE DASH QID nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
 **   There is a tension between
-**   (1) reducing production rhs -> concatenation BAR concatenation
+**   (1) reducing production nonempty_list(factor) -> LBRACE rhs RBRACE DASH QID nonempty_list(factor)
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
 State 22:
 ## Known stack suffix:
-## LPAREN rhs
+## LBRACE rhs RBRACE DASH LPAREN
 ## LR(1) items:
-term -> LPAREN rhs . RPAREN [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH LPAREN . rhs RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH LPAREN . rhs RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
--- On RPAREN shift to state 23
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On rhs shift to state 23
+-- On nonempty_list(factor) shift to state 26
+-- On nonempty_list(alternation1) shift to state 27
+-- On concatenation shift to state 28
+-- On alternation1 shift to state 30
+-- On alternation shift to state 32
 ## Reductions:
 
 State 23:
 ## Known stack suffix:
-## LPAREN rhs RPAREN
+## LBRACE rhs RBRACE DASH LPAREN rhs
 ## LR(1) items:
-term -> LPAREN rhs RPAREN . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH LPAREN rhs . RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH LPAREN rhs . RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
+-- On RPAREN shift to state 24
 ## Reductions:
--- On STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR #
---   reduce production term -> LPAREN rhs RPAREN
-** End-of-stream conflict on STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR
-**   There is a tension between
-**   (1) reducing production term -> LPAREN rhs RPAREN
-**   without even requesting a lookahead token, and
-**   (2) testing whether the lookahead token is a member of the above set.
 
 State 24:
 ## Known stack suffix:
-## symbol COLONCOLONEQUAL rhs
+## LBRACE rhs RBRACE DASH LPAREN rhs RPAREN
 ## LR(1) items:
-old_rule -> symbol COLONCOLONEQUAL rhs . [ NEWLINE # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH LPAREN rhs RPAREN . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH LPAREN rhs RPAREN . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 25
 ## Reductions:
--- On NEWLINE #
---   reduce production old_rule -> symbol COLONCOLONEQUAL rhs
-** End-of-stream conflict on NEWLINE
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LBRACE rhs RBRACE DASH LPAREN rhs RPAREN
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
 **   There is a tension between
-**   (1) reducing production old_rule -> symbol COLONCOLONEQUAL rhs
+**   (1) reducing production nonempty_list(factor) -> LBRACE rhs RBRACE DASH LPAREN rhs RPAREN
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
 State 25:
+## Known stack suffix:
+## LBRACE rhs RBRACE DASH LPAREN rhs RPAREN nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH LPAREN rhs RPAREN nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LBRACE rhs RBRACE DASH LPAREN rhs RPAREN nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LBRACE rhs RBRACE DASH LPAREN rhs RPAREN nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 26:
+## Known stack suffix:
+## nonempty_list(factor)
+## LR(1) items:
+concatenation -> nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production concatenation -> nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production concatenation -> nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 27:
+## Known stack suffix:
+## nonempty_list(alternation1)
+## LR(1) items:
+alternation -> nonempty_list(alternation1) . [ RPAREN RBRACE NEWLINE # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE NEWLINE #
+--   reduce production alternation -> nonempty_list(alternation1)
+** End-of-stream conflict on RPAREN RBRACE NEWLINE
+**   There is a tension between
+**   (1) reducing production alternation -> nonempty_list(alternation1)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 28:
+## Known stack suffix:
+## concatenation
+## LR(1) items:
+alternation1 -> concatenation . BAR [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE # ]
+alternation1 -> concatenation . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE # ]
+## Transitions:
+-- On BAR shift to state 29
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE #
+--   reduce production alternation1 -> concatenation
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production alternation1 -> concatenation
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 29:
+## Known stack suffix:
+## concatenation BAR
+## LR(1) items:
+alternation1 -> concatenation BAR . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE #
+--   reduce production alternation1 -> concatenation BAR
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE
+**   There is a tension between
+**   (1) reducing production alternation1 -> concatenation BAR
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 30:
+## Known stack suffix:
+## alternation1
+## LR(1) items:
+nonempty_list(alternation1) -> alternation1 . [ RPAREN RBRACE NEWLINE # ]
+nonempty_list(alternation1) -> alternation1 . nonempty_list(alternation1) [ RPAREN RBRACE NEWLINE # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 26
+-- On nonempty_list(alternation1) shift to state 31
+-- On concatenation shift to state 28
+-- On alternation1 shift to state 30
+## Reductions:
+-- On RPAREN RBRACE NEWLINE #
+--   reduce production nonempty_list(alternation1) -> alternation1
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE
+**   There is a tension between
+**   (1) reducing production nonempty_list(alternation1) -> alternation1
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 31:
+## Known stack suffix:
+## alternation1 nonempty_list(alternation1)
+## LR(1) items:
+nonempty_list(alternation1) -> alternation1 nonempty_list(alternation1) . [ RPAREN RBRACE NEWLINE # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE NEWLINE #
+--   reduce production nonempty_list(alternation1) -> alternation1 nonempty_list(alternation1)
+** End-of-stream conflict on RPAREN RBRACE NEWLINE
+**   There is a tension between
+**   (1) reducing production nonempty_list(alternation1) -> alternation1 nonempty_list(alternation1)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 32:
+## Known stack suffix:
+## alternation
+## LR(1) items:
+rhs -> alternation . [ RPAREN RBRACE NEWLINE # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE NEWLINE #
+--   reduce production rhs -> alternation
+** End-of-stream conflict on RPAREN RBRACE NEWLINE
+**   There is a tension between
+**   (1) reducing production rhs -> alternation
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 33:
+## Known stack suffix:
+## LBRACE rhs RBRACE DASH LID
+## LR(1) items:
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH LID . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH LID . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 34
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LBRACE rhs RBRACE DASH LID
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LBRACE rhs RBRACE DASH LID
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 34:
+## Known stack suffix:
+## LBRACE rhs RBRACE DASH LID nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH LID nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LBRACE rhs RBRACE DASH LID nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LBRACE rhs RBRACE DASH LID nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 35:
+## Known stack suffix:
+## LBRACE rhs RBRACE DASH LBRACE
+## LR(1) items:
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH LBRACE . rhs RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH LBRACE . rhs RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On rhs shift to state 36
+-- On nonempty_list(factor) shift to state 26
+-- On nonempty_list(alternation1) shift to state 27
+-- On concatenation shift to state 28
+-- On alternation1 shift to state 30
+-- On alternation shift to state 32
+## Reductions:
+
+State 36:
+## Known stack suffix:
+## LBRACE rhs RBRACE DASH LBRACE rhs
+## LR(1) items:
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH LBRACE rhs . RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH LBRACE rhs . RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On RBRACE shift to state 37
+## Reductions:
+
+State 37:
+## Known stack suffix:
+## LBRACE rhs RBRACE DASH LBRACE rhs RBRACE
+## LR(1) items:
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH LBRACE rhs RBRACE . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH LBRACE rhs RBRACE . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 38
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LBRACE rhs RBRACE DASH LBRACE rhs RBRACE
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LBRACE rhs RBRACE DASH LBRACE rhs RBRACE
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 38:
+## Known stack suffix:
+## LBRACE rhs RBRACE DASH LBRACE rhs RBRACE nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> LBRACE rhs RBRACE DASH LBRACE rhs RBRACE nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LBRACE rhs RBRACE DASH LBRACE rhs RBRACE nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LBRACE rhs RBRACE DASH LBRACE rhs RBRACE nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 39:
+## Known stack suffix:
+## LID STAR nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> LID STAR nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LID STAR nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LID STAR nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 40:
+## Known stack suffix:
+## LID QUESTION
+## LR(1) items:
+nonempty_list(factor) -> LID QUESTION . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID QUESTION . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 41
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LID QUESTION
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LID QUESTION
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 41:
+## Known stack suffix:
+## LID QUESTION nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> LID QUESTION nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LID QUESTION nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LID QUESTION nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 42:
+## Known stack suffix:
+## LID PLUS
+## LR(1) items:
+nonempty_list(factor) -> LID PLUS . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID PLUS . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 43
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LID PLUS
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LID PLUS
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 43:
+## Known stack suffix:
+## LID PLUS nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> LID PLUS nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LID PLUS nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LID PLUS nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 44:
+## Known stack suffix:
+## LID DASH
+## LR(1) items:
+nonempty_list(factor) -> LID DASH . LPAREN rhs RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID DASH . LBRACE rhs RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID DASH . LID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID DASH . QID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID DASH . LPAREN rhs RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID DASH . LBRACE rhs RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID DASH . LID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID DASH . QID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 45
+-- On LPAREN shift to state 47
+-- On LID shift to state 51
+-- On LBRACE shift to state 53
+## Reductions:
+
+State 45:
+## Known stack suffix:
+## LID DASH QID
+## LR(1) items:
+nonempty_list(factor) -> LID DASH QID . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID DASH QID . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 46
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LID DASH QID
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LID DASH QID
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 46:
+## Known stack suffix:
+## LID DASH QID nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> LID DASH QID nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LID DASH QID nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LID DASH QID nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 47:
+## Known stack suffix:
+## LID DASH LPAREN
+## LR(1) items:
+nonempty_list(factor) -> LID DASH LPAREN . rhs RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID DASH LPAREN . rhs RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On rhs shift to state 48
+-- On nonempty_list(factor) shift to state 26
+-- On nonempty_list(alternation1) shift to state 27
+-- On concatenation shift to state 28
+-- On alternation1 shift to state 30
+-- On alternation shift to state 32
+## Reductions:
+
+State 48:
+## Known stack suffix:
+## LID DASH LPAREN rhs
+## LR(1) items:
+nonempty_list(factor) -> LID DASH LPAREN rhs . RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID DASH LPAREN rhs . RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On RPAREN shift to state 49
+## Reductions:
+
+State 49:
+## Known stack suffix:
+## LID DASH LPAREN rhs RPAREN
+## LR(1) items:
+nonempty_list(factor) -> LID DASH LPAREN rhs RPAREN . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID DASH LPAREN rhs RPAREN . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 50
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LID DASH LPAREN rhs RPAREN
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LID DASH LPAREN rhs RPAREN
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 50:
+## Known stack suffix:
+## LID DASH LPAREN rhs RPAREN nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> LID DASH LPAREN rhs RPAREN nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LID DASH LPAREN rhs RPAREN nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LID DASH LPAREN rhs RPAREN nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 51:
+## Known stack suffix:
+## LID DASH LID
+## LR(1) items:
+nonempty_list(factor) -> LID DASH LID . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID DASH LID . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 52
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LID DASH LID
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LID DASH LID
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 52:
+## Known stack suffix:
+## LID DASH LID nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> LID DASH LID nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LID DASH LID nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LID DASH LID nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 53:
+## Known stack suffix:
+## LID DASH LBRACE
+## LR(1) items:
+nonempty_list(factor) -> LID DASH LBRACE . rhs RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID DASH LBRACE . rhs RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On rhs shift to state 54
+-- On nonempty_list(factor) shift to state 26
+-- On nonempty_list(alternation1) shift to state 27
+-- On concatenation shift to state 28
+-- On alternation1 shift to state 30
+-- On alternation shift to state 32
+## Reductions:
+
+State 54:
+## Known stack suffix:
+## LID DASH LBRACE rhs
+## LR(1) items:
+nonempty_list(factor) -> LID DASH LBRACE rhs . RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID DASH LBRACE rhs . RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On RBRACE shift to state 55
+## Reductions:
+
+State 55:
+## Known stack suffix:
+## LID DASH LBRACE rhs RBRACE
+## LR(1) items:
+nonempty_list(factor) -> LID DASH LBRACE rhs RBRACE . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LID DASH LBRACE rhs RBRACE . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 56
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LID DASH LBRACE rhs RBRACE
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LID DASH LBRACE rhs RBRACE
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 56:
+## Known stack suffix:
+## LID DASH LBRACE rhs RBRACE nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> LID DASH LBRACE rhs RBRACE nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LID DASH LBRACE rhs RBRACE nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LID DASH LBRACE rhs RBRACE nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 57:
+## Known stack suffix:
+## LPAREN rhs
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs . RPAREN QUESTION [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs . RPAREN STAR [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs . RPAREN PLUS [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs . RPAREN DASH LPAREN rhs RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs . RPAREN DASH LBRACE rhs RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs . RPAREN DASH LID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs . RPAREN DASH QID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs . RPAREN QUESTION nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs . RPAREN STAR nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs . RPAREN PLUS nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs . RPAREN DASH LPAREN rhs RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs . RPAREN DASH LBRACE rhs RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs . RPAREN DASH LID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs . RPAREN DASH QID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+termfactor -> LPAREN rhs . RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On RPAREN shift to state 58
+## Reductions:
+
+State 58:
+## Known stack suffix:
+## LPAREN rhs RPAREN
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN . QUESTION [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN . STAR [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN . PLUS [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN . DASH LPAREN rhs RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN . DASH LBRACE rhs RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN . DASH LID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN . DASH QID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN . QUESTION nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN . STAR nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN . PLUS nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN . DASH LPAREN rhs RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN . DASH LBRACE rhs RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN . DASH LID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN . DASH QID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+termfactor -> LPAREN rhs RPAREN . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On STAR shift to state 59
+-- On QUESTION shift to state 61
+-- On PLUS shift to state 63
+-- On DASH shift to state 65
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production termfactor -> LPAREN rhs RPAREN
+** End-of-stream conflict on STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE DASH BAR
+**   There is a tension between
+**   (1) reducing production termfactor -> LPAREN rhs RPAREN
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 59:
+## Known stack suffix:
+## LPAREN rhs RPAREN STAR
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN STAR . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN STAR . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 60
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LPAREN rhs RPAREN STAR
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LPAREN rhs RPAREN STAR
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 60:
+## Known stack suffix:
+## LPAREN rhs RPAREN STAR nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN STAR nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LPAREN rhs RPAREN STAR nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LPAREN rhs RPAREN STAR nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 61:
+## Known stack suffix:
+## LPAREN rhs RPAREN QUESTION
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN QUESTION . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN QUESTION . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 62
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LPAREN rhs RPAREN QUESTION
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LPAREN rhs RPAREN QUESTION
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 62:
+## Known stack suffix:
+## LPAREN rhs RPAREN QUESTION nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN QUESTION nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LPAREN rhs RPAREN QUESTION nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LPAREN rhs RPAREN QUESTION nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 63:
+## Known stack suffix:
+## LPAREN rhs RPAREN PLUS
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN PLUS . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN PLUS . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 64
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LPAREN rhs RPAREN PLUS
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LPAREN rhs RPAREN PLUS
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 64:
+## Known stack suffix:
+## LPAREN rhs RPAREN PLUS nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN PLUS nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LPAREN rhs RPAREN PLUS nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LPAREN rhs RPAREN PLUS nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 65:
+## Known stack suffix:
+## LPAREN rhs RPAREN DASH
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH . LPAREN rhs RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH . LBRACE rhs RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH . LID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH . QID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH . LPAREN rhs RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH . LBRACE rhs RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH . LID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH . QID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 66
+-- On LPAREN shift to state 68
+-- On LID shift to state 72
+-- On LBRACE shift to state 74
+## Reductions:
+
+State 66:
+## Known stack suffix:
+## LPAREN rhs RPAREN DASH QID
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH QID . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH QID . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 67
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LPAREN rhs RPAREN DASH QID
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LPAREN rhs RPAREN DASH QID
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 67:
+## Known stack suffix:
+## LPAREN rhs RPAREN DASH QID nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH QID nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LPAREN rhs RPAREN DASH QID nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LPAREN rhs RPAREN DASH QID nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 68:
+## Known stack suffix:
+## LPAREN rhs RPAREN DASH LPAREN
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH LPAREN . rhs RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH LPAREN . rhs RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On rhs shift to state 69
+-- On nonempty_list(factor) shift to state 26
+-- On nonempty_list(alternation1) shift to state 27
+-- On concatenation shift to state 28
+-- On alternation1 shift to state 30
+-- On alternation shift to state 32
+## Reductions:
+
+State 69:
+## Known stack suffix:
+## LPAREN rhs RPAREN DASH LPAREN rhs
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH LPAREN rhs . RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH LPAREN rhs . RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On RPAREN shift to state 70
+## Reductions:
+
+State 70:
+## Known stack suffix:
+## LPAREN rhs RPAREN DASH LPAREN rhs RPAREN
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH LPAREN rhs RPAREN . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH LPAREN rhs RPAREN . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 71
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LPAREN rhs RPAREN DASH LPAREN rhs RPAREN
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LPAREN rhs RPAREN DASH LPAREN rhs RPAREN
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 71:
+## Known stack suffix:
+## LPAREN rhs RPAREN DASH LPAREN rhs RPAREN nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH LPAREN rhs RPAREN nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LPAREN rhs RPAREN DASH LPAREN rhs RPAREN nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LPAREN rhs RPAREN DASH LPAREN rhs RPAREN nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 72:
+## Known stack suffix:
+## LPAREN rhs RPAREN DASH LID
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH LID . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH LID . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 73
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LPAREN rhs RPAREN DASH LID
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LPAREN rhs RPAREN DASH LID
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 73:
+## Known stack suffix:
+## LPAREN rhs RPAREN DASH LID nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH LID nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LPAREN rhs RPAREN DASH LID nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LPAREN rhs RPAREN DASH LID nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 74:
+## Known stack suffix:
+## LPAREN rhs RPAREN DASH LBRACE
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH LBRACE . rhs RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH LBRACE . rhs RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On rhs shift to state 75
+-- On nonempty_list(factor) shift to state 26
+-- On nonempty_list(alternation1) shift to state 27
+-- On concatenation shift to state 28
+-- On alternation1 shift to state 30
+-- On alternation shift to state 32
+## Reductions:
+
+State 75:
+## Known stack suffix:
+## LPAREN rhs RPAREN DASH LBRACE rhs
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH LBRACE rhs . RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH LBRACE rhs . RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On RBRACE shift to state 76
+## Reductions:
+
+State 76:
+## Known stack suffix:
+## LPAREN rhs RPAREN DASH LBRACE rhs RBRACE
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH LBRACE rhs RBRACE . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH LBRACE rhs RBRACE . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 77
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LPAREN rhs RPAREN DASH LBRACE rhs RBRACE
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LPAREN rhs RPAREN DASH LBRACE rhs RBRACE
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 77:
+## Known stack suffix:
+## LPAREN rhs RPAREN DASH LBRACE rhs RBRACE nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> LPAREN rhs RPAREN DASH LBRACE rhs RBRACE nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> LPAREN rhs RPAREN DASH LBRACE rhs RBRACE nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> LPAREN rhs RPAREN DASH LBRACE rhs RBRACE nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 78:
+## Known stack suffix:
+## QID STAR nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> QID STAR nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> QID STAR nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> QID STAR nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 79:
+## Known stack suffix:
+## QID QUESTION
+## LR(1) items:
+nonempty_list(factor) -> QID QUESTION . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID QUESTION . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 80
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> QID QUESTION
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> QID QUESTION
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 80:
+## Known stack suffix:
+## QID QUESTION nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> QID QUESTION nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> QID QUESTION nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> QID QUESTION nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 81:
+## Known stack suffix:
+## QID PLUS
+## LR(1) items:
+nonempty_list(factor) -> QID PLUS . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID PLUS . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 82
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> QID PLUS
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> QID PLUS
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 82:
+## Known stack suffix:
+## QID PLUS nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> QID PLUS nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> QID PLUS nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> QID PLUS nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 83:
+## Known stack suffix:
+## QID DASH
+## LR(1) items:
+nonempty_list(factor) -> QID DASH . LPAREN rhs RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID DASH . LBRACE rhs RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID DASH . LID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID DASH . QID [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID DASH . LPAREN rhs RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID DASH . LBRACE rhs RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID DASH . LID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID DASH . QID nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 84
+-- On LPAREN shift to state 86
+-- On LID shift to state 90
+-- On LBRACE shift to state 92
+## Reductions:
+
+State 84:
+## Known stack suffix:
+## QID DASH QID
+## LR(1) items:
+nonempty_list(factor) -> QID DASH QID . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID DASH QID . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 85
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> QID DASH QID
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> QID DASH QID
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 85:
+## Known stack suffix:
+## QID DASH QID nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> QID DASH QID nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> QID DASH QID nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> QID DASH QID nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 86:
+## Known stack suffix:
+## QID DASH LPAREN
+## LR(1) items:
+nonempty_list(factor) -> QID DASH LPAREN . rhs RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID DASH LPAREN . rhs RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On rhs shift to state 87
+-- On nonempty_list(factor) shift to state 26
+-- On nonempty_list(alternation1) shift to state 27
+-- On concatenation shift to state 28
+-- On alternation1 shift to state 30
+-- On alternation shift to state 32
+## Reductions:
+
+State 87:
+## Known stack suffix:
+## QID DASH LPAREN rhs
+## LR(1) items:
+nonempty_list(factor) -> QID DASH LPAREN rhs . RPAREN [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID DASH LPAREN rhs . RPAREN nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On RPAREN shift to state 88
+## Reductions:
+
+State 88:
+## Known stack suffix:
+## QID DASH LPAREN rhs RPAREN
+## LR(1) items:
+nonempty_list(factor) -> QID DASH LPAREN rhs RPAREN . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID DASH LPAREN rhs RPAREN . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 89
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> QID DASH LPAREN rhs RPAREN
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> QID DASH LPAREN rhs RPAREN
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 89:
+## Known stack suffix:
+## QID DASH LPAREN rhs RPAREN nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> QID DASH LPAREN rhs RPAREN nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> QID DASH LPAREN rhs RPAREN nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> QID DASH LPAREN rhs RPAREN nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 90:
+## Known stack suffix:
+## QID DASH LID
+## LR(1) items:
+nonempty_list(factor) -> QID DASH LID . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID DASH LID . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 91
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> QID DASH LID
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> QID DASH LID
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 91:
+## Known stack suffix:
+## QID DASH LID nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> QID DASH LID nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> QID DASH LID nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> QID DASH LID nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 92:
+## Known stack suffix:
+## QID DASH LBRACE
+## LR(1) items:
+nonempty_list(factor) -> QID DASH LBRACE . rhs RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID DASH LBRACE . rhs RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On rhs shift to state 93
+-- On nonempty_list(factor) shift to state 26
+-- On nonempty_list(alternation1) shift to state 27
+-- On concatenation shift to state 28
+-- On alternation1 shift to state 30
+-- On alternation shift to state 32
+## Reductions:
+
+State 93:
+## Known stack suffix:
+## QID DASH LBRACE rhs
+## LR(1) items:
+nonempty_list(factor) -> QID DASH LBRACE rhs . RBRACE [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID DASH LBRACE rhs . RBRACE nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On RBRACE shift to state 94
+## Reductions:
+
+State 94:
+## Known stack suffix:
+## QID DASH LBRACE rhs RBRACE
+## LR(1) items:
+nonempty_list(factor) -> QID DASH LBRACE rhs RBRACE . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+nonempty_list(factor) -> QID DASH LBRACE rhs RBRACE . nonempty_list(factor) [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+-- On QID shift to state 3
+-- On LPAREN shift to state 5
+-- On LID shift to state 6
+-- On LBRACE shift to state 8
+-- On termfactor shift to state 9
+-- On nonempty_list(factor) shift to state 95
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> QID DASH LBRACE rhs RBRACE
+** Conflict on QID LPAREN LID LBRACE
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> QID DASH LBRACE rhs RBRACE
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 95:
+## Known stack suffix:
+## QID DASH LBRACE rhs RBRACE nonempty_list(factor)
+## LR(1) items:
+nonempty_list(factor) -> QID DASH LBRACE rhs RBRACE nonempty_list(factor) . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production nonempty_list(factor) -> QID DASH LBRACE rhs RBRACE nonempty_list(factor)
+** End-of-stream conflict on RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production nonempty_list(factor) -> QID DASH LBRACE rhs RBRACE nonempty_list(factor)
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 96:
+## Known stack suffix:
+## LID COLONCOLONEQUAL rhs
+## LR(1) items:
+old_rule -> LID COLONCOLONEQUAL rhs . [ NEWLINE # ]
+## Transitions:
+## Reductions:
+-- On NEWLINE #
+--   reduce production old_rule -> LID COLONCOLONEQUAL rhs
+** End-of-stream conflict on NEWLINE
+**   There is a tension between
+**   (1) reducing production old_rule -> LID COLONCOLONEQUAL rhs
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 97:
+## Known stack suffix:
+## separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
+## LR(1) items:
+rules -> separated_nonempty_list(nonempty_list(NEWLINE),old_rule) . [ # ]
+## Transitions:
+## Reductions:
+-- On #
+--   reduce production rules -> separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
+
+State 98:
 ## Known stack suffix:
 ## rules
 ## LR(1) items:
@@ -400,70 +1853,69 @@ grammar -> rules . [ # ]
 -- On #
 --   reduce production grammar -> rules
 
-State 26:
+State 99:
 ## Known stack suffix:
 ## old_rule
 ## LR(1) items:
-rules -> old_rule . [ # ]
-rules -> old_rule . nonempty_list(NEWLINE) old_rule [ # ]
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule . [ # ]
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule . nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule) [ # ]
 ## Transitions:
--- On NEWLINE shift to state 27
--- On nonempty_list(NEWLINE) shift to state 29
+-- On NEWLINE shift to state 100
+-- On nonempty_list(NEWLINE) shift to state 102
 ## Reductions:
 -- On #
---   reduce production rules -> old_rule
+--   reduce production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule
 ** End-of-stream conflict on NEWLINE
 **   There is a tension between
-**   (1) reducing production rules -> old_rule
+**   (1) reducing production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 27:
+State 100:
 ## Known stack suffix:
 ## NEWLINE
 ## LR(1) items:
-nonempty_list(NEWLINE) -> NEWLINE . [ QID LID ]
-nonempty_list(NEWLINE) -> NEWLINE . nonempty_list(NEWLINE) [ QID LID ]
+nonempty_list(NEWLINE) -> NEWLINE . [ LID ]
+nonempty_list(NEWLINE) -> NEWLINE . nonempty_list(NEWLINE) [ LID ]
 ## Transitions:
--- On NEWLINE shift to state 27
--- On nonempty_list(NEWLINE) shift to state 28
+-- On NEWLINE shift to state 100
+-- On nonempty_list(NEWLINE) shift to state 101
 ## Reductions:
--- On QID LID
+-- On LID
 --   reduce production nonempty_list(NEWLINE) -> NEWLINE
 
-State 28:
+State 101:
 ## Known stack suffix:
 ## NEWLINE nonempty_list(NEWLINE)
 ## LR(1) items:
-nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE) . [ QID LID ]
+nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE) . [ LID ]
 ## Transitions:
 ## Reductions:
--- On QID LID
+-- On LID
 --   reduce production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 
-State 29:
+State 102:
 ## Known stack suffix:
 ## old_rule nonempty_list(NEWLINE)
 ## LR(1) items:
-rules -> old_rule nonempty_list(NEWLINE) . old_rule [ # ]
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) . separated_nonempty_list(nonempty_list(NEWLINE),old_rule) [ # ]
 ## Transitions:
--- On QID shift to state 1
--- On LID shift to state 2
--- On symbol shift to state 3
--- On old_rule shift to state 30
+-- On LID shift to state 1
+-- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 103
+-- On old_rule shift to state 99
 ## Reductions:
 
-State 30:
+State 103:
 ## Known stack suffix:
-## old_rule nonempty_list(NEWLINE) old_rule
+## old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
 ## LR(1) items:
-rules -> old_rule nonempty_list(NEWLINE) old_rule . [ # ]
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule) . [ # ]
 ## Transitions:
 ## Reductions:
 -- On #
---   reduce production rules -> old_rule nonempty_list(NEWLINE) old_rule
+--   reduce production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
 
-State 31:
+State 104:
 ## Known stack suffix:
 ## grammar
 ## LR(1) items:

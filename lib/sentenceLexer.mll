@@ -411,31 +411,6 @@ let reserved =
 
 (* ------------------------------------------------------------------------ *)
 
-(* Menhir's percent-directives. *)
-
-let table directives =
-  let table = Hashtbl.create 149 in
-  List.iter (fun (word, token) -> Hashtbl.add table word token) directives;
-  table
-
-let directives =
-  table [
-    "token", TOKEN;
-    "type", TYPE;
-    "left", LEFT;
-    "right", RIGHT;
-    "nonassoc", NONASSOC;
-    "start", START;
-    "prec", PREC;
-    "public", PUBLIC;
-    "parameter", PARAMETER;
-    "inline", INLINE;
-
-    "on_error_reduce", ON_ERROR_REDUCE;
-  ]
-
-(* ------------------------------------------------------------------------ *)
-
 (* Decoding escaped characters. *)
 
 let char_for_backslash = function
@@ -515,8 +490,7 @@ rule main = parse
     { CARET }
 | "_"
     { UNDERSCORE }
-| ":="
-    { COLONEQUAL }
+
 | "::="
     {
       (print_endline "DEBUG");
@@ -527,10 +501,7 @@ rule main = parse
       (print_endline (Batteries.dump ((line,cnum,tok))));
 
       COLONCOLONEQUAL }
-| "=="
-    { EQUALEQUAL }
-| "let"
-    { LET }
+
 | ( identchar *) as id
     { 
       LID (with_pos (cpos lexbuf) id)
