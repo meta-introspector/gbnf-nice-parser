@@ -469,6 +469,10 @@ rule main = parse
     { LPAREN }
 | ")"
     { RPAREN }
+| "["
+    { LBRACE }
+| "]"
+    { RBRACE }
 | "|"
     { BAR }
 | "?"

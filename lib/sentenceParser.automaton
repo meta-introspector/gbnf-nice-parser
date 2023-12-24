@@ -5,10 +5,10 @@ State 0:
 grammar' -> . grammar [ # ]
 ## Transitions:
 -- On LID shift to state 1
--- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 36
--- On rules shift to state 37
--- On old_rule shift to state 40
--- On grammar shift to state 45
+-- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 32
+-- On rules shift to state 33
+-- On old_rule shift to state 36
+-- On grammar shift to state 41
 ## Reductions:
 
 State 1:
@@ -27,67 +27,52 @@ State 2:
 old_rule -> LID COLONCOLONEQUAL . rhs [ NEWLINE EOF ]
 ## Transitions:
 -- On QID shift to state 3
--- On LPAREN shift to state 5
--- On LID shift to state 6
--- On LBRACE shift to state 7
--- On term shift to state 16
--- On rhs shift to state 35
--- On prepair shift to state 22
--- On nonempty_list(alternation1) shift to state 23
--- On factor shift to state 24
--- On cpair shift to state 28
--- On concatenation shift to state 29
--- On alternation1 shift to state 31
--- On alternation shift to state 34
--- On alter2 shift to state 33
+-- On LPAREN shift to state 4
+-- On LID shift to state 5
+-- On LBRACE shift to state 6
+-- On term shift to state 15
+-- On rhs shift to state 31
+-- On nonempty_list(alternation1) shift to state 21
+-- On fconcatenation shift to state 22
+-- On factor shift to state 23
+-- On concatenation shift to state 25
+-- On alternation1 shift to state 27
+-- On alternation shift to state 30
+-- On alter2 shift to state 29
 ## Reductions:
 
 State 3:
 ## Known stack suffix:
 ## QID
 ## LR(1) items:
-cpair -> QID . QID [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
 term -> QID . [ STAR RPAREN QUESTION QID PLUS NEWLINE LPAREN LID LBRACE EOF BAR ]
 ## Transitions:
--- On QID shift to state 4
 ## Reductions:
 -- On STAR RPAREN QUESTION QID PLUS NEWLINE LPAREN LID LBRACE EOF BAR
 --   reduce production term -> QID
-** Conflict on QID
 
 State 4:
-## Known stack suffix:
-## QID QID
-## LR(1) items:
-cpair -> QID QID . [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
-## Transitions:
-## Reductions:
--- On RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR
---   reduce production cpair -> QID QID
-
-State 5:
 ## Known stack suffix:
 ## LPAREN
 ## LR(1) items:
 term -> LPAREN . rhs RPAREN [ STAR RPAREN QUESTION QID PLUS NEWLINE LPAREN LID LBRACE EOF BAR ]
 ## Transitions:
 -- On QID shift to state 3
--- On LPAREN shift to state 5
--- On LID shift to state 6
--- On LBRACE shift to state 7
--- On term shift to state 16
--- On rhs shift to state 20
--- On prepair shift to state 22
--- On nonempty_list(alternation1) shift to state 23
--- On factor shift to state 24
--- On cpair shift to state 28
--- On concatenation shift to state 29
--- On alternation1 shift to state 31
--- On alternation shift to state 34
--- On alter2 shift to state 33
+-- On LPAREN shift to state 4
+-- On LID shift to state 5
+-- On LBRACE shift to state 6
+-- On term shift to state 15
+-- On rhs shift to state 19
+-- On nonempty_list(alternation1) shift to state 21
+-- On fconcatenation shift to state 22
+-- On factor shift to state 23
+-- On concatenation shift to state 25
+-- On alternation1 shift to state 27
+-- On alternation shift to state 30
+-- On alter2 shift to state 29
 ## Reductions:
 
-State 6:
+State 5:
 ## Known stack suffix:
 ## LID
 ## LR(1) items:
@@ -97,40 +82,40 @@ term -> LID . [ STAR RPAREN QUESTION QID PLUS NEWLINE LPAREN LID LBRACE EOF BAR 
 -- On STAR RPAREN QUESTION QID PLUS NEWLINE LPAREN LID LBRACE EOF BAR
 --   reduce production term -> LID
 
-State 7:
+State 6:
 ## Known stack suffix:
 ## LBRACE
 ## LR(1) items:
 term -> LBRACE . char_class RBRACE [ STAR RPAREN QUESTION QID PLUS NEWLINE LPAREN LID LBRACE EOF BAR ]
 ## Transitions:
--- On Tchar shift to state 8
--- On CARET shift to state 11
--- On char_class1 shift to state 13
--- On char_class shift to state 14
+-- On Tchar shift to state 7
+-- On CARET shift to state 10
+-- On char_class1 shift to state 12
+-- On char_class shift to state 13
 ## Reductions:
 
-State 8:
+State 7:
 ## Known stack suffix:
 ## Tchar
 ## LR(1) items:
 char_class1 -> Tchar . DASH Tchar [ RBRACE ]
 char_class1 -> Tchar . [ RBRACE ]
 ## Transitions:
--- On DASH shift to state 9
+-- On DASH shift to state 8
 ## Reductions:
 -- On RBRACE
 --   reduce production char_class1 -> Tchar
 
-State 9:
+State 8:
 ## Known stack suffix:
 ## Tchar DASH
 ## LR(1) items:
 char_class1 -> Tchar DASH . Tchar [ RBRACE ]
 ## Transitions:
--- On Tchar shift to state 10
+-- On Tchar shift to state 9
 ## Reductions:
 
-State 10:
+State 9:
 ## Known stack suffix:
 ## Tchar DASH Tchar
 ## LR(1) items:
@@ -140,17 +125,17 @@ char_class1 -> Tchar DASH Tchar . [ RBRACE ]
 -- On RBRACE
 --   reduce production char_class1 -> Tchar DASH Tchar
 
-State 11:
+State 10:
 ## Known stack suffix:
 ## CARET
 ## LR(1) items:
 char_class -> CARET . char_class1 [ RBRACE ]
 ## Transitions:
--- On Tchar shift to state 8
--- On char_class1 shift to state 12
+-- On Tchar shift to state 7
+-- On char_class1 shift to state 11
 ## Reductions:
 
-State 12:
+State 11:
 ## Known stack suffix:
 ## CARET char_class1
 ## LR(1) items:
@@ -160,7 +145,7 @@ char_class -> CARET char_class1 . [ RBRACE ]
 -- On RBRACE
 --   reduce production char_class -> CARET char_class1
 
-State 13:
+State 12:
 ## Known stack suffix:
 ## char_class1
 ## LR(1) items:
@@ -170,16 +155,16 @@ char_class -> char_class1 . [ RBRACE ]
 -- On RBRACE
 --   reduce production char_class -> char_class1
 
-State 14:
+State 13:
 ## Known stack suffix:
 ## LBRACE char_class
 ## LR(1) items:
 term -> LBRACE char_class . RBRACE [ STAR RPAREN QUESTION QID PLUS NEWLINE LPAREN LID LBRACE EOF BAR ]
 ## Transitions:
--- On RBRACE shift to state 15
+-- On RBRACE shift to state 14
 ## Reductions:
 
-State 15:
+State 14:
 ## Known stack suffix:
 ## LBRACE char_class RBRACE
 ## LR(1) items:
@@ -189,7 +174,7 @@ term -> LBRACE char_class RBRACE . [ STAR RPAREN QUESTION QID PLUS NEWLINE LPARE
 -- On STAR RPAREN QUESTION QID PLUS NEWLINE LPAREN LID LBRACE EOF BAR
 --   reduce production term -> LBRACE char_class RBRACE
 
-State 16:
+State 15:
 ## Known stack suffix:
 ## term
 ## LR(1) items:
@@ -198,14 +183,14 @@ factor -> term . QUESTION [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
 factor -> term . STAR [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
 factor -> term . [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
 ## Transitions:
--- On STAR shift to state 17
--- On QUESTION shift to state 18
--- On PLUS shift to state 19
+-- On STAR shift to state 16
+-- On QUESTION shift to state 17
+-- On PLUS shift to state 18
 ## Reductions:
 -- On RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR
 --   reduce production factor -> term
 
-State 17:
+State 16:
 ## Known stack suffix:
 ## term STAR
 ## LR(1) items:
@@ -215,7 +200,7 @@ factor -> term STAR . [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
 -- On RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR
 --   reduce production factor -> term STAR
 
-State 18:
+State 17:
 ## Known stack suffix:
 ## term QUESTION
 ## LR(1) items:
@@ -225,7 +210,7 @@ factor -> term QUESTION . [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
 -- On RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR
 --   reduce production factor -> term QUESTION
 
-State 19:
+State 18:
 ## Known stack suffix:
 ## term PLUS
 ## LR(1) items:
@@ -235,16 +220,16 @@ factor -> term PLUS . [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
 -- On RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR
 --   reduce production factor -> term PLUS
 
-State 20:
+State 19:
 ## Known stack suffix:
 ## LPAREN rhs
 ## LR(1) items:
 term -> LPAREN rhs . RPAREN [ STAR RPAREN QUESTION QID PLUS NEWLINE LPAREN LID LBRACE EOF BAR ]
 ## Transitions:
--- On RPAREN shift to state 21
+-- On RPAREN shift to state 20
 ## Reductions:
 
-State 21:
+State 20:
 ## Known stack suffix:
 ## LPAREN rhs RPAREN
 ## LR(1) items:
@@ -254,17 +239,7 @@ term -> LPAREN rhs RPAREN . [ STAR RPAREN QUESTION QID PLUS NEWLINE LPAREN LID L
 -- On STAR RPAREN QUESTION QID PLUS NEWLINE LPAREN LID LBRACE EOF BAR
 --   reduce production term -> LPAREN rhs RPAREN
 
-State 22:
-## Known stack suffix:
-## prepair
-## LR(1) items:
-cpair -> prepair . [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
-## Transitions:
-## Reductions:
--- On RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR
---   reduce production cpair -> prepair
-
-State 23:
+State 21:
 ## Known stack suffix:
 ## nonempty_list(alternation1)
 ## LR(1) items:
@@ -274,87 +249,58 @@ alternation -> nonempty_list(alternation1) . [ RPAREN NEWLINE EOF ]
 -- On RPAREN NEWLINE EOF
 --   reduce production alternation -> nonempty_list(alternation1)
 
-State 24:
+State 22:
+## Known stack suffix:
+## fconcatenation
+## LR(1) items:
+concatenation -> fconcatenation . [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
+## Transitions:
+## Reductions:
+-- On RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR
+--   reduce production concatenation -> fconcatenation
+
+State 23:
 ## Known stack suffix:
 ## factor
 ## LR(1) items:
-concatenation -> factor . [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
-cpair -> factor . LID [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
-cpair -> factor . factor [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
-prepair -> factor . QID [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
+fconcatenation -> factor . [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
+fconcatenation -> factor . fconcatenation [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
 ## Transitions:
--- On QID shift to state 25
--- On LPAREN shift to state 5
--- On LID shift to state 26
--- On LBRACE shift to state 7
--- On term shift to state 16
--- On factor shift to state 27
+-- On QID shift to state 3
+-- On LPAREN shift to state 4
+-- On LID shift to state 5
+-- On LBRACE shift to state 6
+-- On term shift to state 15
+-- On fconcatenation shift to state 24
+-- On factor shift to state 23
 ## Reductions:
 -- On RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR
---   reduce production concatenation -> factor
+--   reduce production fconcatenation -> factor
 ** Conflict on QID LPAREN LID LBRACE
 
+State 24:
+## Known stack suffix:
+## factor fconcatenation
+## LR(1) items:
+fconcatenation -> factor fconcatenation . [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
+## Transitions:
+## Reductions:
+-- On RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR
+--   reduce production fconcatenation -> factor fconcatenation
+
 State 25:
-## Known stack suffix:
-## factor QID
-## LR(1) items:
-prepair -> factor QID . [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
-term -> QID . [ STAR RPAREN QUESTION QID PLUS NEWLINE LPAREN LID LBRACE EOF BAR ]
-## Transitions:
-## Reductions:
--- On RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR
---   reduce production prepair -> factor QID
--- On STAR RPAREN QUESTION QID PLUS NEWLINE LPAREN LID LBRACE EOF BAR
---   reduce production term -> QID
-** Conflict on RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR
-
-State 26:
-## Known stack suffix:
-## factor LID
-## LR(1) items:
-cpair -> factor LID . [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
-term -> LID . [ STAR RPAREN QUESTION QID PLUS NEWLINE LPAREN LID LBRACE EOF BAR ]
-## Transitions:
-## Reductions:
--- On RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR
---   reduce production cpair -> factor LID
--- On STAR RPAREN QUESTION QID PLUS NEWLINE LPAREN LID LBRACE EOF BAR
---   reduce production term -> LID
-** Conflict on RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR
-
-State 27:
-## Known stack suffix:
-## factor factor
-## LR(1) items:
-cpair -> factor factor . [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
-## Transitions:
-## Reductions:
--- On RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR
---   reduce production cpair -> factor factor
-
-State 28:
-## Known stack suffix:
-## cpair
-## LR(1) items:
-concatenation -> cpair . [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR ]
-## Transitions:
-## Reductions:
--- On RPAREN QID NEWLINE LPAREN LID LBRACE EOF BAR
---   reduce production concatenation -> cpair
-
-State 29:
 ## Known stack suffix:
 ## concatenation
 ## LR(1) items:
 alter2 -> concatenation . BAR [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF ]
 alternation1 -> concatenation . [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF ]
 ## Transitions:
--- On BAR shift to state 30
+-- On BAR shift to state 26
 ## Reductions:
 -- On RPAREN QID NEWLINE LPAREN LID LBRACE EOF
 --   reduce production alternation1 -> concatenation
 
-State 30:
+State 26:
 ## Known stack suffix:
 ## concatenation BAR
 ## LR(1) items:
@@ -364,7 +310,7 @@ alter2 -> concatenation BAR . [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF ]
 -- On RPAREN QID NEWLINE LPAREN LID LBRACE EOF
 --   reduce production alter2 -> concatenation BAR
 
-State 31:
+State 27:
 ## Known stack suffix:
 ## alternation1
 ## LR(1) items:
@@ -372,22 +318,21 @@ nonempty_list(alternation1) -> alternation1 . [ RPAREN NEWLINE EOF ]
 nonempty_list(alternation1) -> alternation1 . nonempty_list(alternation1) [ RPAREN NEWLINE EOF ]
 ## Transitions:
 -- On QID shift to state 3
--- On LPAREN shift to state 5
--- On LID shift to state 6
--- On LBRACE shift to state 7
--- On term shift to state 16
--- On prepair shift to state 22
--- On nonempty_list(alternation1) shift to state 32
--- On factor shift to state 24
--- On cpair shift to state 28
--- On concatenation shift to state 29
--- On alternation1 shift to state 31
--- On alter2 shift to state 33
+-- On LPAREN shift to state 4
+-- On LID shift to state 5
+-- On LBRACE shift to state 6
+-- On term shift to state 15
+-- On nonempty_list(alternation1) shift to state 28
+-- On fconcatenation shift to state 22
+-- On factor shift to state 23
+-- On concatenation shift to state 25
+-- On alternation1 shift to state 27
+-- On alter2 shift to state 29
 ## Reductions:
 -- On RPAREN NEWLINE EOF
 --   reduce production nonempty_list(alternation1) -> alternation1
 
-State 32:
+State 28:
 ## Known stack suffix:
 ## alternation1 nonempty_list(alternation1)
 ## LR(1) items:
@@ -397,7 +342,7 @@ nonempty_list(alternation1) -> alternation1 nonempty_list(alternation1) . [ RPAR
 -- On RPAREN NEWLINE EOF
 --   reduce production nonempty_list(alternation1) -> alternation1 nonempty_list(alternation1)
 
-State 33:
+State 29:
 ## Known stack suffix:
 ## alter2
 ## LR(1) items:
@@ -407,7 +352,7 @@ alternation1 -> alter2 . [ RPAREN QID NEWLINE LPAREN LID LBRACE EOF ]
 -- On RPAREN QID NEWLINE LPAREN LID LBRACE EOF
 --   reduce production alternation1 -> alter2
 
-State 34:
+State 30:
 ## Known stack suffix:
 ## alternation
 ## LR(1) items:
@@ -417,7 +362,7 @@ rhs -> alternation . [ RPAREN NEWLINE EOF ]
 -- On RPAREN NEWLINE EOF
 --   reduce production rhs -> alternation
 
-State 35:
+State 31:
 ## Known stack suffix:
 ## LID COLONCOLONEQUAL rhs
 ## LR(1) items:
@@ -427,7 +372,7 @@ old_rule -> LID COLONCOLONEQUAL rhs . [ NEWLINE EOF ]
 -- On NEWLINE EOF
 --   reduce production old_rule -> LID COLONCOLONEQUAL rhs
 
-State 36:
+State 32:
 ## Known stack suffix:
 ## separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
 ## LR(1) items:
@@ -437,17 +382,17 @@ rules -> separated_nonempty_list(nonempty_list(NEWLINE),old_rule) . [ EOF ]
 -- On EOF
 --   reduce production rules -> separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
 
-State 37:
+State 33:
 ## Known stack suffix:
 ## rules
 ## LR(1) items:
 grammar -> rules . postlude [ # ]
 ## Transitions:
--- On EOF shift to state 38
--- On postlude shift to state 39
+-- On EOF shift to state 34
+-- On postlude shift to state 35
 ## Reductions:
 
-State 38:
+State 34:
 ## Known stack suffix:
 ## EOF
 ## LR(1) items:
@@ -457,7 +402,7 @@ postlude -> EOF . [ # ]
 -- On #
 --   reduce production postlude -> EOF
 
-State 39:
+State 35:
 ## Known stack suffix:
 ## rules postlude
 ## LR(1) items:
@@ -467,33 +412,33 @@ grammar -> rules postlude . [ # ]
 -- On #
 --   reduce production grammar -> rules postlude
 
-State 40:
+State 36:
 ## Known stack suffix:
 ## old_rule
 ## LR(1) items:
 separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule . [ EOF ]
 separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule . nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule) [ EOF ]
 ## Transitions:
--- On NEWLINE shift to state 41
--- On nonempty_list(NEWLINE) shift to state 43
+-- On NEWLINE shift to state 37
+-- On nonempty_list(NEWLINE) shift to state 39
 ## Reductions:
 -- On EOF
 --   reduce production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule
 
-State 41:
+State 37:
 ## Known stack suffix:
 ## NEWLINE
 ## LR(1) items:
 nonempty_list(NEWLINE) -> NEWLINE . [ LID ]
 nonempty_list(NEWLINE) -> NEWLINE . nonempty_list(NEWLINE) [ LID ]
 ## Transitions:
--- On NEWLINE shift to state 41
--- On nonempty_list(NEWLINE) shift to state 42
+-- On NEWLINE shift to state 37
+-- On nonempty_list(NEWLINE) shift to state 38
 ## Reductions:
 -- On LID
 --   reduce production nonempty_list(NEWLINE) -> NEWLINE
 
-State 42:
+State 38:
 ## Known stack suffix:
 ## NEWLINE nonempty_list(NEWLINE)
 ## LR(1) items:
@@ -503,18 +448,18 @@ nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE) . [ LID ]
 -- On LID
 --   reduce production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 
-State 43:
+State 39:
 ## Known stack suffix:
 ## old_rule nonempty_list(NEWLINE)
 ## LR(1) items:
 separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) . separated_nonempty_list(nonempty_list(NEWLINE),old_rule) [ EOF ]
 ## Transitions:
 -- On LID shift to state 1
--- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 44
--- On old_rule shift to state 40
+-- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 40
+-- On old_rule shift to state 36
 ## Reductions:
 
-State 44:
+State 40:
 ## Known stack suffix:
 ## old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
 ## LR(1) items:
@@ -524,7 +469,7 @@ separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_li
 -- On EOF
 --   reduce production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
 
-State 45:
+State 41:
 ## Known stack suffix:
 ## grammar
 ## LR(1) items:

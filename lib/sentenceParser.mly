@@ -230,27 +230,28 @@ factor:
   | PLUS {}
 
 
-%inline fconcatenation:
+fconcatenation:
   | factor  {}
+  | factor fconcatenation {}
   /* | factor modifier {} */
 
 concatenation:
 
   | fconcatenation  {}
-  | cpair {}
+  /* | cpair {} */
 
-prepair:
-  | factor QID %prec left {}
+/* prepair: */
+/*   | factor QID %prec right {} */
+/*   | factor LID %prec right {} */
+/* %inline cpair1: */
 
-%inline cpair1:
-  | factor LID {}
-  | QID QID {}
+/*   | QID QID {} */
 
-cpair:
-  | prepair %prec left
-  /* | factor QID {} */
-  | cpair1 {}
-  | factor factor {} 
+/* cpair: */
+/*   | prepair %prec right */
+/*   /\* | factor QID {} *\/ */
+/*   | cpair1 {} */
+/*   /\* | factor factor %prec left {}  *\/ */
 
 
 %inline simplealt:
