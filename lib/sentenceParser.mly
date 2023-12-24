@@ -235,37 +235,12 @@ factor:
   /* | factor modifier {} */
 
 concatenation:
-
-  | fconcatenation  {}
-  | cpair {}
-
-prepair:
-  | factor QID %prec left {}
-
-%inline cpair1:
-  | factor LID {}
-  | QID QID {}
-
-cpair:
-  | prepair %prec left
-  /* | factor QID {} */
-  | cpair1 {}
-  | factor factor {} 
-
-
-%inline simplealt:
-  | concatenation  {}
-
-alternation1:  
-  | alter2 {}
-  | simplealt {}
-
-
-alter2:
-  | concatenation  BAR  {}
+  | concatenation factor  {}
+  | factor {}
 
 alternation:
-  |  alternation1+ {}
+  | alternation BAR concatenation
+  | concatenation {}
 
 rhs:
   | alternation {}
