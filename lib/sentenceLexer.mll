@@ -462,8 +462,6 @@ let syntaxerror =
 
 rule main = parse
 
-| ":"
-    { COLON }
 | ","
     { COMMA }
 

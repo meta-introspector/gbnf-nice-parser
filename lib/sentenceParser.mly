@@ -85,6 +85,9 @@ NEWLINE
   LID              "lident"
   QID              "\"alias\""
 
+%left      left
+%right     right
+%nonassoc  nonassoc
 
 /* For the new rule syntax: */
 %token
@@ -184,12 +187,12 @@ located(X):
   x = X
     { with_loc $loc x }
 
-qid:
+%inline qid:
   | QID {}
-lid:
+%inline lid:
   | LID {}
 
-sterm:
+%inline sterm:
   | qid {}
   | lid {}
 
@@ -197,49 +200,54 @@ term:
   | complexterms {} 
   | sterm {}
 
- complexterms: 
+%inline  complexterms: 
    | group1 {} 
    | class1  {} 
 
- group1: 
+%inline  group1: 
   | LPAREN rhs  RPAREN {}
 
- class1: 
+%inline class1: 
   | LBRACE char_class  RBRACE {}
 
-termfactor:
+%inline termfactor:
   | term   {}
 
 factor:
   | termfactor modifier {}
   | termfactor  {}
 
-modifier:
+%inline modifier:
   | fplus {}
   | fquest {}
   | fstar {}
 
-fstar:
+%inline fstar:
   |  STAR {}
-fquest:
+%inline fquest:
   |  QUESTION {}
-fplus:
+%inline fplus:
   | PLUS {}
 
 
-fconcatenation:
+%inline fconcatenation:
   | factor  {}
   /* | factor modifier {} */
 
 concatenation:
-  | cpair {}
+
   | fconcatenation  {}
+  | cpair {}
+
+prepair:
+  | factor QID %prec left {}
 
 %inline cpair1:
   | factor LID {}
-  | factor QID {}
+  | QID QID {}
 
 cpair:
+  | prepair %prec left
   /* | factor QID {} */
   | cpair1 {}
   | factor factor {} 
