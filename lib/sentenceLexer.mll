@@ -462,14 +462,11 @@ let syntaxerror =
 
 rule main = parse
 
-| ";"
-    { SEMI }
 | ":"
     { COLON }
 | ","
     { COMMA }
-| "="
-    { EQUAL }
+
 | "("
     { LPAREN }
 | ")"
@@ -482,15 +479,10 @@ rule main = parse
     { STAR }
 | "+"
     { PLUS }
-| "~"
-    { TILDE }
 | "-"
     { DASH }
 | "^"
     { CARET }
-| "_"
-    { UNDERSCORE }
-
 | "::="
     {
       (print_endline "DEBUG");
@@ -533,48 +525,6 @@ rule main = parse
       (* WHITESPACE *)
       main lexbuf ; 
     }
-| "/*"
-    { comment (lexeme_start_p lexbuf) lexbuf; main lexbuf }
-| "(*"
-    { ocamlcomment (lexeme_start_p lexbuf) lexbuf; main lexbuf }
-| "<"
-    { savestart lexbuf (ocamltype (lexeme_end_p lexbuf)) }
-
-| "{"
-    (* { savestart lexbuf (fun lexbuf -> *)
-    (*     let openingpos = lexeme_start_p lexbuf in *)
-    (*     let stretchpos = lexeme_end_p lexbuf in *)
-    (*     let closingpos, monsters = action false openingpos [] lexbuf in *)
-    (*     let xx = (Action.from_il_expr (EVar "None")) in *)
-    (*     let raw_action2 _ _ = xx in  *)
-    (*     ACTION (raw_action2) *)
-    (*     )} *)
-    (*     (\* Gather all of the identifiers that the semantic action may use *)
-    (*            to refer to a semantic value. This includes the identifiers *)
-    (*            that are explicitly bound by the user (these appear in the *)
-    (*            array [producers]) and the identifiers [_i] when the semantic *)
-    (*            action uses [$i]. *\) *)
-    (*         (\* let ids = *\) *)
-    (*         (\*   StringSet.union (gather_oids producers) (\\* (gather_monsters monsters) *\\) *\) *)
-    (*         (\* in *\) *)
-    (*         (\* (\\* Extract a stretch of text. *\\) *\) *)
-    (*         (\* let stretch = mk_stretch stretchpos closingpos true monsters in *\) *)
-    (*         (\* Build a semantic action. *\) *)
-    (*         (\* Action.from_stretch None None *\) *)
-
-(* | ('%'? as percent) "[@" (attributechar+ as id) whitespace* *)
-(*     { let openingpos = lexeme_start_p lexbuf in *)
-(*       let stretchpos = lexeme_end_p lexbuf in *)
-(*       let closingpos = attribute openingpos lexbuf in *)
-(*       let pos = Positions.import (openingpos, lexeme_end_p lexbuf) in *)
-(*       let attr = mk_stretch stretchpos closingpos false [] in *)
-(*       if percent = "" then *)
-(*         (\* No [%] sign: this is a normal attribute. *\) *)
-(*         ATTRIBUTE (Positions.with_pos pos id, attr) *)
-(*       else *)
-(*         (\* A [%] sign is present: this is a grammar-wide attribute. *\) *)
-(*         GRAMMARATTRIBUTE (Positions.with_pos pos id, attr) *)
-(*     } *)
 | eof
     { EOF }
 | _
@@ -596,32 +546,6 @@ new_line lexbuf; comment openingpos lexbuf }
     { comment openingpos lexbuf }
 
 (* ------------------------------------------------------------------------ *)
-
-(* Collect an O'Caml type delimited by angle brackets. Angle brackets can
-   appear as part of O'Caml function types and variant types, so we must
-   recognize them and *not* treat them as a closing bracket. *)
-
-and ocamltype openingpos = parse
-| "->"
-| "[>"
-    { ocamltype openingpos lexbuf }
-| '>'
-    { OCAMLTYPE (Stretch.Declared (mk_stretch openingpos (lexeme_start_p lexbuf) true [])) }
-| "(*"
-    { ocamlcomment (lexeme_start_p lexbuf) lexbuf; ocamltype openingpos lexbuf }
-| newline
-    {       (print_endline "NL3");	new_line lexbuf; ocamltype openingpos lexbuf }
-| eof
-    { error1 openingpos "unterminated OCaml type." }
-| _
-    { ocamltype openingpos lexbuf }
-
-(* ------------------------------------------------------------------------ *)
-
-(* Collect O'Caml code delimited by curly brackets. The monsters that are
-   encountered along the way are accumulated in the list [monsters]. Nested
-   curly brackets must be properly counted. Nested parentheses are also kept
-   track of, so as to better report errors when they are not balanced. *)
 
 and action percent openingpos monsters = parse
 | '{'

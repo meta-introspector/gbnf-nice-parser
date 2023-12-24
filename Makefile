@@ -6,8 +6,7 @@ test1:
 	menhir --trace -v --interpret  ./lib/sentenceParser.mly < test/test.gbnf
 
 testall: compile
-	for x in grammars/*.gbnf; do echo $x; dune exec bin/main.exe  $x > $x.out	 2>&1; done ||echo ok
-	grep -h -C3 error  grammars/*.out|grep State  |sort |uniq -c |sort -n
+	bash -x ./report.sh
 
 runmenhir: lib/sentenceParser.mly	
 	menhir --cmly --table --trace --dump --explain --log-grammar 99 --log-automaton 9 --log-code 99 --log-grammar 99 --reference-graph lib/sentenceParser.mly

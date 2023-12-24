@@ -25,7 +25,7 @@
 
 open Stretch
 open Syntax
-open Positions
+
 
 let rec find s n i =
   assert (i < n);
@@ -51,14 +51,12 @@ let unparenthesize (s : string) : string =
 let unparenthesize (s : Stretch.t) : Stretch.t =
   { s with stretch_content = unparenthesize s.stretch_content }
 
-let unparenthesize (o : Stretch.t option) : Stretch.t option =
-  Option.map unparenthesize o
 
 %}
 
 /* ------------------------------------------------------------------------- */
 /* Tokens. */
-%nonassoc high
+
 %token <int> Tchar
 %token DASH "-"
 %token CARET "^"
@@ -66,7 +64,6 @@ let unparenthesize (o : Stretch.t option) : Stretch.t option =
   COLON            ":"
   BAR              "|"
   EOF              ""
-  EQUAL            "="
   LPAREN           "("
   RPAREN           ")"
   LBRACE "["
@@ -75,40 +72,21 @@ let unparenthesize (o : Stretch.t option) : Stretch.t option =
   QUESTION         "?"
   STAR             "*"
   PLUS             "+"
-SEMI             ";"
 NEWLINE
-WHITESPACE
 
 %token <string Positions.located>
   LID              "lident"
   QID              "\"alias\""
 
-%left QID
-%left LID
-%left LPAREN
-%left LBRACE
-%token <Stretch.ocamltype>
-  OCAMLTYPE        "<unit>"
-
-
 
 /* For the new rule syntax: */
 %token
-  TILDE            "~"
-  UNDERSCORE       "_"
-  COLONCOLONEQUAL  "::="
-
+   COLONCOLONEQUAL  "::="
 
 (* %type <ParserAux.early_producer> producer *)
 (* %type <ParserAux.early_production> production *)
 %start <Syntax.partial_grammar> grammar
 
-/* ------------------------------------------------------------------------- */
-/* On-error-reduce declarations. */
-
-/* These declarations reduce the number of states where an error can occur,
-   thus reduce the number of syntax error messages that we have to write in
-   parserMessages.messages. */
 
 
 %%
@@ -170,11 +148,6 @@ branches = rhs(* separated_nonempty_list(BAR, symbol+) *)
 
 
 
-
-
-
-
-
 postlude:
   EOF
     { None }
@@ -204,12 +177,12 @@ located(X):
   x = X
     { with_loc $loc x }
 
-%inline qid:
+qid:
   | QID {}
-%inline lid:
+lid:
   | LID {}
 
-%inline sterm:
+sterm:
   | qid {}
   | lid {}
 
@@ -256,7 +229,8 @@ concatenation:
   | fconcatenation  {}
 
 cpair:
-  | factor factor {}
+  /* | factor QID {} */
+  | factor factor {} 
     
 %inline simplealt:
   | concatenation  {}

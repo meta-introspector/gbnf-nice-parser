@@ -5,10 +5,10 @@ State 0:
 grammar' -> . grammar [ # ]
 ## Transitions:
 -- On LID shift to state 1
--- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 35
--- On rules shift to state 36
--- On old_rule shift to state 37
--- On grammar shift to state 42
+-- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 38
+-- On rules shift to state 39
+-- On old_rule shift to state 40
+-- On grammar shift to state 45
 ## Reductions:
 
 State 1:
@@ -32,32 +32,35 @@ old_rule -> LID COLONCOLONEQUAL . rhs [ NEWLINE # ]
 -- On LBRACE shift to state 6
 -- On termfactor shift to state 7
 -- On term shift to state 15
--- On rhs shift to state 34
--- On nonempty_list(alternation1) shift to state 18
--- On group1 shift to state 19
--- On fconcatenation shift to state 20
--- On factor shift to state 21
--- On cpair shift to state 25
--- On concatenation shift to state 26
--- On complexterms shift to state 23
--- On class1 shift to state 24
--- On alternation1 shift to state 28
--- On alternation shift to state 31
--- On alter2 shift to state 30
+-- On sterm shift to state 16
+-- On rhs shift to state 37
+-- On qid shift to state 19
+-- On nonempty_list(alternation1) shift to state 20
+-- On lid shift to state 21
+-- On group1 shift to state 22
+-- On fconcatenation shift to state 23
+-- On factor shift to state 24
+-- On cpair shift to state 28
+-- On concatenation shift to state 29
+-- On complexterms shift to state 26
+-- On class1 shift to state 27
+-- On alternation1 shift to state 31
+-- On alternation shift to state 34
+-- On alter2 shift to state 33
 ## Reductions:
 
 State 3:
 ## Known stack suffix:
 ## QID
 ## LR(1) items:
-term -> QID . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR # ]
+qid -> QID . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
 ## Reductions:
 -- On STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR #
---   reduce production term -> QID
+--   reduce production qid -> QID
 ** End-of-stream conflict on STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR
 **   There is a tension between
-**   (1) reducing production term -> QID
+**   (1) reducing production qid -> QID
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
@@ -73,32 +76,35 @@ group1 -> LPAREN . rhs RPAREN [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPA
 -- On LBRACE shift to state 6
 -- On termfactor shift to state 7
 -- On term shift to state 15
--- On rhs shift to state 32
--- On nonempty_list(alternation1) shift to state 18
--- On group1 shift to state 19
--- On fconcatenation shift to state 20
--- On factor shift to state 21
--- On cpair shift to state 25
--- On concatenation shift to state 26
--- On complexterms shift to state 23
--- On class1 shift to state 24
--- On alternation1 shift to state 28
--- On alternation shift to state 31
--- On alter2 shift to state 30
+-- On sterm shift to state 16
+-- On rhs shift to state 35
+-- On qid shift to state 19
+-- On nonempty_list(alternation1) shift to state 20
+-- On lid shift to state 21
+-- On group1 shift to state 22
+-- On fconcatenation shift to state 23
+-- On factor shift to state 24
+-- On cpair shift to state 28
+-- On concatenation shift to state 29
+-- On complexterms shift to state 26
+-- On class1 shift to state 27
+-- On alternation1 shift to state 31
+-- On alternation shift to state 34
+-- On alter2 shift to state 33
 ## Reductions:
 
 State 5:
 ## Known stack suffix:
 ## LID
 ## LR(1) items:
-term -> LID . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR # ]
+lid -> LID . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
 ## Reductions:
 -- On STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR #
---   reduce production term -> LID
+--   reduce production lid -> LID
 ** End-of-stream conflict on STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR
 **   There is a tension between
-**   (1) reducing production term -> LID
+**   (1) reducing production lid -> LID
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
@@ -114,18 +120,21 @@ class1 -> LBRACE . rhs RBRACE [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPA
 -- On LBRACE shift to state 6
 -- On termfactor shift to state 7
 -- On term shift to state 15
--- On rhs shift to state 16
--- On nonempty_list(alternation1) shift to state 18
--- On group1 shift to state 19
--- On fconcatenation shift to state 20
--- On factor shift to state 21
--- On cpair shift to state 25
--- On concatenation shift to state 26
--- On complexterms shift to state 23
--- On class1 shift to state 24
--- On alternation1 shift to state 28
--- On alternation shift to state 31
--- On alter2 shift to state 30
+-- On sterm shift to state 16
+-- On rhs shift to state 17
+-- On qid shift to state 19
+-- On nonempty_list(alternation1) shift to state 20
+-- On lid shift to state 21
+-- On group1 shift to state 22
+-- On fconcatenation shift to state 23
+-- On factor shift to state 24
+-- On cpair shift to state 28
+-- On concatenation shift to state 29
+-- On complexterms shift to state 26
+-- On class1 shift to state 27
+-- On alternation1 shift to state 31
+-- On alternation shift to state 34
+-- On alter2 shift to state 33
 ## Reductions:
 
 State 7:
@@ -273,14 +282,29 @@ termfactor -> term . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID L
 
 State 16:
 ## Known stack suffix:
+## sterm
+## LR(1) items:
+term -> sterm . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production term -> sterm
+** End-of-stream conflict on STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production term -> sterm
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 17:
+## Known stack suffix:
 ## LBRACE rhs
 ## LR(1) items:
 class1 -> LBRACE rhs . RBRACE [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
--- On RBRACE shift to state 17
+-- On RBRACE shift to state 18
 ## Reductions:
 
-State 17:
+State 18:
 ## Known stack suffix:
 ## LBRACE rhs RBRACE
 ## LR(1) items:
@@ -295,7 +319,22 @@ class1 -> LBRACE rhs RBRACE . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPA
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 18:
+State 19:
+## Known stack suffix:
+## qid
+## LR(1) items:
+sterm -> qid . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production sterm -> qid
+** End-of-stream conflict on STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production sterm -> qid
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 20:
 ## Known stack suffix:
 ## nonempty_list(alternation1)
 ## LR(1) items:
@@ -310,7 +349,22 @@ alternation -> nonempty_list(alternation1) . [ RPAREN RBRACE NEWLINE # ]
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 19:
+State 21:
+## Known stack suffix:
+## lid
+## LR(1) items:
+sterm -> lid . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR # ]
+## Transitions:
+## Reductions:
+-- On STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR #
+--   reduce production sterm -> lid
+** End-of-stream conflict on STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR
+**   There is a tension between
+**   (1) reducing production sterm -> lid
+**   without even requesting a lookahead token, and
+**   (2) testing whether the lookahead token is a member of the above set.
+
+State 22:
 ## Known stack suffix:
 ## group1
 ## LR(1) items:
@@ -325,7 +379,7 @@ complexterms -> group1 . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN L
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 20:
+State 23:
 ## Known stack suffix:
 ## fconcatenation
 ## LR(1) items:
@@ -340,7 +394,7 @@ concatenation -> fconcatenation . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE 
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 21:
+State 24:
 ## Known stack suffix:
 ## factor
 ## LR(1) items:
@@ -353,10 +407,13 @@ fconcatenation -> factor . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 -- On LBRACE shift to state 6
 -- On termfactor shift to state 7
 -- On term shift to state 15
--- On group1 shift to state 19
--- On factor shift to state 22
--- On complexterms shift to state 23
--- On class1 shift to state 24
+-- On sterm shift to state 16
+-- On qid shift to state 19
+-- On lid shift to state 21
+-- On group1 shift to state 22
+-- On factor shift to state 25
+-- On complexterms shift to state 26
+-- On class1 shift to state 27
 ## Reductions:
 -- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR #
 --   reduce production fconcatenation -> factor
@@ -367,7 +424,7 @@ fconcatenation -> factor . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 22:
+State 25:
 ## Known stack suffix:
 ## factor factor
 ## LR(1) items:
@@ -382,7 +439,7 @@ cpair -> factor factor . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 23:
+State 26:
 ## Known stack suffix:
 ## complexterms
 ## LR(1) items:
@@ -397,7 +454,7 @@ term -> complexterms . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 24:
+State 27:
 ## Known stack suffix:
 ## class1
 ## LR(1) items:
@@ -412,7 +469,7 @@ complexterms -> class1 . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN L
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 25:
+State 28:
 ## Known stack suffix:
 ## cpair
 ## LR(1) items:
@@ -427,14 +484,14 @@ concatenation -> cpair . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE BAR # ]
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 26:
+State 29:
 ## Known stack suffix:
 ## concatenation
 ## LR(1) items:
 alter2 -> concatenation . BAR [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE # ]
 alternation1 -> concatenation . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE # ]
 ## Transitions:
--- On BAR shift to state 27
+-- On BAR shift to state 30
 ## Reductions:
 -- On RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE #
 --   reduce production alternation1 -> concatenation
@@ -444,7 +501,7 @@ alternation1 -> concatenation . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE # 
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 27:
+State 30:
 ## Known stack suffix:
 ## concatenation BAR
 ## LR(1) items:
@@ -459,7 +516,7 @@ alter2 -> concatenation BAR . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE # ]
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 28:
+State 31:
 ## Known stack suffix:
 ## alternation1
 ## LR(1) items:
@@ -472,16 +529,19 @@ nonempty_list(alternation1) -> alternation1 . nonempty_list(alternation1) [ RPAR
 -- On LBRACE shift to state 6
 -- On termfactor shift to state 7
 -- On term shift to state 15
--- On nonempty_list(alternation1) shift to state 29
--- On group1 shift to state 19
--- On fconcatenation shift to state 20
--- On factor shift to state 21
--- On cpair shift to state 25
--- On concatenation shift to state 26
--- On complexterms shift to state 23
--- On class1 shift to state 24
--- On alternation1 shift to state 28
--- On alter2 shift to state 30
+-- On sterm shift to state 16
+-- On qid shift to state 19
+-- On nonempty_list(alternation1) shift to state 32
+-- On lid shift to state 21
+-- On group1 shift to state 22
+-- On fconcatenation shift to state 23
+-- On factor shift to state 24
+-- On cpair shift to state 28
+-- On concatenation shift to state 29
+-- On complexterms shift to state 26
+-- On class1 shift to state 27
+-- On alternation1 shift to state 31
+-- On alter2 shift to state 33
 ## Reductions:
 -- On RPAREN RBRACE NEWLINE #
 --   reduce production nonempty_list(alternation1) -> alternation1
@@ -491,7 +551,7 @@ nonempty_list(alternation1) -> alternation1 . nonempty_list(alternation1) [ RPAR
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 29:
+State 32:
 ## Known stack suffix:
 ## alternation1 nonempty_list(alternation1)
 ## LR(1) items:
@@ -506,7 +566,7 @@ nonempty_list(alternation1) -> alternation1 nonempty_list(alternation1) . [ RPAR
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 30:
+State 33:
 ## Known stack suffix:
 ## alter2
 ## LR(1) items:
@@ -521,7 +581,7 @@ alternation1 -> alter2 . [ RPAREN RBRACE QID NEWLINE LPAREN LID LBRACE # ]
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 31:
+State 34:
 ## Known stack suffix:
 ## alternation
 ## LR(1) items:
@@ -536,16 +596,16 @@ rhs -> alternation . [ RPAREN RBRACE NEWLINE # ]
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 32:
+State 35:
 ## Known stack suffix:
 ## LPAREN rhs
 ## LR(1) items:
 group1 -> LPAREN rhs . RPAREN [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPAREN LID LBRACE BAR # ]
 ## Transitions:
--- On RPAREN shift to state 33
+-- On RPAREN shift to state 36
 ## Reductions:
 
-State 33:
+State 36:
 ## Known stack suffix:
 ## LPAREN rhs RPAREN
 ## LR(1) items:
@@ -560,7 +620,7 @@ group1 -> LPAREN rhs RPAREN . [ STAR RPAREN RBRACE QUESTION QID PLUS NEWLINE LPA
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 34:
+State 37:
 ## Known stack suffix:
 ## LID COLONCOLONEQUAL rhs
 ## LR(1) items:
@@ -575,7 +635,7 @@ old_rule -> LID COLONCOLONEQUAL rhs . [ NEWLINE # ]
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 35:
+State 38:
 ## Known stack suffix:
 ## separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
 ## LR(1) items:
@@ -585,7 +645,7 @@ rules -> separated_nonempty_list(nonempty_list(NEWLINE),old_rule) . [ # ]
 -- On #
 --   reduce production rules -> separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
 
-State 36:
+State 39:
 ## Known stack suffix:
 ## rules
 ## LR(1) items:
@@ -595,15 +655,15 @@ grammar -> rules . [ # ]
 -- On #
 --   reduce production grammar -> rules
 
-State 37:
+State 40:
 ## Known stack suffix:
 ## old_rule
 ## LR(1) items:
 separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule . [ # ]
 separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule . nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule) [ # ]
 ## Transitions:
--- On NEWLINE shift to state 38
--- On nonempty_list(NEWLINE) shift to state 40
+-- On NEWLINE shift to state 41
+-- On nonempty_list(NEWLINE) shift to state 43
 ## Reductions:
 -- On #
 --   reduce production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule
@@ -613,20 +673,20 @@ separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule . nonempty_
 **   without even requesting a lookahead token, and
 **   (2) testing whether the lookahead token is a member of the above set.
 
-State 38:
+State 41:
 ## Known stack suffix:
 ## NEWLINE
 ## LR(1) items:
 nonempty_list(NEWLINE) -> NEWLINE . [ LID ]
 nonempty_list(NEWLINE) -> NEWLINE . nonempty_list(NEWLINE) [ LID ]
 ## Transitions:
--- On NEWLINE shift to state 38
--- On nonempty_list(NEWLINE) shift to state 39
+-- On NEWLINE shift to state 41
+-- On nonempty_list(NEWLINE) shift to state 42
 ## Reductions:
 -- On LID
 --   reduce production nonempty_list(NEWLINE) -> NEWLINE
 
-State 39:
+State 42:
 ## Known stack suffix:
 ## NEWLINE nonempty_list(NEWLINE)
 ## LR(1) items:
@@ -636,18 +696,18 @@ nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE) . [ LID ]
 -- On LID
 --   reduce production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 
-State 40:
+State 43:
 ## Known stack suffix:
 ## old_rule nonempty_list(NEWLINE)
 ## LR(1) items:
 separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) . separated_nonempty_list(nonempty_list(NEWLINE),old_rule) [ # ]
 ## Transitions:
 -- On LID shift to state 1
--- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 41
--- On old_rule shift to state 37
+-- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 44
+-- On old_rule shift to state 40
 ## Reductions:
 
-State 41:
+State 44:
 ## Known stack suffix:
 ## old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
 ## LR(1) items:
@@ -657,7 +717,7 @@ separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_li
 -- On #
 --   reduce production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
 
-State 42:
+State 45:
 ## Known stack suffix:
 ## grammar
 ## LR(1) items:
