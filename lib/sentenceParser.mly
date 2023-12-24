@@ -83,6 +83,10 @@ WHITESPACE
   LID              "lident"
   QID              "\"alias\""
 
+%left QID
+%left LID
+%left LPAREN
+%left LBRACE
 %token <Stretch.ocamltype>
   OCAMLTYPE        "<unit>"
 
@@ -140,15 +144,15 @@ rule_specific_token:
     { xs }
 
 
-symbol:
-id = LID
-    {
-      (print_endline (Batteries.dump ("DEBUG:LID", id)));
-      id }
-  | id = QID
-    {
-      (print_endline (Batteries.dump ("DEBUG:QID", id)));
-      id }
+/* symbol: */
+/* id = LID */
+/*     { */
+/*       (print_endline (Batteries.dump ("DEBUG:LID", id))); */
+/*       id } */
+/*   | id = QID */
+/*     { */
+/*       (print_endline (Batteries.dump ("DEBUG:QID", id))); */
+/*       id } */
 
 old_rule:
 symbol = LID
@@ -170,13 +174,6 @@ branches = rhs(* separated_nonempty_list(BAR, symbol+) *)
 
 
 
-modifier:
-  QUESTION
-    { "option" }
-| PLUS
-    { "nonempty_list" }
-| STAR
-    { "list" }
 
 postlude:
   EOF
@@ -207,49 +204,73 @@ located(X):
   x = X
     { with_loc $loc x }
 
-/* %inline */ term:
-/* | "{" rhs  "}" {} */
-  /* | complexterms {} */
-  | LID {}
+%inline qid:
   | QID {}
+%inline lid:
+  | LID {}
 
+%inline sterm:
+  | qid {}
+  | lid {}
 
-/* complexterms: */
-/*   | group1 {} */
-/*   | class1  {} */
+term:
+  | complexterms {} 
+  | sterm {}
 
-/* group1: */
-  | "(" rhs  ")" {}
+ complexterms: 
+   | group1 {} 
+   | class1  {} 
 
-/* class1: */
-  | "[" rhs  "]" {}
+ group1: 
+  | LPAREN rhs  RPAREN {}
 
+ class1: 
+  | LBRACE rhs  RBRACE {}
 
-
-%inline  termfactor:
+termfactor:
   | term   {}
 
-/*  */ factor:
+factor:
+  | termfactor modifier {}
+  | termfactor  {}
 
-   | termfactor  {} 
-  | term "?" {}
-  | term "*" {}
-  | term "+" {}
-  | term "-" term {}
+modifier:
+  | fplus {}
+  | fquest {}
+  | fstar {}
 
+fstar:
+  |  STAR {}
+fquest:
+  |  QUESTION {}
+fplus:
+  | PLUS {}
+
+
+fconcatenation:
+  | factor  {}
+  /* | factor modifier {} */
 
 concatenation:
-  | factor  {}
-  | factor factor {}
+  | cpair {}
+  | fconcatenation  {}
 
+cpair:
+  | factor factor {}
+    
 %inline simplealt:
   | concatenation  {}
+
 alternation1:  
+  | alter2 {}
   | simplealt {}
+
+
+alter2:
   | concatenation  BAR  {}
 
 alternation:
-  | alternation1+ {}
+  |  alternation1+ {}
 
 rhs:
   | alternation {}
@@ -304,22 +325,6 @@ rhs:
 
 /* </syntaxhighlight> */
 
-/* expression: */
-/*   | prods = expression BAR expression */
-/*     {  */
-/*       (print_endline (Batteries.dump ("DEBUG:branches2",prods))) */
-/*     } */
-/*   | prods = expression expression */
-/*     {  */
-/*       (print_endline (Batteries.dump ("DEBUG:branches2",prods))) */
-/*     } */
-
-/*   /\* | expression expression  { (print_endline (Batteries.dump ("DEBUG:rs",$1))) } *\/ */
-/*   | LPAREN expression RPAREN { (print_endline (Batteries.dump ("DEBUG:rs",$2))) } */
-/*   | LBRACE list(char_class) RBRACE { (print_endline (Batteries.dump ("DEBUG:rs",$2))) } */
-/*   | e = expression m = modifier    {	       (print_endline (Batteries.dump ("DEBUG:branches3", e,m )))     } */
-/*   | branches = symbol   {      (print_endline (Batteries.dump ("DEBUG:branches4", branches)))    } */
-/* ; */
 
 (* ocaml/lex/parser.mly *)
 char_class:
@@ -340,14 +345,6 @@ char_class1:
   /* | char_class1 char_class1  CONCAT */
   /*       { Cset.union $1 $2 } */
 ;
-
-/* symbol_expression: */
-/* /\* | symbol = symbol es = plist(expression)  *\/ */
-/* /\*     {   (print_endline (Batteries.dump ("DEBUG:rs",symbol, es))) } *\/ */
-/* | e = located(symbol_expression) m = located(modifier)  */
-/*     { */
-/*        (print_endline (Batteries.dump ("DEBUG:rs",e,m))) */
-/*     } */
 
 
 
