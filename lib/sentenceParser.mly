@@ -11,13 +11,21 @@
 /*                                                                            */
 /******************************************************************************/
 
-/* This is the fancy version of the parser, to be processed by menhir.
-   It is kept in sync with [Parser], but exercises menhir's features. */
+/*  Copyright 2023 James Michael Dupont */
+/*  
+Starting with the menhir sentence parser, replacing with stage2 parser, adding in wikipedias DFA and parts of bnfgen
+ https://github.com/dmbaturin/bnfgen
+and ocaml code itself ocaml/lex/parser.mly 
+attempt to parse the gbnf.
+ */
+/*
+grammar
+  rules:
+    old_rule: lid ::= rhs
+    rsa alt concat
 
-/* As of 2014/12/02, the $previouserror keyword and the --error-recovery
-   mode no longer exist. Thus, we replace all calls to [Error.signal]
-   with calls to [Error.error], and report just one error. */
 
+*/
 /* ------------------------------------------------------------------------- */
 /* Imports. */
 
@@ -61,7 +69,6 @@ let unparenthesize (s : Stretch.t) : Stretch.t =
 %token DASH "-"
 %token CARET "^"
 %token
-  COLON            ":"
   BAR              "|"
   EOF              ""
   LPAREN           "("
@@ -96,13 +103,13 @@ NEWLINE
 taken from https://github.com/dmbaturin/bnfgen
 */
 rules:
-separated_nonempty_list(NEWLINE+, old_rule) {
+separated_nonempty_list(NEWLINE+, old_rule)  {
 			 (print_endline (Batteries.dump ("DEBUG:OLDRULE",$1)))
-		       }
+		       } 
 
 
 grammar:
-  rs =  rules
+  rs =  rules postlude
     {
       (print_endline (Batteries.dump ("DEBUG:rs",rs)));
       {
@@ -111,10 +118,10 @@ grammar:
       }
     }
 
-rule_specific_token:
-| COLON
-| EOF
-    { () }
+/* rule_specific_token: */
+/* | COLON */
+/* | EOF */
+/*     { () } */
 
 
  clist(X):
@@ -198,7 +205,7 @@ term:
   | LPAREN rhs  RPAREN {}
 
  class1: 
-  | LBRACE rhs  RBRACE {}
+  | LBRACE char_class  RBRACE {}
 
 termfactor:
   | term   {}
@@ -228,10 +235,16 @@ concatenation:
   | cpair {}
   | fconcatenation  {}
 
+%inline cpair1:
+  | factor LID {}
+  | factor QID {}
+
 cpair:
   /* | factor QID {} */
+  | cpair1 {}
   | factor factor {} 
-    
+
+
 %inline simplealt:
   | concatenation  {}
 
