@@ -1,3 +1,88 @@
-make[1]: Entering directory '/mnt/data1/2023/12/17/gbnf_parser'
 menhir --cmly --table --trace --dump --explain --log-grammar 99 --log-automaton 9 --log-code 99 --log-grammar 99 --reference-graph lib/sentenceParser.mly
-make[1]: Leaving directory '/mnt/data1/2023/12/17/gbnf_parser'
+rm -f lib/sentenceParser.cmly lib/sentenceParser.ml lib/sentenceParser.mli
+dune clean
+dune build
+dot ./lib/sentenceParser.dot -Tpng -Gsize=8.5,11 -Gdpi=300 -Grankdir=LR -Gorientation="[lL]*" -o sentenceParser.png  
+dot ./lib/sentenceParser.dot -Tsvg -Gsize=8.5,11 -Gdpi=300 -Grankdir=LR -Gorientation="[lL]*" -o sentenceParser.svg 
+dune test || echo skip
+skip
+bash -x ./report.sh
+grammars/arithmetic.gbnf
+err grammars/arithmetic.gbnf
+grammars/assistant.gbnf
+err grammars/assistant.gbnf
+grammars/c.gbnf
+err grammars/c.gbnf
+grammars/charm.gbnf
+err grammars/charm.gbnf
+grammars/chat.gbnf
+err grammars/chat.gbnf
+grammars/chess.gbnf
+err grammars/chess.gbnf
+grammars/colors.gbnf
+err grammars/colors.gbnf
+grammars/commands.gbnf
+err grammars/commands.gbnf
+grammars/commands_kwargs.gbnf
+err grammars/commands_kwargs.gbnf
+grammars/elixir.gbnf
+err grammars/elixir.gbnf
+grammars/elixir_no_left_recursion.gbnf
+err grammars/elixir_no_left_recursion.gbnf
+grammars/gallina2.gbnf
+err grammars/gallina2.gbnf
+grammars/gallina.gbnf
+err grammars/gallina.gbnf
+grammars/generated_grammar.gbnf
+err grammars/generated_grammar.gbnf
+grammars/gen_function_calling.gbnf
+err grammars/gen_function_calling.gbnf
+grammars/grammar-3.gbnf
+err grammars/grammar-3.gbnf
+grammars/grammar.gbnf
+err grammars/grammar.gbnf
+grammars/hazel.gbnf
+err grammars/hazel.gbnf
+grammars/japanese.gbnf
+err grammars/japanese.gbnf
+grammars/json_arr.gbnf
+err grammars/json_arr.gbnf
+grammars/json_converse.gbnf
+err grammars/json_converse.gbnf
+grammars/json_func_calls_with_inner_thoughts.gbnf
+err grammars/json_func_calls_with_inner_thoughts.gbnf
+grammars/json.gbnf
+err grammars/json.gbnf
+grammars/json_only_reply.gbnf
+err grammars/json_only_reply.gbnf
+grammars/list.gbnf
+err grammars/list.gbnf
+grammars/multi-tool.gbnf
+err grammars/multi-tool.gbnf
+grammars/pinnacle_turn_d.gbnf
+err grammars/pinnacle_turn_d.gbnf
+grammars/pinnacle_turn_s.gbnf
+err grammars/pinnacle_turn_s.gbnf
+grammars/primitive.gbnf
+err grammars/primitive.gbnf
+grammars/question_grammar.gbnf
+grammars/segfault_fixed.gbnf
+err grammars/segfault_fixed.gbnf
+grammars/segfault.gbnf
+err grammars/segfault.gbnf
+grammars/syllable-count.gbnf
+err grammars/syllable-count.gbnf
+grammars/test_grammar.gbnf
+grammars/tools.gbnf
+err grammars/tools.gbnf
+grammars/w++.gbnf
+err grammars/w++.gbnf
+grammars/yaml.gbnf
+err grammars/yaml.gbnf
+      3 State 2:
+      5 State 13:
+      7 State 8:
+      8 State 0:
+      8 State 33:
+echo ok
+ok
