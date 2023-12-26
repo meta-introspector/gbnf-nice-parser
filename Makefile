@@ -1,5 +1,10 @@
+
 all :testall
 	echo ok
+
+log:
+	bash ./build.sh
+
 duneTest:
 	dune test --verbose       --force
 test1:

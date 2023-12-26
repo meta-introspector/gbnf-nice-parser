@@ -56,8 +56,6 @@ let unparenthesize (s : string) : string =
   Bytes.set b (n-1) ' ';
   Bytes.to_string b
 
-let unparenthesize (s : Stretch.t) : Stretch.t =
-  { s with stretch_content = unparenthesize s.stretch_content }
 
 
 %}
@@ -81,13 +79,13 @@ let unparenthesize (s : Stretch.t) : Stretch.t =
   PLUS             "+"
 NEWLINE
 
-%token <string Positions.located>
-  LID              "lident"
-  QID              "\"alias\""
+%token <string>
+REGEX2            "regex2"
 
-%left      left
-%right     right
-%nonassoc  nonassoc
+%token <string Positions.located>
+   LID              "lident"
+   REGEX            "regex"
+   QID              "\"alias\""
 
 /* For the new rule syntax: */
 %token
@@ -208,7 +206,9 @@ term:
   | LPAREN rhs  RPAREN {}
 
 %inline class1: 
-  | LBRACE char_class  RBRACE {}
+/* | LBRACE char_class  RBRACE {} */
+  |  char_class   {}
+  |  REGEX {}
 
 %inline termfactor:
   | term   {}
@@ -228,11 +228,6 @@ factor:
   |  QUESTION {}
 %inline fplus:
   | PLUS {}
-
-
-%inline fconcatenation:
-  | factor  {}
-  /* | factor modifier {} */
 
 concatenation:
   | concatenation factor  {}
@@ -309,13 +304,14 @@ char_class1:
     Tchar DASH Tchar
     /* { Cset.interval $1 $3 } */
     {   (print_endline (Batteries.dump ("DEBUG:rs",$1,$2))) }
+  | char_class1 Tchar
+    /* Cset.singleton $1 */
+    {   (print_endline (Batteries.dump ("DEBUG:rs",$1))) }
   | Tchar
     /* Cset.singleton $1 */
     {   (print_endline (Batteries.dump ("DEBUG:rs",$1))) }
   /* | char_class1 char_class1  CONCAT */
   /*       { Cset.union $1 $2 } */
 ;
-
-
 
 %%

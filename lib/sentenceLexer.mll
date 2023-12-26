@@ -466,9 +466,25 @@ rule main = parse
     { COMMA }
 
 | "("
-    { LPAREN }
+    {       (print_endline (Batteries.dump (((Lexing.lexeme lexbuf))))); LPAREN }
+
 | ")"
     { RPAREN }
+ | "[" 
+    {
+      (* lexbuf.Lexing.lex_start_p <- lexbuf.Lexing.lex_curr_p;  *)
+      (print_endline (Batteries.dump (((Lexing.lexeme lexbuf)))));
+      let buffer = Buffer.create 256 in
+      let openingpos = lexeme_start_p lexbuf in
+      let content = charclass  openingpos buffer lexbuf in
+      let id = Printf.sprintf "\"%s\"" content in
+      let pos = import (openingpos, lexbuf.lex_curr_p) in
+      REGEX (with_pos pos id)
+    }
+
+
+| "]"
+    { RBRACE }
 | "|"
     { BAR }
 | "?"
@@ -510,6 +526,7 @@ rule main = parse
 | "//" [^ '\010' '\013']* newline (* skip C++ style comment *)
 | newline 
      { NEWLINE }
+| "#" [^'\010''\013']* newline { NEWLINE }
 (*       (print_endline "NL1");	 *)
 (*       (print_endline (Batteries.dump lexbuf));	 *)
 (*       (print_endline "NL2");	 *)
@@ -525,193 +542,9 @@ rule main = parse
     }
 | eof
     { EOF }
+
 | _
     { error2 lexbuf "unexpected character(s)." }
-
-(* ------------------------------------------------------------------------ *)
-
-(* Skip C style comments. *)
-
-and comment openingpos = parse
-| newline
-    {       (print_endline "NL2");	
-new_line lexbuf; comment openingpos lexbuf }
-| "*/"
-    { () }
-| eof
-    { error1 openingpos "unterminated comment." }
-| _
-    { comment openingpos lexbuf }
-
-(* ------------------------------------------------------------------------ *)
-
-and action percent openingpos monsters = parse
-| '{'
-    { let _, monsters = action false (lexeme_start_p lexbuf) monsters lexbuf in
-      action percent openingpos monsters lexbuf }
-| ("}" | "%}") as delimiter
-    { match percent, delimiter with
-      | true, "%}"
-      | false, "}" ->
-          (* This is the delimiter we were instructed to look for. *)
-          lexeme_start_p lexbuf, monsters
-      | _, _ ->
-          (* This is not it. *)
-          error1 openingpos "unbalanced opening brace."
-    }
-| '('
-    { let _, monsters = parentheses (lexeme_start_p lexbuf) monsters lexbuf in
-      action percent openingpos monsters lexbuf }
-(* | '$' (['0'-'9']+ as i) *)
-(*     { let i = int_of_string (lexeme_start_p lexbuf) i in *)
-(*       let monster = dollar (cpos lexbuf) i in *)
-(*       action percent openingpos (monster :: monsters) lexbuf } *)
-| poskeyword
-    { let monster = position (cpos lexbuf) where flavor i x in
-      action percent openingpos (monster :: monsters) lexbuf }
-| previouserror
-    { error2 lexbuf "$previouserror is no longer supported." }
-| syntaxerror
-    { let monster = syntaxerror (cpos lexbuf) in
-      action percent openingpos (monster :: monsters) lexbuf }
-| '"'
-    { string (lexeme_start_p lexbuf) lexbuf;
-      action percent openingpos monsters lexbuf }
-| "'"
-    { char lexbuf;
-      action percent openingpos monsters lexbuf }
-| "(*"
-    { ocamlcomment (lexeme_start_p lexbuf) lexbuf;
-      action percent openingpos monsters lexbuf }
-| newline
-    {       (print_endline "NL4");	new_line lexbuf;
-      action percent openingpos monsters lexbuf }
-| ')'
-| eof
-    { error1 openingpos "unbalanced opening brace." }
-| _
-    { action percent openingpos monsters lexbuf }
-
-(* ------------------------------------------------------------------------ *)
-
-(* Inside a semantic action, we keep track of nested parentheses, so as to
-   better report errors when they are not balanced. *)
-
-and parentheses openingpos monsters = parse
-| '('
-    { let _, monsters = parentheses (lexeme_start_p lexbuf) monsters lexbuf in
-      parentheses openingpos monsters lexbuf }
-| ')'
-    { lexeme_start_p lexbuf, monsters }
-| '{'
-    { let _, monsters = action false (lexeme_start_p lexbuf) monsters lexbuf in
-      parentheses openingpos monsters lexbuf }
-(* | '$' (['0'-'9']+ as i) *)
-(*     { let i = int_of_string (lexeme_start_p lexbuf) i in *)
-(*       let monster = dollar (cpos lexbuf) i in *)
-(*       parentheses openingpos (monster :: monsters) lexbuf } *)
-| poskeyword
-    { let monster = position (cpos lexbuf) where flavor i x in
-      parentheses openingpos (monster :: monsters) lexbuf }
-| previouserror
-    { error2 lexbuf "$previouserror is no longer supported." }
-| syntaxerror
-    { let monster = syntaxerror (cpos lexbuf) in
-      parentheses openingpos (monster :: monsters) lexbuf }
-| '"'
-    { string (lexeme_start_p lexbuf) lexbuf; parentheses openingpos monsters lexbuf }
-| "'"
-    { char lexbuf; parentheses openingpos monsters lexbuf }
-| "(*"
-    { ocamlcomment (lexeme_start_p lexbuf) lexbuf; parentheses openingpos monsters lexbuf }
-| newline
-    {       (print_endline "NL5");	new_line lexbuf; parentheses openingpos monsters lexbuf }
-| '}'
-| eof
-    { error1 openingpos "unbalanced opening parenthesis." }
-| _
-    { parentheses openingpos monsters lexbuf }
-
-(* ------------------------------------------------------------------------ *)
-
-(* Collect an attribute payload, which is terminated by a closing square
-   bracket. Nested square brackets must be properly counted. Nested curly
-   brackets and nested parentheses are also kept track of, so as to better
-   report errors when they are not balanced. *)
-
-(* and attribute openingpos = parse *)
-(* | '[' *)
-(*     { let _ = attribute (lexeme_start_p lexbuf) lexbuf in *)
-(*       attribute openingpos lexbuf } *)
-(* | ']' *)
-(*     { lexeme_start_p lexbuf } *)
-(* | '{' *)
-(*     { let _, _ = action false (lexeme_start_p lexbuf) [] lexbuf in *)
-(*       attribute openingpos lexbuf } *)
-(* | '(' *)
-(*     { let _, _ = parentheses (lexeme_start_p lexbuf) [] lexbuf in *)
-(*       attribute openingpos lexbuf } *)
-(* | '"' *)
-(*     { string (lexeme_start_p lexbuf) lexbuf; attribute openingpos lexbuf } *)
-(* | "'" *)
-(*     { char lexbuf; attribute openingpos lexbuf } *)
-(* | "(\*" *)
-(*     { ocamlcomment (lexeme_start_p lexbuf) lexbuf; attribute openingpos lexbuf } *)
-(* | newline *)
-(*     {       (print_endline "NL6");	new_line lexbuf; attribute openingpos lexbuf } *)
-(* | '}' *)
-(* | ')' *)
-(* | eof *)
-(*     { error1 openingpos "unbalanced opening bracket." } *)
-(* | _ *)
-(*     { attribute openingpos lexbuf } *)
-
-(* ------------------------------------------------------------------------ *)
-
-(* Skip O'Caml comments. Comments can be nested and can contain
-   strings or characters, which must be correctly analyzed. (A string
-   could contain begin-of-comment or end-of-comment sequences, which
-   must be ignored; a character could contain a begin-of-string
-   sequence.) *)
-
-and ocamlcomment openingpos = parse
-| "*)"
-    { () }
-| "(*"
-    { ocamlcomment (lexeme_start_p lexbuf) lexbuf; ocamlcomment openingpos lexbuf }
-| '"'
-    { string (lexeme_start_p lexbuf) lexbuf; ocamlcomment openingpos lexbuf }
-| "'"
-    { char lexbuf; ocamlcomment openingpos lexbuf }
-| newline
-    {       (print_endline "NL7");	new_line lexbuf; ocamlcomment openingpos lexbuf }
-| eof
-    { error1 openingpos "unterminated OCaml comment." }
-| _
-    { ocamlcomment openingpos lexbuf }
-
-(* ------------------------------------------------------------------------ *)
-
-(* Skip O'Caml strings. *)
-
-and string openingpos = parse
-| '"'
-    { () }
-| '\\' newline
-| newline
-    {       (print_endline "NL8");	new_line lexbuf; string openingpos lexbuf }
-| '\\' _
-    (* Upon finding a backslash, skip the character that follows,
-       unless it is a newline. Pretty crude, but should work. *)
-    { string openingpos lexbuf }
-| eof
-    { error1 openingpos "unterminated OCaml string." }
-| _
-    { string openingpos lexbuf }
-
-(* ------------------------------------------------------------------------ *)
-
-(* Recording on OCaml string. (This is used for token aliases.) *)
 
 and record_string openingpos buffer = parse
 | '"'
@@ -721,52 +554,28 @@ and record_string openingpos buffer = parse
       Buffer.add_string buffer sequence;
       record_string openingpos buffer lexbuf }
 | newline
-    {       (print_endline "NL9");	error2 lexbuf "illegal newline in string." }
+    { error2 lexbuf "illegal newline in string." }
 | eof
     { error1 openingpos "unterminated string." }
 | _ as c
     { Buffer.add_char buffer c;
       record_string openingpos buffer lexbuf }
 
-(* Decoding a string that may contain escaped characters. *)
+and charclass openingpos buffer = parse
+| "]" { (print_endline (Batteries.dump (((Lexing.lexeme lexbuf)))));
+        (* main lexbuf *)
+        "TODO"
+}
+| "[" { (print_endline (Batteries.dump (((Lexing.lexeme lexbuf)))));
+        (* LBRACE *)
+        
+        charclass openingpos buffer lexbuf
+}
+| _ {
+      (print_endline (Batteries.dump (((Lexing.lexeme lexbuf))))); 
+        (* Tchar(Char.code(Lexing.lexeme_char lexbuf 0))  *)
+        charclass openingpos buffer lexbuf
+    }
 
-and decode_string buffer = parse
-| '"'
-    { (* The final double quote is skipped. *) }
-| '\\' (['\\' '\'' '"' 'n' 't' 'b' 'r' ' '] as c)
-    { Buffer.add_char buffer (char_for_backslash c);
-      decode_string buffer lexbuf }
-| _ as c
-    { Buffer.add_char buffer c;
-      decode_string buffer lexbuf }
 
-(* ------------------------------------------------------------------------ *)
 
-(* Skip O'Caml characters. A lone quote character is legal inside
-   a comment, so if we don't recognize the matching closing quote,
-   we simply abandon. *)
-
-and char = parse
-| '\\'? newline "'"
-   {       (print_endline "NL10");	new_line lexbuf }
-| [^ '\\' '\''] "'"
-| '\\' _ "'"
-| '\\' ['0'-'9'] ['0'-'9'] ['0'-'9'] "'"
-| '\\' 'x' ['0'-'9' 'a'-'f' 'A'-'F'] ['0'-'9' 'a'-'f' 'A'-'F'] "'"
-| ""
-   { () }
-
-(* ------------------------------------------------------------------------ *)
-
-(* Read until the end of the file. This is used after finding a %%
-   that marks the end of the grammar specification. We update the
-   current position as we go. This allows us to build a stretch
-   for the postlude. *)
-
-and finish = parse
-| newline
-    {       (print_endline "NL11");	new_line lexbuf; finish lexbuf }
-| eof
-    { lexeme_start_p lexbuf }
-| _
-    { finish lexbuf }
