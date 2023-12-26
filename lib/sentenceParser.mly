@@ -110,7 +110,7 @@ separated_nonempty_list(NEWLINE+, old_rule)  {
 
 
 grammar:
-  rs =  rules postlude
+  rs =  rules NEWLINE* postlude
     {
       (print_endline (Batteries.dump ("DEBUG:rs",rs)));
       {
@@ -203,7 +203,7 @@ term:
    | class1  {} 
 
 %inline  group1: 
-  | LPAREN rhs  RPAREN {}
+  | LPAREN NEWLINE* rhs  RPAREN {}
 
 %inline class1: 
 /* | LBRACE char_class  RBRACE {} */
