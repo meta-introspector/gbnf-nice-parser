@@ -1,12 +1,9 @@
 comma ::= ","
-term         ::=  forall binders comma term
-                  | fun binders "=>" term
-                  | fix fix_bodies
-                  | cofix cofix_bodies
-                  | let ident "[" binders "]" "[:" term"]" ":=" term "in" term
-                  | let fix fix_body "in" term
-                  | let cofix cofix_body in term
-                  | let ( [name , … , name] ) [dep_ret_type] := term in term
+term         ::=  forall binders comma term  |
+	     fun binders "=>" term |
+	     fix fix_bodies        |
+	     cofix cofix_bodies |
+	     let ident "[" binders "]" "[:" term"]" ":=" term "in" term                  | let fix fix_body "in" term                   | let cofix cofix_body in term                   | let ( [name , … , name] ) [dep_ret_type] := term in term 
                   | let ' pattern [in term] := term [return_type] in term
                   | if term [dep_ret_type] then term else term
                   | term : term

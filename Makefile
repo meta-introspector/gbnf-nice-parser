@@ -1,5 +1,7 @@
 grammars/c.gbnf.out: grammars/c.gbnf
 	dune exec bin/main.exe  $< | tee  $>.out	 2>&1 
+grammars/segfault.gbnf.out: grammars/segfault.gbnf
+	dune exec bin/main.exe  $< | tee  $>.out	 2>&1 
 
 grammars/tools.gbnf.out: grammars/tools.gbnf
 	dune exec bin/main.exe  $< | tee  $>.out	 2>&1 
