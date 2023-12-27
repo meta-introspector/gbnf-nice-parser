@@ -1,5 +1,9 @@
 grammars/c.gbnf.out: grammars/c.gbnf
 	dune exec bin/main.exe  $< | tee  $>.out	 2>&1 
+
+grammars/tools.gbnf.out: grammars/tools.gbnf
+	dune exec bin/main.exe  $< | tee  $>.out	 2>&1 
+
 grammars/json.gbnf.out: grammars/json.gbnf
 	dune exec bin/main.exe  $< | tee  $>.out	 2>&1 
 grammars/hazel.gbnf.out: grammars/hazel.gbnf
