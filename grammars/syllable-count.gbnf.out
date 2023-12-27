@@ -1,11 +1,10 @@
-Done: 90% (284/315, 31 left) (jobs: 0)                                      Hello, World!
+Done: 94% (298/315, 17 left) (jobs: 0)                                      Hello, World!
 State 0:
 Lookahead token is now LID (0-4)
 Reducing production list(NEWLINE) ->
 State 3:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 9, "::=")
 Lookahead token is now COLONCOLONEQUAL (6-9)
 Shifting (COLONCOLONEQUAL) to state 5
@@ -23,6 +22,7 @@ Reducing production concatenation -> factor
 State 24:
 Shifting (LPAREN) to state 11
 State 11:
+("DEBUG2:rs", 45)
 Lookahead token is now QID (19-20)
 Reducing production list(NEWLINE) ->
 State 12:
@@ -55,6 +55,7 @@ Reducing production term -> LPAREN list(NEWLINE) rhs RPAREN
 State 17:
 Shifting (PLUS) to state 20
 State 20:
+("DEBUG2:rs", 59)
 Lookahead token is now QID (31-32)
 Reducing production factor -> term PLUS
 State 25:
@@ -83,7 +84,6 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 42, "::=")
 Lookahead token is now COLONCOLONEQUAL (39-42)
 Shifting (COLONCOLONEQUAL) to state 5

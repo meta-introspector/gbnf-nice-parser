@@ -4,6 +4,10 @@ grammars/json.gbnf.out: grammars/json.gbnf
 	dune exec bin/main.exe  $< | tee  $>.out	 2>&1 
 grammars/hazel.gbnf.out: grammars/hazel.gbnf
 	dune exec bin/main.exe  $< | tee  $>.out	 2>&1 
+grammars/gallina2.gbnf.out: grammars/gallina2.gbnf
+	dune exec bin/main.exe  $< | tee  $>.out	 2>&1 
+grammars/gallina3.gbnf.out: grammars/gallina3.gbnf
+	dune exec bin/main.exe  $< | tee  $>.out	 2>&1 
 
 all :testall
 	echo ok

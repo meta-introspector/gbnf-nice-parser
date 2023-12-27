@@ -509,7 +509,7 @@ rule main = parse
     { CARET }
 | "::="
     {
-      (print_endline "DEBUG");
+
       let curr = lexbuf.Lexing.lex_curr_p in
       let line = curr.Lexing.pos_lnum in
       let cnum = curr.Lexing.pos_cnum - curr.Lexing.pos_bol in
@@ -559,16 +559,18 @@ rule main = parse
 and record_string openingpos buffer = parse
 | '"'
     { Buffer.contents buffer }
-| ('\\' ['\\' '\'' '"' 't' 'b' 'r' ' ']) as sequence
+| ('\\' ['\\' '\'' '"' 't' 'b' 'r' ' ' '|' '&' ')']) as sequence
     { (* This escape sequence is recognized as such, but not decoded. *)
       Buffer.add_string buffer sequence;
+      (print_endline (Batteries.dump ("DEBUG:rs",sequence)));
       record_string openingpos buffer lexbuf }
 | newline
     { error2 lexbuf "illegal newline in string." }
 | eof
     { error1 openingpos "unterminated string." }
 | _ as c
-    { Buffer.add_char buffer c;
+         { Buffer.add_char buffer c;
+           (print_endline (Batteries.dump ("DEBUG2:rs", c)));
       record_string openingpos buffer lexbuf }
 
 and charclass openingpos buffer = parse

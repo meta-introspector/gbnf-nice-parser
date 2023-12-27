@@ -1,11 +1,10 @@
-Done: 90% (284/315, 31 left) (jobs: 0)                                      Hello, World!
+Done: 94% (298/315, 17 left) (jobs: 0)                                      Hello, World!
 State 0:
 Lookahead token is now LID (0-4)
 Reducing production list(NEWLINE) ->
 State 3:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 8, "::=")
 Lookahead token is now COLONCOLONEQUAL (5-8)
 Shifting (COLONCOLONEQUAL) to state 5
@@ -61,7 +60,6 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 40, "::=")
 Lookahead token is now COLONCOLONEQUAL (37-40)
 Shifting (COLONCOLONEQUAL) to state 5
@@ -78,6 +76,7 @@ Reducing production concatenation -> factor
 State 24:
 Shifting (LID) to state 13
 State 13:
+("DEBUG2:rs", 40)
 Lookahead token is now QID (63-64)
 Reducing production term -> LID
 State 17:
@@ -101,6 +100,7 @@ Reducing production term -> LID
 State 17:
 Shifting (QUESTION) to state 19
 State 19:
+("DEBUG2:rs", 41)
 Lookahead token is now QID (78-79)
 Reducing production factor -> term QUESTION
 State 25:
@@ -108,6 +108,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
+("DEBUG2:rs", 123)
 Lookahead token is now QID (82-83)
 Reducing production term -> QID
 State 17:
@@ -131,6 +132,7 @@ Reducing production term -> LID
 State 17:
 Shifting (STAR) to state 18
 State 18:
+("DEBUG2:rs", 125)
 Lookahead token is now QID (97-98)
 Reducing production factor -> term STAR
 State 25:
@@ -164,11 +166,13 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 113, "::=")
 Lookahead token is now COLONCOLONEQUAL (110-113)
 Shifting (COLONCOLONEQUAL) to state 5
 State 5:
+("DEBUG2:rs", 105)
+("DEBUG2:rs", 110)
+("DEBUG2:rs", 116)
 Lookahead token is now QID (118-119)
 Shifting (QID) to state 10
 State 10:
@@ -192,6 +196,11 @@ Reducing production alternation -> concatenation
 State 28:
 Shifting (BAR) to state 29
 State 29:
+("DEBUG2:rs", 102)
+("DEBUG2:rs", 108)
+("DEBUG2:rs", 111)
+("DEBUG2:rs", 97)
+("DEBUG2:rs", 116)
 Lookahead token is now QID (131-132)
 Reducing production list(NEWLINE) ->
 State 30:
@@ -217,6 +226,10 @@ Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
 State 28:
 Shifting (BAR) to state 29
 State 29:
+("DEBUG2:rs", 99)
+("DEBUG2:rs", 104)
+("DEBUG2:rs", 97)
+("DEBUG2:rs", 114)
 Lookahead token is now QID (143-144)
 Reducing production list(NEWLINE) ->
 State 30:
@@ -252,7 +265,6 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 162, "::=")
 Lookahead token is now COLONCOLONEQUAL (159-162)
 Shifting (COLONCOLONEQUAL) to state 5
@@ -319,7 +331,6 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 201, "::=")
 Lookahead token is now COLONCOLONEQUAL (198-201)
 Shifting (COLONCOLONEQUAL) to state 5
@@ -362,7 +373,6 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 236, "::=")
 Lookahead token is now COLONCOLONEQUAL (233-236)
 Shifting (COLONCOLONEQUAL) to state 5
@@ -394,6 +404,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
+("DEBUG2:rs", 61)
 Lookahead token is now QID (268-269)
 Reducing production term -> LID
 State 17:
@@ -421,6 +432,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
+("DEBUG2:rs", 59)
 Lookahead token is now QID (286-287)
 Reducing production term -> LID
 State 17:
@@ -479,6 +491,7 @@ Reducing production concatenation -> factor
 State 24:
 Shifting (LID) to state 13
 State 13:
+("DEBUG2:rs", 61)
 Lookahead token is now QID (314-315)
 Reducing production term -> LID
 State 17:
@@ -506,6 +519,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
+("DEBUG2:rs", 59)
 Lookahead token is now QID (332-333)
 Reducing production term -> LID
 State 17:
@@ -564,6 +578,7 @@ Reducing production concatenation -> factor
 State 24:
 Shifting (LID) to state 13
 State 13:
+("DEBUG2:rs", 40)
 Lookahead token is now QID (360-361)
 Reducing production term -> LID
 State 17:
@@ -587,6 +602,7 @@ Reducing production term -> LID
 State 17:
 Shifting (QUESTION) to state 19
 State 19:
+("DEBUG2:rs", 41)
 Lookahead token is now QID (373-374)
 Reducing production factor -> term QUESTION
 State 25:
@@ -594,6 +610,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
+("DEBUG2:rs", 59)
 Lookahead token is now QID (377-378)
 Reducing production term -> QID
 State 17:
@@ -638,6 +655,12 @@ Reducing production list(NEWLINE) -> NEWLINE list(NEWLINE)
 State 30:
 Shifting (LPAREN) to state 11
 State 11:
+("DEBUG2:rs", 114)
+("DEBUG2:rs", 101)
+("DEBUG2:rs", 116)
+("DEBUG2:rs", 117)
+("DEBUG2:rs", 114)
+("DEBUG2:rs", 110)
 Lookahead token is now QID (396-397)
 Reducing production list(NEWLINE) ->
 State 12:
@@ -661,6 +684,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
+("DEBUG2:rs", 59)
 Lookahead token is now QID (414-415)
 Reducing production term -> LID
 State 17:
@@ -705,11 +729,17 @@ Reducing production list(NEWLINE) -> NEWLINE list(NEWLINE)
 State 30:
 Shifting (LPAREN) to state 11
 State 11:
+("DEBUG2:rs", 119)
+("DEBUG2:rs", 104)
+("DEBUG2:rs", 105)
+("DEBUG2:rs", 108)
+("DEBUG2:rs", 101)
 Lookahead token is now QID (432-433)
 Reducing production list(NEWLINE) ->
 State 12:
 Shifting (QID) to state 10
 State 10:
+("DEBUG2:rs", 40)
 Lookahead token is now QID (436-437)
 Reducing production term -> QID
 State 17:
@@ -728,6 +758,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
+("DEBUG2:rs", 41)
 Lookahead token is now QID (450-451)
 Reducing production term -> LID
 State 17:
@@ -737,6 +768,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
+("DEBUG2:rs", 123)
 Lookahead token is now QID (454-455)
 Reducing production term -> QID
 State 17:
@@ -760,6 +792,7 @@ Reducing production term -> LID
 State 17:
 Shifting (STAR) to state 18
 State 18:
+("DEBUG2:rs", 125)
 Lookahead token is now QID (469-470)
 Reducing production factor -> term STAR
 State 25:
@@ -802,11 +835,15 @@ Reducing production list(NEWLINE) -> NEWLINE list(NEWLINE)
 State 30:
 Shifting (LPAREN) to state 11
 State 11:
+("DEBUG2:rs", 102)
+("DEBUG2:rs", 111)
+("DEBUG2:rs", 114)
 Lookahead token is now QID (485-486)
 Reducing production list(NEWLINE) ->
 State 12:
 Shifting (QID) to state 10
 State 10:
+("DEBUG2:rs", 40)
 Lookahead token is now QID (489-490)
 Reducing production term -> QID
 State 17:
@@ -825,6 +862,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
+("DEBUG2:rs", 59)
 Lookahead token is now QID (501-502)
 Reducing production term -> LID
 State 17:
@@ -852,6 +890,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
+("DEBUG2:rs", 59)
 Lookahead token is now QID (518-519)
 Reducing production term -> LID
 State 17:
@@ -879,6 +918,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
+("DEBUG2:rs", 41)
 Lookahead token is now QID (535-536)
 Reducing production term -> LID
 State 17:
@@ -888,6 +928,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
+("DEBUG2:rs", 123)
 Lookahead token is now QID (539-540)
 Reducing production term -> QID
 State 17:
@@ -911,6 +952,7 @@ Reducing production term -> LID
 State 17:
 Shifting (STAR) to state 18
 State 18:
+("DEBUG2:rs", 125)
 Lookahead token is now QID (554-555)
 Reducing production factor -> term STAR
 State 25:
@@ -953,11 +995,14 @@ Reducing production list(NEWLINE) -> NEWLINE list(NEWLINE)
 State 30:
 Shifting (LPAREN) to state 11
 State 11:
+("DEBUG2:rs", 105)
+("DEBUG2:rs", 102)
 Lookahead token is now QID (569-570)
 Reducing production list(NEWLINE) ->
 State 12:
 Shifting (QID) to state 10
 State 10:
+("DEBUG2:rs", 40)
 Lookahead token is now QID (573-574)
 Reducing production term -> QID
 State 17:
@@ -976,6 +1021,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
+("DEBUG2:rs", 41)
 Lookahead token is now QID (587-588)
 Reducing production term -> LID
 State 17:
@@ -985,6 +1031,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
+("DEBUG2:rs", 123)
 Lookahead token is now QID (591-592)
 Reducing production term -> QID
 State 17:
@@ -1008,6 +1055,7 @@ Reducing production term -> LID
 State 17:
 Shifting (STAR) to state 18
 State 18:
+("DEBUG2:rs", 125)
 Lookahead token is now QID (606-607)
 Reducing production factor -> term STAR
 State 25:
@@ -1025,11 +1073,16 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LPAREN) to state 11
 State 11:
+("DEBUG2:rs", 101)
+("DEBUG2:rs", 108)
+("DEBUG2:rs", 115)
+("DEBUG2:rs", 101)
 Lookahead token is now QID (614-615)
 Reducing production list(NEWLINE) ->
 State 12:
 Shifting (QID) to state 10
 State 10:
+("DEBUG2:rs", 123)
 Lookahead token is now QID (618-619)
 Reducing production term -> QID
 State 17:
@@ -1053,6 +1106,7 @@ Reducing production term -> LID
 State 17:
 Shifting (STAR) to state 18
 State 18:
+("DEBUG2:rs", 125)
 Lookahead token is now QID (633-634)
 Reducing production factor -> term STAR
 State 25:
@@ -1195,7 +1249,6 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 706, "::=")
 Lookahead token is now COLONCOLONEQUAL (703-706)
 Shifting (COLONCOLONEQUAL) to state 5
@@ -1221,6 +1274,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
+("DEBUG2:rs", 61)
 Lookahead token is now QID (732-733)
 Reducing production term -> LID
 State 17:
@@ -1273,6 +1327,7 @@ Reducing production concatenation -> factor
 State 31:
 Shifting (LID) to state 13
 State 13:
+("DEBUG2:rs", 61)
 Lookahead token is now QID (766-767)
 Reducing production term -> LID
 State 17:
@@ -1321,7 +1376,6 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 795, "::=")
 Lookahead token is now COLONCOLONEQUAL (792-795)
 Shifting (COLONCOLONEQUAL) to state 5
@@ -1338,6 +1392,7 @@ Reducing production concatenation -> factor
 State 24:
 Shifting (LID) to state 13
 State 13:
+("DEBUG2:rs", 61)
 Lookahead token is now QID (812-813)
 Reducing production term -> LID
 State 17:
@@ -1391,7 +1446,6 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 842, "::=")
 Lookahead token is now COLONCOLONEQUAL (839-842)
 Shifting (COLONCOLONEQUAL) to state 5
@@ -1438,7 +1492,6 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 902, "::=")
 Lookahead token is now COLONCOLONEQUAL (899-902)
 Shifting (COLONCOLONEQUAL) to state 5
@@ -1447,6 +1500,8 @@ State 5:
 Lookahead token is now LPAREN (903-904)
 Shifting (LPAREN) to state 11
 State 11:
+("DEBUG2:rs", 60)
+("DEBUG2:rs", 61)
 Lookahead token is now QID (907-908)
 Reducing production list(NEWLINE) ->
 State 12:
@@ -1463,6 +1518,7 @@ Reducing production alternation -> concatenation
 State 28:
 Shifting (BAR) to state 29
 State 29:
+("DEBUG2:rs", 60)
 Lookahead token is now QID (913-914)
 Reducing production list(NEWLINE) ->
 State 30:
@@ -1479,6 +1535,8 @@ Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
 State 28:
 Shifting (BAR) to state 29
 State 29:
+("DEBUG2:rs", 61)
+("DEBUG2:rs", 61)
 Lookahead token is now QID (920-921)
 Reducing production list(NEWLINE) ->
 State 30:
@@ -1495,6 +1553,8 @@ Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
 State 28:
 Shifting (BAR) to state 29
 State 29:
+("DEBUG2:rs", 33)
+("DEBUG2:rs", 61)
 Lookahead token is now QID (927-928)
 Reducing production list(NEWLINE) ->
 State 30:
@@ -1511,6 +1571,8 @@ Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
 State 28:
 Shifting (BAR) to state 29
 State 29:
+("DEBUG2:rs", 62)
+("DEBUG2:rs", 61)
 Lookahead token is now QID (934-935)
 Reducing production list(NEWLINE) ->
 State 30:
@@ -1527,6 +1589,7 @@ Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
 State 28:
 Shifting (BAR) to state 29
 State 29:
+("DEBUG2:rs", 62)
 Lookahead token is now QID (940-941)
 Reducing production list(NEWLINE) ->
 State 30:
@@ -1571,7 +1634,6 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 958, "::=")
 Lookahead token is now COLONCOLONEQUAL (955-958)
 Shifting (COLONCOLONEQUAL) to state 5
@@ -1595,6 +1657,7 @@ Reducing production list(NEWLINE) ->
 State 12:
 Shifting (LPAREN) to state 11
 State 11:
+("DEBUG2:rs", 43)
 Lookahead token is now QID (968-969)
 Reducing production list(NEWLINE) ->
 State 12:
@@ -1611,6 +1674,7 @@ Reducing production alternation -> concatenation
 State 28:
 Shifting (BAR) to state 29
 State 29:
+("DEBUG2:rs", 45)
 Lookahead token is now QID (974-975)
 Reducing production list(NEWLINE) ->
 State 30:
@@ -1675,7 +1739,6 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 992, "::=")
 Lookahead token is now COLONCOLONEQUAL (989-992)
 Shifting (COLONCOLONEQUAL) to state 5
@@ -1699,6 +1762,7 @@ Reducing production list(NEWLINE) ->
 State 12:
 Shifting (LPAREN) to state 11
 State 11:
+("DEBUG2:rs", 42)
 Lookahead token is now QID (1003-1004)
 Reducing production list(NEWLINE) ->
 State 12:
@@ -1715,6 +1779,7 @@ Reducing production alternation -> concatenation
 State 28:
 Shifting (BAR) to state 29
 State 29:
+("DEBUG2:rs", 47)
 Lookahead token is now QID (1009-1010)
 Reducing production list(NEWLINE) ->
 State 30:
@@ -1784,7 +1849,6 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 1032, "::=")
 Lookahead token is now COLONCOLONEQUAL (1029-1032)
 Shifting (COLONCOLONEQUAL) to state 5
@@ -1877,11 +1941,11 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 1107, "::=")
 Lookahead token is now COLONCOLONEQUAL (1104-1107)
 Shifting (COLONCOLONEQUAL) to state 5
 State 5:
+("DEBUG2:rs", 45)
 Lookahead token is now QID (1110-1111)
 Shifting (QID) to state 10
 State 10:
@@ -1915,7 +1979,6 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 1131, "::=")
 Lookahead token is now COLONCOLONEQUAL (1128-1131)
 Shifting (COLONCOLONEQUAL) to state 5
@@ -1923,6 +1986,7 @@ State 5:
 Lookahead token is now LID (1132-1142)
 Shifting (LID) to state 13
 State 13:
+("DEBUG2:rs", 40)
 Lookahead token is now QID (1145-1146)
 Reducing production term -> LID
 State 17:
@@ -1946,6 +2010,7 @@ Reducing production term -> LID
 State 17:
 Shifting (QUESTION) to state 19
 State 19:
+("DEBUG2:rs", 41)
 Lookahead token is now QID (1158-1159)
 Reducing production factor -> term QUESTION
 State 25:
@@ -1974,11 +2039,11 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 1179, "::=")
 Lookahead token is now COLONCOLONEQUAL (1176-1179)
 Shifting (COLONCOLONEQUAL) to state 5
 State 5:
+("DEBUG2:rs", 40)
 Lookahead token is now QID (1182-1183)
 Shifting (QID) to state 10
 State 10:
@@ -2009,6 +2074,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
+("DEBUG2:rs", 41)
 Lookahead token is now QID (1203-1204)
 Reducing production term -> LID
 State 17:
@@ -2044,7 +2110,6 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 1217, "::=")
 Lookahead token is now COLONCOLONEQUAL (1214-1217)
 Shifting (COLONCOLONEQUAL) to state 5
@@ -2062,6 +2127,7 @@ Reducing production concatenation -> factor
 State 24:
 Shifting (LPAREN) to state 11
 State 11:
+("DEBUG2:rs", 44)
 Lookahead token is now QID (1232-1233)
 Reducing production list(NEWLINE) ->
 State 12:
@@ -2127,7 +2193,6 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 1261, "::=")
 Lookahead token is now COLONCOLONEQUAL (1258-1261)
 Shifting (COLONCOLONEQUAL) to state 5
@@ -2169,11 +2234,12 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 1291, "::=")
 Lookahead token is now COLONCOLONEQUAL (1288-1291)
 Shifting (COLONCOLONEQUAL) to state 5
 State 5:
+("DEBUG2:rs", 47)
+("DEBUG2:rs", 47)
 Lookahead token is now QID (1295-1296)
 Shifting (QID) to state 10
 State 10:
@@ -2196,6 +2262,8 @@ Reducing production term -> REGEX
 State 17:
 Shifting (STAR) to state 18
 State 18:
+("DEBUG2:rs", 92)
+("DEBUG2:rs", 110)
 Lookahead token is now QID (1307-1308)
 Reducing production factor -> term STAR
 State 25:
@@ -2224,11 +2292,12 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 1329, "::=")
 Lookahead token is now COLONCOLONEQUAL (1326-1329)
 Shifting (COLONCOLONEQUAL) to state 5
 State 5:
+("DEBUG2:rs", 47)
+("DEBUG2:rs", 42)
 Lookahead token is now QID (1333-1334)
 Shifting (QID) to state 10
 State 10:
@@ -2268,6 +2337,7 @@ Reducing production list(NEWLINE) ->
 State 30:
 Shifting (LPAREN) to state 11
 State 11:
+("DEBUG2:rs", 42)
 Lookahead token is now QID (1347-1348)
 Reducing production list(NEWLINE) ->
 State 12:
@@ -2317,6 +2387,8 @@ Reducing production term -> LPAREN list(NEWLINE) rhs RPAREN
 State 17:
 Shifting (STAR) to state 18
 State 18:
+("DEBUG2:rs", 42)
+("DEBUG2:rs", 47)
 Lookahead token is now QID (1361-1362)
 Reducing production factor -> term STAR
 State 25:
@@ -2350,7 +2422,6 @@ Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 State 41:
 Shifting (LID) to state 4
 State 4:
-DEBUG
 (1, 1370, "::=")
 Lookahead token is now COLONCOLONEQUAL (1367-1370)
 Shifting (COLONCOLONEQUAL) to state 5
