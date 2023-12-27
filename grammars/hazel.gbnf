@@ -72,8 +72,7 @@ tuple-pat ::= cons-pat (w "," ws cons-pat)*
 
 cons-pat ::= primary-pat (w "::" w primary-pat)*
 
-primary-pat ::=
-    bool |
+primary-pat ::=  bool |
     integer |
     float |
     string |
@@ -99,8 +98,7 @@ arrow-typ ::= tuple-typ (ws "->" ws tuple-typ)*
 
 tuple-typ ::= primary-typ (w "," ws primary-typ)*
 
-primary-typ ::=
-    "Unit" |
+primary-typ ::=  "Unit" |
     "Int" |
     "Float" |
     "Bool" |
