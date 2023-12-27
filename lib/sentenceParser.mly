@@ -70,21 +70,17 @@ let unparenthesize (s : string) : string =
   BAR              "|"
   EOF              ""
   LPAREN           "("
-  RPAREN           ")"
-  LBRACE "["
-  RBRACE "]"
+  RPAREN           ")" 
   COMMA            ","
   QUESTION         "?"
   STAR             "*"
   PLUS             "+"
 NEWLINE
 
-%token <string>
-REGEX2            "regex2"
-
 %token <string Positions.located>
    LID              "lident"
    REGEX            "regex"
+   SUBGROUP            "subgroup"
    QID              "\"alias\""
 
 /* For the new rule syntax: */
@@ -110,7 +106,7 @@ separated_nonempty_list(NEWLINE+, old_rule)  {
 
 
 grammar:
-  rs =  rules NEWLINE* postlude
+  rs =  NEWLINE* rules NEWLINE* postlude
     {
       (print_endline (Batteries.dump ("DEBUG:rs",rs)));
       {
@@ -203,7 +199,7 @@ term:
    | class1  {} 
 
 %inline  group1: 
-  | LPAREN NEWLINE* rhs  RPAREN {}
+ | LPAREN NEWLINE* rhs  RPAREN {} 
 
 %inline class1: 
 /* | LBRACE char_class  RBRACE {} */

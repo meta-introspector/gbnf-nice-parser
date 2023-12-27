@@ -11,7 +11,7 @@ test1:
 	menhir --trace -v --interpret  ./lib/sentenceParser.mly < test/test.gbnf
 
 testall: compile
-	bash -x ./report.sh
+	bash ./report.sh
 
 runmenhir: lib/sentenceParser.mly	
 	menhir --cmly --table --trace --dump --explain --log-grammar 99 --log-automaton 9 --log-code 99 --log-grammar 99 --reference-graph lib/sentenceParser.mly

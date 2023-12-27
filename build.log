@@ -7,7 +7,7 @@ dot ./lib/sentenceParser.dot -Tpng -Gsize=8.5,11 -Gdpi=300 -Grankdir=LR -Gorient
 dot ./lib/sentenceParser.dot -Tsvg -Gsize=8.5,11 -Gdpi=300 -Grankdir=LR -Gorientation="[lL]*" -o sentenceParser.svg 
 dune test || echo skip
 skip
-bash -x ./report.sh
+bash ./report.sh
 grammars/arithmetic.gbnf
 err grammars/arithmetic.gbnf
 grammars/assistant.gbnf
@@ -79,58 +79,58 @@ err grammars/w++.gbnf
 grammars/yaml.gbnf
 err grammars/yaml.gbnf
 now report on the most common state
-      2 State 2:
-      2 State 20:
-      2 State 27:
+      3 State 5:
+      4 State 21:
       4 State 28:
-      8 State 0:
-     13 State 37:
+      5 State 29:
+     16 State 38:
 now report on the last lines
       1 BAR
-     12 EOF
-     14 NEWLINE
+      8 NEWLINE
+     15 EOF
 now one the last states
-      1 State 37:
-      2 State 20:
-      3 State 6:
+      1 State 1:
+      1 State 38:
+      3 State 9:
+      4 State 21:
 with filename
-grammars/arithmetic.gbnf.out:State 37:
-grammars/assistant.gbnf.out:State 0:
-grammars/c.gbnf.out:State 2:
-grammars/charm.gbnf.out:State 20:
-grammars/chat.gbnf.out:State 37:
-grammars/chess.gbnf.out:State 0:
-grammars/colors.gbnf.out:State 0:
-grammars/commands.gbnf.out:State 37:
-grammars/commands_kwargs.gbnf.out:State 37:
-grammars/elixir.gbnf.out:State 37:
-grammars/elixir_no_left_recursion.gbnf.out:State 37:
-grammars/gallina2.gbnf.out:State 0:
-grammars/gallina.gbnf.out:State 37:
-grammars/generated_grammar.gbnf.out:State 41:
-grammars/gen_function_calling.gbnf.out:State 6:
-grammars/grammar-3.gbnf.out:State 28:
-grammars/grammar.gbnf.out:State 37:
-grammars/hazel.gbnf.out:State 28:
-grammars/japanese.gbnf.out:State 0:
-grammars/json_arr.gbnf.out:State 0:
-grammars/json_converse.gbnf.out:State 37:
-grammars/json_func_calls_with_inner_thoughts.gbnf.out:State 6:
-grammars/json.gbnf.out:State 2:
-grammars/json_only_reply.gbnf.out:State 37:
-grammars/list.gbnf.out:State 37:
-grammars/multi-tool.gbnf.out:State 28:
-grammars/pinnacle_turn_d.gbnf.out:State 0:
-grammars/pinnacle_turn_s.gbnf.out:State 0:
-grammars/primitive.gbnf.out:State 6:
-grammars/question_grammar.gbnf.out:State 41:
-grammars/segfault_fixed.gbnf.out:State 41:
-grammars/segfault.gbnf.out:State 37:
-grammars/syllable-count.gbnf.out:State 37:
-grammars/test_grammar.gbnf.out:State 41:
-grammars/tools.gbnf.out:State 28:
-grammars/w++.gbnf.out:State 20:
-grammars/yaml.gbnf.out:State 37:
+grammars/arithmetic.gbnf.out:State 38:
+grammars/assistant.gbnf.out:State 29:
+grammars/c.gbnf.out:State 5:
+grammars/charm.gbnf.out:State 21:
+grammars/chat.gbnf.out:State 38:
+grammars/chess.gbnf.out:State 38:
+grammars/colors.gbnf.out:State 38:
+grammars/commands.gbnf.out:State 38:
+grammars/commands_kwargs.gbnf.out:State 38:
+grammars/elixir.gbnf.out:State 38:
+grammars/elixir_no_left_recursion.gbnf.out:State 38:
+grammars/gallina2.gbnf.out:State 1:
+grammars/gallina.gbnf.out:State 38:
+grammars/generated_grammar.gbnf.out:State 42:
+grammars/gen_function_calling.gbnf.out:State 9:
+grammars/grammar-3.gbnf.out:State 29:
+grammars/grammar.gbnf.out:State 38:
+grammars/hazel.gbnf.out:State 29:
+grammars/japanese.gbnf.out:State 38:
+grammars/json_arr.gbnf.out:State 5:
+grammars/json_converse.gbnf.out:State 38:
+grammars/json_func_calls_with_inner_thoughts.gbnf.out:State 9:
+grammars/json.gbnf.out:State 5:
+grammars/json_only_reply.gbnf.out:State 38:
+grammars/list.gbnf.out:State 38:
+grammars/multi-tool.gbnf.out:State 29:
+grammars/pinnacle_turn_d.gbnf.out:State 21:
+grammars/pinnacle_turn_s.gbnf.out:State 21:
+grammars/primitive.gbnf.out:State 9:
+grammars/question_grammar.gbnf.out:State 42:
+grammars/segfault_fixed.gbnf.out:State 42:
+grammars/segfault.gbnf.out:State 38:
+grammars/syllable-count.gbnf.out:State 38:
+grammars/test_grammar.gbnf.out:State 42:
+grammars/tools.gbnf.out:State 29:
+grammars/w++.gbnf.out:State 21:
+grammars/yaml.gbnf.out:State 38:
 echo ok
 ok
 make[1]: Leaving directory '/mnt/data1/2023/12/17/gbnf_parser'

@@ -1,9 +1,9 @@
 
-** Conflict (shift/reduce) in state 36.
+** Conflict (shift/reduce) in state 37.
 ** Token involved: NEWLINE
 ** This state is reached from grammar after reading:
 
-old_rule
+list(NEWLINE) old_rule
 
 ** The derivations that appear below have the following common factor:
 ** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
@@ -11,41 +11,41 @@ old_rule
 grammar 
 (?)
 
-** In state 36, looking ahead at NEWLINE, shifting is permitted
+** In state 37, looking ahead at NEWLINE, shifting is permitted
 ** because of the following sub-derivation:
 
-rules list(NEWLINE) postlude 
-separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
-old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
-         . NEWLINE 
+list(NEWLINE) rules list(NEWLINE) postlude 
+              separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
+              old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
+                       . NEWLINE 
 
-** In state 36, looking ahead at NEWLINE, reducing production
+** In state 37, looking ahead at NEWLINE, reducing production
 ** separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule
 ** is permitted because of the following sub-derivation:
 
-rules list(NEWLINE) postlude // lookahead token appears because list(NEWLINE) can begin with NEWLINE
-separated_nonempty_list(nonempty_list(NEWLINE),old_rule) // lookahead token is inherited
-old_rule . 
+list(NEWLINE) rules list(NEWLINE) postlude // lookahead token appears because list(NEWLINE) can begin with NEWLINE
+              separated_nonempty_list(nonempty_list(NEWLINE),old_rule) // lookahead token is inherited
+              old_rule . 
 
-** Conflict (shift/reduce) in state 25.
+** Conflict (shift/reduce) in state 26.
 ** Token involved: Tchar
 ** This state is reached from grammar after reading:
 
-LID COLONCOLONEQUAL char_class1
+list(NEWLINE) LID COLONCOLONEQUAL char_class1
 
 ** The derivations that appear below have the following common factor:
 ** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
 
 grammar 
-rules list(NEWLINE) postlude 
-separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
-old_rule 
-LID COLONCOLONEQUAL rhs 
-                    alternation 
-                    concatenation 
-                    (?)
+list(NEWLINE) rules list(NEWLINE) postlude 
+              separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
+              old_rule 
+              LID COLONCOLONEQUAL rhs 
+                                  alternation 
+                                  concatenation 
+                                  (?)
 
-** In state 25, looking ahead at Tchar, reducing production
+** In state 26, looking ahead at Tchar, reducing production
 ** char_class -> char_class1
 ** is permitted because of the following sub-derivation:
 
@@ -55,7 +55,7 @@ term // lookahead token is inherited
 char_class // lookahead token is inherited
 char_class1 . 
 
-** In state 25, looking ahead at Tchar, shifting is permitted
+** In state 26, looking ahead at Tchar, shifting is permitted
 ** because of the following sub-derivation:
 
 factor 
@@ -64,25 +64,25 @@ char_class
 char_class1 
 char_class1 . Tchar 
 
-** Conflict (shift/reduce) in state 14.
+** Conflict (shift/reduce) in state 15.
 ** Token involved: Tchar
 ** This state is reached from grammar after reading:
 
-LID COLONCOLONEQUAL CARET char_class1
+list(NEWLINE) LID COLONCOLONEQUAL CARET char_class1
 
 ** The derivations that appear below have the following common factor:
 ** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
 
 grammar 
-rules list(NEWLINE) postlude 
-separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
-old_rule 
-LID COLONCOLONEQUAL rhs 
-                    alternation 
-                    concatenation 
-                    (?)
+list(NEWLINE) rules list(NEWLINE) postlude 
+              separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
+              old_rule 
+              LID COLONCOLONEQUAL rhs 
+                                  alternation 
+                                  concatenation 
+                                  (?)
 
-** In state 14, looking ahead at Tchar, reducing production
+** In state 15, looking ahead at Tchar, reducing production
 ** char_class -> CARET char_class1
 ** is permitted because of the following sub-derivation:
 
@@ -92,7 +92,7 @@ term // lookahead token is inherited
 char_class // lookahead token is inherited
 CARET char_class1 . 
 
-** In state 14, looking ahead at Tchar, shifting is permitted
+** In state 15, looking ahead at Tchar, shifting is permitted
 ** because of the following sub-derivation:
 
 factor 

@@ -1,0 +1,128 @@
+Done: 94% (298/315, 17 left) (jobs: 0)                                      Hello, World!
+State 0:
+Lookahead token is now LID (0-4)
+Reducing production list(NEWLINE) ->
+State 3:
+Shifting (LID) to state 4
+State 4:
+DEBUG
+(1, 8, "::=")
+Lookahead token is now COLONCOLONEQUAL (5-8)
+Shifting (COLONCOLONEQUAL) to state 5
+State 5:
+Lookahead token is now LID (9-13)
+Shifting (LID) to state 13
+State 13:
+Lookahead token is now PLUS (13-14)
+Reducing production term -> LID
+State 17:
+Shifting (PLUS) to state 20
+State 20:
+Lookahead token is now NEWLINE (14-15)
+Reducing production factor -> term PLUS
+State 23:
+Reducing production concatenation -> factor
+State 24:
+Reducing production alternation -> concatenation
+State 28:
+Reducing production rhs -> alternation
+State 31:
+Reducing production old_rule -> LID COLONCOLONEQUAL rhs
+["DEBUG:branches1"]
+State 37:
+Shifting (NEWLINE) to state 38
+State 38:
+Lookahead token is now NEWLINE (15-16)
+Shifting (NEWLINE) to state 38
+State 38:
+Lookahead token is now NEWLINE (16-57)
+Shifting (NEWLINE) to state 38
+State 38:
+Lookahead token is now LID (57-61)
+Reducing production nonempty_list(NEWLINE) -> NEWLINE
+State 39:
+Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
+State 39:
+Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
+State 40:
+Shifting (LID) to state 4
+State 4:
+DEBUG
+(1, 65, "::=")
+Lookahead token is now COLONCOLONEQUAL (62-65)
+Shifting (COLONCOLONEQUAL) to state 5
+State 5:
+Lookahead token is now QID (69-70)
+Shifting (QID) to state 10
+State 10:
+"["
+"^"
+"\\"
+"r"
+"\\"
+"n"
+"\\"
+"x"
+"0"
+"b"
+"\\"
+"x"
+"0"
+"c"
+"\\"
+"x"
+"8"
+"5"
+"\\"
+"u"
+"2"
+"0"
+"2"
+"8"
+"\\"
+"u"
+"2"
+"0"
+"2"
+"9"
+"]"
+Lookahead token is now REGEX (101-102)
+Reducing production term -> QID
+State 17:
+Reducing production factor -> term
+State 23:
+Reducing production concatenation -> factor
+State 24:
+Shifting (REGEX) to state 9
+State 9:
+Lookahead token is now PLUS (102-103)
+Reducing production term -> REGEX
+State 17:
+Shifting (PLUS) to state 20
+State 20:
+Lookahead token is now QID (107-108)
+Reducing production factor -> term PLUS
+State 25:
+Reducing production concatenation -> concatenation factor
+State 24:
+Shifting (QID) to state 10
+State 10:
+Lookahead token is now NEWLINE (108-109)
+Reducing production term -> QID
+State 17:
+Reducing production factor -> term
+State 25:
+Reducing production concatenation -> concatenation factor
+State 24:
+Reducing production alternation -> concatenation
+State 28:
+Reducing production rhs -> alternation
+State 31:
+Reducing production old_rule -> LID COLONCOLONEQUAL rhs
+["DEBUG:branches1"]
+State 37:
+Shifting (NEWLINE) to state 38
+State 38:
+Lookahead token is now EOF (109-109)
+Initiating error handling
+Fatal error: exception Gbnf_parser.SentenceParser.MenhirBasics.Error

@@ -466,10 +466,21 @@ rule main = parse
     { COMMA }
 
 | "("
-    {       (print_endline (Batteries.dump (((Lexing.lexeme lexbuf))))); LPAREN }
+ {       (print_endline (Batteries.dump (((Lexing.lexeme lexbuf))))); LPAREN } 
+    (* { *)
+    (*   (\* lexbuf.Lexing.lex_start_p <- lexbuf.Lexing.lex_curr_p;  *\) *)
+    (*   (print_endline (Batteries.dump (((Lexing.lexeme lexbuf))))); *)
+    (*   let buffer = Buffer.create 4256 in *)
+    (*   let openingpos = lexeme_start_p lexbuf in *)
+    (*   let content = subgroup  openingpos buffer lexbuf in *)
+    (*   let id = Printf.sprintf "\"%s\"" content in *)
+    (*   let pos = import (openingpos, lexbuf.lex_curr_p) in *)
+    (*   SUBGROUP (with_pos pos id) *)
+    (* } *)
 
-| ")"
-    { RPAREN }
+
+ | ")" 
+    { RPAREN } 
  | "[" 
     {
       (* lexbuf.Lexing.lex_start_p <- lexbuf.Lexing.lex_curr_p;  *)
@@ -482,9 +493,8 @@ rule main = parse
       REGEX (with_pos pos id)
     }
 
-
-| "]"
-    { RBRACE }
+(*  | "]" 
+      { RBRACE } *)
 | "|"
     { BAR }
 | "?"
@@ -577,5 +587,23 @@ and charclass openingpos buffer = parse
         charclass openingpos buffer lexbuf
     }
 
+and subgroup openingpos buffer = parse
+| ")" { (print_endline (Batteries.dump (((Lexing.lexeme lexbuf)))));
+        (* main lexbuf *)
+        "TODO"
+}
+| "(" { (print_endline (Batteries.dump (((Lexing.lexeme lexbuf)))));
+        (* LBRACE *)
+        
+        subgroup openingpos buffer lexbuf
+}
+| _ {
+      (print_endline (Batteries.dump (((Lexing.lexeme lexbuf))))); 
+        (* Tchar(Char.code(Lexing.lexeme_char lexbuf 0))  *)
+        subgroup openingpos buffer lexbuf
+    }
+    
+
+    
 
 
