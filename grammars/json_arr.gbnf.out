@@ -38,15 +38,15 @@ State 24:
 Reducing production alternation -> concatenation
 State 28:
 Reducing production rhs -> alternation
-State 31:
+State 32:
 Reducing production old_rule -> LID COLONCOLONEQUAL rhs
 ["DEBUG:branches1"]
-State 37:
-Shifting (NEWLINE) to state 38
 State 38:
+Shifting (NEWLINE) to state 39
+State 39:
 Lookahead token is now LID (141-146)
 Reducing production nonempty_list(NEWLINE) -> NEWLINE
-State 40:
+State 41:
 Shifting (LID) to state 4
 State 4:
 DEBUG
@@ -69,6 +69,8 @@ State 28:
 Shifting (BAR) to state 29
 State 29:
 Lookahead token is now LID (161-166)
+Reducing production list(NEWLINE) ->
+State 30:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now BAR (167-168)
@@ -77,12 +79,14 @@ State 17:
 Reducing production factor -> term
 State 23:
 Reducing production concatenation -> factor
-State 30:
-Reducing production alternation -> alternation BAR concatenation
+State 31:
+Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
 State 28:
 Shifting (BAR) to state 29
 State 29:
 Lookahead token is now LID (169-175)
+Reducing production list(NEWLINE) ->
+State 30:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now BAR (176-177)
@@ -91,12 +95,14 @@ State 17:
 Reducing production factor -> term
 State 23:
 Reducing production concatenation -> factor
-State 30:
-Reducing production alternation -> alternation BAR concatenation
+State 31:
+Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
 State 28:
 Shifting (BAR) to state 29
 State 29:
 Lookahead token is now LID (178-184)
+Reducing production list(NEWLINE) ->
+State 30:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now BAR (185-186)
@@ -105,13 +111,15 @@ State 17:
 Reducing production factor -> term
 State 23:
 Reducing production concatenation -> factor
-State 30:
-Reducing production alternation -> alternation BAR concatenation
+State 31:
+Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
 State 28:
 Shifting (BAR) to state 29
 State 29:
 "("
 Lookahead token is now LPAREN (187-188)
+Reducing production list(NEWLINE) ->
+State 30:
 Shifting (LPAREN) to state 11
 State 11:
 Lookahead token is now QID (193-194)
@@ -131,6 +139,8 @@ State 28:
 Shifting (BAR) to state 29
 State 29:
 Lookahead token is now QID (203-204)
+Reducing production list(NEWLINE) ->
+State 30:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now BAR (205-206)
@@ -139,12 +149,14 @@ State 17:
 Reducing production factor -> term
 State 23:
 Reducing production concatenation -> factor
-State 30:
-Reducing production alternation -> alternation BAR concatenation
+State 31:
+Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
 State 28:
 Shifting (BAR) to state 29
 State 29:
 Lookahead token is now QID (212-213)
+Reducing production list(NEWLINE) ->
+State 30:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now RPAREN (213-214)
@@ -153,8 +165,8 @@ State 17:
 Reducing production factor -> term
 State 23:
 Reducing production concatenation -> factor
-State 30:
-Reducing production alternation -> alternation BAR concatenation
+State 31:
+Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
 State 28:
 Reducing production rhs -> alternation
 State 21:
@@ -166,7 +178,7 @@ State 17:
 Reducing production factor -> term
 State 23:
 Reducing production concatenation -> factor
-State 30:
+State 31:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now NEWLINE (217-218)
@@ -175,24 +187,24 @@ State 17:
 Reducing production factor -> term
 State 25:
 Reducing production concatenation -> concatenation factor
-State 30:
-Reducing production alternation -> alternation BAR concatenation
+State 31:
+Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
 State 28:
 Reducing production rhs -> alternation
-State 31:
+State 32:
 Reducing production old_rule -> LID COLONCOLONEQUAL rhs
 ["DEBUG:branches1"]
-State 37:
-Shifting (NEWLINE) to state 38
 State 38:
+Shifting (NEWLINE) to state 39
+State 39:
 Lookahead token is now NEWLINE (218-219)
-Shifting (NEWLINE) to state 38
-State 38:
+Shifting (NEWLINE) to state 39
+State 39:
 Lookahead token is now LID (219-222)
 Reducing production nonempty_list(NEWLINE) -> NEWLINE
-State 39:
-Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 State 40:
+Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
+State 41:
 Shifting (LID) to state 4
 State 4:
 DEBUG

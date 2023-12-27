@@ -230,7 +230,7 @@ concatenation:
   | factor {}
 
 alternation:
-  | alternation BAR concatenation
+  | alternation BAR NEWLINE* concatenation
   | concatenation {}
 
 rhs:

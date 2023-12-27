@@ -51,15 +51,15 @@ State 24:
 Reducing production alternation -> concatenation
 State 28:
 Reducing production rhs -> alternation
-State 31:
+State 32:
 Reducing production old_rule -> LID COLONCOLONEQUAL rhs
 ["DEBUG:branches1"]
-State 37:
-Shifting (NEWLINE) to state 38
 State 38:
+Shifting (NEWLINE) to state 39
+State 39:
 Lookahead token is now LID (21-25)
 Reducing production nonempty_list(NEWLINE) -> NEWLINE
-State 40:
+State 41:
 Shifting (LID) to state 4
 State 4:
 DEBUG
@@ -80,26 +80,26 @@ State 24:
 Reducing production alternation -> concatenation
 State 28:
 Reducing production rhs -> alternation
-State 31:
+State 32:
 Reducing production old_rule -> LID COLONCOLONEQUAL rhs
 ["DEBUG:branches1"]
-State 37:
+State 38:
 Reducing production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule
-State 41:
+State 42:
 Reducing production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
-State 32:
+State 33:
 Reducing production rules -> separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
 ["DEBUG:OLDRULE"; ("root", [(("", 1, 0, 0), ("", 1, 0, 4))], 0); ("line", [(("", 1, 0, 21), ("", 1, 0, 25))], 0)]
-State 33:
-Reducing production list(NEWLINE) ->
 State 34:
-Shifting (EOF) to state 35
+Reducing production list(NEWLINE) ->
 State 35:
-Reducing production postlude -> EOF
+Shifting (EOF) to state 36
 State 36:
+Reducing production postlude -> EOF
+State 37:
 Reducing production grammar -> list(NEWLINE) rules list(NEWLINE) postlude
 ["DEBUG:rs"]
-State 42:
+State 43:
 Accepting
 [""]
 0

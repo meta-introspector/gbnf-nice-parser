@@ -86,15 +86,15 @@ State 24:
 Reducing production alternation -> concatenation
 State 28:
 Reducing production rhs -> alternation
-State 31:
+State 32:
 Reducing production old_rule -> LID COLONCOLONEQUAL rhs
 ["DEBUG:branches1"]
-State 37:
-Shifting (NEWLINE) to state 38
 State 38:
+Shifting (NEWLINE) to state 39
+State 39:
 Lookahead token is now LID (211-217)
 Reducing production nonempty_list(NEWLINE) -> NEWLINE
-State 40:
+State 41:
 Shifting (LID) to state 4
 State 4:
 DEBUG
@@ -124,25 +124,25 @@ State 24:
 Reducing production alternation -> concatenation
 State 28:
 Reducing production rhs -> alternation
-State 31:
+State 32:
 Reducing production old_rule -> LID COLONCOLONEQUAL rhs
 ["DEBUG:branches1"]
-State 37:
-Shifting (NEWLINE) to state 38
 State 38:
+Shifting (NEWLINE) to state 39
+State 39:
 Lookahead token is now NEWLINE (231-232)
-Shifting (NEWLINE) to state 38
-State 38:
+Shifting (NEWLINE) to state 39
+State 39:
 Lookahead token is now NEWLINE (232-267)
-Shifting (NEWLINE) to state 38
-State 38:
+Shifting (NEWLINE) to state 39
+State 39:
 Lookahead token is now LID (267-271)
 Reducing production nonempty_list(NEWLINE) -> NEWLINE
-State 39:
-Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
-State 39:
+State 40:
 Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 State 40:
+Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
+State 41:
 Shifting (LID) to state 4
 State 4:
 DEBUG
@@ -163,20 +163,20 @@ State 24:
 Reducing production alternation -> concatenation
 State 28:
 Reducing production rhs -> alternation
-State 31:
+State 32:
 Reducing production old_rule -> LID COLONCOLONEQUAL rhs
 ["DEBUG:branches1"]
-State 37:
-Shifting (NEWLINE) to state 38
 State 38:
+Shifting (NEWLINE) to state 39
+State 39:
 Lookahead token is now NEWLINE (296-297)
-Shifting (NEWLINE) to state 38
-State 38:
+Shifting (NEWLINE) to state 39
+State 39:
 Lookahead token is now LID (297-302)
 Reducing production nonempty_list(NEWLINE) -> NEWLINE
-State 39:
-Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 State 40:
+Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
+State 41:
 Shifting (LID) to state 4
 State 4:
 DEBUG
@@ -214,6 +214,8 @@ State 28:
 Shifting (BAR) to state 29
 State 29:
 Lookahead token is now QID (327-328)
+Reducing production list(NEWLINE) ->
+State 30:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now BAR (329-330)
@@ -222,12 +224,14 @@ State 17:
 Reducing production factor -> term
 State 23:
 Reducing production concatenation -> factor
-State 30:
-Reducing production alternation -> alternation BAR concatenation
+State 31:
+Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
 State 28:
 Shifting (BAR) to state 29
 State 29:
 Lookahead token is now QID (336-337)
+Reducing production list(NEWLINE) ->
+State 30:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now RPAREN (337-338)
@@ -236,8 +240,8 @@ State 17:
 Reducing production factor -> term
 State 23:
 Reducing production concatenation -> factor
-State 30:
-Reducing production alternation -> alternation BAR concatenation
+State 31:
+Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
 State 28:
 Reducing production rhs -> alternation
 State 21:
@@ -253,12 +257,12 @@ State 24:
 Reducing production alternation -> concatenation
 State 28:
 Reducing production rhs -> alternation
-State 31:
+State 32:
 Reducing production old_rule -> LID COLONCOLONEQUAL rhs
 ["DEBUG:branches1"]
-State 37:
-Shifting (NEWLINE) to state 38
 State 38:
+Shifting (NEWLINE) to state 39
+State 39:
 Lookahead token is now EOF (339-339)
 Initiating error handling
 Fatal error: exception Gbnf_parser.SentenceParser.MenhirBasics.Error

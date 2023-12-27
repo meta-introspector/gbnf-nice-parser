@@ -6,7 +6,7 @@ grammar' -> . grammar [ # ]
 ## Transitions:
 -- On NEWLINE shift to state 1
 -- On list(NEWLINE) shift to state 3
--- On grammar shift to state 42
+-- On grammar shift to state 43
 ## Reductions:
 -- On LID
 --   reduce production list(NEWLINE) ->
@@ -40,9 +40,9 @@ State 3:
 grammar -> list(NEWLINE) . rules list(NEWLINE) postlude [ # ]
 ## Transitions:
 -- On LID shift to state 4
--- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 32
--- On rules shift to state 33
--- On old_rule shift to state 37
+-- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 33
+-- On rules shift to state 34
+-- On old_rule shift to state 38
 ## Reductions:
 
 State 4:
@@ -67,7 +67,7 @@ old_rule -> LID COLONCOLONEQUAL . rhs [ NEWLINE EOF ]
 -- On LID shift to state 13
 -- On CARET shift to state 14
 -- On term shift to state 17
--- On rhs shift to state 31
+-- On rhs shift to state 32
 -- On factor shift to state 23
 -- On concatenation shift to state 24
 -- On char_class1 shift to state 26
@@ -335,7 +335,7 @@ State 28:
 ## Known stack suffix:
 ## alternation
 ## LR(1) items:
-alternation -> alternation . BAR concatenation [ RPAREN NEWLINE EOF BAR ]
+alternation -> alternation . BAR list(NEWLINE) concatenation [ RPAREN NEWLINE EOF BAR ]
 rhs -> alternation . [ RPAREN NEWLINE EOF ]
 ## Transitions:
 -- On BAR shift to state 29
@@ -347,7 +347,19 @@ State 29:
 ## Known stack suffix:
 ## alternation BAR
 ## LR(1) items:
-alternation -> alternation BAR . concatenation [ RPAREN NEWLINE EOF BAR ]
+alternation -> alternation BAR . list(NEWLINE) concatenation [ RPAREN NEWLINE EOF BAR ]
+## Transitions:
+-- On NEWLINE shift to state 1
+-- On list(NEWLINE) shift to state 30
+## Reductions:
+-- On Tchar REGEX QID LPAREN LID CARET
+--   reduce production list(NEWLINE) ->
+
+State 30:
+## Known stack suffix:
+## alternation BAR list(NEWLINE)
+## LR(1) items:
+alternation -> alternation BAR list(NEWLINE) . concatenation [ RPAREN NEWLINE EOF BAR ]
 ## Transitions:
 -- On Tchar shift to state 6
 -- On REGEX shift to state 9
@@ -357,16 +369,16 @@ alternation -> alternation BAR . concatenation [ RPAREN NEWLINE EOF BAR ]
 -- On CARET shift to state 14
 -- On term shift to state 17
 -- On factor shift to state 23
--- On concatenation shift to state 30
+-- On concatenation shift to state 31
 -- On char_class1 shift to state 26
 -- On char_class shift to state 27
 ## Reductions:
 
-State 30:
+State 31:
 ## Known stack suffix:
-## alternation BAR concatenation
+## alternation BAR list(NEWLINE) concatenation
 ## LR(1) items:
-alternation -> alternation BAR concatenation . [ RPAREN NEWLINE EOF BAR ]
+alternation -> alternation BAR list(NEWLINE) concatenation . [ RPAREN NEWLINE EOF BAR ]
 concatenation -> concatenation . factor [ Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
 -- On Tchar shift to state 6
@@ -381,9 +393,9 @@ concatenation -> concatenation . factor [ Tchar RPAREN REGEX QID NEWLINE LPAREN 
 -- On char_class shift to state 27
 ## Reductions:
 -- On RPAREN NEWLINE EOF BAR
---   reduce production alternation -> alternation BAR concatenation
+--   reduce production alternation -> alternation BAR list(NEWLINE) concatenation
 
-State 31:
+State 32:
 ## Known stack suffix:
 ## LID COLONCOLONEQUAL rhs
 ## LR(1) items:
@@ -393,7 +405,7 @@ old_rule -> LID COLONCOLONEQUAL rhs . [ NEWLINE EOF ]
 -- On NEWLINE EOF
 --   reduce production old_rule -> LID COLONCOLONEQUAL rhs
 
-State 32:
+State 33:
 ## Known stack suffix:
 ## separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
 ## LR(1) items:
@@ -403,29 +415,29 @@ rules -> separated_nonempty_list(nonempty_list(NEWLINE),old_rule) . [ NEWLINE EO
 -- On NEWLINE EOF
 --   reduce production rules -> separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
 
-State 33:
+State 34:
 ## Known stack suffix:
 ## list(NEWLINE) rules
 ## LR(1) items:
 grammar -> list(NEWLINE) rules . list(NEWLINE) postlude [ # ]
 ## Transitions:
 -- On NEWLINE shift to state 1
--- On list(NEWLINE) shift to state 34
+-- On list(NEWLINE) shift to state 35
 ## Reductions:
 -- On EOF
 --   reduce production list(NEWLINE) ->
 
-State 34:
+State 35:
 ## Known stack suffix:
 ## list(NEWLINE) rules list(NEWLINE)
 ## LR(1) items:
 grammar -> list(NEWLINE) rules list(NEWLINE) . postlude [ # ]
 ## Transitions:
--- On EOF shift to state 35
--- On postlude shift to state 36
+-- On EOF shift to state 36
+-- On postlude shift to state 37
 ## Reductions:
 
-State 35:
+State 36:
 ## Known stack suffix:
 ## EOF
 ## LR(1) items:
@@ -435,7 +447,7 @@ postlude -> EOF . [ # ]
 -- On #
 --   reduce production postlude -> EOF
 
-State 36:
+State 37:
 ## Known stack suffix:
 ## list(NEWLINE) rules list(NEWLINE) postlude
 ## LR(1) items:
@@ -445,34 +457,34 @@ grammar -> list(NEWLINE) rules list(NEWLINE) postlude . [ # ]
 -- On #
 --   reduce production grammar -> list(NEWLINE) rules list(NEWLINE) postlude
 
-State 37:
+State 38:
 ## Known stack suffix:
 ## old_rule
 ## LR(1) items:
 separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule . [ NEWLINE EOF ]
 separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule . nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule) [ NEWLINE EOF ]
 ## Transitions:
--- On NEWLINE shift to state 38
--- On nonempty_list(NEWLINE) shift to state 40
+-- On NEWLINE shift to state 39
+-- On nonempty_list(NEWLINE) shift to state 41
 ## Reductions:
 -- On NEWLINE EOF
 --   reduce production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule
 ** Conflict on NEWLINE
 
-State 38:
+State 39:
 ## Known stack suffix:
 ## NEWLINE
 ## LR(1) items:
 nonempty_list(NEWLINE) -> NEWLINE . [ LID ]
 nonempty_list(NEWLINE) -> NEWLINE . nonempty_list(NEWLINE) [ LID ]
 ## Transitions:
--- On NEWLINE shift to state 38
--- On nonempty_list(NEWLINE) shift to state 39
+-- On NEWLINE shift to state 39
+-- On nonempty_list(NEWLINE) shift to state 40
 ## Reductions:
 -- On LID
 --   reduce production nonempty_list(NEWLINE) -> NEWLINE
 
-State 39:
+State 40:
 ## Known stack suffix:
 ## NEWLINE nonempty_list(NEWLINE)
 ## LR(1) items:
@@ -482,18 +494,18 @@ nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE) . [ LID ]
 -- On LID
 --   reduce production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
 
-State 40:
+State 41:
 ## Known stack suffix:
 ## old_rule nonempty_list(NEWLINE)
 ## LR(1) items:
 separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) . separated_nonempty_list(nonempty_list(NEWLINE),old_rule) [ NEWLINE EOF ]
 ## Transitions:
 -- On LID shift to state 4
--- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 41
--- On old_rule shift to state 37
+-- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 42
+-- On old_rule shift to state 38
 ## Reductions:
 
-State 41:
+State 42:
 ## Known stack suffix:
 ## old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
 ## LR(1) items:
@@ -503,7 +515,7 @@ separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_li
 -- On NEWLINE EOF
 --   reduce production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
 
-State 42:
+State 43:
 ## Known stack suffix:
 ## grammar
 ## LR(1) items:

@@ -26,15 +26,15 @@ State 24:
 Reducing production alternation -> concatenation
 State 28:
 Reducing production rhs -> alternation
-State 31:
+State 32:
 Reducing production old_rule -> LID COLONCOLONEQUAL rhs
 ["DEBUG:branches1"]
-State 37:
-Shifting (NEWLINE) to state 38
 State 38:
+Shifting (NEWLINE) to state 39
+State 39:
 Lookahead token is now LID (15-21)
 Reducing production nonempty_list(NEWLINE) -> NEWLINE
-State 40:
+State 41:
 Shifting (LID) to state 4
 State 4:
 DEBUG
@@ -110,6 +110,8 @@ State 28:
 Shifting (BAR) to state 29
 State 29:
 Lookahead token is now QID (81-82)
+Reducing production list(NEWLINE) ->
+State 30:
 Shifting (QID) to state 10
 State 10:
 "["
@@ -129,7 +131,7 @@ State 17:
 Reducing production factor -> term
 State 23:
 Reducing production concatenation -> factor
-State 30:
+State 31:
 Shifting (REGEX) to state 9
 State 9:
 "["
@@ -149,7 +151,7 @@ State 17:
 Reducing production factor -> term
 State 25:
 Reducing production concatenation -> concatenation factor
-State 30:
+State 31:
 Shifting (REGEX) to state 9
 State 9:
 "["
@@ -169,7 +171,7 @@ State 17:
 Reducing production factor -> term
 State 25:
 Reducing production concatenation -> concatenation factor
-State 30:
+State 31:
 Shifting (REGEX) to state 9
 State 9:
 "["
@@ -189,7 +191,7 @@ State 17:
 Reducing production factor -> term
 State 25:
 Reducing production concatenation -> concatenation factor
-State 30:
+State 31:
 Shifting (REGEX) to state 9
 State 9:
 Lookahead token is now RPAREN (130-131)
@@ -198,8 +200,8 @@ State 17:
 Reducing production factor -> term
 State 25:
 Reducing production concatenation -> concatenation factor
-State 30:
-Reducing production alternation -> alternation BAR concatenation
+State 31:
+Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
 State 28:
 Reducing production rhs -> alternation
 State 21:
@@ -215,12 +217,12 @@ State 24:
 Reducing production alternation -> concatenation
 State 28:
 Reducing production rhs -> alternation
-State 31:
+State 32:
 Reducing production old_rule -> LID COLONCOLONEQUAL rhs
 ["DEBUG:branches1"]
-State 37:
-Shifting (NEWLINE) to state 38
 State 38:
+Shifting (NEWLINE) to state 39
+State 39:
 Lookahead token is now RPAREN (138-139)
 Initiating error handling
 Fatal error: exception Gbnf_parser.SentenceParser.MenhirBasics.Error

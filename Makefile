@@ -1,3 +1,5 @@
+grammars/c.gbnf.out: grammars/c.gbnf
+	dune exec bin/main.exe  $< | tee  $>.out	 2>&1 
 
 all :testall
 	echo ok
