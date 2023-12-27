@@ -8,7 +8,7 @@ object  ::= "{" ws reply-key ":" ws string ws "}"
 
 reply-key ::= "\"Reply\""
 
-string  ::= "\"" ( [^"\\] | "\\" (["\\/bfnrt] | "u" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F]) )* "\""
+string  ::= "\"" ( [^"\\] | "\\" (["\\/bfnrt] | "u" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F])* "\""
 
 ws      ::= [ \t\n\r]*
 

@@ -572,6 +572,10 @@ and record_string openingpos buffer = parse
       record_string openingpos buffer lexbuf }
 
 and charclass openingpos buffer = parse
+| "\\]" { (print_endline (Batteries.dump (((Lexing.lexeme lexbuf)))));
+          charclass openingpos buffer lexbuf
+}
+
 | "]" { (print_endline (Batteries.dump (((Lexing.lexeme lexbuf)))));
         (* main lexbuf *)
         "TODO"

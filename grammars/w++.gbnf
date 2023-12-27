@@ -1,18 +1,6 @@
 root ::= char
 
-char ::= "[character(" string ")" ws (
-"{"
-"Nickname(" string ")" ws
-"Species(" string ")" ws
-"Age(" list ")" ws
-"Features(" list ")" ws
-"Body(" list ")" ws
-"Mind(" list ")" ws
-"Personality(" list ")" ws
-"Loves(" list ")" ws
-"Hates(" list ")" ws
-"Description(" list ")" ws
-"}]" )
+char ::= "[character(" string ")" ws ( "{""Nickname(" string ")" ws "Species(" string ")" ws "Age(" list ")" ws "Features(" list ")" ws "Body(" list ")" ws "Mind(" list ")" ws "Personality(" list ")" ws "Loves(" list ")" ws "Hates(" list ")" ws "Description(" list ")" ws "}]" )
 
 list ::= string (" + " string)*
 

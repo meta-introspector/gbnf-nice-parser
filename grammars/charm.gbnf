@@ -1,8 +1,4 @@
-root ::= (
-    character-line?
-    zx-line?
-    narrator-line
-)
+root ::= (    character-line?     zx-line?    narrator-line)
 
 narrator-line ::= "Narrator: (" directive ") " content "\n"
 character-line ::= name ": (" directive ") " content "\n"

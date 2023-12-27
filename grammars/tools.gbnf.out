@@ -1,4 +1,4 @@
-Done: 94% (298/315, 17 left) (jobs: 0)                                      Hello, World!
+Done: 90% (284/315, 31 left) (jobs: 0)                                      Hello, World!
 State 0:
 Lookahead token is now LID (0-6)
 Reducing production list(NEWLINE) ->
@@ -30,16 +30,43 @@ State 1:
 "^"
 "\""
 "\\"
+"\\]"
+" "
+"|"
+"\n"
+" "
+" "
+" "
+" "
+" "
+" "
+" "
+" "
+"\""
 "\\"
+"\\"
+"\""
+" "
+"("
+"["
+"\""
+"\\"
+"\\"
+"/"
+"b"
+"f"
+"n"
+"r"
+"t"
 "]"
-Lookahead token is now REGEX (32-33)
+Lookahead token is now REGEX (60-61)
 Reducing production list(NEWLINE) ->
 State 2:
 Reducing production list(NEWLINE) -> NEWLINE list(NEWLINE)
 State 12:
 Shifting (REGEX) to state 9
 State 9:
-Lookahead token is now BAR (34-35)
+Lookahead token is now BAR (62-63)
 Reducing production term -> REGEX
 State 17:
 Reducing production factor -> term
@@ -50,6 +77,118 @@ Reducing production alternation -> concatenation
 State 28:
 Shifting (BAR) to state 29
 State 29:
-Lookahead token is now NEWLINE (35-36)
+Lookahead token is now QID (66-67)
+Shifting (QID) to state 10
+State 10:
+"["
+"0"
+"-"
+"9"
+"a"
+"-"
+"f"
+"A"
+"-"
+"F"
+"]"
+Lookahead token is now REGEX (78-79)
+Reducing production term -> QID
+State 17:
+Reducing production factor -> term
+State 23:
+Reducing production concatenation -> factor
+State 30:
+Shifting (REGEX) to state 9
+State 9:
+"["
+"0"
+"-"
+"9"
+"a"
+"-"
+"f"
+"A"
+"-"
+"F"
+"]"
+Lookahead token is now REGEX (90-91)
+Reducing production term -> REGEX
+State 17:
+Reducing production factor -> term
+State 25:
+Reducing production concatenation -> concatenation factor
+State 30:
+Shifting (REGEX) to state 9
+State 9:
+"["
+"0"
+"-"
+"9"
+"a"
+"-"
+"f"
+"A"
+"-"
+"F"
+"]"
+Lookahead token is now REGEX (102-103)
+Reducing production term -> REGEX
+State 17:
+Reducing production factor -> term
+State 25:
+Reducing production concatenation -> concatenation factor
+State 30:
+Shifting (REGEX) to state 9
+State 9:
+"["
+"0"
+"-"
+"9"
+"a"
+"-"
+"f"
+"A"
+"-"
+"F"
+"]"
+Lookahead token is now REGEX (114-115)
+Reducing production term -> REGEX
+State 17:
+Reducing production factor -> term
+State 25:
+Reducing production concatenation -> concatenation factor
+State 30:
+Shifting (REGEX) to state 9
+State 9:
+Lookahead token is now RPAREN (115-116)
+Reducing production term -> REGEX
+State 17:
+Reducing production factor -> term
+State 25:
+Reducing production concatenation -> concatenation factor
+State 30:
+Reducing production alternation -> alternation BAR concatenation
+State 28:
+Reducing production rhs -> alternation
+State 21:
+Shifting (RPAREN) to state 22
+State 22:
+Lookahead token is now NEWLINE (116-117)
+Reducing production term -> LPAREN list(NEWLINE) rhs RPAREN
+State 17:
+Reducing production factor -> term
+State 25:
+Reducing production concatenation -> concatenation factor
+State 24:
+Reducing production alternation -> concatenation
+State 28:
+Reducing production rhs -> alternation
+State 31:
+Reducing production old_rule -> LID COLONCOLONEQUAL rhs
+["DEBUG:branches1"]
+State 37:
+Shifting (NEWLINE) to state 38
+State 38:
+Lookahead token is now RPAREN (123-124)
 Initiating error handling
 Fatal error: exception Gbnf_parser.SentenceParser.MenhirBasics.Error

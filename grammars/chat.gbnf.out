@@ -1,4 +1,4 @@
-Done: 94% (298/315, 17 left) (jobs: 0)                                      Hello, World!
+Done: 90% (284/315, 31 left) (jobs: 0)                                      Hello, World!
 State 0:
 Lookahead token is now LID (0-4)
 Reducing production list(NEWLINE) ->
@@ -95,37 +95,17 @@ State 11:
 "^"
 "\""
 "\\"
+"\\]"
+" "
+"|"
+" "
+" "
+"\""
 "\\"
-"]"
-Lookahead token is now REGEX (66-67)
-Reducing production list(NEWLINE) ->
-State 12:
-Shifting (REGEX) to state 9
-State 9:
-Lookahead token is now BAR (68-69)
-Reducing production term -> REGEX
-State 17:
-Reducing production factor -> term
-State 23:
-Reducing production concatenation -> factor
-State 24:
-Reducing production alternation -> concatenation
-State 28:
-Shifting (BAR) to state 29
-State 29:
-Lookahead token is now QID (74-75)
-Shifting (QID) to state 10
-State 10:
+"\\"
+"\""
+" "
 "("
-Lookahead token is now LPAREN (76-77)
-Reducing production term -> QID
-State 17:
-Reducing production factor -> term
-State 23:
-Reducing production concatenation -> factor
-State 30:
-Shifting (LPAREN) to state 11
-State 11:
 "["
 "\""
 "\\"
@@ -249,32 +229,19 @@ Reducing production rhs -> alternation
 State 21:
 Shifting (RPAREN) to state 22
 State 22:
-Lookahead token is now RPAREN (146-147)
-Reducing production term -> LPAREN list(NEWLINE) rhs RPAREN
-State 17:
-Reducing production factor -> term
-State 25:
-Reducing production concatenation -> concatenation factor
-State 30:
-Reducing production alternation -> alternation BAR concatenation
-State 28:
-Reducing production rhs -> alternation
-State 21:
-Shifting (RPAREN) to state 22
-State 22:
-Lookahead token is now PLUS (147-148)
+Lookahead token is now PLUS (143-144)
 Reducing production term -> LPAREN list(NEWLINE) rhs RPAREN
 State 17:
 Shifting (PLUS) to state 20
 State 20:
-Lookahead token is now LID (149-154)
+Lookahead token is now LID (145-150)
 Reducing production factor -> term PLUS
 State 25:
 Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
-Lookahead token is now NEWLINE (154-155)
+Lookahead token is now NEWLINE (150-151)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -290,10 +257,10 @@ Reducing production old_rule -> LID COLONCOLONEQUAL rhs
 State 37:
 Shifting (NEWLINE) to state 38
 State 38:
-Lookahead token is now NEWLINE (155-156)
+Lookahead token is now NEWLINE (151-152)
 Shifting (NEWLINE) to state 38
 State 38:
-Lookahead token is now LID (156-161)
+Lookahead token is now LID (152-157)
 Reducing production nonempty_list(NEWLINE) -> NEWLINE
 State 39:
 Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
@@ -301,15 +268,15 @@ State 40:
 Shifting (LID) to state 4
 State 4:
 DEBUG
-(1, 169, "::=")
-Lookahead token is now COLONCOLONEQUAL (166-169)
+(1, 165, "::=")
+Lookahead token is now COLONCOLONEQUAL (162-165)
 Shifting (COLONCOLONEQUAL) to state 5
 State 5:
-Lookahead token is now LID (170-175)
+Lookahead token is now LID (166-171)
 Shifting (LID) to state 13
 State 13:
 "("
-Lookahead token is now LPAREN (176-177)
+Lookahead token is now LPAREN (172-173)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -329,12 +296,12 @@ State 11:
 "\153"
 "\143"
 "]"
-Lookahead token is now REGEX (187-188)
+Lookahead token is now REGEX (183-184)
 Reducing production list(NEWLINE) ->
 State 12:
 Shifting (REGEX) to state 9
 State 9:
-Lookahead token is now BAR (189-190)
+Lookahead token is now BAR (185-186)
 Reducing production term -> REGEX
 State 17:
 Reducing production factor -> term
@@ -356,10 +323,10 @@ State 29:
 "\152"
 "\182"
 "]"
-Lookahead token is now REGEX (201-202)
+Lookahead token is now REGEX (197-198)
 Shifting (REGEX) to state 9
 State 9:
-Lookahead token is now BAR (203-204)
+Lookahead token is now BAR (199-200)
 Reducing production term -> REGEX
 State 17:
 Reducing production factor -> term
@@ -381,10 +348,10 @@ State 29:
 "\155"
 "\128"
 "]"
-Lookahead token is now REGEX (215-216)
+Lookahead token is now REGEX (211-212)
 Shifting (REGEX) to state 9
 State 9:
-Lookahead token is now BAR (217-218)
+Lookahead token is now BAR (213-214)
 Reducing production term -> REGEX
 State 17:
 Reducing production factor -> term
@@ -406,10 +373,10 @@ State 29:
 "\151"
 "\191"
 "]"
-Lookahead token is now REGEX (229-230)
+Lookahead token is now REGEX (225-226)
 Shifting (REGEX) to state 9
 State 9:
-Lookahead token is now RPAREN (230-231)
+Lookahead token is now RPAREN (226-227)
 Reducing production term -> REGEX
 State 17:
 Reducing production factor -> term
@@ -422,7 +389,7 @@ Reducing production rhs -> alternation
 State 21:
 Shifting (RPAREN) to state 22
 State 22:
-Lookahead token is now LID (232-237)
+Lookahead token is now LID (228-233)
 Reducing production term -> LPAREN list(NEWLINE) rhs RPAREN
 State 17:
 Reducing production factor -> term
@@ -431,7 +398,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
-Lookahead token is now NEWLINE (237-238)
+Lookahead token is now NEWLINE (233-234)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -447,10 +414,10 @@ Reducing production old_rule -> LID COLONCOLONEQUAL rhs
 State 37:
 Shifting (NEWLINE) to state 38
 State 38:
-Lookahead token is now NEWLINE (238-239)
+Lookahead token is now NEWLINE (234-235)
 Shifting (NEWLINE) to state 38
 State 38:
-Lookahead token is now LID (239-246)
+Lookahead token is now LID (235-242)
 Reducing production nonempty_list(NEWLINE) -> NEWLINE
 State 39:
 Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
@@ -458,14 +425,14 @@ State 40:
 Shifting (LID) to state 4
 State 4:
 DEBUG
-(1, 252, "::=")
-Lookahead token is now COLONCOLONEQUAL (249-252)
+(1, 248, "::=")
+Lookahead token is now COLONCOLONEQUAL (245-248)
 Shifting (COLONCOLONEQUAL) to state 5
 State 5:
-Lookahead token is now LID (253-258)
+Lookahead token is now LID (249-254)
 Shifting (LID) to state 13
 State 13:
-Lookahead token is now QID (261-262)
+Lookahead token is now QID (257-258)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -486,7 +453,7 @@ State 10:
 "9"
 "-"
 "]"
-Lookahead token is now REGEX (274-275)
+Lookahead token is now REGEX (270-271)
 Reducing production term -> QID
 State 17:
 Reducing production factor -> term
@@ -495,19 +462,19 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (REGEX) to state 9
 State 9:
-Lookahead token is now PLUS (275-276)
+Lookahead token is now PLUS (271-272)
 Reducing production term -> REGEX
 State 17:
 Shifting (PLUS) to state 20
 State 20:
-Lookahead token is now LID (277-282)
+Lookahead token is now LID (273-278)
 Reducing production factor -> term PLUS
 State 25:
 Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
-Lookahead token is now NEWLINE (282-283)
+Lookahead token is now NEWLINE (278-279)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -523,10 +490,10 @@ Reducing production old_rule -> LID COLONCOLONEQUAL rhs
 State 37:
 Shifting (NEWLINE) to state 38
 State 38:
-Lookahead token is now NEWLINE (283-284)
+Lookahead token is now NEWLINE (279-280)
 Shifting (NEWLINE) to state 38
 State 38:
-Lookahead token is now LID (284-291)
+Lookahead token is now LID (280-287)
 Reducing production nonempty_list(NEWLINE) -> NEWLINE
 State 39:
 Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
@@ -534,15 +501,15 @@ State 40:
 Shifting (LID) to state 4
 State 4:
 DEBUG
-(1, 299, "::=")
-Lookahead token is now COLONCOLONEQUAL (296-299)
+(1, 295, "::=")
+Lookahead token is now COLONCOLONEQUAL (292-295)
 Shifting (COLONCOLONEQUAL) to state 5
 State 5:
-Lookahead token is now QID (302-303)
+Lookahead token is now QID (298-299)
 Shifting (QID) to state 10
 State 10:
 "("
-Lookahead token is now LPAREN (304-305)
+Lookahead token is now LPAREN (300-301)
 Reducing production term -> QID
 State 17:
 Reducing production factor -> term
@@ -551,13 +518,13 @@ Reducing production concatenation -> factor
 State 24:
 Shifting (LPAREN) to state 11
 State 11:
-Lookahead token is now LID (305-312)
+Lookahead token is now LID (301-308)
 Reducing production list(NEWLINE) ->
 State 12:
 Shifting (LID) to state 13
 State 13:
 "("
-Lookahead token is now LPAREN (313-314)
+Lookahead token is now LPAREN (309-310)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -566,12 +533,12 @@ Reducing production concatenation -> factor
 State 24:
 Shifting (LPAREN) to state 11
 State 11:
-Lookahead token is now QID (317-318)
+Lookahead token is now QID (313-314)
 Reducing production list(NEWLINE) ->
 State 12:
 Shifting (QID) to state 10
 State 10:
-Lookahead token is now LID (319-326)
+Lookahead token is now LID (315-322)
 Reducing production term -> QID
 State 17:
 Reducing production factor -> term
@@ -580,7 +547,7 @@ Reducing production concatenation -> factor
 State 24:
 Shifting (LID) to state 13
 State 13:
-Lookahead token is now RPAREN (326-327)
+Lookahead token is now RPAREN (322-323)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -593,12 +560,12 @@ Reducing production rhs -> alternation
 State 21:
 Shifting (RPAREN) to state 22
 State 22:
-Lookahead token is now STAR (327-328)
+Lookahead token is now STAR (323-324)
 Reducing production term -> LPAREN list(NEWLINE) rhs RPAREN
 State 17:
 Shifting (STAR) to state 18
 State 18:
-Lookahead token is now RPAREN (328-329)
+Lookahead token is now RPAREN (324-325)
 Reducing production factor -> term STAR
 State 25:
 Reducing production concatenation -> concatenation factor
@@ -609,19 +576,19 @@ Reducing production rhs -> alternation
 State 21:
 Shifting (RPAREN) to state 22
 State 22:
-Lookahead token is now QUESTION (329-330)
+Lookahead token is now QUESTION (325-326)
 Reducing production term -> LPAREN list(NEWLINE) rhs RPAREN
 State 17:
 Shifting (QUESTION) to state 19
 State 19:
-Lookahead token is now QID (333-334)
+Lookahead token is now QID (329-330)
 Reducing production factor -> term QUESTION
 State 25:
 Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
-Lookahead token is now NEWLINE (334-335)
+Lookahead token is now NEWLINE (330-331)
 Reducing production term -> QID
 State 17:
 Reducing production factor -> term
@@ -637,10 +604,10 @@ Reducing production old_rule -> LID COLONCOLONEQUAL rhs
 State 37:
 Shifting (NEWLINE) to state 38
 State 38:
-Lookahead token is now NEWLINE (335-336)
+Lookahead token is now NEWLINE (331-332)
 Shifting (NEWLINE) to state 38
 State 38:
-Lookahead token is now LID (336-339)
+Lookahead token is now LID (332-335)
 Reducing production nonempty_list(NEWLINE) -> NEWLINE
 State 39:
 Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
@@ -648,20 +615,20 @@ State 40:
 Shifting (LID) to state 4
 State 4:
 DEBUG
-(1, 349, "::=")
-Lookahead token is now COLONCOLONEQUAL (346-349)
+(1, 345, "::=")
+Lookahead token is now COLONCOLONEQUAL (342-345)
 Shifting (COLONCOLONEQUAL) to state 5
 State 5:
 "("
-Lookahead token is now LPAREN (350-351)
+Lookahead token is now LPAREN (346-347)
 Shifting (LPAREN) to state 11
 State 11:
-Lookahead token is now QID (353-354)
+Lookahead token is now QID (349-350)
 Reducing production list(NEWLINE) ->
 State 12:
 Shifting (QID) to state 10
 State 10:
-Lookahead token is now LID (355-360)
+Lookahead token is now LID (351-356)
 Reducing production term -> QID
 State 17:
 Reducing production factor -> term
@@ -670,7 +637,7 @@ Reducing production concatenation -> factor
 State 24:
 Shifting (LID) to state 13
 State 13:
-Lookahead token is now QID (369-370)
+Lookahead token is now QID (365-366)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -679,7 +646,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
-Lookahead token is now LID (371-376)
+Lookahead token is now LID (367-372)
 Reducing production term -> QID
 State 17:
 Reducing production factor -> term
@@ -688,7 +655,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
-Lookahead token is now QID (380-381)
+Lookahead token is now QID (376-377)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -697,7 +664,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
-Lookahead token is now LID (382-388)
+Lookahead token is now LID (378-384)
 Reducing production term -> QID
 State 17:
 Reducing production factor -> term
@@ -706,7 +673,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
-Lookahead token is now QID (391-392)
+Lookahead token is now QID (387-388)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -715,7 +682,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
-Lookahead token is now LID (412-417)
+Lookahead token is now LID (408-413)
 Reducing production term -> QID
 State 17:
 Reducing production factor -> term
@@ -724,7 +691,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
-Lookahead token is now QID (424-425)
+Lookahead token is now QID (420-421)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -733,7 +700,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
-Lookahead token is now LID (426-431)
+Lookahead token is now LID (422-427)
 Reducing production term -> QID
 State 17:
 Reducing production factor -> term
@@ -742,7 +709,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
-Lookahead token is now QID (435-436)
+Lookahead token is now QID (431-432)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -751,7 +718,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
-Lookahead token is now LID (437-442)
+Lookahead token is now LID (433-438)
 Reducing production term -> QID
 State 17:
 Reducing production factor -> term
@@ -760,7 +727,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
-Lookahead token is now QID (445-446)
+Lookahead token is now QID (441-442)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -769,7 +736,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
-Lookahead token is now LID (466-471)
+Lookahead token is now LID (462-467)
 Reducing production term -> QID
 State 17:
 Reducing production factor -> term
@@ -778,7 +745,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
-Lookahead token is now QID (481-482)
+Lookahead token is now QID (477-478)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -787,7 +754,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
-Lookahead token is now LID (483-488)
+Lookahead token is now LID (479-484)
 Reducing production term -> QID
 State 17:
 Reducing production factor -> term
@@ -796,7 +763,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
-Lookahead token is now QID (492-493)
+Lookahead token is now QID (488-489)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -805,7 +772,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
-Lookahead token is now LID (494-501)
+Lookahead token is now LID (490-497)
 Reducing production term -> QID
 State 17:
 Reducing production factor -> term
@@ -814,7 +781,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
-Lookahead token is now QID (504-505)
+Lookahead token is now QID (500-501)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -823,7 +790,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
-Lookahead token is now LID (525-530)
+Lookahead token is now LID (521-526)
 Reducing production term -> QID
 State 17:
 Reducing production factor -> term
@@ -832,7 +799,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
-Lookahead token is now QID (543-544)
+Lookahead token is now QID (539-540)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -841,7 +808,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
-Lookahead token is now LID (545-550)
+Lookahead token is now LID (541-546)
 Reducing production term -> QID
 State 17:
 Reducing production factor -> term
@@ -850,7 +817,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
-Lookahead token is now QID (554-555)
+Lookahead token is now QID (550-551)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -859,7 +826,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
-Lookahead token is now LID (556-562)
+Lookahead token is now LID (552-558)
 Reducing production term -> QID
 State 17:
 Reducing production factor -> term
@@ -868,7 +835,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (LID) to state 13
 State 13:
-Lookahead token is now QID (565-566)
+Lookahead token is now QID (561-562)
 Reducing production term -> LID
 State 17:
 Reducing production factor -> term
@@ -877,7 +844,7 @@ Reducing production concatenation -> concatenation factor
 State 24:
 Shifting (QID) to state 10
 State 10:
-Lookahead token is now RPAREN (566-567)
+Lookahead token is now RPAREN (563-564)
 Reducing production term -> QID
 State 17:
 Reducing production factor -> term
@@ -890,7 +857,7 @@ Reducing production rhs -> alternation
 State 21:
 Shifting (RPAREN) to state 22
 State 22:
-Lookahead token is now NEWLINE (567-568)
+Lookahead token is now NEWLINE (564-565)
 Reducing production term -> LPAREN list(NEWLINE) rhs RPAREN
 State 17:
 Reducing production factor -> term
@@ -906,9 +873,6 @@ Reducing production old_rule -> LID COLONCOLONEQUAL rhs
 State 37:
 Shifting (NEWLINE) to state 38
 State 38:
-Lookahead token is now NEWLINE (568-569)
-Shifting (NEWLINE) to state 38
-State 38:
-Lookahead token is now EOF (569-569)
+Lookahead token is now EOF (565-565)
 Initiating error handling
 Fatal error: exception Gbnf_parser.SentenceParser.MenhirBasics.Error
