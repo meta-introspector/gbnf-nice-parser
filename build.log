@@ -1,3 +1,4 @@
+make[1]: Entering directory '/mnt/data1/2023/12/17/gbnf_parser'
 menhir --cmly --table --trace --dump --explain --log-grammar 99 --log-automaton 9 --log-code 99 --log-grammar 99 --reference-graph lib/sentenceParser.mly
 rm -f lib/sentenceParser.cmly lib/sentenceParser.ml lib/sentenceParser.mli
 dune clean
@@ -34,7 +35,6 @@ err grammars/gallina2.gbnf
 grammars/gallina.gbnf
 err grammars/gallina.gbnf
 grammars/generated_grammar.gbnf
-err grammars/generated_grammar.gbnf
 grammars/gen_function_calling.gbnf
 err grammars/gen_function_calling.gbnf
 grammars/grammar-3.gbnf
@@ -67,7 +67,6 @@ grammars/primitive.gbnf
 err grammars/primitive.gbnf
 grammars/question_grammar.gbnf
 grammars/segfault_fixed.gbnf
-err grammars/segfault_fixed.gbnf
 grammars/segfault.gbnf
 err grammars/segfault.gbnf
 grammars/syllable-count.gbnf
@@ -79,10 +78,59 @@ grammars/w++.gbnf
 err grammars/w++.gbnf
 grammars/yaml.gbnf
 err grammars/yaml.gbnf
-      3 State 2:
-      5 State 13:
-      7 State 8:
+now report on the most common state
+      2 State 2:
+      2 State 20:
+      2 State 27:
+      4 State 28:
       8 State 0:
-      8 State 33:
+     13 State 37:
+now report on the last lines
+      1 BAR
+     12 EOF
+     14 NEWLINE
+now one the last states
+      1 State 37:
+      2 State 20:
+      3 State 6:
+with filename
+grammars/arithmetic.gbnf.out:State 37:
+grammars/assistant.gbnf.out:State 0:
+grammars/c.gbnf.out:State 2:
+grammars/charm.gbnf.out:State 20:
+grammars/chat.gbnf.out:State 37:
+grammars/chess.gbnf.out:State 0:
+grammars/colors.gbnf.out:State 0:
+grammars/commands.gbnf.out:State 37:
+grammars/commands_kwargs.gbnf.out:State 37:
+grammars/elixir.gbnf.out:State 37:
+grammars/elixir_no_left_recursion.gbnf.out:State 37:
+grammars/gallina2.gbnf.out:State 0:
+grammars/gallina.gbnf.out:State 37:
+grammars/generated_grammar.gbnf.out:State 41:
+grammars/gen_function_calling.gbnf.out:State 6:
+grammars/grammar-3.gbnf.out:State 28:
+grammars/grammar.gbnf.out:State 37:
+grammars/hazel.gbnf.out:State 28:
+grammars/japanese.gbnf.out:State 0:
+grammars/json_arr.gbnf.out:State 0:
+grammars/json_converse.gbnf.out:State 37:
+grammars/json_func_calls_with_inner_thoughts.gbnf.out:State 6:
+grammars/json.gbnf.out:State 2:
+grammars/json_only_reply.gbnf.out:State 37:
+grammars/list.gbnf.out:State 37:
+grammars/multi-tool.gbnf.out:State 28:
+grammars/pinnacle_turn_d.gbnf.out:State 0:
+grammars/pinnacle_turn_s.gbnf.out:State 0:
+grammars/primitive.gbnf.out:State 6:
+grammars/question_grammar.gbnf.out:State 41:
+grammars/segfault_fixed.gbnf.out:State 41:
+grammars/segfault.gbnf.out:State 37:
+grammars/syllable-count.gbnf.out:State 37:
+grammars/test_grammar.gbnf.out:State 41:
+grammars/tools.gbnf.out:State 28:
+grammars/w++.gbnf.out:State 20:
+grammars/yaml.gbnf.out:State 37:
 echo ok
 ok
+make[1]: Leaving directory '/mnt/data1/2023/12/17/gbnf_parser'

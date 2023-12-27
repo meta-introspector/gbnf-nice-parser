@@ -13,4 +13,7 @@ tail -n 3  grammars/*.out | grep Look |cut -d " " -f5 | sort |uniq -c |sort -n
      # 16 NEWLINE
 
 echo now one the last states
-tail -n 3  grammars/*.out | grep ^State |cut -d " " -f5 | sort |uniq -c |sort -n
+tail -n 3  grammars/*.out | grep ^State  | sort |uniq -c |sort -n
+
+echo with filename
+for x in grammars/*.out; do grep -H ^State $x | tail -1 ; done
