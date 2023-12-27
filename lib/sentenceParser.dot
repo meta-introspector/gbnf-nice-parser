@@ -1,0 +1,44 @@
+digraph G {
+orientation = landscape;
+rankdir = LR;
+ratio = compress;
+nt0 [ label="grammar'" ] ;
+nt1 [ label="term" ] ;
+nt2 [ label="separated_nonempty_list(nonempty_list(NEWLINE),old_rule)" ] ;
+nt3 [ label="rules" ] ;
+nt4 [ label="rhs" ] ;
+nt5 [ label="postlude" ] ;
+nt6 [ label="old_rule" ] ;
+nt7 [ label="nonempty_list(NEWLINE)" ] ;
+nt8 [ label="list(NEWLINE)" ] ;
+nt9 [ label="grammar" ] ;
+nt10 [ label="factor" ] ;
+nt11 [ label="concatenation" ] ;
+nt12 [ label="char_class1" ] ;
+nt13 [ label="char_class" ] ;
+nt14 [ label="alternation" ] ;
+nt0 -> nt9 [ label="" ] ;
+nt1 -> nt4 [ label="" ] ;
+nt1 -> nt8 [ label="" ] ;
+nt1 -> nt13 [ label="" ] ;
+nt2 -> nt2 [ label="" ] ;
+nt2 -> nt6 [ label="" ] ;
+nt2 -> nt7 [ label="" ] ;
+nt3 -> nt2 [ label="" ] ;
+nt4 -> nt14 [ label="" ] ;
+nt6 -> nt4 [ label="" ] ;
+nt7 -> nt7 [ label="" ] ;
+nt8 -> nt8 [ label="" ] ;
+nt9 -> nt3 [ label="" ] ;
+nt9 -> nt5 [ label="" ] ;
+nt9 -> nt8 [ label="" ] ;
+nt10 -> nt1 [ label="" ] ;
+nt11 -> nt10 [ label="" ] ;
+nt11 -> nt11 [ label="" ] ;
+nt12 -> nt12 [ label="" ] ;
+nt13 -> nt12 [ label="" ] ;
+nt14 -> nt8 [ label="" ] ;
+nt14 -> nt11 [ label="" ] ;
+nt14 -> nt14 [ label="" ] ;
+
+}

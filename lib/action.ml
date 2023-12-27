@@ -18,7 +18,7 @@ type t = {
   (* The code for this semantic action. *)
   expr: IL.expr;
 
-  (* This Boolean flag indicates whether this semantic action originates from
+  (* This Boolean flag indicates whether this semantic action< originates from
      Menhir's standard library. Via inlining, several semantic actions can be
      combined into one; in that case, we take a conjunction. *)
   standard: bool;
@@ -41,7 +41,9 @@ type t = {
 let from_stretch xs s =
   {
     expr      = IL.ETextual s;
-    standard  = s.Stretch.stretch_filename = Settings.stdlib_filename;
+
+    standard  = s.Stretch.stretch_filename = "fixme";
+
     semvars   = xs;
     keywords  = KeywordSet.of_list s.Stretch.stretch_keywords
   }

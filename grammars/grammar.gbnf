@@ -1,0 +1,7 @@
+root ::= Story
+Story ::= "{"   ws   "\"summary\":"   ws   string   ","   ws   "\"sceneDescription\":"   ws   string   ","   ws   "\"imageDescription\":"   ws   string   ","   ws   "\"options\":"   ws   stringlist   "}"
+string ::= "\"" (jsonchar)* "\""
+jsonchar ::= [^\\\"\n] | "\\\"" | "\\\\" | "\\n"
+hex ::= [0-9a-fA-F]
+ws ::= [ \t\n]*
+stringlist ::= "[" ws string "," ws string "," ws string ws "]"

@@ -1,0 +1,230 @@
+Done: 90% (284/315, 31 left) (jobs: 0)                                      Hello, World!
+State 0:
+Lookahead token is now LID (0-4)
+Reducing production list(NEWLINE) ->
+State 3:
+Shifting (LID) to state 4
+State 4:
+(1, 8, "::=")
+Lookahead token is now COLONCOLONEQUAL (5-8)
+Shifting (COLONCOLONEQUAL) to state 5
+State 5:
+Lookahead token is now LID (10-20)
+Shifting (LID) to state 13
+State 13:
+Lookahead token is now NEWLINE (20-21)
+Reducing production term -> LID
+State 17:
+Reducing production factor -> term
+State 23:
+Reducing production concatenation -> factor
+State 24:
+Reducing production alternation -> concatenation
+State 28:
+Reducing production rhs -> alternation
+State 32:
+Reducing production old_rule -> LID COLONCOLONEQUAL rhs
+["DEBUG:branches1"]
+State 38:
+Shifting (NEWLINE) to state 39
+State 39:
+Lookahead token is now NEWLINE (21-22)
+Shifting (NEWLINE) to state 39
+State 39:
+Lookahead token is now LID (22-32)
+Reducing production nonempty_list(NEWLINE) -> NEWLINE
+State 40:
+Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
+State 41:
+Shifting (LID) to state 4
+State 4:
+(1, 36, "::=")
+Lookahead token is now COLONCOLONEQUAL (33-36)
+Shifting (COLONCOLONEQUAL) to state 5
+State 5:
+"("
+Lookahead token is now LPAREN (37-38)
+Shifting (LPAREN) to state 11
+State 11:
+Lookahead token is now LID (38-45)
+Reducing production list(NEWLINE) ->
+State 12:
+Shifting (LID) to state 13
+State 13:
+Lookahead token is now BAR (46-47)
+Reducing production term -> LID
+State 17:
+Reducing production factor -> term
+State 23:
+Reducing production concatenation -> factor
+State 24:
+Reducing production alternation -> concatenation
+State 28:
+Shifting (BAR) to state 29
+State 29:
+Lookahead token is now LID (48-63)
+Reducing production list(NEWLINE) ->
+State 30:
+Shifting (LID) to state 13
+State 13:
+Lookahead token is now RPAREN (63-64)
+Reducing production term -> LID
+State 17:
+Reducing production factor -> term
+State 23:
+Reducing production concatenation -> factor
+State 31:
+Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
+State 28:
+Reducing production rhs -> alternation
+State 21:
+Shifting (RPAREN) to state 22
+State 22:
+Lookahead token is now NEWLINE (64-65)
+Reducing production term -> LPAREN list(NEWLINE) rhs RPAREN
+State 17:
+Reducing production factor -> term
+State 23:
+Reducing production concatenation -> factor
+State 24:
+Reducing production alternation -> concatenation
+State 28:
+Reducing production rhs -> alternation
+State 32:
+Reducing production old_rule -> LID COLONCOLONEQUAL rhs
+["DEBUG:branches1"]
+State 38:
+Shifting (NEWLINE) to state 39
+State 39:
+Lookahead token is now NEWLINE (65-66)
+Shifting (NEWLINE) to state 39
+State 39:
+Lookahead token is now LID (66-73)
+Reducing production nonempty_list(NEWLINE) -> NEWLINE
+State 40:
+Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
+State 41:
+Shifting (LID) to state 4
+State 4:
+(1, 77, "::=")
+Lookahead token is now COLONCOLONEQUAL (74-77)
+Shifting (COLONCOLONEQUAL) to state 5
+State 5:
+"["
+"0"
+"-"
+"9"
+"]"
+Lookahead token is now REGEX (83-84)
+Shifting (REGEX) to state 9
+State 9:
+Lookahead token is now PLUS (84-85)
+Reducing production term -> REGEX
+State 17:
+Shifting (PLUS) to state 20
+State 20:
+Lookahead token is now NEWLINE (85-86)
+Reducing production factor -> term PLUS
+State 23:
+Reducing production concatenation -> factor
+State 24:
+Reducing production alternation -> concatenation
+State 28:
+Reducing production rhs -> alternation
+State 32:
+Reducing production old_rule -> LID COLONCOLONEQUAL rhs
+["DEBUG:branches1"]
+State 38:
+Shifting (NEWLINE) to state 39
+State 39:
+Lookahead token is now NEWLINE (86-87)
+Shifting (NEWLINE) to state 39
+State 39:
+Lookahead token is now LID (87-102)
+Reducing production nonempty_list(NEWLINE) -> NEWLINE
+State 40:
+Reducing production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
+State 41:
+Shifting (LID) to state 4
+State 4:
+(1, 106, "::=")
+Lookahead token is now COLONCOLONEQUAL (103-106)
+Shifting (COLONCOLONEQUAL) to state 5
+State 5:
+Lookahead token is now LID (108-118)
+Shifting (LID) to state 13
+State 13:
+"("
+Lookahead token is now LPAREN (120-121)
+Reducing production term -> LID
+State 17:
+Reducing production factor -> term
+State 23:
+Reducing production concatenation -> factor
+State 24:
+Shifting (LPAREN) to state 11
+State 11:
+("DEBUG2:rs", 43)
+Lookahead token is now QID (123-124)
+Reducing production list(NEWLINE) ->
+State 12:
+Shifting (QID) to state 10
+State 10:
+Lookahead token is now BAR (126-127)
+Reducing production term -> QID
+State 17:
+Reducing production factor -> term
+State 23:
+Reducing production concatenation -> factor
+State 24:
+Reducing production alternation -> concatenation
+State 28:
+Shifting (BAR) to state 29
+State 29:
+("DEBUG2:rs", 45)
+Lookahead token is now QID (131-132)
+Reducing production list(NEWLINE) ->
+State 30:
+Shifting (QID) to state 10
+State 10:
+Lookahead token is now RPAREN (132-133)
+Reducing production term -> QID
+State 17:
+Reducing production factor -> term
+State 23:
+Reducing production concatenation -> factor
+State 31:
+Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
+State 28:
+Reducing production rhs -> alternation
+State 21:
+Shifting (RPAREN) to state 22
+State 22:
+Lookahead token is now LID (135-145)
+Reducing production term -> LPAREN list(NEWLINE) rhs RPAREN
+State 17:
+Reducing production factor -> term
+State 25:
+Reducing production concatenation -> concatenation factor
+State 24:
+Shifting (LID) to state 13
+State 13:
+Lookahead token is now NEWLINE (145-146)
+Reducing production term -> LID
+State 17:
+Reducing production factor -> term
+State 25:
+Reducing production concatenation -> concatenation factor
+State 24:
+Reducing production alternation -> concatenation
+State 28:
+Reducing production rhs -> alternation
+State 32:
+Reducing production old_rule -> LID COLONCOLONEQUAL rhs
+["DEBUG:branches1"]
+State 38:
+Shifting (NEWLINE) to state 39
+State 39:
+Lookahead token is now EOF (146-146)
+Initiating error handling
+Fatal error: exception Gbnf_parser.SentenceParser.MenhirBasics.Error

@@ -1,0 +1,37 @@
+root ::= "\n"? "has_entities: " ("false\n" | "true\nentities:\n" (entity)+) "```\n"
+
+entity ::= ws2 "- entity" n3 ":" linebreak1 "id: " eid linebreak1 "name: " name linebreak1 ("type: " type linebreak1)? "has_parameters: " ("false\n" | "true" linebreak1 "parameters:\n" (parameter)+)
+
+parameter ::= ws2 ws4 ws2 "- parameter" n3 ":" linebreak2 "id: " pid linebreak2 "name: " name linebreak2 "has_values: " ("false\n" | "true" linebreak2 "values:\n" (value)+)
+
+value ::= ws2 ws4 ws2 ws4 ws2 "- value" n3 ":" linebreak3 "value_id: " vid linebreak3 "value: " name linebreak3 "context: " ("null\n" | name ) linebreak3 "context_id: " ("null\n" | cid "\n" )
+
+type ::= ("dataset" | "model" | "method" | "loss function" | "regularization technique")
+
+linebreak1 ::= "\n" ws2 ws4
+
+linebreak2 ::= "\n" ws2 ws4 ws2 ws4
+
+linebreak3 ::= "\n" ws2 ws4 ws2 ws4 ws2 ws4
+
+word ::= [^ \n\t"]+
+
+words ::= word (ws word)* 
+
+name ::= ["] words ["]
+
+ws ::= [ ]+
+
+ws2 ::= "  "
+
+ws4 ::= "    "
+
+eid ::= "a" n3
+
+pid ::= "p" n3
+
+vid ::= "v" n3
+
+cid ::= "c" n3
+
+n3 ::= [1-9][0-9]?[0-9]?

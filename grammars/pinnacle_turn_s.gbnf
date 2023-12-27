@@ -1,0 +1,15 @@
+# The root rule defines the overall structure of the dialog
+root ::= (  content "\n" )
+
+# This allows for up to four sentences in a response, with an emote.
+content ::= statement sentence? sentence? emote? sentence?
+
+# A sentence is either a statement or a question
+sentence ::= ws (statement | question)
+statement ::= word (ws word)+ "."
+question ::= word (ws word)+ "?"
+emote ::= "*" word (ws word)+ "*"
+
+# Our base types
+word ::= [A-Za-z]+
+ws ::= [ ,]+

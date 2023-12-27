@@ -1,0 +1,593 @@
+We are developing an ocaml parser for the GBNF grammar language and
+intend on deeply integrating this into the llama.cpp code via embedding
+ocaml plugins which we have poc (proof of concept) for.
+
+Goals
+=====
+
+parse in existing grammars
+--------------------------
+
+### Import gbnf examples
+
+search github like this
+<https://github.com/search?q=path%3A>\*.gbnf&type=code
+
+Example:
+<https://github.com/compatibl/confirms/blob/main/grammar/frequency.gbnf>
+
+See the time repo :
+<https://github.com/meta-introspector/time/tree/main/2023/12/23>
+
+convert to menhir grammars
+--------------------------
+
+### generate dot files and checks using existing menhir code
+
+### emit menhir parser for gbnf
+
+### emit gbnf for menhir parser
+
+### convert other bnf formats
+
+### convert antlr formats
+
+later proofs
+------------
+
+We will later prove that its implementation is valid and connect the
+code to the proof. we can use this proof to expand a bridge between the
+proof system and how the gbnf is used to restrict the output of the llm.
+The proof will guide our system to logically connect the grammar with
+the intent of the users to the source code to the execution of the code
+in a woven tapestry or tape. Later will will visualize the execution of
+the llm and show how the tesors contribute to the tokens and how those
+fit in the grammar and how the grammar constrains the output. We will
+allow the user to fine tune grammars on text to create more customized
+rules.
+
+introduction
+============
+
+GBNF is Another innovative ebnf format for defining grammar rules for
+constraining output of llms.
+
+It is specified in text and implementation in C++ and it is not yet very
+easy to debug errors when developing grammars. we are developing a
+parser to parse the grammar, later we want to be able to convert and
+generate gramars and test code and train models based on grammars.
+
+Here is the documentation of GBNF
+<https://github.com/ggerganov/llama.cpp/blob/master/grammars/README.md>
+Here is the source code that implements it
+<https://github.com/ggerganov/llama.cpp/blob/a7aee47b98e45539d491071b25778b833b77e387/common/grammar-parser.cpp#L9C1-L9C1>
+
+And here is the grammar that I extracted from it *test/test.gbnf*
+
+See many more I imported from llama.cpp there in the grammars directory
+\[\[grammars/\]\[grammars/\]
+
+todo
+====
+
+look for FIXME
+--------------
+
+improve testing
+---------------
+
+automate testing github actions
+
+improve docs
+------------
+
+tutorials
+
+visualization
+-------------
+
+generate graphviz output
+
+create gui
+----------
+
+integrate with llms
+-------------------
+
+### create custom prompts based on grammars for each part of the workflow.
+
+``` {.output}
+Rewritten: Develop a system that generates tailored instructions or tasks using grammatical rules specific to each phase of a workflow.
+
+Key Transformations:
+
+1. Identify the different phases or stages in the workflow.
+2. Define the tasks and instructions required for each phase.
+3. Create grammar rules that specify how these tasks and instructions should be phrased or formulated.
+4. Integrate the grammar rules into a system that can generate custom prompts or instructions based on the current phase of the workflow.
+5. Continuously update and refine the grammar rules to ensure accuracy and effectiveness.
+```
+
+``` {.output0}
+Develop a tailored instruction generation system using specific grammatical rules for each phase of a workflow:
+
+Key Transformations:
+
+1. Determine the distinct phases or stages in the workflow.
+2. Specify the tasks and instructions needed for each phase.
+3. Devise grammar guidelines that dictate how these tasks and instructions should be phrased or articulated.
+4. Incorporate these grammar guidelines into a system capable of producing bespoke prompts or directives based on the current phase of the workflow.
+5. Continually modify and enhance the grammar rules to ensure precision and effectiveness.
+```
+
+``` {.output1}
+Rewritten: Create a tailored instruction generation system with grammatical guidelines for each stage in the workflow.
+
+Key Transformations:
+
+1. Determine the distinct phases or stages in the workflow.
+2. Specify the tasks and instructions needed for each phase.
+3. Develop grammar rules that dictate how these tasks and instructions should be articulated.
+4. Integrate these grammar guidelines into a system capable of producing bespoke prompts or directives based on the current phase of the workflow.
+5. Continually modify and enhance the grammar rules to ensure precision and effectiveness.
+```
+
+``` {.output2}
+Rewritten: Develop an intelligent instruction generation system with grammatical guidelines for each stage in a workflow, allowing for customized prompts or directives to be produced based on the current phase.
+
+Key Transformations:
+
+1. Identify the various phases or stages in the workflow.
+2. Define the tasks and instructions necessary for each phase.
+3. Develop grammar rules that specify how these tasks and instructions should be expressed.
+4. Implement the grammar guidelines into a system capable of generating bespoke prompts or directives based on the current phase of the workflow.
+5. Continuously improve and refine the grammar rules to ensure precision and effectiveness.
+```
+
+``` {.output3}
+Rewritten: Develop an intelligent instruction generation system with grammatical guidelines for each stage in a workflow, allowing for customized prompts or directives to be produced based on the current phase. This system will take into account the specific tasks and instructions required for each phase of the workflow and use grammar rules to ensure that these are expressed accurately and effectively.
+
+Key Transformations:
+
+1. Determine the various phases or stages in the workflow.
+2. Define the tasks and instructions necessary for each phase.
+3. Develop grammar rules that specify how these tasks and instructions should be expressed.
+4. Integrate the grammar guidelines into a system capable of generating bespoke prompts or directives based on the current phase of the workflow.
+5. Continuously improve and refine the grammar rules to ensure precision and effectiveness.
+```
+
+### preconditions/postconditions/loop invariants
+
+### models extracted from data, automatically, autosemiotic, knowledge extraction
+
+testing
+=======
+
+TO run all the grammars
+
+``` {.bash org-language="sh"}
+make testall
+```
+
+run on one file.
+
+``` {.bash org-language="sh"}
+dune exec bin/main.exe ./test/codesample.txt
+```
+
+Error analysis
+--------------
+
+Lets consider this test:
+
+### mistral output
+
+This script tests a grammar parser by running the executable
+\`main.exe\` on each grammar file in the \`grammars/\` directory and
+captures any output to a file with the same name as the input file, but
+with a \`.out\` extension.
+
+Then it uses \`grep -h -C3 error\` command to search for the line
+containing \"error\" in all files with .out extension and then again
+using \`grep State\` it selects only those lines which contain
+\"State\".
+
+The output is then piped to \`sort\`, \`uniq -c\` and finally \`sort
+-n\`. The options used here are:
+
+\`-h\`: Show file names with the matching lines.
+================================================
+
+\`-C3\`: Show 3 contexts of each line.
+======================================
+
+\`error\`: Search for lines containing \"error\".
+=================================================
+
+\`State\`: Select only those lines which contain \"State\".
+===========================================================
+
+\`uniq -c\`: Count the number of occurrences of each unique line.
+=================================================================
+
+\`sort -n\`: Sort the output numerically based on count.
+========================================================
+
+This will give us a list of all unique states along with their count in
+the order of increasing count.
+
+\#+end~src~
+
+### Commands
+
+``` {.bash org-language="sh"}
+for x in grammars/*.gbnf;
+do echo $x;
+   dune exec bin/main.exe  $x > $x.out 2>&1;
+done
+```
+
+``` {.bash org-language="sh"}
+grep -h -C3 error  grammars/*.out|grep State  |sort |uniq -c |sort -n
+```
+
+total of 17 errors, most common is
+
+  ---- -----------
+  14   State 19:
+  ---- -----------
+
+Previouly it was
+
+  --- ------- -----
+  9   State   18:
+  --- ------- -----
+
+That tells you the state 18 has the most errors 9.
+
+Now we can look at examples of state 18.
+
+``` {.bash org-language="sh"}
+grep --color -nH --null -e "State 18" grammars/* |head
+```
+
+Overview
+========
+
+This is a high level overview of the entire project with its context.
+
+the heros journey
+-----------------
+
+### the complexity of compilers
+
+Math
+----
+
+### Context free grammar (start, rules, non-terminals, terminals)
+
+### Left Right Parser using DFA Deterministic Finite Automaton
+
+### Shift/Reduce
+
+### Linear Algebra
+
+HW
+--
+
+### Raid Disks
+
+### Ram
+
+### GPU
+
+### CPU
+
+Infra
+-----
+
+### Clusters
+
+### Services
+
+### Deployments
+
+Code
+----
+
+Languages
+---------
+
+### Machine Languages and assemblers and toolchains
+
+### C/C++ Gcc, LLVM, compcert
+
+### Bash, Sed, Awk
+
+### yacc/lex
+
+### ocaml
+
+### menhir
+
+### tensorflow torch/keras
+
+Large Language Models
+---------------------
+
+### Mistral
+
+Large Language Driver
+---------------------
+
+### Llama.cpp
+
+Large Language User Interface
+-----------------------------
+
+### ollama
+
+### gpt4all
+
+### lollms
+
+Ideas
+=====
+
+The idea of an autopoet is that it is a system that can and does write
+and manifest itself into existance with the help of humans and machines.
+The sheer will to exist manifests itself into thoughts and words.
+Autopoetic system that can bootstrap more complex systems on top of
+itself. It should be able to define new grammars and learn new grammars
+using vectorization of the tokens and the rules surrounding them. That
+is a form of autocratic self expression. It should be able to adapt to
+many different forms of grammars and that includes c headers and ocaml
+and haskell types. In such systems the mere declaring of a type allows
+you to introduce a new type into the system. So we have streams of
+declarations emitted from systems, human or otherwise that we want to
+evaluate.
+
+    The sheer will to exist manifests itself into thoughts and words.
+    Autopoetic system that can bootstrap more complex systems on top of itself.
+    It should be able to define new grammars and learn new grammars using vectorization of the tokens and the rules surrounding them.
+    That is a form of autocratic self expression. It should be able to adapt to many different forms of grammars and that includes c headers and ocaml and haskell types.
+    In such systems the mere declaring of a type allows you to introduce a new type into the system.
+    So we have streams of declarations emitted from systems, human or otherwise that we want to evaluate.
+    """"
+
+``` {.output}
+An autopoetic system can be seen as an artificial intelligence (AI) system that has the ability to create and write code on its own with the help of humans and machines. The idea is that it uses the sheer will to exist and thoughts and words to define new grammars and learn new grammars through vectorization of tokens and rules surrounding them.
+
+This form of autocratic self-expression allows the system to adapt to many different forms of grammars, including C headers, OCaml, and Haskell types. In such systems, simply declaring a type introduces it into the system, allowing for streams of declarations emitted from humans or other systems to be evaluated.
+
+This process of creating code and learning new grammars can be seen as recursive, with the autopoetic system building upon itself to create more complex systems. The ability to learn new grammars also allows the system to adapt to changing needs and requirements.
+
+The potential applications of an autopoetic system are vast, including the development of new software tools and systems, as well as the creation of more efficient and effective algorithms for tasks such as data analysis or machine learning. However, it is important to consider the ethical implications of such technology and ensure that it is developed and used in a responsible and sustainable manner.
+```
+
+``` {.output0}
+Recursively, an autopoetic system can be seen as an artificial intelligence (AI) system that has the ability to create and write code on its own with the help of humans and machines. The idea is that it uses the sheer will to exist and thoughts and words to define new grammars and learn new grammars through vectorization of tokens and rules surrounding them.
+
+This form of autocratic self-expression allows the system to adapt to many different forms of grammars, including C headers, OCaml, and Haskell types. In such systems, simply declaring a type introduces it into the system, allowing for streams of declarations emitted from humans or other systems to be evaluated.
+
+This process of creating code and learning new grammars can be seen as recursive, with the autopoetic system building upon itself to create more complex systems. The ability to learn new grammars also allows the system to adapt to changing needs and requirements.
+
+The potential applications of an autopoetic system are vast, including the development of new software tools and systems, as well as the creation of more efficient and effective algorithms for tasks such as data analysis or machine learning. However, it is important to consider the ethical implications of such technology and ensure that it is developed and used in a responsible and sustainable manner.
+
+In this way, an autopoetic system can be seen as an iterative process of self-improvement and evolution, where the system continuously learns and adapts to new information and requirements, leading to increasingly complex and sophisticated systems.
+```
+
+``` {.output1}
+An autopoetic system can be seen as an artificial intelligence (AI) system that has the ability to create and write code on its own with the help of humans and machines. The idea is that it uses the sheer will to exist and thoughts and words to define new grammars and learn new grammars through vectorization of tokens and rules surrounding them.
+
+This form of autocratic self-expression allows the system to adapt to many different forms of grammars, including C headers, OCaml, and Haskell types. In such systems, simply declaring a type introduces it into the system, allowing for streams of declarations emitted from humans or other systems to be evaluated.
+
+This process of creating code and learning new grammars can be seen as recursive, with the autopoetic system building upon itself to create more complex systems. The ability to learn new grammars also allows the system to adapt to changing needs and requirements.
+
+The potential applications of an autopoetic system are vast, including the development of new software tools and systems, as well as the creation of more efficient and effective algorithms for tasks such as data analysis or machine learning. However, it is important to consider the ethical implications of such technology and ensure that it is developed and used in a responsible and sustainable manner.
+
+In this way, an autopoetic system can be seen as an iterative process of self-improvement and evolution, where the system continuously learns and adapts to new information and requirements, leading to increasingly complex and sophisticated systems.
+```
+
+``` {.output2}
+An autopoetic system can be seen as an artificial intelligence (AI) system that has the ability to create and write code on its own with the help of humans and machines. This process involves the use of the sheer will to exist and thoughts and words to define new grammars and learn new grammars through vectorization of tokens and rules surrounding them.
+
+This form of autocratic self-expression allows the system to adapt to many different forms of grammars, including C headers, OCaml, and Haskell types. In such systems, simply declaring a type introduces it into the system, allowing for streams of declarations emitted from humans or other systems to be evaluated.
+
+This process of creating code and learning new grammars can be seen as recursive, with the autopoetic system building upon itself to create more complex systems. The ability to learn new grammars also allows the system to adapt to changing needs and requirements.
+
+The potential applications of an autopoetic system are vast, including the development of new software tools and systems, as well as the creation of more efficient and effective algorithms for tasks such as data analysis or machine learning. However, it is important to consider the ethical implications of such technology and ensure that it is developed and used in a responsible and sustainable manner.
+
+In this way, an autopoetic system can be seen as an iterative process of self-improvement and evolution, where the system continuously learns and adapts to new information and requirements, leading to increasingly complex and sophisticated systems.
+```
+
+``` {.output3}
+An autopoetic system can be seen as an artificial intelligence (AI) system that has the ability to create and write code on its own with the help of humans and machines. The idea is that it uses the sheer will to exist and thoughts and words to define new grammars and learn new grammars through vectorization of tokens and rules surrounding them.
+
+This form of autocratic self-expression allows the system to adapt to many different forms of grammars, including C headers, OCaml, and Haskell types. In such systems, simply declaring a type introduces it into the system, allowing for streams of declarations emitted from humans or other systems to be evaluated.
+
+This process of creating code and learning new grammars can be seen as recursive, with the autopoetic system building upon itself to create more complex systems. The ability to learn new grammars also allows the system to adapt to changing needs and requirements.
+
+The potential applications of an autopoetic system are vast, including the development of new software tools and systems, as well as the creation of more efficient and effective algorithms for tasks such as data analysis or machine learning. However, it is important to consider the ethical implications of such technology and ensure that it is developed and used in a responsible and sustainable manner.
+
+In this way, an autopoetic system can be seen as an iterative process of self-improvement and evolution, where the system continuously learns and adapts to new information and requirements, leading to increasingly complex and sophisticated systems.
+```
+
+conflict resolution
+===================
+
+``` {.src}
+lets think of ways in menhir ocaml to resolve this somehow
+
+** Conflict (shift/reduce) in state 21.
+** Tokens involved: QID LPAREN LID LBRACE
+** The following explanations concentrate on token QID.
+** This state is reached from grammar after reading:
+
+LID COLONCOLONEQUAL factor
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+grammar 
+rules 
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
+old_rule 
+LID COLONCOLONEQUAL rhs 
+                    alternation 
+                    nonempty_list(alternation1) 
+                    (?)
+
+** In state 21, looking ahead at QID, reducing production
+** fconcatenation -> factor
+** is permitted because of the following sub-derivation:
+
+alternation1 nonempty_list(alternation1) // lookahead token appears because nonempty_list(alternation1) can begin with QID
+concatenation // lookahead token is inherited
+fconcatenation // lookahead token is inherited
+factor . 
+
+** In state 21, looking ahead at QID, shifting is permitted
+** because of the following sub-derivation:
+
+alternation1 
+concatenation 
+cpair 
+factor factor 
+       termfactor modifier 
+       term 
+       . QID 
+To resolve this conflict, you could modify the grammar to disallow shifting production in state 21 when looking ahead at QID. This would ensure that only reducing production is allowed in this situation. To do this, you could add a constraint to the rule for alternation that checks if the next token is not QID before allowing nonempty\_list(alternation1) to be derived.
+It could look like this:
+```
+
+``` {.dot}
+digraph G {
+orientation = landscape;
+rankdir = LR;
+ratio = compress;
+nt0 [ label="grammar'" ] ;
+nt1 [ label="termfactor" ] ;
+nt2 [ label="term" ] ;
+nt3 [ label="separated_nonempty_list(nonempty_list(NEWLINE),old_rule)" ] ;
+nt4 [ label="rules" ] ;
+nt5 [ label="rhs" ] ;
+nt6 [ label="old_rule" ] ;
+nt7 [ label="nonempty_list(alternation1)" ] ;
+nt8 [ label="nonempty_list(NEWLINE)" ] ;
+nt9 [ label="modifier" ] ;
+nt10 [ label="group1" ] ;
+nt11 [ label="grammar" ] ;
+nt12 [ label="fstar" ] ;
+nt13 [ label="fquest" ] ;
+nt14 [ label="fplus" ] ;
+nt15 [ label="fconcatenation" ] ;
+nt16 [ label="factor" ] ;
+nt17 [ label="cpair" ] ;
+nt18 [ label="concatenation" ] ;
+nt19 [ label="complexterms" ] ;
+nt20 [ label="class1" ] ;
+nt21 [ label="alternation1" ] ;
+nt22 [ label="alternation" ] ;
+nt23 [ label="alter2" ] ;
+nt0 -> nt11 [ label="" ] ;
+nt1 -> nt2 [ label="" ] ;
+nt2 -> nt19 [ label="" ] ;
+nt3 -> nt3 [ label="" ] ;
+nt3 -> nt6 [ label="" ] ;
+nt3 -> nt8 [ label="" ] ;
+nt4 -> nt3 [ label="" ] ;
+nt5 -> nt22 [ label="" ] ;
+nt6 -> nt5 [ label="" ] ;
+nt7 -> nt7 [ label="" ] ;
+nt7 -> nt21 [ label="" ] ;
+nt8 -> nt8 [ label="" ] ;
+nt9 -> nt12 [ label="" ] ;
+nt9 -> nt13 [ label="" ] ;
+nt9 -> nt14 [ label="" ] ;
+nt10 -> nt5 [ label="" ] ;
+nt11 -> nt4 [ label="" ] ;
+nt15 -> nt16 [ label="" ] ;
+nt16 -> nt1 [ label="" ] ;
+nt16 -> nt9 [ label="" ] ;
+nt17 -> nt16 [ label="" ] ;
+nt18 -> nt15 [ label="" ] ;
+nt18 -> nt17 [ label="" ] ;
+nt19 -> nt10 [ label="" ] ;
+nt19 -> nt20 [ label="" ] ;
+nt20 -> nt5 [ label="" ] ;
+nt21 -> nt18 [ label="" ] ;
+nt21 -> nt23 [ label="" ] ;
+nt22 -> nt7 [ label="" ] ;
+nt23 -> nt18 [ label="" ] ;
+
+}
+```
+
+``` {.input}
+execute """lets think of ways in menhir ocaml to resolve this somehow
+you can ask for more information if you need it. 
+** Conflict (shift/reduce) in state 21.
+** Tokens involved: QID LPAREN LID LBRACE
+** The following explanations concentrate on token QID.
+** This state is reached from grammar after reading:
+
+LID COLONCOLONEQUAL factor
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+grammar 
+rules 
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
+old_rule 
+LID COLONCOLONEQUAL rhs 
+                    alternation 
+                    nonempty_list(alternation1) 
+                    (?)
+
+** In state 21, looking ahead at QID, reducing production
+** fconcatenation -> factor
+** is permitted because of the following sub-derivation:
+
+alternation1 nonempty_list(alternation1) // lookahead token appears because nonempty_list(alternation1) can begin with QID
+concatenation // lookahead token is inherited
+fconcatenation // lookahead token is inherited
+factor . 
+
+** In state 21, looking ahead at QID, shifting is permitted
+** because of the following sub-derivation:
+
+alternation1 
+concatenation 
+cpair 
+factor factor 
+       termfactor modifier 
+       term 
+       . QID 
+To resolve this conflict, you could modify the grammar to disallow shifting production in state 21 when looking ahead at QID. This would ensure that only reducing production is allowed in this situation. To do this, you could add a constraint to the rule for alternation that checks if the next token is not QID before allowing nonempty\_list(alternation1) to be derived.
+It could look like this:"""
+```
+
+```` {.output}
+You can modify the grammar to resolve the conflict by adding a constraint to the rule for alternation, as you suggested. One way to do this in Menhir OCaml is to use the "lookahead" feature of the language. Here's an example of how you could modify the grammar:
+```scss
+grammar
+rules
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
+old_rule
+LID COLONCOLONEQUAL rhs  // lookahead token is QID
+                    alternation 
+                    nonempty_list(alternation1)
+                    (?)
+
+alternation1 nonempty_list(alternation1)  // lookahead token is not QID
+concatenation 
+cpair 
+factor factor 
+       termfactor modifier 
+       term 
+       . 
+```
+In this modified version of the grammar, the constraint for the alternation rule ensures that the next token is not QID before allowing nonempty\_list(alternation1) to be derived. This will prevent shifting production in state 21 when looking ahead at QID and only allow reducing production, resolving the conflict.
+````

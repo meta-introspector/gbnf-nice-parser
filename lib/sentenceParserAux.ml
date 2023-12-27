@@ -76,3 +76,14 @@ let or_comment_count accu = function
 
 let count_things (xs : 'a or_comment list) =
   List.fold_left or_comment_count 0 xs
+
+let inject (e)  =
+  Positions.pmap (fun pos e ->
+    let branch =
+      Syntax.Branch (
+          Positions.with_pos pos (Syntax.ESingleton e),
+          ParserAux.new_production_level()
+      )
+    in
+    Syntax.EChoice [ branch ]
+  ) e

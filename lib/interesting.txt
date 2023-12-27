@@ -1,0 +1,59 @@
+```lua
+grammar:
+    separated_nonempty_list(old_rule) -> old_rule | (separated_nonempty_list(new_rule) old_rule)
+    new_rule -> LID COLONCOLONEQUAL rhs
+    old_rule -> alternation | nonempty_list(alternation)
+    alternation -> alternation1 nonempty_list(alternation1) | alternation1 alternation1
+    alternation1 -> QID LPAREN LID LBRACE
+    nonempty_list -> alternation | nonempty_list1 nonempty_list2
+    nonempty_list1 -> LID COLONCOLONEQUAL rhs
+    nonempty_list2 -> alternation | nonempty_list3 nonempty_list4
+    alternation -> term QUESTION .
+    alternation1 -> term QUESTION . QID
+    alternation2 -> term QUESTION . LPAREN LID LBRACE
+    alternation3 -> term QUESTION . LPAREN LID RPAREN
+    nonempty_list4 -> term QUESTION . LPAREN LID COMMA LPAREN LID RPAREN
+    term -> QID | QUESTION
+```
+In this grammar, `separated_nonempty_list` is the starting rule and it can be either `old_rule` or a combination of `new_rule` and `old_rule`. `new_rule` has two alternatives: `alternation` or `nonempty_list(alternation)`.
+
+`alternation` consists of two parts: `alternation1` and a non-terminating sequence of `alternation1`, separated by the symbol `BAR`. `alternation1` starts with `QID LPAREN LID LBRACE` and can be followed by zero or more occurrences of `nonempty_list(alternation1)`. The following is an example derivation:
+```markdown
+alternation -> alternation1 nonempty_list(alternation1)
+  -> QID LPAREN LID LBRACE nonempty_list(alternation1)
+  -> QID LPAREN LID LBRACE alternation1 nonempty_list(alternation1)
+  -> QID LPAREN LID LBRACE alternation1 BAR alternation1
+  -> QID LPAREN LID LBRACE alternation1 BAR alternation1 BAR alternation1
+```
+The symbol `BAR` is used to represent a sequence of non-terminating alternatives, as in this case where `alternation1` can be followed by zero or more occurrences of itself.
+
+`nonempty_list` can also contain an `alternation` and can be followed by `term QUESTION .`. For example:
+```markdown
+nonempty_list -> alternation | nonempty_list1 nonempty_list2
+  -> term QUESTION . QID LPAREN LID LBRACE term QUESTION .
+```
+In this case, `nonempty_list` consists of two parts: a `term QUESTION .` followed by an `alternation1 nonempty_list(alternation1)`.
+
+The output provided shows that in state 17, there is a conflict (shift/reduce) between the symbols `QID`, `LPAREN`, and `LID`. In particular, there are several possible derivations of the symbol `QID` that lead to conflicting rules. The following diagram illustrates these derivations:
+```plantuml
+digram LID COLONCOLONEQUAL {QID}
+@startuml
+state 17 { [QID] }
+-> state 18 { [LPAREN] }
+-> state 20 { [LID] }
+-> state 19 { [LBRACE] }
+@enduml
+```
+The diagram shows that there are three possible paths to reach state 17:
+
+* Path 1: `LID COLONCOLONEQUAL factor` -> `factor` (shift)
+* Path 2: `separated_nonempty_list(old_rule)` -> `new_rule` (shift)
+* Path 3: `separated_nonempty_list(new_rule) old_rule` -> `old_rule` (reduce)
+
+The output also mentions that the derivations of `QID` differ at the point where the derivation begins to differ. This is because there are two possible derivations of `alternation1`, each with a different lookahead token:
+```lua
+alternation1 -> QID LPAREN LID LBRACE | alternation1 BAR nonempty_list(alternation1)
+               // lookahead token appears because nonempty_list(alternation1) can begin with QID
+concatenation // lookahead token is inherited
+nonempty_list(factor) // lookahead token is inherited
+```

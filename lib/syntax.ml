@@ -195,9 +195,15 @@ and parameterized_branch =
     {
       pr_branch_position           : Positions.t;
       pr_producers                 : producer list;
+<<<<<<< HEAD
       pr_action                    : action;
       pr_branch_prec_annotation    : branch_prec_annotation;
       pr_branch_production_level   : branch_production_level
+=======
+      (* pr_action                    : action; *)
+      (* pr_branch_prec_annotation    : branch_prec_annotation; *)
+      (* pr_branch_production_level   : branch_production_level *)
+>>>>>>> feature/parser
     }
 
 (* ------------------------------------------------------------------------ *)
@@ -206,13 +212,13 @@ and parameterized_branch =
 
 type parameterized_rule =
     {
-      pr_public_flag       : bool;
-      pr_inline_flag       : bool;
+      (* pr_public_flag       : bool; *)
+      (* pr_inline_flag       : bool; *)
       pr_nt                : nonterminal;
       pr_positions         : Positions.t list;
-      pr_attributes        : attributes;
-      pr_parameters        : symbol list;
-      pr_branches          : parameterized_branch list;
+      (* pr_attributes        : attributes; *)
+      (* pr_parameters        : symbol list; *)
+      pr_branches           : parameterized_branch list;
     }
 
 (* ------------------------------------------------------------------------ *)
@@ -235,7 +241,7 @@ type pattern =
   (* Patterns: as in the manual. *)
 
 type raw_action =
-  Settings.dollars -> identifier option array -> action
+  identifier option array -> action
   (* Ugly type produced by the lexer for an ACTION token. *)
 
 type expression =
@@ -279,7 +285,7 @@ type rule =
     rule_public: bool;
     rule_inline: bool;
     rule_lhs: symbol located;
-    rule_attributes: attributes;
+    (* rule_attributes: attributes; *)
     rule_formals: symbol located list;
     rule_rhs: expression;
   }
@@ -334,9 +340,9 @@ type declaration =
 type partial_grammar =
     {
       pg_filename          : filename;
-      pg_postlude          : postlude option;
-      pg_declarations      : declaration located list;
-      pg_rules             : parameterized_rule list;
+      (* pg_postlude          : postlude option; *)
+      (* pg_declarations      : declaration located list; *)
+       pg_rules             : parameterized_rule list; 
     }
 
 (* ------------------------------------------------------------------------ *)

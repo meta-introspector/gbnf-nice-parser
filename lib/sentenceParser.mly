@@ -11,134 +11,303 @@
 /*                                                                            */
 /******************************************************************************/
 
-/* This is two parsers in one. */
+/*  Copyright 2023 James Michael Dupont */
+/*  
+Starting with the menhir sentence parser, replacing with stage2 parser, adding in wikipedias DFA and parts of bnfgen
+ https://github.com/dmbaturin/bnfgen
+and ocaml code itself ocaml/lex/parser.mly 
+attempt to parse the gbnf.
+ */
+/*
+grammar
+  rules:
+    old_rule: lid ::= rhs
+    rsa alt concat
 
-/* This parser is used to read the sentences provided on the standard input
-   channel when [--interpret] is set. The entry point is [optional_sentence]. */
 
-/* It is used also to read a [.messages] file. The entry point is [entry]. */
-
-/* This parser must be compatible with both ocamlyacc and menhir, so we use
-   $ notation, do not use Menhir's standard library, and collect positions
-   manually. */
-
-/* ------------------------------------------------------------------------ */
-/* Tokens. COLON EQUALS*/
-
-%token  COLONCOLONEQUALS EOF EOL
-%token LBRACE RBRACE
-%token <string> IDENT
-%token LCURLY RCURLY
-%token PIPE GT LT MINUS
-%token LPAREN RPAREN COMMA DOT NULL 
-%token<SentenceParserAux.raw_symbol> TERMINAL
-%token<SentenceParserAux.raw_symbol> NONTERMINAL
-%token<string> COMMENT
-  /* only manually-written comments, beginning with a single # */
-
-/* ------------------------------------------------------------------------ */
-/* Types. */
+*/
+/* ------------------------------------------------------------------------- */
+/* Imports. */
 
 %{
 
-  open SentenceParserAux
+open Stretch
+open Syntax
 
-  (* Computing the start and end positions of a sentence. *)
 
-  let locate_sentence (nto, terminals) =
-    let opening =
-      match nto, terminals with
-      | Some (_, opening, _), _
-      | None, (_, opening, _) :: _ ->
-          opening
-      | None, [] ->
-          Lexing.dummy_pos (* cannot happen *)
-    and closing =
-      match nto, List.rev terminals with
-      | _, (_, _, closing) :: _
-      | Some (_, _, closing), _ ->
-          closing
-      | None, [] ->
-          Lexing.dummy_pos (* cannot happen *)
-    in
-    [Positions.import (opening, closing)],
-    (nto, terminals)
+let rec find s n i =
+  assert (i < n);
+  if s.[i] = '(' then i
+  else begin
+    assert (s.[i] = ' ');
+    find s n (i+1)
+  end
+
+let unparenthesize (s : string) : string =
+  let n = String.length s in
+  (* The string [s] must end with a closing parenthesis. *)
+  assert (n >= 2 && s.[n-1] = ')');
+  (* The string [s] must begin with a certain amount of spaces
+     followed with an opening parenthesis. Find its offset [i]. *)
+  let i = find s n 0 in
+  (* Create a copy without the parentheses. *)
+  let b = Bytes.of_string s in
+  Bytes.set b i ' ';
+  Bytes.set b (n-1) ' ';
+  Bytes.to_string b
+
+
 
 %}
 
-%type <raw_sentence> sentence
+/* ------------------------------------------------------------------------- */
+/* Tokens. */
 
-%type <located_raw_sentence> located_sentence
+%token <int> Tchar
+%token DASH "-"
+%token CARET "^"
+%token
+  BAR              "|"
+  EOF              ""
+  LPAREN           "("
+  RPAREN           ")" 
+  COMMA            ","
+  QUESTION         "?"
+  STAR             "*"
+  PLUS             "+"
+NEWLINE
 
-%type <SentenceParserAux.raw_sentence option> optional_sentence
+%token <string Positions.located>
+   LID              "lident"
+   REGEX            "regex"
+   SUBGROUP            "subgroup"
+   QID              "\"alias\""
 
-%type<SentenceParserAux.located_raw_sentence SentenceParserAux.or_comment list> entry
+/* For the new rule syntax: */
+%token
+   COLONCOLONEQUAL  "::="
 
-%start optional_sentence
-%start entry
+(* %type <ParserAux.early_producer> producer *)
+(* %type <ParserAux.early_production> production *)
+%start <Syntax.partial_grammar> grammar
+
+
 
 %%
 
-/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------- */
+/* A grammar consists of  rules 
+taken from https://github.com/dmbaturin/bnfgen
+*/
+rules:
+separated_nonempty_list(NEWLINE+, old_rule)  {
+			 (print_endline (Batteries.dump ("DEBUG:OLDRULE",$1)))
+		       } 
 
-/* An entry is a list of located sentences or comments. */
-entry: located_sentences_or_comments EOF
-  { $1 }
 
-/* A list of located sentences or comments. */
-located_sentences_or_comments:
-  { [] }
-| located_sentence located_sentences_or_comments { Thing   $1 :: $2 }
-| COMMENT          located_sentences_or_comments { Comment $1 :: $2 }
+grammar:
+  rs =  NEWLINE* rules NEWLINE* postlude
+    {
+      (print_endline (Batteries.dump ("DEBUG:rs",rs)));
+      {
+        pg_filename          = ""; (* filled in by the caller *)
+        pg_rules             = [];
+      }
+    }
 
-/* A located sentence. */
-located_sentence: sentence
-    { (print_endline (Batteries.dump ("sentence", $1)));
-      locate_sentence $1 }
+/* rule_specific_token: */
+/* | COLON */
+/* | EOF */
+/*     { () } */
 
-/* An optional sentence. */
-optional_sentence:
-| EOF
+
+ clist(X):
+  xs = separated_nonempty_list(COMMA?, X)
+    { xs }
+
+
+/* symbol: */
+/* id = LID */
+/*     { */
+/*       (print_endline (Batteries.dump ("DEBUG:LID", id))); */
+/*       id } */
+/*   | id = QID */
+/*     { */
+/*       (print_endline (Batteries.dump ("DEBUG:QID", id))); */
+/*       id } */
+
+old_rule:
+symbol = LID
+/* the symbol that is being defined */
+COLONCOLONEQUAL
+branches = rhs(* separated_nonempty_list(BAR, symbol+) *)
+    {
+      (print_endline (Batteries.dump ("DEBUG:branches1", branches)));
+      {
+        pr_nt          = Positions.value symbol;
+        pr_positions   = [ Positions.position symbol ];
+        pr_branches    =  [] (*Fixme should be brancheS*)
+      }
+    }
+
+
+
+postlude:
+  EOF
     { None }
-| sentence
-    {
-      (print_endline (Batteries.dump  ("optional_sentence" , $1)));
-      Some $1 }
 
-/* A sentence is a pair of an optional non-terminal start symbol and a list
-   of terminal symbols. It is terminated by a newline. */
-production_groups:
-  /* epsilon */
+
+
+reversed_preceded_or_separated_nonempty_llist(delimiter, X):
+| ioption(delimiter) x = X
+    { [x] }
+| xs = reversed_preceded_or_separated_nonempty_llist(delimiter, X)
+  delimiter
+  x = X
+    { x :: xs }
+
+ preceded_or_separated_nonempty_llist(delimiter, X):
+  xs = rev(reversed_preceded_or_separated_nonempty_llist(delimiter, X))
+    { xs }
+
+preceded_or_separated_llist(delimiter, X):
+| (* empty *)
     { [] }
-| production_groups BAR production_group
-    { $3 :: $1 }
+| xs = preceded_or_separated_nonempty_llist(delimiter, X)
+    { xs }
 
-sentence:
-| NONTERMINAL COLONCOLONEQUALS terminals EOL
-    {
-      (print_endline (Batteries.dump ("nonterminal", $1)));
-      (print_endline (Batteries.dump ("terminals1" ,  $3)));
-      Some $1, $3
-    }
-| terminals EOL
-    { None, $1 }
 
-/* A list of terminal symbols. */
-terminals:
-|
-    { (print_endline "EMPTY"); []       }
-| TERMINAL terminals /* (Lexer.extract_string_from_terminal */
-    {
-      (print_endline "TERMINAL terminals");
-      (print_endline (Batteries.dump  ("terminal",$1)));      
-      (print_endline (Batteries.dump ("terminals2",$2) ));
-      []
-    }
-| IDENT terminals /*for quoted tokens*/
-    {
-      (print_endline "IDENT terminals");
-      (print_endline (Batteries.dump ("ident", $1)));
-      (print_endline (Batteries.dump ("terminals3", $2)));
-      [];
-    } 
-    /* { $1 :: $2 } */
+located(X):
+  x = X
+    { with_loc $loc x }
+
+%inline qid:
+  | QID {}
+%inline lid:
+  | LID {}
+
+%inline sterm:
+  | qid {}
+  | lid {}
+
+term:
+  | complexterms {} 
+  | sterm {}
+
+%inline  complexterms: 
+   | group1 {} 
+   | class1  {} 
+
+%inline  group1: 
+ | LPAREN NEWLINE* rhs  RPAREN {} 
+
+%inline class1: 
+/* | LBRACE char_class  RBRACE {} */
+  |  char_class   {}
+  |  REGEX {}
+
+%inline termfactor:
+  | term   {}
+
+factor:
+  | termfactor modifier {}
+  | termfactor  {}
+
+%inline modifier:
+  | fplus {}
+  | fquest {}
+  | fstar {}
+
+%inline fstar:
+  |  STAR {}
+%inline fquest:
+  |  QUESTION {}
+%inline fplus:
+  | PLUS {}
+
+concatenation:
+  | concatenation factor  {}
+  | factor {}
+
+alternation:
+  | alternation BAR NEWLINE* concatenation
+  | concatenation {}
+
+rhs:
+  | alternation {}
+
+
+
+
+/* ===EBNF=== */
+
+/* from wikipedia Even EBNF can be described using EBNF. Consider below grammar (using conventions such as "-" to indicate set disjunction, "+" to indicate one or more matches, and "?" for optionality): */
+
+/* <syntaxhighlight lang="ebnf"> */
+/* letter = "A" | "B" | "C" | "D" | "E" | "F" | "G" */
+
+/* digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ; */
+
+/* symbol = "[" | "]" | "{" | "}" | "(" | ")" | "<" | ">" */
+/*        | "'" | '"' | "=" | "|" | "." | "," | ";" | "-"  */
+/*        | "+" | "*" | "?" | "\n" | "\t" | "\r" | "\f" | "\b" ; */
+
+/* character = letter | digit | symbol | "_" | " " ; */
+/* identifier = letter , { letter | digit | "_" } ; */
+
+/* S = { " " | "\n" | "\t" | "\r" | "\f" | "\b" } ; */
+
+/* terminal = "'" , character - "'" , { character - "'" } , "'" */
+/*          | '"' , character - '"' , { character - '"' } , '"' ; */
+
+/* terminator = ";" | "." ; */
+
+/* term = "(" , S , rhs , S , ")" */
+/*      | "[" , S , rhs , S , "]" */
+/*      | "{" , S , rhs , S , "}" */
+/*      | terminal */
+/*      | identifier ; */
+
+/* factor = term , S , "?" */
+/*        | term , S , "*" */
+/*        | term , S , "+" */
+/*        | term , S , "-" , S , term */
+/*        | term , S ; */
+
+/* concatenation = ( S , factor , S , "," ? ) + ; */
+/* alternation = ( S , concatenation , S , "|" ? ) + ; */
+
+/* rhs = alternation ; */
+/* lhs = identifier ; */
+
+/* rule = lhs , S , "=" , S , rhs , S , terminator ; */
+
+/* grammar = ( S , rule , S ) * ; */
+
+/* </syntaxhighlight> */
+
+
+(* ocaml/lex/parser.mly *)
+char_class:
+    CARET char_class1
+    /* { Cset.complement $2 } */
+{   (print_endline (Batteries.dump ("DEBUG:rs",$2))) }
+  | char_class1
+    /* { $1 } */
+    {   (print_endline (Batteries.dump ("DEBUG:rs",$1))) }
+;
+char_class1:
+    Tchar DASH Tchar
+    /* { Cset.interval $1 $3 } */
+    {   (print_endline (Batteries.dump ("DEBUG:rs",$1,$2))) }
+  | char_class1 Tchar
+    /* Cset.singleton $1 */
+    {   (print_endline (Batteries.dump ("DEBUG:rs",$1))) }
+  | Tchar
+    /* Cset.singleton $1 */
+    {   (print_endline (Batteries.dump ("DEBUG:rs",$1))) }
+  /* | char_class1 char_class1  CONCAT */
+  /*       { Cset.union $1 $2 } */
+;
+
+%%

@@ -1,0 +1,114 @@
+root ::= exp
+
+ws ::= [ \t\n]+
+w ::= [ \t\n]*
+
+### Expressions
+
+exp ::= sequence-exp
+
+sequence-exp ::= tuple-exp (w ";" ws tuple-exp)*
+
+tuple-exp ::= cons-exp (w "," ws cons-exp)*
+
+cons-exp ::= binary-exp (w "::" w binary-exp)*
+
+binary-exp ::= unary-exp (ws binary-op ws unary-exp)*
+
+unary-exp ::= unary-op* function-app-exp
+
+function-app-exp ::= primary-exp (w "(" w exp w ")" w)*
+
+primary-exp ::= bool |
+    integer |
+    float |
+    string |
+    variable |
+    "()" |
+    "[]" |
+    "?" |
+    constructor |
+    constructor-app |
+    parenthesized-exp |
+    list-exp |
+    let-exp |
+    if-exp |
+    case-exp |
+    test-exp |
+    type-alias |
+    fun
+
+constructor-app ::= constructor "(" w exp w ")"
+parenthesized-exp ::= "(" w exp w ")"
+list-exp ::= "[" exp ("," ws exp)* "]"
+let-exp ::= "let" ws pat w (":" ws typ)? ws "=" ws exp ws "in" ws exp
+if-exp ::= "if" ws exp ws "then" ws exp ws "else" ws exp
+case-exp ::= "case" ws exp (ws "|" ws pat ws "=>" ws exp)+ ws "end"
+test-exp ::= "test" ws exp ws "end"
+type-alias ::= "type" ws type-variable ws "=" ws typ ws "in" ws exp
+fun ::= "fun" ws pat (w ":" ws typ)? ws "->" ws exp
+
+type-variable ::= [A-Z][A-Za-z0-9_]*
+constructor ::= [A-Z][A-Za-z0-9_]*
+variable ::= [a-z][A-Za-z0-9_]*
+bool ::= "true" | "false"
+integer ::= [0-9]+
+float ::= [0-9]* "." [0-9]+
+string ::= "\"" [^"]* "\""
+
+unary-op ::= "-" | "!"
+binary-op-int ::= "+" | "-" | "*" | "/" | "<" | ">" | "<=" | ">=" | "==" | "!="
+binary-op-float ::= "+." | "-." | "*." | "/." | "<." | ">." | "<=." | ">=." | "==." | "!=."
+binary-op-string ::= "$==" | "@"
+binary-op ::= binary-op-int | binary-op-float | binary-op-string
+
+### Patterns
+
+pat ::= type-ascription-pat
+
+type-ascription-pat ::= tuple-pat (w ":" ws typ)*
+
+tuple-pat ::= cons-pat (w "," ws cons-pat)*
+
+cons-pat ::= primary-pat (w "::" w primary-pat)*
+
+primary-pat ::=  bool |
+    integer |
+    float |
+    string |
+    variable |
+    "()" |
+    "[]" |
+    "?" |
+    "_" |
+    constructor |
+    constructor-app-pat |
+    parenthesized-pat |
+    list-pat
+
+constructor-app-pat ::= constructor "(" w pat w ")"
+parenthesized-pat ::= "(" w pat w ")"
+list-pat ::= "[" pat (w "," ws pat)* "]"
+
+### Types
+
+typ ::= arrow-typ
+
+arrow-typ ::= tuple-typ (ws "->" ws tuple-typ)*
+
+tuple-typ ::= primary-typ (w "," ws primary-typ)*
+
+primary-typ ::=  "Unit" |
+    "Int" |
+    "Float" |
+    "Bool" |
+    "String" |
+    type-variable |
+    constructor-def (ws "+" ws constructor-def)+ |
+    "?" |
+    parenthesized-typ |
+    list-typ
+
+parenthesized-typ ::= "(" w typ w ")"
+list-typ ::= "[" w typ w "]"
+constructor-def ::= constructor | constructor "(" w typ w ")"

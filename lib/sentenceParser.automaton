@@ -2,302 +2,526 @@ State 0:
 ## Known stack suffix:
 ##
 ## LR(1) items:
-entry' -> . entry [ # ]
+grammar' -> . grammar [ # ]
 ## Transitions:
--- On TERMINAL shift to state 1
--- On NONTERMINAL shift to state 3
--- On COMMENT shift to state 7
--- On terminals shift to state 8
--- On sentence shift to state 10
--- On located_sentences_or_comments shift to state 14
--- On located_sentence shift to state 12
--- On entry shift to state 16
+-- On NEWLINE shift to state 1
+-- On list(NEWLINE) shift to state 3
+-- On grammar shift to state 43
 ## Reductions:
--- On EOF
---   reduce production located_sentences_or_comments ->
--- On EOL
---   reduce production terminals ->
+-- On LID
+--   reduce production list(NEWLINE) ->
 
 State 1:
 ## Known stack suffix:
-## TERMINAL
+## NEWLINE
 ## LR(1) items:
-terminals -> TERMINAL . terminals [ EOL ]
+list(NEWLINE) -> NEWLINE . list(NEWLINE) [ Tchar REGEX QID LPAREN LID EOF CARET ]
 ## Transitions:
--- On TERMINAL shift to state 1
--- On terminals shift to state 2
+-- On NEWLINE shift to state 1
+-- On list(NEWLINE) shift to state 2
 ## Reductions:
--- On EOL
---   reduce production terminals ->
+-- On Tchar REGEX QID LPAREN LID EOF CARET
+--   reduce production list(NEWLINE) ->
 
 State 2:
 ## Known stack suffix:
-## TERMINAL terminals
+## NEWLINE list(NEWLINE)
 ## LR(1) items:
-terminals -> TERMINAL terminals . [ EOL ]
+list(NEWLINE) -> NEWLINE list(NEWLINE) . [ Tchar REGEX QID LPAREN LID EOF CARET ]
 ## Transitions:
 ## Reductions:
--- On EOL
---   reduce production terminals -> TERMINAL terminals
+-- On Tchar REGEX QID LPAREN LID EOF CARET
+--   reduce production list(NEWLINE) -> NEWLINE list(NEWLINE)
 
 State 3:
 ## Known stack suffix:
-## NONTERMINAL
+## list(NEWLINE)
 ## LR(1) items:
-sentence -> NONTERMINAL . COLONCOLONEQUALS terminals EOL [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+grammar -> list(NEWLINE) . rules list(NEWLINE) postlude [ # ]
 ## Transitions:
--- On COLONCOLONEQUALS shift to state 4
+-- On LID shift to state 4
+-- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 33
+-- On rules shift to state 34
+-- On old_rule shift to state 38
 ## Reductions:
 
 State 4:
 ## Known stack suffix:
-## NONTERMINAL COLONCOLONEQUALS
+## LID
 ## LR(1) items:
-sentence -> NONTERMINAL COLONCOLONEQUALS . terminals EOL [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+old_rule -> LID . COLONCOLONEQUAL rhs [ NEWLINE EOF ]
 ## Transitions:
--- On TERMINAL shift to state 1
--- On terminals shift to state 5
+-- On COLONCOLONEQUAL shift to state 5
 ## Reductions:
--- On EOL
---   reduce production terminals ->
 
 State 5:
 ## Known stack suffix:
-## NONTERMINAL COLONCOLONEQUALS terminals
+## LID COLONCOLONEQUAL
 ## LR(1) items:
-sentence -> NONTERMINAL COLONCOLONEQUALS terminals . EOL [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+old_rule -> LID COLONCOLONEQUAL . rhs [ NEWLINE EOF ]
 ## Transitions:
--- On EOL shift to state 6
+-- On Tchar shift to state 6
+-- On REGEX shift to state 9
+-- On QID shift to state 10
+-- On LPAREN shift to state 11
+-- On LID shift to state 13
+-- On CARET shift to state 14
+-- On term shift to state 17
+-- On rhs shift to state 32
+-- On factor shift to state 23
+-- On concatenation shift to state 24
+-- On char_class1 shift to state 26
+-- On char_class shift to state 27
+-- On alternation shift to state 28
 ## Reductions:
 
 State 6:
 ## Known stack suffix:
-## NONTERMINAL COLONCOLONEQUALS terminals EOL
+## Tchar
 ## LR(1) items:
-sentence -> NONTERMINAL COLONCOLONEQUALS terminals EOL . [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+char_class1 -> Tchar . DASH Tchar [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
+char_class1 -> Tchar . [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
+-- On DASH shift to state 7
 ## Reductions:
--- On TERMINAL NONTERMINAL EOL EOF COMMENT
---   reduce production sentence -> NONTERMINAL COLONCOLONEQUALS terminals EOL
+-- On Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR
+--   reduce production char_class1 -> Tchar
 
 State 7:
 ## Known stack suffix:
-## COMMENT
+## Tchar DASH
 ## LR(1) items:
-located_sentences_or_comments -> COMMENT . located_sentences_or_comments [ EOF ]
+char_class1 -> Tchar DASH . Tchar [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
--- On TERMINAL shift to state 1
--- On NONTERMINAL shift to state 3
--- On COMMENT shift to state 7
--- On terminals shift to state 8
--- On sentence shift to state 10
--- On located_sentences_or_comments shift to state 11
--- On located_sentence shift to state 12
+-- On Tchar shift to state 8
 ## Reductions:
--- On EOF
---   reduce production located_sentences_or_comments ->
--- On EOL
---   reduce production terminals ->
 
 State 8:
 ## Known stack suffix:
-## terminals
+## Tchar DASH Tchar
 ## LR(1) items:
-sentence -> terminals . EOL [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+char_class1 -> Tchar DASH Tchar . [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
--- On EOL shift to state 9
 ## Reductions:
+-- On Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR
+--   reduce production char_class1 -> Tchar DASH Tchar
 
 State 9:
 ## Known stack suffix:
-## terminals EOL
+## REGEX
 ## LR(1) items:
-sentence -> terminals EOL . [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+term -> REGEX . [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
 ## Reductions:
--- On TERMINAL NONTERMINAL EOL EOF COMMENT
---   reduce production sentence -> terminals EOL
+-- On Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR
+--   reduce production term -> REGEX
 
 State 10:
 ## Known stack suffix:
-## sentence
+## QID
 ## LR(1) items:
-located_sentence -> sentence . [ TERMINAL NONTERMINAL EOL EOF COMMENT ]
+term -> QID . [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
 ## Reductions:
--- On TERMINAL NONTERMINAL EOL EOF COMMENT
---   reduce production located_sentence -> sentence
+-- On Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR
+--   reduce production term -> QID
 
 State 11:
 ## Known stack suffix:
-## COMMENT located_sentences_or_comments
+## LPAREN
 ## LR(1) items:
-located_sentences_or_comments -> COMMENT located_sentences_or_comments . [ EOF ]
+term -> LPAREN . list(NEWLINE) rhs RPAREN [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
+-- On NEWLINE shift to state 1
+-- On list(NEWLINE) shift to state 12
 ## Reductions:
--- On EOF
---   reduce production located_sentences_or_comments -> COMMENT located_sentences_or_comments
+-- On Tchar REGEX QID LPAREN LID CARET
+--   reduce production list(NEWLINE) ->
 
 State 12:
 ## Known stack suffix:
-## located_sentence
+## LPAREN list(NEWLINE)
 ## LR(1) items:
-located_sentences_or_comments -> located_sentence . located_sentences_or_comments [ EOF ]
+term -> LPAREN list(NEWLINE) . rhs RPAREN [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
--- On TERMINAL shift to state 1
--- On NONTERMINAL shift to state 3
--- On COMMENT shift to state 7
--- On terminals shift to state 8
--- On sentence shift to state 10
--- On located_sentences_or_comments shift to state 13
--- On located_sentence shift to state 12
+-- On Tchar shift to state 6
+-- On REGEX shift to state 9
+-- On QID shift to state 10
+-- On LPAREN shift to state 11
+-- On LID shift to state 13
+-- On CARET shift to state 14
+-- On term shift to state 17
+-- On rhs shift to state 21
+-- On factor shift to state 23
+-- On concatenation shift to state 24
+-- On char_class1 shift to state 26
+-- On char_class shift to state 27
+-- On alternation shift to state 28
 ## Reductions:
--- On EOF
---   reduce production located_sentences_or_comments ->
--- On EOL
---   reduce production terminals ->
 
 State 13:
 ## Known stack suffix:
-## located_sentence located_sentences_or_comments
+## LID
 ## LR(1) items:
-located_sentences_or_comments -> located_sentence located_sentences_or_comments . [ EOF ]
+term -> LID . [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
 ## Reductions:
--- On EOF
---   reduce production located_sentences_or_comments -> located_sentence located_sentences_or_comments
+-- On Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR
+--   reduce production term -> LID
 
 State 14:
 ## Known stack suffix:
-## located_sentences_or_comments
+## CARET
 ## LR(1) items:
-entry -> located_sentences_or_comments . EOF [ # ]
+char_class -> CARET . char_class1 [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
--- On EOF shift to state 15
+-- On Tchar shift to state 6
+-- On char_class1 shift to state 15
 ## Reductions:
 
 State 15:
 ## Known stack suffix:
-## located_sentences_or_comments EOF
+## CARET char_class1
 ## LR(1) items:
-entry -> located_sentences_or_comments EOF . [ # ]
+char_class -> CARET char_class1 . [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
+char_class1 -> char_class1 . Tchar [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
+-- On Tchar shift to state 16
 ## Reductions:
--- On #
---   reduce production entry -> located_sentences_or_comments EOF
+-- On Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR
+--   reduce production char_class -> CARET char_class1
+** Conflict on Tchar
 
 State 16:
 ## Known stack suffix:
-## entry
+## char_class1 Tchar
 ## LR(1) items:
-entry' -> entry . [ # ]
+char_class1 -> char_class1 Tchar . [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
 ## Reductions:
--- On #
---   accept entry
+-- On Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR
+--   reduce production char_class1 -> char_class1 Tchar
 
 State 17:
 ## Known stack suffix:
-##
+## term
 ## LR(1) items:
-optional_sentence' -> . optional_sentence [ # ]
+factor -> term . PLUS [ Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR ]
+factor -> term . QUESTION [ Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR ]
+factor -> term . STAR [ Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR ]
+factor -> term . [ Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
--- On TERMINAL shift to state 1
--- On NONTERMINAL shift to state 18
--- On EOF shift to state 22
--- On terminals shift to state 23
--- On sentence shift to state 25
--- On optional_sentence shift to state 26
+-- On STAR shift to state 18
+-- On QUESTION shift to state 19
+-- On PLUS shift to state 20
 ## Reductions:
--- On EOL
---   reduce production terminals ->
+-- On Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR
+--   reduce production factor -> term
 
 State 18:
 ## Known stack suffix:
-## NONTERMINAL
+## term STAR
 ## LR(1) items:
-sentence -> NONTERMINAL . COLONCOLONEQUALS terminals EOL [ # ]
+factor -> term STAR . [ Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
--- On COLONCOLONEQUALS shift to state 19
 ## Reductions:
+-- On Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR
+--   reduce production factor -> term STAR
 
 State 19:
 ## Known stack suffix:
-## NONTERMINAL COLONCOLONEQUALS
+## term QUESTION
 ## LR(1) items:
-sentence -> NONTERMINAL COLONCOLONEQUALS . terminals EOL [ # ]
+factor -> term QUESTION . [ Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
--- On TERMINAL shift to state 1
--- On terminals shift to state 20
 ## Reductions:
--- On EOL
---   reduce production terminals ->
+-- On Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR
+--   reduce production factor -> term QUESTION
 
 State 20:
 ## Known stack suffix:
-## NONTERMINAL COLONCOLONEQUALS terminals
+## term PLUS
 ## LR(1) items:
-sentence -> NONTERMINAL COLONCOLONEQUALS terminals . EOL [ # ]
+factor -> term PLUS . [ Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
--- On EOL shift to state 21
 ## Reductions:
+-- On Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR
+--   reduce production factor -> term PLUS
 
 State 21:
 ## Known stack suffix:
-## NONTERMINAL COLONCOLONEQUALS terminals EOL
+## LPAREN list(NEWLINE) rhs
 ## LR(1) items:
-sentence -> NONTERMINAL COLONCOLONEQUALS terminals EOL . [ # ]
+term -> LPAREN list(NEWLINE) rhs . RPAREN [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
+-- On RPAREN shift to state 22
 ## Reductions:
--- On #
---   reduce production sentence -> NONTERMINAL COLONCOLONEQUALS terminals EOL
 
 State 22:
 ## Known stack suffix:
-## EOF
+## LPAREN list(NEWLINE) rhs RPAREN
 ## LR(1) items:
-optional_sentence -> EOF . [ # ]
+term -> LPAREN list(NEWLINE) rhs RPAREN . [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
 ## Reductions:
--- On #
---   reduce production optional_sentence -> EOF
+-- On Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR
+--   reduce production term -> LPAREN list(NEWLINE) rhs RPAREN
 
 State 23:
 ## Known stack suffix:
-## terminals
+## factor
 ## LR(1) items:
-sentence -> terminals . EOL [ # ]
+concatenation -> factor . [ Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
--- On EOL shift to state 24
 ## Reductions:
+-- On Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR
+--   reduce production concatenation -> factor
 
 State 24:
 ## Known stack suffix:
-## terminals EOL
+## concatenation
 ## LR(1) items:
-sentence -> terminals EOL . [ # ]
+alternation -> concatenation . [ RPAREN NEWLINE EOF BAR ]
+concatenation -> concatenation . factor [ Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
+-- On Tchar shift to state 6
+-- On REGEX shift to state 9
+-- On QID shift to state 10
+-- On LPAREN shift to state 11
+-- On LID shift to state 13
+-- On CARET shift to state 14
+-- On term shift to state 17
+-- On factor shift to state 25
+-- On char_class1 shift to state 26
+-- On char_class shift to state 27
 ## Reductions:
--- On #
---   reduce production sentence -> terminals EOL
+-- On RPAREN NEWLINE EOF BAR
+--   reduce production alternation -> concatenation
 
 State 25:
 ## Known stack suffix:
-## sentence
+## concatenation factor
 ## LR(1) items:
-optional_sentence -> sentence . [ # ]
+concatenation -> concatenation factor . [ Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR ]
 ## Transitions:
 ## Reductions:
--- On #
---   reduce production optional_sentence -> sentence
+-- On Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR
+--   reduce production concatenation -> concatenation factor
 
 State 26:
 ## Known stack suffix:
-## optional_sentence
+## char_class1
 ## LR(1) items:
-optional_sentence' -> optional_sentence . [ # ]
+char_class -> char_class1 . [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
+char_class1 -> char_class1 . Tchar [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
+## Transitions:
+-- On Tchar shift to state 16
+## Reductions:
+-- On Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR
+--   reduce production char_class -> char_class1
+** Conflict on Tchar
+
+State 27:
+## Known stack suffix:
+## char_class
+## LR(1) items:
+term -> char_class . [ Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR ]
+## Transitions:
+## Reductions:
+-- On Tchar STAR RPAREN REGEX QUESTION QID PLUS NEWLINE LPAREN LID EOF CARET BAR
+--   reduce production term -> char_class
+
+State 28:
+## Known stack suffix:
+## alternation
+## LR(1) items:
+alternation -> alternation . BAR list(NEWLINE) concatenation [ RPAREN NEWLINE EOF BAR ]
+rhs -> alternation . [ RPAREN NEWLINE EOF ]
+## Transitions:
+-- On BAR shift to state 29
+## Reductions:
+-- On RPAREN NEWLINE EOF
+--   reduce production rhs -> alternation
+
+State 29:
+## Known stack suffix:
+## alternation BAR
+## LR(1) items:
+alternation -> alternation BAR . list(NEWLINE) concatenation [ RPAREN NEWLINE EOF BAR ]
+## Transitions:
+-- On NEWLINE shift to state 1
+-- On list(NEWLINE) shift to state 30
+## Reductions:
+-- On Tchar REGEX QID LPAREN LID CARET
+--   reduce production list(NEWLINE) ->
+
+State 30:
+## Known stack suffix:
+## alternation BAR list(NEWLINE)
+## LR(1) items:
+alternation -> alternation BAR list(NEWLINE) . concatenation [ RPAREN NEWLINE EOF BAR ]
+## Transitions:
+-- On Tchar shift to state 6
+-- On REGEX shift to state 9
+-- On QID shift to state 10
+-- On LPAREN shift to state 11
+-- On LID shift to state 13
+-- On CARET shift to state 14
+-- On term shift to state 17
+-- On factor shift to state 23
+-- On concatenation shift to state 31
+-- On char_class1 shift to state 26
+-- On char_class shift to state 27
+## Reductions:
+
+State 31:
+## Known stack suffix:
+## alternation BAR list(NEWLINE) concatenation
+## LR(1) items:
+alternation -> alternation BAR list(NEWLINE) concatenation . [ RPAREN NEWLINE EOF BAR ]
+concatenation -> concatenation . factor [ Tchar RPAREN REGEX QID NEWLINE LPAREN LID EOF CARET BAR ]
+## Transitions:
+-- On Tchar shift to state 6
+-- On REGEX shift to state 9
+-- On QID shift to state 10
+-- On LPAREN shift to state 11
+-- On LID shift to state 13
+-- On CARET shift to state 14
+-- On term shift to state 17
+-- On factor shift to state 25
+-- On char_class1 shift to state 26
+-- On char_class shift to state 27
+## Reductions:
+-- On RPAREN NEWLINE EOF BAR
+--   reduce production alternation -> alternation BAR list(NEWLINE) concatenation
+
+State 32:
+## Known stack suffix:
+## LID COLONCOLONEQUAL rhs
+## LR(1) items:
+old_rule -> LID COLONCOLONEQUAL rhs . [ NEWLINE EOF ]
+## Transitions:
+## Reductions:
+-- On NEWLINE EOF
+--   reduce production old_rule -> LID COLONCOLONEQUAL rhs
+
+State 33:
+## Known stack suffix:
+## separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
+## LR(1) items:
+rules -> separated_nonempty_list(nonempty_list(NEWLINE),old_rule) . [ NEWLINE EOF ]
+## Transitions:
+## Reductions:
+-- On NEWLINE EOF
+--   reduce production rules -> separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
+
+State 34:
+## Known stack suffix:
+## list(NEWLINE) rules
+## LR(1) items:
+grammar -> list(NEWLINE) rules . list(NEWLINE) postlude [ # ]
+## Transitions:
+-- On NEWLINE shift to state 1
+-- On list(NEWLINE) shift to state 35
+## Reductions:
+-- On EOF
+--   reduce production list(NEWLINE) ->
+
+State 35:
+## Known stack suffix:
+## list(NEWLINE) rules list(NEWLINE)
+## LR(1) items:
+grammar -> list(NEWLINE) rules list(NEWLINE) . postlude [ # ]
+## Transitions:
+-- On EOF shift to state 36
+-- On postlude shift to state 37
+## Reductions:
+
+State 36:
+## Known stack suffix:
+## EOF
+## LR(1) items:
+postlude -> EOF . [ # ]
 ## Transitions:
 ## Reductions:
 -- On #
---   accept optional_sentence
+--   reduce production postlude -> EOF
+
+State 37:
+## Known stack suffix:
+## list(NEWLINE) rules list(NEWLINE) postlude
+## LR(1) items:
+grammar -> list(NEWLINE) rules list(NEWLINE) postlude . [ # ]
+## Transitions:
+## Reductions:
+-- On #
+--   reduce production grammar -> list(NEWLINE) rules list(NEWLINE) postlude
+
+State 38:
+## Known stack suffix:
+## old_rule
+## LR(1) items:
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule . [ NEWLINE EOF ]
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule . nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule) [ NEWLINE EOF ]
+## Transitions:
+-- On NEWLINE shift to state 39
+-- On nonempty_list(NEWLINE) shift to state 41
+## Reductions:
+-- On NEWLINE EOF
+--   reduce production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule
+** Conflict on NEWLINE
+
+State 39:
+## Known stack suffix:
+## NEWLINE
+## LR(1) items:
+nonempty_list(NEWLINE) -> NEWLINE . [ LID ]
+nonempty_list(NEWLINE) -> NEWLINE . nonempty_list(NEWLINE) [ LID ]
+## Transitions:
+-- On NEWLINE shift to state 39
+-- On nonempty_list(NEWLINE) shift to state 40
+## Reductions:
+-- On LID
+--   reduce production nonempty_list(NEWLINE) -> NEWLINE
+
+State 40:
+## Known stack suffix:
+## NEWLINE nonempty_list(NEWLINE)
+## LR(1) items:
+nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE) . [ LID ]
+## Transitions:
+## Reductions:
+-- On LID
+--   reduce production nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE)
+
+State 41:
+## Known stack suffix:
+## old_rule nonempty_list(NEWLINE)
+## LR(1) items:
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) . separated_nonempty_list(nonempty_list(NEWLINE),old_rule) [ NEWLINE EOF ]
+## Transitions:
+-- On LID shift to state 4
+-- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 42
+-- On old_rule shift to state 38
+## Reductions:
+
+State 42:
+## Known stack suffix:
+## old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
+## LR(1) items:
+separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule) . [ NEWLINE EOF ]
+## Transitions:
+## Reductions:
+-- On NEWLINE EOF
+--   reduce production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
+
+State 43:
+## Known stack suffix:
+## grammar
+## LR(1) items:
+grammar' -> grammar . [ # ]
+## Transitions:
+## Reductions:
+-- On #
+--   accept grammar
 
