@@ -3,7 +3,7 @@
 ** Token involved: NEWLINE
 ** This state is reached from grammar after reading:
 
-list(NEWLINE) old_rule
+list(NEWLINE) rule
 
 ** The derivations that appear below have the following common factor:
 ** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
@@ -15,17 +15,17 @@ grammar
 ** because of the following sub-derivation:
 
 list(NEWLINE) rules list(NEWLINE) postlude 
-              separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
-              old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
-                       . NEWLINE 
+              separated_nonempty_list(nonempty_list(NEWLINE),rule) 
+              rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),rule) 
+                   . NEWLINE 
 
 ** In state 38, looking ahead at NEWLINE, reducing production
-** separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule
+** separated_nonempty_list(nonempty_list(NEWLINE),rule) -> rule
 ** is permitted because of the following sub-derivation:
 
 list(NEWLINE) rules list(NEWLINE) postlude // lookahead token appears because list(NEWLINE) can begin with NEWLINE
-              separated_nonempty_list(nonempty_list(NEWLINE),old_rule) // lookahead token is inherited
-              old_rule . 
+              separated_nonempty_list(nonempty_list(NEWLINE),rule) // lookahead token is inherited
+              rule . 
 
 ** Conflict (shift/reduce) in state 26.
 ** Token involved: Tchar
@@ -38,8 +38,8 @@ list(NEWLINE) LID COLONCOLONEQUAL char_class1
 
 grammar 
 list(NEWLINE) rules list(NEWLINE) postlude 
-              separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
-              old_rule 
+              separated_nonempty_list(nonempty_list(NEWLINE),rule) 
+              rule 
               LID COLONCOLONEQUAL rhs 
                                   alternation 
                                   concatenation 
@@ -75,8 +75,8 @@ list(NEWLINE) LID COLONCOLONEQUAL CARET char_class1
 
 grammar 
 list(NEWLINE) rules list(NEWLINE) postlude 
-              separated_nonempty_list(nonempty_list(NEWLINE),old_rule) 
-              old_rule 
+              separated_nonempty_list(nonempty_list(NEWLINE),rule) 
+              rule 
               LID COLONCOLONEQUAL rhs 
                                   alternation 
                                   concatenation 

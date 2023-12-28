@@ -462,8 +462,8 @@ let syntaxerror =
 
 rule main = parse
 
-| ","
-    { COMMA }
+(* | "," *)
+(*     { COMMA } *)
 
 | "("
  {       (print_endline (Batteries.dump (((Lexing.lexeme lexbuf))))); LPAREN } 

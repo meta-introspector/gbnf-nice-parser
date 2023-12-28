@@ -14,54 +14,14 @@
 /*  Copyright 2023 James Michael Dupont */
 /*  
 Starting with the menhir sentence parser, replacing with stage2 parser, adding in wikipedias DFA and parts of bnfgen
- https://github.com/dmbaturin/bnfgen
+https://github.com/dmbaturin/bnfgen
 and ocaml code itself ocaml/lex/parser.mly 
 attempt to parse the gbnf.
- */
-/*
-grammar
-  rules:
-    old_rule: lid ::= rhs
-    rsa alt concat
-
-
 */
-/* ------------------------------------------------------------------------- */
-/* Imports. */
 
 %{
-
-open Stretch
 open Syntax
-
-
-let rec find s n i =
-  assert (i < n);
-  if s.[i] = '(' then i
-  else begin
-    assert (s.[i] = ' ');
-    find s n (i+1)
-  end
-
-let unparenthesize (s : string) : string =
-  let n = String.length s in
-  (* The string [s] must end with a closing parenthesis. *)
-  assert (n >= 2 && s.[n-1] = ')');
-  (* The string [s] must begin with a certain amount of spaces
-     followed with an opening parenthesis. Find its offset [i]. *)
-  let i = find s n 0 in
-  (* Create a copy without the parentheses. *)
-  let b = Bytes.of_string s in
-  Bytes.set b i ' ';
-  Bytes.set b (n-1) ' ';
-  Bytes.to_string b
-
-
-
 %}
-
-/* ------------------------------------------------------------------------- */
-/* Tokens. */
 
 %token <int> Tchar
 %token DASH "-"
@@ -71,7 +31,6 @@ let unparenthesize (s : string) : string =
   EOF              ""
   LPAREN           "("
   RPAREN           ")" 
-  COMMA            ","
   QUESTION         "?"
   STAR             "*"
   PLUS             "+"
@@ -80,30 +39,19 @@ NEWLINE
 %token <string Positions.located>
    LID              "lident"
    REGEX            "regex"
-   SUBGROUP            "subgroup"
    QID              "\"alias\""
 
-/* For the new rule syntax: */
 %token
    COLONCOLONEQUAL  "::="
 
-(* %type <ParserAux.early_producer> producer *)
-(* %type <ParserAux.early_production> production *)
 %start <Syntax.partial_grammar> grammar
-
-
 
 %%
 
-/* ------------------------------------------------------------------------- */
-/* A grammar consists of  rules 
-taken from https://github.com/dmbaturin/bnfgen
-*/
 rules:
-separated_nonempty_list(NEWLINE+, old_rule)  {
+separated_nonempty_list(NEWLINE+, rule)  {
 			 (print_endline (Batteries.dump ("DEBUG:OLDRULE",$1)))
 		       } 
-
 
 grammar:
   rs =  NEWLINE* rules NEWLINE* postlude
@@ -115,28 +63,7 @@ grammar:
       }
     }
 
-/* rule_specific_token: */
-/* | COLON */
-/* | EOF */
-/*     { () } */
-
-
- clist(X):
-  xs = separated_nonempty_list(COMMA?, X)
-    { xs }
-
-
-/* symbol: */
-/* id = LID */
-/*     { */
-/*       (print_endline (Batteries.dump ("DEBUG:LID", id))); */
-/*       id } */
-/*   | id = QID */
-/*     { */
-/*       (print_endline (Batteries.dump ("DEBUG:QID", id))); */
-/*       id } */
-
-old_rule:
+rule:
 symbol = LID
 /* the symbol that is being defined */
 COLONCOLONEQUAL
@@ -150,32 +77,9 @@ branches = rhs(* separated_nonempty_list(BAR, symbol+) *)
       }
     }
 
-
-
 postlude:
   EOF
     { None }
-
-
-
-reversed_preceded_or_separated_nonempty_llist(delimiter, X):
-| ioption(delimiter) x = X
-    { [x] }
-| xs = reversed_preceded_or_separated_nonempty_llist(delimiter, X)
-  delimiter
-  x = X
-    { x :: xs }
-
- preceded_or_separated_nonempty_llist(delimiter, X):
-  xs = rev(reversed_preceded_or_separated_nonempty_llist(delimiter, X))
-    { xs }
-
-preceded_or_separated_llist(delimiter, X):
-| (* empty *)
-    { [] }
-| xs = preceded_or_separated_nonempty_llist(delimiter, X)
-    { xs }
-
 
 located(X):
   x = X
@@ -237,57 +141,6 @@ rhs:
   | alternation {}
 
 
-
-
-/* ===EBNF=== */
-
-/* from wikipedia Even EBNF can be described using EBNF. Consider below grammar (using conventions such as "-" to indicate set disjunction, "+" to indicate one or more matches, and "?" for optionality): */
-
-/* <syntaxhighlight lang="ebnf"> */
-/* letter = "A" | "B" | "C" | "D" | "E" | "F" | "G" */
-
-/* digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ; */
-
-/* symbol = "[" | "]" | "{" | "}" | "(" | ")" | "<" | ">" */
-/*        | "'" | '"' | "=" | "|" | "." | "," | ";" | "-"  */
-/*        | "+" | "*" | "?" | "\n" | "\t" | "\r" | "\f" | "\b" ; */
-
-/* character = letter | digit | symbol | "_" | " " ; */
-/* identifier = letter , { letter | digit | "_" } ; */
-
-/* S = { " " | "\n" | "\t" | "\r" | "\f" | "\b" } ; */
-
-/* terminal = "'" , character - "'" , { character - "'" } , "'" */
-/*          | '"' , character - '"' , { character - '"' } , '"' ; */
-
-/* terminator = ";" | "." ; */
-
-/* term = "(" , S , rhs , S , ")" */
-/*      | "[" , S , rhs , S , "]" */
-/*      | "{" , S , rhs , S , "}" */
-/*      | terminal */
-/*      | identifier ; */
-
-/* factor = term , S , "?" */
-/*        | term , S , "*" */
-/*        | term , S , "+" */
-/*        | term , S , "-" , S , term */
-/*        | term , S ; */
-
-/* concatenation = ( S , factor , S , "," ? ) + ; */
-/* alternation = ( S , concatenation , S , "|" ? ) + ; */
-
-/* rhs = alternation ; */
-/* lhs = identifier ; */
-
-/* rule = lhs , S , "=" , S , rhs , S , terminator ; */
-
-/* grammar = ( S , rule , S ) * ; */
-
-/* </syntaxhighlight> */
-
-
-(* ocaml/lex/parser.mly *)
 char_class:
     CARET char_class1
     /* { Cset.complement $2 } */

@@ -40,16 +40,16 @@ State 3:
 grammar -> list(NEWLINE) . rules list(NEWLINE) postlude [ # ]
 ## Transitions:
 -- On LID shift to state 4
--- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 33
+-- On separated_nonempty_list(nonempty_list(NEWLINE),rule) shift to state 33
 -- On rules shift to state 34
--- On old_rule shift to state 38
+-- On rule shift to state 38
 ## Reductions:
 
 State 4:
 ## Known stack suffix:
 ## LID
 ## LR(1) items:
-old_rule -> LID . COLONCOLONEQUAL rhs [ NEWLINE EOF ]
+rule -> LID . COLONCOLONEQUAL rhs [ NEWLINE EOF ]
 ## Transitions:
 -- On COLONCOLONEQUAL shift to state 5
 ## Reductions:
@@ -58,7 +58,7 @@ State 5:
 ## Known stack suffix:
 ## LID COLONCOLONEQUAL
 ## LR(1) items:
-old_rule -> LID COLONCOLONEQUAL . rhs [ NEWLINE EOF ]
+rule -> LID COLONCOLONEQUAL . rhs [ NEWLINE EOF ]
 ## Transitions:
 -- On Tchar shift to state 6
 -- On REGEX shift to state 9
@@ -399,21 +399,21 @@ State 32:
 ## Known stack suffix:
 ## LID COLONCOLONEQUAL rhs
 ## LR(1) items:
-old_rule -> LID COLONCOLONEQUAL rhs . [ NEWLINE EOF ]
+rule -> LID COLONCOLONEQUAL rhs . [ NEWLINE EOF ]
 ## Transitions:
 ## Reductions:
 -- On NEWLINE EOF
---   reduce production old_rule -> LID COLONCOLONEQUAL rhs
+--   reduce production rule -> LID COLONCOLONEQUAL rhs
 
 State 33:
 ## Known stack suffix:
-## separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
+## separated_nonempty_list(nonempty_list(NEWLINE),rule)
 ## LR(1) items:
-rules -> separated_nonempty_list(nonempty_list(NEWLINE),old_rule) . [ NEWLINE EOF ]
+rules -> separated_nonempty_list(nonempty_list(NEWLINE),rule) . [ NEWLINE EOF ]
 ## Transitions:
 ## Reductions:
 -- On NEWLINE EOF
---   reduce production rules -> separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
+--   reduce production rules -> separated_nonempty_list(nonempty_list(NEWLINE),rule)
 
 State 34:
 ## Known stack suffix:
@@ -459,16 +459,16 @@ grammar -> list(NEWLINE) rules list(NEWLINE) postlude . [ # ]
 
 State 38:
 ## Known stack suffix:
-## old_rule
+## rule
 ## LR(1) items:
-separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule . [ NEWLINE EOF ]
-separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule . nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule) [ NEWLINE EOF ]
+separated_nonempty_list(nonempty_list(NEWLINE),rule) -> rule . [ NEWLINE EOF ]
+separated_nonempty_list(nonempty_list(NEWLINE),rule) -> rule . nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),rule) [ NEWLINE EOF ]
 ## Transitions:
 -- On NEWLINE shift to state 39
 -- On nonempty_list(NEWLINE) shift to state 41
 ## Reductions:
 -- On NEWLINE EOF
---   reduce production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule
+--   reduce production separated_nonempty_list(nonempty_list(NEWLINE),rule) -> rule
 ** Conflict on NEWLINE
 
 State 39:
@@ -496,24 +496,24 @@ nonempty_list(NEWLINE) -> NEWLINE nonempty_list(NEWLINE) . [ LID ]
 
 State 41:
 ## Known stack suffix:
-## old_rule nonempty_list(NEWLINE)
+## rule nonempty_list(NEWLINE)
 ## LR(1) items:
-separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) . separated_nonempty_list(nonempty_list(NEWLINE),old_rule) [ NEWLINE EOF ]
+separated_nonempty_list(nonempty_list(NEWLINE),rule) -> rule nonempty_list(NEWLINE) . separated_nonempty_list(nonempty_list(NEWLINE),rule) [ NEWLINE EOF ]
 ## Transitions:
 -- On LID shift to state 4
--- On separated_nonempty_list(nonempty_list(NEWLINE),old_rule) shift to state 42
--- On old_rule shift to state 38
+-- On separated_nonempty_list(nonempty_list(NEWLINE),rule) shift to state 42
+-- On rule shift to state 38
 ## Reductions:
 
 State 42:
 ## Known stack suffix:
-## old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
+## rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),rule)
 ## LR(1) items:
-separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule) . [ NEWLINE EOF ]
+separated_nonempty_list(nonempty_list(NEWLINE),rule) -> rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),rule) . [ NEWLINE EOF ]
 ## Transitions:
 ## Reductions:
 -- On NEWLINE EOF
---   reduce production separated_nonempty_list(nonempty_list(NEWLINE),old_rule) -> old_rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),old_rule)
+--   reduce production separated_nonempty_list(nonempty_list(NEWLINE),rule) -> rule nonempty_list(NEWLINE) separated_nonempty_list(nonempty_list(NEWLINE),rule)
 
 State 43:
 ## Known stack suffix:

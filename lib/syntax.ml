@@ -195,15 +195,11 @@ and parameterized_branch =
     {
       pr_branch_position           : Positions.t;
       pr_producers                 : producer list;
-<<<<<<< HEAD
-      pr_action                    : action;
-      pr_branch_prec_annotation    : branch_prec_annotation;
-      pr_branch_production_level   : branch_production_level
-=======
+
       (* pr_action                    : action; *)
       (* pr_branch_prec_annotation    : branch_prec_annotation; *)
       (* pr_branch_production_level   : branch_production_level *)
->>>>>>> feature/parser
+
     }
 
 (* ------------------------------------------------------------------------ *)
