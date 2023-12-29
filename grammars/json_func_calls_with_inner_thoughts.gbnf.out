@@ -1,4 +1,4 @@
-Done: 57% (4/7, 3 left) (jobs: 0)                                 Done: 18% (72/380, 308 left) (jobs: 0)                                      Hello, World!
+Done: 2% (9/366, 357 left) (jobs: 0)                                    Done: 18% (72/380, 308 left) (jobs: 0)                                      Hello, World!
 State 0:
 Lookahead token is now LID (0-4)
 Reducing production list(NEWLINE) ->
@@ -14,17 +14,25 @@ Shifting (LID) to state 13
 State 13:
 Lookahead token is now NEWLINE (17-18)
 Reducing production term -> LID
+("DEBUG:lid", ("Function", (("", 1, 0, 9), ("", 1, 0, 17))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("root", (("", 1, 0, 0), ("", 1, 0, 4))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -42,12 +50,19 @@ Shifting (LID) to state 13
 State 13:
 Lookahead token is now BAR (43-44)
 Reducing production term -> LID
+("DEBUG:lid", ("SendMessage", (("", 1, 0, 31), ("", 1, 0, 42))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Shifting (BAR) to state 29
 State 29:
@@ -58,12 +73,19 @@ Shifting (LID) to state 13
 State 13:
 Lookahead token is now BAR (61-62)
 Reducing production term -> LID
+("DEBUG:lid", ("PauseHeartbeats", (("", 1, 0, 45), ("", 1, 0, 60))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 31:
 Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
+["DEBUG:alt"]
 State 28:
 Shifting (BAR) to state 29
 State 29:
@@ -74,12 +96,19 @@ Shifting (LID) to state 13
 State 13:
 Lookahead token is now BAR (80-81)
 Reducing production term -> LID
+("DEBUG:lid", ("CoreMemoryAppend", (("", 1, 0, 63), ("", 1, 0, 79))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 31:
 Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
+["DEBUG:alt"]
 State 28:
 Shifting (BAR) to state 29
 State 29:
@@ -90,12 +119,19 @@ Shifting (LID) to state 13
 State 13:
 Lookahead token is now BAR (100-101)
 Reducing production term -> LID
+("DEBUG:lid", ("CoreMemoryReplace", (("", 1, 0, 82), ("", 1, 0, 99))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 31:
 Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
+["DEBUG:alt"]
 State 28:
 Shifting (BAR) to state 29
 State 29:
@@ -106,12 +142,19 @@ Shifting (LID) to state 13
 State 13:
 Lookahead token is now BAR (121-122)
 Reducing production term -> LID
+("DEBUG:lid", ("ConversationSearch", (("", 1, 0, 102), ("", 1, 0, 120))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 31:
 Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
+["DEBUG:alt"]
 State 28:
 Shifting (BAR) to state 29
 State 29:
@@ -122,12 +165,19 @@ Shifting (LID) to state 13
 State 13:
 Lookahead token is now BAR (146-147)
 Reducing production term -> LID
+("DEBUG:lid", ("ConversationSearchDate", (("", 1, 0, 123), ("", 1, 0, 145))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 31:
 Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
+["DEBUG:alt"]
 State 28:
 Shifting (BAR) to state 29
 State 29:
@@ -138,12 +188,19 @@ Shifting (LID) to state 13
 State 13:
 Lookahead token is now BAR (169-170)
 Reducing production term -> LID
+("DEBUG:lid", ("ArchivalMemoryInsert", (("", 1, 0, 148), ("", 1, 0, 168))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 31:
 Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
+["DEBUG:alt"]
 State 28:
 Shifting (BAR) to state 29
 State 29:
@@ -154,17 +211,25 @@ Shifting (LID) to state 13
 State 13:
 Lookahead token is now NEWLINE (191-192)
 Reducing production term -> LID
+("DEBUG:lid", ("ArchivalMemorySearch", (("", 1, 0, 171), ("", 1, 0, 191))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 31:
 Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("Function", (("", 1, 0, 18), ("", 1, 0, 26))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -183,10 +248,16 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (214-216)
 Reducing production term -> QID
+("DEBUG:quid", ("\"{\"", (("", 1, 0, 208), ("", 1, 0, 211))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -203,19 +274,31 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (233-234)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 214), ("", 1, 0, 216))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (237-239)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"function\\\":\"", (("", 1, 0, 219), ("", 1, 0, 234))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -236,19 +319,31 @@ State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (260-261)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 237), ("", 1, 0, 239))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (264-266)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"send_message\\\",\"", (("", 1, 0, 242), ("", 1, 0, 261))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -263,54 +358,86 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (281-282)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 264), ("", 1, 0, 266))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (285-287)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"params\\\":\"", (("", 1, 0, 269), ("", 1, 0, 282))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (290-307)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 285), ("", 1, 0, 287))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 125)
 Lookahead token is now QID (312-313)
 Reducing production term -> LID
+("DEBUG:lid", ("SendMessageParams", (("", 1, 0, 290), ("", 1, 0, 307))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (313-314)
 Reducing production term -> QID
+("DEBUG:quid", ("\"}\"", (("", 1, 0, 310), ("", 1, 0, 313))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("SendMessage", (("", 1, 0, 192), ("", 1, 0, 203))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -329,10 +456,16 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (340-342)
 Reducing production term -> QID
+("DEBUG:quid", ("\"{\"", (("", 1, 0, 334), ("", 1, 0, 337))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -349,19 +482,31 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (359-360)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 340), ("", 1, 0, 342))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (363-365)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"function\\\":\"", (("", 1, 0, 345), ("", 1, 0, 360))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -386,19 +531,31 @@ State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (390-391)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 363), ("", 1, 0, 365))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (394-396)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"pause_heartbeats\\\",\"", (("", 1, 0, 368), ("", 1, 0, 391))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -413,54 +570,86 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (411-412)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 394), ("", 1, 0, 396))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (415-417)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"params\\\":\"", (("", 1, 0, 399), ("", 1, 0, 412))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (420-441)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 415), ("", 1, 0, 417))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 125)
 Lookahead token is now QID (446-447)
 Reducing production term -> LID
+("DEBUG:lid", ("PauseHeartbeatsParams", (("", 1, 0, 420), ("", 1, 0, 441))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (447-448)
 Reducing production term -> QID
+("DEBUG:quid", ("\"}\"", (("", 1, 0, 444), ("", 1, 0, 447))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("PauseHeartbeats", (("", 1, 0, 314), ("", 1, 0, 329))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -479,10 +668,16 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (475-477)
 Reducing production term -> QID
+("DEBUG:quid", ("\"{\"", (("", 1, 0, 469), ("", 1, 0, 472))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -499,19 +694,31 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (494-495)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 475), ("", 1, 0, 477))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (498-500)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"function\\\":\"", (("", 1, 0, 480), ("", 1, 0, 495))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -538,19 +745,31 @@ State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (527-528)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 498), ("", 1, 0, 500))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (531-533)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"core_memory_append\\\",\"", (("", 1, 0, 503), ("", 1, 0, 528))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -565,54 +784,86 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (548-549)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 531), ("", 1, 0, 533))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (552-554)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"params\\\":\"", (("", 1, 0, 536), ("", 1, 0, 549))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (557-579)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 552), ("", 1, 0, 554))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 125)
 Lookahead token is now QID (584-585)
 Reducing production term -> LID
+("DEBUG:lid", ("CoreMemoryAppendParams", (("", 1, 0, 557), ("", 1, 0, 579))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (585-586)
 Reducing production term -> QID
+("DEBUG:quid", ("\"}\"", (("", 1, 0, 582), ("", 1, 0, 585))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("CoreMemoryAppend", (("", 1, 0, 448), ("", 1, 0, 464))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -631,10 +882,16 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (614-616)
 Reducing production term -> QID
+("DEBUG:quid", ("\"{\"", (("", 1, 0, 608), ("", 1, 0, 611))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -651,19 +908,31 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (633-634)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 614), ("", 1, 0, 616))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (637-639)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"function\\\":\"", (("", 1, 0, 619), ("", 1, 0, 634))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -691,19 +960,31 @@ State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (667-668)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 637), ("", 1, 0, 639))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (671-673)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"core_memory_replace\\\",\"", (("", 1, 0, 642), ("", 1, 0, 668))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -718,54 +999,86 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (688-689)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 671), ("", 1, 0, 673))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (692-694)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"params\\\":\"", (("", 1, 0, 676), ("", 1, 0, 689))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (697-720)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 692), ("", 1, 0, 694))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 125)
 Lookahead token is now QID (725-726)
 Reducing production term -> LID
+("DEBUG:lid", ("CoreMemoryReplaceParams", (("", 1, 0, 697), ("", 1, 0, 720))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (726-727)
 Reducing production term -> QID
+("DEBUG:quid", ("\"}\"", (("", 1, 0, 723), ("", 1, 0, 726))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("CoreMemoryReplace", (("", 1, 0, 586), ("", 1, 0, 603))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -784,10 +1097,16 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (757-759)
 Reducing production term -> QID
+("DEBUG:quid", ("\"{\"", (("", 1, 0, 751), ("", 1, 0, 754))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -804,19 +1123,31 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (776-777)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 757), ("", 1, 0, 759))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (780-782)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"function\\\":\"", (("", 1, 0, 762), ("", 1, 0, 777))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -844,19 +1175,31 @@ State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (810-811)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 780), ("", 1, 0, 782))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (814-816)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"conversation_search\\\",\"", (("", 1, 0, 785), ("", 1, 0, 811))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -871,54 +1214,86 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (831-832)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 814), ("", 1, 0, 816))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (835-837)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"params\\\":\"", (("", 1, 0, 819), ("", 1, 0, 832))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (840-864)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 835), ("", 1, 0, 837))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 125)
 Lookahead token is now QID (869-870)
 Reducing production term -> LID
+("DEBUG:lid", ("ConversationSearchParams", (("", 1, 0, 840), ("", 1, 0, 864))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (870-871)
 Reducing production term -> QID
+("DEBUG:quid", ("\"}\"", (("", 1, 0, 867), ("", 1, 0, 870))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("ConversationSearch", (("", 1, 0, 727), ("", 1, 0, 745))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -937,10 +1312,16 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (905-907)
 Reducing production term -> QID
+("DEBUG:quid", ("\"{\"", (("", 1, 0, 899), ("", 1, 0, 902))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -957,19 +1338,31 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (924-925)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 905), ("", 1, 0, 907))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (928-930)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"function\\\":\"", (("", 1, 0, 910), ("", 1, 0, 925))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -1002,19 +1395,31 @@ State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (963-964)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 928), ("", 1, 0, 930))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (967-969)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"conversation_search_date\\\",\"", (("", 1, 0, 933), ("", 1, 0, 964))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -1029,54 +1434,86 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (984-985)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 967), ("", 1, 0, 969))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (988-990)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"params\\\":\"", (("", 1, 0, 972), ("", 1, 0, 985))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (993-1021)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 988), ("", 1, 0, 990))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 125)
 Lookahead token is now QID (1026-1027)
 Reducing production term -> LID
+("DEBUG:lid", ("ConversationSearchDateParams", (("", 1, 0, 993), ("", 1, 0, 1021))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (1027-1028)
 Reducing production term -> QID
+("DEBUG:quid", ("\"}\"", (("", 1, 0, 1024), ("", 1, 0, 1027))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("ConversationSearchDate", (("", 1, 0, 871), ("", 1, 0, 893))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -1095,10 +1532,16 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1060-1062)
 Reducing production term -> QID
+("DEBUG:quid", ("\"{\"", (("", 1, 0, 1054), ("", 1, 0, 1057))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -1115,19 +1558,31 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (1079-1080)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1060), ("", 1, 0, 1062))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1083-1085)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"function\\\":\"", (("", 1, 0, 1065), ("", 1, 0, 1080))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -1158,19 +1613,31 @@ State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (1116-1117)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1083), ("", 1, 0, 1085))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1120-1122)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"archival_memory_insert\\\",\"", (("", 1, 0, 1088), ("", 1, 0, 1117))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -1185,54 +1652,86 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (1137-1138)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1120), ("", 1, 0, 1122))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1141-1143)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"params\\\":\"", (("", 1, 0, 1125), ("", 1, 0, 1138))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1146-1172)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1141), ("", 1, 0, 1143))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 125)
 Lookahead token is now QID (1177-1178)
 Reducing production term -> LID
+("DEBUG:lid", ("ArchivalMemoryInsertParams", (("", 1, 0, 1146), ("", 1, 0, 1172))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (1178-1179)
 Reducing production term -> QID
+("DEBUG:quid", ("\"}\"", (("", 1, 0, 1175), ("", 1, 0, 1178))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("ArchivalMemoryInsert", (("", 1, 0, 1028), ("", 1, 0, 1048))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -1251,10 +1750,16 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1211-1213)
 Reducing production term -> QID
+("DEBUG:quid", ("\"{\"", (("", 1, 0, 1205), ("", 1, 0, 1208))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -1271,19 +1776,31 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (1230-1231)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1211), ("", 1, 0, 1213))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1234-1236)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"function\\\":\"", (("", 1, 0, 1216), ("", 1, 0, 1231))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -1314,19 +1831,31 @@ State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (1267-1268)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1234), ("", 1, 0, 1236))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1271-1273)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"archival_memory_search\\\",\"", (("", 1, 0, 1239), ("", 1, 0, 1268))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -1341,54 +1870,86 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (1288-1289)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1271), ("", 1, 0, 1273))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1292-1294)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"params\\\":\"", (("", 1, 0, 1276), ("", 1, 0, 1289))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1297-1323)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1292), ("", 1, 0, 1294))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 125)
 Lookahead token is now QID (1328-1329)
 Reducing production term -> LID
+("DEBUG:lid", ("ArchivalMemorySearchParams", (("", 1, 0, 1297), ("", 1, 0, 1323))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (1329-1330)
 Reducing production term -> QID
+("DEBUG:quid", ("\"}\"", (("", 1, 0, 1326), ("", 1, 0, 1329))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("ArchivalMemorySearch", (("", 1, 0, 1179), ("", 1, 0, 1199))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -1407,38 +1968,62 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1358-1360)
 Reducing production term -> QID
+("DEBUG:quid", ("\"{\"", (("", 1, 0, 1352), ("", 1, 0, 1355))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1363-1381)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1358), ("", 1, 0, 1360))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (1386-1387)
 Reducing production term -> LID
+("DEBUG:lid", ("InnerThoughtsParam", (("", 1, 0, 1363), ("", 1, 0, 1381))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1390-1392)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 1384), ("", 1, 0, 1387))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -1454,63 +2039,101 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (1408-1409)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1390), ("", 1, 0, 1392))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1412-1414)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"message\\\":\"", (("", 1, 0, 1395), ("", 1, 0, 1409))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1417-1423)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1412), ("", 1, 0, 1414))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1426-1428)
 Reducing production term -> LID
+("DEBUG:lid", ("string", (("", 1, 0, 1417), ("", 1, 0, 1423))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 125)
 Lookahead token is now QID (1433-1434)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1426), ("", 1, 0, 1428))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (1434-1435)
 Reducing production term -> QID
+("DEBUG:quid", ("\"}\"", (("", 1, 0, 1431), ("", 1, 0, 1434))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("SendMessageParams", (("", 1, 0, 1330), ("", 1, 0, 1347))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -1529,38 +2152,62 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1467-1469)
 Reducing production term -> QID
+("DEBUG:quid", ("\"{\"", (("", 1, 0, 1461), ("", 1, 0, 1464))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1472-1490)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1467), ("", 1, 0, 1469))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (1495-1496)
 Reducing production term -> LID
+("DEBUG:lid", ("InnerThoughtsParam", (("", 1, 0, 1472), ("", 1, 0, 1490))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1502-1504)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 1493), ("", 1, 0, 1496))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -1576,63 +2223,101 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (1520-1521)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1502), ("", 1, 0, 1504))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1524-1526)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"minutes\\\":\"", (("", 1, 0, 1507), ("", 1, 0, 1521))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1529-1535)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1524), ("", 1, 0, 1526))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1538-1540)
 Reducing production term -> LID
+("DEBUG:lid", ("number", (("", 1, 0, 1529), ("", 1, 0, 1535))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 125)
 Lookahead token is now QID (1545-1546)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1538), ("", 1, 0, 1540))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (1546-1547)
 Reducing production term -> QID
+("DEBUG:quid", ("\"}\"", (("", 1, 0, 1543), ("", 1, 0, 1546))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("PauseHeartbeatsParams", (("", 1, 0, 1435), ("", 1, 0, 1456))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -1651,38 +2336,62 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1580-1582)
 Reducing production term -> QID
+("DEBUG:quid", ("\"{\"", (("", 1, 0, 1574), ("", 1, 0, 1577))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1585-1603)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1580), ("", 1, 0, 1582))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (1608-1609)
 Reducing production term -> LID
+("DEBUG:lid", ("InnerThoughtsParam", (("", 1, 0, 1585), ("", 1, 0, 1603))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1615-1617)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 1606), ("", 1, 0, 1609))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -1695,47 +2404,77 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (1630-1631)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1615), ("", 1, 0, 1617))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1634-1636)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"name\\\":\"", (("", 1, 0, 1620), ("", 1, 0, 1631))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1639-1649)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1634), ("", 1, 0, 1636))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (1654-1655)
 Reducing production term -> LID
+("DEBUG:lid", ("namestring", (("", 1, 0, 1639), ("", 1, 0, 1649))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1658-1660)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 1652), ("", 1, 0, 1655))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -1751,100 +2490,162 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (1676-1677)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1658), ("", 1, 0, 1660))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1680-1682)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"content\\\":\"", (("", 1, 0, 1663), ("", 1, 0, 1677))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1685-1691)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1680), ("", 1, 0, 1682))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1694-1696)
 Reducing production term -> LID
+("DEBUG:lid", ("string", (("", 1, 0, 1685), ("", 1, 0, 1691))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (1701-1702)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1694), ("", 1, 0, 1696))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1705-1707)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 1699), ("", 1, 0, 1702))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1710-1731)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1705), ("", 1, 0, 1707))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1734-1736)
 Reducing production term -> LID
+("DEBUG:lid", ("RequestHeartbeatParam", (("", 1, 0, 1710), ("", 1, 0, 1731))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 125)
 Lookahead token is now QID (1741-1742)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1734), ("", 1, 0, 1736))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (1742-1743)
 Reducing production term -> QID
+("DEBUG:quid", ("\"}\"", (("", 1, 0, 1739), ("", 1, 0, 1742))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("CoreMemoryAppendParams", (("", 1, 0, 1547), ("", 1, 0, 1569))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -1863,38 +2664,62 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1777-1779)
 Reducing production term -> QID
+("DEBUG:quid", ("\"{\"", (("", 1, 0, 1771), ("", 1, 0, 1774))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1782-1800)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1777), ("", 1, 0, 1779))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (1805-1806)
 Reducing production term -> LID
+("DEBUG:lid", ("InnerThoughtsParam", (("", 1, 0, 1782), ("", 1, 0, 1800))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1812-1814)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 1803), ("", 1, 0, 1806))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -1907,47 +2732,77 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (1827-1828)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1812), ("", 1, 0, 1814))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1831-1833)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"name\\\":\"", (("", 1, 0, 1817), ("", 1, 0, 1828))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1836-1846)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1831), ("", 1, 0, 1833))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (1851-1852)
 Reducing production term -> LID
+("DEBUG:lid", ("namestring", (("", 1, 0, 1836), ("", 1, 0, 1846))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1855-1857)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 1849), ("", 1, 0, 1852))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -1967,47 +2822,77 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (1877-1878)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1855), ("", 1, 0, 1857))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1881-1883)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"old_content\\\":\"", (("", 1, 0, 1860), ("", 1, 0, 1878))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1886-1892)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1881), ("", 1, 0, 1883))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (1897-1898)
 Reducing production term -> LID
+("DEBUG:lid", ("string", (("", 1, 0, 1886), ("", 1, 0, 1892))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1901-1903)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 1895), ("", 1, 0, 1898))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -2027,100 +2912,162 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (1923-1924)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1901), ("", 1, 0, 1903))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1927-1929)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"new_content\\\":\"", (("", 1, 0, 1906), ("", 1, 0, 1924))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1932-1938)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1927), ("", 1, 0, 1929))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1941-1943)
 Reducing production term -> LID
+("DEBUG:lid", ("string", (("", 1, 0, 1932), ("", 1, 0, 1938))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (1948-1949)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1941), ("", 1, 0, 1943))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (1952-1954)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 1946), ("", 1, 0, 1949))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1957-1978)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1952), ("", 1, 0, 1954))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (1981-1983)
 Reducing production term -> LID
+("DEBUG:lid", ("RequestHeartbeatParam", (("", 1, 0, 1957), ("", 1, 0, 1978))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 125)
 Lookahead token is now QID (1988-1989)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 1981), ("", 1, 0, 1983))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (1989-1990)
 Reducing production term -> QID
+("DEBUG:quid", ("\"}\"", (("", 1, 0, 1986), ("", 1, 0, 1989))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("CoreMemoryReplaceParams", (("", 1, 0, 1743), ("", 1, 0, 1766))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -2139,38 +3086,62 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2025-2027)
 Reducing production term -> QID
+("DEBUG:quid", ("\"{\"", (("", 1, 0, 2019), ("", 1, 0, 2022))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2030-2048)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2025), ("", 1, 0, 2027))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (2053-2054)
 Reducing production term -> LID
+("DEBUG:lid", ("InnerThoughtsParam", (("", 1, 0, 2030), ("", 1, 0, 2048))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2060-2062)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 2051), ("", 1, 0, 2054))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -2184,56 +3155,92 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (2076-2077)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2060), ("", 1, 0, 2062))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2080-2082)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"query\\\":\"", (("", 1, 0, 2065), ("", 1, 0, 2077))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2085-2091)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2080), ("", 1, 0, 2082))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2094-2096)
 Reducing production term -> LID
+("DEBUG:lid", ("string", (("", 1, 0, 2085), ("", 1, 0, 2091))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (2101-2102)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2094), ("", 1, 0, 2096))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2105-2107)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 2099), ("", 1, 0, 2102))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -2246,100 +3253,162 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (2120-2121)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2105), ("", 1, 0, 2107))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2124-2126)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"page\\\":\"", (("", 1, 0, 2110), ("", 1, 0, 2121))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2129-2135)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2124), ("", 1, 0, 2126))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2138-2140)
 Reducing production term -> LID
+("DEBUG:lid", ("number", (("", 1, 0, 2129), ("", 1, 0, 2135))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (2145-2146)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2138), ("", 1, 0, 2140))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2149-2151)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 2143), ("", 1, 0, 2146))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2154-2175)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2149), ("", 1, 0, 2151))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2178-2180)
 Reducing production term -> LID
+("DEBUG:lid", ("RequestHeartbeatParam", (("", 1, 0, 2154), ("", 1, 0, 2175))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 125)
 Lookahead token is now QID (2185-2186)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2178), ("", 1, 0, 2180))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (2186-2187)
 Reducing production term -> QID
+("DEBUG:quid", ("\"}\"", (("", 1, 0, 2183), ("", 1, 0, 2186))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("ConversationSearchParams", (("", 1, 0, 1990), ("", 1, 0, 2014))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -2358,38 +3427,62 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2226-2228)
 Reducing production term -> QID
+("DEBUG:quid", ("\"{\"", (("", 1, 0, 2220), ("", 1, 0, 2223))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2231-2249)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2226), ("", 1, 0, 2228))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (2254-2255)
 Reducing production term -> LID
+("DEBUG:lid", ("InnerThoughtsParam", (("", 1, 0, 2231), ("", 1, 0, 2249))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2261-2263)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 2252), ("", 1, 0, 2255))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -2408,56 +3501,92 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (2282-2283)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2261), ("", 1, 0, 2263))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2286-2288)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"start_date\\\":\"", (("", 1, 0, 2266), ("", 1, 0, 2283))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2291-2297)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2286), ("", 1, 0, 2288))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2300-2302)
 Reducing production term -> LID
+("DEBUG:lid", ("string", (("", 1, 0, 2291), ("", 1, 0, 2297))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (2307-2308)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2300), ("", 1, 0, 2302))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2314-2316)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 2305), ("", 1, 0, 2308))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -2474,56 +3603,92 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (2333-2334)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2314), ("", 1, 0, 2316))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2337-2339)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"end_date\\\":\"", (("", 1, 0, 2319), ("", 1, 0, 2334))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2342-2348)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2337), ("", 1, 0, 2339))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2351-2353)
 Reducing production term -> LID
+("DEBUG:lid", ("string", (("", 1, 0, 2342), ("", 1, 0, 2348))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (2358-2359)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2351), ("", 1, 0, 2353))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2362-2364)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 2356), ("", 1, 0, 2359))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -2536,100 +3701,162 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (2377-2378)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2362), ("", 1, 0, 2364))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2381-2383)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"page\\\":\"", (("", 1, 0, 2367), ("", 1, 0, 2378))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2386-2392)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2381), ("", 1, 0, 2383))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2395-2397)
 Reducing production term -> LID
+("DEBUG:lid", ("number", (("", 1, 0, 2386), ("", 1, 0, 2392))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (2402-2403)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2395), ("", 1, 0, 2397))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2406-2408)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 2400), ("", 1, 0, 2403))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2411-2432)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2406), ("", 1, 0, 2408))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2435-2437)
 Reducing production term -> LID
+("DEBUG:lid", ("RequestHeartbeatParam", (("", 1, 0, 2411), ("", 1, 0, 2432))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 125)
 Lookahead token is now QID (2442-2443)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2435), ("", 1, 0, 2437))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (2443-2444)
 Reducing production term -> QID
+("DEBUG:quid", ("\"}\"", (("", 1, 0, 2440), ("", 1, 0, 2443))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("ConversationSearchDateParams", (("", 1, 0, 2187), ("", 1, 0, 2215))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -2648,38 +3875,62 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2481-2483)
 Reducing production term -> QID
+("DEBUG:quid", ("\"{\"", (("", 1, 0, 2475), ("", 1, 0, 2478))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2486-2504)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2481), ("", 1, 0, 2483))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (2510-2511)
 Reducing production term -> LID
+("DEBUG:lid", ("InnerThoughtsParam", (("", 1, 0, 2486), ("", 1, 0, 2504))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2514-2516)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 2508), ("", 1, 0, 2511))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -2695,100 +3946,162 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (2532-2533)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2514), ("", 1, 0, 2516))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2536-2538)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"content\\\":\"", (("", 1, 0, 2519), ("", 1, 0, 2533))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2541-2547)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2536), ("", 1, 0, 2538))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2550-2552)
 Reducing production term -> LID
+("DEBUG:lid", ("string", (("", 1, 0, 2541), ("", 1, 0, 2547))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (2557-2558)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2550), ("", 1, 0, 2552))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2561-2563)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 2555), ("", 1, 0, 2558))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2566-2587)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2561), ("", 1, 0, 2563))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2590-2592)
 Reducing production term -> LID
+("DEBUG:lid", ("RequestHeartbeatParam", (("", 1, 0, 2566), ("", 1, 0, 2587))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 125)
 Lookahead token is now QID (2597-2598)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2590), ("", 1, 0, 2592))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (2598-2599)
 Reducing production term -> QID
+("DEBUG:quid", ("\"}\"", (("", 1, 0, 2595), ("", 1, 0, 2598))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("ArchivalMemoryInsertParams", (("", 1, 0, 2444), ("", 1, 0, 2470))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -2807,38 +4120,62 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2636-2638)
 Reducing production term -> QID
+("DEBUG:quid", ("\"{\"", (("", 1, 0, 2630), ("", 1, 0, 2633))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2641-2659)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2636), ("", 1, 0, 2638))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (2664-2665)
 Reducing production term -> LID
+("DEBUG:lid", ("InnerThoughtsParam", (("", 1, 0, 2641), ("", 1, 0, 2659))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2667-2669)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 2662), ("", 1, 0, 2665))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -2852,56 +4189,92 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (2683-2684)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2667), ("", 1, 0, 2669))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2687-2689)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"query\\\":\"", (("", 1, 0, 2672), ("", 1, 0, 2684))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2692-2698)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2687), ("", 1, 0, 2689))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2701-2703)
 Reducing production term -> LID
+("DEBUG:lid", ("string", (("", 1, 0, 2692), ("", 1, 0, 2698))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (2708-2709)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2701), ("", 1, 0, 2703))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2712-2714)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 2706), ("", 1, 0, 2709))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
@@ -2914,100 +4287,162 @@ State 13:
 ("DEBUG2:rs", 58)
 Lookahead token is now QID (2727-2728)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2712), ("", 1, 0, 2714))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2731-2733)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"page\\\":\"", (("", 1, 0, 2717), ("", 1, 0, 2728))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2736-2742)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2731), ("", 1, 0, 2733))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2745-2747)
 Reducing production term -> LID
+("DEBUG:lid", ("number", (("", 1, 0, 2736), ("", 1, 0, 2742))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 44)
 Lookahead token is now QID (2752-2753)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2745), ("", 1, 0, 2747))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2756-2758)
 Reducing production term -> QID
+("DEBUG:quid", ("\",\"", (("", 1, 0, 2750), ("", 1, 0, 2753))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2761-2782)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2756), ("", 1, 0, 2758))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2785-2787)
 Reducing production term -> LID
+("DEBUG:lid", ("RequestHeartbeatParam", (("", 1, 0, 2761), ("", 1, 0, 2782))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 ("DEBUG2:rs", 125)
 Lookahead token is now QID (2792-2793)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2785), ("", 1, 0, 2787))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (2793-2794)
 Reducing production term -> QID
+("DEBUG:quid", ("\"}\"", (("", 1, 0, 2790), ("", 1, 0, 2793))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("ArchivalMemorySearchParams", (("", 1, 0, 2599), ("", 1, 0, 2625))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -3042,35 +4477,55 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2841-2843)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"inner_thoughts\\\":\"", (("", 1, 0, 2817), ("", 1, 0, 2838))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2846-2852)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2841), ("", 1, 0, 2843))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now NEWLINE (2852-2853)
 Reducing production term -> LID
+("DEBUG:lid", ("string", (("", 1, 0, 2846), ("", 1, 0, 2852))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("InnerThoughtsParam", (("", 1, 0, 2794), ("", 1, 0, 2812))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -3108,35 +4563,55 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now LID (2906-2908)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"request_heartbeat\\\":\"", (("", 1, 0, 2879), ("", 1, 0, 2903))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now LID (2911-2918)
 Reducing production term -> LID
+("DEBUG:lid", ("ws", (("", 1, 0, 2906), ("", 1, 0, 2908))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (LID) to state 13
 State 13:
 Lookahead token is now NEWLINE (2918-2919)
 Reducing production term -> LID
+("DEBUG:lid", ("boolean", (("", 1, 0, 2911), ("", 1, 0, 2918))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("RequestHeartbeatParam", (("", 1, 0, 2853), ("", 1, 0, 2874))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -3161,12 +4636,19 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now BAR (2946-2947)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"human\\\"\"", (("", 1, 0, 2934), ("", 1, 0, 2945))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Shifting (BAR) to state 29
 State 29:
@@ -3186,17 +4668,25 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (2961-2962)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"persona\\\"\"", (("", 1, 0, 2948), ("", 1, 0, 2961))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 31:
 Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("namestring", (("", 1, 0, 2919), ("", 1, 0, 2929))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -3216,10 +4706,16 @@ State 10:
 "("
 Lookahead token is now LPAREN (2980-2981)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"\"", (("", 1, 0, 2973), ("", 1, 0, 2977))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (LPAREN) to state 11
 State 11:
@@ -3239,43 +4735,67 @@ Shifting (REGEX) to state 9
 State 9:
 Lookahead token is now STAR (2991-2992)
 Reducing production term -> REGEX
+("DEBUG:class", ("\"TODO\"", (("", 1, 0, 2981), ("", 1, 0, 2991))))
+["DEBUG:cterm/class"]
+["DEBUG:term/cterms"]
 State 17:
 Shifting (STAR) to state 18
 State 18:
 Lookahead token is now RPAREN (2992-2993)
 Reducing production factor -> term STAR
+["DEBUG:star"]
+["DEBUG:star"]
+["DEBUG:termfactor"]
+["DEBUG:factormod"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 21:
 Shifting (RPAREN) to state 22
 State 22:
 ("DEBUG:rs", "\\\"")
 Lookahead token is now QID (2999-3000)
 Reducing production term -> LPAREN list(NEWLINE) rhs RPAREN
+["DEBUG:rhs"]
+["DEBUG:cterm/group"]
+["DEBUG:term/cterms"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (3000-3001)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\\"\"", (("", 1, 0, 2996), ("", 1, 0, 3000))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("string", (("", 1, 0, 2962), ("", 1, 0, 2968))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -3297,12 +4817,19 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now BAR (3020-3021)
 Reducing production term -> QID
+("DEBUG:quid", ("\"true\"", (("", 1, 0, 3013), ("", 1, 0, 3019))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Shifting (BAR) to state 29
 State 29:
@@ -3318,17 +4845,25 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (3029-3030)
 Reducing production term -> QID
+("DEBUG:quid", ("\"false\"", (("", 1, 0, 3022), ("", 1, 0, 3029))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 31:
 Reducing production alternation -> alternation BAR list(NEWLINE) concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("boolean", (("", 1, 0, 3001), ("", 1, 0, 3008))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -3346,17 +4881,25 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (3039-3040)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\"", (("", 1, 0, 3037), ("", 1, 0, 3039))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("ws", (("", 1, 0, 3030), ("", 1, 0, 3032))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -3379,20 +4922,30 @@ Shifting (REGEX) to state 9
 State 9:
 Lookahead token is now PLUS (3056-3057)
 Reducing production term -> REGEX
+("DEBUG:class", ("\"TODO\"", (("", 1, 0, 3051), ("", 1, 0, 3056))))
+["DEBUG:cterm/class"]
+["DEBUG:term/cterms"]
 State 17:
 Shifting (PLUS) to state 20
 State 20:
 Lookahead token is now NEWLINE (3057-3058)
 Reducing production factor -> term PLUS
+["DEBUG:plus"]
+["DEBUG:mod"]
+["DEBUG:termfactor"]
+["DEBUG:factormod"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("number", (("", 1, 0, 3040), ("", 1, 0, 3046))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:

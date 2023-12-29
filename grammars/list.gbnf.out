@@ -1,4 +1,4 @@
-Done: 18% (71/376, 305 left) (jobs: 0)                                      Done: 18% (72/380, 308 left) (jobs: 0)                                      Hello, World!
+Done: 2% (9/366, 357 left) (jobs: 0)                                    Done: 18% (72/380, 308 left) (jobs: 0)                                      Hello, World!
 State 0:
 Lookahead token is now LID (0-4)
 Reducing production list(NEWLINE) ->
@@ -14,20 +14,30 @@ Shifting (LID) to state 13
 State 13:
 Lookahead token is now PLUS (13-14)
 Reducing production term -> LID
+("DEBUG:lid", ("item", (("", 1, 0, 9), ("", 1, 0, 13))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Shifting (PLUS) to state 20
 State 20:
 Lookahead token is now NEWLINE (14-15)
 Reducing production factor -> term PLUS
+["DEBUG:plus"]
+["DEBUG:mod"]
+["DEBUG:termfactor"]
+["DEBUG:factormod"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("root", (("", 1, 0, 0), ("", 1, 0, 4))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -88,15 +98,24 @@ State 10:
 "]"
 Lookahead token is now REGEX (101-102)
 Reducing production term -> QID
+("DEBUG:quid", ("\"- \"", (("", 1, 0, 66), ("", 1, 0, 70))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (REGEX) to state 9
 State 9:
 Lookahead token is now PLUS (102-103)
 Reducing production term -> REGEX
+("DEBUG:class", ("\"TODO\"", (("", 1, 0, 71), ("", 1, 0, 102))))
+["DEBUG:cterm/class"]
+["DEBUG:term/cterms"]
 State 17:
 Shifting (PLUS) to state 20
 State 20:
@@ -104,24 +123,37 @@ State 20:
 ("DEBUG2:rs", 110)
 Lookahead token is now QID (107-108)
 Reducing production factor -> term PLUS
+["DEBUG:plus"]
+["DEBUG:mod"]
+["DEBUG:termfactor"]
+["DEBUG:factormod"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now NEWLINE (108-109)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\n\"", (("", 1, 0, 104), ("", 1, 0, 108))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("item", (("", 1, 0, 57), ("", 1, 0, 61))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:

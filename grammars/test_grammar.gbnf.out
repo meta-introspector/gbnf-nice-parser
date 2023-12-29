@@ -1,4 +1,4 @@
-Done: 18% (71/376, 305 left) (jobs: 0)                                      Done: 18% (72/380, 308 left) (jobs: 0)                                      Hello, World!
+Done: 2% (9/366, 357 left) (jobs: 0)                                    Done: 18% (72/380, 308 left) (jobs: 0)                                      Hello, World!
 State 0:
 Lookahead token is now LID (0-4)
 Reducing production list(NEWLINE) ->
@@ -22,39 +22,61 @@ State 13:
 ("DEBUG2:rs", 110)
 Lookahead token is now QID (18-19)
 Reducing production term -> LID
+("DEBUG:lid", ("line", (("", 1, 0, 10), ("", 1, 0, 14))))
+["DEBUG:sterm/lid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Shifting (QID) to state 10
 State 10:
 Lookahead token is now RPAREN (19-20)
 Reducing production term -> QID
+("DEBUG:quid", ("\"\\n\"", (("", 1, 0, 15), ("", 1, 0, 19))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 25:
 Reducing production concatenation -> concatenation factor
+["DEBUG:concat1"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 21:
 Shifting (RPAREN) to state 22
 State 22:
 Lookahead token is now NEWLINE (20-21)
 Reducing production term -> LPAREN list(NEWLINE) rhs RPAREN
+["DEBUG:rhs"]
+["DEBUG:cterm/group"]
+["DEBUG:term/cterms"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("root", (("", 1, 0, 0), ("", 1, 0, 4))), 0)
 State 38:
 Shifting (NEWLINE) to state 39
 State 39:
@@ -83,17 +105,25 @@ Shifting (QID) to state 10
 State 10:
 Lookahead token is now EOF (43-43)
 Reducing production term -> QID
+("DEBUG:quid", ("\"Hello World\"", (("", 1, 0, 30), ("", 1, 0, 43))))
+["DEBUG:sterm/quid"]
+["DEBUG:term/sterm"]
 State 17:
 Reducing production factor -> term
+["DEBUG:termfactor"]
+["DEBUG:factor"]
 State 23:
 Reducing production concatenation -> factor
+["DEBUG:concat2"]
 State 24:
 Reducing production alternation -> concatenation
+["DEBUG:alt"]
 State 28:
 Reducing production rhs -> alternation
+["DEBUG:rhs"]
 State 32:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("line", (("", 1, 0, 21), ("", 1, 0, 25))), 0)
 State 38:
 Reducing production separated_nonempty_list(nonempty_list(NEWLINE),rule) -> rule
 State 42:
@@ -109,7 +139,7 @@ State 36:
 Reducing production postlude -> EOF
 State 37:
 Reducing production grammar -> list(NEWLINE) rules list(NEWLINE) postlude
-["DEBUG:rs"]
+("DEBUG:grammar", 0, 0)
 State 43:
 Accepting
 [""]

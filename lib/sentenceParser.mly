@@ -56,7 +56,7 @@ separated_nonempty_list(NEWLINE+, rule)  {
 grammar:
   rs =  NEWLINE* rules NEWLINE* postlude
     {
-      (print_endline (Batteries.dump ("DEBUG:rs",rs)));
+      (print_endline (Batteries.dump ("DEBUG:grammar",rs, $2)));
       {
         pg_filename          = ""; (* filled in by the caller *)
         pg_rules             = [];
@@ -69,7 +69,7 @@ symbol = LID
 COLONCOLONEQUAL
 branches = rhs(* separated_nonempty_list(BAR, symbol+) *)
     {
-      (print_endline (Batteries.dump ("DEBUG:branches1", branches)));
+      (print_endline (Batteries.dump ("DEBUG:rule", symbol, branches)));
       {
         pr_nt          = Positions.value symbol;
         pr_positions   = [ Positions.position symbol ];
@@ -86,79 +86,79 @@ located(X):
     { with_loc $loc x }
 
 %inline qid:
-  | QID {}
+  | QID {      (print_endline (Batteries.dump ("DEBUG:quid", $1)))}
 %inline lid:
-  | LID {}
+  | LID {      (print_endline (Batteries.dump ("DEBUG:lid", $1)))}
 
 %inline sterm:
-  | qid {}
-  | lid {}
+  | qid {      (print_endline (Batteries.dump ("DEBUG:sterm/quid", $1)))}
+  | lid {      (print_endline (Batteries.dump ("DEBUG:sterm/lid", $1)))}
 
 term:
-  | complexterms {} 
-  | sterm {}
+  | complexterms {      (print_endline (Batteries.dump ("DEBUG:term/cterms", $1)))}
+  | sterm {      (print_endline (Batteries.dump ("DEBUG:term/sterm", $1)))}
 
 %inline  complexterms: 
-   | group1 {} 
-   | class1  {} 
+  | group1 {      (print_endline (Batteries.dump ("DEBUG:cterm/group", $1)))}
+   | class1  {      (print_endline (Batteries.dump ("DEBUG:cterm/class", $1)))}
 
 %inline  group1: 
- | LPAREN NEWLINE* rhs  RPAREN {} 
+ | LPAREN NEWLINE* rhs  RPAREN {      (print_endline (Batteries.dump ("DEBUG:rhs", $1)))} 
 
 %inline class1: 
 /* | LBRACE char_class  RBRACE {} */
-  |  char_class   {}
-  |  REGEX {}
+  |  char_class   {      (print_endline (Batteries.dump ("DEBUG:class1a", $1)))}
+  |  REGEX {      (print_endline (Batteries.dump ("DEBUG:class", $1)))}
 
 %inline termfactor:
-  | term   {}
+  | term   {      (print_endline (Batteries.dump ("DEBUG:termfactor", $1)))}
 
 factor:
-  | termfactor modifier {}
-  | termfactor  {}
+  | termfactor modifier {      (print_endline (Batteries.dump ("DEBUG:factormod", $1)))}
+  | termfactor  {      (print_endline (Batteries.dump ("DEBUG:factor", $1)))}
 
 %inline modifier:
-  | fplus {}
-  | fquest {}
-  | fstar {}
+  | fplus {      (print_endline (Batteries.dump ("DEBUG:mod", $1)))}
+  | fquest {      (print_endline (Batteries.dump ("DEBUG:quest", $1)))}
+  | fstar {      (print_endline (Batteries.dump ("DEBUG:star", $1)))}
 
 %inline fstar:
-  |  STAR {}
+  |  STAR {      (print_endline (Batteries.dump ("DEBUG:star", $1)))}
 %inline fquest:
-  |  QUESTION {}
+  |  QUESTION {      (print_endline (Batteries.dump ("DEBUG:quest", $1)))}
 %inline fplus:
-  | PLUS {}
+  | PLUS {      (print_endline (Batteries.dump ("DEBUG:plus", $1)))}
 
 concatenation:
-  | concatenation factor  {}
-  | factor {}
+  | concatenation factor  {      (print_endline (Batteries.dump ("DEBUG:concat1", $1)))}
+  | factor {      (print_endline (Batteries.dump ("DEBUG:concat2", $1)))}
 
 alternation:
   | alternation BAR NEWLINE* concatenation
-  | concatenation {}
+  | concatenation {      (print_endline (Batteries.dump ("DEBUG:alt", $1)))}
 
 rhs:
-  | alternation {}
+  | alternation {      (print_endline (Batteries.dump ("DEBUG:rhs", $1)))}
 
 
 char_class:
     CARET char_class1
     /* { Cset.complement $2 } */
-{   (print_endline (Batteries.dump ("DEBUG:rs",$2))) }
+{   (print_endline (Batteries.dump ("DEBUG:ccrs",$2))) }
   | char_class1
     /* { $1 } */
-    {   (print_endline (Batteries.dump ("DEBUG:rs",$1))) }
+    {   (print_endline (Batteries.dump ("DEBUG:cc2rs",$1))) }
 ;
 char_class1:
     Tchar DASH Tchar
     /* { Cset.interval $1 $3 } */
-    {   (print_endline (Batteries.dump ("DEBUG:rs",$1,$2))) }
+    {   (print_endline (Batteries.dump ("DEBUG:cc3rs",$1,$2))) }
   | char_class1 Tchar
     /* Cset.singleton $1 */
-    {   (print_endline (Batteries.dump ("DEBUG:rs",$1))) }
+    {   (print_endline (Batteries.dump ("DEBUG:cc4rs",$1))) }
   | Tchar
     /* Cset.singleton $1 */
-    {   (print_endline (Batteries.dump ("DEBUG:rs",$1))) }
+    {   (print_endline (Batteries.dump ("DEBUG:cc5rs",$1))) }
   /* | char_class1 char_class1  CONCAT */
   /*       { Cset.union $1 $2 } */
 ;
