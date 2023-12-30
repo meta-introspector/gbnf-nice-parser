@@ -62,14 +62,17 @@ NEWLINE
 rules:
     | rules NEWLINE+ rule
                        {
-		         (print_endline (Batteries.dump ("DEBUG:OLDRULE1",$3)))
+		         (print_endline (Batteries.dump ("DEBUG:OLDRULE1",$3)));
+                         Rule $3
 		       }
 
      |  NEWLINE+ rule    {
-(print_endline (Batteries.dump ("DEBUG:OLDRULE",$1)))
+                     (print_endline (Batteries.dump ("DEBUG:OLDRULE",$1)));
+                     Rule $2
 } 
      |rule  {
-(print_endline (Batteries.dump ("DEBUG:OLDRULE",$1)))
+(print_endline (Batteries.dump ("DEBUG:OLDRULE",$1)));
+Rule $1
 } 
 
 grammar:

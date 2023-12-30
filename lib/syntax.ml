@@ -381,4 +381,5 @@ type partial_grammar =
    | Plus
    | CharInt of int
    | CharClass
+   | Rule of parameterized_rule
  
