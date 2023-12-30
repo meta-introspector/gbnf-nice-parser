@@ -60,12 +60,20 @@ NEWLINE
 %%
 
 rules:
-separated_nonempty_list(NEWLINE+, rule)  {
-			 (print_endline (Batteries.dump ("DEBUG:OLDRULE",$1)))
-		       } 
+    | rules NEWLINE+ rule
+                       {
+		         (print_endline (Batteries.dump ("DEBUG:OLDRULE1",$3)))
+		       }
+
+     |  NEWLINE+ rule    {
+(print_endline (Batteries.dump ("DEBUG:OLDRULE",$1)))
+} 
+     |rule  {
+(print_endline (Batteries.dump ("DEBUG:OLDRULE",$1)))
+} 
 
 grammar:
-  rs =  NEWLINE* rules NEWLINE* postlude
+  rs =  rules postlude
     {
       (print_endline (Batteries.dump ("DEBUG:grammar",rs, $2)));
       {
@@ -78,7 +86,7 @@ rule:
 symbol = LID
 /* the symbol that is being defined */
 COLONCOLONEQUAL
-branches = rhs(* separated_nonempty_list(BAR, symbol+) *)
+branches = rhs
     {
       (print_endline (Batteries.dump ("DEBUG:rule", symbol, branches)));
       {
@@ -88,9 +96,12 @@ branches = rhs(* separated_nonempty_list(BAR, symbol+) *)
       }
     }
 
-postlude:
-  EOF
-    { None }
+    postlude:
+    NEWLINE*
+             EOF
+               { 
+(print_endline (Batteries.dump ("DEBUG:DONE"))) 
+               }
 
 located(X):
   x = X
