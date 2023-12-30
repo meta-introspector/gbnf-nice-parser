@@ -368,3 +368,17 @@ type partial_grammar =
       p_symbol_attributes  : (parameter list * attributes) list;
       p_rules              : parameterized_rule StringMap.t;
     }
+
+
+ type mystringpos = string Positions.located
+ 
+ type myfactor =
+   | SFactor of mystringpos
+   | CFactor of mystringpos * mystringpos
+   | NFactor of  myfactor
+   | Star
+   | Question
+   | Plus
+   | CharInt of int
+   | CharClass
+ 
