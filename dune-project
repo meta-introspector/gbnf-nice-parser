@@ -4,16 +4,11 @@
 (using menhir 2.0)
 (generate_opam_files true)
 
-(source
- (github username/reponame))
+(authors "James Michael DuPont")
 
-(authors "Author Name")
+(license GPLV3)
 
-(maintainers "Maintainer Name")
-
-(license LICENSE)
-
-(documentation https://url/to/documentation)
+(source (github meta-introspector/gbnf-nice-parser))
 
 (package
  (name gbnf_parser)

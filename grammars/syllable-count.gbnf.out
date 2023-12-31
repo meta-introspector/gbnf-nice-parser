@@ -1,101 +1,133 @@
-Done: 94% (298/315, 17 left) (jobs: 0)                                      Hello, World!
+Done: 2% (9/366, 357 left) (jobs: 0)                                    Done: 18% (72/380, 308 left) (jobs: 0)                                      Hello, World!
 State 0:
 Lookahead token is now LID (0-4)
-Reducing production list(NEWLINE) ->
+Shifting (LID) to state 3
 State 3:
-Shifting (LID) to state 4
-State 4:
 (1, 9, "::=")
 Lookahead token is now COLONCOLONEQUAL (6-9)
-Shifting (COLONCOLONEQUAL) to state 5
-State 5:
+Shifting (COLONCOLONEQUAL) to state 4
+State 4:
 Lookahead token is now LID (10-15)
-Shifting (LID) to state 13
-State 13:
+Shifting (LID) to state 14
+State 14:
 "("
 Lookahead token is now LPAREN (16-17)
 Reducing production term -> LID
-State 17:
+("DEBUG:lid", ("ident", (("", 1, 0, 10), ("", 1, 0, 15))))
+("DEBUG:sterm/lid", ("ident", (("", 1, 0, 10), ("", 1, 0, 15))))
+("DEBUG:term/sterm", (("ident", (("", 1, 0, 10), ("", 1, 0, 15)))))
+State 18:
 Reducing production factor -> term
-State 23:
-Reducing production concatenation -> factor
+("DEBUG:termfactor", Tag2 ((("ident", (("", 1, 0, 10), ("", 1, 0, 15))))))
 State 24:
-Shifting (LPAREN) to state 11
-State 11:
+Reducing production concatenation -> factor
+("DEBUG:concat2", Tag2 (Tag2 (Tag2 ((("ident", (("", 1, 0, 10), ("", 1, 0, 15))))))))
+State 25:
+Shifting (LPAREN) to state 10
+State 10:
 ("DEBUG2:rs", 45)
 Lookahead token is now QID (19-20)
 Reducing production list(NEWLINE) ->
-State 12:
-Shifting (QID) to state 10
-State 10:
+State 13:
+Shifting (QID) to state 9
+State 9:
 Lookahead token is now LID (21-26)
 Reducing production term -> QID
-State 17:
+("DEBUG:quid", ("\"-\"", (("", 1, 0, 17), ("", 1, 0, 20))))
+("DEBUG:sterm/quid", ("\"-\"", (("", 1, 0, 17), ("", 1, 0, 20))))
+("DEBUG:term/sterm", (("\"-\"", (("", 1, 0, 17), ("", 1, 0, 20)))))
+State 18:
 Reducing production factor -> term
-State 23:
-Reducing production concatenation -> factor
+("DEBUG:termfactor", Tag2 ((("\"-\"", (("", 1, 0, 17), ("", 1, 0, 20))))))
 State 24:
-Shifting (LID) to state 13
-State 13:
+Reducing production concatenation -> factor
+("DEBUG:concat2", Tag2 (Tag2 (Tag2 ((("\"-\"", (("", 1, 0, 17), ("", 1, 0, 20))))))))
+State 25:
+Shifting (LID) to state 14
+State 14:
 Lookahead token is now RPAREN (26-27)
 Reducing production term -> LID
-State 17:
+("DEBUG:lid", ("ident", (("", 1, 0, 21), ("", 1, 0, 26))))
+("DEBUG:sterm/lid", ("ident", (("", 1, 0, 21), ("", 1, 0, 26))))
+("DEBUG:term/sterm", (("ident", (("", 1, 0, 21), ("", 1, 0, 26)))))
+State 18:
 Reducing production factor -> term
-State 25:
+("DEBUG:termfactor", Tag2 ((("ident", (("", 1, 0, 21), ("", 1, 0, 26))))))
+State 26:
 Reducing production concatenation -> concatenation factor
-State 24:
+("DEBUG:concat1", Tag2 (Tag2 (Tag2 (Tag2 ((("\"-\"", (("", 1, 0, 17), ("", 1, 0, 20)))))))))
+State 25:
 Reducing production alternation -> concatenation
-State 28:
+("DEBUG:alt", Tag2 (Tag2 (Tag2 (Tag2 (Tag2 ((("\"-\"", (("", 1, 0, 17), ("", 1, 0, 20))))))))))
+State 29:
 Reducing production rhs -> alternation
-State 21:
-Shifting (RPAREN) to state 22
+("DEBUG:rhs", Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 ((("\"-\"", (("", 1, 0, 17), ("", 1, 0, 20)))))))))))
 State 22:
+Shifting (RPAREN) to state 23
+State 23:
 Lookahead token is now PLUS (27-28)
 Reducing production term -> LPAREN list(NEWLINE) rhs RPAREN
-State 17:
-Shifting (PLUS) to state 20
-State 20:
+("DEBUG:rhs", Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 ((("\"-\"", (("", 1, 0, 17), ("", 1, 0, 20))))))))))))
+("DEBUG:cterm/group", Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 ((("\"-\"", (("", 1, 0, 17), ("", 1, 0, 20)))))))))))))
+("DEBUG:term/cterms", Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 ((("\"-\"", (("", 1, 0, 17), ("", 1, 0, 20))))))))))))))
+State 18:
+Shifting (PLUS) to state 21
+State 21:
 ("DEBUG2:rs", 59)
 Lookahead token is now QID (31-32)
 Reducing production factor -> term PLUS
-State 25:
+["DEBUG:plus"]
+("DEBUG:mod", 2)
+("DEBUG:termfactor", Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 ((("\"-\"", (("", 1, 0, 17), ("", 1, 0, 20)))))))))))))))
+State 26:
 Reducing production concatenation -> concatenation factor
-State 24:
-Shifting (QID) to state 10
-State 10:
+("DEBUG:concat1", Tag2 (Tag2 (Tag2 (Tag2 ((("ident", (("", 1, 0, 10), ("", 1, 0, 15)))))))))
+State 25:
+Shifting (QID) to state 9
+State 9:
 Lookahead token is now NEWLINE (32-33)
 Reducing production term -> QID
-State 17:
+("DEBUG:quid", ("\";\"", (("", 1, 0, 29), ("", 1, 0, 32))))
+("DEBUG:sterm/quid", ("\";\"", (("", 1, 0, 29), ("", 1, 0, 32))))
+("DEBUG:term/sterm", (("\";\"", (("", 1, 0, 29), ("", 1, 0, 32)))))
+State 18:
 Reducing production factor -> term
-State 25:
+("DEBUG:termfactor", Tag2 ((("\";\"", (("", 1, 0, 29), ("", 1, 0, 32))))))
+State 26:
 Reducing production concatenation -> concatenation factor
-State 24:
+("DEBUG:concat1", Tag2 (Tag2 (Tag2 (Tag2 (Tag2 ((("ident", (("", 1, 0, 10), ("", 1, 0, 15))))))))))
+State 25:
 Reducing production alternation -> concatenation
-State 28:
+("DEBUG:alt", Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 ((("ident", (("", 1, 0, 10), ("", 1, 0, 15)))))))))))
+State 29:
 Reducing production rhs -> alternation
-State 32:
+("DEBUG:rhs", Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 ((("ident", (("", 1, 0, 10), ("", 1, 0, 15))))))))))))
+State 33:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
-State 38:
-Shifting (NEWLINE) to state 39
-State 39:
+("DEBUG:rule", ("root", (("", 1, 0, 0), ("", 1, 0, 4))), Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 ((("ident", (("", 1, 0, 10), ("", 1, 0, 15)))))))))))))
+State 41:
+Reducing production rules -> rule
+("DEBUG:OLDRULE", ("root", [(("", 1, 0, 0), ("", 1, 0, 4))], 0))
+State 34:
+Shifting (NEWLINE) to state 35
+State 35:
 Lookahead token is now LID (33-38)
 Reducing production nonempty_list(NEWLINE) -> NEWLINE
-State 41:
-Shifting (LID) to state 4
-State 4:
+State 37:
+Shifting (LID) to state 3
+State 3:
 (1, 42, "::=")
 Lookahead token is now COLONCOLONEQUAL (39-42)
-Shifting (COLONCOLONEQUAL) to state 5
-State 5:
+Shifting (COLONCOLONEQUAL) to state 4
+State 4:
 "["
 "a"
 "-"
 "z"
 "]"
 Lookahead token is now REGEX (47-48)
-Shifting (REGEX) to state 9
-State 9:
+Shifting (REGEX) to state 8
+State 8:
 "["
 "a"
 "-"
@@ -107,41 +139,75 @@ State 9:
 "]"
 Lookahead token is now REGEX (57-58)
 Reducing production term -> REGEX
-State 17:
+("DEBUG:class", ("\"TODO\"", (("", 1, 0, 43), ("", 1, 0, 48))))
+("DEBUG:cterm/class", (("\"TODO\"", (("", 1, 0, 43), ("", 1, 0, 48)))))
+("DEBUG:term/cterms", Tag2 ((("\"TODO\"", (("", 1, 0, 43), ("", 1, 0, 48))))))
+State 18:
 Reducing production factor -> term
-State 23:
-Reducing production concatenation -> factor
+("DEBUG:termfactor", Tag2 (Tag2 ((("\"TODO\"", (("", 1, 0, 43), ("", 1, 0, 48)))))))
 State 24:
-Shifting (REGEX) to state 9
-State 9:
+Reducing production concatenation -> factor
+("DEBUG:concat2", Tag2 (Tag2 (Tag2 (Tag2 ((("\"TODO\"", (("", 1, 0, 43), ("", 1, 0, 48)))))))))
+State 25:
+Shifting (REGEX) to state 8
+State 8:
 Lookahead token is now STAR (58-59)
 Reducing production term -> REGEX
-State 17:
-Shifting (STAR) to state 18
+("DEBUG:class", ("\"TODO\"", (("", 1, 0, 49), ("", 1, 0, 58))))
+("DEBUG:cterm/class", (("\"TODO\"", (("", 1, 0, 49), ("", 1, 0, 58)))))
+("DEBUG:term/cterms", Tag2 ((("\"TODO\"", (("", 1, 0, 49), ("", 1, 0, 58))))))
 State 18:
+Shifting (STAR) to state 19
+State 19:
 Lookahead token is now LID (60-62)
 Reducing production factor -> term STAR
-State 25:
+["DEBUG:star"]
+("DEBUG:termfactor", Tag2 (Tag2 ((("\"TODO\"", (("", 1, 0, 49), ("", 1, 0, 58)))))))
+State 26:
 Reducing production concatenation -> concatenation factor
-State 24:
-Shifting (LID) to state 13
-State 13:
+("DEBUG:concat1", Tag2 (Tag2 (Tag2 (Tag2 (Tag2 ((("\"TODO\"", (("", 1, 0, 43), ("", 1, 0, 48))))))))))
+State 25:
+Shifting (LID) to state 14
+State 14:
 Lookahead token is now NEWLINE (62-63)
 Reducing production term -> LID
-State 17:
+("DEBUG:lid", ("ws", (("", 1, 0, 60), ("", 1, 0, 62))))
+("DEBUG:sterm/lid", ("ws", (("", 1, 0, 60), ("", 1, 0, 62))))
+("DEBUG:term/sterm", (("ws", (("", 1, 0, 60), ("", 1, 0, 62)))))
+State 18:
 Reducing production factor -> term
-State 25:
+("DEBUG:termfactor", Tag2 ((("ws", (("", 1, 0, 60), ("", 1, 0, 62))))))
+State 26:
 Reducing production concatenation -> concatenation factor
-State 24:
+("DEBUG:concat1", Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 ((("\"TODO\"", (("", 1, 0, 43), ("", 1, 0, 48)))))))))))
+State 25:
 Reducing production alternation -> concatenation
-State 28:
+("DEBUG:alt", Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 ((("\"TODO\"", (("", 1, 0, 43), ("", 1, 0, 48))))))))))))
+State 29:
 Reducing production rhs -> alternation
-State 32:
+("DEBUG:rhs", Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 ((("\"TODO\"", (("", 1, 0, 43), ("", 1, 0, 48)))))))))))))
+State 33:
 Reducing production rule -> LID COLONCOLONEQUAL rhs
-["DEBUG:branches1"]
+("DEBUG:rule", ("ident", (("", 1, 0, 33), ("", 1, 0, 38))), Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 (Tag2 ((("\"TODO\"", (("", 1, 0, 43), ("", 1, 0, 48))))))))))))))
 State 38:
-Shifting (NEWLINE) to state 39
-State 39:
+Reducing production rules -> rules nonempty_list(NEWLINE) rule
+("DEBUG:OLDRULE1", ("ident", [(("", 1, 0, 33), ("", 1, 0, 38))], 0))
+State 34:
+Shifting (NEWLINE) to state 35
+State 35:
 Lookahead token is now EOF (63-63)
-Initiating error handling
-Fatal error: exception Gbnf_parser.SentenceParser.MenhirBasics.Error
+Reducing production list(NEWLINE) ->
+State 12:
+Reducing production list(NEWLINE) -> NEWLINE list(NEWLINE)
+State 39:
+Shifting (EOF) to state 40
+State 40:
+Reducing production postlude -> list(NEWLINE) EOF
+"DEBUG:DONE"
+State 36:
+Reducing production grammar -> rules postlude
+("DEBUG:grammar", Tag4 (("ident", [(("", 1, 0, 33), ("", 1, 0, 38))], 0)), 0)
+State 44:
+Accepting
+[""]
+0
