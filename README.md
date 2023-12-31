@@ -2,6 +2,14 @@ We are developing an ocaml parser for the GBNF grammar language and
 intend on deeply integrating this into the llama.cpp code via embedding
 ocaml plugins which we have poc (proof of concept) for.
 
+Installation and usage
+======================
+
+cat requirements.txt | xargs opam install -y
+eval $(opam env)
+dune describe pp lib/sentenceParser.ml > lib/sentenceParser.ml.describe
+
+
 Goals
 =====
 
