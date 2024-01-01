@@ -42,3 +42,6 @@ compile: runmenhir
 
 sentenceParser.png  : ./lib/sentenceParser.dot
 	dot ./lib/sentenceParser.dot -Tpng -Gsize=8.5,11 -Gdpi=300 -Grankdir=LR -Gorientation="[lL]*" -o sentenceParser.png  
+
+cmi:
+	find -name \*.cmi -exec ./runcmi.sh  {}  \;
