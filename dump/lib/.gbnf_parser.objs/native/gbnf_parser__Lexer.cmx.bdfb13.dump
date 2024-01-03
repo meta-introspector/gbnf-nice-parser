@@ -1,0 +1,978 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+          Ppat_construct "()" (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+          None
+        expression (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+          Pexp_apply
+          expression (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+          ]
+    ]
+  structure_item (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+          Ppat_construct "()" (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+          None
+        expression (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+          Pexp_apply
+          expression (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/lexer.ml[1,0+0]..[1,0+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+          Ppat_construct "()" (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+          None
+        expression (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+          Pexp_apply
+          expression (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+                Pexp_constant PConst_string("lib/lexer.ml",(lib/lexer.ml[1,0+0]..[1,0+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+          Ppat_construct "()" (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+          None
+        expression (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+          Pexp_apply
+          expression (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/lexer.ml[1,0+0]..[1,0+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/lexer.ml[1,0+0]..[1,0+0]) ghost
+                Pexp_constant PConst_string("lexer.ml",(lib/lexer.ml[1,0+0]..[1,0+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/lexer.ml[1,0+0]..[1,0+11])
+    Pstr_open Fresh
+    module_expr (lib/lexer.ml[1,0+5]..[1,0+11])
+      Pmod_ident "Lexing" (lib/lexer.ml[1,0+5]..[1,0+11])
+  structure_item (lib/lexer.ml[3,13+0]..[3,13+43])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[3,13+4]..[3,13+9])
+          Ppat_var "ident" (lib/lexer.ml[3,13+4]..[3,13+9])
+        expression (lib/lexer.ml[3,13+10]..[3,13+43]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/lexer.ml[3,13+10]..[3,13+13])
+            Ppat_var "str" (lib/lexer.ml[3,13+10]..[3,13+13])
+          expression (lib/lexer.ml[3,13+17]..[3,13+43])
+            Pexp_apply
+            expression (lib/lexer.ml[3,13+17]..[3,13+39])
+              Pexp_ident "String.lowercase_ascii" (lib/lexer.ml[3,13+17]..[3,13+39])
+            [
+              <arg>
+              Nolabel
+                expression (lib/lexer.ml[3,13+40]..[3,13+43])
+                  Pexp_ident "str" (lib/lexer.ml[3,13+40]..[3,13+43])
+            ]
+    ]
+  structure_item (lib/lexer.ml[5,60+0]..[9,185+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[5,60+4]..[5,60+21])
+          Ppat_var "keep_lexeme_start" (lib/lexer.ml[5,60+4]..[5,60+21])
+        expression (lib/lexer.ml[5,60+22]..[9,185+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/lexer.ml[5,60+22]..[5,60+28])
+            Ppat_var "lexbuf" (lib/lexer.ml[5,60+22]..[5,60+28])
+          expression (lib/lexer.ml[5,60+29]..[9,185+3]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/lexer.ml[5,60+29]..[5,60+30])
+              Ppat_var "f" (lib/lexer.ml[5,60+29]..[5,60+30])
+            expression (lib/lexer.ml[6,93+2]..[9,185+3])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (lib/lexer.ml[6,93+6]..[6,93+13])
+                    Ppat_var "start_p" (lib/lexer.ml[6,93+6]..[6,93+13])
+                  expression (lib/lexer.ml[6,93+16]..[6,93+37])
+                    Pexp_apply
+                    expression (lib/lexer.ml[6,93+16]..[6,93+30])
+                      Pexp_ident "lexeme_start_p" (lib/lexer.ml[6,93+16]..[6,93+30])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/lexer.ml[6,93+31]..[6,93+37])
+                          Pexp_ident "lexbuf" (lib/lexer.ml[6,93+31]..[6,93+37])
+                    ]
+              ]
+              expression (lib/lexer.ml[7,134+2]..[9,185+3])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (lib/lexer.ml[7,134+6]..[7,134+7])
+                      Ppat_var "x" (lib/lexer.ml[7,134+6]..[7,134+7])
+                    expression (lib/lexer.ml[7,134+10]..[7,134+14])
+                      Pexp_apply
+                      expression (lib/lexer.ml[7,134+10]..[7,134+11])
+                        Pexp_ident "f" (lib/lexer.ml[7,134+10]..[7,134+11])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/lexer.ml[7,134+12]..[7,134+14])
+                            Pexp_construct "()" (lib/lexer.ml[7,134+12]..[7,134+14])
+                            None
+                      ]
+                ]
+                expression (lib/lexer.ml[8,152+2]..[9,185+3])
+                  Pexp_sequence
+                  expression (lib/lexer.ml[8,152+2]..[8,152+31])
+                    Pexp_setfield
+                    expression (lib/lexer.ml[8,152+2]..[8,152+8])
+                      Pexp_ident "lexbuf" (lib/lexer.ml[8,152+2]..[8,152+8])
+                    "lex_start_p" (lib/lexer.ml[8,152+9]..[8,152+20])
+                    expression (lib/lexer.ml[8,152+24]..[8,152+31])
+                      Pexp_ident "start_p" (lib/lexer.ml[8,152+24]..[8,152+31])
+                  expression (lib/lexer.ml[9,185+2]..[9,185+3])
+                    Pexp_ident "x" (lib/lexer.ml[9,185+2]..[9,185+3])
+    ]
+  structure_item (lib/lexer.ml[12,191+0]..[14,321+22])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[12,191+4]..[12,191+32])
+          Ppat_var "extract_string_from_terminal" (lib/lexer.ml[12,191+4]..[12,191+32])
+        expression (lib/lexer.ml[12,191+33]..[14,321+22]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/lexer.ml[12,191+33]..[12,191+92])
+            Ppat_constraint
+            pattern (lib/lexer.ml[12,191+34]..[12,191+46])
+              Ppat_var "raw_terminal" (lib/lexer.ml[12,191+34]..[12,191+46])
+            core_type (lib/lexer.ml[12,191+49]..[12,191+91])
+              Ptyp_tuple
+              [
+                core_type (lib/lexer.ml[12,191+49]..[12,191+55])
+                  Ptyp_constr "string" (lib/lexer.ml[12,191+49]..[12,191+55])
+                  []
+                core_type (lib/lexer.ml[12,191+58]..[12,191+73])
+                  Ptyp_constr "Lexing.position" (lib/lexer.ml[12,191+58]..[12,191+73])
+                  []
+                core_type (lib/lexer.ml[12,191+76]..[12,191+91])
+                  Ptyp_constr "Lexing.position" (lib/lexer.ml[12,191+76]..[12,191+91])
+                  []
+              ]
+          expression (lib/lexer.ml[12,191+93]..[14,321+22])
+            Pexp_constraint
+            expression (lib/lexer.ml[13,295+2]..[14,321+22])
+              Pexp_match
+              expression (lib/lexer.ml[13,295+8]..[13,295+20])
+                Pexp_ident "raw_terminal" (lib/lexer.ml[13,295+8]..[13,295+20])
+              [
+                <case>
+                  pattern (lib/lexer.ml[14,321+4]..[14,321+15])
+                    Ppat_tuple
+                    [
+                      pattern (lib/lexer.ml[14,321+5]..[14,321+8])
+                        Ppat_var "str" (lib/lexer.ml[14,321+5]..[14,321+8])
+                      pattern (lib/lexer.ml[14,321+10]..[14,321+11])
+                        Ppat_any
+                      pattern (lib/lexer.ml[14,321+13]..[14,321+14])
+                        Ppat_any
+                    ]
+                  expression (lib/lexer.ml[14,321+19]..[14,321+22])
+                    Pexp_ident "str" (lib/lexer.ml[14,321+19]..[14,321+22])
+              ]
+            core_type (lib/lexer.ml[12,191+95]..[12,191+101])
+              Ptyp_constr "string" (lib/lexer.ml[12,191+95]..[12,191+101])
+              []
+    ]
+  structure_item (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+          Ppat_construct "()" (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+          None
+        expression (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+          Pexp_apply
+          expression (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/lexer.ml[14,321+22]..[14,321+22]) ghost,None)
+          ]
+    ]
+  structure_item (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+          Ppat_construct "()" (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+          None
+        expression (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+          Pexp_apply
+          expression (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+                Pexp_construct "()" (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+          Ppat_construct "()" (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+          None
+        expression (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+          Pexp_apply
+          expression (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+                Pexp_construct "()" (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+          Ppat_construct "()" (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+          None
+        expression (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+          Pexp_apply
+          expression (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/lexer.ml[14,321+22]..[14,321+22]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set ~absolute_filename:"lib/lexer.ml"
+let () = Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "lexer.ml"
+open Lexing
+let ident str = String.lowercase_ascii str
+let keep_lexeme_start lexbuf f =
+  let start_p = lexeme_start_p lexbuf in
+  let x = f () in lexbuf.lex_start_p <- start_p; x
+let extract_string_from_terminal
+  (raw_terminal : (string * Lexing.position * Lexing.position)) =
+  (match raw_terminal with | (str, _, _) -> str : string)
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+          Texp_apply
+          expression (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+          Texp_apply
+          expression (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+          Texp_apply
+          expression (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+                Texp_constant Const_string("lib/lexer.ml",(lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+          Texp_apply
+          expression (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost
+                Texp_constant Const_string("lexer.ml",(lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/lexer.ml[1,0+0]..lib/lexer.ml[1,0+11])
+    Tstr_open Fresh
+    module_expr (lib/lexer.ml[1,0+5]..lib/lexer.ml[1,0+11])
+      Tmod_ident "Stdlib!.Lexing"
+  structure_item (lib/lexer.ml[3,13+0]..lib/lexer.ml[3,13+43])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[3,13+4]..lib/lexer.ml[3,13+9])
+          Tpat_var "ident/1152"
+        expression (lib/lexer.ml[3,13+10]..lib/lexer.ml[3,13+43]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/lexer.ml[3,13+10]..lib/lexer.ml[3,13+13])
+                Tpat_var "str/1154"
+              expression (lib/lexer.ml[3,13+17]..lib/lexer.ml[3,13+43])
+                Texp_apply
+                expression (lib/lexer.ml[3,13+17]..lib/lexer.ml[3,13+39])
+                  Texp_ident "Stdlib!.String.lowercase_ascii"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/lexer.ml[3,13+40]..lib/lexer.ml[3,13+43])
+                      Texp_ident "str/1154"
+                ]
+          ]
+    ]
+  structure_item (lib/lexer.ml[5,60+0]..lib/lexer.ml[9,185+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[5,60+4]..lib/lexer.ml[5,60+21])
+          Tpat_var "keep_lexeme_start/1232"
+        expression (lib/lexer.ml[5,60+22]..lib/lexer.ml[9,185+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/lexer.ml[5,60+22]..lib/lexer.ml[5,60+28])
+                Tpat_var "lexbuf/1234"
+              expression (lib/lexer.ml[5,60+29]..lib/lexer.ml[9,185+3]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/lexer.ml[5,60+29]..lib/lexer.ml[5,60+30])
+                      Tpat_var "f/1235"
+                    expression (lib/lexer.ml[6,93+2]..lib/lexer.ml[9,185+3])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (lib/lexer.ml[6,93+6]..lib/lexer.ml[6,93+13])
+                            Tpat_var "start_p/1236"
+                          expression (lib/lexer.ml[6,93+16]..lib/lexer.ml[6,93+37])
+                            Texp_apply
+                            expression (lib/lexer.ml[6,93+16]..lib/lexer.ml[6,93+30])
+                              Texp_ident "Stdlib!.Lexing.lexeme_start_p"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (lib/lexer.ml[6,93+31]..lib/lexer.ml[6,93+37])
+                                  Texp_ident "lexbuf/1234"
+                            ]
+                      ]
+                      expression (lib/lexer.ml[7,134+2]..lib/lexer.ml[9,185+3])
+                        Texp_let Nonrec
+                        [
+                          <def>
+                            pattern (lib/lexer.ml[7,134+6]..lib/lexer.ml[7,134+7])
+                              Tpat_var "x/1261"
+                            expression (lib/lexer.ml[7,134+10]..lib/lexer.ml[7,134+14])
+                              Texp_apply
+                              expression (lib/lexer.ml[7,134+10]..lib/lexer.ml[7,134+11])
+                                Texp_ident "f/1235"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (lib/lexer.ml[7,134+12]..lib/lexer.ml[7,134+14])
+                                    Texp_construct "()"
+                                    []
+                              ]
+                        ]
+                        expression (lib/lexer.ml[8,152+2]..lib/lexer.ml[9,185+3])
+                          Texp_sequence
+                          expression (lib/lexer.ml[8,152+2]..lib/lexer.ml[8,152+31])
+                            Texp_setfield
+                            expression (lib/lexer.ml[8,152+2]..lib/lexer.ml[8,152+8])
+                              Texp_ident "lexbuf/1234"
+                            "lex_start_p"
+                            expression (lib/lexer.ml[8,152+24]..lib/lexer.ml[8,152+31])
+                              Texp_ident "start_p/1236"
+                          expression (lib/lexer.ml[9,185+2]..lib/lexer.ml[9,185+3])
+                            Texp_ident "x/1261"
+                ]
+          ]
+    ]
+  structure_item (lib/lexer.ml[12,191+0]..lib/lexer.ml[14,321+22])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[12,191+4]..lib/lexer.ml[12,191+32])
+          Tpat_var "extract_string_from_terminal/1262"
+        expression (lib/lexer.ml[12,191+33]..lib/lexer.ml[14,321+22]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/lexer.ml[12,191+34]..lib/lexer.ml[12,191+46])
+                extra
+                  Tpat_extra_constraint
+                  core_type (lib/lexer.ml[12,191+49]..lib/lexer.ml[12,191+91])
+                    Ttyp_tuple
+                    [
+                      core_type (lib/lexer.ml[12,191+49]..lib/lexer.ml[12,191+55])
+                        Ttyp_constr "string/15!"
+                        []
+                      core_type (lib/lexer.ml[12,191+58]..lib/lexer.ml[12,191+73])
+                        Ttyp_constr "Stdlib!.Lexing.position"
+                        []
+                      core_type (lib/lexer.ml[12,191+76]..lib/lexer.ml[12,191+91])
+                        Ttyp_constr "Stdlib!.Lexing.position"
+                        []
+                    ]
+                Tpat_alias "raw_terminal/1264"
+                pattern (lib/lexer.ml[12,191+34]..lib/lexer.ml[12,191+46])
+                  Tpat_any
+              expression (lib/lexer.ml[13,295+2]..lib/lexer.ml[14,321+22])
+                extra
+                  Texp_constraint
+                  core_type (lib/lexer.ml[12,191+95]..lib/lexer.ml[12,191+101])
+                    Ttyp_constr "string/15!"
+                    []
+                Texp_match
+                expression (lib/lexer.ml[13,295+8]..lib/lexer.ml[13,295+20])
+                  Texp_ident "raw_terminal/1264"
+                [
+                  <case>
+                    pattern (lib/lexer.ml[14,321+4]..lib/lexer.ml[14,321+15])
+                      Tpat_value
+                      pattern (lib/lexer.ml[14,321+4]..lib/lexer.ml[14,321+15])
+                        Tpat_tuple
+                        [
+                          pattern (lib/lexer.ml[14,321+5]..lib/lexer.ml[14,321+8])
+                            Tpat_var "str/1265"
+                          pattern (lib/lexer.ml[14,321+10]..lib/lexer.ml[14,321+11])
+                            Tpat_any
+                          pattern (lib/lexer.ml[14,321+13]..lib/lexer.ml[14,321+14])
+                            Tpat_any
+                        ]
+                    expression (lib/lexer.ml[14,321+19]..lib/lexer.ml[14,321+22])
+                      Texp_ident "str/1265"
+                ]
+          ]
+    ]
+  structure_item (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+          Texp_apply
+          expression (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost,None)
+          ]
+    ]
+  structure_item (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+          Texp_apply
+          expression (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+          Texp_apply
+          expression (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+          Texp_apply
+          expression (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/lexer.ml[14,321+22]..lib/lexer.ml[14,321+22]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__Lexer>
+ "extract_string_from_terminal"[value] -> <Gbnf_parser__Lexer.7>;
+ "ident"[value] -> <Gbnf_parser__Lexer.0>;
+ "keep_lexeme_start"[value] -> <Gbnf_parser__Lexer.2>;
+ }
+
+(seq
+  (let
+    (*match*/1551 =
+       (apply (field 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Lexer"))
+    0)
+  (let
+    (*match*/1553 =
+       (apply
+         (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/1555 =
+       (apply (field 0 (field 5 (global Expect_test_collector!)))
+         "lib/lexer.ml"))
+    0)
+  (let
+    (*match*/1557 =
+       (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "lexer.ml"))
+    0)
+  (let
+    (ident/1152 =
+       (function str/1154
+         (apply (field 25 (global Stdlib__String!)) str/1154)))
+    (setfield_ptr(root-init) 0 (global Gbnf_parser__Lexer!) ident/1152))
+  (let
+    (keep_lexeme_start/1232 =
+       (function lexbuf/1234 f/1235
+         (let
+           (start_p/1236 =
+              (apply (field 11 (global Stdlib__Lexing!)) lexbuf/1234)
+            x/1261 = (apply f/1235 0))
+           (seq (setfield_ptr 10 lexbuf/1234 start_p/1236) x/1261))))
+    (setfield_ptr(root-init) 1 (global Gbnf_parser__Lexer!)
+      keep_lexeme_start/1232))
+  (let
+    (extract_string_from_terminal/1262 =
+       (function raw_terminal/1264
+         (let
+           (*match*/1559 =a (field 2 raw_terminal/1264)
+            *match*/1558 =a (field 1 raw_terminal/1264)
+            str/1265 =a (field 0 raw_terminal/1264))
+           str/1265)))
+    (setfield_ptr(root-init) 2 (global Gbnf_parser__Lexer!)
+      extract_string_from_terminal/1262))
+  (let
+    (*match*/1561 =
+       (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+    0)
+  (let
+    (*match*/1563 =
+       (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+    0)
+  (let
+    (*match*/1565 =
+       (apply
+         (field 1 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         0))
+    0)
+  (let
+    (*match*/1567 =
+       (apply (field 4 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Lexer"))
+    0)
+  0)
+(seq
+  (let
+    (*match*/1551 =
+       (apply (field 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Lexer"))
+    0)
+  (let
+    (*match*/1553 =
+       (apply
+         (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/1555 =
+       (apply (field 0 (field 5 (global Expect_test_collector!)))
+         "lib/lexer.ml"))
+    0)
+  (let
+    (*match*/1557 =
+       (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "lexer.ml"))
+    0)
+  (let
+    (ident/1152 =
+       (function str/1154
+         (apply (field 25 (global Stdlib__String!)) str/1154)))
+    (setfield_ptr(root-init) 0 (global Gbnf_parser__Lexer!) ident/1152))
+  (let
+    (keep_lexeme_start/1232 =
+       (function lexbuf/1234 f/1235
+         (let
+           (start_p/1236 =
+              (apply (field 11 (global Stdlib__Lexing!)) lexbuf/1234)
+            x/1261 = (apply f/1235 0))
+           (seq (setfield_ptr 10 lexbuf/1234 start_p/1236) x/1261))))
+    (setfield_ptr(root-init) 1 (global Gbnf_parser__Lexer!)
+      keep_lexeme_start/1232))
+  (let
+    (extract_string_from_terminal/1262 =
+       (function raw_terminal/1264 (field 0 raw_terminal/1264)))
+    (setfield_ptr(root-init) 2 (global Gbnf_parser__Lexer!)
+      extract_string_from_terminal/1262))
+  (let
+    (*match*/1561 =
+       (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+    0)
+  (let
+    (*match*/1563 =
+       (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+    0)
+  (let
+    (*match*/1565 =
+       (apply
+         (field 1 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         0))
+    0)
+  (let
+    (*match*/1567 =
+       (apply (field 4 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Lexer"))
+    0)
+  0)

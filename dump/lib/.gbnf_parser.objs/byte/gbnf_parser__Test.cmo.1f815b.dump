@@ -1,0 +1,789 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/test.ml[1,0+2]..[1,0+2]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[1,0+2]..[1,0+2]) ghost
+          Ppat_construct "()" (lib/test.ml[1,0+2]..[1,0+2]) ghost
+          None
+        expression (lib/test.ml[1,0+2]..[1,0+2]) ghost
+          Pexp_apply
+          expression (lib/test.ml[1,0+2]..[1,0+2]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/test.ml[1,0+2]..[1,0+2]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/test.ml[1,0+2]..[1,0+2]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/test.ml[1,0+2]..[1,0+2]) ghost
+          ]
+    ]
+  structure_item (lib/test.ml[1,0+2]..[1,0+2]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[1,0+2]..[1,0+2]) ghost
+          Ppat_construct "()" (lib/test.ml[1,0+2]..[1,0+2]) ghost
+          None
+        expression (lib/test.ml[1,0+2]..[1,0+2]) ghost
+          Pexp_apply
+          expression (lib/test.ml[1,0+2]..[1,0+2]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/test.ml[1,0+2]..[1,0+2]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/test.ml[1,0+2]..[1,0+2]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/test.ml[1,0+2]..[1,0+2]) ghost,None)
+          ]
+    ]
+  structure_item (lib/test.ml[1,0+2]..[1,0+2]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[1,0+2]..[1,0+2]) ghost
+          Ppat_construct "()" (lib/test.ml[1,0+2]..[1,0+2]) ghost
+          None
+        expression (lib/test.ml[1,0+2]..[1,0+2]) ghost
+          Pexp_apply
+          expression (lib/test.ml[1,0+2]..[1,0+2]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/test.ml[1,0+2]..[1,0+2]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/test.ml[1,0+2]..[1,0+2]) ghost
+                Pexp_constant PConst_string("lib/test.ml",(lib/test.ml[1,0+2]..[1,0+2]) ghost,None)
+          ]
+    ]
+  structure_item (lib/test.ml[1,0+2]..[1,0+2]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[1,0+2]..[1,0+2]) ghost
+          Ppat_construct "()" (lib/test.ml[1,0+2]..[1,0+2]) ghost
+          None
+        expression (lib/test.ml[1,0+2]..[1,0+2]) ghost
+          Pexp_apply
+          expression (lib/test.ml[1,0+2]..[1,0+2]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/test.ml[1,0+2]..[1,0+2]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/test.ml[1,0+2]..[1,0+2]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/test.ml[1,0+2]..[1,0+2]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/test.ml[1,0+2]..[1,0+2]) ghost
+                Pexp_constant PConst_string("test.ml",(lib/test.ml[1,0+2]..[1,0+2]) ghost,None)
+          ]
+    ]
+  structure_item (lib/test.ml[1,0+2]..[1,0+13])
+    Pstr_open Fresh
+    module_expr (lib/test.ml[1,0+7]..[1,0+13])
+      Pmod_ident "Lexing" (lib/test.ml[1,0+7]..[1,0+13])
+  structure_item (lib/test.ml[4,16+0]..[8,141+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[4,16+4]..[4,16+21])
+          Ppat_var "keep_lexeme_start" (lib/test.ml[4,16+4]..[4,16+21])
+        expression (lib/test.ml[4,16+22]..[8,141+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/test.ml[4,16+22]..[4,16+28])
+            Ppat_var "lexbuf" (lib/test.ml[4,16+22]..[4,16+28])
+          expression (lib/test.ml[4,16+29]..[8,141+3]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/test.ml[4,16+29]..[4,16+30])
+              Ppat_var "f" (lib/test.ml[4,16+29]..[4,16+30])
+            expression (lib/test.ml[5,49+2]..[8,141+3])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (lib/test.ml[5,49+6]..[5,49+13])
+                    Ppat_var "start_p" (lib/test.ml[5,49+6]..[5,49+13])
+                  expression (lib/test.ml[5,49+16]..[5,49+37])
+                    Pexp_apply
+                    expression (lib/test.ml[5,49+16]..[5,49+30])
+                      Pexp_ident "lexeme_start_p" (lib/test.ml[5,49+16]..[5,49+30])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/test.ml[5,49+31]..[5,49+37])
+                          Pexp_ident "lexbuf" (lib/test.ml[5,49+31]..[5,49+37])
+                    ]
+              ]
+              expression (lib/test.ml[6,90+2]..[8,141+3])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (lib/test.ml[6,90+6]..[6,90+7])
+                      Ppat_var "x" (lib/test.ml[6,90+6]..[6,90+7])
+                    expression (lib/test.ml[6,90+10]..[6,90+14])
+                      Pexp_apply
+                      expression (lib/test.ml[6,90+10]..[6,90+11])
+                        Pexp_ident "f" (lib/test.ml[6,90+10]..[6,90+11])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/test.ml[6,90+12]..[6,90+14])
+                            Pexp_construct "()" (lib/test.ml[6,90+12]..[6,90+14])
+                            None
+                      ]
+                ]
+                expression (lib/test.ml[7,108+2]..[8,141+3])
+                  Pexp_sequence
+                  expression (lib/test.ml[7,108+2]..[7,108+31])
+                    Pexp_setfield
+                    expression (lib/test.ml[7,108+2]..[7,108+8])
+                      Pexp_ident "lexbuf" (lib/test.ml[7,108+2]..[7,108+8])
+                    "lex_start_p" (lib/test.ml[7,108+9]..[7,108+20])
+                    expression (lib/test.ml[7,108+24]..[7,108+31])
+                      Pexp_ident "start_p" (lib/test.ml[7,108+24]..[7,108+31])
+                  expression (lib/test.ml[8,141+2]..[8,141+3])
+                    Pexp_ident "x" (lib/test.ml[8,141+2]..[8,141+3])
+    ]
+  structure_item (lib/test.ml[8,141+3]..[8,141+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[8,141+3]..[8,141+3]) ghost
+          Ppat_construct "()" (lib/test.ml[8,141+3]..[8,141+3]) ghost
+          None
+        expression (lib/test.ml[8,141+3]..[8,141+3]) ghost
+          Pexp_apply
+          expression (lib/test.ml[8,141+3]..[8,141+3]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/test.ml[8,141+3]..[8,141+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/test.ml[8,141+3]..[8,141+3]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/test.ml[8,141+3]..[8,141+3]) ghost,None)
+          ]
+    ]
+  structure_item (lib/test.ml[8,141+3]..[8,141+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[8,141+3]..[8,141+3]) ghost
+          Ppat_construct "()" (lib/test.ml[8,141+3]..[8,141+3]) ghost
+          None
+        expression (lib/test.ml[8,141+3]..[8,141+3]) ghost
+          Pexp_apply
+          expression (lib/test.ml[8,141+3]..[8,141+3]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/test.ml[8,141+3]..[8,141+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/test.ml[8,141+3]..[8,141+3]) ghost
+                Pexp_construct "()" (lib/test.ml[8,141+3]..[8,141+3]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/test.ml[8,141+3]..[8,141+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[8,141+3]..[8,141+3]) ghost
+          Ppat_construct "()" (lib/test.ml[8,141+3]..[8,141+3]) ghost
+          None
+        expression (lib/test.ml[8,141+3]..[8,141+3]) ghost
+          Pexp_apply
+          expression (lib/test.ml[8,141+3]..[8,141+3]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/test.ml[8,141+3]..[8,141+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/test.ml[8,141+3]..[8,141+3]) ghost
+                Pexp_construct "()" (lib/test.ml[8,141+3]..[8,141+3]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/test.ml[8,141+3]..[8,141+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[8,141+3]..[8,141+3]) ghost
+          Ppat_construct "()" (lib/test.ml[8,141+3]..[8,141+3]) ghost
+          None
+        expression (lib/test.ml[8,141+3]..[8,141+3]) ghost
+          Pexp_apply
+          expression (lib/test.ml[8,141+3]..[8,141+3]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/test.ml[8,141+3]..[8,141+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/test.ml[8,141+3]..[8,141+3]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/test.ml[8,141+3]..[8,141+3]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set ~absolute_filename:"lib/test.ml"
+let () = Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "test.ml"
+open Lexing
+let keep_lexeme_start lexbuf f =
+  let start_p = lexeme_start_p lexbuf in
+  let x = f () in lexbuf.lex_start_p <- start_p; x
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+          Texp_apply
+          expression (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+          Texp_apply
+          expression (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost,None)
+          ]
+    ]
+  structure_item (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+          Texp_apply
+          expression (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+                Texp_constant Const_string("lib/test.ml",(lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost,None)
+          ]
+    ]
+  structure_item (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+          Texp_apply
+          expression (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost
+                Texp_constant Const_string("test.ml",(lib/test.ml[1,0+2]..lib/test.ml[1,0+2]) ghost,None)
+          ]
+    ]
+  structure_item (lib/test.ml[1,0+2]..lib/test.ml[1,0+13])
+    Tstr_open Fresh
+    module_expr (lib/test.ml[1,0+7]..lib/test.ml[1,0+13])
+      Tmod_ident "Stdlib!.Lexing"
+  structure_item (lib/test.ml[4,16+0]..lib/test.ml[8,141+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[4,16+4]..lib/test.ml[4,16+21])
+          Tpat_var "keep_lexeme_start/1152"
+        expression (lib/test.ml[4,16+22]..lib/test.ml[8,141+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/test.ml[4,16+22]..lib/test.ml[4,16+28])
+                Tpat_var "lexbuf/1154"
+              expression (lib/test.ml[4,16+29]..lib/test.ml[8,141+3]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/test.ml[4,16+29]..lib/test.ml[4,16+30])
+                      Tpat_var "f/1155"
+                    expression (lib/test.ml[5,49+2]..lib/test.ml[8,141+3])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (lib/test.ml[5,49+6]..lib/test.ml[5,49+13])
+                            Tpat_var "start_p/1156"
+                          expression (lib/test.ml[5,49+16]..lib/test.ml[5,49+37])
+                            Texp_apply
+                            expression (lib/test.ml[5,49+16]..lib/test.ml[5,49+30])
+                              Texp_ident "Stdlib!.Lexing.lexeme_start_p"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (lib/test.ml[5,49+31]..lib/test.ml[5,49+37])
+                                  Texp_ident "lexbuf/1154"
+                            ]
+                      ]
+                      expression (lib/test.ml[6,90+2]..lib/test.ml[8,141+3])
+                        Texp_let Nonrec
+                        [
+                          <def>
+                            pattern (lib/test.ml[6,90+6]..lib/test.ml[6,90+7])
+                              Tpat_var "x/1181"
+                            expression (lib/test.ml[6,90+10]..lib/test.ml[6,90+14])
+                              Texp_apply
+                              expression (lib/test.ml[6,90+10]..lib/test.ml[6,90+11])
+                                Texp_ident "f/1155"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (lib/test.ml[6,90+12]..lib/test.ml[6,90+14])
+                                    Texp_construct "()"
+                                    []
+                              ]
+                        ]
+                        expression (lib/test.ml[7,108+2]..lib/test.ml[8,141+3])
+                          Texp_sequence
+                          expression (lib/test.ml[7,108+2]..lib/test.ml[7,108+31])
+                            Texp_setfield
+                            expression (lib/test.ml[7,108+2]..lib/test.ml[7,108+8])
+                              Texp_ident "lexbuf/1154"
+                            "lex_start_p"
+                            expression (lib/test.ml[7,108+24]..lib/test.ml[7,108+31])
+                              Texp_ident "start_p/1156"
+                          expression (lib/test.ml[8,141+2]..lib/test.ml[8,141+3])
+                            Texp_ident "x/1181"
+                ]
+          ]
+    ]
+  structure_item (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+          Texp_apply
+          expression (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost,None)
+          ]
+    ]
+  structure_item (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+          Texp_apply
+          expression (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+          Texp_apply
+          expression (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+          Texp_apply
+          expression (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/test.ml[8,141+3]..lib/test.ml[8,141+3]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__Test>
+ "keep_lexeme_start"[value] -> <Gbnf_parser__Test.0>;
+ }
+
+(setglobal Gbnf_parser__Test!
+  (let
+    (*match*/1479 =
+       (after Gbnf_parser__Test lib/test.ml(1)<ghost>:2-2
+         (apply (field 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Test"))
+     *match*/1477 =
+       (after Gbnf_parser__Test lib/test.ml(1)<ghost>:2-2
+         (apply
+           (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1475 =
+       (after Gbnf_parser__Test lib/test.ml(1)<ghost>:2-2
+         (apply (field 0 (field 5 (global Expect_test_collector!)))
+           "lib/test.ml"))
+     *match*/1473 =
+       (after Gbnf_parser__Test lib/test.ml(1)<ghost>:2-2
+         (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "test.ml"))
+     keep_lexeme_start/1152 =
+       (function lexbuf/1154 f/1155
+         (funct-body Gbnf_parser__Test.keep_lexeme_start lib/test.ml(4)<ghost>:38-144
+           (before Gbnf_parser__Test.keep_lexeme_start lib/test.ml(5):51-144
+             (let
+               (start_p/1156 =
+                  (after Gbnf_parser__Test.keep_lexeme_start lib/test.ml(5):65-86
+                    (apply (field 11 (global Stdlib__Lexing!)) lexbuf/1154)))
+               (before Gbnf_parser__Test.keep_lexeme_start lib/test.ml(6):92-144
+                 (let
+                   (x/1181 =
+                      (after Gbnf_parser__Test.keep_lexeme_start lib/test.ml(6):100-104
+                        (apply f/1155 0)))
+                   (before Gbnf_parser__Test.keep_lexeme_start lib/test.ml(7):110-144
+                     (seq (setfield_ptr 10 lexbuf/1154 start_p/1156)
+                       (before Gbnf_parser__Test.keep_lexeme_start lib/test.ml(8):143-144
+                         x/1181)))))))))
+     *match*/1471 =
+       (after Gbnf_parser__Test lib/test.ml(8)<ghost>:144-144
+         (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/1469 =
+       (after Gbnf_parser__Test lib/test.ml(8)<ghost>:144-144
+         (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+     *match*/1467 =
+       (after Gbnf_parser__Test lib/test.ml(8)<ghost>:144-144
+         (apply
+           (field 1 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/1465 =
+       (after Gbnf_parser__Test lib/test.ml(8)<ghost>:144-144
+         (apply (field 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Test")))
+    (pseudo <unknown location> (makeblock 0 keep_lexeme_start/1152))))
+(setglobal Gbnf_parser__Test!
+  (let
+    (*match*/1479 =
+       (after Gbnf_parser__Test lib/test.ml(1)<ghost>:2-2
+         (apply (field 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Test"))
+     *match*/1477 =
+       (after Gbnf_parser__Test lib/test.ml(1)<ghost>:2-2
+         (apply
+           (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1475 =
+       (after Gbnf_parser__Test lib/test.ml(1)<ghost>:2-2
+         (apply (field 0 (field 5 (global Expect_test_collector!)))
+           "lib/test.ml"))
+     *match*/1473 =
+       (after Gbnf_parser__Test lib/test.ml(1)<ghost>:2-2
+         (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "test.ml"))
+     keep_lexeme_start/1152 =
+       (function lexbuf/1154 f/1155
+         (funct-body Gbnf_parser__Test.keep_lexeme_start lib/test.ml(4)<ghost>:38-144
+           (before Gbnf_parser__Test.keep_lexeme_start lib/test.ml(5):51-144
+             (let
+               (start_p/1156 =
+                  (after Gbnf_parser__Test.keep_lexeme_start lib/test.ml(5):65-86
+                    (apply (field 11 (global Stdlib__Lexing!)) lexbuf/1154)))
+               (before Gbnf_parser__Test.keep_lexeme_start lib/test.ml(6):92-144
+                 (let
+                   (x/1181 =
+                      (after Gbnf_parser__Test.keep_lexeme_start lib/test.ml(6):100-104
+                        (apply f/1155 0)))
+                   (before Gbnf_parser__Test.keep_lexeme_start lib/test.ml(7):110-144
+                     (seq (setfield_ptr 10 lexbuf/1154 start_p/1156)
+                       (before Gbnf_parser__Test.keep_lexeme_start lib/test.ml(8):143-144
+                         x/1181)))))))))
+     *match*/1471 =
+       (after Gbnf_parser__Test lib/test.ml(8)<ghost>:144-144
+         (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/1469 =
+       (after Gbnf_parser__Test lib/test.ml(8)<ghost>:144-144
+         (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+     *match*/1467 =
+       (after Gbnf_parser__Test lib/test.ml(8)<ghost>:144-144
+         (apply
+           (field 1 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/1465 =
+       (after Gbnf_parser__Test lib/test.ml(8)<ghost>:144-144
+         (apply (field 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Test")))
+    (pseudo <unknown location> (makeblock 0 keep_lexeme_start/1152))))

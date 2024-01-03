@@ -1,0 +1,1963 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+          ]
+    ]
+  structure_item (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/stringMap.ml[14,976+0]..[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("lib/stringMap.ml",(lib/stringMap.ml[14,976+0]..[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/stringMap.ml[14,976+0]..[14,976+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/stringMap.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("stringMap.ml",(lib/stringMap.ml[14,976+0]..[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stringMap.ml[14,976+0]..[14,976+25])
+    Pstr_include    module_expr (lib/stringMap.ml[14,976+8]..[14,976+25])
+      Pmod_apply
+      module_expr (lib/stringMap.ml[14,976+8]..[14,976+16])
+        Pmod_ident "Map.Make" (lib/stringMap.ml[14,976+8]..[14,976+16])
+      module_expr (lib/stringMap.ml[14,976+18]..[14,976+24])
+        Pmod_ident "String" (lib/stringMap.ml[14,976+18]..[14,976+24])
+  structure_item (lib/stringMap.ml[16,1003+0]..[17,1020+31])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[16,1003+4]..[16,1003+12])
+          Ppat_var "cardinal" (lib/stringMap.ml[16,1003+4]..[16,1003+12])
+        expression (lib/stringMap.ml[16,1003+13]..[17,1020+31]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/stringMap.ml[16,1003+13]..[16,1003+14])
+            Ppat_var "s" (lib/stringMap.ml[16,1003+13]..[16,1003+14])
+          expression (lib/stringMap.ml[17,1020+2]..[17,1020+31])
+            Pexp_apply
+            expression (lib/stringMap.ml[17,1020+2]..[17,1020+6])
+              Pexp_ident "fold" (lib/stringMap.ml[17,1020+2]..[17,1020+6])
+            [
+              <arg>
+              Nolabel
+                expression (lib/stringMap.ml[17,1020+7]..[17,1020+27])
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (lib/stringMap.ml[17,1020+12]..[17,1020+13])
+                    Ppat_any
+                  expression (lib/stringMap.ml[17,1020+14]..[17,1020+26]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (lib/stringMap.ml[17,1020+14]..[17,1020+15])
+                      Ppat_any
+                    expression (lib/stringMap.ml[17,1020+16]..[17,1020+26]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/stringMap.ml[17,1020+16]..[17,1020+17])
+                        Ppat_var "x" (lib/stringMap.ml[17,1020+16]..[17,1020+17])
+                      expression (lib/stringMap.ml[17,1020+21]..[17,1020+26])
+                        Pexp_apply
+                        expression (lib/stringMap.ml[17,1020+23]..[17,1020+24])
+                          Pexp_ident "+" (lib/stringMap.ml[17,1020+23]..[17,1020+24])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/stringMap.ml[17,1020+21]..[17,1020+22])
+                              Pexp_ident "x" (lib/stringMap.ml[17,1020+21]..[17,1020+22])
+                          <arg>
+                          Nolabel
+                            expression (lib/stringMap.ml[17,1020+25]..[17,1020+26])
+                              Pexp_constant PConst_int (1,None)
+                        ]
+              <arg>
+              Nolabel
+                expression (lib/stringMap.ml[17,1020+28]..[17,1020+29])
+                  Pexp_ident "s" (lib/stringMap.ml[17,1020+28]..[17,1020+29])
+              <arg>
+              Nolabel
+                expression (lib/stringMap.ml[17,1020+30]..[17,1020+31])
+                  Pexp_constant PConst_int (0,None)
+            ]
+    ]
+  structure_item (lib/stringMap.ml[19,1053+0]..[24,1182+26])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[19,1053+4]..[19,1053+10])
+          Ppat_var "filter" (lib/stringMap.ml[19,1053+4]..[19,1053+10])
+        expression (lib/stringMap.ml[19,1053+11]..[24,1182+26]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/stringMap.ml[19,1053+11]..[19,1053+15])
+            Ppat_var "pred" (lib/stringMap.ml[19,1053+11]..[19,1053+15])
+          expression (lib/stringMap.ml[19,1053+16]..[24,1182+26]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/stringMap.ml[19,1053+16]..[19,1053+19])
+              Ppat_var "map" (lib/stringMap.ml[19,1053+16]..[19,1053+19])
+            expression (lib/stringMap.ml[20,1075+2]..[24,1182+26])
+              Pexp_apply
+              expression (lib/stringMap.ml[20,1075+2]..[20,1075+6])
+                Pexp_ident "fold" (lib/stringMap.ml[20,1075+2]..[20,1075+6])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/stringMap.ml[20,1075+7]..[24,1182+16])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (lib/stringMap.ml[20,1075+12]..[20,1075+15])
+                      Ppat_var "key" (lib/stringMap.ml[20,1075+12]..[20,1075+15])
+                    expression (lib/stringMap.ml[20,1075+16]..[24,1182+15]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/stringMap.ml[20,1075+16]..[20,1075+21])
+                        Ppat_var "value" (lib/stringMap.ml[20,1075+16]..[20,1075+21])
+                      expression (lib/stringMap.ml[20,1075+22]..[24,1182+15]) ghost
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (lib/stringMap.ml[20,1075+22]..[20,1075+25])
+                          Ppat_var "map" (lib/stringMap.ml[20,1075+22]..[20,1075+25])
+                        expression (lib/stringMap.ml[21,1104+10]..[24,1182+15])
+                          Pexp_ifthenelse
+                          expression (lib/stringMap.ml[21,1104+13]..[21,1104+27])
+                            Pexp_apply
+                            expression (lib/stringMap.ml[21,1104+13]..[21,1104+17])
+                              Pexp_ident "pred" (lib/stringMap.ml[21,1104+13]..[21,1104+17])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (lib/stringMap.ml[21,1104+18]..[21,1104+21])
+                                  Pexp_ident "key" (lib/stringMap.ml[21,1104+18]..[21,1104+21])
+                              <arg>
+                              Nolabel
+                                expression (lib/stringMap.ml[21,1104+22]..[21,1104+27])
+                                  Pexp_ident "value" (lib/stringMap.ml[21,1104+22]..[21,1104+27])
+                            ]
+                          expression (lib/stringMap.ml[22,1137+12]..[22,1137+29])
+                            Pexp_apply
+                            expression (lib/stringMap.ml[22,1137+12]..[22,1137+15])
+                              Pexp_ident "add" (lib/stringMap.ml[22,1137+12]..[22,1137+15])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (lib/stringMap.ml[22,1137+16]..[22,1137+19])
+                                  Pexp_ident "key" (lib/stringMap.ml[22,1137+16]..[22,1137+19])
+                              <arg>
+                              Nolabel
+                                expression (lib/stringMap.ml[22,1137+20]..[22,1137+25])
+                                  Pexp_ident "value" (lib/stringMap.ml[22,1137+20]..[22,1137+25])
+                              <arg>
+                              Nolabel
+                                expression (lib/stringMap.ml[22,1137+26]..[22,1137+29])
+                                  Pexp_ident "map" (lib/stringMap.ml[22,1137+26]..[22,1137+29])
+                            ]
+                          Some
+                            expression (lib/stringMap.ml[24,1182+12]..[24,1182+15])
+                              Pexp_ident "map" (lib/stringMap.ml[24,1182+12]..[24,1182+15])
+                <arg>
+                Nolabel
+                  expression (lib/stringMap.ml[24,1182+17]..[24,1182+20])
+                    Pexp_ident "map" (lib/stringMap.ml[24,1182+17]..[24,1182+20])
+                <arg>
+                Nolabel
+                  expression (lib/stringMap.ml[24,1182+21]..[24,1182+26])
+                    Pexp_ident "empty" (lib/stringMap.ml[24,1182+21]..[24,1182+26])
+              ]
+    ]
+  structure_item (lib/stringMap.ml[26,1210+0]..[27,1236+48])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[26,1210+4]..[26,1210+12])
+          Ppat_var "restrict" (lib/stringMap.ml[26,1210+4]..[26,1210+12])
+        expression (lib/stringMap.ml[26,1210+13]..[27,1236+48]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/stringMap.ml[26,1210+13]..[26,1210+19])
+            Ppat_var "domain" (lib/stringMap.ml[26,1210+13]..[26,1210+19])
+          expression (lib/stringMap.ml[26,1210+20]..[27,1236+48]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/stringMap.ml[26,1210+20]..[26,1210+23])
+              Ppat_var "map" (lib/stringMap.ml[26,1210+20]..[26,1210+23])
+            expression (lib/stringMap.ml[27,1236+2]..[27,1236+48])
+              Pexp_apply
+              expression (lib/stringMap.ml[27,1236+2]..[27,1236+8])
+                Pexp_ident "filter" (lib/stringMap.ml[27,1236+2]..[27,1236+8])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/stringMap.ml[27,1236+9]..[27,1236+44])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (lib/stringMap.ml[27,1236+14]..[27,1236+15])
+                      Ppat_var "k" (lib/stringMap.ml[27,1236+14]..[27,1236+15])
+                    expression (lib/stringMap.ml[27,1236+16]..[27,1236+43]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/stringMap.ml[27,1236+16]..[27,1236+17])
+                        Ppat_any
+                      expression (lib/stringMap.ml[27,1236+21]..[27,1236+43])
+                        Pexp_apply
+                        expression (lib/stringMap.ml[27,1236+21]..[27,1236+34])
+                          Pexp_ident "StringSet.mem" (lib/stringMap.ml[27,1236+21]..[27,1236+34])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/stringMap.ml[27,1236+35]..[27,1236+36])
+                              Pexp_ident "k" (lib/stringMap.ml[27,1236+35]..[27,1236+36])
+                          <arg>
+                          Nolabel
+                            expression (lib/stringMap.ml[27,1236+37]..[27,1236+43])
+                              Pexp_ident "domain" (lib/stringMap.ml[27,1236+37]..[27,1236+43])
+                        ]
+                <arg>
+                Nolabel
+                  expression (lib/stringMap.ml[27,1236+45]..[27,1236+48])
+                    Pexp_ident "map" (lib/stringMap.ml[27,1236+45]..[27,1236+48])
+              ]
+    ]
+  structure_item (lib/stringMap.ml[29,1286+0]..[30,1303+67])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[29,1286+4]..[29,1286+10])
+          Ppat_var "domain" (lib/stringMap.ml[29,1286+4]..[29,1286+10])
+        expression (lib/stringMap.ml[29,1286+11]..[30,1303+67]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/stringMap.ml[29,1286+11]..[29,1286+14])
+            Ppat_var "map" (lib/stringMap.ml[29,1286+11]..[29,1286+14])
+          expression (lib/stringMap.ml[30,1303+2]..[30,1303+67])
+            Pexp_apply
+            expression (lib/stringMap.ml[30,1303+2]..[30,1303+6])
+              Pexp_ident "fold" (lib/stringMap.ml[30,1303+2]..[30,1303+6])
+            [
+              <arg>
+              Nolabel
+                expression (lib/stringMap.ml[30,1303+7]..[30,1303+47])
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (lib/stringMap.ml[30,1303+12]..[30,1303+15])
+                    Ppat_var "key" (lib/stringMap.ml[30,1303+12]..[30,1303+15])
+                  expression (lib/stringMap.ml[30,1303+16]..[30,1303+46]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (lib/stringMap.ml[30,1303+16]..[30,1303+17])
+                      Ppat_any
+                    expression (lib/stringMap.ml[30,1303+18]..[30,1303+46]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/stringMap.ml[30,1303+18]..[30,1303+21])
+                        Ppat_var "acu" (lib/stringMap.ml[30,1303+18]..[30,1303+21])
+                      expression (lib/stringMap.ml[30,1303+25]..[30,1303+46])
+                        Pexp_apply
+                        expression (lib/stringMap.ml[30,1303+25]..[30,1303+38])
+                          Pexp_ident "StringSet.add" (lib/stringMap.ml[30,1303+25]..[30,1303+38])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/stringMap.ml[30,1303+39]..[30,1303+42])
+                              Pexp_ident "key" (lib/stringMap.ml[30,1303+39]..[30,1303+42])
+                          <arg>
+                          Nolabel
+                            expression (lib/stringMap.ml[30,1303+43]..[30,1303+46])
+                              Pexp_ident "acu" (lib/stringMap.ml[30,1303+43]..[30,1303+46])
+                        ]
+              <arg>
+              Nolabel
+                expression (lib/stringMap.ml[30,1303+48]..[30,1303+51])
+                  Pexp_ident "map" (lib/stringMap.ml[30,1303+48]..[30,1303+51])
+              <arg>
+              Nolabel
+                expression (lib/stringMap.ml[30,1303+52]..[30,1303+67])
+                  Pexp_ident "StringSet.empty" (lib/stringMap.ml[30,1303+52]..[30,1303+67])
+            ]
+    ]
+  structure_item (lib/stringMap.ml[32,1372+0]..[39,1467+19])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[32,1372+4]..[32,1372+16])
+          Ppat_var "multiple_add" (lib/stringMap.ml[32,1372+4]..[32,1372+16])
+        expression (lib/stringMap.ml[32,1372+17]..[39,1467+19]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/stringMap.ml[32,1372+17]..[32,1372+18])
+            Ppat_var "k" (lib/stringMap.ml[32,1372+17]..[32,1372+18])
+          expression (lib/stringMap.ml[32,1372+19]..[39,1467+19]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/stringMap.ml[32,1372+19]..[32,1372+20])
+              Ppat_var "v" (lib/stringMap.ml[32,1372+19]..[32,1372+20])
+            expression (lib/stringMap.ml[32,1372+21]..[39,1467+19]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (lib/stringMap.ml[32,1372+21]..[32,1372+22])
+                Ppat_var "m" (lib/stringMap.ml[32,1372+21]..[32,1372+22])
+              expression (lib/stringMap.ml[33,1397+2]..[39,1467+19])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (lib/stringMap.ml[33,1397+6]..[33,1397+8])
+                      Ppat_var "vs" (lib/stringMap.ml[33,1397+6]..[33,1397+8])
+                    expression (lib/stringMap.ml[34,1408+4]..[37,1453+8])
+                      Pexp_try
+                      expression (lib/stringMap.ml[35,1416+6]..[35,1416+14])
+                        Pexp_apply
+                        expression (lib/stringMap.ml[35,1416+6]..[35,1416+10])
+                          Pexp_ident "find" (lib/stringMap.ml[35,1416+6]..[35,1416+10])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/stringMap.ml[35,1416+11]..[35,1416+12])
+                              Pexp_ident "k" (lib/stringMap.ml[35,1416+11]..[35,1416+12])
+                          <arg>
+                          Nolabel
+                            expression (lib/stringMap.ml[35,1416+13]..[35,1416+14])
+                              Pexp_ident "m" (lib/stringMap.ml[35,1416+13]..[35,1416+14])
+                        ]
+                      [
+                        <case>
+                          pattern (lib/stringMap.ml[36,1431+9]..[36,1431+18])
+                            Ppat_construct "Not_found" (lib/stringMap.ml[36,1431+9]..[36,1431+18])
+                            None
+                          expression (lib/stringMap.ml[37,1453+6]..[37,1453+8])
+                            Pexp_construct "[]" (lib/stringMap.ml[37,1453+6]..[37,1453+8])
+                            None
+                      ]
+                ]
+                expression (lib/stringMap.ml[39,1467+2]..[39,1467+19])
+                  Pexp_apply
+                  expression (lib/stringMap.ml[39,1467+2]..[39,1467+5])
+                    Pexp_ident "add" (lib/stringMap.ml[39,1467+2]..[39,1467+5])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/stringMap.ml[39,1467+6]..[39,1467+7])
+                        Pexp_ident "k" (lib/stringMap.ml[39,1467+6]..[39,1467+7])
+                    <arg>
+                    Nolabel
+                      expression (lib/stringMap.ml[39,1467+8]..[39,1467+17])
+                        Pexp_construct "::" (lib/stringMap.ml[39,1467+11]..[39,1467+13])
+                        Some
+                          expression (lib/stringMap.ml[39,1467+9]..[39,1467+16]) ghost
+                            Pexp_tuple
+                            [
+                              expression (lib/stringMap.ml[39,1467+9]..[39,1467+10])
+                                Pexp_ident "v" (lib/stringMap.ml[39,1467+9]..[39,1467+10])
+                              expression (lib/stringMap.ml[39,1467+14]..[39,1467+16])
+                                Pexp_ident "vs" (lib/stringMap.ml[39,1467+14]..[39,1467+16])
+                            ]
+                    <arg>
+                    Nolabel
+                      expression (lib/stringMap.ml[39,1467+18]..[39,1467+19])
+                        Pexp_ident "m" (lib/stringMap.ml[39,1467+18]..[39,1467+19])
+                  ]
+    ]
+  structure_item (lib/stringMap.ml[41,1488+0]..[42,1505+53])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[41,1488+4]..[41,1488+11])
+          Ppat_var "of_list" (lib/stringMap.ml[41,1488+4]..[41,1488+11])
+        expression (lib/stringMap.ml[41,1488+12]..[42,1505+53]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/stringMap.ml[41,1488+12]..[41,1488+14])
+            Ppat_var "xs" (lib/stringMap.ml[41,1488+12]..[41,1488+14])
+          expression (lib/stringMap.ml[42,1505+2]..[42,1505+53])
+            Pexp_apply
+            expression (lib/stringMap.ml[42,1505+2]..[42,1505+16])
+              Pexp_ident "List.fold_left" (lib/stringMap.ml[42,1505+2]..[42,1505+16])
+            [
+              <arg>
+              Nolabel
+                expression (lib/stringMap.ml[42,1505+17]..[42,1505+44])
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (lib/stringMap.ml[42,1505+22]..[42,1505+23])
+                    Ppat_var "m" (lib/stringMap.ml[42,1505+22]..[42,1505+23])
+                  expression (lib/stringMap.ml[42,1505+24]..[42,1505+43]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (lib/stringMap.ml[42,1505+24]..[42,1505+30])
+                      Ppat_tuple
+                      [
+                        pattern (lib/stringMap.ml[42,1505+25]..[42,1505+26])
+                          Ppat_var "x" (lib/stringMap.ml[42,1505+25]..[42,1505+26])
+                        pattern (lib/stringMap.ml[42,1505+28]..[42,1505+29])
+                          Ppat_var "v" (lib/stringMap.ml[42,1505+28]..[42,1505+29])
+                      ]
+                    expression (lib/stringMap.ml[42,1505+34]..[42,1505+43])
+                      Pexp_apply
+                      expression (lib/stringMap.ml[42,1505+34]..[42,1505+37])
+                        Pexp_ident "add" (lib/stringMap.ml[42,1505+34]..[42,1505+37])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/stringMap.ml[42,1505+38]..[42,1505+39])
+                            Pexp_ident "x" (lib/stringMap.ml[42,1505+38]..[42,1505+39])
+                        <arg>
+                        Nolabel
+                          expression (lib/stringMap.ml[42,1505+40]..[42,1505+41])
+                            Pexp_ident "v" (lib/stringMap.ml[42,1505+40]..[42,1505+41])
+                        <arg>
+                        Nolabel
+                          expression (lib/stringMap.ml[42,1505+42]..[42,1505+43])
+                            Pexp_ident "m" (lib/stringMap.ml[42,1505+42]..[42,1505+43])
+                      ]
+              <arg>
+              Nolabel
+                expression (lib/stringMap.ml[42,1505+45]..[42,1505+50])
+                  Pexp_ident "empty" (lib/stringMap.ml[42,1505+45]..[42,1505+50])
+              <arg>
+              Nolabel
+                expression (lib/stringMap.ml[42,1505+51]..[42,1505+53])
+                  Pexp_ident "xs" (lib/stringMap.ml[42,1505+51]..[42,1505+53])
+            ]
+    ]
+  structure_item (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+          Ppat_construct "()" (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+          None
+        expression (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+          Pexp_apply
+          expression (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+          Ppat_construct "()" (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+          None
+        expression (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+          Pexp_apply
+          expression (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+                Pexp_construct "()" (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+          Ppat_construct "()" (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+          None
+        expression (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+          Pexp_apply
+          expression (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+                Pexp_construct "()" (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+          Ppat_construct "()" (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+          None
+        expression (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+          Pexp_apply
+          expression (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/stringMap.ml[42,1505+53]..[42,1505+53]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set
+    ~absolute_filename:"lib/stringMap.ml"
+let () =
+  Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "stringMap.ml"
+include (Map.Make)(String)
+let cardinal s = fold (fun _ -> fun _ -> fun x -> x + 1) s 0
+let filter pred map =
+  fold
+    (fun key ->
+       fun value ->
+         fun map -> if pred key value then add key value map else map) map
+    empty
+let restrict domain map =
+  filter (fun k -> fun _ -> StringSet.mem k domain) map
+let domain map =
+  fold (fun key -> fun _ -> fun acu -> StringSet.add key acu) map
+    StringSet.empty
+let multiple_add k v m =
+  let vs = try find k m with | Not_found -> [] in add k (v :: vs) m
+let of_list xs = List.fold_left (fun m -> fun (x, v) -> add x v m) empty xs
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+                Texp_constant Const_string("lib/stringMap.ml",(lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost
+                Texp_constant Const_string("stringMap.ml",(lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stringMap.ml[14,976+0]..lib/stringMap.ml[14,976+25])
+    Tstr_include    module_expr (lib/stringMap.ml[14,976+8]..lib/stringMap.ml[14,976+25])
+      Tmod_apply
+      module_expr (lib/stringMap.ml[14,976+8]..lib/stringMap.ml[14,976+16])
+        module_expr (lib/stringMap.ml[14,976+8]..lib/stringMap.ml[14,976+16])
+          Tmod_ident "Stdlib!.Map.Make"
+      module_expr (lib/stringMap.ml[14,976+18]..lib/stringMap.ml[14,976+24])
+        module_expr (lib/stringMap.ml[14,976+18]..lib/stringMap.ml[14,976+24])
+          Tmod_ident "Stdlib!.String"
+  structure_item (lib/stringMap.ml[16,1003+0]..lib/stringMap.ml[17,1020+31])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[16,1003+4]..lib/stringMap.ml[16,1003+12])
+          Tpat_var "cardinal/1347"
+        expression (lib/stringMap.ml[16,1003+13]..lib/stringMap.ml[17,1020+31]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/stringMap.ml[16,1003+13]..lib/stringMap.ml[16,1003+14])
+                Tpat_var "s/1348"
+              expression (lib/stringMap.ml[17,1020+2]..lib/stringMap.ml[17,1020+31])
+                Texp_apply
+                expression (lib/stringMap.ml[17,1020+2]..lib/stringMap.ml[17,1020+6])
+                  Texp_ident "fold/1327"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/stringMap.ml[17,1020+7]..lib/stringMap.ml[17,1020+27])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/stringMap.ml[17,1020+12]..lib/stringMap.ml[17,1020+13])
+                            Tpat_any
+                          expression (lib/stringMap.ml[17,1020+14]..lib/stringMap.ml[17,1020+26]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (lib/stringMap.ml[17,1020+14]..lib/stringMap.ml[17,1020+15])
+                                  Tpat_any
+                                expression (lib/stringMap.ml[17,1020+16]..lib/stringMap.ml[17,1020+26]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (lib/stringMap.ml[17,1020+16]..lib/stringMap.ml[17,1020+17])
+                                        Tpat_var "x/1349"
+                                      expression (lib/stringMap.ml[17,1020+21]..lib/stringMap.ml[17,1020+26])
+                                        Texp_apply
+                                        expression (lib/stringMap.ml[17,1020+23]..lib/stringMap.ml[17,1020+24])
+                                          Texp_ident "Stdlib!.+"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/stringMap.ml[17,1020+21]..lib/stringMap.ml[17,1020+22])
+                                              Texp_ident "x/1349"
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/stringMap.ml[17,1020+25]..lib/stringMap.ml[17,1020+26])
+                                              Texp_constant Const_int 1
+                                        ]
+                                  ]
+                            ]
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (lib/stringMap.ml[17,1020+28]..lib/stringMap.ml[17,1020+29])
+                      Texp_ident "s/1348"
+                  <arg>
+                    Nolabel
+                    expression (lib/stringMap.ml[17,1020+30]..lib/stringMap.ml[17,1020+31])
+                      Texp_constant Const_int 0
+                ]
+          ]
+    ]
+  structure_item (lib/stringMap.ml[19,1053+0]..lib/stringMap.ml[24,1182+26])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[19,1053+4]..lib/stringMap.ml[19,1053+10])
+          Tpat_var "filter/1487"
+        expression (lib/stringMap.ml[19,1053+11]..lib/stringMap.ml[24,1182+26]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/stringMap.ml[19,1053+11]..lib/stringMap.ml[19,1053+15])
+                Tpat_var "pred/1488"
+              expression (lib/stringMap.ml[19,1053+16]..lib/stringMap.ml[24,1182+26]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/stringMap.ml[19,1053+16]..lib/stringMap.ml[19,1053+19])
+                      Tpat_var "map/1489"
+                    expression (lib/stringMap.ml[20,1075+2]..lib/stringMap.ml[24,1182+26])
+                      Texp_apply
+                      expression (lib/stringMap.ml[20,1075+2]..lib/stringMap.ml[20,1075+6])
+                        Texp_ident "fold/1327"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/stringMap.ml[20,1075+7]..lib/stringMap.ml[24,1182+16])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (lib/stringMap.ml[20,1075+12]..lib/stringMap.ml[20,1075+15])
+                                  Tpat_var "key/1490"
+                                expression (lib/stringMap.ml[20,1075+16]..lib/stringMap.ml[24,1182+15]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (lib/stringMap.ml[20,1075+16]..lib/stringMap.ml[20,1075+21])
+                                        Tpat_var "value/1491"
+                                      expression (lib/stringMap.ml[20,1075+22]..lib/stringMap.ml[24,1182+15]) ghost
+                                        Texp_function
+                                        Nolabel
+                                        [
+                                          <case>
+                                            pattern (lib/stringMap.ml[20,1075+22]..lib/stringMap.ml[20,1075+25])
+                                              Tpat_var "map/1492"
+                                            expression (lib/stringMap.ml[21,1104+10]..lib/stringMap.ml[24,1182+15])
+                                              Texp_ifthenelse
+                                              expression (lib/stringMap.ml[21,1104+13]..lib/stringMap.ml[21,1104+27])
+                                                Texp_apply
+                                                expression (lib/stringMap.ml[21,1104+13]..lib/stringMap.ml[21,1104+17])
+                                                  Texp_ident "pred/1488"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (lib/stringMap.ml[21,1104+18]..lib/stringMap.ml[21,1104+21])
+                                                      Texp_ident "key/1490"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (lib/stringMap.ml[21,1104+22]..lib/stringMap.ml[21,1104+27])
+                                                      Texp_ident "value/1491"
+                                                ]
+                                              expression (lib/stringMap.ml[22,1137+12]..lib/stringMap.ml[22,1137+29])
+                                                Texp_apply
+                                                expression (lib/stringMap.ml[22,1137+12]..lib/stringMap.ml[22,1137+15])
+                                                  Texp_ident "add/1305"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (lib/stringMap.ml[22,1137+16]..lib/stringMap.ml[22,1137+19])
+                                                      Texp_ident "key/1490"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (lib/stringMap.ml[22,1137+20]..lib/stringMap.ml[22,1137+25])
+                                                      Texp_ident "value/1491"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (lib/stringMap.ml[22,1137+26]..lib/stringMap.ml[22,1137+29])
+                                                      Texp_ident "map/1492"
+                                                ]
+                                              Some
+                                                expression (lib/stringMap.ml[24,1182+12]..lib/stringMap.ml[24,1182+15])
+                                                  Texp_ident "map/1492"
+                                        ]
+                                  ]
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (lib/stringMap.ml[24,1182+17]..lib/stringMap.ml[24,1182+20])
+                            Texp_ident "map/1489"
+                        <arg>
+                          Nolabel
+                          expression (lib/stringMap.ml[24,1182+21]..lib/stringMap.ml[24,1182+26])
+                            Texp_ident "empty/1304"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/stringMap.ml[26,1210+0]..lib/stringMap.ml[27,1236+48])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[26,1210+4]..lib/stringMap.ml[26,1210+12])
+          Tpat_var "restrict/1493"
+        expression (lib/stringMap.ml[26,1210+13]..lib/stringMap.ml[27,1236+48]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/stringMap.ml[26,1210+13]..lib/stringMap.ml[26,1210+19])
+                Tpat_var "domain/1495"
+              expression (lib/stringMap.ml[26,1210+20]..lib/stringMap.ml[27,1236+48]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/stringMap.ml[26,1210+20]..lib/stringMap.ml[26,1210+23])
+                      Tpat_var "map/1496"
+                    expression (lib/stringMap.ml[27,1236+2]..lib/stringMap.ml[27,1236+48])
+                      Texp_apply
+                      expression (lib/stringMap.ml[27,1236+2]..lib/stringMap.ml[27,1236+8])
+                        Texp_ident "filter/1487"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/stringMap.ml[27,1236+9]..lib/stringMap.ml[27,1236+44])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (lib/stringMap.ml[27,1236+14]..lib/stringMap.ml[27,1236+15])
+                                  Tpat_var "k/1497"
+                                expression (lib/stringMap.ml[27,1236+16]..lib/stringMap.ml[27,1236+43]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (lib/stringMap.ml[27,1236+16]..lib/stringMap.ml[27,1236+17])
+                                        Tpat_any
+                                      expression (lib/stringMap.ml[27,1236+21]..lib/stringMap.ml[27,1236+43])
+                                        Texp_apply
+                                        expression (lib/stringMap.ml[27,1236+21]..lib/stringMap.ml[27,1236+34])
+                                          Texp_ident "Gbnf_parser!.StringSet.mem"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/stringMap.ml[27,1236+35]..lib/stringMap.ml[27,1236+36])
+                                              Texp_ident "k/1497"
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/stringMap.ml[27,1236+37]..lib/stringMap.ml[27,1236+43])
+                                              Texp_ident "domain/1495"
+                                        ]
+                                  ]
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (lib/stringMap.ml[27,1236+45]..lib/stringMap.ml[27,1236+48])
+                            Texp_ident "map/1496"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/stringMap.ml[29,1286+0]..lib/stringMap.ml[30,1303+67])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[29,1286+4]..lib/stringMap.ml[29,1286+10])
+          Tpat_var "domain/1685"
+        expression (lib/stringMap.ml[29,1286+11]..lib/stringMap.ml[30,1303+67]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/stringMap.ml[29,1286+11]..lib/stringMap.ml[29,1286+14])
+                Tpat_var "map/1687"
+              expression (lib/stringMap.ml[30,1303+2]..lib/stringMap.ml[30,1303+67])
+                Texp_apply
+                expression (lib/stringMap.ml[30,1303+2]..lib/stringMap.ml[30,1303+6])
+                  Texp_ident "fold/1327"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/stringMap.ml[30,1303+7]..lib/stringMap.ml[30,1303+47])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/stringMap.ml[30,1303+12]..lib/stringMap.ml[30,1303+15])
+                            Tpat_var "key/1688"
+                          expression (lib/stringMap.ml[30,1303+16]..lib/stringMap.ml[30,1303+46]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (lib/stringMap.ml[30,1303+16]..lib/stringMap.ml[30,1303+17])
+                                  Tpat_any
+                                expression (lib/stringMap.ml[30,1303+18]..lib/stringMap.ml[30,1303+46]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (lib/stringMap.ml[30,1303+18]..lib/stringMap.ml[30,1303+21])
+                                        Tpat_var "acu/1689"
+                                      expression (lib/stringMap.ml[30,1303+25]..lib/stringMap.ml[30,1303+46])
+                                        Texp_apply
+                                        expression (lib/stringMap.ml[30,1303+25]..lib/stringMap.ml[30,1303+38])
+                                          Texp_ident "Gbnf_parser!.StringSet.add"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/stringMap.ml[30,1303+39]..lib/stringMap.ml[30,1303+42])
+                                              Texp_ident "key/1688"
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/stringMap.ml[30,1303+43]..lib/stringMap.ml[30,1303+46])
+                                              Texp_ident "acu/1689"
+                                        ]
+                                  ]
+                            ]
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (lib/stringMap.ml[30,1303+48]..lib/stringMap.ml[30,1303+51])
+                      Texp_ident "map/1687"
+                  <arg>
+                    Nolabel
+                    expression (lib/stringMap.ml[30,1303+52]..lib/stringMap.ml[30,1303+67])
+                      Texp_ident "Gbnf_parser!.StringSet.empty"
+                ]
+          ]
+    ]
+  structure_item (lib/stringMap.ml[32,1372+0]..lib/stringMap.ml[39,1467+19])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[32,1372+4]..lib/stringMap.ml[32,1372+16])
+          Tpat_var "multiple_add/1691"
+        expression (lib/stringMap.ml[32,1372+17]..lib/stringMap.ml[39,1467+19]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/stringMap.ml[32,1372+17]..lib/stringMap.ml[32,1372+18])
+                Tpat_var "k/1693"
+              expression (lib/stringMap.ml[32,1372+19]..lib/stringMap.ml[39,1467+19]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/stringMap.ml[32,1372+19]..lib/stringMap.ml[32,1372+20])
+                      Tpat_var "v/1694"
+                    expression (lib/stringMap.ml[32,1372+21]..lib/stringMap.ml[39,1467+19]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/stringMap.ml[32,1372+21]..lib/stringMap.ml[32,1372+22])
+                            Tpat_var "m/1695"
+                          expression (lib/stringMap.ml[33,1397+2]..lib/stringMap.ml[39,1467+19])
+                            Texp_let Nonrec
+                            [
+                              <def>
+                                pattern (lib/stringMap.ml[33,1397+6]..lib/stringMap.ml[33,1397+8])
+                                  Tpat_var "vs/1696"
+                                expression (lib/stringMap.ml[34,1408+4]..lib/stringMap.ml[37,1453+8])
+                                  Texp_try
+                                  expression (lib/stringMap.ml[35,1416+6]..lib/stringMap.ml[35,1416+14])
+                                    Texp_apply
+                                    expression (lib/stringMap.ml[35,1416+6]..lib/stringMap.ml[35,1416+10])
+                                      Texp_ident "find/1320"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (lib/stringMap.ml[35,1416+11]..lib/stringMap.ml[35,1416+12])
+                                          Texp_ident "k/1693"
+                                      <arg>
+                                        Nolabel
+                                        expression (lib/stringMap.ml[35,1416+13]..lib/stringMap.ml[35,1416+14])
+                                          Texp_ident "m/1695"
+                                    ]
+                                  [
+                                    <case>
+                                      pattern (lib/stringMap.ml[36,1431+9]..lib/stringMap.ml[36,1431+18])
+                                        Tpat_construct "Not_found"
+                                        []
+                                        None
+                                      expression (lib/stringMap.ml[37,1453+6]..lib/stringMap.ml[37,1453+8])
+                                        Texp_construct "[]"
+                                        []
+                                  ]
+                            ]
+                            expression (lib/stringMap.ml[39,1467+2]..lib/stringMap.ml[39,1467+19])
+                              Texp_apply
+                              expression (lib/stringMap.ml[39,1467+2]..lib/stringMap.ml[39,1467+5])
+                                Texp_ident "add/1305"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (lib/stringMap.ml[39,1467+6]..lib/stringMap.ml[39,1467+7])
+                                    Texp_ident "k/1693"
+                                <arg>
+                                  Nolabel
+                                  expression (lib/stringMap.ml[39,1467+8]..lib/stringMap.ml[39,1467+17])
+                                    Texp_construct "::"
+                                    [
+                                      expression (lib/stringMap.ml[39,1467+9]..lib/stringMap.ml[39,1467+10])
+                                        Texp_ident "v/1694"
+                                      expression (lib/stringMap.ml[39,1467+14]..lib/stringMap.ml[39,1467+16])
+                                        Texp_ident "vs/1696"
+                                    ]
+                                <arg>
+                                  Nolabel
+                                  expression (lib/stringMap.ml[39,1467+18]..lib/stringMap.ml[39,1467+19])
+                                    Texp_ident "m/1695"
+                              ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/stringMap.ml[41,1488+0]..lib/stringMap.ml[42,1505+53])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[41,1488+4]..lib/stringMap.ml[41,1488+11])
+          Tpat_var "of_list/1697"
+        expression (lib/stringMap.ml[41,1488+12]..lib/stringMap.ml[42,1505+53]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/stringMap.ml[41,1488+12]..lib/stringMap.ml[41,1488+14])
+                Tpat_var "xs/1698"
+              expression (lib/stringMap.ml[42,1505+2]..lib/stringMap.ml[42,1505+53])
+                Texp_apply
+                expression (lib/stringMap.ml[42,1505+2]..lib/stringMap.ml[42,1505+16])
+                  Texp_ident "Stdlib!.List.fold_left"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/stringMap.ml[42,1505+17]..lib/stringMap.ml[42,1505+44])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/stringMap.ml[42,1505+22]..lib/stringMap.ml[42,1505+23])
+                            Tpat_var "m/1765"
+                          expression (lib/stringMap.ml[42,1505+24]..lib/stringMap.ml[42,1505+43]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (lib/stringMap.ml[42,1505+24]..lib/stringMap.ml[42,1505+30])
+                                  Tpat_tuple
+                                  [
+                                    pattern (lib/stringMap.ml[42,1505+25]..lib/stringMap.ml[42,1505+26])
+                                      Tpat_var "x/1766"
+                                    pattern (lib/stringMap.ml[42,1505+28]..lib/stringMap.ml[42,1505+29])
+                                      Tpat_var "v/1767"
+                                  ]
+                                expression (lib/stringMap.ml[42,1505+34]..lib/stringMap.ml[42,1505+43])
+                                  Texp_apply
+                                  expression (lib/stringMap.ml[42,1505+34]..lib/stringMap.ml[42,1505+37])
+                                    Texp_ident "add/1305"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/stringMap.ml[42,1505+38]..lib/stringMap.ml[42,1505+39])
+                                        Texp_ident "x/1766"
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/stringMap.ml[42,1505+40]..lib/stringMap.ml[42,1505+41])
+                                        Texp_ident "v/1767"
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/stringMap.ml[42,1505+42]..lib/stringMap.ml[42,1505+43])
+                                        Texp_ident "m/1765"
+                                  ]
+                            ]
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (lib/stringMap.ml[42,1505+45]..lib/stringMap.ml[42,1505+50])
+                      Texp_ident "empty/1304"
+                  <arg>
+                    Nolabel
+                    expression (lib/stringMap.ml[42,1505+51]..lib/stringMap.ml[42,1505+53])
+                      Texp_ident "xs/1698"
+                ]
+          ]
+    ]
+  structure_item (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+          Texp_apply
+          expression (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+          Texp_apply
+          expression (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+          Texp_apply
+          expression (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+          Texp_apply
+          expression (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stringMap.ml[42,1505+53]..lib/stringMap.ml[42,1505+53]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__StringMap>
+ "add"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "add"[value];
+ "add_seq"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "add_seq"[value];
+ "add_to_list"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "add_to_list"[value];
+ "bindings"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "bindings"[value];
+ "cardinal"[value] -> <Gbnf_parser__StringMap.0>;
+ "choose"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "choose"[value];
+ "choose_opt"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "choose_opt"[value];
+ "compare"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "compare"[value];
+ "domain"[value] -> <Gbnf_parser__StringMap.13>;
+ "empty"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "empty"[value];
+ "equal"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "equal"[value];
+ "exists"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "exists"[value];
+ "filter"[value] -> <Gbnf_parser__StringMap.3>;
+ "filter_map"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "filter_map"[value];
+ "find"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find"[value];
+ "find_first"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_first"[value];
+ "find_first_opt"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_first_opt"[value];
+ "find_last"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_last"[value];
+ "find_last_opt"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_last_opt"[value];
+ "find_opt"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_opt"[value];
+ "fold"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "fold"[value];
+ "for_all"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "for_all"[value];
+ "is_empty"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "is_empty"[value];
+ "iter"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "iter"[value];
+ "key"[type] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "key"[type];
+ "map"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "map"[value];
+ "mapi"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "mapi"[value];
+ "max_binding"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "max_binding"[value];
+ "max_binding_opt"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "max_binding_opt"[value];
+ "mem"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "mem"[value];
+ "merge"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "merge"[value];
+ "min_binding"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "min_binding"[value];
+ "min_binding_opt"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "min_binding_opt"[value];
+ "multiple_add"[value] -> <Gbnf_parser__StringMap.17>;
+ "of_list"[value] -> <Gbnf_parser__StringMap.22>;
+ "of_seq"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "of_seq"[value];
+ "partition"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "partition"[value];
+ "remove"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "remove"[value];
+ "restrict"[value] -> <Gbnf_parser__StringMap.9>;
+ "singleton"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "singleton"[value];
+ "split"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "split"[value];
+ "t"[type] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "t"[type];
+ "to_list"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "to_list"[value];
+ "to_rev_seq"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "to_rev_seq"[value];
+ "to_seq"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "to_seq"[value];
+ "to_seq_from"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "to_seq_from"[value];
+ "union"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "union"[value];
+ "update"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "update"[value];
+ }
+
+(setglobal Gbnf_parser__StringMap!
+  (let
+    (*match*/2250 =
+       (after Gbnf_parser__StringMap lib/stringMap.ml(14)<ghost>:976-976
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__StringMap"))
+     *match*/2248 =
+       (after Gbnf_parser__StringMap lib/stringMap.ml(14)<ghost>:976-976
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/2246 =
+       (after Gbnf_parser__StringMap lib/stringMap.ml(14)<ghost>:976-976
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/stringMap.ml"))
+     *match*/2244 =
+       (after Gbnf_parser__StringMap lib/stringMap.ml(14)<ghost>:976-976
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "stringMap.ml"))
+     include/2230 =
+       (apply
+         (let (let/2242 = (field_imm 0 (global Stdlib__Map!)))
+           (field_imm 0 (global Stdlib__Map!)))
+         (let
+           (let/2240 = (global Stdlib__String!)
+            let/2241 =a (global Stdlib__String!))
+           (makeblock 0 (field_mut 9 let/2241))))
+     empty/1304 =a (field_mut 0 include/2230)
+     add/1305 =a (field_mut 1 include/2230)
+     add_to_list/1306 =a (field_mut 2 include/2230)
+     update/1307 =a (field_mut 3 include/2230)
+     singleton/1308 =a (field_mut 4 include/2230)
+     remove/1309 =a (field_mut 5 include/2230)
+     merge/1310 =a (field_mut 6 include/2230)
+     union/1311 =a (field_mut 7 include/2230)
+     cardinal/1312 =a (field_mut 8 include/2230)
+     bindings/1313 =a (field_mut 9 include/2230)
+     min_binding/1314 =a (field_mut 10 include/2230)
+     min_binding_opt/1315 =a (field_mut 11 include/2230)
+     max_binding/1316 =a (field_mut 12 include/2230)
+     max_binding_opt/1317 =a (field_mut 13 include/2230)
+     choose/1318 =a (field_mut 14 include/2230)
+     choose_opt/1319 =a (field_mut 15 include/2230)
+     find/1320 =a (field_mut 16 include/2230)
+     find_opt/1321 =a (field_mut 17 include/2230)
+     find_first/1322 =a (field_mut 18 include/2230)
+     find_first_opt/1323 =a (field_mut 19 include/2230)
+     find_last/1324 =a (field_mut 20 include/2230)
+     find_last_opt/1325 =a (field_mut 21 include/2230)
+     iter/1326 =a (field_mut 22 include/2230)
+     fold/1327 =a (field_mut 23 include/2230)
+     map/1328 =a (field_mut 24 include/2230)
+     mapi/1329 =a (field_mut 25 include/2230)
+     filter/1330 =a (field_mut 26 include/2230)
+     filter_map/1331 =a (field_mut 27 include/2230)
+     partition/1332 =a (field_mut 28 include/2230)
+     split/1333 =a (field_mut 29 include/2230)
+     is_empty/1334 =a (field_mut 30 include/2230)
+     mem/1335 =a (field_mut 31 include/2230)
+     equal/1336 =a (field_mut 32 include/2230)
+     compare/1337 =a (field_mut 33 include/2230)
+     for_all/1338 =a (field_mut 34 include/2230)
+     exists/1339 =a (field_mut 35 include/2230)
+     to_list/1340 =a (field_mut 36 include/2230)
+     of_list/1341 =a (field_mut 37 include/2230)
+     to_seq/1342 =a (field_mut 38 include/2230)
+     to_rev_seq/1343 =a (field_mut 39 include/2230)
+     to_seq_from/1344 =a (field_mut 40 include/2230)
+     add_seq/1345 =a (field_mut 41 include/2230)
+     of_seq/1346 =a (field_mut 42 include/2230)
+     cardinal/1347 =
+       (function s/1348 : int
+         (funct-body Gbnf_parser__StringMap.cardinal lib/stringMap.ml(16)<ghost>:1016-1051
+           (before Gbnf_parser__StringMap.cardinal lib/stringMap.ml(17):1022-1051
+             (after Gbnf_parser__StringMap.cardinal lib/stringMap.ml(17):1022-1051
+               (apply fold/1327
+                 (function param/1351 param/1350 x/1349[int] : int
+                   (funct-body Gbnf_parser__StringMap.cardinal.(fun) lib/stringMap.ml(17):1027-1047
+                     (before Gbnf_parser__StringMap.cardinal.(fun) lib/stringMap.ml(17):1041-1046
+                       (+ x/1349 1))))
+                 s/1348 0)))))
+     filter/1487 =
+       (function pred/1488 map/1489
+         (funct-body Gbnf_parser__StringMap.filter lib/stringMap.ml(19)<ghost>:1064-1208
+           (before Gbnf_parser__StringMap.filter lib/stringMap.ml(20):1077-1208
+             (after Gbnf_parser__StringMap.filter lib/stringMap.ml(20):1077-1208
+               (apply fold/1327
+                 (function key/1490 value/1491 map/1492
+                   (funct-body Gbnf_parser__StringMap.filter.(fun) lib/stringMap.ml(20):1082-1198
+                     (before Gbnf_parser__StringMap.filter.(fun) lib/stringMap.ml(21):1114-1197
+                       (if
+                         (after Gbnf_parser__StringMap.filter.(fun) lib/stringMap.ml(21):1117-1131
+                           (apply pred/1488 key/1490 value/1491))
+                         (before Gbnf_parser__StringMap.filter.(fun) lib/stringMap.ml(22):1149-1166
+                           (after Gbnf_parser__StringMap.filter.(fun) lib/stringMap.ml(22):1149-1166
+                             (apply add/1305 key/1490 value/1491 map/1492)))
+                         (before Gbnf_parser__StringMap.filter.(fun) lib/stringMap.ml(24):1194-1197
+                           map/1492)))))
+                 map/1489 empty/1304)))))
+     restrict/1493 =
+       (function domain/1495 map/1496
+         (funct-body Gbnf_parser__StringMap.restrict lib/stringMap.ml(26)<ghost>:1223-1284
+           (before Gbnf_parser__StringMap.restrict lib/stringMap.ml(27):1238-1284
+             (after Gbnf_parser__StringMap.restrict lib/stringMap.ml(27):1238-1284
+               (apply filter/1487
+                 (function k/1497 param/1684 : int
+                   (funct-body Gbnf_parser__StringMap.restrict.(fun) lib/stringMap.ml(27):1245-1280
+                     (before Gbnf_parser__StringMap.restrict.(fun) lib/stringMap.ml(27):1257-1279
+                       (after Gbnf_parser__StringMap.restrict.(fun) lib/stringMap.ml(27):1257-1279
+                         (apply
+                           (field_imm 29 (global Gbnf_parser__StringSet!))
+                           k/1497 domain/1495)))))
+                 map/1496)))))
+     domain/1685 =
+       (function map/1687
+         (funct-body Gbnf_parser__StringMap.domain lib/stringMap.ml(29)<ghost>:1297-1370
+           (before Gbnf_parser__StringMap.domain lib/stringMap.ml(30):1305-1370
+             (after Gbnf_parser__StringMap.domain lib/stringMap.ml(30):1305-1370
+               (apply fold/1327
+                 (function key/1688 param/1690 acu/1689
+                   (funct-body Gbnf_parser__StringMap.domain.(fun) lib/stringMap.ml(30):1310-1350
+                     (before Gbnf_parser__StringMap.domain.(fun) lib/stringMap.ml(30):1328-1349
+                       (after Gbnf_parser__StringMap.domain.(fun) lib/stringMap.ml(30):1328-1349
+                         (apply
+                           (field_imm 1 (global Gbnf_parser__StringSet!))
+                           key/1688 acu/1689)))))
+                 map/1687 (field_imm 0 (global Gbnf_parser__StringSet!)))))))
+     multiple_add/1691 =
+       (function k/1693 v/1694 m/1695
+         (funct-body Gbnf_parser__StringMap.multiple_add lib/stringMap.ml(32)<ghost>:1389-1486
+           (before Gbnf_parser__StringMap.multiple_add lib/stringMap.ml(33):1399-1486
+             (let
+               (vs/1696 =
+                  (try
+                    (after Gbnf_parser__StringMap.multiple_add lib/stringMap.ml(35):1422-1430
+                      (apply find/1320 k/1693 m/1695))
+                   with exn/2231
+                    (catch
+                      (if (== exn/2231 (field_imm 7 (global Stdlib!)))
+                        (before Gbnf_parser__StringMap.multiple_add lib/stringMap.ml(37):1459-1461
+                          0)
+                        (exit 1))
+                     with (1) (reraise exn/2231))))
+               (before Gbnf_parser__StringMap.multiple_add lib/stringMap.ml(39):1469-1486
+                 (after Gbnf_parser__StringMap.multiple_add lib/stringMap.ml(39):1469-1486
+                   (apply add/1305 k/1693 (makeblock 0 v/1694 vs/1696)
+                     m/1695)))))))
+     of_list/1697 =
+       (function xs/1698
+         (funct-body Gbnf_parser__StringMap.of_list lib/stringMap.ml(41)<ghost>:1500-1558
+           (before Gbnf_parser__StringMap.of_list lib/stringMap.ml(42):1507-1558
+             (after Gbnf_parser__StringMap.of_list lib/stringMap.ml(42):1507-1558
+               (apply (field_imm 25 (global Stdlib__List!))
+                 (function m/1765 param/1768
+                   (funct-body Gbnf_parser__StringMap.of_list.(fun) lib/stringMap.ml(42):1522-1549
+                     (let
+                       (v/1767 =a (field_imm 1 param/1768)
+                        x/1766 =a (field_imm 0 param/1768))
+                       (before Gbnf_parser__StringMap.of_list.(fun) lib/stringMap.ml(42):1539-1548
+                         (after Gbnf_parser__StringMap.of_list.(fun) lib/stringMap.ml(42):1539-1548
+                           (apply add/1305 x/1766 v/1767 m/1765))))))
+                 empty/1304 xs/1698)))))
+     *match*/2239 =
+       (after Gbnf_parser__StringMap lib/stringMap.ml(42)<ghost>:1558-1558
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/2237 =
+       (after Gbnf_parser__StringMap lib/stringMap.ml(42)<ghost>:1558-1558
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/2235 =
+       (after Gbnf_parser__StringMap lib/stringMap.ml(42)<ghost>:1558-1558
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/2233 =
+       (after Gbnf_parser__StringMap lib/stringMap.ml(42)<ghost>:1558-1558
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__StringMap")))
+    (pseudo <unknown location>
+      (makeblock 0 empty/1304 add/1305 add_to_list/1306 update/1307
+        singleton/1308 remove/1309 merge/1310 union/1311 bindings/1313
+        min_binding/1314 min_binding_opt/1315 max_binding/1316
+        max_binding_opt/1317 choose/1318 choose_opt/1319 find/1320
+        find_opt/1321 find_first/1322 find_first_opt/1323 find_last/1324
+        find_last_opt/1325 iter/1326 fold/1327 map/1328 mapi/1329
+        filter_map/1331 partition/1332 split/1333 is_empty/1334 mem/1335
+        equal/1336 compare/1337 for_all/1338 exists/1339 to_list/1340
+        to_seq/1342 to_rev_seq/1343 to_seq_from/1344 add_seq/1345 of_seq/1346
+        cardinal/1347 filter/1487 restrict/1493 domain/1685 multiple_add/1691
+        of_list/1697))))
+(setglobal Gbnf_parser__StringMap!
+  (let
+    (*match*/2250 =
+       (after Gbnf_parser__StringMap lib/stringMap.ml(14)<ghost>:976-976
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__StringMap"))
+     *match*/2248 =
+       (after Gbnf_parser__StringMap lib/stringMap.ml(14)<ghost>:976-976
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/2246 =
+       (after Gbnf_parser__StringMap lib/stringMap.ml(14)<ghost>:976-976
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/stringMap.ml"))
+     *match*/2244 =
+       (after Gbnf_parser__StringMap lib/stringMap.ml(14)<ghost>:976-976
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "stringMap.ml"))
+     include/2230 =
+       (apply
+         (let (let/2242 = (field_imm 0 (global Stdlib__Map!)))
+           (field_imm 0 (global Stdlib__Map!)))
+         (let
+           (let/2240 = (global Stdlib__String!)
+            let/2241 =a (global Stdlib__String!))
+           (makeblock 0 (field_mut 9 let/2241))))
+     empty/1304 =a (field_mut 0 include/2230)
+     add/1305 =a (field_mut 1 include/2230)
+     add_to_list/1306 =a (field_mut 2 include/2230)
+     update/1307 =a (field_mut 3 include/2230)
+     singleton/1308 =a (field_mut 4 include/2230)
+     remove/1309 =a (field_mut 5 include/2230)
+     merge/1310 =a (field_mut 6 include/2230)
+     union/1311 =a (field_mut 7 include/2230)
+     bindings/1313 =a (field_mut 9 include/2230)
+     min_binding/1314 =a (field_mut 10 include/2230)
+     min_binding_opt/1315 =a (field_mut 11 include/2230)
+     max_binding/1316 =a (field_mut 12 include/2230)
+     max_binding_opt/1317 =a (field_mut 13 include/2230)
+     choose/1318 =a (field_mut 14 include/2230)
+     choose_opt/1319 =a (field_mut 15 include/2230)
+     find/1320 =a (field_mut 16 include/2230)
+     find_opt/1321 =a (field_mut 17 include/2230)
+     find_first/1322 =a (field_mut 18 include/2230)
+     find_first_opt/1323 =a (field_mut 19 include/2230)
+     find_last/1324 =a (field_mut 20 include/2230)
+     find_last_opt/1325 =a (field_mut 21 include/2230)
+     iter/1326 =a (field_mut 22 include/2230)
+     fold/1327 =a (field_mut 23 include/2230)
+     map/1328 =a (field_mut 24 include/2230)
+     mapi/1329 =a (field_mut 25 include/2230)
+     filter_map/1331 =a (field_mut 27 include/2230)
+     partition/1332 =a (field_mut 28 include/2230)
+     split/1333 =a (field_mut 29 include/2230)
+     is_empty/1334 =a (field_mut 30 include/2230)
+     mem/1335 =a (field_mut 31 include/2230)
+     equal/1336 =a (field_mut 32 include/2230)
+     compare/1337 =a (field_mut 33 include/2230)
+     for_all/1338 =a (field_mut 34 include/2230)
+     exists/1339 =a (field_mut 35 include/2230)
+     to_list/1340 =a (field_mut 36 include/2230)
+     to_seq/1342 =a (field_mut 38 include/2230)
+     to_rev_seq/1343 =a (field_mut 39 include/2230)
+     to_seq_from/1344 =a (field_mut 40 include/2230)
+     add_seq/1345 =a (field_mut 41 include/2230)
+     of_seq/1346 =a (field_mut 42 include/2230)
+     cardinal/1347 =
+       (function s/1348 : int
+         (funct-body Gbnf_parser__StringMap.cardinal lib/stringMap.ml(16)<ghost>:1016-1051
+           (before Gbnf_parser__StringMap.cardinal lib/stringMap.ml(17):1022-1051
+             (after Gbnf_parser__StringMap.cardinal lib/stringMap.ml(17):1022-1051
+               (apply fold/1327
+                 (function param/1351 param/1350 x/1349[int] : int
+                   (funct-body Gbnf_parser__StringMap.cardinal.(fun) lib/stringMap.ml(17):1027-1047
+                     (before Gbnf_parser__StringMap.cardinal.(fun) lib/stringMap.ml(17):1041-1046
+                       (+ x/1349 1))))
+                 s/1348 0)))))
+     filter/1487 =
+       (function pred/1488 map/1489
+         (funct-body Gbnf_parser__StringMap.filter lib/stringMap.ml(19)<ghost>:1064-1208
+           (before Gbnf_parser__StringMap.filter lib/stringMap.ml(20):1077-1208
+             (after Gbnf_parser__StringMap.filter lib/stringMap.ml(20):1077-1208
+               (apply fold/1327
+                 (function key/1490 value/1491 map/1492
+                   (funct-body Gbnf_parser__StringMap.filter.(fun) lib/stringMap.ml(20):1082-1198
+                     (before Gbnf_parser__StringMap.filter.(fun) lib/stringMap.ml(21):1114-1197
+                       (if
+                         (after Gbnf_parser__StringMap.filter.(fun) lib/stringMap.ml(21):1117-1131
+                           (apply pred/1488 key/1490 value/1491))
+                         (before Gbnf_parser__StringMap.filter.(fun) lib/stringMap.ml(22):1149-1166
+                           (after Gbnf_parser__StringMap.filter.(fun) lib/stringMap.ml(22):1149-1166
+                             (apply add/1305 key/1490 value/1491 map/1492)))
+                         (before Gbnf_parser__StringMap.filter.(fun) lib/stringMap.ml(24):1194-1197
+                           map/1492)))))
+                 map/1489 empty/1304)))))
+     restrict/1493 =
+       (function domain/1495 map/1496
+         (funct-body Gbnf_parser__StringMap.restrict lib/stringMap.ml(26)<ghost>:1223-1284
+           (before Gbnf_parser__StringMap.restrict lib/stringMap.ml(27):1238-1284
+             (after Gbnf_parser__StringMap.restrict lib/stringMap.ml(27):1238-1284
+               (apply filter/1487
+                 (function k/1497 param/1684 : int
+                   (funct-body Gbnf_parser__StringMap.restrict.(fun) lib/stringMap.ml(27):1245-1280
+                     (before Gbnf_parser__StringMap.restrict.(fun) lib/stringMap.ml(27):1257-1279
+                       (after Gbnf_parser__StringMap.restrict.(fun) lib/stringMap.ml(27):1257-1279
+                         (apply
+                           (field_imm 29 (global Gbnf_parser__StringSet!))
+                           k/1497 domain/1495)))))
+                 map/1496)))))
+     domain/1685 =
+       (function map/1687
+         (funct-body Gbnf_parser__StringMap.domain lib/stringMap.ml(29)<ghost>:1297-1370
+           (before Gbnf_parser__StringMap.domain lib/stringMap.ml(30):1305-1370
+             (after Gbnf_parser__StringMap.domain lib/stringMap.ml(30):1305-1370
+               (apply fold/1327
+                 (function key/1688 param/1690 acu/1689
+                   (funct-body Gbnf_parser__StringMap.domain.(fun) lib/stringMap.ml(30):1310-1350
+                     (before Gbnf_parser__StringMap.domain.(fun) lib/stringMap.ml(30):1328-1349
+                       (after Gbnf_parser__StringMap.domain.(fun) lib/stringMap.ml(30):1328-1349
+                         (apply
+                           (field_imm 1 (global Gbnf_parser__StringSet!))
+                           key/1688 acu/1689)))))
+                 map/1687 (field_imm 0 (global Gbnf_parser__StringSet!)))))))
+     multiple_add/1691 =
+       (function k/1693 v/1694 m/1695
+         (funct-body Gbnf_parser__StringMap.multiple_add lib/stringMap.ml(32)<ghost>:1389-1486
+           (before Gbnf_parser__StringMap.multiple_add lib/stringMap.ml(33):1399-1486
+             (let
+               (vs/1696 =
+                  (try
+                    (after Gbnf_parser__StringMap.multiple_add lib/stringMap.ml(35):1422-1430
+                      (apply find/1320 k/1693 m/1695))
+                   with exn/2231
+                    (if (== exn/2231 (field_imm 7 (global Stdlib!)))
+                      (before Gbnf_parser__StringMap.multiple_add lib/stringMap.ml(37):1459-1461
+                        0)
+                      (reraise exn/2231))))
+               (before Gbnf_parser__StringMap.multiple_add lib/stringMap.ml(39):1469-1486
+                 (after Gbnf_parser__StringMap.multiple_add lib/stringMap.ml(39):1469-1486
+                   (apply add/1305 k/1693 (makeblock 0 v/1694 vs/1696)
+                     m/1695)))))))
+     of_list/1697 =
+       (function xs/1698
+         (funct-body Gbnf_parser__StringMap.of_list lib/stringMap.ml(41)<ghost>:1500-1558
+           (before Gbnf_parser__StringMap.of_list lib/stringMap.ml(42):1507-1558
+             (after Gbnf_parser__StringMap.of_list lib/stringMap.ml(42):1507-1558
+               (apply (field_imm 25 (global Stdlib__List!))
+                 (function m/1765 param/1768
+                   (funct-body Gbnf_parser__StringMap.of_list.(fun) lib/stringMap.ml(42):1522-1549
+                     (let
+                       (v/1767 =a (field_imm 1 param/1768)
+                        x/1766 =a (field_imm 0 param/1768))
+                       (before Gbnf_parser__StringMap.of_list.(fun) lib/stringMap.ml(42):1539-1548
+                         (after Gbnf_parser__StringMap.of_list.(fun) lib/stringMap.ml(42):1539-1548
+                           (apply add/1305 x/1766 v/1767 m/1765))))))
+                 empty/1304 xs/1698)))))
+     *match*/2239 =
+       (after Gbnf_parser__StringMap lib/stringMap.ml(42)<ghost>:1558-1558
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/2237 =
+       (after Gbnf_parser__StringMap lib/stringMap.ml(42)<ghost>:1558-1558
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/2235 =
+       (after Gbnf_parser__StringMap lib/stringMap.ml(42)<ghost>:1558-1558
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/2233 =
+       (after Gbnf_parser__StringMap lib/stringMap.ml(42)<ghost>:1558-1558
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__StringMap")))
+    (pseudo <unknown location>
+      (makeblock 0 empty/1304 add/1305 add_to_list/1306 update/1307
+        singleton/1308 remove/1309 merge/1310 union/1311 bindings/1313
+        min_binding/1314 min_binding_opt/1315 max_binding/1316
+        max_binding_opt/1317 choose/1318 choose_opt/1319 find/1320
+        find_opt/1321 find_first/1322 find_first_opt/1323 find_last/1324
+        find_last_opt/1325 iter/1326 fold/1327 map/1328 mapi/1329
+        filter_map/1331 partition/1332 split/1333 is_empty/1334 mem/1335
+        equal/1336 compare/1337 for_all/1338 exists/1339 to_list/1340
+        to_seq/1342 to_rev_seq/1343 to_seq_from/1344 add_seq/1345 of_seq/1346
+        cardinal/1347 filter/1487 restrict/1493 domain/1685 multiple_add/1691
+        of_list/1697))))

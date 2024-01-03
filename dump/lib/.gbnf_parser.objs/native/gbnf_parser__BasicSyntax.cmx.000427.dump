@@ -1,0 +1,3043 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("lib/basicSyntax.ml",(lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("basicSyntax.ml",(lib/basicSyntax.ml[14,976+0]..[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[14,976+0]..[14,976+11])
+    Pstr_open Fresh
+    module_expr (lib/basicSyntax.ml[14,976+5]..[14,976+11])
+      Pmod_ident "Syntax" (lib/basicSyntax.ml[14,976+5]..[14,976+11])
+  structure_item (lib/basicSyntax.ml[38,2028+0]..[42,2164+3])
+    Pstr_type Rec
+    [
+      type_declaration "producer" (lib/basicSyntax.ml[38,2028+5]..[38,2028+13]) (lib/basicSyntax.ml[38,2028+0]..[42,2164+3])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (lib/basicSyntax.ml[39,2046+4]..[39,2046+45])
+                Immutable
+                "producer_identifier" (lib/basicSyntax.ml[39,2046+4]..[39,2046+23])                core_type (lib/basicSyntax.ml[39,2046+26]..[39,2046+44])
+                  Ptyp_constr "located" (lib/basicSyntax.ml[39,2046+37]..[39,2046+44])
+                  [
+                    core_type (lib/basicSyntax.ml[39,2046+26]..[39,2046+36])
+                      Ptyp_constr "identifier" (lib/basicSyntax.ml[39,2046+26]..[39,2046+36])
+                      []
+                  ]
+              (lib/basicSyntax.ml[40,2092+4]..[40,2092+33])
+                Immutable
+                "producer_symbol" (lib/basicSyntax.ml[40,2092+4]..[40,2092+19])                core_type (lib/basicSyntax.ml[40,2092+26]..[40,2092+32])
+                  Ptyp_constr "symbol" (lib/basicSyntax.ml[40,2092+26]..[40,2092+32])
+                  []
+              (lib/basicSyntax.ml[41,2126+4]..[41,2126+37])
+                Immutable
+                "producer_attributes" (lib/basicSyntax.ml[41,2126+4]..[41,2126+23])                core_type (lib/basicSyntax.ml[41,2126+26]..[41,2126+36])
+                  Ptyp_constr "attributes" (lib/basicSyntax.ml[41,2126+26]..[41,2126+36])
+                  []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/basicSyntax.ml[44,2169+0]..[45,2186+15])
+    Pstr_type Rec
+    [
+      type_declaration "producers" (lib/basicSyntax.ml[44,2169+5]..[44,2169+14]) (lib/basicSyntax.ml[44,2169+0]..[45,2186+15])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/basicSyntax.ml[45,2186+2]..[45,2186+15])
+              Ptyp_constr "list" (lib/basicSyntax.ml[45,2186+11]..[45,2186+15])
+              [
+                core_type (lib/basicSyntax.ml[45,2186+2]..[45,2186+10])
+                  Ptyp_constr "producer" (lib/basicSyntax.ml[45,2186+2]..[45,2186+10])
+                  []
+              ]
+    ]
+  structure_item (lib/basicSyntax.ml[52,2411+0]..[58,2657+3])
+    Pstr_type Rec
+    [
+      type_declaration "branch" (lib/basicSyntax.ml[52,2411+5]..[52,2411+11]) (lib/basicSyntax.ml[52,2411+0]..[58,2657+3])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (lib/basicSyntax.ml[53,2427+4]..[53,2427+42])
+                Immutable
+                "branch_position" (lib/basicSyntax.ml[53,2427+4]..[53,2427+19])                core_type (lib/basicSyntax.ml[53,2427+30]..[53,2427+41])
+                  Ptyp_constr "Positions.t" (lib/basicSyntax.ml[53,2427+30]..[53,2427+41])
+                  []
+              (lib/basicSyntax.ml[54,2470+4]..[54,2470+40])
+                Immutable
+                "producers" (lib/basicSyntax.ml[54,2470+4]..[54,2470+13])                core_type (lib/basicSyntax.ml[54,2470+30]..[54,2470+39])
+                  Ptyp_constr "producers" (lib/basicSyntax.ml[54,2470+30]..[54,2470+39])
+                  []
+              (lib/basicSyntax.ml[55,2511+4]..[55,2511+37])
+                Immutable
+                "action" (lib/basicSyntax.ml[55,2511+4]..[55,2511+10])                core_type (lib/basicSyntax.ml[55,2511+30]..[55,2511+36])
+                  Ptyp_constr "action" (lib/basicSyntax.ml[55,2511+30]..[55,2511+36])
+                  []
+              (lib/basicSyntax.ml[56,2549+4]..[56,2549+53])
+                Immutable
+                "branch_prec_annotation" (lib/basicSyntax.ml[56,2549+4]..[56,2549+26])                core_type (lib/basicSyntax.ml[56,2549+30]..[56,2549+52])
+                  Ptyp_constr "branch_prec_annotation" (lib/basicSyntax.ml[56,2549+30]..[56,2549+52])
+                  []
+              (lib/basicSyntax.ml[57,2603+4]..[57,2603+53])
+                Immutable
+                "branch_production_level" (lib/basicSyntax.ml[57,2603+4]..[57,2603+27])                core_type (lib/basicSyntax.ml[57,2603+30]..[57,2603+53])
+                  Ptyp_constr "branch_production_level" (lib/basicSyntax.ml[57,2603+30]..[57,2603+53])
+                  []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/basicSyntax.ml[60,2662+0]..[61,2678+13])
+    Pstr_type Rec
+    [
+      type_declaration "branches" (lib/basicSyntax.ml[60,2662+5]..[60,2662+13]) (lib/basicSyntax.ml[60,2662+0]..[61,2678+13])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/basicSyntax.ml[61,2678+2]..[61,2678+13])
+              Ptyp_constr "list" (lib/basicSyntax.ml[61,2678+9]..[61,2678+13])
+              [
+                core_type (lib/basicSyntax.ml[61,2678+2]..[61,2678+8])
+                  Ptyp_constr "branch" (lib/basicSyntax.ml[61,2678+2]..[61,2678+8])
+                  []
+              ]
+    ]
+  structure_item (lib/basicSyntax.ml[70,2963+0]..[75,3095+3])
+    Pstr_type Rec
+    [
+      type_declaration "rule" (lib/basicSyntax.ml[70,2963+5]..[70,2963+9]) (lib/basicSyntax.ml[70,2963+0]..[75,3095+3])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (lib/basicSyntax.ml[71,2977+4]..[71,2977+27])
+                Immutable
+                "branches" (lib/basicSyntax.ml[71,2977+4]..[71,2977+12])                core_type (lib/basicSyntax.ml[71,2977+18]..[71,2977+26])
+                  Ptyp_constr "branches" (lib/basicSyntax.ml[71,2977+18]..[71,2977+26])
+                  []
+              (lib/basicSyntax.ml[72,3005+4]..[72,3005+35])
+                Immutable
+                "positions" (lib/basicSyntax.ml[72,3005+4]..[72,3005+13])                core_type (lib/basicSyntax.ml[72,3005+18]..[72,3005+34])
+                  Ptyp_constr "list" (lib/basicSyntax.ml[72,3005+30]..[72,3005+34])
+                  [
+                    core_type (lib/basicSyntax.ml[72,3005+18]..[72,3005+29])
+                      Ptyp_constr "Positions.t" (lib/basicSyntax.ml[72,3005+18]..[72,3005+29])
+                      []
+                  ]
+              (lib/basicSyntax.ml[73,3041+4]..[73,3041+23])
+                Immutable
+                "inline_flag" (lib/basicSyntax.ml[73,3041+4]..[73,3041+15])                core_type (lib/basicSyntax.ml[73,3041+18]..[73,3041+22])
+                  Ptyp_constr "bool" (lib/basicSyntax.ml[73,3041+18]..[73,3041+22])
+                  []
+              (lib/basicSyntax.ml[74,3065+4]..[74,3065+29])
+                Immutable
+                "attributes" (lib/basicSyntax.ml[74,3065+4]..[74,3065+14])                core_type (lib/basicSyntax.ml[74,3065+18]..[74,3065+28])
+                  Ptyp_constr "attributes" (lib/basicSyntax.ml[74,3065+18]..[74,3065+28])
+                  []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/basicSyntax.ml[83,3410+0]..[93,3826+3])
+    Pstr_type Rec
+    [
+      type_declaration "grammar" (lib/basicSyntax.ml[83,3410+5]..[83,3410+12]) (lib/basicSyntax.ml[83,3410+0]..[93,3826+3])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (lib/basicSyntax.ml[84,3428+4]..[84,3428+37])
+                Immutable
+                "preludes" (lib/basicSyntax.ml[84,3428+4]..[84,3428+12])                core_type (lib/basicSyntax.ml[84,3428+22]..[84,3428+36])
+                  Ptyp_constr "list" (lib/basicSyntax.ml[84,3428+32]..[84,3428+36])
+                  [
+                    core_type (lib/basicSyntax.ml[84,3428+22]..[84,3428+31])
+                      Ptyp_constr "Stretch.t" (lib/basicSyntax.ml[84,3428+22]..[84,3428+31])
+                      []
+                  ]
+              (lib/basicSyntax.ml[85,3466+4]..[85,3466+43])
+                Immutable
+                "postludes" (lib/basicSyntax.ml[85,3466+4]..[85,3466+13])                core_type (lib/basicSyntax.ml[85,3466+22]..[85,3466+42])
+                  Ptyp_constr "list" (lib/basicSyntax.ml[85,3466+38]..[85,3466+42])
+                  [
+                    core_type (lib/basicSyntax.ml[85,3466+22]..[85,3466+37])
+                      Ptyp_constr "Syntax.postlude" (lib/basicSyntax.ml[85,3466+22]..[85,3466+37])
+                      []
+                  ]
+              (lib/basicSyntax.ml[86,3510+4]..[86,3510+37])
+                Immutable
+                "parameters" (lib/basicSyntax.ml[86,3510+4]..[86,3510+14])                core_type (lib/basicSyntax.ml[86,3510+22]..[86,3510+36])
+                  Ptyp_constr "list" (lib/basicSyntax.ml[86,3510+32]..[86,3510+36])
+                  [
+                    core_type (lib/basicSyntax.ml[86,3510+22]..[86,3510+31])
+                      Ptyp_constr "Stretch.t" (lib/basicSyntax.ml[86,3510+22]..[86,3510+31])
+                      []
+                  ]
+              (lib/basicSyntax.ml[87,3548+4]..[87,3548+34])
+                Immutable
+                "start_symbols" (lib/basicSyntax.ml[87,3548+4]..[87,3548+17])                core_type (lib/basicSyntax.ml[87,3548+22]..[87,3548+33])
+                  Ptyp_constr "StringSet.t" (lib/basicSyntax.ml[87,3548+22]..[87,3548+33])
+                  []
+              (lib/basicSyntax.ml[88,3583+4]..[88,3583+52])
+                Immutable
+                "types" (lib/basicSyntax.ml[88,3583+4]..[88,3583+9])                core_type (lib/basicSyntax.ml[88,3583+22]..[88,3583+51])
+                  Ptyp_constr "StringMap.t" (lib/basicSyntax.ml[88,3583+40]..[88,3583+51])
+                  [
+                    core_type (lib/basicSyntax.ml[88,3583+22]..[88,3583+39])
+                      Ptyp_constr "Stretch.ocamltype" (lib/basicSyntax.ml[88,3583+22]..[88,3583+39])
+                      []
+                  ]
+              (lib/basicSyntax.ml[89,3636+4]..[89,3636+58])
+                Immutable
+                "tokens" (lib/basicSyntax.ml[89,3636+4]..[89,3636+10])                core_type (lib/basicSyntax.ml[89,3636+22]..[89,3636+57])
+                  Ptyp_constr "StringMap.t" (lib/basicSyntax.ml[89,3636+46]..[89,3636+57])
+                  [
+                    core_type (lib/basicSyntax.ml[89,3636+22]..[89,3636+45])
+                      Ptyp_constr "Syntax.token_properties" (lib/basicSyntax.ml[89,3636+22]..[89,3636+45])
+                      []
+                  ]
+              (lib/basicSyntax.ml[90,3695+4]..[90,3695+56])
+                Immutable
+                "on_error_reduce" (lib/basicSyntax.ml[90,3695+4]..[90,3695+19])                core_type (lib/basicSyntax.ml[90,3695+22]..[90,3695+55])
+                  Ptyp_constr "StringMap.t" (lib/basicSyntax.ml[90,3695+44]..[90,3695+55])
+                  [
+                    core_type (lib/basicSyntax.ml[90,3695+22]..[90,3695+43])
+                      Ptyp_constr "on_error_reduce_level" (lib/basicSyntax.ml[90,3695+22]..[90,3695+43])
+                      []
+                  ]
+              (lib/basicSyntax.ml[91,3752+4]..[91,3752+33])
+                Immutable
+                "gr_attributes" (lib/basicSyntax.ml[91,3752+4]..[91,3752+17])                core_type (lib/basicSyntax.ml[91,3752+22]..[91,3752+32])
+                  Ptyp_constr "attributes" (lib/basicSyntax.ml[91,3752+22]..[91,3752+32])
+                  []
+              (lib/basicSyntax.ml[92,3786+4]..[92,3786+39])
+                Immutable
+                "rules" (lib/basicSyntax.ml[92,3786+4]..[92,3786+9])                core_type (lib/basicSyntax.ml[92,3786+22]..[92,3786+38])
+                  Ptyp_constr "StringMap.t" (lib/basicSyntax.ml[92,3786+27]..[92,3786+38])
+                  [
+                    core_type (lib/basicSyntax.ml[92,3786+22]..[92,3786+26])
+                      Ptyp_constr "rule" (lib/basicSyntax.ml[92,3786+22]..[92,3786+26])
+                      []
+                  ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/basicSyntax.ml[99,3955+0]..[100,4020+37])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[99,3955+4]..[99,3955+23])
+          Ppat_var "producer_identifier" (lib/basicSyntax.ml[99,3955+4]..[99,3955+23])
+        expression (lib/basicSyntax.ml[99,3955+24]..[100,4020+37]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/basicSyntax.ml[99,3955+24]..[99,3955+49])
+            Ppat_record Open
+            [
+              "producer_identifier" (lib/basicSyntax.ml[99,3955+26]..[99,3955+45]) ghost
+                pattern (lib/basicSyntax.ml[99,3955+26]..[99,3955+45])
+                  Ppat_var "producer_identifier" (lib/basicSyntax.ml[99,3955+26]..[99,3955+45])
+            ]
+          expression (lib/basicSyntax.ml[99,3955+50]..[100,4020+37])
+            Pexp_constraint
+            expression (lib/basicSyntax.ml[100,4020+2]..[100,4020+37])
+              Pexp_apply
+              expression (lib/basicSyntax.ml[100,4020+2]..[100,4020+17])
+                Pexp_ident "Positions.value" (lib/basicSyntax.ml[100,4020+2]..[100,4020+17])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/basicSyntax.ml[100,4020+18]..[100,4020+37])
+                    Pexp_ident "producer_identifier" (lib/basicSyntax.ml[100,4020+18]..[100,4020+37])
+              ]
+            core_type (lib/basicSyntax.ml[99,3955+52]..[99,3955+62])
+              Ptyp_constr "identifier" (lib/basicSyntax.ml[99,3955+52]..[99,3955+62])
+              []
+    ]
+  structure_item (lib/basicSyntax.ml[102,4059+0]..[103,4140+21])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[102,4059+4]..[102,4059+31])
+          Ppat_var "producer_identifier_located" (lib/basicSyntax.ml[102,4059+4]..[102,4059+31])
+        expression (lib/basicSyntax.ml[102,4059+32]..[103,4140+21]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/basicSyntax.ml[102,4059+32]..[102,4059+57])
+            Ppat_record Open
+            [
+              "producer_identifier" (lib/basicSyntax.ml[102,4059+34]..[102,4059+53]) ghost
+                pattern (lib/basicSyntax.ml[102,4059+34]..[102,4059+53])
+                  Ppat_var "producer_identifier" (lib/basicSyntax.ml[102,4059+34]..[102,4059+53])
+            ]
+          expression (lib/basicSyntax.ml[102,4059+58]..[103,4140+21])
+            Pexp_constraint
+            expression (lib/basicSyntax.ml[103,4140+2]..[103,4140+21])
+              Pexp_ident "producer_identifier" (lib/basicSyntax.ml[103,4140+2]..[103,4140+21])
+            core_type (lib/basicSyntax.ml[102,4059+60]..[102,4059+78])
+              Ptyp_constr "located" (lib/basicSyntax.ml[102,4059+71]..[102,4059+78])
+              [
+                core_type (lib/basicSyntax.ml[102,4059+60]..[102,4059+70])
+                  Ptyp_constr "identifier" (lib/basicSyntax.ml[102,4059+60]..[102,4059+70])
+                  []
+              ]
+    ]
+  structure_item (lib/basicSyntax.ml[105,4163+0]..[106,4208+17])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[105,4163+4]..[105,4163+19])
+          Ppat_var "producer_symbol" (lib/basicSyntax.ml[105,4163+4]..[105,4163+19])
+        expression (lib/basicSyntax.ml[105,4163+20]..[106,4208+17]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/basicSyntax.ml[105,4163+20]..[105,4163+42])
+            Ppat_record Open
+            [
+              "producer_symbol" (lib/basicSyntax.ml[105,4163+22]..[105,4163+37]) ghost
+                pattern (lib/basicSyntax.ml[105,4163+22]..[105,4163+37])
+                  Ppat_var "producer_symbol" (lib/basicSyntax.ml[105,4163+22]..[105,4163+37])
+            ]
+          expression (lib/basicSyntax.ml[106,4208+2]..[106,4208+17])
+            Pexp_ident "producer_symbol" (lib/basicSyntax.ml[106,4208+2]..[106,4208+17])
+    ]
+  structure_item (lib/basicSyntax.ml[108,4227+0]..[109,4280+21])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[108,4227+4]..[108,4227+23])
+          Ppat_var "producer_attributes" (lib/basicSyntax.ml[108,4227+4]..[108,4227+23])
+        expression (lib/basicSyntax.ml[108,4227+24]..[109,4280+21]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/basicSyntax.ml[108,4227+24]..[108,4227+50])
+            Ppat_record Open
+            [
+              "producer_attributes" (lib/basicSyntax.ml[108,4227+26]..[108,4227+45]) ghost
+                pattern (lib/basicSyntax.ml[108,4227+26]..[108,4227+45])
+                  Ppat_var "producer_attributes" (lib/basicSyntax.ml[108,4227+26]..[108,4227+45])
+            ]
+          expression (lib/basicSyntax.ml[109,4280+2]..[109,4280+21])
+            Pexp_ident "producer_attributes" (lib/basicSyntax.ml[109,4280+2]..[109,4280+21])
+    ]
+  structure_item (lib/basicSyntax.ml[115,4464+0]..[116,4488+15])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[115,4464+4]..[115,4464+16])
+          Ppat_var "get_branches" (lib/basicSyntax.ml[115,4464+4]..[115,4464+16])
+        expression (lib/basicSyntax.ml[115,4464+17]..[116,4488+15]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/basicSyntax.ml[115,4464+17]..[115,4464+21])
+            Ppat_var "rule" (lib/basicSyntax.ml[115,4464+17]..[115,4464+21])
+          expression (lib/basicSyntax.ml[116,4488+2]..[116,4488+15])
+            Pexp_field
+            expression (lib/basicSyntax.ml[116,4488+2]..[116,4488+6])
+              Pexp_ident "rule" (lib/basicSyntax.ml[116,4488+2]..[116,4488+6])
+            "branches" (lib/basicSyntax.ml[116,4488+7]..[116,4488+15])
+    ]
+  structure_item (lib/basicSyntax.ml[118,4505+0]..[119,4537+42])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[118,4505+4]..[118,4505+22])
+          Ppat_var "transform_branches" (lib/basicSyntax.ml[118,4505+4]..[118,4505+22])
+        expression (lib/basicSyntax.ml[118,4505+23]..[119,4537+42]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/basicSyntax.ml[118,4505+23]..[118,4505+24])
+            Ppat_var "f" (lib/basicSyntax.ml[118,4505+23]..[118,4505+24])
+          expression (lib/basicSyntax.ml[118,4505+25]..[119,4537+42]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/basicSyntax.ml[118,4505+25]..[118,4505+29])
+              Ppat_var "rule" (lib/basicSyntax.ml[118,4505+25]..[118,4505+29])
+            expression (lib/basicSyntax.ml[119,4537+2]..[119,4537+42])
+              Pexp_record
+              [
+                "branches" (lib/basicSyntax.ml[119,4537+14]..[119,4537+22])
+                  expression (lib/basicSyntax.ml[119,4537+25]..[119,4537+40])
+                    Pexp_apply
+                    expression (lib/basicSyntax.ml[119,4537+25]..[119,4537+26])
+                      Pexp_ident "f" (lib/basicSyntax.ml[119,4537+25]..[119,4537+26])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/basicSyntax.ml[119,4537+27]..[119,4537+40])
+                          Pexp_field
+                          expression (lib/basicSyntax.ml[119,4537+27]..[119,4537+31])
+                            Pexp_ident "rule" (lib/basicSyntax.ml[119,4537+27]..[119,4537+31])
+                          "branches" (lib/basicSyntax.ml[119,4537+32]..[119,4537+40])
+                    ]
+              ]
+              Some
+                expression (lib/basicSyntax.ml[119,4537+4]..[119,4537+8])
+                  Pexp_ident "rule" (lib/basicSyntax.ml[119,4537+4]..[119,4537+8])
+    ]
+  structure_item (lib/basicSyntax.ml[128,4900+0]..[131,5036+21])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[128,4900+4]..[128,4900+10])
+          Ppat_var "tokens" (lib/basicSyntax.ml[128,4900+4]..[128,4900+10])
+        expression (lib/basicSyntax.ml[128,4900+11]..[131,5036+21]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/basicSyntax.ml[128,4900+11]..[128,4900+18])
+            Ppat_var "grammar" (lib/basicSyntax.ml[128,4900+11]..[128,4900+18])
+          expression (lib/basicSyntax.ml[129,4921+2]..[131,5036+21])
+            Pexp_apply
+            expression (lib/basicSyntax.ml[129,4921+2]..[129,4921+16])
+              Pexp_ident "StringMap.fold" (lib/basicSyntax.ml[129,4921+2]..[129,4921+16])
+            [
+              <arg>
+              Nolabel
+                expression (lib/basicSyntax.ml[129,4921+17]..[131,5036+3])
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (lib/basicSyntax.ml[129,4921+22]..[129,4921+27])
+                    Ppat_var "token" (lib/basicSyntax.ml[129,4921+22]..[129,4921+27])
+                  expression (lib/basicSyntax.ml[129,4921+28]..[130,4970+65]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (lib/basicSyntax.ml[129,4921+28]..[129,4921+38])
+                      Ppat_var "properties" (lib/basicSyntax.ml[129,4921+28]..[129,4921+38])
+                    expression (lib/basicSyntax.ml[129,4921+39]..[130,4970+65]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/basicSyntax.ml[129,4921+39]..[129,4921+45])
+                        Ppat_var "tokens" (lib/basicSyntax.ml[129,4921+39]..[129,4921+45])
+                      expression (lib/basicSyntax.ml[130,4970+4]..[130,4970+65])
+                        Pexp_ifthenelse
+                        expression (lib/basicSyntax.ml[130,4970+7]..[130,4970+32])
+                          Pexp_field
+                          expression (lib/basicSyntax.ml[130,4970+7]..[130,4970+17])
+                            Pexp_ident "properties" (lib/basicSyntax.ml[130,4970+7]..[130,4970+17])
+                          "tk_is_declared" (lib/basicSyntax.ml[130,4970+18]..[130,4970+32])
+                        expression (lib/basicSyntax.ml[130,4970+38]..[130,4970+53])
+                          Pexp_construct "::" (lib/basicSyntax.ml[130,4970+44]..[130,4970+46])
+                          Some
+                            expression (lib/basicSyntax.ml[130,4970+38]..[130,4970+53]) ghost
+                              Pexp_tuple
+                              [
+                                expression (lib/basicSyntax.ml[130,4970+38]..[130,4970+43])
+                                  Pexp_ident "token" (lib/basicSyntax.ml[130,4970+38]..[130,4970+43])
+                                expression (lib/basicSyntax.ml[130,4970+47]..[130,4970+53])
+                                  Pexp_ident "tokens" (lib/basicSyntax.ml[130,4970+47]..[130,4970+53])
+                              ]
+                        Some
+                          expression (lib/basicSyntax.ml[130,4970+59]..[130,4970+65])
+                            Pexp_ident "tokens" (lib/basicSyntax.ml[130,4970+59]..[130,4970+65])
+              <arg>
+              Nolabel
+                expression (lib/basicSyntax.ml[131,5036+4]..[131,5036+18])
+                  Pexp_field
+                  expression (lib/basicSyntax.ml[131,5036+4]..[131,5036+11])
+                    Pexp_ident "grammar" (lib/basicSyntax.ml[131,5036+4]..[131,5036+11])
+                  "tokens" (lib/basicSyntax.ml[131,5036+12]..[131,5036+18])
+              <arg>
+              Nolabel
+                expression (lib/basicSyntax.ml[131,5036+19]..[131,5036+21])
+                  Pexp_construct "[]" (lib/basicSyntax.ml[131,5036+19]..[131,5036+21])
+                  None
+            ]
+    ]
+  structure_item (lib/basicSyntax.ml[136,5149+0]..[139,5318+21])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[136,5149+4]..[136,5149+16])
+          Ppat_var "typed_tokens" (lib/basicSyntax.ml[136,5149+4]..[136,5149+16])
+        expression (lib/basicSyntax.ml[136,5149+17]..[139,5318+21]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/basicSyntax.ml[136,5149+17]..[136,5149+24])
+            Ppat_var "grammar" (lib/basicSyntax.ml[136,5149+17]..[136,5149+24])
+          expression (lib/basicSyntax.ml[137,5176+2]..[139,5318+21])
+            Pexp_apply
+            expression (lib/basicSyntax.ml[137,5176+2]..[137,5176+16])
+              Pexp_ident "StringMap.fold" (lib/basicSyntax.ml[137,5176+2]..[137,5176+16])
+            [
+              <arg>
+              Nolabel
+                expression (lib/basicSyntax.ml[137,5176+17]..[139,5318+3])
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (lib/basicSyntax.ml[137,5176+22]..[137,5176+27])
+                    Ppat_var "token" (lib/basicSyntax.ml[137,5176+22]..[137,5176+27])
+                  expression (lib/basicSyntax.ml[137,5176+28]..[138,5225+92]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (lib/basicSyntax.ml[137,5176+28]..[137,5176+38])
+                      Ppat_var "properties" (lib/basicSyntax.ml[137,5176+28]..[137,5176+38])
+                    expression (lib/basicSyntax.ml[137,5176+39]..[138,5225+92]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/basicSyntax.ml[137,5176+39]..[137,5176+45])
+                        Ppat_var "tokens" (lib/basicSyntax.ml[137,5176+39]..[137,5176+45])
+                      expression (lib/basicSyntax.ml[138,5225+4]..[138,5225+92])
+                        Pexp_ifthenelse
+                        expression (lib/basicSyntax.ml[138,5225+7]..[138,5225+32])
+                          Pexp_field
+                          expression (lib/basicSyntax.ml[138,5225+7]..[138,5225+17])
+                            Pexp_ident "properties" (lib/basicSyntax.ml[138,5225+7]..[138,5225+17])
+                          "tk_is_declared" (lib/basicSyntax.ml[138,5225+18]..[138,5225+32])
+                        expression (lib/basicSyntax.ml[138,5225+38]..[138,5225+80])
+                          Pexp_construct "::" (lib/basicSyntax.ml[138,5225+71]..[138,5225+73])
+                          Some
+                            expression (lib/basicSyntax.ml[138,5225+38]..[138,5225+80]) ghost
+                              Pexp_tuple
+                              [
+                                expression (lib/basicSyntax.ml[138,5225+38]..[138,5225+70])
+                                  Pexp_tuple
+                                  [
+                                    expression (lib/basicSyntax.ml[138,5225+39]..[138,5225+44])
+                                      Pexp_ident "token" (lib/basicSyntax.ml[138,5225+39]..[138,5225+44])
+                                    expression (lib/basicSyntax.ml[138,5225+46]..[138,5225+69])
+                                      Pexp_field
+                                      expression (lib/basicSyntax.ml[138,5225+46]..[138,5225+56])
+                                        Pexp_ident "properties" (lib/basicSyntax.ml[138,5225+46]..[138,5225+56])
+                                      "tk_ocamltype" (lib/basicSyntax.ml[138,5225+57]..[138,5225+69])
+                                  ]
+                                expression (lib/basicSyntax.ml[138,5225+74]..[138,5225+80])
+                                  Pexp_ident "tokens" (lib/basicSyntax.ml[138,5225+74]..[138,5225+80])
+                              ]
+                        Some
+                          expression (lib/basicSyntax.ml[138,5225+86]..[138,5225+92])
+                            Pexp_ident "tokens" (lib/basicSyntax.ml[138,5225+86]..[138,5225+92])
+              <arg>
+              Nolabel
+                expression (lib/basicSyntax.ml[139,5318+4]..[139,5318+18])
+                  Pexp_field
+                  expression (lib/basicSyntax.ml[139,5318+4]..[139,5318+11])
+                    Pexp_ident "grammar" (lib/basicSyntax.ml[139,5318+4]..[139,5318+11])
+                  "tokens" (lib/basicSyntax.ml[139,5318+12]..[139,5318+18])
+              <arg>
+              Nolabel
+                expression (lib/basicSyntax.ml[139,5318+19]..[139,5318+21])
+                  Pexp_construct "[]" (lib/basicSyntax.ml[139,5318+19]..[139,5318+21])
+                  None
+            ]
+    ]
+  structure_item (lib/basicSyntax.ml[144,5437+0]..[145,5483+65])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[144,5437+4]..[144,5437+16])
+          Ppat_var "nonterminals" (lib/basicSyntax.ml[144,5437+4]..[144,5437+16])
+        expression (lib/basicSyntax.ml[144,5437+17]..[145,5483+65]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/basicSyntax.ml[144,5437+17]..[144,5437+24])
+            Ppat_var "grammar" (lib/basicSyntax.ml[144,5437+17]..[144,5437+24])
+          expression (lib/basicSyntax.ml[144,5437+25]..[145,5483+65])
+            Pexp_constraint
+            expression (lib/basicSyntax.ml[145,5483+2]..[145,5483+65])
+              Pexp_apply
+              expression (lib/basicSyntax.ml[145,5483+2]..[145,5483+16])
+                Pexp_ident "StringMap.fold" (lib/basicSyntax.ml[145,5483+2]..[145,5483+16])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/basicSyntax.ml[145,5483+17]..[145,5483+48])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (lib/basicSyntax.ml[145,5483+22]..[145,5483+24])
+                      Ppat_var "nt" (lib/basicSyntax.ml[145,5483+22]..[145,5483+24])
+                    expression (lib/basicSyntax.ml[145,5483+25]..[145,5483+47]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/basicSyntax.ml[145,5483+25]..[145,5483+26])
+                        Ppat_any
+                      expression (lib/basicSyntax.ml[145,5483+27]..[145,5483+47]) ghost
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (lib/basicSyntax.ml[145,5483+27]..[145,5483+32])
+                          Ppat_var "rules" (lib/basicSyntax.ml[145,5483+27]..[145,5483+32])
+                        expression (lib/basicSyntax.ml[145,5483+36]..[145,5483+47])
+                          Pexp_construct "::" (lib/basicSyntax.ml[145,5483+39]..[145,5483+41])
+                          Some
+                            expression (lib/basicSyntax.ml[145,5483+36]..[145,5483+47]) ghost
+                              Pexp_tuple
+                              [
+                                expression (lib/basicSyntax.ml[145,5483+36]..[145,5483+38])
+                                  Pexp_ident "nt" (lib/basicSyntax.ml[145,5483+36]..[145,5483+38])
+                                expression (lib/basicSyntax.ml[145,5483+42]..[145,5483+47])
+                                  Pexp_ident "rules" (lib/basicSyntax.ml[145,5483+42]..[145,5483+47])
+                              ]
+                <arg>
+                Nolabel
+                  expression (lib/basicSyntax.ml[145,5483+49]..[145,5483+62])
+                    Pexp_field
+                    expression (lib/basicSyntax.ml[145,5483+49]..[145,5483+56])
+                      Pexp_ident "grammar" (lib/basicSyntax.ml[145,5483+49]..[145,5483+56])
+                    "rules" (lib/basicSyntax.ml[145,5483+57]..[145,5483+62])
+                <arg>
+                Nolabel
+                  expression (lib/basicSyntax.ml[145,5483+63]..[145,5483+65])
+                    Pexp_construct "[]" (lib/basicSyntax.ml[145,5483+63]..[145,5483+65])
+                    None
+              ]
+            core_type (lib/basicSyntax.ml[144,5437+27]..[144,5437+43])
+              Ptyp_constr "list" (lib/basicSyntax.ml[144,5437+39]..[144,5437+43])
+              [
+                core_type (lib/basicSyntax.ml[144,5437+27]..[144,5437+38])
+                  Ptyp_constr "nonterminal" (lib/basicSyntax.ml[144,5437+27]..[144,5437+38])
+                  []
+              ]
+    ]
+  structure_item (lib/basicSyntax.ml[150,5686+0]..[154,5827+8])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[150,5686+4]..[150,5686+23])
+          Ppat_var "ocamltype_of_symbol" (lib/basicSyntax.ml[150,5686+4]..[150,5686+23])
+        expression (lib/basicSyntax.ml[150,5686+24]..[154,5827+8]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/basicSyntax.ml[150,5686+24]..[150,5686+31])
+            Ppat_var "grammar" (lib/basicSyntax.ml[150,5686+24]..[150,5686+31])
+          expression (lib/basicSyntax.ml[150,5686+32]..[154,5827+8]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/basicSyntax.ml[150,5686+32]..[150,5686+38])
+              Ppat_var "symbol" (lib/basicSyntax.ml[150,5686+32]..[150,5686+38])
+            expression (lib/basicSyntax.ml[150,5686+39]..[154,5827+8])
+              Pexp_constraint
+              expression (lib/basicSyntax.ml[151,5754+2]..[154,5827+8])
+                Pexp_try
+                expression (lib/basicSyntax.ml[152,5760+4]..[152,5760+46])
+                  Pexp_construct "Some" (lib/basicSyntax.ml[152,5760+4]..[152,5760+8])
+                  Some
+                    expression (lib/basicSyntax.ml[152,5760+9]..[152,5760+46])
+                      Pexp_apply
+                      expression (lib/basicSyntax.ml[152,5760+10]..[152,5760+24])
+                        Pexp_ident "StringMap.find" (lib/basicSyntax.ml[152,5760+10]..[152,5760+24])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/basicSyntax.ml[152,5760+25]..[152,5760+31])
+                            Pexp_ident "symbol" (lib/basicSyntax.ml[152,5760+25]..[152,5760+31])
+                        <arg>
+                        Nolabel
+                          expression (lib/basicSyntax.ml[152,5760+32]..[152,5760+45])
+                            Pexp_field
+                            expression (lib/basicSyntax.ml[152,5760+32]..[152,5760+39])
+                              Pexp_ident "grammar" (lib/basicSyntax.ml[152,5760+32]..[152,5760+39])
+                            "types" (lib/basicSyntax.ml[152,5760+40]..[152,5760+45])
+                      ]
+                [
+                  <case>
+                    pattern (lib/basicSyntax.ml[153,5807+7]..[153,5807+16])
+                      Ppat_construct "Not_found" (lib/basicSyntax.ml[153,5807+7]..[153,5807+16])
+                      None
+                    expression (lib/basicSyntax.ml[154,5827+4]..[154,5827+8])
+                      Pexp_construct "None" (lib/basicSyntax.ml[154,5827+4]..[154,5827+8])
+                      None
+                ]
+              core_type (lib/basicSyntax.ml[150,5686+41]..[150,5686+65])
+                Ptyp_constr "option" (lib/basicSyntax.ml[150,5686+59]..[150,5686+65])
+                [
+                  core_type (lib/basicSyntax.ml[150,5686+41]..[150,5686+58])
+                    Ptyp_constr "Stretch.ocamltype" (lib/basicSyntax.ml[150,5686+41]..[150,5686+58])
+                    []
+                ]
+    ]
+  structure_item (lib/basicSyntax.ml[159,5969+0]..[164,6151+16])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[159,5969+4]..[159,5969+29])
+          Ppat_var "ocamltype_of_start_symbol" (lib/basicSyntax.ml[159,5969+4]..[159,5969+29])
+        expression (lib/basicSyntax.ml[159,5969+30]..[164,6151+16]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/basicSyntax.ml[159,5969+30]..[159,5969+37])
+            Ppat_var "grammar" (lib/basicSyntax.ml[159,5969+30]..[159,5969+37])
+          expression (lib/basicSyntax.ml[159,5969+38]..[164,6151+16]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/basicSyntax.ml[159,5969+38]..[159,5969+44])
+              Ppat_var "symbol" (lib/basicSyntax.ml[159,5969+38]..[159,5969+44])
+            expression (lib/basicSyntax.ml[159,5969+45]..[164,6151+16])
+              Pexp_constraint
+              expression (lib/basicSyntax.ml[160,6036+2]..[164,6151+16])
+                Pexp_try
+                expression (lib/basicSyntax.ml[161,6042+4]..[161,6042+39])
+                  Pexp_apply
+                  expression (lib/basicSyntax.ml[161,6042+4]..[161,6042+18])
+                    Pexp_ident "StringMap.find" (lib/basicSyntax.ml[161,6042+4]..[161,6042+18])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/basicSyntax.ml[161,6042+19]..[161,6042+25])
+                        Pexp_ident "symbol" (lib/basicSyntax.ml[161,6042+19]..[161,6042+25])
+                    <arg>
+                    Nolabel
+                      expression (lib/basicSyntax.ml[161,6042+26]..[161,6042+39])
+                        Pexp_field
+                        expression (lib/basicSyntax.ml[161,6042+26]..[161,6042+33])
+                          Pexp_ident "grammar" (lib/basicSyntax.ml[161,6042+26]..[161,6042+33])
+                        "types" (lib/basicSyntax.ml[161,6042+34]..[161,6042+39])
+                  ]
+                [
+                  <case>
+                    pattern (lib/basicSyntax.ml[162,6082+7]..[162,6082+16])
+                      Ppat_construct "Not_found" (lib/basicSyntax.ml[162,6082+7]..[162,6082+16])
+                      None
+                    expression (lib/basicSyntax.ml[164,6151+4]..[164,6151+16])
+                      Pexp_assert
+                      expression (lib/basicSyntax.ml[164,6151+11]..[164,6151+16])
+                        Pexp_construct "false" (lib/basicSyntax.ml[164,6151+11]..[164,6151+16])
+                        None
+                ]
+              core_type (lib/basicSyntax.ml[159,5969+47]..[159,5969+64])
+                Ptyp_constr "Stretch.ocamltype" (lib/basicSyntax.ml[159,5969+47]..[159,5969+64])
+                []
+    ]
+  structure_item (lib/basicSyntax.ml[169,6317+0]..[176,6577+11])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[169,6317+4]..[169,6317+20])
+          Ppat_var "is_inline_symbol" (lib/basicSyntax.ml[169,6317+4]..[169,6317+20])
+        expression (lib/basicSyntax.ml[169,6317+21]..[176,6577+11]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/basicSyntax.ml[169,6317+21]..[169,6317+28])
+            Ppat_var "grammar" (lib/basicSyntax.ml[169,6317+21]..[169,6317+28])
+          expression (lib/basicSyntax.ml[169,6317+29]..[176,6577+11]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/basicSyntax.ml[169,6317+29]..[169,6317+35])
+              Ppat_var "symbol" (lib/basicSyntax.ml[169,6317+29]..[169,6317+35])
+            expression (lib/basicSyntax.ml[169,6317+36]..[176,6577+11])
+              Pexp_constraint
+              expression (lib/basicSyntax.ml[170,6362+2]..[176,6577+11])
+                Pexp_match
+                expression (lib/basicSyntax.ml[170,6362+8]..[170,6362+43])
+                  Pexp_apply
+                  expression (lib/basicSyntax.ml[170,6362+8]..[170,6362+22])
+                    Pexp_ident "StringMap.find" (lib/basicSyntax.ml[170,6362+8]..[170,6362+22])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/basicSyntax.ml[170,6362+23]..[170,6362+29])
+                        Pexp_ident "symbol" (lib/basicSyntax.ml[170,6362+23]..[170,6362+29])
+                    <arg>
+                    Nolabel
+                      expression (lib/basicSyntax.ml[170,6362+30]..[170,6362+43])
+                        Pexp_field
+                        expression (lib/basicSyntax.ml[170,6362+30]..[170,6362+37])
+                          Pexp_ident "grammar" (lib/basicSyntax.ml[170,6362+30]..[170,6362+37])
+                        "rules" (lib/basicSyntax.ml[170,6362+38]..[170,6362+43])
+                  ]
+                [
+                  <case>
+                    pattern (lib/basicSyntax.ml[171,6411+4]..[171,6411+8])
+                      Ppat_var "rule" (lib/basicSyntax.ml[171,6411+4]..[171,6411+8])
+                    expression (lib/basicSyntax.ml[173,6488+6]..[173,6488+22])
+                      Pexp_field
+                      expression (lib/basicSyntax.ml[173,6488+6]..[173,6488+10])
+                        Pexp_ident "rule" (lib/basicSyntax.ml[173,6488+6]..[173,6488+10])
+                      "inline_flag" (lib/basicSyntax.ml[173,6488+11]..[173,6488+22])
+                  <case>
+                    pattern (lib/basicSyntax.ml[174,6511+4]..[174,6511+23])
+                      Ppat_exception
+                      pattern (lib/basicSyntax.ml[174,6511+14]..[174,6511+23])
+                        Ppat_construct "Not_found" (lib/basicSyntax.ml[174,6511+14]..[174,6511+23])
+                        None
+                    expression (lib/basicSyntax.ml[176,6577+6]..[176,6577+11])
+                      Pexp_construct "false" (lib/basicSyntax.ml[176,6577+6]..[176,6577+11])
+                      None
+                ]
+              core_type (lib/basicSyntax.ml[169,6317+38]..[169,6317+42])
+                Ptyp_constr "bool" (lib/basicSyntax.ml[169,6317+38]..[169,6317+42])
+                []
+    ]
+  structure_item (lib/basicSyntax.ml[181,6743+0]..[182,6785+53])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[181,6743+4]..[181,6743+22])
+          Ppat_var "is_inline_producer" (lib/basicSyntax.ml[181,6743+4]..[181,6743+22])
+        expression (lib/basicSyntax.ml[181,6743+23]..[182,6785+53]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/basicSyntax.ml[181,6743+23]..[181,6743+30])
+            Ppat_var "grammar" (lib/basicSyntax.ml[181,6743+23]..[181,6743+30])
+          expression (lib/basicSyntax.ml[181,6743+31]..[182,6785+53]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/basicSyntax.ml[181,6743+31]..[181,6743+39])
+              Ppat_var "producer" (lib/basicSyntax.ml[181,6743+31]..[181,6743+39])
+            expression (lib/basicSyntax.ml[182,6785+2]..[182,6785+53])
+              Pexp_apply
+              expression (lib/basicSyntax.ml[182,6785+2]..[182,6785+18])
+                Pexp_ident "is_inline_symbol" (lib/basicSyntax.ml[182,6785+2]..[182,6785+18])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/basicSyntax.ml[182,6785+19]..[182,6785+26])
+                    Pexp_ident "grammar" (lib/basicSyntax.ml[182,6785+19]..[182,6785+26])
+                <arg>
+                Nolabel
+                  expression (lib/basicSyntax.ml[182,6785+27]..[182,6785+53])
+                    Pexp_apply
+                    expression (lib/basicSyntax.ml[182,6785+28]..[182,6785+43])
+                      Pexp_ident "producer_symbol" (lib/basicSyntax.ml[182,6785+28]..[182,6785+43])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/basicSyntax.ml[182,6785+44]..[182,6785+52])
+                          Pexp_ident "producer" (lib/basicSyntax.ml[182,6785+44]..[182,6785+52])
+                    ]
+              ]
+    ]
+  structure_item (lib/basicSyntax.ml[194,7273+0]..[199,7472+29])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[194,7273+4]..[194,7273+9])
+          Ppat_var "names" (lib/basicSyntax.ml[194,7273+4]..[194,7273+9])
+        expression (lib/basicSyntax.ml[194,7273+10]..[199,7472+29]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/basicSyntax.ml[194,7273+10]..[194,7273+33])
+            Ppat_constraint
+            pattern (lib/basicSyntax.ml[194,7273+11]..[194,7273+20])
+              Ppat_var "producers" (lib/basicSyntax.ml[194,7273+11]..[194,7273+20])
+            core_type (lib/basicSyntax.ml[194,7273+23]..[194,7273+32])
+              Ptyp_constr "producers" (lib/basicSyntax.ml[194,7273+23]..[194,7273+32])
+              []
+          expression (lib/basicSyntax.ml[194,7273+34]..[199,7472+29])
+            Pexp_constraint
+            expression (lib/basicSyntax.ml[195,7323+2]..[199,7472+29])
+              Pexp_apply
+              expression (lib/basicSyntax.ml[195,7323+2]..[195,7323+16])
+                Pexp_ident "List.fold_left" (lib/basicSyntax.ml[195,7323+2]..[195,7323+16])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/basicSyntax.ml[195,7323+17]..[199,7472+3])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (lib/basicSyntax.ml[195,7323+22]..[195,7323+25])
+                      Ppat_var "ids" (lib/basicSyntax.ml[195,7323+22]..[195,7323+25])
+                    expression (lib/basicSyntax.ml[195,7323+26]..[198,7447+24]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/basicSyntax.ml[195,7323+26]..[195,7323+34])
+                        Ppat_var "producer" (lib/basicSyntax.ml[195,7323+26]..[195,7323+34])
+                      expression (lib/basicSyntax.ml[196,7361+4]..[198,7447+24])
+                        Pexp_let Nonrec
+                        [
+                          <def>
+                            pattern (lib/basicSyntax.ml[196,7361+8]..[196,7361+10])
+                              Ppat_var "id" (lib/basicSyntax.ml[196,7361+8]..[196,7361+10])
+                            expression (lib/basicSyntax.ml[196,7361+13]..[196,7361+41])
+                              Pexp_apply
+                              expression (lib/basicSyntax.ml[196,7361+13]..[196,7361+32])
+                                Pexp_ident "producer_identifier" (lib/basicSyntax.ml[196,7361+13]..[196,7361+32])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (lib/basicSyntax.ml[196,7361+33]..[196,7361+41])
+                                    Pexp_ident "producer" (lib/basicSyntax.ml[196,7361+33]..[196,7361+41])
+                              ]
+                        ]
+                        expression (lib/basicSyntax.ml[197,7406+4]..[198,7447+24])
+                          Pexp_sequence
+                          expression (lib/basicSyntax.ml[197,7406+4]..[197,7406+39])
+                            Pexp_assert
+                            expression (lib/basicSyntax.ml[197,7406+11]..[197,7406+39])
+                              Pexp_apply
+                              expression (lib/basicSyntax.ml[197,7406+12]..[197,7406+15])
+                                Pexp_ident "not" (lib/basicSyntax.ml[197,7406+12]..[197,7406+15])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (lib/basicSyntax.ml[197,7406+16]..[197,7406+38])
+                                    Pexp_apply
+                                    expression (lib/basicSyntax.ml[197,7406+17]..[197,7406+30])
+                                      Pexp_ident "StringSet.mem" (lib/basicSyntax.ml[197,7406+17]..[197,7406+30])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (lib/basicSyntax.ml[197,7406+31]..[197,7406+33])
+                                          Pexp_ident "id" (lib/basicSyntax.ml[197,7406+31]..[197,7406+33])
+                                      <arg>
+                                      Nolabel
+                                        expression (lib/basicSyntax.ml[197,7406+34]..[197,7406+37])
+                                          Pexp_ident "ids" (lib/basicSyntax.ml[197,7406+34]..[197,7406+37])
+                                    ]
+                              ]
+                          expression (lib/basicSyntax.ml[198,7447+4]..[198,7447+24])
+                            Pexp_apply
+                            expression (lib/basicSyntax.ml[198,7447+4]..[198,7447+17])
+                              Pexp_ident "StringSet.add" (lib/basicSyntax.ml[198,7447+4]..[198,7447+17])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (lib/basicSyntax.ml[198,7447+18]..[198,7447+20])
+                                  Pexp_ident "id" (lib/basicSyntax.ml[198,7447+18]..[198,7447+20])
+                              <arg>
+                              Nolabel
+                                expression (lib/basicSyntax.ml[198,7447+21]..[198,7447+24])
+                                  Pexp_ident "ids" (lib/basicSyntax.ml[198,7447+21]..[198,7447+24])
+                            ]
+                <arg>
+                Nolabel
+                  expression (lib/basicSyntax.ml[199,7472+4]..[199,7472+19])
+                    Pexp_ident "StringSet.empty" (lib/basicSyntax.ml[199,7472+4]..[199,7472+19])
+                <arg>
+                Nolabel
+                  expression (lib/basicSyntax.ml[199,7472+20]..[199,7472+29])
+                    Pexp_ident "producers" (lib/basicSyntax.ml[199,7472+20]..[199,7472+29])
+              ]
+            core_type (lib/basicSyntax.ml[194,7273+36]..[194,7273+47])
+              Ptyp_constr "StringSet.t" (lib/basicSyntax.ml[194,7273+36]..[194,7273+47])
+              []
+    ]
+  structure_item (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+          Ppat_construct "()" (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+          None
+        expression (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+          Pexp_apply
+          expression (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost,None)
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+          Ppat_construct "()" (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+          None
+        expression (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+          Pexp_apply
+          expression (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+                Pexp_construct "()" (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+          Ppat_construct "()" (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+          None
+        expression (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+          Pexp_apply
+          expression (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+                Pexp_construct "()" (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+          Ppat_construct "()" (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+          None
+        expression (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+          Pexp_apply
+          expression (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/basicSyntax.ml[199,7472+29]..[199,7472+29]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set
+    ~absolute_filename:"lib/basicSyntax.ml"
+let () =
+  Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "basicSyntax.ml"
+open Syntax
+type producer =
+  {
+  producer_identifier: identifier located ;
+  producer_symbol: symbol ;
+  producer_attributes: attributes }
+type producers = producer list
+type branch =
+  {
+  branch_position: Positions.t ;
+  producers: producers ;
+  action: action ;
+  branch_prec_annotation: branch_prec_annotation ;
+  branch_production_level: branch_production_level }
+type branches = branch list
+type rule =
+  {
+  branches: branches ;
+  positions: Positions.t list ;
+  inline_flag: bool ;
+  attributes: attributes }
+type grammar =
+  {
+  preludes: Stretch.t list ;
+  postludes: Syntax.postlude list ;
+  parameters: Stretch.t list ;
+  start_symbols: StringSet.t ;
+  types: Stretch.ocamltype StringMap.t ;
+  tokens: Syntax.token_properties StringMap.t ;
+  on_error_reduce: on_error_reduce_level StringMap.t ;
+  gr_attributes: attributes ;
+  rules: rule StringMap.t }
+let producer_identifier { producer_identifier;_} =
+  (Positions.value producer_identifier : identifier)
+let producer_identifier_located { producer_identifier;_} =
+  (producer_identifier : identifier located)
+let producer_symbol { producer_symbol;_} = producer_symbol
+let producer_attributes { producer_attributes;_} = producer_attributes
+let get_branches rule = rule.branches
+let transform_branches f rule = { rule with branches = (f rule.branches) }
+let tokens grammar =
+  StringMap.fold
+    (fun token ->
+       fun properties ->
+         fun tokens ->
+           if properties.tk_is_declared then token :: tokens else tokens)
+    grammar.tokens []
+let typed_tokens grammar =
+  StringMap.fold
+    (fun token ->
+       fun properties ->
+         fun tokens ->
+           if properties.tk_is_declared
+           then (token, (properties.tk_ocamltype)) :: tokens
+           else tokens) grammar.tokens []
+let nonterminals grammar =
+  (StringMap.fold (fun nt -> fun _ -> fun rules -> nt :: rules) grammar.rules
+     [] : nonterminal list)
+let ocamltype_of_symbol grammar symbol =
+  (try Some (StringMap.find symbol grammar.types) with | Not_found -> None : 
+  Stretch.ocamltype option)
+let ocamltype_of_start_symbol grammar symbol =
+  (try StringMap.find symbol grammar.types with | Not_found -> assert false : 
+  Stretch.ocamltype)
+let is_inline_symbol grammar symbol =
+  (match StringMap.find symbol grammar.rules with
+   | rule -> rule.inline_flag
+   | exception Not_found -> false : bool)
+let is_inline_producer grammar producer =
+  is_inline_symbol grammar (producer_symbol producer)
+let names (producers : producers) =
+  (List.fold_left
+     (fun ids ->
+        fun producer ->
+          let id = producer_identifier producer in
+          assert (not (StringSet.mem id ids)); StringSet.add id ids)
+     StringSet.empty producers : StringSet.t)
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+                Texp_constant Const_string("lib/basicSyntax.ml",(lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost
+                Texp_constant Const_string("basicSyntax.ml",(lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[14,976+0]..lib/basicSyntax.ml[14,976+11])
+    Tstr_open Fresh
+    module_expr (lib/basicSyntax.ml[14,976+5]..lib/basicSyntax.ml[14,976+11])
+      Tmod_ident "Gbnf_parser!.Syntax"
+  structure_item (lib/basicSyntax.ml[38,2028+0]..lib/basicSyntax.ml[42,2164+3])
+    Tstr_type Rec
+    [
+      type_declaration producer/1169 (lib/basicSyntax.ml[38,2028+0]..lib/basicSyntax.ml[42,2164+3])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (lib/basicSyntax.ml[39,2046+4]..lib/basicSyntax.ml[39,2046+45])
+                Immutable
+                producer_identifier/1170                core_type (lib/basicSyntax.ml[39,2046+26]..lib/basicSyntax.ml[39,2046+44])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[39,2046+26]..lib/basicSyntax.ml[39,2046+44])
+                    Ttyp_constr "Gbnf_parser!.Syntax.located"
+                    [
+                      core_type (lib/basicSyntax.ml[39,2046+26]..lib/basicSyntax.ml[39,2046+36])
+                        Ttyp_constr "Gbnf_parser!.Syntax.identifier"
+                        []
+                    ]
+              (lib/basicSyntax.ml[40,2092+4]..lib/basicSyntax.ml[40,2092+33])
+                Immutable
+                producer_symbol/1171                core_type (lib/basicSyntax.ml[40,2092+26]..lib/basicSyntax.ml[40,2092+32])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[40,2092+26]..lib/basicSyntax.ml[40,2092+32])
+                    Ttyp_constr "Gbnf_parser!.Syntax.symbol"
+                    []
+              (lib/basicSyntax.ml[41,2126+4]..lib/basicSyntax.ml[41,2126+37])
+                Immutable
+                producer_attributes/1172                core_type (lib/basicSyntax.ml[41,2126+26]..lib/basicSyntax.ml[41,2126+36])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[41,2126+26]..lib/basicSyntax.ml[41,2126+36])
+                    Ttyp_constr "Gbnf_parser!.Syntax.attributes"
+                    []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/basicSyntax.ml[44,2169+0]..lib/basicSyntax.ml[45,2186+15])
+    Tstr_type Rec
+    [
+      type_declaration producers/1247 (lib/basicSyntax.ml[44,2169+0]..lib/basicSyntax.ml[45,2186+15])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/basicSyntax.ml[45,2186+2]..lib/basicSyntax.ml[45,2186+15])
+              Ttyp_constr "list/9!"
+              [
+                core_type (lib/basicSyntax.ml[45,2186+2]..lib/basicSyntax.ml[45,2186+10])
+                  Ttyp_constr "producer/1169"
+                  []
+              ]
+    ]
+  structure_item (lib/basicSyntax.ml[52,2411+0]..lib/basicSyntax.ml[58,2657+3])
+    Tstr_type Rec
+    [
+      type_declaration branch/1248 (lib/basicSyntax.ml[52,2411+0]..lib/basicSyntax.ml[58,2657+3])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (lib/basicSyntax.ml[53,2427+4]..lib/basicSyntax.ml[53,2427+42])
+                Immutable
+                branch_position/1249                core_type (lib/basicSyntax.ml[53,2427+30]..lib/basicSyntax.ml[53,2427+41])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[53,2427+30]..lib/basicSyntax.ml[53,2427+41])
+                    Ttyp_constr "Gbnf_parser!.Positions.t"
+                    []
+              (lib/basicSyntax.ml[54,2470+4]..lib/basicSyntax.ml[54,2470+40])
+                Immutable
+                producers/1250                core_type (lib/basicSyntax.ml[54,2470+30]..lib/basicSyntax.ml[54,2470+39])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[54,2470+30]..lib/basicSyntax.ml[54,2470+39])
+                    Ttyp_constr "producers/1247"
+                    []
+              (lib/basicSyntax.ml[55,2511+4]..lib/basicSyntax.ml[55,2511+37])
+                Immutable
+                action/1251                core_type (lib/basicSyntax.ml[55,2511+30]..lib/basicSyntax.ml[55,2511+36])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[55,2511+30]..lib/basicSyntax.ml[55,2511+36])
+                    Ttyp_constr "Gbnf_parser!.Syntax.action"
+                    []
+              (lib/basicSyntax.ml[56,2549+4]..lib/basicSyntax.ml[56,2549+53])
+                Immutable
+                branch_prec_annotation/1252                core_type (lib/basicSyntax.ml[56,2549+30]..lib/basicSyntax.ml[56,2549+52])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[56,2549+30]..lib/basicSyntax.ml[56,2549+52])
+                    Ttyp_constr "Gbnf_parser!.Syntax.branch_prec_annotation"
+                    []
+              (lib/basicSyntax.ml[57,2603+4]..lib/basicSyntax.ml[57,2603+53])
+                Immutable
+                branch_production_level/1253                core_type (lib/basicSyntax.ml[57,2603+30]..lib/basicSyntax.ml[57,2603+53])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[57,2603+30]..lib/basicSyntax.ml[57,2603+53])
+                    Ttyp_constr "Gbnf_parser!.Syntax.branch_production_level"
+                    []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/basicSyntax.ml[60,2662+0]..lib/basicSyntax.ml[61,2678+13])
+    Tstr_type Rec
+    [
+      type_declaration branches/1403 (lib/basicSyntax.ml[60,2662+0]..lib/basicSyntax.ml[61,2678+13])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/basicSyntax.ml[61,2678+2]..lib/basicSyntax.ml[61,2678+13])
+              Ttyp_constr "list/9!"
+              [
+                core_type (lib/basicSyntax.ml[61,2678+2]..lib/basicSyntax.ml[61,2678+8])
+                  Ttyp_constr "branch/1248"
+                  []
+              ]
+    ]
+  structure_item (lib/basicSyntax.ml[70,2963+0]..lib/basicSyntax.ml[75,3095+3])
+    Tstr_type Rec
+    [
+      type_declaration rule/1404 (lib/basicSyntax.ml[70,2963+0]..lib/basicSyntax.ml[75,3095+3])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (lib/basicSyntax.ml[71,2977+4]..lib/basicSyntax.ml[71,2977+27])
+                Immutable
+                branches/1405                core_type (lib/basicSyntax.ml[71,2977+18]..lib/basicSyntax.ml[71,2977+26])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[71,2977+18]..lib/basicSyntax.ml[71,2977+26])
+                    Ttyp_constr "branches/1403"
+                    []
+              (lib/basicSyntax.ml[72,3005+4]..lib/basicSyntax.ml[72,3005+35])
+                Immutable
+                positions/1406                core_type (lib/basicSyntax.ml[72,3005+18]..lib/basicSyntax.ml[72,3005+34])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[72,3005+18]..lib/basicSyntax.ml[72,3005+34])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/basicSyntax.ml[72,3005+18]..lib/basicSyntax.ml[72,3005+29])
+                        Ttyp_constr "Gbnf_parser!.Positions.t"
+                        []
+                    ]
+              (lib/basicSyntax.ml[73,3041+4]..lib/basicSyntax.ml[73,3041+23])
+                Immutable
+                inline_flag/1407                core_type (lib/basicSyntax.ml[73,3041+18]..lib/basicSyntax.ml[73,3041+22])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[73,3041+18]..lib/basicSyntax.ml[73,3041+22])
+                    Ttyp_constr "bool/5!"
+                    []
+              (lib/basicSyntax.ml[74,3065+4]..lib/basicSyntax.ml[74,3065+29])
+                Immutable
+                attributes/1408                core_type (lib/basicSyntax.ml[74,3065+18]..lib/basicSyntax.ml[74,3065+28])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[74,3065+18]..lib/basicSyntax.ml[74,3065+28])
+                    Ttyp_constr "Gbnf_parser!.Syntax.attributes"
+                    []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/basicSyntax.ml[83,3410+0]..lib/basicSyntax.ml[93,3826+3])
+    Tstr_type Rec
+    [
+      type_declaration grammar/1409 (lib/basicSyntax.ml[83,3410+0]..lib/basicSyntax.ml[93,3826+3])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (lib/basicSyntax.ml[84,3428+4]..lib/basicSyntax.ml[84,3428+37])
+                Immutable
+                preludes/1410                core_type (lib/basicSyntax.ml[84,3428+22]..lib/basicSyntax.ml[84,3428+36])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[84,3428+22]..lib/basicSyntax.ml[84,3428+36])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/basicSyntax.ml[84,3428+22]..lib/basicSyntax.ml[84,3428+31])
+                        Ttyp_constr "Gbnf_parser!.Stretch.t"
+                        []
+                    ]
+              (lib/basicSyntax.ml[85,3466+4]..lib/basicSyntax.ml[85,3466+43])
+                Immutable
+                postludes/1411                core_type (lib/basicSyntax.ml[85,3466+22]..lib/basicSyntax.ml[85,3466+42])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[85,3466+22]..lib/basicSyntax.ml[85,3466+42])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/basicSyntax.ml[85,3466+22]..lib/basicSyntax.ml[85,3466+37])
+                        Ttyp_constr "Gbnf_parser!.Syntax.postlude"
+                        []
+                    ]
+              (lib/basicSyntax.ml[86,3510+4]..lib/basicSyntax.ml[86,3510+37])
+                Immutable
+                parameters/1412                core_type (lib/basicSyntax.ml[86,3510+22]..lib/basicSyntax.ml[86,3510+36])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[86,3510+22]..lib/basicSyntax.ml[86,3510+36])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/basicSyntax.ml[86,3510+22]..lib/basicSyntax.ml[86,3510+31])
+                        Ttyp_constr "Gbnf_parser!.Stretch.t"
+                        []
+                    ]
+              (lib/basicSyntax.ml[87,3548+4]..lib/basicSyntax.ml[87,3548+34])
+                Immutable
+                start_symbols/1459                core_type (lib/basicSyntax.ml[87,3548+22]..lib/basicSyntax.ml[87,3548+33])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[87,3548+22]..lib/basicSyntax.ml[87,3548+33])
+                    Ttyp_constr "Gbnf_parser!.StringSet.t"
+                    []
+              (lib/basicSyntax.ml[88,3583+4]..lib/basicSyntax.ml[88,3583+52])
+                Immutable
+                types/1508                core_type (lib/basicSyntax.ml[88,3583+22]..lib/basicSyntax.ml[88,3583+51])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[88,3583+22]..lib/basicSyntax.ml[88,3583+51])
+                    Ttyp_constr "Gbnf_parser!.StringMap.t"
+                    [
+                      core_type (lib/basicSyntax.ml[88,3583+22]..lib/basicSyntax.ml[88,3583+39])
+                        Ttyp_constr "Gbnf_parser!.Stretch.ocamltype"
+                        []
+                    ]
+              (lib/basicSyntax.ml[89,3636+4]..lib/basicSyntax.ml[89,3636+58])
+                Immutable
+                tokens/1509                core_type (lib/basicSyntax.ml[89,3636+22]..lib/basicSyntax.ml[89,3636+57])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[89,3636+22]..lib/basicSyntax.ml[89,3636+57])
+                    Ttyp_constr "Gbnf_parser!.StringMap.t"
+                    [
+                      core_type (lib/basicSyntax.ml[89,3636+22]..lib/basicSyntax.ml[89,3636+45])
+                        Ttyp_constr "Gbnf_parser!.Syntax.token_properties"
+                        []
+                    ]
+              (lib/basicSyntax.ml[90,3695+4]..lib/basicSyntax.ml[90,3695+56])
+                Immutable
+                on_error_reduce/1510                core_type (lib/basicSyntax.ml[90,3695+22]..lib/basicSyntax.ml[90,3695+55])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[90,3695+22]..lib/basicSyntax.ml[90,3695+55])
+                    Ttyp_constr "Gbnf_parser!.StringMap.t"
+                    [
+                      core_type (lib/basicSyntax.ml[90,3695+22]..lib/basicSyntax.ml[90,3695+43])
+                        Ttyp_constr "Gbnf_parser!.Syntax.on_error_reduce_level"
+                        []
+                    ]
+              (lib/basicSyntax.ml[91,3752+4]..lib/basicSyntax.ml[91,3752+33])
+                Immutable
+                gr_attributes/1511                core_type (lib/basicSyntax.ml[91,3752+22]..lib/basicSyntax.ml[91,3752+32])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[91,3752+22]..lib/basicSyntax.ml[91,3752+32])
+                    Ttyp_constr "Gbnf_parser!.Syntax.attributes"
+                    []
+              (lib/basicSyntax.ml[92,3786+4]..lib/basicSyntax.ml[92,3786+39])
+                Immutable
+                rules/1512                core_type (lib/basicSyntax.ml[92,3786+22]..lib/basicSyntax.ml[92,3786+38])
+                  Ttyp_poly
+                  core_type (lib/basicSyntax.ml[92,3786+22]..lib/basicSyntax.ml[92,3786+38])
+                    Ttyp_constr "Gbnf_parser!.StringMap.t"
+                    [
+                      core_type (lib/basicSyntax.ml[92,3786+22]..lib/basicSyntax.ml[92,3786+26])
+                        Ttyp_constr "rule/1404"
+                        []
+                    ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/basicSyntax.ml[99,3955+0]..lib/basicSyntax.ml[100,4020+37])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[99,3955+4]..lib/basicSyntax.ml[99,3955+23])
+          Tpat_var "producer_identifier/1793"
+        expression (lib/basicSyntax.ml[99,3955+24]..lib/basicSyntax.ml[100,4020+37]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/basicSyntax.ml[99,3955+24]..lib/basicSyntax.ml[99,3955+49])
+                Tpat_record
+                [
+                  "producer_identifier"
+                    pattern (lib/basicSyntax.ml[99,3955+26]..lib/basicSyntax.ml[99,3955+45])
+                      Tpat_var "producer_identifier/1795"
+                ]
+              expression (lib/basicSyntax.ml[100,4020+2]..lib/basicSyntax.ml[100,4020+37])
+                extra
+                  Texp_constraint
+                  core_type (lib/basicSyntax.ml[99,3955+52]..lib/basicSyntax.ml[99,3955+62])
+                    Ttyp_constr "Gbnf_parser!.Syntax.identifier"
+                    []
+                Texp_apply
+                expression (lib/basicSyntax.ml[100,4020+2]..lib/basicSyntax.ml[100,4020+17])
+                  Texp_ident "Gbnf_parser!.Positions.value"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/basicSyntax.ml[100,4020+18]..lib/basicSyntax.ml[100,4020+37])
+                      Texp_ident "producer_identifier/1795"
+                ]
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[102,4059+0]..lib/basicSyntax.ml[103,4140+21])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[102,4059+4]..lib/basicSyntax.ml[102,4059+31])
+          Tpat_var "producer_identifier_located/1797"
+        expression (lib/basicSyntax.ml[102,4059+32]..lib/basicSyntax.ml[103,4140+21]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/basicSyntax.ml[102,4059+32]..lib/basicSyntax.ml[102,4059+57])
+                Tpat_record
+                [
+                  "producer_identifier"
+                    pattern (lib/basicSyntax.ml[102,4059+34]..lib/basicSyntax.ml[102,4059+53])
+                      Tpat_var "producer_identifier/1799"
+                ]
+              expression (lib/basicSyntax.ml[103,4140+2]..lib/basicSyntax.ml[103,4140+21])
+                extra
+                  Texp_constraint
+                  core_type (lib/basicSyntax.ml[102,4059+60]..lib/basicSyntax.ml[102,4059+78])
+                    Ttyp_constr "Gbnf_parser!.Syntax.located"
+                    [
+                      core_type (lib/basicSyntax.ml[102,4059+60]..lib/basicSyntax.ml[102,4059+70])
+                        Ttyp_constr "Gbnf_parser!.Syntax.identifier"
+                        []
+                    ]
+                Texp_ident "producer_identifier/1799"
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[105,4163+0]..lib/basicSyntax.ml[106,4208+17])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[105,4163+4]..lib/basicSyntax.ml[105,4163+19])
+          Tpat_var "producer_symbol/1801"
+        expression (lib/basicSyntax.ml[105,4163+20]..lib/basicSyntax.ml[106,4208+17]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/basicSyntax.ml[105,4163+20]..lib/basicSyntax.ml[105,4163+42])
+                Tpat_record
+                [
+                  "producer_symbol"
+                    pattern (lib/basicSyntax.ml[105,4163+22]..lib/basicSyntax.ml[105,4163+37])
+                      Tpat_var "producer_symbol/1803"
+                ]
+              expression (lib/basicSyntax.ml[106,4208+2]..lib/basicSyntax.ml[106,4208+17])
+                Texp_ident "producer_symbol/1803"
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[108,4227+0]..lib/basicSyntax.ml[109,4280+21])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[108,4227+4]..lib/basicSyntax.ml[108,4227+23])
+          Tpat_var "producer_attributes/1805"
+        expression (lib/basicSyntax.ml[108,4227+24]..lib/basicSyntax.ml[109,4280+21]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/basicSyntax.ml[108,4227+24]..lib/basicSyntax.ml[108,4227+50])
+                Tpat_record
+                [
+                  "producer_attributes"
+                    pattern (lib/basicSyntax.ml[108,4227+26]..lib/basicSyntax.ml[108,4227+45])
+                      Tpat_var "producer_attributes/1807"
+                ]
+              expression (lib/basicSyntax.ml[109,4280+2]..lib/basicSyntax.ml[109,4280+21])
+                Texp_ident "producer_attributes/1807"
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[115,4464+0]..lib/basicSyntax.ml[116,4488+15])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[115,4464+4]..lib/basicSyntax.ml[115,4464+16])
+          Tpat_var "get_branches/1809"
+        expression (lib/basicSyntax.ml[115,4464+17]..lib/basicSyntax.ml[116,4488+15]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/basicSyntax.ml[115,4464+17]..lib/basicSyntax.ml[115,4464+21])
+                Tpat_var "rule/1811"
+              expression (lib/basicSyntax.ml[116,4488+2]..lib/basicSyntax.ml[116,4488+15])
+                Texp_field
+                expression (lib/basicSyntax.ml[116,4488+2]..lib/basicSyntax.ml[116,4488+6])
+                  Texp_ident "rule/1811"
+                "branches"
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[118,4505+0]..lib/basicSyntax.ml[119,4537+42])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[118,4505+4]..lib/basicSyntax.ml[118,4505+22])
+          Tpat_var "transform_branches/1812"
+        expression (lib/basicSyntax.ml[118,4505+23]..lib/basicSyntax.ml[119,4537+42]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/basicSyntax.ml[118,4505+23]..lib/basicSyntax.ml[118,4505+24])
+                Tpat_var "f/1814"
+              expression (lib/basicSyntax.ml[118,4505+25]..lib/basicSyntax.ml[119,4537+42]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/basicSyntax.ml[118,4505+25]..lib/basicSyntax.ml[118,4505+29])
+                      Tpat_var "rule/1815"
+                    expression (lib/basicSyntax.ml[119,4537+2]..lib/basicSyntax.ml[119,4537+42])
+                      Texp_record
+                        fields =
+                          [
+                            "branches"
+                              expression (lib/basicSyntax.ml[119,4537+25]..lib/basicSyntax.ml[119,4537+40])
+                                Texp_apply
+                                expression (lib/basicSyntax.ml[119,4537+25]..lib/basicSyntax.ml[119,4537+26])
+                                  Texp_ident "f/1814"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/basicSyntax.ml[119,4537+27]..lib/basicSyntax.ml[119,4537+40])
+                                      Texp_field
+                                      expression (lib/basicSyntax.ml[119,4537+27]..lib/basicSyntax.ml[119,4537+31])
+                                        Texp_ident "rule/1815"
+                                      "branches"
+                                ]
+                            <kept>                            <kept>                            <kept>                          ]
+                        representation =
+                          Record_regular
+                        extended_expression =
+                          Some
+                            expression (lib/basicSyntax.ml[119,4537+4]..lib/basicSyntax.ml[119,4537+8])
+                              Texp_ident "rule/1815"
+                ]
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[128,4900+0]..lib/basicSyntax.ml[131,5036+21])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[128,4900+4]..lib/basicSyntax.ml[128,4900+10])
+          Tpat_var "tokens/1816"
+        expression (lib/basicSyntax.ml[128,4900+11]..lib/basicSyntax.ml[131,5036+21]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/basicSyntax.ml[128,4900+11]..lib/basicSyntax.ml[128,4900+18])
+                Tpat_var "grammar/1818"
+              expression (lib/basicSyntax.ml[129,4921+2]..lib/basicSyntax.ml[131,5036+21])
+                Texp_apply
+                expression (lib/basicSyntax.ml[129,4921+2]..lib/basicSyntax.ml[129,4921+16])
+                  Texp_ident "Gbnf_parser!.StringMap.fold"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/basicSyntax.ml[129,4921+17]..lib/basicSyntax.ml[131,5036+3])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/basicSyntax.ml[129,4921+22]..lib/basicSyntax.ml[129,4921+27])
+                            Tpat_var "token/1819"
+                          expression (lib/basicSyntax.ml[129,4921+28]..lib/basicSyntax.ml[130,4970+65]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (lib/basicSyntax.ml[129,4921+28]..lib/basicSyntax.ml[129,4921+38])
+                                  Tpat_var "properties/1820"
+                                expression (lib/basicSyntax.ml[129,4921+39]..lib/basicSyntax.ml[130,4970+65]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (lib/basicSyntax.ml[129,4921+39]..lib/basicSyntax.ml[129,4921+45])
+                                        Tpat_var "tokens/1821"
+                                      expression (lib/basicSyntax.ml[130,4970+4]..lib/basicSyntax.ml[130,4970+65])
+                                        Texp_ifthenelse
+                                        expression (lib/basicSyntax.ml[130,4970+7]..lib/basicSyntax.ml[130,4970+32])
+                                          Texp_field
+                                          expression (lib/basicSyntax.ml[130,4970+7]..lib/basicSyntax.ml[130,4970+17])
+                                            Texp_ident "properties/1820"
+                                          "tk_is_declared"
+                                        expression (lib/basicSyntax.ml[130,4970+38]..lib/basicSyntax.ml[130,4970+53])
+                                          Texp_construct "::"
+                                          [
+                                            expression (lib/basicSyntax.ml[130,4970+38]..lib/basicSyntax.ml[130,4970+43])
+                                              Texp_ident "token/1819"
+                                            expression (lib/basicSyntax.ml[130,4970+47]..lib/basicSyntax.ml[130,4970+53])
+                                              Texp_ident "tokens/1821"
+                                          ]
+                                        Some
+                                          expression (lib/basicSyntax.ml[130,4970+59]..lib/basicSyntax.ml[130,4970+65])
+                                            Texp_ident "tokens/1821"
+                                  ]
+                            ]
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (lib/basicSyntax.ml[131,5036+4]..lib/basicSyntax.ml[131,5036+18])
+                      Texp_field
+                      expression (lib/basicSyntax.ml[131,5036+4]..lib/basicSyntax.ml[131,5036+11])
+                        Texp_ident "grammar/1818"
+                      "tokens"
+                  <arg>
+                    Nolabel
+                    expression (lib/basicSyntax.ml[131,5036+19]..lib/basicSyntax.ml[131,5036+21])
+                      Texp_construct "[]"
+                      []
+                ]
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[136,5149+0]..lib/basicSyntax.ml[139,5318+21])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[136,5149+4]..lib/basicSyntax.ml[136,5149+16])
+          Tpat_var "typed_tokens/1822"
+        expression (lib/basicSyntax.ml[136,5149+17]..lib/basicSyntax.ml[139,5318+21]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/basicSyntax.ml[136,5149+17]..lib/basicSyntax.ml[136,5149+24])
+                Tpat_var "grammar/1824"
+              expression (lib/basicSyntax.ml[137,5176+2]..lib/basicSyntax.ml[139,5318+21])
+                Texp_apply
+                expression (lib/basicSyntax.ml[137,5176+2]..lib/basicSyntax.ml[137,5176+16])
+                  Texp_ident "Gbnf_parser!.StringMap.fold"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/basicSyntax.ml[137,5176+17]..lib/basicSyntax.ml[139,5318+3])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/basicSyntax.ml[137,5176+22]..lib/basicSyntax.ml[137,5176+27])
+                            Tpat_var "token/1825"
+                          expression (lib/basicSyntax.ml[137,5176+28]..lib/basicSyntax.ml[138,5225+92]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (lib/basicSyntax.ml[137,5176+28]..lib/basicSyntax.ml[137,5176+38])
+                                  Tpat_var "properties/1826"
+                                expression (lib/basicSyntax.ml[137,5176+39]..lib/basicSyntax.ml[138,5225+92]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (lib/basicSyntax.ml[137,5176+39]..lib/basicSyntax.ml[137,5176+45])
+                                        Tpat_var "tokens/1827"
+                                      expression (lib/basicSyntax.ml[138,5225+4]..lib/basicSyntax.ml[138,5225+92])
+                                        Texp_ifthenelse
+                                        expression (lib/basicSyntax.ml[138,5225+7]..lib/basicSyntax.ml[138,5225+32])
+                                          Texp_field
+                                          expression (lib/basicSyntax.ml[138,5225+7]..lib/basicSyntax.ml[138,5225+17])
+                                            Texp_ident "properties/1826"
+                                          "tk_is_declared"
+                                        expression (lib/basicSyntax.ml[138,5225+38]..lib/basicSyntax.ml[138,5225+80])
+                                          Texp_construct "::"
+                                          [
+                                            expression (lib/basicSyntax.ml[138,5225+38]..lib/basicSyntax.ml[138,5225+70])
+                                              Texp_tuple
+                                              [
+                                                expression (lib/basicSyntax.ml[138,5225+39]..lib/basicSyntax.ml[138,5225+44])
+                                                  Texp_ident "token/1825"
+                                                expression (lib/basicSyntax.ml[138,5225+46]..lib/basicSyntax.ml[138,5225+69])
+                                                  Texp_field
+                                                  expression (lib/basicSyntax.ml[138,5225+46]..lib/basicSyntax.ml[138,5225+56])
+                                                    Texp_ident "properties/1826"
+                                                  "tk_ocamltype"
+                                              ]
+                                            expression (lib/basicSyntax.ml[138,5225+74]..lib/basicSyntax.ml[138,5225+80])
+                                              Texp_ident "tokens/1827"
+                                          ]
+                                        Some
+                                          expression (lib/basicSyntax.ml[138,5225+86]..lib/basicSyntax.ml[138,5225+92])
+                                            Texp_ident "tokens/1827"
+                                  ]
+                            ]
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (lib/basicSyntax.ml[139,5318+4]..lib/basicSyntax.ml[139,5318+18])
+                      Texp_field
+                      expression (lib/basicSyntax.ml[139,5318+4]..lib/basicSyntax.ml[139,5318+11])
+                        Texp_ident "grammar/1824"
+                      "tokens"
+                  <arg>
+                    Nolabel
+                    expression (lib/basicSyntax.ml[139,5318+19]..lib/basicSyntax.ml[139,5318+21])
+                      Texp_construct "[]"
+                      []
+                ]
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[144,5437+0]..lib/basicSyntax.ml[145,5483+65])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[144,5437+4]..lib/basicSyntax.ml[144,5437+16])
+          Tpat_var "nonterminals/1828"
+        expression (lib/basicSyntax.ml[144,5437+17]..lib/basicSyntax.ml[145,5483+65]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/basicSyntax.ml[144,5437+17]..lib/basicSyntax.ml[144,5437+24])
+                Tpat_var "grammar/1830"
+              expression (lib/basicSyntax.ml[145,5483+2]..lib/basicSyntax.ml[145,5483+65])
+                extra
+                  Texp_constraint
+                  core_type (lib/basicSyntax.ml[144,5437+27]..lib/basicSyntax.ml[144,5437+43])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/basicSyntax.ml[144,5437+27]..lib/basicSyntax.ml[144,5437+38])
+                        Ttyp_constr "Gbnf_parser!.Syntax.nonterminal"
+                        []
+                    ]
+                Texp_apply
+                expression (lib/basicSyntax.ml[145,5483+2]..lib/basicSyntax.ml[145,5483+16])
+                  Texp_ident "Gbnf_parser!.StringMap.fold"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/basicSyntax.ml[145,5483+17]..lib/basicSyntax.ml[145,5483+48])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/basicSyntax.ml[145,5483+22]..lib/basicSyntax.ml[145,5483+24])
+                            Tpat_var "nt/1831"
+                          expression (lib/basicSyntax.ml[145,5483+25]..lib/basicSyntax.ml[145,5483+47]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (lib/basicSyntax.ml[145,5483+25]..lib/basicSyntax.ml[145,5483+26])
+                                  Tpat_any
+                                expression (lib/basicSyntax.ml[145,5483+27]..lib/basicSyntax.ml[145,5483+47]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (lib/basicSyntax.ml[145,5483+27]..lib/basicSyntax.ml[145,5483+32])
+                                        Tpat_var "rules/1832"
+                                      expression (lib/basicSyntax.ml[145,5483+36]..lib/basicSyntax.ml[145,5483+47])
+                                        Texp_construct "::"
+                                        [
+                                          expression (lib/basicSyntax.ml[145,5483+36]..lib/basicSyntax.ml[145,5483+38])
+                                            Texp_ident "nt/1831"
+                                          expression (lib/basicSyntax.ml[145,5483+42]..lib/basicSyntax.ml[145,5483+47])
+                                            Texp_ident "rules/1832"
+                                        ]
+                                  ]
+                            ]
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (lib/basicSyntax.ml[145,5483+49]..lib/basicSyntax.ml[145,5483+62])
+                      Texp_field
+                      expression (lib/basicSyntax.ml[145,5483+49]..lib/basicSyntax.ml[145,5483+56])
+                        Texp_ident "grammar/1830"
+                      "rules"
+                  <arg>
+                    Nolabel
+                    expression (lib/basicSyntax.ml[145,5483+63]..lib/basicSyntax.ml[145,5483+65])
+                      Texp_construct "[]"
+                      []
+                ]
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[150,5686+0]..lib/basicSyntax.ml[154,5827+8])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[150,5686+4]..lib/basicSyntax.ml[150,5686+23])
+          Tpat_var "ocamltype_of_symbol/1903"
+        expression (lib/basicSyntax.ml[150,5686+24]..lib/basicSyntax.ml[154,5827+8]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/basicSyntax.ml[150,5686+24]..lib/basicSyntax.ml[150,5686+31])
+                Tpat_var "grammar/1905"
+              expression (lib/basicSyntax.ml[150,5686+32]..lib/basicSyntax.ml[154,5827+8]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/basicSyntax.ml[150,5686+32]..lib/basicSyntax.ml[150,5686+38])
+                      Tpat_var "symbol/1906"
+                    expression (lib/basicSyntax.ml[151,5754+2]..lib/basicSyntax.ml[154,5827+8])
+                      extra
+                        Texp_constraint
+                        core_type (lib/basicSyntax.ml[150,5686+41]..lib/basicSyntax.ml[150,5686+65])
+                          Ttyp_constr "option/10!"
+                          [
+                            core_type (lib/basicSyntax.ml[150,5686+41]..lib/basicSyntax.ml[150,5686+58])
+                              Ttyp_constr "Gbnf_parser!.Stretch.ocamltype"
+                              []
+                          ]
+                      Texp_try
+                      expression (lib/basicSyntax.ml[152,5760+4]..lib/basicSyntax.ml[152,5760+46])
+                        Texp_construct "Some"
+                        [
+                          expression (lib/basicSyntax.ml[152,5760+9]..lib/basicSyntax.ml[152,5760+46])
+                            Texp_apply
+                            expression (lib/basicSyntax.ml[152,5760+10]..lib/basicSyntax.ml[152,5760+24])
+                              Texp_ident "Gbnf_parser!.StringMap.find"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (lib/basicSyntax.ml[152,5760+25]..lib/basicSyntax.ml[152,5760+31])
+                                  Texp_ident "symbol/1906"
+                              <arg>
+                                Nolabel
+                                expression (lib/basicSyntax.ml[152,5760+32]..lib/basicSyntax.ml[152,5760+45])
+                                  Texp_field
+                                  expression (lib/basicSyntax.ml[152,5760+32]..lib/basicSyntax.ml[152,5760+39])
+                                    Texp_ident "grammar/1905"
+                                  "types"
+                            ]
+                        ]
+                      [
+                        <case>
+                          pattern (lib/basicSyntax.ml[153,5807+7]..lib/basicSyntax.ml[153,5807+16])
+                            Tpat_construct "Not_found"
+                            []
+                            None
+                          expression (lib/basicSyntax.ml[154,5827+4]..lib/basicSyntax.ml[154,5827+8])
+                            Texp_construct "None"
+                            []
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[159,5969+0]..lib/basicSyntax.ml[164,6151+16])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[159,5969+4]..lib/basicSyntax.ml[159,5969+29])
+          Tpat_var "ocamltype_of_start_symbol/1907"
+        expression (lib/basicSyntax.ml[159,5969+30]..lib/basicSyntax.ml[164,6151+16]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/basicSyntax.ml[159,5969+30]..lib/basicSyntax.ml[159,5969+37])
+                Tpat_var "grammar/1909"
+              expression (lib/basicSyntax.ml[159,5969+38]..lib/basicSyntax.ml[164,6151+16]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/basicSyntax.ml[159,5969+38]..lib/basicSyntax.ml[159,5969+44])
+                      Tpat_var "symbol/1910"
+                    expression (lib/basicSyntax.ml[160,6036+2]..lib/basicSyntax.ml[164,6151+16])
+                      extra
+                        Texp_constraint
+                        core_type (lib/basicSyntax.ml[159,5969+47]..lib/basicSyntax.ml[159,5969+64])
+                          Ttyp_constr "Gbnf_parser!.Stretch.ocamltype"
+                          []
+                      Texp_try
+                      expression (lib/basicSyntax.ml[161,6042+4]..lib/basicSyntax.ml[161,6042+39])
+                        Texp_apply
+                        expression (lib/basicSyntax.ml[161,6042+4]..lib/basicSyntax.ml[161,6042+18])
+                          Texp_ident "Gbnf_parser!.StringMap.find"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (lib/basicSyntax.ml[161,6042+19]..lib/basicSyntax.ml[161,6042+25])
+                              Texp_ident "symbol/1910"
+                          <arg>
+                            Nolabel
+                            expression (lib/basicSyntax.ml[161,6042+26]..lib/basicSyntax.ml[161,6042+39])
+                              Texp_field
+                              expression (lib/basicSyntax.ml[161,6042+26]..lib/basicSyntax.ml[161,6042+33])
+                                Texp_ident "grammar/1909"
+                              "types"
+                        ]
+                      [
+                        <case>
+                          pattern (lib/basicSyntax.ml[162,6082+7]..lib/basicSyntax.ml[162,6082+16])
+                            Tpat_construct "Not_found"
+                            []
+                            None
+                          expression (lib/basicSyntax.ml[164,6151+4]..lib/basicSyntax.ml[164,6151+16])
+                            Texp_assert                            expression (lib/basicSyntax.ml[164,6151+11]..lib/basicSyntax.ml[164,6151+16])
+                              Texp_construct "false"
+                              []
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[169,6317+0]..lib/basicSyntax.ml[176,6577+11])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[169,6317+4]..lib/basicSyntax.ml[169,6317+20])
+          Tpat_var "is_inline_symbol/1911"
+        expression (lib/basicSyntax.ml[169,6317+21]..lib/basicSyntax.ml[176,6577+11]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/basicSyntax.ml[169,6317+21]..lib/basicSyntax.ml[169,6317+28])
+                Tpat_var "grammar/1913"
+              expression (lib/basicSyntax.ml[169,6317+29]..lib/basicSyntax.ml[176,6577+11]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/basicSyntax.ml[169,6317+29]..lib/basicSyntax.ml[169,6317+35])
+                      Tpat_var "symbol/1914"
+                    expression (lib/basicSyntax.ml[170,6362+2]..lib/basicSyntax.ml[176,6577+11])
+                      extra
+                        Texp_constraint
+                        core_type (lib/basicSyntax.ml[169,6317+38]..lib/basicSyntax.ml[169,6317+42])
+                          Ttyp_constr "bool/5!"
+                          []
+                      Texp_match
+                      expression (lib/basicSyntax.ml[170,6362+8]..lib/basicSyntax.ml[170,6362+43])
+                        Texp_apply
+                        expression (lib/basicSyntax.ml[170,6362+8]..lib/basicSyntax.ml[170,6362+22])
+                          Texp_ident "Gbnf_parser!.StringMap.find"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (lib/basicSyntax.ml[170,6362+23]..lib/basicSyntax.ml[170,6362+29])
+                              Texp_ident "symbol/1914"
+                          <arg>
+                            Nolabel
+                            expression (lib/basicSyntax.ml[170,6362+30]..lib/basicSyntax.ml[170,6362+43])
+                              Texp_field
+                              expression (lib/basicSyntax.ml[170,6362+30]..lib/basicSyntax.ml[170,6362+37])
+                                Texp_ident "grammar/1913"
+                              "rules"
+                        ]
+                      [
+                        <case>
+                          pattern (lib/basicSyntax.ml[171,6411+4]..lib/basicSyntax.ml[171,6411+8])
+                            Tpat_value
+                            pattern (lib/basicSyntax.ml[171,6411+4]..lib/basicSyntax.ml[171,6411+8])
+                              Tpat_var "rule/1915"
+                          expression (lib/basicSyntax.ml[173,6488+6]..lib/basicSyntax.ml[173,6488+22])
+                            Texp_field
+                            expression (lib/basicSyntax.ml[173,6488+6]..lib/basicSyntax.ml[173,6488+10])
+                              Texp_ident "rule/1915"
+                            "inline_flag"
+                        <case>
+                          pattern (lib/basicSyntax.ml[174,6511+4]..lib/basicSyntax.ml[174,6511+23])
+                            Tpat_exception
+                            pattern (lib/basicSyntax.ml[174,6511+14]..lib/basicSyntax.ml[174,6511+23])
+                              Tpat_construct "Not_found"
+                              []
+                              None
+                          expression (lib/basicSyntax.ml[176,6577+6]..lib/basicSyntax.ml[176,6577+11])
+                            Texp_construct "false"
+                            []
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[181,6743+0]..lib/basicSyntax.ml[182,6785+53])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[181,6743+4]..lib/basicSyntax.ml[181,6743+22])
+          Tpat_var "is_inline_producer/1916"
+        expression (lib/basicSyntax.ml[181,6743+23]..lib/basicSyntax.ml[182,6785+53]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/basicSyntax.ml[181,6743+23]..lib/basicSyntax.ml[181,6743+30])
+                Tpat_var "grammar/1918"
+              expression (lib/basicSyntax.ml[181,6743+31]..lib/basicSyntax.ml[182,6785+53]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/basicSyntax.ml[181,6743+31]..lib/basicSyntax.ml[181,6743+39])
+                      Tpat_var "producer/1919"
+                    expression (lib/basicSyntax.ml[182,6785+2]..lib/basicSyntax.ml[182,6785+53])
+                      Texp_apply
+                      expression (lib/basicSyntax.ml[182,6785+2]..lib/basicSyntax.ml[182,6785+18])
+                        Texp_ident "is_inline_symbol/1911"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/basicSyntax.ml[182,6785+19]..lib/basicSyntax.ml[182,6785+26])
+                            Texp_ident "grammar/1918"
+                        <arg>
+                          Nolabel
+                          expression (lib/basicSyntax.ml[182,6785+27]..lib/basicSyntax.ml[182,6785+53])
+                            Texp_apply
+                            expression (lib/basicSyntax.ml[182,6785+28]..lib/basicSyntax.ml[182,6785+43])
+                              Texp_ident "producer_symbol/1801"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (lib/basicSyntax.ml[182,6785+44]..lib/basicSyntax.ml[182,6785+52])
+                                  Texp_ident "producer/1919"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[194,7273+0]..lib/basicSyntax.ml[199,7472+29])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[194,7273+4]..lib/basicSyntax.ml[194,7273+9])
+          Tpat_var "names/1920"
+        expression (lib/basicSyntax.ml[194,7273+10]..lib/basicSyntax.ml[199,7472+29]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/basicSyntax.ml[194,7273+11]..lib/basicSyntax.ml[194,7273+20])
+                extra
+                  Tpat_extra_constraint
+                  core_type (lib/basicSyntax.ml[194,7273+23]..lib/basicSyntax.ml[194,7273+32])
+                    Ttyp_constr "producers/1247"
+                    []
+                Tpat_alias "producers/1922"
+                pattern (lib/basicSyntax.ml[194,7273+11]..lib/basicSyntax.ml[194,7273+20])
+                  Tpat_any
+              expression (lib/basicSyntax.ml[195,7323+2]..lib/basicSyntax.ml[199,7472+29])
+                extra
+                  Texp_constraint
+                  core_type (lib/basicSyntax.ml[194,7273+36]..lib/basicSyntax.ml[194,7273+47])
+                    Ttyp_constr "Gbnf_parser!.StringSet.t"
+                    []
+                Texp_apply
+                expression (lib/basicSyntax.ml[195,7323+2]..lib/basicSyntax.ml[195,7323+16])
+                  Texp_ident "Stdlib!.List.fold_left"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/basicSyntax.ml[195,7323+17]..lib/basicSyntax.ml[199,7472+3])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/basicSyntax.ml[195,7323+22]..lib/basicSyntax.ml[195,7323+25])
+                            Tpat_var "ids/1989"
+                          expression (lib/basicSyntax.ml[195,7323+26]..lib/basicSyntax.ml[198,7447+24]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (lib/basicSyntax.ml[195,7323+26]..lib/basicSyntax.ml[195,7323+34])
+                                  Tpat_var "producer/1990"
+                                expression (lib/basicSyntax.ml[196,7361+4]..lib/basicSyntax.ml[198,7447+24])
+                                  Texp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (lib/basicSyntax.ml[196,7361+8]..lib/basicSyntax.ml[196,7361+10])
+                                        Tpat_var "id/1991"
+                                      expression (lib/basicSyntax.ml[196,7361+13]..lib/basicSyntax.ml[196,7361+41])
+                                        Texp_apply
+                                        expression (lib/basicSyntax.ml[196,7361+13]..lib/basicSyntax.ml[196,7361+32])
+                                          Texp_ident "producer_identifier/1793"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/basicSyntax.ml[196,7361+33]..lib/basicSyntax.ml[196,7361+41])
+                                              Texp_ident "producer/1990"
+                                        ]
+                                  ]
+                                  expression (lib/basicSyntax.ml[197,7406+4]..lib/basicSyntax.ml[198,7447+24])
+                                    Texp_sequence
+                                    expression (lib/basicSyntax.ml[197,7406+4]..lib/basicSyntax.ml[197,7406+39])
+                                      Texp_assert                                      expression (lib/basicSyntax.ml[197,7406+11]..lib/basicSyntax.ml[197,7406+39])
+                                        Texp_apply
+                                        expression (lib/basicSyntax.ml[197,7406+12]..lib/basicSyntax.ml[197,7406+15])
+                                          Texp_ident "Stdlib!.not"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/basicSyntax.ml[197,7406+16]..lib/basicSyntax.ml[197,7406+38])
+                                              Texp_apply
+                                              expression (lib/basicSyntax.ml[197,7406+17]..lib/basicSyntax.ml[197,7406+30])
+                                                Texp_ident "Gbnf_parser!.StringSet.mem"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/basicSyntax.ml[197,7406+31]..lib/basicSyntax.ml[197,7406+33])
+                                                    Texp_ident "id/1991"
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/basicSyntax.ml[197,7406+34]..lib/basicSyntax.ml[197,7406+37])
+                                                    Texp_ident "ids/1989"
+                                              ]
+                                        ]
+                                    expression (lib/basicSyntax.ml[198,7447+4]..lib/basicSyntax.ml[198,7447+24])
+                                      Texp_apply
+                                      expression (lib/basicSyntax.ml[198,7447+4]..lib/basicSyntax.ml[198,7447+17])
+                                        Texp_ident "Gbnf_parser!.StringSet.add"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (lib/basicSyntax.ml[198,7447+18]..lib/basicSyntax.ml[198,7447+20])
+                                            Texp_ident "id/1991"
+                                        <arg>
+                                          Nolabel
+                                          expression (lib/basicSyntax.ml[198,7447+21]..lib/basicSyntax.ml[198,7447+24])
+                                            Texp_ident "ids/1989"
+                                      ]
+                            ]
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (lib/basicSyntax.ml[199,7472+4]..lib/basicSyntax.ml[199,7472+19])
+                      Texp_ident "Gbnf_parser!.StringSet.empty"
+                  <arg>
+                    Nolabel
+                    expression (lib/basicSyntax.ml[199,7472+20]..lib/basicSyntax.ml[199,7472+29])
+                      Texp_ident "producers/1922"
+                ]
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+          Texp_apply
+          expression (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost,None)
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+          Texp_apply
+          expression (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+          Texp_apply
+          expression (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+          Texp_apply
+          expression (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/basicSyntax.ml[199,7472+29]..lib/basicSyntax.ml[199,7472+29]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__BasicSyntax>
+ "branch"[type] -> <Gbnf_parser__BasicSyntax.5>;
+ "branches"[type] -> <Gbnf_parser__BasicSyntax.11>;
+ "get_branches"[value] -> <Gbnf_parser__BasicSyntax.35>;
+ "grammar"[type] -> <Gbnf_parser__BasicSyntax.17>;
+ "is_inline_producer"[value] -> <Gbnf_parser__BasicSyntax.64>;
+ "is_inline_symbol"[value] -> <Gbnf_parser__BasicSyntax.60>;
+ "names"[value] -> <Gbnf_parser__BasicSyntax.67>;
+ "nonterminals"[value] -> <Gbnf_parser__BasicSyntax.50>;
+ "ocamltype_of_start_symbol"[value] -> <Gbnf_parser__BasicSyntax.57>;
+ "ocamltype_of_symbol"[value] -> <Gbnf_parser__BasicSyntax.54>;
+ "producer"[type] -> <Gbnf_parser__BasicSyntax.0>;
+ "producer_attributes"[value] -> <Gbnf_parser__BasicSyntax.33>;
+ "producer_identifier"[value] -> <Gbnf_parser__BasicSyntax.27>;
+ "producer_identifier_located"[value] -> <Gbnf_parser__BasicSyntax.29>;
+ "producer_symbol"[value] -> <Gbnf_parser__BasicSyntax.31>;
+ "producers"[type] -> <Gbnf_parser__BasicSyntax.4>;
+ "rule"[type] -> <Gbnf_parser__BasicSyntax.12>;
+ "tokens"[value] -> <Gbnf_parser__BasicSyntax.40>;
+ "transform_branches"[value] -> <Gbnf_parser__BasicSyntax.37>;
+ "typed_tokens"[value] -> <Gbnf_parser__BasicSyntax.45>;
+ }
+
+(seq
+  (let
+    (*match*/2382 =
+       (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__BasicSyntax"))
+    0)
+  (let
+    (*match*/2384 =
+       (apply
+         (field_imm 0
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/2386 =
+       (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+         "lib/basicSyntax.ml"))
+    0)
+  (let
+    (*match*/2388 =
+       (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "basicSyntax.ml"))
+    0)
+  (let
+    (producer_identifier/1793 =
+       (function param/1796
+         (let
+           (*match*/2390 =a (field_imm 2 param/1796)
+            *match*/2389 =a (field_imm 1 param/1796)
+            producer_identifier/1795 =a (field_imm 0 param/1796))
+           (apply (field_imm 0 (global Gbnf_parser__Positions!))
+             producer_identifier/1795))))
+    (setfield_ptr(root-init) 0 (global Gbnf_parser__BasicSyntax!)
+      producer_identifier/1793))
+  (let
+    (producer_identifier_located/1797 =
+       (function param/1800
+         (let
+           (*match*/2392 =a (field_imm 2 param/1800)
+            *match*/2391 =a (field_imm 1 param/1800)
+            producer_identifier/1799 =a (field_imm 0 param/1800))
+           producer_identifier/1799)))
+    (setfield_ptr(root-init) 1 (global Gbnf_parser__BasicSyntax!)
+      producer_identifier_located/1797))
+  (let
+    (producer_symbol/1801 =
+       (function param/1804
+         (let
+           (*match*/2394 =a (field_imm 2 param/1804)
+            producer_symbol/1803 =a (field_imm 1 param/1804)
+            *match*/2393 =a (field_imm 0 param/1804))
+           producer_symbol/1803)))
+    (setfield_ptr(root-init) 2 (global Gbnf_parser__BasicSyntax!)
+      producer_symbol/1801))
+  (let
+    (producer_attributes/1805 =
+       (function param/1808
+         (let
+           (producer_attributes/1807 =a (field_imm 2 param/1808)
+            *match*/2396 =a (field_imm 1 param/1808)
+            *match*/2395 =a (field_imm 0 param/1808))
+           producer_attributes/1807)))
+    (setfield_ptr(root-init) 3 (global Gbnf_parser__BasicSyntax!)
+      producer_attributes/1805))
+  (let (get_branches/1809 = (function rule/1811 (field_imm 0 rule/1811)))
+    (setfield_ptr(root-init) 4 (global Gbnf_parser__BasicSyntax!)
+      get_branches/1809))
+  (let
+    (transform_branches/1812 =
+       (function f/1814 rule/1815
+         (let (init/2397 = rule/1815)
+           (makeblock 0 (*,*,int,*) (apply f/1814 (field_imm 0 rule/1815))
+             (field_imm 1 init/2397) (field_int 2 init/2397)
+             (field_imm 3 init/2397)))))
+    (setfield_ptr(root-init) 5 (global Gbnf_parser__BasicSyntax!)
+      transform_branches/1812))
+  (let
+    (tokens/1816 =
+       (function grammar/1818
+         (apply (field_imm 22 (global Gbnf_parser__StringMap!))
+           (function token/1819 properties/1820 tokens/1821
+             (if (field_int 7 properties/1820)
+               (makeblock 0 token/1819 tokens/1821) tokens/1821))
+           (field_imm 5 grammar/1818) 0)))
+    (setfield_ptr(root-init) 6 (global Gbnf_parser__BasicSyntax!)
+      tokens/1816))
+  (let
+    (typed_tokens/1822 =
+       (function grammar/1824
+         (apply (field_imm 22 (global Gbnf_parser__StringMap!))
+           (function token/1825 properties/1826 tokens/1827
+             (if (field_int 7 properties/1826)
+               (makeblock 0
+                 (makeblock 0 token/1825 (field_imm 1 properties/1826))
+                 tokens/1827)
+               tokens/1827))
+           (field_imm 5 grammar/1824) 0)))
+    (setfield_ptr(root-init) 7 (global Gbnf_parser__BasicSyntax!)
+      typed_tokens/1822))
+  (let
+    (nonterminals/1828 =
+       (function grammar/1830
+         (apply (field_imm 22 (global Gbnf_parser__StringMap!))
+           (function nt/1831 param/1833 rules/1832
+             (makeblock 0 nt/1831 rules/1832))
+           (field_imm 8 grammar/1830) 0)))
+    (setfield_ptr(root-init) 8 (global Gbnf_parser__BasicSyntax!)
+      nonterminals/1828))
+  (let
+    (ocamltype_of_symbol/1903 =
+       (function grammar/1905 symbol/1906
+         (try
+           (makeblock 0
+             (apply (field_imm 15 (global Gbnf_parser__StringMap!))
+               symbol/1906 (field_imm 4 grammar/1905)))
+          with exn/2398
+           (catch
+             (if (== exn/2398 (field_imm 7 (global Stdlib!))) 0 (exit 13))
+            with (13) (reraise exn/2398)))))
+    (setfield_ptr(root-init) 9 (global Gbnf_parser__BasicSyntax!)
+      ocamltype_of_symbol/1903))
+  (let
+    (ocamltype_of_start_symbol/1907 =
+       (function grammar/1909 symbol/1910
+         (try
+           (apply (field_imm 15 (global Gbnf_parser__StringMap!)) symbol/1910
+             (field_imm 4 grammar/1909))
+          with exn/2399
+           (catch
+             (if (== exn/2399 (field_imm 7 (global Stdlib!)))
+               (raise
+                 (makeblock 0 (global Assert_failure/28!)
+                   [0: "lib/basicSyntax.ml" 164 4]))
+               (exit 14))
+            with (14) (reraise exn/2399)))))
+    (setfield_ptr(root-init) 10 (global Gbnf_parser__BasicSyntax!)
+      ocamltype_of_start_symbol/1907))
+  (let
+    (is_inline_symbol/1911 =
+       (function grammar/1913 symbol/1914 : int
+         (catch
+           (try
+             (exit 15
+               (apply (field_imm 15 (global Gbnf_parser__StringMap!))
+                 symbol/1914 (field_imm 8 grammar/1913)))
+            with exn/2400
+             (catch
+               (if (== exn/2400 (field_imm 7 (global Stdlib!))) 0 (exit 16))
+              with (16) (reraise exn/2400)))
+          with (15 rule/1915) (field_int 2 rule/1915))))
+    (setfield_ptr(root-init) 11 (global Gbnf_parser__BasicSyntax!)
+      is_inline_symbol/1911))
+  (let
+    (is_inline_producer/1916 =
+       (function grammar/1918 producer/1919 : int
+         (apply (field_imm 11 (global Gbnf_parser__BasicSyntax!))
+           grammar/1918
+           (apply (field_imm 2 (global Gbnf_parser__BasicSyntax!))
+             producer/1919))))
+    (setfield_ptr(root-init) 12 (global Gbnf_parser__BasicSyntax!)
+      is_inline_producer/1916))
+  (let
+    (names/1920 =
+       (function producers/1922
+         (apply (field_imm 25 (global Stdlib__List!))
+           (function ids/1989 producer/1990
+             (let
+               (id/1991 =
+                  (apply (field_imm 0 (global Gbnf_parser__BasicSyntax!))
+                    producer/1990))
+               (seq
+                 (if
+                   (not
+                     (apply (field_imm 29 (global Gbnf_parser__StringSet!))
+                       id/1991 ids/1989))
+                   0
+                   (raise
+                     (makeblock 0 (global Assert_failure/28!)
+                       [0: "lib/basicSyntax.ml" 197 4])))
+                 (apply (field_imm 1 (global Gbnf_parser__StringSet!))
+                   id/1991 ids/1989))))
+           (field_imm 0 (global Gbnf_parser__StringSet!)) producers/1922)))
+    (setfield_ptr(root-init) 13 (global Gbnf_parser__BasicSyntax!)
+      names/1920))
+  (let
+    (*match*/2402 =
+       (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+    0)
+  (let
+    (*match*/2404 =
+       (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!))) 0))
+    0)
+  (let
+    (*match*/2406 =
+       (apply
+         (field_imm 1
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         0))
+    0)
+  (let
+    (*match*/2408 =
+       (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__BasicSyntax"))
+    0)
+  0)
+(seq
+  (let
+    (*match*/2382 =
+       (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__BasicSyntax"))
+    0)
+  (let
+    (*match*/2384 =
+       (apply
+         (field_imm 0
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/2386 =
+       (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+         "lib/basicSyntax.ml"))
+    0)
+  (let
+    (*match*/2388 =
+       (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "basicSyntax.ml"))
+    0)
+  (let
+    (producer_identifier/1793 =
+       (function param/1796
+         (apply (field_imm 0 (global Gbnf_parser__Positions!))
+           (field_imm 0 param/1796))))
+    (setfield_ptr(root-init) 0 (global Gbnf_parser__BasicSyntax!)
+      producer_identifier/1793))
+  (let
+    (producer_identifier_located/1797 =
+       (function param/1800 (field_imm 0 param/1800)))
+    (setfield_ptr(root-init) 1 (global Gbnf_parser__BasicSyntax!)
+      producer_identifier_located/1797))
+  (let
+    (producer_symbol/1801 = (function param/1804 (field_imm 1 param/1804)))
+    (setfield_ptr(root-init) 2 (global Gbnf_parser__BasicSyntax!)
+      producer_symbol/1801))
+  (let
+    (producer_attributes/1805 =
+       (function param/1808 (field_imm 2 param/1808)))
+    (setfield_ptr(root-init) 3 (global Gbnf_parser__BasicSyntax!)
+      producer_attributes/1805))
+  (let (get_branches/1809 = (function rule/1811 (field_imm 0 rule/1811)))
+    (setfield_ptr(root-init) 4 (global Gbnf_parser__BasicSyntax!)
+      get_branches/1809))
+  (let
+    (transform_branches/1812 =
+       (function f/1814 rule/1815
+         (makeblock 0 (*,*,int,*) (apply f/1814 (field_imm 0 rule/1815))
+           (field_imm 1 rule/1815) (field_int 2 rule/1815)
+           (field_imm 3 rule/1815))))
+    (setfield_ptr(root-init) 5 (global Gbnf_parser__BasicSyntax!)
+      transform_branches/1812))
+  (let
+    (tokens/1816 =
+       (function grammar/1818
+         (apply (field_imm 22 (global Gbnf_parser__StringMap!))
+           (function token/1819 properties/1820 tokens/1821
+             (if (field_int 7 properties/1820)
+               (makeblock 0 token/1819 tokens/1821) tokens/1821))
+           (field_imm 5 grammar/1818) 0)))
+    (setfield_ptr(root-init) 6 (global Gbnf_parser__BasicSyntax!)
+      tokens/1816))
+  (let
+    (typed_tokens/1822 =
+       (function grammar/1824
+         (apply (field_imm 22 (global Gbnf_parser__StringMap!))
+           (function token/1825 properties/1826 tokens/1827
+             (if (field_int 7 properties/1826)
+               (makeblock 0
+                 (makeblock 0 token/1825 (field_imm 1 properties/1826))
+                 tokens/1827)
+               tokens/1827))
+           (field_imm 5 grammar/1824) 0)))
+    (setfield_ptr(root-init) 7 (global Gbnf_parser__BasicSyntax!)
+      typed_tokens/1822))
+  (let
+    (nonterminals/1828 =
+       (function grammar/1830
+         (apply (field_imm 22 (global Gbnf_parser__StringMap!))
+           (function nt/1831 param/1833 rules/1832
+             (makeblock 0 nt/1831 rules/1832))
+           (field_imm 8 grammar/1830) 0)))
+    (setfield_ptr(root-init) 8 (global Gbnf_parser__BasicSyntax!)
+      nonterminals/1828))
+  (let
+    (ocamltype_of_symbol/1903 =
+       (function grammar/1905 symbol/1906
+         (try
+           (makeblock 0
+             (apply (field_imm 15 (global Gbnf_parser__StringMap!))
+               symbol/1906 (field_imm 4 grammar/1905)))
+          with exn/2398
+           (if (== exn/2398 (field_imm 7 (global Stdlib!))) 0
+             (reraise exn/2398)))))
+    (setfield_ptr(root-init) 9 (global Gbnf_parser__BasicSyntax!)
+      ocamltype_of_symbol/1903))
+  (let
+    (ocamltype_of_start_symbol/1907 =
+       (function grammar/1909 symbol/1910
+         (try
+           (apply (field_imm 15 (global Gbnf_parser__StringMap!)) symbol/1910
+             (field_imm 4 grammar/1909))
+          with exn/2399
+           (if (== exn/2399 (field_imm 7 (global Stdlib!)))
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "lib/basicSyntax.ml" 164 4]))
+             (reraise exn/2399)))))
+    (setfield_ptr(root-init) 10 (global Gbnf_parser__BasicSyntax!)
+      ocamltype_of_start_symbol/1907))
+  (let
+    (is_inline_symbol/1911 =
+       (function grammar/1913 symbol/1914 : int
+         (catch
+           (try
+             (exit 15
+               (apply (field_imm 15 (global Gbnf_parser__StringMap!))
+                 symbol/1914 (field_imm 8 grammar/1913)))
+            with exn/2400
+             (if (== exn/2400 (field_imm 7 (global Stdlib!))) 0
+               (reraise exn/2400)))
+          with (15 rule/1915) (field_int 2 rule/1915))))
+    (setfield_ptr(root-init) 11 (global Gbnf_parser__BasicSyntax!)
+      is_inline_symbol/1911))
+  (let
+    (is_inline_producer/1916 =
+       (function grammar/1918 producer/1919 : int
+         (apply (field_imm 11 (global Gbnf_parser__BasicSyntax!))
+           grammar/1918
+           (apply (field_imm 2 (global Gbnf_parser__BasicSyntax!))
+             producer/1919))))
+    (setfield_ptr(root-init) 12 (global Gbnf_parser__BasicSyntax!)
+      is_inline_producer/1916))
+  (let
+    (names/1920 =
+       (function producers/1922
+         (apply (field_imm 25 (global Stdlib__List!))
+           (function ids/1989 producer/1990
+             (let
+               (id/1991 =
+                  (apply (field_imm 0 (global Gbnf_parser__BasicSyntax!))
+                    producer/1990))
+               (seq
+                 (if
+                   (not
+                     (apply (field_imm 29 (global Gbnf_parser__StringSet!))
+                       id/1991 ids/1989))
+                   0
+                   (raise
+                     (makeblock 0 (global Assert_failure/28!)
+                       [0: "lib/basicSyntax.ml" 197 4])))
+                 (apply (field_imm 1 (global Gbnf_parser__StringSet!))
+                   id/1991 ids/1989))))
+           (field_imm 0 (global Gbnf_parser__StringSet!)) producers/1922)))
+    (setfield_ptr(root-init) 13 (global Gbnf_parser__BasicSyntax!)
+      names/1920))
+  (let
+    (*match*/2402 =
+       (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+    0)
+  (let
+    (*match*/2404 =
+       (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!))) 0))
+    0)
+  (let
+    (*match*/2406 =
+       (apply
+         (field_imm 1
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         0))
+    0)
+  (let
+    (*match*/2408 =
+       (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__BasicSyntax"))
+    0)
+  0)

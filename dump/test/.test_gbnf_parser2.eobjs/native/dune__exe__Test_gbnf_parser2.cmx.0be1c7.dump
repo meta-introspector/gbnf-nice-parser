@@ -1,0 +1,1005 @@
+[
+  structure_item (test/test_gbnf_parser2.ml[20,1269+0]..[20,1269+16])
+    Pstr_open Fresh
+    module_expr (test/test_gbnf_parser2.ml[20,1269+5]..[20,1269+16])
+      Pmod_ident "Gbnf_parser" (test/test_gbnf_parser2.ml[20,1269+5]..[20,1269+16])
+  structure_item (test/test_gbnf_parser2.ml[22,1287+0]..[22,1287+49])
+    Pstr_open Fresh
+    module_expr (test/test_gbnf_parser2.ml[22,1287+5]..[22,1287+49])
+      Pmod_ident "Gbnf_parser.SentenceParser.MenhirInterpreter" (test/test_gbnf_parser2.ml[22,1287+5]..[22,1287+49])
+  structure_item (test/test_gbnf_parser2.ml[27,1465+0]..[45,2324+76])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/test_gbnf_parser2.ml[27,1465+4]..[27,1465+8])
+          Ppat_var "fail" (test/test_gbnf_parser2.ml[27,1465+4]..[27,1465+8])
+        expression (test/test_gbnf_parser2.ml[27,1465+9]..[45,2324+76]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (test/test_gbnf_parser2.ml[27,1465+9]..[27,1465+15])
+            Ppat_var "buffer" (test/test_gbnf_parser2.ml[27,1465+9]..[27,1465+15])
+          expression (test/test_gbnf_parser2.ml[27,1465+16]..[45,2324+76]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (test/test_gbnf_parser2.ml[27,1465+16]..[27,1465+22])
+              Ppat_var "lexbuf" (test/test_gbnf_parser2.ml[27,1465+16]..[27,1465+22])
+            expression (test/test_gbnf_parser2.ml[27,1465+23]..[45,2324+76]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (test/test_gbnf_parser2.ml[27,1465+23]..[27,1465+32])
+                Ppat_constraint
+                pattern (test/test_gbnf_parser2.ml[27,1465+24]..[27,1465+25])
+                  Ppat_var "s" (test/test_gbnf_parser2.ml[27,1465+24]..[27,1465+25])
+                core_type (test/test_gbnf_parser2.ml[27,1465+28]..[27,1465+31])
+                  Ptyp_constr "int" (test/test_gbnf_parser2.ml[27,1465+28]..[27,1465+31])
+                  []
+              expression (test/test_gbnf_parser2.ml[34,1867+2]..[45,2324+76])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (test/test_gbnf_parser2.ml[34,1867+6]..[34,1867+13])
+                      Ppat_var "message" (test/test_gbnf_parser2.ml[34,1867+6]..[34,1867+13])
+                    expression (test/test_gbnf_parser2.ml[35,1883+4]..[38,1947+62])
+                      Pexp_try
+                      expression (test/test_gbnf_parser2.ml[36,1891+6]..[36,1891+33])
+                        Pexp_apply
+                        expression (test/test_gbnf_parser2.ml[36,1891+6]..[36,1891+31])
+                          Pexp_ident "Sentence_messages.message" (test/test_gbnf_parser2.ml[36,1891+6]..[36,1891+31])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (test/test_gbnf_parser2.ml[36,1891+32]..[36,1891+33])
+                              Pexp_ident "s" (test/test_gbnf_parser2.ml[36,1891+32]..[36,1891+33])
+                        ]
+                      [
+                        <case>
+                          pattern (test/test_gbnf_parser2.ml[37,1925+9]..[37,1925+18])
+                            Ppat_construct "Not_found" (test/test_gbnf_parser2.ml[37,1925+9]..[37,1925+18])
+                            None
+                          expression (test/test_gbnf_parser2.ml[38,1947+6]..[38,1947+62])
+                            Pexp_apply
+                            expression (test/test_gbnf_parser2.ml[38,1947+6]..[38,1947+20])
+                              Pexp_ident "Printf.sprintf" (test/test_gbnf_parser2.ml[38,1947+6]..[38,1947+20])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (test/test_gbnf_parser2.ml[38,1947+21]..[38,1947+60])
+                                  Pexp_constant PConst_string("Unknown syntax error (in state %d).\n",(test/test_gbnf_parser2.ml[38,1947+22]..[38,1947+59]),None)
+                              <arg>
+                              Nolabel
+                                expression (test/test_gbnf_parser2.ml[38,1947+61]..[38,1947+62])
+                                  Pexp_ident "s" (test/test_gbnf_parser2.ml[38,1947+61]..[38,1947+62])
+                            ]
+                      ]
+                ]
+                expression (test/test_gbnf_parser2.ml[41,2079+2]..[45,2324+76])
+                  Pexp_let Nonrec
+                  [
+                    <def>
+                      pattern (test/test_gbnf_parser2.ml[41,2079+6]..[41,2079+11])
+                        Ppat_var "where" (test/test_gbnf_parser2.ml[41,2079+6]..[41,2079+11])
+                      expression (test/test_gbnf_parser2.ml[41,2079+14]..[41,2079+64])
+                        Pexp_apply
+                        expression (test/test_gbnf_parser2.ml[41,2079+14]..[41,2079+41])
+                          Pexp_ident "MenhirLib.ErrorReports.show" (test/test_gbnf_parser2.ml[41,2079+14]..[41,2079+41])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (test/test_gbnf_parser2.ml[41,2079+42]..[41,2079+57])
+                              Pexp_ident "InputFile.chunk" (test/test_gbnf_parser2.ml[41,2079+42]..[41,2079+57])
+                          <arg>
+                          Nolabel
+                            expression (test/test_gbnf_parser2.ml[41,2079+58]..[41,2079+64])
+                              Pexp_ident "buffer" (test/test_gbnf_parser2.ml[41,2079+58]..[41,2079+64])
+                        ]
+                  ]
+                  expression (test/test_gbnf_parser2.ml[43,2219+2]..[45,2324+76])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (test/test_gbnf_parser2.ml[43,2219+6]..[43,2219+13])
+                          Ppat_var "message" (test/test_gbnf_parser2.ml[43,2219+6]..[43,2219+13])
+                        expression (test/test_gbnf_parser2.ml[43,2219+16]..[43,2219+64])
+                          Pexp_apply
+                          expression (test/test_gbnf_parser2.ml[43,2219+16]..[43,2219+26])
+                            Pexp_ident "String.sub" (test/test_gbnf_parser2.ml[43,2219+16]..[43,2219+26])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (test/test_gbnf_parser2.ml[43,2219+27]..[43,2219+34])
+                                Pexp_ident "message" (test/test_gbnf_parser2.ml[43,2219+27]..[43,2219+34])
+                            <arg>
+                            Nolabel
+                              expression (test/test_gbnf_parser2.ml[43,2219+35]..[43,2219+36])
+                                Pexp_constant PConst_int (0,None)
+                            <arg>
+                            Nolabel
+                              expression (test/test_gbnf_parser2.ml[43,2219+37]..[43,2219+64])
+                                Pexp_apply
+                                expression (test/test_gbnf_parser2.ml[43,2219+60]..[43,2219+61])
+                                  Pexp_ident "-" (test/test_gbnf_parser2.ml[43,2219+60]..[43,2219+61])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (test/test_gbnf_parser2.ml[43,2219+38]..[43,2219+59])
+                                      Pexp_apply
+                                      expression (test/test_gbnf_parser2.ml[43,2219+38]..[43,2219+51])
+                                        Pexp_ident "String.length" (test/test_gbnf_parser2.ml[43,2219+38]..[43,2219+51])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (test/test_gbnf_parser2.ml[43,2219+52]..[43,2219+59])
+                                            Pexp_ident "message" (test/test_gbnf_parser2.ml[43,2219+52]..[43,2219+59])
+                                      ]
+                                  <arg>
+                                  Nolabel
+                                    expression (test/test_gbnf_parser2.ml[43,2219+62]..[43,2219+63])
+                                      Pexp_constant PConst_int (1,None)
+                                ]
+                          ]
+                    ]
+                    expression (test/test_gbnf_parser2.ml[45,2324+2]..[45,2324+76])
+                      Pexp_apply
+                      expression (test/test_gbnf_parser2.ml[45,2324+2]..[45,2324+13])
+                        Pexp_ident "Error.error" (test/test_gbnf_parser2.ml[45,2324+2]..[45,2324+13])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (test/test_gbnf_parser2.ml[45,2324+14]..[45,2324+39])
+                            Pexp_apply
+                            expression (test/test_gbnf_parser2.ml[45,2324+15]..[45,2324+31])
+                              Pexp_ident "Positions.lexbuf" (test/test_gbnf_parser2.ml[45,2324+15]..[45,2324+31])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (test/test_gbnf_parser2.ml[45,2324+32]..[45,2324+38])
+                                  Pexp_ident "lexbuf" (test/test_gbnf_parser2.ml[45,2324+32]..[45,2324+38])
+                            ]
+                        <arg>
+                        Nolabel
+                          expression (test/test_gbnf_parser2.ml[45,2324+40]..[45,2324+62])
+                            Pexp_constant PConst_string("syntax error %s.\n%s",(test/test_gbnf_parser2.ml[45,2324+41]..[45,2324+61]),None)
+                        <arg>
+                        Nolabel
+                          expression (test/test_gbnf_parser2.ml[45,2324+63]..[45,2324+68])
+                            Pexp_ident "where" (test/test_gbnf_parser2.ml[45,2324+63]..[45,2324+68])
+                        <arg>
+                        Nolabel
+                          expression (test/test_gbnf_parser2.ml[45,2324+69]..[45,2324+76])
+                            Pexp_ident "message" (test/test_gbnf_parser2.ml[45,2324+69]..[45,2324+76])
+                      ]
+    ]
+  structure_item (test/test_gbnf_parser2.ml[49,2478+0]..[55,2641+18])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/test_gbnf_parser2.ml[49,2478+4]..[49,2478+8])
+          Ppat_var "fail" (test/test_gbnf_parser2.ml[49,2478+4]..[49,2478+8])
+        expression (test/test_gbnf_parser2.ml[49,2478+9]..[55,2641+18]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (test/test_gbnf_parser2.ml[49,2478+9]..[49,2478+15])
+            Ppat_var "buffer" (test/test_gbnf_parser2.ml[49,2478+9]..[49,2478+15])
+          expression (test/test_gbnf_parser2.ml[49,2478+16]..[55,2641+18]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (test/test_gbnf_parser2.ml[49,2478+16]..[49,2478+22])
+              Ppat_var "lexbuf" (test/test_gbnf_parser2.ml[49,2478+16]..[49,2478+22])
+            expression (test/test_gbnf_parser2.ml[49,2478+23]..[55,2641+18]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (test/test_gbnf_parser2.ml[49,2478+23]..[49,2478+33])
+                Ppat_var "checkpoint" (test/test_gbnf_parser2.ml[49,2478+23]..[49,2478+33])
+              expression (test/test_gbnf_parser2.ml[50,2514+2]..[55,2641+18])
+                Pexp_match
+                expression (test/test_gbnf_parser2.ml[50,2514+8]..[50,2514+18])
+                  Pexp_ident "checkpoint" (test/test_gbnf_parser2.ml[50,2514+8]..[50,2514+18])
+                [
+                  <case>
+                    pattern (test/test_gbnf_parser2.ml[51,2538+4]..[51,2538+21])
+                      Ppat_construct "HandlingError" (test/test_gbnf_parser2.ml[51,2538+4]..[51,2538+17])
+                      Some
+                        []
+                        pattern (test/test_gbnf_parser2.ml[51,2538+18]..[51,2538+21])
+                          Ppat_var "env" (test/test_gbnf_parser2.ml[51,2538+18]..[51,2538+21])
+                    expression (test/test_gbnf_parser2.ml[52,2563+6]..[53,2605+26])
+                      Pexp_let Nonrec
+                      [
+                        <def>
+                          pattern (test/test_gbnf_parser2.ml[52,2563+10]..[52,2563+11])
+                            Ppat_var "s" (test/test_gbnf_parser2.ml[52,2563+10]..[52,2563+11])
+                          expression (test/test_gbnf_parser2.ml[52,2563+14]..[52,2563+38])
+                            Pexp_apply
+                            expression (test/test_gbnf_parser2.ml[52,2563+14]..[52,2563+34])
+                              Pexp_ident "current_state_number" (test/test_gbnf_parser2.ml[52,2563+14]..[52,2563+34])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (test/test_gbnf_parser2.ml[52,2563+35]..[52,2563+38])
+                                  Pexp_ident "env" (test/test_gbnf_parser2.ml[52,2563+35]..[52,2563+38])
+                            ]
+                      ]
+                      expression (test/test_gbnf_parser2.ml[53,2605+6]..[53,2605+26])
+                        Pexp_apply
+                        expression (test/test_gbnf_parser2.ml[53,2605+6]..[53,2605+10])
+                          Pexp_ident "fail" (test/test_gbnf_parser2.ml[53,2605+6]..[53,2605+10])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (test/test_gbnf_parser2.ml[53,2605+11]..[53,2605+17])
+                              Pexp_ident "buffer" (test/test_gbnf_parser2.ml[53,2605+11]..[53,2605+17])
+                          <arg>
+                          Nolabel
+                            expression (test/test_gbnf_parser2.ml[53,2605+18]..[53,2605+24])
+                              Pexp_ident "lexbuf" (test/test_gbnf_parser2.ml[53,2605+18]..[53,2605+24])
+                          <arg>
+                          Nolabel
+                            expression (test/test_gbnf_parser2.ml[53,2605+25]..[53,2605+26])
+                              Pexp_ident "s" (test/test_gbnf_parser2.ml[53,2605+25]..[53,2605+26])
+                        ]
+                  <case>
+                    pattern (test/test_gbnf_parser2.ml[54,2632+4]..[54,2632+5])
+                      Ppat_any
+                    expression (test/test_gbnf_parser2.ml[55,2641+6]..[55,2641+18])
+                      Pexp_assert
+                      expression (test/test_gbnf_parser2.ml[55,2641+13]..[55,2641+18])
+                        Pexp_construct "false" (test/test_gbnf_parser2.ml[55,2641+13]..[55,2641+18])
+                        None
+                ]
+    ]
+  structure_item (test/test_gbnf_parser2.ml[59,2710+0]..[100,4101+38])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/test_gbnf_parser2.ml[59,2710+4]..[59,2710+6])
+          Ppat_construct "()" (test/test_gbnf_parser2.ml[59,2710+4]..[59,2710+6])
+          None
+        expression (test/test_gbnf_parser2.ml[61,2720+2]..[100,4101+38])
+          Pexp_let Nonrec
+          [
+            <def>
+              pattern (test/test_gbnf_parser2.ml[61,2720+6]..[61,2720+14])
+                Ppat_var "inputstr" (test/test_gbnf_parser2.ml[61,2720+6]..[61,2720+14])
+              expression (test/test_gbnf_parser2.ml[61,2720+17]..[96,3912+12])
+                Pexp_constant PConst_string ("someletter ::= \"A\" | \"B\" | \"C\" \ngeb ::= \"G\" | \"E\" | \"B\" \n\nletter ::= \"A\" | \"B\" | \"C\" | \"D\" | \"E\" | \"F\" | \"G\" | \"H\" | \"I\" | \"J\" | \"K\" | \"L\" | \"M\" | \"N\" | \"O\" | \"P\" | \"Q\" | \"R\" | \"S\" | \"T\" | \"U\" | \"V\" | \"W\" | \"X\" | \"Y\" | \"Z\" | \"a\" | \"b\" | \"c\" | \"d\" | \"e\" | \"f\" | \"g\" | \"h\" | \"i\" | \"j\" | \"k\" | \"l\" | \"m\" | \"n\" | \"o\" | \"p\" | \"q\" | \"r\" | \"s\" | \"t\" | \"u\" | \"v\" | \"w\" | \"x\" | \"y\" | \"z\"\n\ndigit ::= \"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\" | \"8\" | \"9\"\n\nsymbol ::= \"[\" | \"]\" | \"{\" | \"}\" | \"(\" | \")\" | \"<\" | \">\" | \"'\" | \"=\" | \"|\" | \".\" | \",\" | \";\" | \"-\" | \"+\" | \"*\" | \"?\" | \"\\n\" | \"\\t\" | \"\\r\"\n\ncharacter ::= letter | digit | symbol | \"_\" | \" \"\n\nidentifier ::= letter ( letter | digit | \"_\" )\n\nS ::= ( \" \" | \"\\n\" | \"\\t\" | \"\\r\" )\n\nterminal ::= \"'\" character \"'\" ( character \"'\" ) \"'\"\n\nterminator ::= (\";\" | \".\")\n\nterm ::= \"(\" S rhs S \")\" | \"[\" S rhs S \"]\" | \"{\" S rhs S \"}\" | terminal | identifier\n\nfactor ::= term S \"?\" | term S \"*\" | term S \"+\" | term S \"-\" S term | term S\n\nconcatenation ::= ( S factor S \",\" ? ) +\n\nalternation ::= ( S concatenation S \"|\" ? ) +\n\nrhs ::= alternation\n\nlhs ::= identifier\n\nrule ::= lhs S \"=\" S rhs S terminator\n\nroot ::= ( S rule S ) *\n\n",(test/test_gbnf_parser2.ml[61,2720+29]..[96,3912+0]),Some "codesample")
+          ]
+          expression (test/test_gbnf_parser2.ml[97,3928+2]..[100,4101+38])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (test/test_gbnf_parser2.ml[97,3928+6]..[97,3928+12])
+                  Ppat_var "lexbuf" (test/test_gbnf_parser2.ml[97,3928+6]..[97,3928+12])
+                expression (test/test_gbnf_parser2.ml[97,3928+15]..[97,3928+42])
+                  Pexp_apply
+                  expression (test/test_gbnf_parser2.ml[97,3928+15]..[97,3928+33])
+                    Pexp_ident "Lexing.from_string" (test/test_gbnf_parser2.ml[97,3928+15]..[97,3928+33])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (test/test_gbnf_parser2.ml[97,3928+34]..[97,3928+42])
+                        Pexp_ident "inputstr" (test/test_gbnf_parser2.ml[97,3928+34]..[97,3928+42])
+                  ]
+            ]
+            expression (test/test_gbnf_parser2.ml[98,3974+2]..[100,4101+38])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (test/test_gbnf_parser2.ml[98,3974+6]..[98,3974+19])
+                    Ppat_tuple
+                    [
+                      pattern (test/test_gbnf_parser2.ml[98,3974+6]..[98,3974+12])
+                        Ppat_var "buffer" (test/test_gbnf_parser2.ml[98,3974+6]..[98,3974+12])
+                      pattern (test/test_gbnf_parser2.ml[98,3974+14]..[98,3974+19])
+                        Ppat_var "lexer" (test/test_gbnf_parser2.ml[98,3974+14]..[98,3974+19])
+                    ]
+                  expression (test/test_gbnf_parser2.ml[98,3974+22]..[98,3974+68])
+                    Pexp_apply
+                    expression (test/test_gbnf_parser2.ml[98,3974+22]..[98,3974+49])
+                      Pexp_ident "MenhirLib.ErrorReports.wrap" (test/test_gbnf_parser2.ml[98,3974+22]..[98,3974+49])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (test/test_gbnf_parser2.ml[98,3974+50]..[98,3974+68])
+                          Pexp_ident "SentenceLexer.main" (test/test_gbnf_parser2.ml[98,3974+50]..[98,3974+68])
+                    ]
+              ]
+              expression (test/test_gbnf_parser2.ml[99,4047+2]..[100,4101+38])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (test/test_gbnf_parser2.ml[99,4047+6]..[99,4047+9])
+                      Ppat_var "dat" (test/test_gbnf_parser2.ml[99,4047+6]..[99,4047+9])
+                    expression (test/test_gbnf_parser2.ml[99,4047+12]..[99,4047+49])
+                      Pexp_apply
+                      expression (test/test_gbnf_parser2.ml[99,4047+13]..[99,4047+35])
+                        Pexp_ident "SentenceParser.grammar" (test/test_gbnf_parser2.ml[99,4047+13]..[99,4047+35])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (test/test_gbnf_parser2.ml[99,4047+36]..[99,4047+41])
+                            Pexp_ident "lexer" (test/test_gbnf_parser2.ml[99,4047+36]..[99,4047+41])
+                        <arg>
+                        Nolabel
+                          expression (test/test_gbnf_parser2.ml[99,4047+42]..[99,4047+48])
+                            Pexp_ident "lexbuf" (test/test_gbnf_parser2.ml[99,4047+42]..[99,4047+48])
+                      ]
+                ]
+                expression (test/test_gbnf_parser2.ml[100,4101+2]..[100,4101+38])
+                  Pexp_apply
+                  expression (test/test_gbnf_parser2.ml[100,4101+3]..[100,4101+16])
+                    Pexp_ident "print_endline" (test/test_gbnf_parser2.ml[100,4101+3]..[100,4101+16])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (test/test_gbnf_parser2.ml[100,4101+17]..[100,4101+37])
+                        Pexp_apply
+                        expression (test/test_gbnf_parser2.ml[100,4101+18]..[100,4101+32])
+                          Pexp_ident "Batteries.dump" (test/test_gbnf_parser2.ml[100,4101+18]..[100,4101+32])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (test/test_gbnf_parser2.ml[100,4101+33]..[100,4101+36])
+                              Pexp_ident "dat" (test/test_gbnf_parser2.ml[100,4101+33]..[100,4101+36])
+                        ]
+                  ]
+    ]
+]
+
+open Gbnf_parser
+open Gbnf_parser.SentenceParser.MenhirInterpreter
+let fail buffer lexbuf (s : int) =
+  let message =
+    try Sentence_messages.message s
+    with
+    | Not_found -> Printf.sprintf "Unknown syntax error (in state %d).\n" s in
+  let where = MenhirLib.ErrorReports.show InputFile.chunk buffer in
+  let message = String.sub message 0 ((String.length message) - 1) in
+  Error.error (Positions.lexbuf lexbuf) "syntax error %s.\n%s" where message
+let fail buffer lexbuf checkpoint =
+  match checkpoint with
+  | HandlingError env ->
+      let s = current_state_number env in fail buffer lexbuf s
+  | _ -> assert false
+let () =
+  let inputstr =
+    {codesample|someletter ::= "A" | "B" | "C" 
+geb ::= "G" | "E" | "B" 
+
+letter ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z"
+
+digit ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+symbol ::= "[" | "]" | "{" | "}" | "(" | ")" | "<" | ">" | "'" | "=" | "|" | "." | "," | ";" | "-" | "+" | "*" | "?" | "\n" | "\t" | "\r"
+
+character ::= letter | digit | symbol | "_" | " "
+
+identifier ::= letter ( letter | digit | "_" )
+
+S ::= ( " " | "\n" | "\t" | "\r" )
+
+terminal ::= "'" character "'" ( character "'" ) "'"
+
+terminator ::= (";" | ".")
+
+term ::= "(" S rhs S ")" | "[" S rhs S "]" | "{" S rhs S "}" | terminal | identifier
+
+factor ::= term S "?" | term S "*" | term S "+" | term S "-" S term | term S
+
+concatenation ::= ( S factor S "," ? ) +
+
+alternation ::= ( S concatenation S "|" ? ) +
+
+rhs ::= alternation
+
+lhs ::= identifier
+
+rule ::= lhs S "=" S rhs S terminator
+
+root ::= ( S rule S ) *
+
+|codesample} in
+  let lexbuf = Lexing.from_string inputstr in
+  let (buffer, lexer) = MenhirLib.ErrorReports.wrap SentenceLexer.main in
+  let dat = SentenceParser.grammar lexer lexbuf in
+  print_endline (Batteries.dump dat)
+[
+  structure_item (test/test_gbnf_parser2.ml[20,1269+0]..test/test_gbnf_parser2.ml[20,1269+16])
+    Tstr_open Fresh
+    module_expr (test/test_gbnf_parser2.ml[20,1269+5]..test/test_gbnf_parser2.ml[20,1269+16])
+      Tmod_ident "Gbnf_parser!"
+  structure_item (test/test_gbnf_parser2.ml[22,1287+0]..test/test_gbnf_parser2.ml[22,1287+49])
+    Tstr_open Fresh
+    module_expr (test/test_gbnf_parser2.ml[22,1287+5]..test/test_gbnf_parser2.ml[22,1287+49])
+      Tmod_ident "Gbnf_parser!.SentenceParser.MenhirInterpreter"
+  structure_item (test/test_gbnf_parser2.ml[27,1465+0]..test/test_gbnf_parser2.ml[45,2324+76])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/test_gbnf_parser2.ml[27,1465+4]..test/test_gbnf_parser2.ml[27,1465+8])
+          Tpat_var "fail/370"
+        expression (test/test_gbnf_parser2.ml[27,1465+9]..test/test_gbnf_parser2.ml[45,2324+76]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (test/test_gbnf_parser2.ml[27,1465+9]..test/test_gbnf_parser2.ml[27,1465+15])
+                Tpat_var "buffer/372"
+              expression (test/test_gbnf_parser2.ml[27,1465+16]..test/test_gbnf_parser2.ml[45,2324+76]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (test/test_gbnf_parser2.ml[27,1465+16]..test/test_gbnf_parser2.ml[27,1465+22])
+                      Tpat_var "lexbuf/373"
+                    expression (test/test_gbnf_parser2.ml[27,1465+23]..test/test_gbnf_parser2.ml[45,2324+76]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (test/test_gbnf_parser2.ml[27,1465+24]..test/test_gbnf_parser2.ml[27,1465+25])
+                            extra
+                              Tpat_extra_constraint
+                              core_type (test/test_gbnf_parser2.ml[27,1465+28]..test/test_gbnf_parser2.ml[27,1465+31])
+                                Ttyp_constr "int/1!"
+                                []
+                            Tpat_alias "s/374"
+                            pattern (test/test_gbnf_parser2.ml[27,1465+24]..test/test_gbnf_parser2.ml[27,1465+25])
+                              Tpat_any
+                          expression (test/test_gbnf_parser2.ml[34,1867+2]..test/test_gbnf_parser2.ml[45,2324+76])
+                            Texp_let Nonrec
+                            [
+                              <def>
+                                pattern (test/test_gbnf_parser2.ml[34,1867+6]..test/test_gbnf_parser2.ml[34,1867+13])
+                                  Tpat_var "message/375"
+                                expression (test/test_gbnf_parser2.ml[35,1883+4]..test/test_gbnf_parser2.ml[38,1947+62])
+                                  Texp_try
+                                  expression (test/test_gbnf_parser2.ml[36,1891+6]..test/test_gbnf_parser2.ml[36,1891+33])
+                                    Texp_apply
+                                    expression (test/test_gbnf_parser2.ml[36,1891+6]..test/test_gbnf_parser2.ml[36,1891+31])
+                                      Texp_ident "Gbnf_parser!.Sentence_messages.message"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (test/test_gbnf_parser2.ml[36,1891+32]..test/test_gbnf_parser2.ml[36,1891+33])
+                                          Texp_ident "s/374"
+                                    ]
+                                  [
+                                    <case>
+                                      pattern (test/test_gbnf_parser2.ml[37,1925+9]..test/test_gbnf_parser2.ml[37,1925+18])
+                                        Tpat_construct "Not_found"
+                                        []
+                                        None
+                                      expression (test/test_gbnf_parser2.ml[38,1947+6]..test/test_gbnf_parser2.ml[38,1947+62])
+                                        Texp_apply
+                                        expression (test/test_gbnf_parser2.ml[38,1947+6]..test/test_gbnf_parser2.ml[38,1947+20])
+                                          Texp_ident "Stdlib!.Printf.sprintf"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (test/test_gbnf_parser2.ml[38,1947+21]..test/test_gbnf_parser2.ml[38,1947+60])
+                                              Texp_construct "CamlinternalFormatBasics.Format"
+                                              [
+                                                expression (test/test_gbnf_parser2.ml[38,1947+21]..test/test_gbnf_parser2.ml[38,1947+60]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                  [
+                                                    expression (test/test_gbnf_parser2.ml[38,1947+21]..test/test_gbnf_parser2.ml[38,1947+60]) ghost
+                                                      Texp_constant Const_string("Unknown syntax error (in state ",(test/test_gbnf_parser2.ml[38,1947+21]..test/test_gbnf_parser2.ml[38,1947+60]) ghost,None)
+                                                    expression (test/test_gbnf_parser2.ml[38,1947+21]..test/test_gbnf_parser2.ml[38,1947+60]) ghost
+                                                      Texp_construct "CamlinternalFormatBasics.Int"
+                                                      [
+                                                        expression (test/test_gbnf_parser2.ml[38,1947+21]..test/test_gbnf_parser2.ml[38,1947+60]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.Int_d"
+                                                          []
+                                                        expression (test/test_gbnf_parser2.ml[38,1947+21]..test/test_gbnf_parser2.ml[38,1947+60]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                          []
+                                                        expression (test/test_gbnf_parser2.ml[38,1947+21]..test/test_gbnf_parser2.ml[38,1947+60]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.No_precision"
+                                                          []
+                                                        expression (test/test_gbnf_parser2.ml[38,1947+21]..test/test_gbnf_parser2.ml[38,1947+60]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                          [
+                                                            expression (test/test_gbnf_parser2.ml[38,1947+21]..test/test_gbnf_parser2.ml[38,1947+60]) ghost
+                                                              Texp_constant Const_string(").\n",(test/test_gbnf_parser2.ml[38,1947+21]..test/test_gbnf_parser2.ml[38,1947+60]) ghost,None)
+                                                            expression (test/test_gbnf_parser2.ml[38,1947+21]..test/test_gbnf_parser2.ml[38,1947+60]) ghost
+                                                              Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                              []
+                                                          ]
+                                                      ]
+                                                  ]
+                                                expression (test/test_gbnf_parser2.ml[38,1947+21]..test/test_gbnf_parser2.ml[38,1947+60]) ghost
+                                                  Texp_constant Const_string("Unknown syntax error (in state %d).\n",(test/test_gbnf_parser2.ml[38,1947+21]..test/test_gbnf_parser2.ml[38,1947+60]) ghost,None)
+                                              ]
+                                          <arg>
+                                            Nolabel
+                                            expression (test/test_gbnf_parser2.ml[38,1947+61]..test/test_gbnf_parser2.ml[38,1947+62])
+                                              Texp_ident "s/374"
+                                        ]
+                                  ]
+                            ]
+                            expression (test/test_gbnf_parser2.ml[41,2079+2]..test/test_gbnf_parser2.ml[45,2324+76])
+                              Texp_let Nonrec
+                              [
+                                <def>
+                                  pattern (test/test_gbnf_parser2.ml[41,2079+6]..test/test_gbnf_parser2.ml[41,2079+11])
+                                    Tpat_var "where/413"
+                                  expression (test/test_gbnf_parser2.ml[41,2079+14]..test/test_gbnf_parser2.ml[41,2079+64])
+                                    Texp_apply
+                                    expression (test/test_gbnf_parser2.ml[41,2079+14]..test/test_gbnf_parser2.ml[41,2079+41])
+                                      Texp_ident "MenhirLib!.ErrorReports.show"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (test/test_gbnf_parser2.ml[41,2079+42]..test/test_gbnf_parser2.ml[41,2079+57])
+                                          Texp_ident "Gbnf_parser!.InputFile.chunk"
+                                      <arg>
+                                        Nolabel
+                                        expression (test/test_gbnf_parser2.ml[41,2079+58]..test/test_gbnf_parser2.ml[41,2079+64])
+                                          Texp_ident "buffer/372"
+                                    ]
+                              ]
+                              expression (test/test_gbnf_parser2.ml[43,2219+2]..test/test_gbnf_parser2.ml[45,2324+76])
+                                Texp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (test/test_gbnf_parser2.ml[43,2219+6]..test/test_gbnf_parser2.ml[43,2219+13])
+                                      Tpat_var "message/455"
+                                    expression (test/test_gbnf_parser2.ml[43,2219+16]..test/test_gbnf_parser2.ml[43,2219+64])
+                                      Texp_apply
+                                      expression (test/test_gbnf_parser2.ml[43,2219+16]..test/test_gbnf_parser2.ml[43,2219+26])
+                                        Texp_ident "Stdlib!.String.sub"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (test/test_gbnf_parser2.ml[43,2219+27]..test/test_gbnf_parser2.ml[43,2219+34])
+                                            Texp_ident "message/375"
+                                        <arg>
+                                          Nolabel
+                                          expression (test/test_gbnf_parser2.ml[43,2219+35]..test/test_gbnf_parser2.ml[43,2219+36])
+                                            Texp_constant Const_int 0
+                                        <arg>
+                                          Nolabel
+                                          expression (test/test_gbnf_parser2.ml[43,2219+37]..test/test_gbnf_parser2.ml[43,2219+64])
+                                            Texp_apply
+                                            expression (test/test_gbnf_parser2.ml[43,2219+60]..test/test_gbnf_parser2.ml[43,2219+61])
+                                              Texp_ident "Stdlib!.-"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (test/test_gbnf_parser2.ml[43,2219+38]..test/test_gbnf_parser2.ml[43,2219+59])
+                                                  Texp_apply
+                                                  expression (test/test_gbnf_parser2.ml[43,2219+38]..test/test_gbnf_parser2.ml[43,2219+51])
+                                                    Texp_ident "Stdlib!.String.length"
+                                                  [
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (test/test_gbnf_parser2.ml[43,2219+52]..test/test_gbnf_parser2.ml[43,2219+59])
+                                                        Texp_ident "message/375"
+                                                  ]
+                                              <arg>
+                                                Nolabel
+                                                expression (test/test_gbnf_parser2.ml[43,2219+62]..test/test_gbnf_parser2.ml[43,2219+63])
+                                                  Texp_constant Const_int 1
+                                            ]
+                                      ]
+                                ]
+                                expression (test/test_gbnf_parser2.ml[45,2324+2]..test/test_gbnf_parser2.ml[45,2324+76])
+                                  Texp_apply
+                                  expression (test/test_gbnf_parser2.ml[45,2324+2]..test/test_gbnf_parser2.ml[45,2324+13])
+                                    Texp_ident "Gbnf_parser!.Error.error"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (test/test_gbnf_parser2.ml[45,2324+14]..test/test_gbnf_parser2.ml[45,2324+39])
+                                        Texp_apply
+                                        expression (test/test_gbnf_parser2.ml[45,2324+15]..test/test_gbnf_parser2.ml[45,2324+31])
+                                          Texp_ident "Gbnf_parser!.Positions.lexbuf"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (test/test_gbnf_parser2.ml[45,2324+32]..test/test_gbnf_parser2.ml[45,2324+38])
+                                              Texp_ident "lexbuf/373"
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (test/test_gbnf_parser2.ml[45,2324+40]..test/test_gbnf_parser2.ml[45,2324+62])
+                                        Texp_construct "CamlinternalFormatBasics.Format"
+                                        [
+                                          expression (test/test_gbnf_parser2.ml[45,2324+40]..test/test_gbnf_parser2.ml[45,2324+62]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.String_literal"
+                                            [
+                                              expression (test/test_gbnf_parser2.ml[45,2324+40]..test/test_gbnf_parser2.ml[45,2324+62]) ghost
+                                                Texp_constant Const_string("syntax error ",(test/test_gbnf_parser2.ml[45,2324+40]..test/test_gbnf_parser2.ml[45,2324+62]) ghost,None)
+                                              expression (test/test_gbnf_parser2.ml[45,2324+40]..test/test_gbnf_parser2.ml[45,2324+62]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.String"
+                                                [
+                                                  expression (test/test_gbnf_parser2.ml[45,2324+40]..test/test_gbnf_parser2.ml[45,2324+62]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                    []
+                                                  expression (test/test_gbnf_parser2.ml[45,2324+40]..test/test_gbnf_parser2.ml[45,2324+62]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                    [
+                                                      expression (test/test_gbnf_parser2.ml[45,2324+40]..test/test_gbnf_parser2.ml[45,2324+62]) ghost
+                                                        Texp_constant Const_string(".\n",(test/test_gbnf_parser2.ml[45,2324+40]..test/test_gbnf_parser2.ml[45,2324+62]) ghost,None)
+                                                      expression (test/test_gbnf_parser2.ml[45,2324+40]..test/test_gbnf_parser2.ml[45,2324+62]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.String"
+                                                        [
+                                                          expression (test/test_gbnf_parser2.ml[45,2324+40]..test/test_gbnf_parser2.ml[45,2324+62]) ghost
+                                                            Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                            []
+                                                          expression (test/test_gbnf_parser2.ml[45,2324+40]..test/test_gbnf_parser2.ml[45,2324+62]) ghost
+                                                            Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                            []
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                          expression (test/test_gbnf_parser2.ml[45,2324+40]..test/test_gbnf_parser2.ml[45,2324+62]) ghost
+                                            Texp_constant Const_string("syntax error %s.\n%s",(test/test_gbnf_parser2.ml[45,2324+40]..test/test_gbnf_parser2.ml[45,2324+62]) ghost,None)
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (test/test_gbnf_parser2.ml[45,2324+63]..test/test_gbnf_parser2.ml[45,2324+68])
+                                        Texp_ident "where/413"
+                                    <arg>
+                                      Nolabel
+                                      expression (test/test_gbnf_parser2.ml[45,2324+69]..test/test_gbnf_parser2.ml[45,2324+76])
+                                        Texp_ident "message/455"
+                                  ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (test/test_gbnf_parser2.ml[49,2478+0]..test/test_gbnf_parser2.ml[55,2641+18])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/test_gbnf_parser2.ml[49,2478+4]..test/test_gbnf_parser2.ml[49,2478+8])
+          Tpat_var "fail/623"
+        expression (test/test_gbnf_parser2.ml[49,2478+9]..test/test_gbnf_parser2.ml[55,2641+18]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (test/test_gbnf_parser2.ml[49,2478+9]..test/test_gbnf_parser2.ml[49,2478+15])
+                Tpat_var "buffer/624"
+              expression (test/test_gbnf_parser2.ml[49,2478+16]..test/test_gbnf_parser2.ml[55,2641+18]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (test/test_gbnf_parser2.ml[49,2478+16]..test/test_gbnf_parser2.ml[49,2478+22])
+                      Tpat_var "lexbuf/625"
+                    expression (test/test_gbnf_parser2.ml[49,2478+23]..test/test_gbnf_parser2.ml[55,2641+18]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (test/test_gbnf_parser2.ml[49,2478+23]..test/test_gbnf_parser2.ml[49,2478+33])
+                            Tpat_var "checkpoint/626"
+                          expression (test/test_gbnf_parser2.ml[50,2514+2]..test/test_gbnf_parser2.ml[55,2641+18])
+                            Texp_match
+                            expression (test/test_gbnf_parser2.ml[50,2514+8]..test/test_gbnf_parser2.ml[50,2514+18])
+                              Texp_ident "checkpoint/626"
+                            [
+                              <case>
+                                pattern (test/test_gbnf_parser2.ml[51,2538+4]..test/test_gbnf_parser2.ml[51,2538+21])
+                                  Tpat_value
+                                  pattern (test/test_gbnf_parser2.ml[51,2538+4]..test/test_gbnf_parser2.ml[51,2538+21])
+                                    Tpat_construct "HandlingError"
+                                    [
+                                      pattern (test/test_gbnf_parser2.ml[51,2538+18]..test/test_gbnf_parser2.ml[51,2538+21])
+                                        Tpat_var "env/627"
+                                    ]
+                                    None
+                                expression (test/test_gbnf_parser2.ml[52,2563+6]..test/test_gbnf_parser2.ml[53,2605+26])
+                                  Texp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (test/test_gbnf_parser2.ml[52,2563+10]..test/test_gbnf_parser2.ml[52,2563+11])
+                                        Tpat_var "s/628"
+                                      expression (test/test_gbnf_parser2.ml[52,2563+14]..test/test_gbnf_parser2.ml[52,2563+38])
+                                        Texp_apply
+                                        expression (test/test_gbnf_parser2.ml[52,2563+14]..test/test_gbnf_parser2.ml[52,2563+34])
+                                          Texp_ident "Gbnf_parser!.SentenceParser.MenhirInterpreter.current_state_number"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (test/test_gbnf_parser2.ml[52,2563+35]..test/test_gbnf_parser2.ml[52,2563+38])
+                                              Texp_ident "env/627"
+                                        ]
+                                  ]
+                                  expression (test/test_gbnf_parser2.ml[53,2605+6]..test/test_gbnf_parser2.ml[53,2605+26])
+                                    Texp_apply
+                                    expression (test/test_gbnf_parser2.ml[53,2605+6]..test/test_gbnf_parser2.ml[53,2605+10])
+                                      Texp_ident "fail/370"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (test/test_gbnf_parser2.ml[53,2605+11]..test/test_gbnf_parser2.ml[53,2605+17])
+                                          Texp_ident "buffer/624"
+                                      <arg>
+                                        Nolabel
+                                        expression (test/test_gbnf_parser2.ml[53,2605+18]..test/test_gbnf_parser2.ml[53,2605+24])
+                                          Texp_ident "lexbuf/625"
+                                      <arg>
+                                        Nolabel
+                                        expression (test/test_gbnf_parser2.ml[53,2605+25]..test/test_gbnf_parser2.ml[53,2605+26])
+                                          Texp_ident "s/628"
+                                    ]
+                              <case>
+                                pattern (test/test_gbnf_parser2.ml[54,2632+4]..test/test_gbnf_parser2.ml[54,2632+5])
+                                  Tpat_value
+                                  pattern (test/test_gbnf_parser2.ml[54,2632+4]..test/test_gbnf_parser2.ml[54,2632+5])
+                                    Tpat_any
+                                expression (test/test_gbnf_parser2.ml[55,2641+6]..test/test_gbnf_parser2.ml[55,2641+18])
+                                  Texp_assert                                  expression (test/test_gbnf_parser2.ml[55,2641+13]..test/test_gbnf_parser2.ml[55,2641+18])
+                                    Texp_construct "false"
+                                    []
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (test/test_gbnf_parser2.ml[59,2710+0]..test/test_gbnf_parser2.ml[100,4101+38])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/test_gbnf_parser2.ml[59,2710+4]..test/test_gbnf_parser2.ml[59,2710+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (test/test_gbnf_parser2.ml[61,2720+2]..test/test_gbnf_parser2.ml[100,4101+38])
+          Texp_let Nonrec
+          [
+            <def>
+              pattern (test/test_gbnf_parser2.ml[61,2720+6]..test/test_gbnf_parser2.ml[61,2720+14])
+                Tpat_var "inputstr/661"
+              expression (test/test_gbnf_parser2.ml[61,2720+17]..test/test_gbnf_parser2.ml[96,3912+12])
+                Texp_constant Const_string ("someletter ::= \"A\" | \"B\" | \"C\" \ngeb ::= \"G\" | \"E\" | \"B\" \n\nletter ::= \"A\" | \"B\" | \"C\" | \"D\" | \"E\" | \"F\" | \"G\" | \"H\" | \"I\" | \"J\" | \"K\" | \"L\" | \"M\" | \"N\" | \"O\" | \"P\" | \"Q\" | \"R\" | \"S\" | \"T\" | \"U\" | \"V\" | \"W\" | \"X\" | \"Y\" | \"Z\" | \"a\" | \"b\" | \"c\" | \"d\" | \"e\" | \"f\" | \"g\" | \"h\" | \"i\" | \"j\" | \"k\" | \"l\" | \"m\" | \"n\" | \"o\" | \"p\" | \"q\" | \"r\" | \"s\" | \"t\" | \"u\" | \"v\" | \"w\" | \"x\" | \"y\" | \"z\"\n\ndigit ::= \"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\" | \"8\" | \"9\"\n\nsymbol ::= \"[\" | \"]\" | \"{\" | \"}\" | \"(\" | \")\" | \"<\" | \">\" | \"'\" | \"=\" | \"|\" | \".\" | \",\" | \";\" | \"-\" | \"+\" | \"*\" | \"?\" | \"\\n\" | \"\\t\" | \"\\r\"\n\ncharacter ::= letter | digit | symbol | \"_\" | \" \"\n\nidentifier ::= letter ( letter | digit | \"_\" )\n\nS ::= ( \" \" | \"\\n\" | \"\\t\" | \"\\r\" )\n\nterminal ::= \"'\" character \"'\" ( character \"'\" ) \"'\"\n\nterminator ::= (\";\" | \".\")\n\nterm ::= \"(\" S rhs S \")\" | \"[\" S rhs S \"]\" | \"{\" S rhs S \"}\" | terminal | identifier\n\nfactor ::= term S \"?\" | term S \"*\" | term S \"+\" | term S \"-\" S term | term S\n\nconcatenation ::= ( S factor S \",\" ? ) +\n\nalternation ::= ( S concatenation S \"|\" ? ) +\n\nrhs ::= alternation\n\nlhs ::= identifier\n\nrule ::= lhs S \"=\" S rhs S terminator\n\nroot ::= ( S rule S ) *\n\n",(test/test_gbnf_parser2.ml[61,2720+29]..test/test_gbnf_parser2.ml[96,3912+0]),Some "codesample")
+          ]
+          expression (test/test_gbnf_parser2.ml[97,3928+2]..test/test_gbnf_parser2.ml[100,4101+38])
+            Texp_let Nonrec
+            [
+              <def>
+                pattern (test/test_gbnf_parser2.ml[97,3928+6]..test/test_gbnf_parser2.ml[97,3928+12])
+                  Tpat_var "lexbuf/662"
+                expression (test/test_gbnf_parser2.ml[97,3928+15]..test/test_gbnf_parser2.ml[97,3928+42])
+                  Texp_apply
+                  expression (test/test_gbnf_parser2.ml[97,3928+15]..test/test_gbnf_parser2.ml[97,3928+33])
+                    Texp_ident "Stdlib!.Lexing.from_string"
+                  [
+                    <arg>
+                      Optional "with_positions"
+                      expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                        Texp_construct "None"
+                        []
+                    <arg>
+                      Nolabel
+                      expression (test/test_gbnf_parser2.ml[97,3928+34]..test/test_gbnf_parser2.ml[97,3928+42])
+                        Texp_ident "inputstr/661"
+                  ]
+            ]
+            expression (test/test_gbnf_parser2.ml[98,3974+2]..test/test_gbnf_parser2.ml[100,4101+38])
+              Texp_let Nonrec
+              [
+                <def>
+                  pattern (test/test_gbnf_parser2.ml[98,3974+6]..test/test_gbnf_parser2.ml[98,3974+19])
+                    Tpat_tuple
+                    [
+                      pattern (test/test_gbnf_parser2.ml[98,3974+6]..test/test_gbnf_parser2.ml[98,3974+12])
+                        Tpat_var "buffer/663"
+                      pattern (test/test_gbnf_parser2.ml[98,3974+14]..test/test_gbnf_parser2.ml[98,3974+19])
+                        Tpat_var "lexer/664"
+                    ]
+                  expression (test/test_gbnf_parser2.ml[98,3974+22]..test/test_gbnf_parser2.ml[98,3974+68])
+                    Texp_apply
+                    expression (test/test_gbnf_parser2.ml[98,3974+22]..test/test_gbnf_parser2.ml[98,3974+49])
+                      Texp_ident "MenhirLib!.ErrorReports.wrap"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (test/test_gbnf_parser2.ml[98,3974+50]..test/test_gbnf_parser2.ml[98,3974+68])
+                          Texp_ident "Gbnf_parser!.SentenceLexer.main"
+                    ]
+              ]
+              expression (test/test_gbnf_parser2.ml[99,4047+2]..test/test_gbnf_parser2.ml[100,4101+38])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (test/test_gbnf_parser2.ml[99,4047+6]..test/test_gbnf_parser2.ml[99,4047+9])
+                      Tpat_var "dat/693"
+                    expression (test/test_gbnf_parser2.ml[99,4047+12]..test/test_gbnf_parser2.ml[99,4047+49])
+                      Texp_apply
+                      expression (test/test_gbnf_parser2.ml[99,4047+13]..test/test_gbnf_parser2.ml[99,4047+35])
+                        Texp_ident "Gbnf_parser!.SentenceParser.grammar"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (test/test_gbnf_parser2.ml[99,4047+36]..test/test_gbnf_parser2.ml[99,4047+41])
+                            Texp_ident "lexer/664"
+                        <arg>
+                          Nolabel
+                          expression (test/test_gbnf_parser2.ml[99,4047+42]..test/test_gbnf_parser2.ml[99,4047+48])
+                            Texp_ident "lexbuf/662"
+                      ]
+                ]
+                expression (test/test_gbnf_parser2.ml[100,4101+2]..test/test_gbnf_parser2.ml[100,4101+38])
+                  Texp_apply
+                  expression (test/test_gbnf_parser2.ml[100,4101+3]..test/test_gbnf_parser2.ml[100,4101+16])
+                    Texp_ident "Stdlib!.print_endline"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (test/test_gbnf_parser2.ml[100,4101+17]..test/test_gbnf_parser2.ml[100,4101+37])
+                        Texp_apply
+                        expression (test/test_gbnf_parser2.ml[100,4101+18]..test/test_gbnf_parser2.ml[100,4101+32])
+                          Texp_ident "Batteries!.dump"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (test/test_gbnf_parser2.ml[100,4101+33]..test/test_gbnf_parser2.ml[100,4101+36])
+                              Texp_ident "dat/693"
+                        ]
+                  ]
+    ]
+]
+
+{<Dune__exe__Test_gbnf_parser2>
+ }
+
+(seq
+  (let
+    (fail/370 =
+       (function buffer/372 lexbuf/373 s/374[int]
+         (let
+           (message/375 =
+              (try
+                (apply (field_imm 0 (global Gbnf_parser__Sentence_messages!))
+                  s/374)
+               with exn/1381
+                (catch
+                  (if (== exn/1381 (field_imm 7 (global Stdlib!)))
+                    (apply (field_imm 3 (global Stdlib__Printf!))
+                      [0:
+                       [11:
+                        "Unknown syntax error (in state "
+                        [4: 0 0 0 [11: ").\n" 0]]]
+                       "Unknown syntax error (in state %d).\n"]
+                      s/374)
+                    (exit 1))
+                 with (1) (reraise exn/1381)))
+            where/413 =
+              (apply (field_imm 2 (field_imm 5 (global MenhirLib!)))
+                (field_imm 12 (global Gbnf_parser__InputFile!)) buffer/372)
+            message/455 =
+              (apply (field_imm 15 (global Stdlib__String!)) message/375 0
+                (- (string.length message/375) 1)))
+           (apply (field_imm 6 (global Gbnf_parser__Error!))
+             (apply (field_imm 30 (global Gbnf_parser__Positions!))
+               lexbuf/373)
+             [0:
+              [11: "syntax error " [2: 0 [11: ".\n" [2: 0 0]]]]
+              "syntax error %s.\n%s"]
+             where/413 message/455))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Test_gbnf_parser2!)
+      fail/370))
+  (let
+    (fail/623 =
+       (function buffer/624 lexbuf/625 checkpoint/626
+         (catch
+           (switch checkpoint/626
+            case tag 3:
+             (let
+               (env/627 =a (field_imm 0 checkpoint/626)
+                s/628 =[int]
+                  (apply
+                    (field_imm 15
+                      (field_imm 2 (global Gbnf_parser__SentenceParser!)))
+                    env/627))
+               (apply (field_imm 0 (global Dune__exe__Test_gbnf_parser2!))
+                 buffer/624 lexbuf/625 s/628))
+            default: (exit 2))
+          with (2)
+           (raise
+             (makeblock 0 (global Assert_failure/28!)
+               [0: "test/test_gbnf_parser2.ml" 55 6])))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Test_gbnf_parser2!)
+      fail/623))
+  (let
+    (*match*/1387 =
+       (let
+         (inputstr/661 =
+            "someletter ::= \"A\" | \"B\" | \"C\" \ngeb ::= \"G\" | \"E\" | \"B\" \n\nletter ::= \"A\" | \"B\" | \"C\" | \"D\" | \"E\" | \"F\" | \"G\" | \"H\" | \"I\" | \"J\" | \"K\" | \"L\" | \"M\" | \"N\" | \"O\" | \"P\" | \"Q\" | \"R\" | \"S\" | \"T\" | \"U\" | \"V\" | \"W\" | \"X\" | \"Y\" | \"Z\" | \"a\" | \"b\" | \"c\" | \"d\" | \"e\" | \"f\" | \"g\" | \"h\" | \"i\" | \"j\" | \"k\" | \"l\" | \"m\" | \"n\" | \"o\" | \"p\" | \"q\" | \"r\" | \"s\" | \"t\" | \"u\" | \"v\" | \"w\" | \"x\" | \"y\" | \"z\"\n\ndigit ::= \"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\" | \"8\" | \"9\"\n\nsymbol ::= \"[\" | \"]\" | \"{\" | \"}\" | \"(\" | \")\" | \"<\" | \">\" | \"'\" | \"=\" | \"|\" | \".\" | \",\" | \";\" | \"-\" | \"+\" | \"*\" | \"?\" | \"\\n\" | \"\\t\" | \"\\r\"\n\ncharacter ::= letter | digit | symbol | \"_\" | \" \"\n\nidentifier ::= letter ( letter | digit | \"_\" )\n\nS ::= ( \" \" | \"\\n\" | \"\\t\" | \"\\r\" )\n\nterminal ::= \"'\" character \"'\" ( character \"'\" ) \"'\"\n\nterminator ::= (\";\" | \".\")\n\nterm ::= \"(\" S rhs S \")\" | \"[\" S rhs S \"]\" | \"{\" S rhs S \"}\" | terminal | identifier\n\nfactor ::= term S \"?\" | term S \"*\" | term S \"+\" | term S \"-\" S term | term S\n\nconcatenation ::= ( S factor S \",\" ? ) +\n\nalternation ::= ( S concatenation S \"|\" ? ) +\n\nrhs ::= alternation\n\nlhs ::= identifier\n\nrule ::= lhs S \"=\" S rhs S terminator\n\nroot ::= ( S rule S ) *\n\n"
+          lexbuf/662 =
+            (apply (field_imm 2 (global Stdlib__Lexing!)) 0 inputstr/661)
+          *match*/1385 =
+            (apply (field_imm 0 (field_imm 5 (global MenhirLib!)))
+              (field_imm 18 (global Gbnf_parser__SentenceLexer!)))
+          lexer/664 =a (field_imm 1 *match*/1385)
+          buffer/663 =a (field_imm 0 *match*/1385)
+          dat/693 =
+            (apply (field_imm 1 (global Gbnf_parser__SentenceParser!))
+              lexer/664 lexbuf/662))
+         (apply (field_imm 45 (global Stdlib!))
+           (apply (field_imm 6 (global Batteries!)) dat/693))))
+    0)
+  0)
+(seq
+  (let
+    (fail/370 =
+       (function buffer/372 lexbuf/373 s/374[int]
+         (let
+           (message/375 =
+              (try
+                (apply (field_imm 0 (global Gbnf_parser__Sentence_messages!))
+                  s/374)
+               with exn/1381
+                (if (== exn/1381 (field_imm 7 (global Stdlib!)))
+                  (apply (field_imm 3 (global Stdlib__Printf!))
+                    [0:
+                     [11:
+                      "Unknown syntax error (in state "
+                      [4: 0 0 0 [11: ").\n" 0]]]
+                     "Unknown syntax error (in state %d).\n"]
+                    s/374)
+                  (reraise exn/1381)))
+            where/413 =
+              (apply (field_imm 2 (field_imm 5 (global MenhirLib!)))
+                (field_imm 12 (global Gbnf_parser__InputFile!)) buffer/372)
+            message/455 =
+              (apply (field_imm 15 (global Stdlib__String!)) message/375 0
+                (- (string.length message/375) 1)))
+           (apply (field_imm 6 (global Gbnf_parser__Error!))
+             (apply (field_imm 30 (global Gbnf_parser__Positions!))
+               lexbuf/373)
+             [0:
+              [11: "syntax error " [2: 0 [11: ".\n" [2: 0 0]]]]
+              "syntax error %s.\n%s"]
+             where/413 message/455))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Test_gbnf_parser2!)
+      fail/370))
+  (let
+    (fail/623 =
+       (function buffer/624 lexbuf/625 checkpoint/626
+         (catch
+           (switch checkpoint/626
+            case tag 3:
+             (let
+               (s/628 =[int]
+                  (apply
+                    (field_imm 15
+                      (field_imm 2 (global Gbnf_parser__SentenceParser!)))
+                    (field_imm 0 checkpoint/626)))
+               (apply (field_imm 0 (global Dune__exe__Test_gbnf_parser2!))
+                 buffer/624 lexbuf/625 s/628))
+            default: (exit 2))
+          with (2)
+           (raise
+             (makeblock 0 (global Assert_failure/28!)
+               [0: "test/test_gbnf_parser2.ml" 55 6])))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Test_gbnf_parser2!)
+      fail/623))
+  (let
+    (*match*/1387 =
+       (let
+         (inputstr/661 =
+            "someletter ::= \"A\" | \"B\" | \"C\" \ngeb ::= \"G\" | \"E\" | \"B\" \n\nletter ::= \"A\" | \"B\" | \"C\" | \"D\" | \"E\" | \"F\" | \"G\" | \"H\" | \"I\" | \"J\" | \"K\" | \"L\" | \"M\" | \"N\" | \"O\" | \"P\" | \"Q\" | \"R\" | \"S\" | \"T\" | \"U\" | \"V\" | \"W\" | \"X\" | \"Y\" | \"Z\" | \"a\" | \"b\" | \"c\" | \"d\" | \"e\" | \"f\" | \"g\" | \"h\" | \"i\" | \"j\" | \"k\" | \"l\" | \"m\" | \"n\" | \"o\" | \"p\" | \"q\" | \"r\" | \"s\" | \"t\" | \"u\" | \"v\" | \"w\" | \"x\" | \"y\" | \"z\"\n\ndigit ::= \"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\" | \"8\" | \"9\"\n\nsymbol ::= \"[\" | \"]\" | \"{\" | \"}\" | \"(\" | \")\" | \"<\" | \">\" | \"'\" | \"=\" | \"|\" | \".\" | \",\" | \";\" | \"-\" | \"+\" | \"*\" | \"?\" | \"\\n\" | \"\\t\" | \"\\r\"\n\ncharacter ::= letter | digit | symbol | \"_\" | \" \"\n\nidentifier ::= letter ( letter | digit | \"_\" )\n\nS ::= ( \" \" | \"\\n\" | \"\\t\" | \"\\r\" )\n\nterminal ::= \"'\" character \"'\" ( character \"'\" ) \"'\"\n\nterminator ::= (\";\" | \".\")\n\nterm ::= \"(\" S rhs S \")\" | \"[\" S rhs S \"]\" | \"{\" S rhs S \"}\" | terminal | identifier\n\nfactor ::= term S \"?\" | term S \"*\" | term S \"+\" | term S \"-\" S term | term S\n\nconcatenation ::= ( S factor S \",\" ? ) +\n\nalternation ::= ( S concatenation S \"|\" ? ) +\n\nrhs ::= alternation\n\nlhs ::= identifier\n\nrule ::= lhs S \"=\" S rhs S terminator\n\nroot ::= ( S rule S ) *\n\n"
+          lexbuf/662 =
+            (apply (field_imm 2 (global Stdlib__Lexing!)) 0 inputstr/661)
+          *match*/1385 =
+            (apply (field_imm 0 (field_imm 5 (global MenhirLib!)))
+              (field_imm 18 (global Gbnf_parser__SentenceLexer!)))
+          dat/693 =
+            (apply (field_imm 1 (global Gbnf_parser__SentenceParser!))
+              (field_imm 1 *match*/1385) lexbuf/662))
+         (apply (field_imm 45 (global Stdlib!))
+           (apply (field_imm 6 (global Batteries!)) dat/693))))
+    0)
+  0)

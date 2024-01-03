@@ -1,0 +1,2699 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+          Ppat_construct "()" (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+          None
+        expression (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+          Pexp_apply
+          expression (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+          ]
+    ]
+  structure_item (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+          Ppat_construct "()" (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+          None
+        expression (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+          Pexp_apply
+          expression (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+          Ppat_construct "()" (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+          None
+        expression (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+          Pexp_apply
+          expression (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+                Pexp_constant PConst_string("lib/keyword.ml",(lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+          Ppat_construct "()" (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+          None
+        expression (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+          Pexp_apply
+          expression (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost
+                Pexp_constant PConst_string("keyword.ml",(lib/keyword.ml[24,1336+0]..[24,1336+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/keyword.ml[24,1336+0]..[27,1386+18])
+    Pstr_type Rec
+    [
+      type_declaration "flavor" (lib/keyword.ml[24,1336+5]..[24,1336+11]) (lib/keyword.ml[24,1336+0]..[27,1386+18])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/keyword.ml[25,1350+2]..[25,1350+16])
+                "FlavorOffset" (lib/keyword.ml[25,1350+4]..[25,1350+16])
+                []
+                None
+              (lib/keyword.ml[26,1367+2]..[26,1367+18])
+                "FlavorPosition" (lib/keyword.ml[26,1367+4]..[26,1367+18])
+                []
+                None
+              (lib/keyword.ml[27,1386+2]..[27,1386+18])
+                "FlavorLocation" (lib/keyword.ml[27,1386+4]..[27,1386+18])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/keyword.ml[33,1612+0]..[36,1657+10])
+    Pstr_type Rec
+    [
+      type_declaration "where" (lib/keyword.ml[33,1612+5]..[33,1612+10]) (lib/keyword.ml[33,1612+0]..[36,1657+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/keyword.ml[34,1625+0]..[34,1625+18])
+                "WhereSymbolStart" (lib/keyword.ml[34,1625+2]..[34,1625+18])
+                []
+                None
+              (lib/keyword.ml[35,1644+0]..[35,1644+12])
+                "WhereStart" (lib/keyword.ml[35,1644+2]..[35,1644+12])
+                []
+                None
+              (lib/keyword.ml[36,1657+0]..[36,1657+10])
+                "WhereEnd" (lib/keyword.ml[36,1657+2]..[36,1657+10])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/keyword.ml[42,1858+0]..[45,1893+24])
+    Pstr_type Rec
+    [
+      type_declaration "subject" (lib/keyword.ml[42,1858+5]..[42,1858+12]) (lib/keyword.ml[42,1858+0]..[45,1893+24])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/keyword.ml[43,1873+2]..[43,1873+10])
+                "Before" (lib/keyword.ml[43,1873+4]..[43,1873+10])
+                []
+                None
+              (lib/keyword.ml[44,1884+2]..[44,1884+8])
+                "Left" (lib/keyword.ml[44,1884+4]..[44,1884+8])
+                []
+                None
+              (lib/keyword.ml[45,1893+2]..[45,1893+24])
+                "RightNamed" (lib/keyword.ml[45,1893+4]..[45,1893+14])
+                [
+                  core_type (lib/keyword.ml[45,1893+18]..[45,1893+24])
+                    Ptyp_constr "string" (lib/keyword.ml[45,1893+18]..[45,1893+24])
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/keyword.ml[50,2028+0]..[52,2084+15])
+    Pstr_type Rec
+    [
+      type_declaration "keyword" (lib/keyword.ml[50,2028+5]..[50,2028+12]) (lib/keyword.ml[50,2028+0]..[52,2084+15])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/keyword.ml[51,2043+2]..[51,2043+40])
+                "Position" (lib/keyword.ml[51,2043+4]..[51,2043+12])
+                [
+                  core_type (lib/keyword.ml[51,2043+16]..[51,2043+23])
+                    Ptyp_constr "subject" (lib/keyword.ml[51,2043+16]..[51,2043+23])
+                    []
+                  core_type (lib/keyword.ml[51,2043+26]..[51,2043+31])
+                    Ptyp_constr "where" (lib/keyword.ml[51,2043+26]..[51,2043+31])
+                    []
+                  core_type (lib/keyword.ml[51,2043+34]..[51,2043+40])
+                    Ptyp_constr "flavor" (lib/keyword.ml[51,2043+34]..[51,2043+40])
+                    []
+                ]
+                None
+              (lib/keyword.ml[52,2084+2]..[52,2084+15])
+                "SyntaxError" (lib/keyword.ml[52,2084+4]..[52,2084+15])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/keyword.ml[58,2310+0]..[64,2423+11])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[58,2310+4]..[58,2310+9])
+          Ppat_var "where" (lib/keyword.ml[58,2310+4]..[58,2310+9])
+        expression (lib/keyword.ml[58,2310+12]..[64,2423+11])
+          Pexp_function
+          [
+            <case>
+              pattern (lib/keyword.ml[59,2331+4]..[59,2331+20])
+                Ppat_construct "WhereSymbolStart" (lib/keyword.ml[59,2331+4]..[59,2331+20])
+                None
+              expression (lib/keyword.ml[60,2355+6]..[60,2355+19])
+                Pexp_constant PConst_string("symbolstart",(lib/keyword.ml[60,2355+7]..[60,2355+18]),None)
+            <case>
+              pattern (lib/keyword.ml[61,2375+4]..[61,2375+14])
+                Ppat_construct "WhereStart" (lib/keyword.ml[61,2375+4]..[61,2375+14])
+                None
+              expression (lib/keyword.ml[62,2393+6]..[62,2393+13])
+                Pexp_constant PConst_string("start",(lib/keyword.ml[62,2393+7]..[62,2393+12]),None)
+            <case>
+              pattern (lib/keyword.ml[63,2407+4]..[63,2407+12])
+                Ppat_construct "WhereEnd" (lib/keyword.ml[63,2407+4]..[63,2407+12])
+                None
+              expression (lib/keyword.ml[64,2423+6]..[64,2423+11])
+                Pexp_constant PConst_string("end",(lib/keyword.ml[64,2423+7]..[64,2423+10]),None)
+          ]
+    ]
+  structure_item (lib/keyword.ml[66,2436+0]..[72,2528+30])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[66,2436+4]..[66,2436+11])
+          Ppat_var "subject" (lib/keyword.ml[66,2436+4]..[66,2436+11])
+        expression (lib/keyword.ml[66,2436+14]..[72,2528+30])
+          Pexp_function
+          [
+            <case>
+              pattern (lib/keyword.ml[67,2459+4]..[67,2459+10])
+                Ppat_construct "Before" (lib/keyword.ml[67,2459+4]..[67,2459+10])
+                None
+              expression (lib/keyword.ml[68,2473+6]..[68,2473+12])
+                Pexp_constant PConst_string("__0_",(lib/keyword.ml[68,2473+7]..[68,2473+11]),None)
+            <case>
+              pattern (lib/keyword.ml[69,2486+4]..[69,2486+8])
+                Ppat_construct "Left" (lib/keyword.ml[69,2486+4]..[69,2486+8])
+                None
+              expression (lib/keyword.ml[70,2498+6]..[70,2498+8])
+                Pexp_constant PConst_string("",(lib/keyword.ml[70,2498+7]..[70,2498+7]),None)
+            <case>
+              pattern (lib/keyword.ml[71,2507+4]..[71,2507+17])
+                Ppat_construct "RightNamed" (lib/keyword.ml[71,2507+4]..[71,2507+14])
+                Some
+                  []
+                  pattern (lib/keyword.ml[71,2507+15]..[71,2507+17])
+                    Ppat_var "id" (lib/keyword.ml[71,2507+15]..[71,2507+17])
+              expression (lib/keyword.ml[72,2528+6]..[72,2528+30])
+                Pexp_apply
+                expression (lib/keyword.ml[72,2528+6]..[72,2528+20])
+                  Pexp_ident "Printf.sprintf" (lib/keyword.ml[72,2528+6]..[72,2528+20])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/keyword.ml[72,2528+21]..[72,2528+27])
+                      Pexp_constant PConst_string("_%s_",(lib/keyword.ml[72,2528+22]..[72,2528+26]),None)
+                  <arg>
+                  Nolabel
+                    expression (lib/keyword.ml[72,2528+28]..[72,2528+30])
+                      Pexp_ident "id" (lib/keyword.ml[72,2528+28]..[72,2528+30])
+                ]
+          ]
+    ]
+  structure_item (lib/keyword.ml[74,2560+0]..[80,2670+11])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[74,2560+4]..[74,2560+10])
+          Ppat_var "flavor" (lib/keyword.ml[74,2560+4]..[74,2560+10])
+        expression (lib/keyword.ml[74,2560+13]..[80,2670+11])
+          Pexp_function
+          [
+            <case>
+              pattern (lib/keyword.ml[75,2582+4]..[75,2582+18])
+                Ppat_construct "FlavorPosition" (lib/keyword.ml[75,2582+4]..[75,2582+18])
+                None
+              expression (lib/keyword.ml[76,2604+6]..[76,2604+11])
+                Pexp_constant PConst_string("pos",(lib/keyword.ml[76,2604+7]..[76,2604+10]),None)
+            <case>
+              pattern (lib/keyword.ml[77,2616+4]..[77,2616+16])
+                Ppat_construct "FlavorOffset" (lib/keyword.ml[77,2616+4]..[77,2616+16])
+                None
+              expression (lib/keyword.ml[78,2636+6]..[78,2636+11])
+                Pexp_constant PConst_string("ofs",(lib/keyword.ml[78,2636+7]..[78,2636+10]),None)
+            <case>
+              pattern (lib/keyword.ml[79,2648+4]..[79,2648+18])
+                Ppat_construct "FlavorLocation" (lib/keyword.ml[79,2648+4]..[79,2648+18])
+                None
+              expression (lib/keyword.ml[80,2670+6]..[80,2670+11])
+                Pexp_constant PConst_string("loc",(lib/keyword.ml[80,2670+7]..[80,2670+10]),None)
+          ]
+    ]
+  structure_item (lib/keyword.ml[82,2683+0]..[91,2965+18])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[82,2683+4]..[82,2683+10])
+          Ppat_var "posvar" (lib/keyword.ml[82,2683+4]..[82,2683+10])
+        expression (lib/keyword.ml[82,2683+11]..[91,2965+18]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/keyword.ml[82,2683+11]..[82,2683+12])
+            Ppat_var "s" (lib/keyword.ml[82,2683+11]..[82,2683+12])
+          expression (lib/keyword.ml[82,2683+13]..[91,2965+18]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/keyword.ml[82,2683+13]..[82,2683+14])
+              Ppat_var "w" (lib/keyword.ml[82,2683+13]..[82,2683+14])
+            expression (lib/keyword.ml[82,2683+15]..[91,2965+18]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (lib/keyword.ml[82,2683+15]..[82,2683+16])
+                Ppat_var "f" (lib/keyword.ml[82,2683+15]..[82,2683+16])
+              expression (lib/keyword.ml[83,2702+2]..[91,2965+18])
+                Pexp_match
+                expression (lib/keyword.ml[83,2702+8]..[83,2702+12])
+                  Pexp_tuple
+                  [
+                    expression (lib/keyword.ml[83,2702+8]..[83,2702+9])
+                      Pexp_ident "w" (lib/keyword.ml[83,2702+8]..[83,2702+9])
+                    expression (lib/keyword.ml[83,2702+11]..[83,2702+12])
+                      Pexp_ident "f" (lib/keyword.ml[83,2702+11]..[83,2702+12])
+                  ]
+                [
+                  <case>
+                    pattern (lib/keyword.ml[84,2720+4]..[84,2720+38])
+                      Ppat_tuple
+                      [
+                        pattern (lib/keyword.ml[84,2720+4]..[84,2720+5])
+                          Ppat_any
+                        pattern (lib/keyword.ml[84,2720+7]..[84,2720+38])
+                          Ppat_or
+                          pattern (lib/keyword.ml[84,2720+8]..[84,2720+20])
+                            Ppat_construct "FlavorOffset" (lib/keyword.ml[84,2720+8]..[84,2720+20])
+                            None
+                          pattern (lib/keyword.ml[84,2720+23]..[84,2720+37])
+                            Ppat_construct "FlavorPosition" (lib/keyword.ml[84,2720+23]..[84,2720+37])
+                            None
+                      ]
+                    expression (lib/keyword.ml[85,2762+6]..[85,2762+63])
+                      Pexp_apply
+                      expression (lib/keyword.ml[85,2762+6]..[85,2762+20])
+                        Pexp_ident "Printf.sprintf" (lib/keyword.ml[85,2762+6]..[85,2762+20])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/keyword.ml[85,2762+21]..[85,2762+30])
+                            Pexp_constant PConst_string("_%s%s%s",(lib/keyword.ml[85,2762+22]..[85,2762+29]),None)
+                        <arg>
+                        Nolabel
+                          expression (lib/keyword.ml[85,2762+31]..[85,2762+40])
+                            Pexp_apply
+                            expression (lib/keyword.ml[85,2762+32]..[85,2762+37])
+                              Pexp_ident "where" (lib/keyword.ml[85,2762+32]..[85,2762+37])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (lib/keyword.ml[85,2762+38]..[85,2762+39])
+                                  Pexp_ident "w" (lib/keyword.ml[85,2762+38]..[85,2762+39])
+                            ]
+                        <arg>
+                        Nolabel
+                          expression (lib/keyword.ml[85,2762+41]..[85,2762+51])
+                            Pexp_apply
+                            expression (lib/keyword.ml[85,2762+42]..[85,2762+48])
+                              Pexp_ident "flavor" (lib/keyword.ml[85,2762+42]..[85,2762+48])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (lib/keyword.ml[85,2762+49]..[85,2762+50])
+                                  Pexp_ident "f" (lib/keyword.ml[85,2762+49]..[85,2762+50])
+                            ]
+                        <arg>
+                        Nolabel
+                          expression (lib/keyword.ml[85,2762+52]..[85,2762+63])
+                            Pexp_apply
+                            expression (lib/keyword.ml[85,2762+53]..[85,2762+60])
+                              Pexp_ident "subject" (lib/keyword.ml[85,2762+53]..[85,2762+60])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (lib/keyword.ml[85,2762+61]..[85,2762+62])
+                                  Pexp_ident "s" (lib/keyword.ml[85,2762+61]..[85,2762+62])
+                            ]
+                      ]
+                  <case>
+                    pattern (lib/keyword.ml[86,2826+4]..[86,2826+36])
+                      Ppat_tuple
+                      [
+                        pattern (lib/keyword.ml[86,2826+4]..[86,2826+20])
+                          Ppat_construct "WhereSymbolStart" (lib/keyword.ml[86,2826+4]..[86,2826+20])
+                          None
+                        pattern (lib/keyword.ml[86,2826+22]..[86,2826+36])
+                          Ppat_construct "FlavorLocation" (lib/keyword.ml[86,2826+22]..[86,2826+36])
+                          None
+                      ]
+                    expression (lib/keyword.ml[87,2866+6]..[87,2866+13])
+                      Pexp_constant PConst_string("_sloc",(lib/keyword.ml[87,2866+7]..[87,2866+12]),None)
+                  <case>
+                    pattern (lib/keyword.ml[88,2880+4]..[88,2880+30])
+                      Ppat_tuple
+                      [
+                        pattern (lib/keyword.ml[88,2880+4]..[88,2880+14])
+                          Ppat_construct "WhereStart" (lib/keyword.ml[88,2880+4]..[88,2880+14])
+                          None
+                        pattern (lib/keyword.ml[88,2880+16]..[88,2880+30])
+                          Ppat_construct "FlavorLocation" (lib/keyword.ml[88,2880+16]..[88,2880+30])
+                          None
+                      ]
+                    expression (lib/keyword.ml[89,2914+6]..[89,2914+41])
+                      Pexp_apply
+                      expression (lib/keyword.ml[89,2914+6]..[89,2914+20])
+                        Pexp_ident "Printf.sprintf" (lib/keyword.ml[89,2914+6]..[89,2914+20])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/keyword.ml[89,2914+21]..[89,2914+29])
+                            Pexp_constant PConst_string("_loc%s",(lib/keyword.ml[89,2914+22]..[89,2914+28]),None)
+                        <arg>
+                        Nolabel
+                          expression (lib/keyword.ml[89,2914+30]..[89,2914+41])
+                            Pexp_apply
+                            expression (lib/keyword.ml[89,2914+31]..[89,2914+38])
+                              Pexp_ident "subject" (lib/keyword.ml[89,2914+31]..[89,2914+38])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (lib/keyword.ml[89,2914+39]..[89,2914+40])
+                                  Pexp_ident "s" (lib/keyword.ml[89,2914+39]..[89,2914+40])
+                            ]
+                      ]
+                  <case>
+                    pattern (lib/keyword.ml[90,2956+4]..[90,2956+5])
+                      Ppat_any
+                    expression (lib/keyword.ml[91,2965+6]..[91,2965+18])
+                      Pexp_assert
+                      expression (lib/keyword.ml[91,2965+13]..[91,2965+18])
+                        Pexp_construct "false" (lib/keyword.ml[91,2965+13]..[91,2965+18])
+                        None
+                ]
+    ]
+  structure_item (lib/keyword.ml[96,3090+0]..[108,3302+3])
+    Pstr_module
+    "KeywordSet" (lib/keyword.ml[96,3090+7]..[96,3090+17])
+      module_expr (lib/keyword.ml[96,3090+20]..[108,3302+3])
+        Pmod_structure
+        [
+          structure_item (lib/keyword.ml[98,3118+2]..[101,3192+6])
+            Pstr_include            module_expr (lib/keyword.ml[98,3118+10]..[101,3192+6])
+              Pmod_apply
+              module_expr (lib/keyword.ml[98,3118+10]..[98,3118+18])
+                Pmod_ident "Set.Make" (lib/keyword.ml[98,3118+10]..[98,3118+18])
+              module_expr (lib/keyword.ml[98,3118+20]..[101,3192+5])
+                Pmod_structure
+                [
+                  structure_item (lib/keyword.ml[99,3145+4]..[99,3145+20])
+                    Pstr_type Rec
+                    [
+                      type_declaration "t" (lib/keyword.ml[99,3145+9]..[99,3145+10]) (lib/keyword.ml[99,3145+4]..[99,3145+20])
+                        ptype_params =
+                          []
+                        ptype_cstrs =
+                          []
+                        ptype_kind =
+                          Ptype_abstract
+                        ptype_private = Public
+                        ptype_manifest =
+                          Some
+                            core_type (lib/keyword.ml[99,3145+13]..[99,3145+20])
+                              Ptyp_constr "keyword" (lib/keyword.ml[99,3145+13]..[99,3145+20])
+                              []
+                    ]
+                  structure_item (lib/keyword.ml[100,3166+4]..[100,3166+25])
+                    Pstr_value Nonrec
+                    [
+                      <def>
+                        pattern (lib/keyword.ml[100,3166+8]..[100,3166+15])
+                          Ppat_var "compare" (lib/keyword.ml[100,3166+8]..[100,3166+15])
+                        expression (lib/keyword.ml[100,3166+18]..[100,3166+25])
+                          Pexp_ident "compare" (lib/keyword.ml[100,3166+18]..[100,3166+25])
+                    ]
+                ]
+          structure_item (lib/keyword.ml[103,3200+2]..[106,3280+20])
+            Pstr_value Nonrec
+            [
+              <def>
+                pattern (lib/keyword.ml[103,3200+6]..[103,3200+9])
+                  Ppat_var "map" (lib/keyword.ml[103,3200+6]..[103,3200+9])
+                expression (lib/keyword.ml[103,3200+10]..[106,3280+20]) ghost
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (lib/keyword.ml[103,3200+10]..[103,3200+11])
+                    Ppat_var "f" (lib/keyword.ml[103,3200+10]..[103,3200+11])
+                  expression (lib/keyword.ml[103,3200+12]..[106,3280+20]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (lib/keyword.ml[103,3200+12]..[103,3200+20])
+                      Ppat_var "keywords" (lib/keyword.ml[103,3200+12]..[103,3200+20])
+                    expression (lib/keyword.ml[104,3223+4]..[106,3280+20])
+                      Pexp_apply
+                      expression (lib/keyword.ml[104,3223+4]..[104,3223+8])
+                        Pexp_ident "fold" (lib/keyword.ml[104,3223+4]..[104,3223+8])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/keyword.ml[104,3223+9]..[106,3280+5])
+                            Pexp_fun
+                            Nolabel
+                            None
+                            pattern (lib/keyword.ml[104,3223+14]..[104,3223+21])
+                              Ppat_var "keyword" (lib/keyword.ml[104,3223+14]..[104,3223+21])
+                            expression (lib/keyword.ml[104,3223+22]..[105,3253+26]) ghost
+                              Pexp_fun
+                              Nolabel
+                              None
+                              pattern (lib/keyword.ml[104,3223+22]..[104,3223+26])
+                                Ppat_var "accu" (lib/keyword.ml[104,3223+22]..[104,3223+26])
+                              expression (lib/keyword.ml[105,3253+6]..[105,3253+26])
+                                Pexp_apply
+                                expression (lib/keyword.ml[105,3253+6]..[105,3253+9])
+                                  Pexp_ident "add" (lib/keyword.ml[105,3253+6]..[105,3253+9])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/keyword.ml[105,3253+10]..[105,3253+21])
+                                      Pexp_apply
+                                      expression (lib/keyword.ml[105,3253+11]..[105,3253+12])
+                                        Pexp_ident "f" (lib/keyword.ml[105,3253+11]..[105,3253+12])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (lib/keyword.ml[105,3253+13]..[105,3253+20])
+                                            Pexp_ident "keyword" (lib/keyword.ml[105,3253+13]..[105,3253+20])
+                                      ]
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/keyword.ml[105,3253+22]..[105,3253+26])
+                                      Pexp_ident "accu" (lib/keyword.ml[105,3253+22]..[105,3253+26])
+                                ]
+                        <arg>
+                        Nolabel
+                          expression (lib/keyword.ml[106,3280+6]..[106,3280+14])
+                            Pexp_ident "keywords" (lib/keyword.ml[106,3280+6]..[106,3280+14])
+                        <arg>
+                        Nolabel
+                          expression (lib/keyword.ml[106,3280+15]..[106,3280+20])
+                            Pexp_ident "empty" (lib/keyword.ml[106,3280+15]..[106,3280+20])
+                      ]
+            ]
+        ]
+  structure_item (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+          Ppat_construct "()" (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+          None
+        expression (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+          Pexp_apply
+          expression (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost,None)
+          ]
+    ]
+  structure_item (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+          Ppat_construct "()" (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+          None
+        expression (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+          Pexp_apply
+          expression (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+                Pexp_construct "()" (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+          Ppat_construct "()" (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+          None
+        expression (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+          Pexp_apply
+          expression (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+                Pexp_construct "()" (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+          Ppat_construct "()" (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+          None
+        expression (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+          Pexp_apply
+          expression (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/keyword.ml[108,3302+3]..[108,3302+3]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set ~absolute_filename:"lib/keyword.ml"
+let () = Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "keyword.ml"
+type flavor =
+  | FlavorOffset 
+  | FlavorPosition 
+  | FlavorLocation 
+type where =
+  | WhereSymbolStart 
+  | WhereStart 
+  | WhereEnd 
+type subject =
+  | Before 
+  | Left 
+  | RightNamed of string 
+type keyword =
+  | Position of subject * where * flavor 
+  | SyntaxError 
+let where =
+  function
+  | WhereSymbolStart -> "symbolstart"
+  | WhereStart -> "start"
+  | WhereEnd -> "end"
+let subject =
+  function
+  | Before -> "__0_"
+  | Left -> ""
+  | RightNamed id -> Printf.sprintf "_%s_" id
+let flavor =
+  function
+  | FlavorPosition -> "pos"
+  | FlavorOffset -> "ofs"
+  | FlavorLocation -> "loc"
+let posvar s w f =
+  match (w, f) with
+  | (_, (FlavorOffset | FlavorPosition)) ->
+      Printf.sprintf "_%s%s%s" (where w) (flavor f) (subject s)
+  | (WhereSymbolStart, FlavorLocation) -> "_sloc"
+  | (WhereStart, FlavorLocation) -> Printf.sprintf "_loc%s" (subject s)
+  | _ -> assert false
+module KeywordSet =
+  struct
+    include (Set.Make)(struct type t = keyword
+                              let compare = compare end)
+    let map f keywords =
+      fold (fun keyword -> fun accu -> add (f keyword) accu) keywords empty
+  end
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+          Texp_apply
+          expression (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+          Texp_apply
+          expression (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+          Texp_apply
+          expression (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+                Texp_constant Const_string("lib/keyword.ml",(lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+          Texp_apply
+          expression (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost
+                Texp_constant Const_string("keyword.ml",(lib/keyword.ml[24,1336+0]..lib/keyword.ml[24,1336+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/keyword.ml[24,1336+0]..lib/keyword.ml[27,1386+18])
+    Tstr_type Rec
+    [
+      type_declaration flavor/1128 (lib/keyword.ml[24,1336+0]..lib/keyword.ml[27,1386+18])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/keyword.ml[25,1350+2]..lib/keyword.ml[25,1350+16])
+                FlavorOffset/1129
+                []
+                None
+              (lib/keyword.ml[26,1367+2]..lib/keyword.ml[26,1367+18])
+                FlavorPosition/1130
+                []
+                None
+              (lib/keyword.ml[27,1386+2]..lib/keyword.ml[27,1386+18])
+                FlavorLocation/1131
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/keyword.ml[33,1612+0]..lib/keyword.ml[36,1657+10])
+    Tstr_type Rec
+    [
+      type_declaration where/1132 (lib/keyword.ml[33,1612+0]..lib/keyword.ml[36,1657+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/keyword.ml[34,1625+0]..lib/keyword.ml[34,1625+18])
+                WhereSymbolStart/1133
+                []
+                None
+              (lib/keyword.ml[35,1644+0]..lib/keyword.ml[35,1644+12])
+                WhereStart/1134
+                []
+                None
+              (lib/keyword.ml[36,1657+0]..lib/keyword.ml[36,1657+10])
+                WhereEnd/1135
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/keyword.ml[42,1858+0]..lib/keyword.ml[45,1893+24])
+    Tstr_type Rec
+    [
+      type_declaration subject/1136 (lib/keyword.ml[42,1858+0]..lib/keyword.ml[45,1893+24])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/keyword.ml[43,1873+2]..lib/keyword.ml[43,1873+10])
+                Before/1137
+                []
+                None
+              (lib/keyword.ml[44,1884+2]..lib/keyword.ml[44,1884+8])
+                Left/1138
+                []
+                None
+              (lib/keyword.ml[45,1893+2]..lib/keyword.ml[45,1893+24])
+                RightNamed/1139
+                [
+                  core_type (lib/keyword.ml[45,1893+18]..lib/keyword.ml[45,1893+24])
+                    Ttyp_constr "string/15!"
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/keyword.ml[50,2028+0]..lib/keyword.ml[52,2084+15])
+    Tstr_type Rec
+    [
+      type_declaration keyword/1140 (lib/keyword.ml[50,2028+0]..lib/keyword.ml[52,2084+15])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/keyword.ml[51,2043+2]..lib/keyword.ml[51,2043+40])
+                Position/1141
+                [
+                  core_type (lib/keyword.ml[51,2043+16]..lib/keyword.ml[51,2043+23])
+                    Ttyp_constr "subject/1136"
+                    []
+                  core_type (lib/keyword.ml[51,2043+26]..lib/keyword.ml[51,2043+31])
+                    Ttyp_constr "where/1132"
+                    []
+                  core_type (lib/keyword.ml[51,2043+34]..lib/keyword.ml[51,2043+40])
+                    Ttyp_constr "flavor/1128"
+                    []
+                ]
+                None
+              (lib/keyword.ml[52,2084+2]..lib/keyword.ml[52,2084+15])
+                SyntaxError/1142
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/keyword.ml[58,2310+0]..lib/keyword.ml[64,2423+11])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[58,2310+4]..lib/keyword.ml[58,2310+9])
+          Tpat_var "where/1143"
+        expression (lib/keyword.ml[58,2310+12]..lib/keyword.ml[64,2423+11])
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/keyword.ml[59,2331+4]..lib/keyword.ml[59,2331+20])
+                Tpat_construct "WhereSymbolStart"
+                []
+                None
+              expression (lib/keyword.ml[60,2355+6]..lib/keyword.ml[60,2355+19])
+                Texp_constant Const_string("symbolstart",(lib/keyword.ml[60,2355+7]..lib/keyword.ml[60,2355+18]),None)
+            <case>
+              pattern (lib/keyword.ml[61,2375+4]..lib/keyword.ml[61,2375+14])
+                Tpat_construct "WhereStart"
+                []
+                None
+              expression (lib/keyword.ml[62,2393+6]..lib/keyword.ml[62,2393+13])
+                Texp_constant Const_string("start",(lib/keyword.ml[62,2393+7]..lib/keyword.ml[62,2393+12]),None)
+            <case>
+              pattern (lib/keyword.ml[63,2407+4]..lib/keyword.ml[63,2407+12])
+                Tpat_construct "WhereEnd"
+                []
+                None
+              expression (lib/keyword.ml[64,2423+6]..lib/keyword.ml[64,2423+11])
+                Texp_constant Const_string("end",(lib/keyword.ml[64,2423+7]..lib/keyword.ml[64,2423+10]),None)
+          ]
+    ]
+  structure_item (lib/keyword.ml[66,2436+0]..lib/keyword.ml[72,2528+30])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[66,2436+4]..lib/keyword.ml[66,2436+11])
+          Tpat_var "subject/1146"
+        expression (lib/keyword.ml[66,2436+14]..lib/keyword.ml[72,2528+30])
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/keyword.ml[67,2459+4]..lib/keyword.ml[67,2459+10])
+                Tpat_construct "Before"
+                []
+                None
+              expression (lib/keyword.ml[68,2473+6]..lib/keyword.ml[68,2473+12])
+                Texp_constant Const_string("__0_",(lib/keyword.ml[68,2473+7]..lib/keyword.ml[68,2473+11]),None)
+            <case>
+              pattern (lib/keyword.ml[69,2486+4]..lib/keyword.ml[69,2486+8])
+                Tpat_construct "Left"
+                []
+                None
+              expression (lib/keyword.ml[70,2498+6]..lib/keyword.ml[70,2498+8])
+                Texp_constant Const_string("",(lib/keyword.ml[70,2498+7]..lib/keyword.ml[70,2498+7]),None)
+            <case>
+              pattern (lib/keyword.ml[71,2507+4]..lib/keyword.ml[71,2507+17])
+                Tpat_construct "RightNamed"
+                [
+                  pattern (lib/keyword.ml[71,2507+15]..lib/keyword.ml[71,2507+17])
+                    Tpat_var "id/1148"
+                ]
+                None
+              expression (lib/keyword.ml[72,2528+6]..lib/keyword.ml[72,2528+30])
+                Texp_apply
+                expression (lib/keyword.ml[72,2528+6]..lib/keyword.ml[72,2528+20])
+                  Texp_ident "Stdlib!.Printf.sprintf"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/keyword.ml[72,2528+21]..lib/keyword.ml[72,2528+27])
+                      Texp_construct "CamlinternalFormatBasics.Format"
+                      [
+                        expression (lib/keyword.ml[72,2528+21]..lib/keyword.ml[72,2528+27]) ghost
+                          Texp_construct "CamlinternalFormatBasics.Char_literal"
+                          [
+                            expression (lib/keyword.ml[72,2528+21]..lib/keyword.ml[72,2528+27]) ghost
+                              Texp_constant Const_char 5f
+                            expression (lib/keyword.ml[72,2528+21]..lib/keyword.ml[72,2528+27]) ghost
+                              Texp_construct "CamlinternalFormatBasics.String"
+                              [
+                                expression (lib/keyword.ml[72,2528+21]..lib/keyword.ml[72,2528+27]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.No_padding"
+                                  []
+                                expression (lib/keyword.ml[72,2528+21]..lib/keyword.ml[72,2528+27]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                  [
+                                    expression (lib/keyword.ml[72,2528+21]..lib/keyword.ml[72,2528+27]) ghost
+                                      Texp_constant Const_char 5f
+                                    expression (lib/keyword.ml[72,2528+21]..lib/keyword.ml[72,2528+27]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                      []
+                                  ]
+                              ]
+                          ]
+                        expression (lib/keyword.ml[72,2528+21]..lib/keyword.ml[72,2528+27]) ghost
+                          Texp_constant Const_string("_%s_",(lib/keyword.ml[72,2528+21]..lib/keyword.ml[72,2528+27]) ghost,None)
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (lib/keyword.ml[72,2528+28]..lib/keyword.ml[72,2528+30])
+                      Texp_ident "id/1148"
+                ]
+          ]
+    ]
+  structure_item (lib/keyword.ml[74,2560+0]..lib/keyword.ml[80,2670+11])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[74,2560+4]..lib/keyword.ml[74,2560+10])
+          Tpat_var "flavor/1186"
+        expression (lib/keyword.ml[74,2560+13]..lib/keyword.ml[80,2670+11])
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/keyword.ml[75,2582+4]..lib/keyword.ml[75,2582+18])
+                Tpat_construct "FlavorPosition"
+                []
+                None
+              expression (lib/keyword.ml[76,2604+6]..lib/keyword.ml[76,2604+11])
+                Texp_constant Const_string("pos",(lib/keyword.ml[76,2604+7]..lib/keyword.ml[76,2604+10]),None)
+            <case>
+              pattern (lib/keyword.ml[77,2616+4]..lib/keyword.ml[77,2616+16])
+                Tpat_construct "FlavorOffset"
+                []
+                None
+              expression (lib/keyword.ml[78,2636+6]..lib/keyword.ml[78,2636+11])
+                Texp_constant Const_string("ofs",(lib/keyword.ml[78,2636+7]..lib/keyword.ml[78,2636+10]),None)
+            <case>
+              pattern (lib/keyword.ml[79,2648+4]..lib/keyword.ml[79,2648+18])
+                Tpat_construct "FlavorLocation"
+                []
+                None
+              expression (lib/keyword.ml[80,2670+6]..lib/keyword.ml[80,2670+11])
+                Texp_constant Const_string("loc",(lib/keyword.ml[80,2670+7]..lib/keyword.ml[80,2670+10]),None)
+          ]
+    ]
+  structure_item (lib/keyword.ml[82,2683+0]..lib/keyword.ml[91,2965+18])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[82,2683+4]..lib/keyword.ml[82,2683+10])
+          Tpat_var "posvar/1189"
+        expression (lib/keyword.ml[82,2683+11]..lib/keyword.ml[91,2965+18]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/keyword.ml[82,2683+11]..lib/keyword.ml[82,2683+12])
+                Tpat_var "s/1191"
+              expression (lib/keyword.ml[82,2683+13]..lib/keyword.ml[91,2965+18]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/keyword.ml[82,2683+13]..lib/keyword.ml[82,2683+14])
+                      Tpat_var "w/1192"
+                    expression (lib/keyword.ml[82,2683+15]..lib/keyword.ml[91,2965+18]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/keyword.ml[82,2683+15]..lib/keyword.ml[82,2683+16])
+                            Tpat_var "f/1193"
+                          expression (lib/keyword.ml[83,2702+2]..lib/keyword.ml[91,2965+18])
+                            Texp_match
+                            expression (lib/keyword.ml[83,2702+8]..lib/keyword.ml[83,2702+12])
+                              Texp_tuple
+                              [
+                                expression (lib/keyword.ml[83,2702+8]..lib/keyword.ml[83,2702+9])
+                                  Texp_ident "w/1192"
+                                expression (lib/keyword.ml[83,2702+11]..lib/keyword.ml[83,2702+12])
+                                  Texp_ident "f/1193"
+                              ]
+                            [
+                              <case>
+                                pattern (lib/keyword.ml[84,2720+4]..lib/keyword.ml[84,2720+38])
+                                  Tpat_value
+                                  pattern (lib/keyword.ml[84,2720+4]..lib/keyword.ml[84,2720+38])
+                                    Tpat_tuple
+                                    [
+                                      pattern (lib/keyword.ml[84,2720+4]..lib/keyword.ml[84,2720+5])
+                                        Tpat_any
+                                      pattern (lib/keyword.ml[84,2720+7]..lib/keyword.ml[84,2720+38])
+                                        Tpat_or
+                                        pattern (lib/keyword.ml[84,2720+8]..lib/keyword.ml[84,2720+20])
+                                          Tpat_construct "FlavorOffset"
+                                          []
+                                          None
+                                        pattern (lib/keyword.ml[84,2720+23]..lib/keyword.ml[84,2720+37])
+                                          Tpat_construct "FlavorPosition"
+                                          []
+                                          None
+                                    ]
+                                expression (lib/keyword.ml[85,2762+6]..lib/keyword.ml[85,2762+63])
+                                  Texp_apply
+                                  expression (lib/keyword.ml[85,2762+6]..lib/keyword.ml[85,2762+20])
+                                    Texp_ident "Stdlib!.Printf.sprintf"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/keyword.ml[85,2762+21]..lib/keyword.ml[85,2762+30])
+                                        Texp_construct "CamlinternalFormatBasics.Format"
+                                        [
+                                          expression (lib/keyword.ml[85,2762+21]..lib/keyword.ml[85,2762+30]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                            [
+                                              expression (lib/keyword.ml[85,2762+21]..lib/keyword.ml[85,2762+30]) ghost
+                                                Texp_constant Const_char 5f
+                                              expression (lib/keyword.ml[85,2762+21]..lib/keyword.ml[85,2762+30]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.String"
+                                                [
+                                                  expression (lib/keyword.ml[85,2762+21]..lib/keyword.ml[85,2762+30]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                    []
+                                                  expression (lib/keyword.ml[85,2762+21]..lib/keyword.ml[85,2762+30]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.String"
+                                                    [
+                                                      expression (lib/keyword.ml[85,2762+21]..lib/keyword.ml[85,2762+30]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                        []
+                                                      expression (lib/keyword.ml[85,2762+21]..lib/keyword.ml[85,2762+30]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.String"
+                                                        [
+                                                          expression (lib/keyword.ml[85,2762+21]..lib/keyword.ml[85,2762+30]) ghost
+                                                            Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                            []
+                                                          expression (lib/keyword.ml[85,2762+21]..lib/keyword.ml[85,2762+30]) ghost
+                                                            Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                            []
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                          expression (lib/keyword.ml[85,2762+21]..lib/keyword.ml[85,2762+30]) ghost
+                                            Texp_constant Const_string("_%s%s%s",(lib/keyword.ml[85,2762+21]..lib/keyword.ml[85,2762+30]) ghost,None)
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/keyword.ml[85,2762+31]..lib/keyword.ml[85,2762+40])
+                                        Texp_apply
+                                        expression (lib/keyword.ml[85,2762+32]..lib/keyword.ml[85,2762+37])
+                                          Texp_ident "where/1143"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/keyword.ml[85,2762+38]..lib/keyword.ml[85,2762+39])
+                                              Texp_ident "w/1192"
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/keyword.ml[85,2762+41]..lib/keyword.ml[85,2762+51])
+                                        Texp_apply
+                                        expression (lib/keyword.ml[85,2762+42]..lib/keyword.ml[85,2762+48])
+                                          Texp_ident "flavor/1186"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/keyword.ml[85,2762+49]..lib/keyword.ml[85,2762+50])
+                                              Texp_ident "f/1193"
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/keyword.ml[85,2762+52]..lib/keyword.ml[85,2762+63])
+                                        Texp_apply
+                                        expression (lib/keyword.ml[85,2762+53]..lib/keyword.ml[85,2762+60])
+                                          Texp_ident "subject/1146"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/keyword.ml[85,2762+61]..lib/keyword.ml[85,2762+62])
+                                              Texp_ident "s/1191"
+                                        ]
+                                  ]
+                              <case>
+                                pattern (lib/keyword.ml[86,2826+4]..lib/keyword.ml[86,2826+36])
+                                  Tpat_value
+                                  pattern (lib/keyword.ml[86,2826+4]..lib/keyword.ml[86,2826+36])
+                                    Tpat_tuple
+                                    [
+                                      pattern (lib/keyword.ml[86,2826+4]..lib/keyword.ml[86,2826+20])
+                                        Tpat_construct "WhereSymbolStart"
+                                        []
+                                        None
+                                      pattern (lib/keyword.ml[86,2826+22]..lib/keyword.ml[86,2826+36])
+                                        Tpat_construct "FlavorLocation"
+                                        []
+                                        None
+                                    ]
+                                expression (lib/keyword.ml[87,2866+6]..lib/keyword.ml[87,2866+13])
+                                  Texp_constant Const_string("_sloc",(lib/keyword.ml[87,2866+7]..lib/keyword.ml[87,2866+12]),None)
+                              <case>
+                                pattern (lib/keyword.ml[88,2880+4]..lib/keyword.ml[88,2880+30])
+                                  Tpat_value
+                                  pattern (lib/keyword.ml[88,2880+4]..lib/keyword.ml[88,2880+30])
+                                    Tpat_tuple
+                                    [
+                                      pattern (lib/keyword.ml[88,2880+4]..lib/keyword.ml[88,2880+14])
+                                        Tpat_construct "WhereStart"
+                                        []
+                                        None
+                                      pattern (lib/keyword.ml[88,2880+16]..lib/keyword.ml[88,2880+30])
+                                        Tpat_construct "FlavorLocation"
+                                        []
+                                        None
+                                    ]
+                                expression (lib/keyword.ml[89,2914+6]..lib/keyword.ml[89,2914+41])
+                                  Texp_apply
+                                  expression (lib/keyword.ml[89,2914+6]..lib/keyword.ml[89,2914+20])
+                                    Texp_ident "Stdlib!.Printf.sprintf"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/keyword.ml[89,2914+21]..lib/keyword.ml[89,2914+29])
+                                        Texp_construct "CamlinternalFormatBasics.Format"
+                                        [
+                                          expression (lib/keyword.ml[89,2914+21]..lib/keyword.ml[89,2914+29]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.String_literal"
+                                            [
+                                              expression (lib/keyword.ml[89,2914+21]..lib/keyword.ml[89,2914+29]) ghost
+                                                Texp_constant Const_string("_loc",(lib/keyword.ml[89,2914+21]..lib/keyword.ml[89,2914+29]) ghost,None)
+                                              expression (lib/keyword.ml[89,2914+21]..lib/keyword.ml[89,2914+29]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.String"
+                                                [
+                                                  expression (lib/keyword.ml[89,2914+21]..lib/keyword.ml[89,2914+29]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                    []
+                                                  expression (lib/keyword.ml[89,2914+21]..lib/keyword.ml[89,2914+29]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                    []
+                                                ]
+                                            ]
+                                          expression (lib/keyword.ml[89,2914+21]..lib/keyword.ml[89,2914+29]) ghost
+                                            Texp_constant Const_string("_loc%s",(lib/keyword.ml[89,2914+21]..lib/keyword.ml[89,2914+29]) ghost,None)
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/keyword.ml[89,2914+30]..lib/keyword.ml[89,2914+41])
+                                        Texp_apply
+                                        expression (lib/keyword.ml[89,2914+31]..lib/keyword.ml[89,2914+38])
+                                          Texp_ident "subject/1146"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/keyword.ml[89,2914+39]..lib/keyword.ml[89,2914+40])
+                                              Texp_ident "s/1191"
+                                        ]
+                                  ]
+                              <case>
+                                pattern (lib/keyword.ml[90,2956+4]..lib/keyword.ml[90,2956+5])
+                                  Tpat_value
+                                  pattern (lib/keyword.ml[90,2956+4]..lib/keyword.ml[90,2956+5])
+                                    Tpat_any
+                                expression (lib/keyword.ml[91,2965+6]..lib/keyword.ml[91,2965+18])
+                                  Texp_assert                                  expression (lib/keyword.ml[91,2965+13]..lib/keyword.ml[91,2965+18])
+                                    Texp_construct "false"
+                                    []
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/keyword.ml[96,3090+0]..lib/keyword.ml[108,3302+3])
+    Tstr_module
+    KeywordSet/1462
+      module_expr (lib/keyword.ml[96,3090+20]..lib/keyword.ml[108,3302+3])
+        module_expr (lib/keyword.ml[96,3090+20]..lib/keyword.ml[108,3302+3])
+          Tmod_structure
+          [
+            structure_item (lib/keyword.ml[98,3118+2]..lib/keyword.ml[101,3192+6])
+              Tstr_include              module_expr (lib/keyword.ml[98,3118+10]..lib/keyword.ml[101,3192+6])
+                Tmod_apply
+                module_expr (lib/keyword.ml[98,3118+10]..lib/keyword.ml[98,3118+18])
+                  module_expr (lib/keyword.ml[98,3118+10]..lib/keyword.ml[98,3118+18])
+                    Tmod_ident "Stdlib!.Set.Make"
+                module_expr (lib/keyword.ml[98,3118+20]..lib/keyword.ml[101,3192+5])
+                  Tmod_structure
+                  [
+                    structure_item (lib/keyword.ml[99,3145+4]..lib/keyword.ml[99,3145+20])
+                      Tstr_type Rec
+                      [
+                        type_declaration t/1194 (lib/keyword.ml[99,3145+4]..lib/keyword.ml[99,3145+20])
+                          ptype_params =
+                            []
+                          ptype_cstrs =
+                            []
+                          ptype_kind =
+                            Ttype_abstract
+                          ptype_private = Public
+                          ptype_manifest =
+                            Some
+                              core_type (lib/keyword.ml[99,3145+13]..lib/keyword.ml[99,3145+20])
+                                Ttyp_constr "keyword/1140"
+                                []
+                      ]
+                    structure_item (lib/keyword.ml[100,3166+4]..lib/keyword.ml[100,3166+25])
+                      Tstr_value Nonrec
+                      [
+                        <def>
+                          pattern (lib/keyword.ml[100,3166+8]..lib/keyword.ml[100,3166+15])
+                            Tpat_var "compare/1195"
+                          expression (lib/keyword.ml[100,3166+18]..lib/keyword.ml[100,3166+25])
+                            Texp_ident "Stdlib!.compare"
+                      ]
+                  ]
+            structure_item (lib/keyword.ml[103,3200+2]..lib/keyword.ml[106,3280+20])
+              Tstr_value Nonrec
+              [
+                <def>
+                  pattern (lib/keyword.ml[103,3200+6]..lib/keyword.ml[103,3200+9])
+                    Tpat_var "map/1457"
+                  expression (lib/keyword.ml[103,3200+10]..lib/keyword.ml[106,3280+20]) ghost
+                    Texp_function
+                    Nolabel
+                    [
+                      <case>
+                        pattern (lib/keyword.ml[103,3200+10]..lib/keyword.ml[103,3200+11])
+                          Tpat_var "f/1458"
+                        expression (lib/keyword.ml[103,3200+12]..lib/keyword.ml[106,3280+20]) ghost
+                          Texp_function
+                          Nolabel
+                          [
+                            <case>
+                              pattern (lib/keyword.ml[103,3200+12]..lib/keyword.ml[103,3200+20])
+                                Tpat_var "keywords/1459"
+                              expression (lib/keyword.ml[104,3223+4]..lib/keyword.ml[106,3280+20])
+                                Texp_apply
+                                expression (lib/keyword.ml[104,3223+4]..lib/keyword.ml[104,3223+8])
+                                  Texp_ident "fold/1430"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/keyword.ml[104,3223+9]..lib/keyword.ml[106,3280+5])
+                                      Texp_function
+                                      Nolabel
+                                      [
+                                        <case>
+                                          pattern (lib/keyword.ml[104,3223+14]..lib/keyword.ml[104,3223+21])
+                                            Tpat_var "keyword/1460"
+                                          expression (lib/keyword.ml[104,3223+22]..lib/keyword.ml[105,3253+26]) ghost
+                                            Texp_function
+                                            Nolabel
+                                            [
+                                              <case>
+                                                pattern (lib/keyword.ml[104,3223+22]..lib/keyword.ml[104,3223+26])
+                                                  Tpat_var "accu/1461"
+                                                expression (lib/keyword.ml[105,3253+6]..lib/keyword.ml[105,3253+26])
+                                                  Texp_apply
+                                                  expression (lib/keyword.ml[105,3253+6]..lib/keyword.ml[105,3253+9])
+                                                    Texp_ident "add/1418"
+                                                  [
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (lib/keyword.ml[105,3253+10]..lib/keyword.ml[105,3253+21])
+                                                        Texp_apply
+                                                        expression (lib/keyword.ml[105,3253+11]..lib/keyword.ml[105,3253+12])
+                                                          Texp_ident "f/1458"
+                                                        [
+                                                          <arg>
+                                                            Nolabel
+                                                            expression (lib/keyword.ml[105,3253+13]..lib/keyword.ml[105,3253+20])
+                                                              Texp_ident "keyword/1460"
+                                                        ]
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (lib/keyword.ml[105,3253+22]..lib/keyword.ml[105,3253+26])
+                                                        Texp_ident "accu/1461"
+                                                  ]
+                                            ]
+                                      ]
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/keyword.ml[106,3280+6]..lib/keyword.ml[106,3280+14])
+                                      Texp_ident "keywords/1459"
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/keyword.ml[106,3280+15]..lib/keyword.ml[106,3280+20])
+                                      Texp_ident "empty/1415"
+                                ]
+                          ]
+                    ]
+              ]
+          ]
+  structure_item (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+          Texp_apply
+          expression (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost,None)
+          ]
+    ]
+  structure_item (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+          Texp_apply
+          expression (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+          Texp_apply
+          expression (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+          Texp_apply
+          expression (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/keyword.ml[108,3302+3]..lib/keyword.ml[108,3302+3]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__Keyword>
+ "KeywordSet"[module] ->
+     {<Gbnf_parser__Keyword.30>
+      "add"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "add"[value];
+      "add_seq"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "add_seq"[value];
+      "cardinal"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "cardinal"[value];
+      "choose"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "choose"[value];
+      "choose_opt"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "choose_opt"[value];
+      "compare"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "compare"[value];
+      "diff"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "diff"[value];
+      "disjoint"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "disjoint"[value];
+      "elements"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "elements"[value];
+      "elt"[type] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "elt"[type];
+      "empty"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "empty"[value];
+      "equal"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "equal"[value];
+      "exists"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "exists"[value];
+      "filter"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "filter"[value];
+      "filter_map"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "filter_map"[value];
+      "find"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "find"[value];
+      "find_first"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "find_first"[value];
+      "find_first_opt"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "find_first_opt"[value];
+      "find_last"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "find_last"[value];
+      "find_last_opt"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "find_last_opt"[value];
+      "find_opt"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "find_opt"[value];
+      "fold"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "fold"[value];
+      "for_all"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "for_all"[value];
+      "inter"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "inter"[value];
+      "is_empty"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "is_empty"[value];
+      "iter"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "iter"[value];
+      "map"[value] -> <Gbnf_parser__Keyword.25>;
+      "max_elt"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "max_elt"[value];
+      "max_elt_opt"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "max_elt_opt"[value];
+      "mem"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "mem"[value];
+      "min_elt"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "min_elt"[value];
+      "min_elt_opt"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "min_elt_opt"[value];
+      "of_list"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "of_list"[value];
+      "of_seq"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "of_seq"[value];
+      "partition"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "partition"[value];
+      "remove"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "remove"[value];
+      "singleton"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "singleton"[value];
+      "split"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "split"[value];
+      "subset"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "subset"[value];
+      "t"[type] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "t"[type];
+      "to_rev_seq"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "to_rev_seq"[value];
+      "to_seq"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "to_seq"[value];
+      "to_seq_from"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "to_seq_from"[value];
+      "union"[value] ->
+          CU Stdlib . "Set"[module] . "Make"[module](
+          {
+           "compare"[value] -> <Gbnf_parser__Keyword.24>;
+           "t"[type] -> <Gbnf_parser__Keyword.23>;
+           })
+          . "union"[value];
+      };
+ "flavor"[value] -> <Gbnf_parser__Keyword.18>;
+ "flavor"[type] -> <Gbnf_parser__Keyword.0>;
+ "keyword"[type] -> <Gbnf_parser__Keyword.12>;
+ "posvar"[value] -> <Gbnf_parser__Keyword.19>;
+ "subject"[value] -> <Gbnf_parser__Keyword.16>;
+ "subject"[type] -> <Gbnf_parser__Keyword.8>;
+ "where"[value] -> <Gbnf_parser__Keyword.15>;
+ "where"[type] -> <Gbnf_parser__Keyword.4>;
+ }
+
+(seq
+  (let
+    (*match*/1895 =
+       (apply (field 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Keyword"))
+    0)
+  (let
+    (*match*/1897 =
+       (apply
+         (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/1899 =
+       (apply (field 0 (field 5 (global Expect_test_collector!)))
+         "lib/keyword.ml"))
+    0)
+  (let
+    (*match*/1901 =
+       (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "keyword.ml"))
+    0)
+  (let
+    (where/1143 =
+       (function param/1145[int]
+         (switch* param/1145
+          case int 0: "symbolstart"
+          case int 1: "start"
+          case int 2: "end")))
+    (setfield_ptr(root-init) 0 (global Gbnf_parser__Keyword!) where/1143))
+  (let
+    (subject/1146 =
+       (function param/1185
+         (if (isint param/1185) (if param/1185 "" "__0_")
+           (let (id/1148 =a (field 0 param/1185))
+             (apply (field 3 (global Stdlib__Printf!))
+               [0: [12: '_' [2: 0 [12: '_' 0]]] "_%s_"] id/1148)))))
+    (setfield_ptr(root-init) 1 (global Gbnf_parser__Keyword!) subject/1146))
+  (let
+    (flavor/1186 =
+       (function param/1188[int]
+         (switch* param/1188
+          case int 0: "ofs"
+          case int 1: "pos"
+          case int 2: "loc")))
+    (setfield_ptr(root-init) 2 (global Gbnf_parser__Keyword!) flavor/1186))
+  (let
+    (posvar/1189 =
+       (function s/1191 w/1192[int] f/1193[int]
+         (catch
+           (catch
+             (catch (if (>= f/1193 2) (exit 14) (exit 15)) with (15)
+               (apply (field 3 (global Stdlib__Printf!))
+                 [0: [12: '_' [2: 0 [2: 0 [2: 0 0]]]] "_%s%s%s"]
+                 (apply (field 0 (global Gbnf_parser__Keyword!)) w/1192)
+                 (apply (field 2 (global Gbnf_parser__Keyword!)) f/1193)
+                 (apply (field 1 (global Gbnf_parser__Keyword!)) s/1191)))
+            with (14)
+             (switch* w/1192
+              case int 0: "_sloc"
+              case int 1:
+               (apply (field 3 (global Stdlib__Printf!))
+                 [0: [11: "_loc" [2: 0 0]] "_loc%s"]
+                 (apply (field 1 (global Gbnf_parser__Keyword!)) s/1191))
+              case int 2: (exit 13)))
+          with (13)
+           (raise
+             (makeblock 0 (global Assert_failure/28!)
+               [0: "lib/keyword.ml" 91 6])))))
+    (setfield_ptr(root-init) 3 (global Gbnf_parser__Keyword!) posvar/1189))
+  (let
+    (include/1902 =
+       (apply
+         (let (let/1905 = (field 0 (global Stdlib__Set!)))
+           (field 0 (global Stdlib__Set!)))
+         (let
+           (compare/1195 =
+              (function prim/1904 prim/1903 stub
+                (caml_compare prim/1904 prim/1903)))
+           (makeblock 0 compare/1195)))
+     empty/1415 =a (field 0 include/1902))
+    (seq
+      (setfield_ptr(root-init) 5 (global Gbnf_parser__Keyword!) empty/1415)
+      (let (is_empty/1416 =a (field 1 include/1902))
+        (seq
+          (setfield_ptr(root-init) 6 (global Gbnf_parser__Keyword!)
+            is_empty/1416)
+          (let (mem/1417 =a (field 2 include/1902))
+            (seq
+              (setfield_ptr(root-init) 7 (global Gbnf_parser__Keyword!)
+                mem/1417)
+              (let (add/1418 =a (field 3 include/1902))
+                (seq
+                  (setfield_ptr(root-init) 8 (global Gbnf_parser__Keyword!)
+                    add/1418)
+                  (let (singleton/1419 =a (field 4 include/1902))
+                    (seq
+                      (setfield_ptr(root-init) 9
+                        (global Gbnf_parser__Keyword!) singleton/1419)
+                      (let (remove/1420 =a (field 5 include/1902))
+                        (seq
+                          (setfield_ptr(root-init) 10
+                            (global Gbnf_parser__Keyword!) remove/1420)
+                          (let (union/1421 =a (field 6 include/1902))
+                            (seq
+                              (setfield_ptr(root-init) 11
+                                (global Gbnf_parser__Keyword!) union/1421)
+                              (let (inter/1422 =a (field 7 include/1902))
+                                (seq
+                                  (setfield_ptr(root-init) 12
+                                    (global Gbnf_parser__Keyword!)
+                                    inter/1422)
+                                  (let
+                                    (disjoint/1423 =a (field 8 include/1902))
+                                    (seq
+                                      (setfield_ptr(root-init) 13
+                                        (global Gbnf_parser__Keyword!)
+                                        disjoint/1423)
+                                      (let
+                                        (diff/1424 =a (field 9 include/1902))
+                                        (seq
+                                          (setfield_ptr(root-init) 14
+                                            (global Gbnf_parser__Keyword!)
+                                            diff/1424)
+                                          (let
+                                            (compare/1425 =a
+                                               (field 10 include/1902))
+                                            (seq
+                                              (setfield_ptr(root-init) 15
+                                                (global Gbnf_parser__Keyword!)
+                                                compare/1425)
+                                              (let
+                                                (equal/1426 =a
+                                                   (field 11 include/1902))
+                                                (seq
+                                                  (setfield_ptr(root-init) 16
+                                                    (global Gbnf_parser__Keyword!)
+                                                    equal/1426)
+                                                  (let
+                                                    (subset/1427 =a
+                                                       (field 12
+                                                         include/1902))
+                                                    (seq
+                                                      (setfield_ptr(root-init) 17
+                                                        (global Gbnf_parser__Keyword!)
+                                                        subset/1427)
+                                                      (let
+                                                        (iter/1428 =a
+                                                           (field 13
+                                                             include/1902))
+                                                        (seq
+                                                          (setfield_ptr(root-init) 18
+                                                            (global Gbnf_parser__Keyword!)
+                                                            iter/1428)
+                                                          (let
+                                                            (map/1429 =a
+                                                               (field 14
+                                                                 include/1902))
+                                                            (seq
+                                                              (setfield_ptr(root-init) 19
+                                                                (global Gbnf_parser__Keyword!)
+                                                                map/1429)
+                                                              (let
+                                                                (fold/1430 =a
+                                                                   (field 15
+                                                                    include/1902))
+                                                                (seq
+                                                                  (setfield_ptr(root-init) 20
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    fold/1430)
+                                                                  (let
+                                                                    (for_all/1431 =a
+                                                                    (field 16
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 21
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    for_all/1431)
+                                                                    (let
+                                                                    (exists/1432 =a
+                                                                    (field 17
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 22
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    exists/1432)
+                                                                    (let
+                                                                    (filter/1433 =a
+                                                                    (field 18
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 23
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    filter/1433)
+                                                                    (let
+                                                                    (filter_map/1434 =a
+                                                                    (field 19
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 24
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    filter_map/1434)
+                                                                    (let
+                                                                    (partition/1435 =a
+                                                                    (field 20
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 25
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    partition/1435)
+                                                                    (let
+                                                                    (cardinal/1436 =a
+                                                                    (field 21
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 26
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    cardinal/1436)
+                                                                    (let
+                                                                    (elements/1437 =a
+                                                                    (field 22
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 27
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    elements/1437)
+                                                                    (let
+                                                                    (min_elt/1438 =a
+                                                                    (field 23
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 28
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    min_elt/1438)
+                                                                    (let
+                                                                    (min_elt_opt/1439 =a
+                                                                    (field 24
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 29
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    min_elt_opt/1439)
+                                                                    (let
+                                                                    (max_elt/1440 =a
+                                                                    (field 25
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 30
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    max_elt/1440)
+                                                                    (let
+                                                                    (max_elt_opt/1441 =a
+                                                                    (field 26
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 31
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    max_elt_opt/1441)
+                                                                    (let
+                                                                    (choose/1442 =a
+                                                                    (field 27
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 32
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    choose/1442)
+                                                                    (let
+                                                                    (choose_opt/1443 =a
+                                                                    (field 28
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 33
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    choose_opt/1443)
+                                                                    (let
+                                                                    (split/1444 =a
+                                                                    (field 29
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 34
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    split/1444)
+                                                                    (let
+                                                                    (find/1445 =a
+                                                                    (field 30
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 35
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    find/1445)
+                                                                    (let
+                                                                    (find_opt/1446 =a
+                                                                    (field 31
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 36
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    find_opt/1446)
+                                                                    (let
+                                                                    (find_first/1447 =a
+                                                                    (field 32
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 37
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    find_first/1447)
+                                                                    (let
+                                                                    (find_first_opt/1448 =a
+                                                                    (field 33
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 38
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    find_first_opt/1448)
+                                                                    (let
+                                                                    (find_last/1449 =a
+                                                                    (field 34
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 39
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    find_last/1449)
+                                                                    (let
+                                                                    (find_last_opt/1450 =a
+                                                                    (field 35
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 40
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    find_last_opt/1450)
+                                                                    (let
+                                                                    (of_list/1451 =a
+                                                                    (field 36
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 41
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    of_list/1451)
+                                                                    (let
+                                                                    (to_seq_from/1452 =a
+                                                                    (field 37
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 42
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    to_seq_from/1452)
+                                                                    (let
+                                                                    (to_seq/1453 =a
+                                                                    (field 38
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 43
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    to_seq/1453)
+                                                                    (let
+                                                                    (to_rev_seq/1454 =a
+                                                                    (field 39
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 44
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    to_rev_seq/1454)
+                                                                    (let
+                                                                    (add_seq/1455 =a
+                                                                    (field 40
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 45
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    add_seq/1455)
+                                                                    (let
+                                                                    (of_seq/1456 =a
+                                                                    (field 41
+                                                                    include/1902))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 46
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    of_seq/1456)
+                                                                    (let
+                                                                    (map/1457 =
+                                                                    (function
+                                                                    f/1458
+                                                                    keywords/1459
+                                                                    (apply
+                                                                    (field 20
+                                                                    (global Gbnf_parser__Keyword!))
+                                                                    (function
+                                                                    keyword/1460
+                                                                    accu/1461
+                                                                    (apply
+                                                                    (field 8
+                                                                    (global Gbnf_parser__Keyword!))
+                                                                    (apply
+                                                                    f/1458
+                                                                    keyword/1460)
+                                                                    accu/1461))
+                                                                    keywords/1459
+                                                                    (field 5
+                                                                    (global Gbnf_parser__Keyword!)))))
+                                                                    (setfield_ptr(root-init) 47
+                                                                    (global Gbnf_parser__Keyword!)
+                                                                    map/1457))
+                                                                    0))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+  (let
+    (KeywordSet/1462 =
+       (makeblock 0 (field 5 (global Gbnf_parser__Keyword!))
+         (field 6 (global Gbnf_parser__Keyword!))
+         (field 7 (global Gbnf_parser__Keyword!))
+         (field 8 (global Gbnf_parser__Keyword!))
+         (field 9 (global Gbnf_parser__Keyword!))
+         (field 10 (global Gbnf_parser__Keyword!))
+         (field 11 (global Gbnf_parser__Keyword!))
+         (field 12 (global Gbnf_parser__Keyword!))
+         (field 13 (global Gbnf_parser__Keyword!))
+         (field 14 (global Gbnf_parser__Keyword!))
+         (field 15 (global Gbnf_parser__Keyword!))
+         (field 16 (global Gbnf_parser__Keyword!))
+         (field 17 (global Gbnf_parser__Keyword!))
+         (field 18 (global Gbnf_parser__Keyword!))
+         (field 20 (global Gbnf_parser__Keyword!))
+         (field 21 (global Gbnf_parser__Keyword!))
+         (field 22 (global Gbnf_parser__Keyword!))
+         (field 23 (global Gbnf_parser__Keyword!))
+         (field 24 (global Gbnf_parser__Keyword!))
+         (field 25 (global Gbnf_parser__Keyword!))
+         (field 26 (global Gbnf_parser__Keyword!))
+         (field 27 (global Gbnf_parser__Keyword!))
+         (field 28 (global Gbnf_parser__Keyword!))
+         (field 29 (global Gbnf_parser__Keyword!))
+         (field 30 (global Gbnf_parser__Keyword!))
+         (field 31 (global Gbnf_parser__Keyword!))
+         (field 32 (global Gbnf_parser__Keyword!))
+         (field 33 (global Gbnf_parser__Keyword!))
+         (field 34 (global Gbnf_parser__Keyword!))
+         (field 35 (global Gbnf_parser__Keyword!))
+         (field 36 (global Gbnf_parser__Keyword!))
+         (field 37 (global Gbnf_parser__Keyword!))
+         (field 38 (global Gbnf_parser__Keyword!))
+         (field 39 (global Gbnf_parser__Keyword!))
+         (field 40 (global Gbnf_parser__Keyword!))
+         (field 41 (global Gbnf_parser__Keyword!))
+         (field 42 (global Gbnf_parser__Keyword!))
+         (field 43 (global Gbnf_parser__Keyword!))
+         (field 44 (global Gbnf_parser__Keyword!))
+         (field 45 (global Gbnf_parser__Keyword!))
+         (field 46 (global Gbnf_parser__Keyword!))
+         (field 47 (global Gbnf_parser__Keyword!))))
+    (seq
+      (setfield_ptr(root-init) 4 (global Gbnf_parser__Keyword!)
+        KeywordSet/1462)
+      (let
+        (*match*/1907 =
+           (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+        0)
+      (let
+        (*match*/1909 =
+           (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+        0)
+      (let
+        (*match*/1911 =
+           (apply
+             (field 1
+               (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+             0))
+        0)
+      (let
+        (*match*/1913 =
+           (apply (field 4 (global Ppx_module_timer_runtime!))
+             #"Gbnf_parser__Keyword"))
+        0)
+      0)))
+(seq
+  (let
+    (*match*/1895 =
+       (apply (field 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Keyword"))
+    0)
+  (let
+    (*match*/1897 =
+       (apply
+         (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/1899 =
+       (apply (field 0 (field 5 (global Expect_test_collector!)))
+         "lib/keyword.ml"))
+    0)
+  (let
+    (*match*/1901 =
+       (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "keyword.ml"))
+    0)
+  (let
+    (where/1143 =
+       (function param/1145[int]
+         (switch* param/1145
+          case int 0: "symbolstart"
+          case int 1: "start"
+          case int 2: "end")))
+    (setfield_ptr(root-init) 0 (global Gbnf_parser__Keyword!) where/1143))
+  (let
+    (subject/1146 =
+       (function param/1185
+         (if (isint param/1185) (if param/1185 "" "__0_")
+           (apply (field 3 (global Stdlib__Printf!))
+             [0: [12: '_' [2: 0 [12: '_' 0]]] "_%s_"] (field 0 param/1185)))))
+    (setfield_ptr(root-init) 1 (global Gbnf_parser__Keyword!) subject/1146))
+  (let
+    (flavor/1186 =
+       (function param/1188[int]
+         (switch* param/1188
+          case int 0: "ofs"
+          case int 1: "pos"
+          case int 2: "loc")))
+    (setfield_ptr(root-init) 2 (global Gbnf_parser__Keyword!) flavor/1186))
+  (let
+    (posvar/1189 =
+       (function s/1191 w/1192[int] f/1193[int]
+         (if (>= f/1193 2)
+           (switch* w/1192
+            case int 0: "_sloc"
+            case int 1:
+             (apply (field 3 (global Stdlib__Printf!))
+               [0: [11: "_loc" [2: 0 0]] "_loc%s"]
+               (apply (field 1 (global Gbnf_parser__Keyword!)) s/1191))
+            case int 2:
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "lib/keyword.ml" 91 6])))
+           (apply (field 3 (global Stdlib__Printf!))
+             [0: [12: '_' [2: 0 [2: 0 [2: 0 0]]]] "_%s%s%s"]
+             (apply (field 0 (global Gbnf_parser__Keyword!)) w/1192)
+             (apply (field 2 (global Gbnf_parser__Keyword!)) f/1193)
+             (apply (field 1 (global Gbnf_parser__Keyword!)) s/1191)))))
+    (setfield_ptr(root-init) 3 (global Gbnf_parser__Keyword!) posvar/1189))
+  (let
+    (include/1902 =
+       (apply
+         (let (let/1905 = (field 0 (global Stdlib__Set!)))
+           (field 0 (global Stdlib__Set!)))
+         (let
+           (compare/1195 =
+              (function prim/1904 prim/1903 stub
+                (caml_compare prim/1904 prim/1903)))
+           (makeblock 0 compare/1195))))
+    (seq
+      (setfield_ptr(root-init) 5 (global Gbnf_parser__Keyword!)
+        (field 0 include/1902))
+      (setfield_ptr(root-init) 6 (global Gbnf_parser__Keyword!)
+        (field 1 include/1902))
+      (setfield_ptr(root-init) 7 (global Gbnf_parser__Keyword!)
+        (field 2 include/1902))
+      (setfield_ptr(root-init) 8 (global Gbnf_parser__Keyword!)
+        (field 3 include/1902))
+      (setfield_ptr(root-init) 9 (global Gbnf_parser__Keyword!)
+        (field 4 include/1902))
+      (setfield_ptr(root-init) 10 (global Gbnf_parser__Keyword!)
+        (field 5 include/1902))
+      (setfield_ptr(root-init) 11 (global Gbnf_parser__Keyword!)
+        (field 6 include/1902))
+      (setfield_ptr(root-init) 12 (global Gbnf_parser__Keyword!)
+        (field 7 include/1902))
+      (setfield_ptr(root-init) 13 (global Gbnf_parser__Keyword!)
+        (field 8 include/1902))
+      (setfield_ptr(root-init) 14 (global Gbnf_parser__Keyword!)
+        (field 9 include/1902))
+      (setfield_ptr(root-init) 15 (global Gbnf_parser__Keyword!)
+        (field 10 include/1902))
+      (setfield_ptr(root-init) 16 (global Gbnf_parser__Keyword!)
+        (field 11 include/1902))
+      (setfield_ptr(root-init) 17 (global Gbnf_parser__Keyword!)
+        (field 12 include/1902))
+      (setfield_ptr(root-init) 18 (global Gbnf_parser__Keyword!)
+        (field 13 include/1902))
+      (setfield_ptr(root-init) 19 (global Gbnf_parser__Keyword!)
+        (field 14 include/1902))
+      (setfield_ptr(root-init) 20 (global Gbnf_parser__Keyword!)
+        (field 15 include/1902))
+      (setfield_ptr(root-init) 21 (global Gbnf_parser__Keyword!)
+        (field 16 include/1902))
+      (setfield_ptr(root-init) 22 (global Gbnf_parser__Keyword!)
+        (field 17 include/1902))
+      (setfield_ptr(root-init) 23 (global Gbnf_parser__Keyword!)
+        (field 18 include/1902))
+      (setfield_ptr(root-init) 24 (global Gbnf_parser__Keyword!)
+        (field 19 include/1902))
+      (setfield_ptr(root-init) 25 (global Gbnf_parser__Keyword!)
+        (field 20 include/1902))
+      (setfield_ptr(root-init) 26 (global Gbnf_parser__Keyword!)
+        (field 21 include/1902))
+      (setfield_ptr(root-init) 27 (global Gbnf_parser__Keyword!)
+        (field 22 include/1902))
+      (setfield_ptr(root-init) 28 (global Gbnf_parser__Keyword!)
+        (field 23 include/1902))
+      (setfield_ptr(root-init) 29 (global Gbnf_parser__Keyword!)
+        (field 24 include/1902))
+      (setfield_ptr(root-init) 30 (global Gbnf_parser__Keyword!)
+        (field 25 include/1902))
+      (setfield_ptr(root-init) 31 (global Gbnf_parser__Keyword!)
+        (field 26 include/1902))
+      (setfield_ptr(root-init) 32 (global Gbnf_parser__Keyword!)
+        (field 27 include/1902))
+      (setfield_ptr(root-init) 33 (global Gbnf_parser__Keyword!)
+        (field 28 include/1902))
+      (setfield_ptr(root-init) 34 (global Gbnf_parser__Keyword!)
+        (field 29 include/1902))
+      (setfield_ptr(root-init) 35 (global Gbnf_parser__Keyword!)
+        (field 30 include/1902))
+      (setfield_ptr(root-init) 36 (global Gbnf_parser__Keyword!)
+        (field 31 include/1902))
+      (setfield_ptr(root-init) 37 (global Gbnf_parser__Keyword!)
+        (field 32 include/1902))
+      (setfield_ptr(root-init) 38 (global Gbnf_parser__Keyword!)
+        (field 33 include/1902))
+      (setfield_ptr(root-init) 39 (global Gbnf_parser__Keyword!)
+        (field 34 include/1902))
+      (setfield_ptr(root-init) 40 (global Gbnf_parser__Keyword!)
+        (field 35 include/1902))
+      (setfield_ptr(root-init) 41 (global Gbnf_parser__Keyword!)
+        (field 36 include/1902))
+      (setfield_ptr(root-init) 42 (global Gbnf_parser__Keyword!)
+        (field 37 include/1902))
+      (setfield_ptr(root-init) 43 (global Gbnf_parser__Keyword!)
+        (field 38 include/1902))
+      (setfield_ptr(root-init) 44 (global Gbnf_parser__Keyword!)
+        (field 39 include/1902))
+      (setfield_ptr(root-init) 45 (global Gbnf_parser__Keyword!)
+        (field 40 include/1902))
+      (setfield_ptr(root-init) 46 (global Gbnf_parser__Keyword!)
+        (field 41 include/1902))
+      (let
+        (map/1457 =
+           (function f/1458 keywords/1459
+             (apply (field 20 (global Gbnf_parser__Keyword!))
+               (function keyword/1460 accu/1461
+                 (apply (field 8 (global Gbnf_parser__Keyword!))
+                   (apply f/1458 keyword/1460) accu/1461))
+               keywords/1459 (field 5 (global Gbnf_parser__Keyword!)))))
+        (setfield_ptr(root-init) 47 (global Gbnf_parser__Keyword!) map/1457))
+      0))
+  (let
+    (KeywordSet/1462 =
+       (makeblock 0 (field 5 (global Gbnf_parser__Keyword!))
+         (field 6 (global Gbnf_parser__Keyword!))
+         (field 7 (global Gbnf_parser__Keyword!))
+         (field 8 (global Gbnf_parser__Keyword!))
+         (field 9 (global Gbnf_parser__Keyword!))
+         (field 10 (global Gbnf_parser__Keyword!))
+         (field 11 (global Gbnf_parser__Keyword!))
+         (field 12 (global Gbnf_parser__Keyword!))
+         (field 13 (global Gbnf_parser__Keyword!))
+         (field 14 (global Gbnf_parser__Keyword!))
+         (field 15 (global Gbnf_parser__Keyword!))
+         (field 16 (global Gbnf_parser__Keyword!))
+         (field 17 (global Gbnf_parser__Keyword!))
+         (field 18 (global Gbnf_parser__Keyword!))
+         (field 20 (global Gbnf_parser__Keyword!))
+         (field 21 (global Gbnf_parser__Keyword!))
+         (field 22 (global Gbnf_parser__Keyword!))
+         (field 23 (global Gbnf_parser__Keyword!))
+         (field 24 (global Gbnf_parser__Keyword!))
+         (field 25 (global Gbnf_parser__Keyword!))
+         (field 26 (global Gbnf_parser__Keyword!))
+         (field 27 (global Gbnf_parser__Keyword!))
+         (field 28 (global Gbnf_parser__Keyword!))
+         (field 29 (global Gbnf_parser__Keyword!))
+         (field 30 (global Gbnf_parser__Keyword!))
+         (field 31 (global Gbnf_parser__Keyword!))
+         (field 32 (global Gbnf_parser__Keyword!))
+         (field 33 (global Gbnf_parser__Keyword!))
+         (field 34 (global Gbnf_parser__Keyword!))
+         (field 35 (global Gbnf_parser__Keyword!))
+         (field 36 (global Gbnf_parser__Keyword!))
+         (field 37 (global Gbnf_parser__Keyword!))
+         (field 38 (global Gbnf_parser__Keyword!))
+         (field 39 (global Gbnf_parser__Keyword!))
+         (field 40 (global Gbnf_parser__Keyword!))
+         (field 41 (global Gbnf_parser__Keyword!))
+         (field 42 (global Gbnf_parser__Keyword!))
+         (field 43 (global Gbnf_parser__Keyword!))
+         (field 44 (global Gbnf_parser__Keyword!))
+         (field 45 (global Gbnf_parser__Keyword!))
+         (field 46 (global Gbnf_parser__Keyword!))
+         (field 47 (global Gbnf_parser__Keyword!))))
+    (seq
+      (setfield_ptr(root-init) 4 (global Gbnf_parser__Keyword!)
+        KeywordSet/1462)
+      (let
+        (*match*/1907 =
+           (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+        0)
+      (let
+        (*match*/1909 =
+           (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+        0)
+      (let
+        (*match*/1911 =
+           (apply
+             (field 1
+               (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+             0))
+        0)
+      (let
+        (*match*/1913 =
+           (apply (field 4 (global Ppx_module_timer_runtime!))
+             #"Gbnf_parser__Keyword"))
+        0)
+      0)))

@@ -1,0 +1,2020 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+          Ppat_construct "()" (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+          None
+        expression (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+          Pexp_apply
+          expression (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+          ]
+    ]
+  structure_item (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+          Ppat_construct "()" (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+          None
+        expression (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+          Pexp_apply
+          expression (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+          Ppat_construct "()" (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+          None
+        expression (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+          Pexp_apply
+          expression (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+                Pexp_constant PConst_string("lib/InputFile.ml",(lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+          Ppat_construct "()" (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+          None
+        expression (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+          Pexp_apply
+          expression (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost
+                Pexp_constant PConst_string("InputFile.ml",(lib/InputFile.ml[32,1879+0]..[32,1879+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/InputFile.ml[32,1879+0]..[35,1950+1])
+    Pstr_type Rec
+    [
+      type_declaration "input_file" (lib/InputFile.ml[32,1879+5]..[32,1879+15]) (lib/InputFile.ml[32,1879+0]..[35,1950+1])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (lib/InputFile.ml[33,1899+2]..[33,1899+26])
+                Immutable
+                "input_file_name" (lib/InputFile.ml[33,1899+2]..[33,1899+17])                core_type (lib/InputFile.ml[33,1899+19]..[33,1899+25])
+                  Ptyp_constr "string" (lib/InputFile.ml[33,1899+19]..[33,1899+25])
+                  []
+              (lib/InputFile.ml[34,1926+2]..[34,1926+23])
+                Immutable
+                "input_file_index" (lib/InputFile.ml[34,1926+2]..[34,1926+18])                core_type (lib/InputFile.ml[34,1926+20]..[34,1926+23])
+                  Ptyp_constr "int" (lib/InputFile.ml[34,1926+20]..[34,1926+23])
+                  []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/InputFile.ml[37,1953+0]..[40,2037+1])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[37,1953+4]..[37,1953+22])
+          Ppat_var "builtin_input_file" (lib/InputFile.ml[37,1953+4]..[37,1953+22])
+        expression (lib/InputFile.ml[37,1953+25]..[40,2037+1])
+          Pexp_record
+          [
+            "input_file_name" (lib/InputFile.ml[38,1980+2]..[38,1980+17])
+              expression (lib/InputFile.ml[38,1980+20]..[38,1980+31])
+                Pexp_constant PConst_string("<builtin>",(lib/InputFile.ml[38,1980+21]..[38,1980+30]),None)
+            "input_file_index" (lib/InputFile.ml[39,2013+2]..[39,2013+18])
+              expression (lib/InputFile.ml[39,2013+21]..[39,2013+23])
+                Pexp_constant PConst_int (-1,None)
+          ]
+          None
+    ]
+  structure_item (lib/InputFile.ml[42,2040+0]..[45,2119+1])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[42,2040+4]..[42,2040+20])
+          Ppat_var "dummy_input_file" (lib/InputFile.ml[42,2040+4]..[42,2040+20])
+        expression (lib/InputFile.ml[42,2040+23]..[45,2119+1])
+          Pexp_record
+          [
+            "input_file_name" (lib/InputFile.ml[43,2065+2]..[43,2065+17])
+              expression (lib/InputFile.ml[43,2065+20]..[43,2065+29])
+                Pexp_constant PConst_string("<dummy>",(lib/InputFile.ml[43,2065+21]..[43,2065+28]),None)
+            "input_file_index" (lib/InputFile.ml[44,2096+2]..[44,2096+18])
+              expression (lib/InputFile.ml[44,2096+21]..[44,2096+22])
+                Pexp_constant PConst_int (0,None)
+          ]
+          None
+    ]
+  structure_item (lib/InputFile.ml[47,2122+0]..[48,2156+49])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[47,2122+4]..[47,2122+19])
+          Ppat_var "same_input_file" (lib/InputFile.ml[47,2122+4]..[47,2122+19])
+        expression (lib/InputFile.ml[47,2122+20]..[48,2156+49]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/InputFile.ml[47,2122+20]..[47,2122+25])
+            Ppat_var "file1" (lib/InputFile.ml[47,2122+20]..[47,2122+25])
+          expression (lib/InputFile.ml[47,2122+26]..[48,2156+49]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/InputFile.ml[47,2122+26]..[47,2122+31])
+              Ppat_var "file2" (lib/InputFile.ml[47,2122+26]..[47,2122+31])
+            expression (lib/InputFile.ml[48,2156+2]..[48,2156+49])
+              Pexp_apply
+              expression (lib/InputFile.ml[48,2156+25]..[48,2156+26])
+                Pexp_ident "=" (lib/InputFile.ml[48,2156+25]..[48,2156+26])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/InputFile.ml[48,2156+2]..[48,2156+24])
+                    Pexp_field
+                    expression (lib/InputFile.ml[48,2156+2]..[48,2156+7])
+                      Pexp_ident "file1" (lib/InputFile.ml[48,2156+2]..[48,2156+7])
+                    "input_file_index" (lib/InputFile.ml[48,2156+8]..[48,2156+24])
+                <arg>
+                Nolabel
+                  expression (lib/InputFile.ml[48,2156+27]..[48,2156+49])
+                    Pexp_field
+                    expression (lib/InputFile.ml[48,2156+27]..[48,2156+32])
+                      Pexp_ident "file2" (lib/InputFile.ml[48,2156+27]..[48,2156+32])
+                    "input_file_index" (lib/InputFile.ml[48,2156+33]..[48,2156+49])
+              ]
+    ]
+  structure_item (lib/InputFile.ml[51,2267+0]..[52,2305+63])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[51,2267+4]..[51,2267+23])
+          Ppat_var "compare_input_files" (lib/InputFile.ml[51,2267+4]..[51,2267+23])
+        expression (lib/InputFile.ml[51,2267+24]..[52,2305+63]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/InputFile.ml[51,2267+24]..[51,2267+29])
+            Ppat_var "file1" (lib/InputFile.ml[51,2267+24]..[51,2267+29])
+          expression (lib/InputFile.ml[51,2267+30]..[52,2305+63]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/InputFile.ml[51,2267+30]..[51,2267+35])
+              Ppat_var "file2" (lib/InputFile.ml[51,2267+30]..[51,2267+35])
+            expression (lib/InputFile.ml[52,2305+2]..[52,2305+63])
+              Pexp_apply
+              expression (lib/InputFile.ml[52,2305+2]..[52,2305+17])
+                Pexp_ident "Generic.compare" (lib/InputFile.ml[52,2305+2]..[52,2305+17])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/InputFile.ml[52,2305+18]..[52,2305+40])
+                    Pexp_field
+                    expression (lib/InputFile.ml[52,2305+18]..[52,2305+23])
+                      Pexp_ident "file1" (lib/InputFile.ml[52,2305+18]..[52,2305+23])
+                    "input_file_index" (lib/InputFile.ml[52,2305+24]..[52,2305+40])
+                <arg>
+                Nolabel
+                  expression (lib/InputFile.ml[52,2305+41]..[52,2305+63])
+                    Pexp_field
+                    expression (lib/InputFile.ml[52,2305+41]..[52,2305+46])
+                      Pexp_ident "file2" (lib/InputFile.ml[52,2305+41]..[52,2305+46])
+                    "input_file_index" (lib/InputFile.ml[52,2305+47]..[52,2305+63])
+              ]
+    ]
+  structure_item (lib/InputFile.ml[58,2588+0]..[59,2613+22])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[58,2588+4]..[58,2588+22])
+          Ppat_var "current_input_file" (lib/InputFile.ml[58,2588+4]..[58,2588+22])
+        expression (lib/InputFile.ml[59,2613+2]..[59,2613+22])
+          Pexp_apply
+          expression (lib/InputFile.ml[59,2613+2]..[59,2613+5])
+            Pexp_ident "ref" (lib/InputFile.ml[59,2613+2]..[59,2613+5])
+          [
+            <arg>
+            Nolabel
+              expression (lib/InputFile.ml[59,2613+6]..[59,2613+22])
+                Pexp_ident "dummy_input_file" (lib/InputFile.ml[59,2613+6]..[59,2613+22])
+          ]
+    ]
+  structure_item (lib/InputFile.ml[62,2693+0]..[66,2844+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[62,2693+4]..[62,2693+18])
+          Ppat_var "new_input_file" (lib/InputFile.ml[62,2693+4]..[62,2693+18])
+        expression (lib/InputFile.ml[62,2693+19]..[66,2844+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/InputFile.ml[62,2693+19]..[62,2693+23])
+            Ppat_var "name" (lib/InputFile.ml[62,2693+19]..[62,2693+23])
+          expression (lib/InputFile.ml[62,2693+24]..[66,2844+3])
+            Pexp_constraint
+            expression (lib/InputFile.ml[63,2726+2]..[66,2844+3])
+              Pexp_apply
+              expression (lib/InputFile.ml[63,2726+21]..[63,2726+23])
+                Pexp_ident ":=" (lib/InputFile.ml[63,2726+21]..[63,2726+23])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/InputFile.ml[63,2726+2]..[63,2726+20])
+                    Pexp_ident "current_input_file" (lib/InputFile.ml[63,2726+2]..[63,2726+20])
+                <arg>
+                Nolabel
+                  expression (lib/InputFile.ml[63,2726+24]..[66,2844+3])
+                    Pexp_record
+                    [
+                      "input_file_name" (lib/InputFile.ml[64,2752+4]..[64,2752+19])
+                        expression (lib/InputFile.ml[64,2752+22]..[64,2752+26])
+                          Pexp_ident "name" (lib/InputFile.ml[64,2752+22]..[64,2752+26])
+                      "input_file_index" (lib/InputFile.ml[65,2780+4]..[65,2780+20])
+                        expression (lib/InputFile.ml[65,2780+23]..[65,2780+63])
+                          Pexp_apply
+                          expression (lib/InputFile.ml[65,2780+60]..[65,2780+61])
+                            Pexp_ident "+" (lib/InputFile.ml[65,2780+60]..[65,2780+61])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (lib/InputFile.ml[65,2780+23]..[65,2780+59])
+                                Pexp_field
+                                expression (lib/InputFile.ml[65,2780+23]..[65,2780+42])
+                                  Pexp_apply
+                                  expression (lib/InputFile.ml[65,2780+23]..[65,2780+24])
+                                    Pexp_ident "!" (lib/InputFile.ml[65,2780+23]..[65,2780+24])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (lib/InputFile.ml[65,2780+24]..[65,2780+42])
+                                        Pexp_ident "current_input_file" (lib/InputFile.ml[65,2780+24]..[65,2780+42])
+                                  ]
+                                "input_file_index" (lib/InputFile.ml[65,2780+43]..[65,2780+59])
+                            <arg>
+                            Nolabel
+                              expression (lib/InputFile.ml[65,2780+62]..[65,2780+63])
+                                Pexp_constant PConst_int (1,None)
+                          ]
+                    ]
+                    None
+              ]
+            core_type (lib/InputFile.ml[62,2693+26]..[62,2693+30])
+              Ptyp_constr "unit" (lib/InputFile.ml[62,2693+26]..[62,2693+30])
+              []
+    ]
+  structure_item (lib/InputFile.ml[68,2849+0]..[71,2942+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[68,2849+4]..[68,2849+18])
+          Ppat_var "get_input_file" (lib/InputFile.ml[68,2849+4]..[68,2849+18])
+        expression (lib/InputFile.ml[68,2849+19]..[71,2942+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/InputFile.ml[68,2849+19]..[68,2849+21])
+            Ppat_construct "()" (lib/InputFile.ml[68,2849+19]..[68,2849+21])
+            None
+          expression (lib/InputFile.ml[68,2849+22]..[71,2942+3])
+            Pexp_constraint
+            expression (lib/InputFile.ml[68,2849+37]..[71,2942+3])
+              Pexp_record
+              [
+                "input_file_name" (lib/InputFile.ml[69,2888+4]..[69,2888+19])
+                  expression (lib/InputFile.ml[69,2888+21]..[69,2888+28])
+                    Pexp_constant PConst_string("dummy",(lib/InputFile.ml[69,2888+22]..[69,2888+27]),None)
+                "input_file_index" (lib/InputFile.ml[70,2918+4]..[70,2918+20])
+                  expression (lib/InputFile.ml[70,2918+22]..[70,2918+23])
+                    Pexp_constant PConst_int (0,None)
+              ]
+              None
+            core_type (lib/InputFile.ml[68,2849+24]..[68,2849+34])
+              Ptyp_constr "input_file" (lib/InputFile.ml[68,2849+24]..[68,2849+34])
+              []
+    ]
+  structure_item (lib/InputFile.ml[73,2947+0]..[74,2985+36])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[73,2947+4]..[73,2947+23])
+          Ppat_var "get_input_file_name" (lib/InputFile.ml[73,2947+4]..[73,2947+23])
+        expression (lib/InputFile.ml[73,2947+24]..[74,2985+36]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/InputFile.ml[73,2947+24]..[73,2947+26])
+            Ppat_construct "()" (lib/InputFile.ml[73,2947+24]..[73,2947+26])
+            None
+          expression (lib/InputFile.ml[73,2947+27]..[74,2985+36])
+            Pexp_constraint
+            expression (lib/InputFile.ml[74,2985+2]..[74,2985+36])
+              Pexp_field
+              expression (lib/InputFile.ml[74,2985+2]..[74,2985+20])
+                Pexp_apply
+                expression (lib/InputFile.ml[74,2985+3]..[74,2985+17])
+                  Pexp_ident "get_input_file" (lib/InputFile.ml[74,2985+3]..[74,2985+17])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/InputFile.ml[74,2985+17]..[74,2985+19])
+                      Pexp_construct "()" (lib/InputFile.ml[74,2985+17]..[74,2985+19])
+                      None
+                ]
+              "input_file_name" (lib/InputFile.ml[74,2985+21]..[74,2985+36])
+            core_type (lib/InputFile.ml[73,2947+29]..[73,2947+35])
+              Ptyp_constr "string" (lib/InputFile.ml[73,2947+29]..[73,2947+35])
+              []
+    ]
+  structure_item (lib/InputFile.ml[80,3154+0]..[85,3254+14])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[80,3154+4]..[80,3154+23])
+          Ppat_var "get_initialized_ref" (lib/InputFile.ml[80,3154+4]..[80,3154+23])
+        expression (lib/InputFile.ml[80,3154+24]..[85,3254+14]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/InputFile.ml[80,3154+24]..[80,3154+27])
+            Ppat_var "ref" (lib/InputFile.ml[80,3154+24]..[80,3154+27])
+          expression (lib/InputFile.ml[81,3184+2]..[85,3254+14])
+            Pexp_match
+            expression (lib/InputFile.ml[81,3184+8]..[81,3184+12])
+              Pexp_apply
+              expression (lib/InputFile.ml[81,3184+8]..[81,3184+9])
+                Pexp_ident "!" (lib/InputFile.ml[81,3184+8]..[81,3184+9])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/InputFile.ml[81,3184+9]..[81,3184+12])
+                    Pexp_ident "ref" (lib/InputFile.ml[81,3184+9]..[81,3184+12])
+              ]
+            [
+              <case>
+                pattern (lib/InputFile.ml[82,3202+4]..[82,3202+8])
+                  Ppat_construct "None" (lib/InputFile.ml[82,3202+4]..[82,3202+8])
+                  None
+                expression (lib/InputFile.ml[83,3214+6]..[83,3214+18])
+                  Pexp_assert
+                  expression (lib/InputFile.ml[83,3214+13]..[83,3214+18])
+                    Pexp_construct "false" (lib/InputFile.ml[83,3214+13]..[83,3214+18])
+                    None
+              <case>
+                pattern (lib/InputFile.ml[84,3233+4]..[84,3233+17])
+                  Ppat_construct "Some" (lib/InputFile.ml[84,3233+4]..[84,3233+8])
+                  Some
+                    []
+                    pattern (lib/InputFile.ml[84,3233+9]..[84,3233+17])
+                      Ppat_var "contents" (lib/InputFile.ml[84,3233+9]..[84,3233+17])
+                expression (lib/InputFile.ml[85,3254+6]..[85,3254+14])
+                  Pexp_ident "contents" (lib/InputFile.ml[85,3254+6]..[85,3254+14])
+            ]
+    ]
+  structure_item (lib/InputFile.ml[87,3270+0]..[88,3290+28])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[87,3270+4]..[87,3270+17])
+          Ppat_var "file_contents" (lib/InputFile.ml[87,3270+4]..[87,3270+17])
+        expression (lib/InputFile.ml[88,3290+2]..[88,3290+28])
+          Pexp_apply
+          expression (lib/InputFile.ml[88,3290+2]..[88,3290+5])
+            Pexp_ident "ref" (lib/InputFile.ml[88,3290+2]..[88,3290+5])
+          [
+            <arg>
+            Nolabel
+              expression (lib/InputFile.ml[88,3290+6]..[88,3290+28])
+                Pexp_constraint
+                expression (lib/InputFile.ml[88,3290+7]..[88,3290+11])
+                  Pexp_construct "None" (lib/InputFile.ml[88,3290+7]..[88,3290+11])
+                  None
+                core_type (lib/InputFile.ml[88,3290+14]..[88,3290+27])
+                  Ptyp_constr "option" (lib/InputFile.ml[88,3290+21]..[88,3290+27])
+                  [
+                    core_type (lib/InputFile.ml[88,3290+14]..[88,3290+20])
+                      Ptyp_constr "string" (lib/InputFile.ml[88,3290+14]..[88,3290+20])
+                      []
+                  ]
+          ]
+    ]
+  structure_item (lib/InputFile.ml[90,3320+0]..[91,3347+35])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[90,3320+4]..[90,3320+21])
+          Ppat_var "get_file_contents" (lib/InputFile.ml[90,3320+4]..[90,3320+21])
+        expression (lib/InputFile.ml[90,3320+22]..[91,3347+35]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/InputFile.ml[90,3320+22]..[90,3320+24])
+            Ppat_construct "()" (lib/InputFile.ml[90,3320+22]..[90,3320+24])
+            None
+          expression (lib/InputFile.ml[91,3347+2]..[91,3347+35])
+            Pexp_apply
+            expression (lib/InputFile.ml[91,3347+2]..[91,3347+21])
+              Pexp_ident "get_initialized_ref" (lib/InputFile.ml[91,3347+2]..[91,3347+21])
+            [
+              <arg>
+              Nolabel
+                expression (lib/InputFile.ml[91,3347+22]..[91,3347+35])
+                  Pexp_ident "file_contents" (lib/InputFile.ml[91,3347+22]..[91,3347+35])
+            ]
+    ]
+  structure_item (lib/InputFile.ml[93,3384+0]..[97,3525+8])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[93,3384+4]..[93,3384+22])
+          Ppat_var "with_file_contents" (lib/InputFile.ml[93,3384+4]..[93,3384+22])
+        expression (lib/InputFile.ml[93,3384+23]..[97,3525+8]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/InputFile.ml[93,3384+23]..[93,3384+31])
+            Ppat_var "contents" (lib/InputFile.ml[93,3384+23]..[93,3384+31])
+          expression (lib/InputFile.ml[93,3384+32]..[97,3525+8]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/InputFile.ml[93,3384+32]..[93,3384+33])
+              Ppat_var "f" (lib/InputFile.ml[93,3384+32]..[93,3384+33])
+            expression (lib/InputFile.ml[94,3420+2]..[97,3525+8])
+              Pexp_sequence
+              expression (lib/InputFile.ml[94,3420+2]..[94,3420+32])
+                Pexp_apply
+                expression (lib/InputFile.ml[94,3420+16]..[94,3420+18])
+                  Pexp_ident ":=" (lib/InputFile.ml[94,3420+16]..[94,3420+18])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/InputFile.ml[94,3420+2]..[94,3420+15])
+                      Pexp_ident "file_contents" (lib/InputFile.ml[94,3420+2]..[94,3420+15])
+                  <arg>
+                  Nolabel
+                    expression (lib/InputFile.ml[94,3420+19]..[94,3420+32])
+                      Pexp_construct "Some" (lib/InputFile.ml[94,3420+19]..[94,3420+23])
+                      Some
+                        expression (lib/InputFile.ml[94,3420+24]..[94,3420+32])
+                          Pexp_ident "contents" (lib/InputFile.ml[94,3420+24]..[94,3420+32])
+                ]
+              expression (lib/InputFile.ml[95,3454+2]..[97,3525+8])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (lib/InputFile.ml[95,3454+6]..[95,3454+12])
+                      Ppat_var "result" (lib/InputFile.ml[95,3454+6]..[95,3454+12])
+                    expression (lib/InputFile.ml[95,3454+15]..[95,3454+18])
+                      Pexp_apply
+                      expression (lib/InputFile.ml[95,3454+15]..[95,3454+16])
+                        Pexp_ident "f" (lib/InputFile.ml[95,3454+15]..[95,3454+16])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/InputFile.ml[95,3454+16]..[95,3454+18])
+                            Pexp_construct "()" (lib/InputFile.ml[95,3454+16]..[95,3454+18])
+                            None
+                      ]
+                ]
+                expression (lib/InputFile.ml[96,3476+2]..[97,3525+8])
+                  Pexp_sequence
+                  expression (lib/InputFile.ml[96,3476+2]..[96,3476+23])
+                    Pexp_apply
+                    expression (lib/InputFile.ml[96,3476+16]..[96,3476+18])
+                      Pexp_ident ":=" (lib/InputFile.ml[96,3476+16]..[96,3476+18])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/InputFile.ml[96,3476+2]..[96,3476+15])
+                          Pexp_ident "file_contents" (lib/InputFile.ml[96,3476+2]..[96,3476+15])
+                      <arg>
+                      Nolabel
+                        expression (lib/InputFile.ml[96,3476+19]..[96,3476+23])
+                          Pexp_construct "None" (lib/InputFile.ml[96,3476+19]..[96,3476+23])
+                          None
+                    ]
+                  expression (lib/InputFile.ml[97,3525+2]..[97,3525+8])
+                    Pexp_ident "result" (lib/InputFile.ml[97,3525+2]..[97,3525+8])
+    ]
+  structure_item (lib/InputFile.ml[99,3535+0]..[99,3535+11])
+    Pstr_open Fresh
+    module_expr (lib/InputFile.ml[99,3535+5]..[99,3535+11])
+      Pmod_ident "Lexing" (lib/InputFile.ml[99,3535+5]..[99,3535+11])
+  structure_item (lib/InputFile.ml[101,3548+0]..[106,3697+30])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[101,3548+4]..[101,3548+9])
+          Ppat_var "chunk" (lib/InputFile.ml[101,3548+4]..[101,3548+9])
+        expression (lib/InputFile.ml[101,3548+10]..[106,3697+30]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/InputFile.ml[101,3548+10]..[101,3548+22])
+            Ppat_tuple
+            [
+              pattern (lib/InputFile.ml[101,3548+11]..[101,3548+15])
+                Ppat_var "pos1" (lib/InputFile.ml[101,3548+11]..[101,3548+15])
+              pattern (lib/InputFile.ml[101,3548+17]..[101,3548+21])
+                Ppat_var "pos2" (lib/InputFile.ml[101,3548+17]..[101,3548+21])
+            ]
+          expression (lib/InputFile.ml[102,3573+2]..[106,3697+30])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (lib/InputFile.ml[102,3573+6]..[102,3573+10])
+                  Ppat_var "ofs1" (lib/InputFile.ml[102,3573+6]..[102,3573+10])
+                expression (lib/InputFile.ml[102,3573+13]..[102,3573+26])
+                  Pexp_field
+                  expression (lib/InputFile.ml[102,3573+13]..[102,3573+17])
+                    Pexp_ident "pos1" (lib/InputFile.ml[102,3573+13]..[102,3573+17])
+                  "pos_cnum" (lib/InputFile.ml[102,3573+18]..[102,3573+26])
+              <def>
+                pattern (lib/InputFile.ml[103,3600+6]..[103,3600+10])
+                  Ppat_var "ofs2" (lib/InputFile.ml[103,3600+6]..[103,3600+10])
+                expression (lib/InputFile.ml[103,3600+13]..[103,3600+26])
+                  Pexp_field
+                  expression (lib/InputFile.ml[103,3600+13]..[103,3600+17])
+                    Pexp_ident "pos2" (lib/InputFile.ml[103,3600+13]..[103,3600+17])
+                  "pos_cnum" (lib/InputFile.ml[103,3600+18]..[103,3600+26])
+            ]
+            expression (lib/InputFile.ml[104,3630+2]..[106,3697+30])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (lib/InputFile.ml[104,3630+6]..[104,3630+14])
+                    Ppat_var "contents" (lib/InputFile.ml[104,3630+6]..[104,3630+14])
+                  expression (lib/InputFile.ml[104,3630+17]..[104,3630+36])
+                    Pexp_apply
+                    expression (lib/InputFile.ml[104,3630+17]..[104,3630+34])
+                      Pexp_ident "get_file_contents" (lib/InputFile.ml[104,3630+17]..[104,3630+34])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/InputFile.ml[104,3630+34]..[104,3630+36])
+                          Pexp_construct "()" (lib/InputFile.ml[104,3630+34]..[104,3630+36])
+                          None
+                    ]
+              ]
+              expression (lib/InputFile.ml[105,3670+2]..[106,3697+30])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (lib/InputFile.ml[105,3670+6]..[105,3670+9])
+                      Ppat_var "len" (lib/InputFile.ml[105,3670+6]..[105,3670+9])
+                    expression (lib/InputFile.ml[105,3670+12]..[105,3670+23])
+                      Pexp_apply
+                      expression (lib/InputFile.ml[105,3670+17]..[105,3670+18])
+                        Pexp_ident "-" (lib/InputFile.ml[105,3670+17]..[105,3670+18])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/InputFile.ml[105,3670+12]..[105,3670+16])
+                            Pexp_ident "ofs2" (lib/InputFile.ml[105,3670+12]..[105,3670+16])
+                        <arg>
+                        Nolabel
+                          expression (lib/InputFile.ml[105,3670+19]..[105,3670+23])
+                            Pexp_ident "ofs1" (lib/InputFile.ml[105,3670+19]..[105,3670+23])
+                      ]
+                ]
+                expression (lib/InputFile.ml[106,3697+2]..[106,3697+30])
+                  Pexp_apply
+                  expression (lib/InputFile.ml[106,3697+2]..[106,3697+12])
+                    Pexp_ident "String.sub" (lib/InputFile.ml[106,3697+2]..[106,3697+12])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/InputFile.ml[106,3697+13]..[106,3697+21])
+                        Pexp_ident "contents" (lib/InputFile.ml[106,3697+13]..[106,3697+21])
+                    <arg>
+                    Nolabel
+                      expression (lib/InputFile.ml[106,3697+22]..[106,3697+26])
+                        Pexp_ident "ofs1" (lib/InputFile.ml[106,3697+22]..[106,3697+26])
+                    <arg>
+                    Nolabel
+                      expression (lib/InputFile.ml[106,3697+27]..[106,3697+30])
+                        Pexp_ident "len" (lib/InputFile.ml[106,3697+27]..[106,3697+30])
+                  ]
+    ]
+  structure_item (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+          Ppat_construct "()" (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+          None
+        expression (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+          Pexp_apply
+          expression (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost,None)
+          ]
+    ]
+  structure_item (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+          Ppat_construct "()" (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+          None
+        expression (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+          Pexp_apply
+          expression (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+                Pexp_construct "()" (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+          Ppat_construct "()" (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+          None
+        expression (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+          Pexp_apply
+          expression (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+                Pexp_construct "()" (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+          Ppat_construct "()" (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+          None
+        expression (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+          Pexp_apply
+          expression (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/InputFile.ml[106,3697+30]..[106,3697+30]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set
+    ~absolute_filename:"lib/InputFile.ml"
+let () =
+  Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "InputFile.ml"
+type input_file = {
+  input_file_name: string ;
+  input_file_index: int }
+let builtin_input_file =
+  { input_file_name = "<builtin>"; input_file_index = (-1) }
+let dummy_input_file = { input_file_name = "<dummy>"; input_file_index = 0 }
+let same_input_file file1 file2 =
+  file1.input_file_index = file2.input_file_index
+let compare_input_files file1 file2 =
+  Generic.compare file1.input_file_index file2.input_file_index
+let current_input_file = ref dummy_input_file
+let new_input_file name =
+  (current_input_file :=
+     {
+       input_file_name = name;
+       input_file_index = ((!current_input_file).input_file_index + 1)
+     } : unit)
+let get_input_file () =
+  ({ input_file_name = "dummy"; input_file_index = 0 } : input_file)
+let get_input_file_name () = ((get_input_file ()).input_file_name : string)
+let get_initialized_ref ref =
+  match !ref with | None -> assert false | Some contents -> contents
+let file_contents = ref (None : string option)
+let get_file_contents () = get_initialized_ref file_contents
+let with_file_contents contents f =
+  file_contents := (Some contents);
+  (let result = f () in file_contents := None; result)
+open Lexing
+let chunk (pos1, pos2) =
+  let ofs1 = pos1.pos_cnum
+  and ofs2 = pos2.pos_cnum in
+  let contents = get_file_contents () in
+  let len = ofs2 - ofs1 in String.sub contents ofs1 len
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+          Texp_apply
+          expression (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+          Texp_apply
+          expression (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+          Texp_apply
+          expression (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+                Texp_constant Const_string("lib/InputFile.ml",(lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+          Texp_apply
+          expression (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost
+                Texp_constant Const_string("InputFile.ml",(lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[32,1879+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[35,1950+1])
+    Tstr_type Rec
+    [
+      type_declaration input_file/1132 (lib/InputFile.ml[32,1879+0]..lib/InputFile.ml[35,1950+1])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (lib/InputFile.ml[33,1899+2]..lib/InputFile.ml[33,1899+26])
+                Immutable
+                input_file_name/1133                core_type (lib/InputFile.ml[33,1899+19]..lib/InputFile.ml[33,1899+25])
+                  Ttyp_poly
+                  core_type (lib/InputFile.ml[33,1899+19]..lib/InputFile.ml[33,1899+25])
+                    Ttyp_constr "string/15!"
+                    []
+              (lib/InputFile.ml[34,1926+2]..lib/InputFile.ml[34,1926+23])
+                Immutable
+                input_file_index/1134                core_type (lib/InputFile.ml[34,1926+20]..lib/InputFile.ml[34,1926+23])
+                  Ttyp_poly
+                  core_type (lib/InputFile.ml[34,1926+20]..lib/InputFile.ml[34,1926+23])
+                    Ttyp_constr "int/1!"
+                    []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/InputFile.ml[37,1953+0]..lib/InputFile.ml[40,2037+1])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[37,1953+4]..lib/InputFile.ml[37,1953+22])
+          Tpat_var "builtin_input_file/1135"
+        expression (lib/InputFile.ml[37,1953+25]..lib/InputFile.ml[40,2037+1])
+          Texp_record
+            fields =
+              [
+                "input_file_name"
+                  expression (lib/InputFile.ml[38,1980+20]..lib/InputFile.ml[38,1980+31])
+                    Texp_constant Const_string("<builtin>",(lib/InputFile.ml[38,1980+21]..lib/InputFile.ml[38,1980+30]),None)
+                "input_file_index"
+                  expression (lib/InputFile.ml[39,2013+21]..lib/InputFile.ml[39,2013+23])
+                    Texp_constant Const_int -1
+              ]
+            representation =
+              Record_regular
+            extended_expression =
+              None
+    ]
+  structure_item (lib/InputFile.ml[42,2040+0]..lib/InputFile.ml[45,2119+1])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[42,2040+4]..lib/InputFile.ml[42,2040+20])
+          Tpat_var "dummy_input_file/1136"
+        expression (lib/InputFile.ml[42,2040+23]..lib/InputFile.ml[45,2119+1])
+          Texp_record
+            fields =
+              [
+                "input_file_name"
+                  expression (lib/InputFile.ml[43,2065+20]..lib/InputFile.ml[43,2065+29])
+                    Texp_constant Const_string("<dummy>",(lib/InputFile.ml[43,2065+21]..lib/InputFile.ml[43,2065+28]),None)
+                "input_file_index"
+                  expression (lib/InputFile.ml[44,2096+21]..lib/InputFile.ml[44,2096+22])
+                    Texp_constant Const_int 0
+              ]
+            representation =
+              Record_regular
+            extended_expression =
+              None
+    ]
+  structure_item (lib/InputFile.ml[47,2122+0]..lib/InputFile.ml[48,2156+49])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[47,2122+4]..lib/InputFile.ml[47,2122+19])
+          Tpat_var "same_input_file/1137"
+        expression (lib/InputFile.ml[47,2122+20]..lib/InputFile.ml[48,2156+49]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/InputFile.ml[47,2122+20]..lib/InputFile.ml[47,2122+25])
+                Tpat_var "file1/1139"
+              expression (lib/InputFile.ml[47,2122+26]..lib/InputFile.ml[48,2156+49]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/InputFile.ml[47,2122+26]..lib/InputFile.ml[47,2122+31])
+                      Tpat_var "file2/1140"
+                    expression (lib/InputFile.ml[48,2156+2]..lib/InputFile.ml[48,2156+49])
+                      Texp_apply
+                      expression (lib/InputFile.ml[48,2156+25]..lib/InputFile.ml[48,2156+26])
+                        Texp_ident "Stdlib!.="
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/InputFile.ml[48,2156+2]..lib/InputFile.ml[48,2156+24])
+                            Texp_field
+                            expression (lib/InputFile.ml[48,2156+2]..lib/InputFile.ml[48,2156+7])
+                              Texp_ident "file1/1139"
+                            "input_file_index"
+                        <arg>
+                          Nolabel
+                          expression (lib/InputFile.ml[48,2156+27]..lib/InputFile.ml[48,2156+49])
+                            Texp_field
+                            expression (lib/InputFile.ml[48,2156+27]..lib/InputFile.ml[48,2156+32])
+                              Texp_ident "file2/1140"
+                            "input_file_index"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/InputFile.ml[51,2267+0]..lib/InputFile.ml[52,2305+63])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[51,2267+4]..lib/InputFile.ml[51,2267+23])
+          Tpat_var "compare_input_files/1141"
+        expression (lib/InputFile.ml[51,2267+24]..lib/InputFile.ml[52,2305+63]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/InputFile.ml[51,2267+24]..lib/InputFile.ml[51,2267+29])
+                Tpat_var "file1/1143"
+              expression (lib/InputFile.ml[51,2267+30]..lib/InputFile.ml[52,2305+63]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/InputFile.ml[51,2267+30]..lib/InputFile.ml[51,2267+35])
+                      Tpat_var "file2/1144"
+                    expression (lib/InputFile.ml[52,2305+2]..lib/InputFile.ml[52,2305+63])
+                      Texp_apply
+                      expression (lib/InputFile.ml[52,2305+2]..lib/InputFile.ml[52,2305+17])
+                        Texp_ident "Gbnf_parser!.Generic.compare"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/InputFile.ml[52,2305+18]..lib/InputFile.ml[52,2305+40])
+                            Texp_field
+                            expression (lib/InputFile.ml[52,2305+18]..lib/InputFile.ml[52,2305+23])
+                              Texp_ident "file1/1143"
+                            "input_file_index"
+                        <arg>
+                          Nolabel
+                          expression (lib/InputFile.ml[52,2305+41]..lib/InputFile.ml[52,2305+63])
+                            Texp_field
+                            expression (lib/InputFile.ml[52,2305+41]..lib/InputFile.ml[52,2305+46])
+                              Texp_ident "file2/1144"
+                            "input_file_index"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/InputFile.ml[58,2588+0]..lib/InputFile.ml[59,2613+22])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[58,2588+4]..lib/InputFile.ml[58,2588+22])
+          Tpat_var "current_input_file/1146"
+        expression (lib/InputFile.ml[59,2613+2]..lib/InputFile.ml[59,2613+22])
+          Texp_apply
+          expression (lib/InputFile.ml[59,2613+2]..lib/InputFile.ml[59,2613+5])
+            Texp_ident "Stdlib!.ref"
+          [
+            <arg>
+              Nolabel
+              expression (lib/InputFile.ml[59,2613+6]..lib/InputFile.ml[59,2613+22])
+                Texp_ident "dummy_input_file/1136"
+          ]
+    ]
+  structure_item (lib/InputFile.ml[62,2693+0]..lib/InputFile.ml[66,2844+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[62,2693+4]..lib/InputFile.ml[62,2693+18])
+          Tpat_var "new_input_file/1147"
+        expression (lib/InputFile.ml[62,2693+19]..lib/InputFile.ml[66,2844+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/InputFile.ml[62,2693+19]..lib/InputFile.ml[62,2693+23])
+                Tpat_var "name/1149"
+              expression (lib/InputFile.ml[63,2726+2]..lib/InputFile.ml[66,2844+3])
+                extra
+                  Texp_constraint
+                  core_type (lib/InputFile.ml[62,2693+26]..lib/InputFile.ml[62,2693+30])
+                    Ttyp_constr "unit/6!"
+                    []
+                Texp_apply
+                expression (lib/InputFile.ml[63,2726+21]..lib/InputFile.ml[63,2726+23])
+                  Texp_ident "Stdlib!.:="
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/InputFile.ml[63,2726+2]..lib/InputFile.ml[63,2726+20])
+                      Texp_ident "current_input_file/1146"
+                  <arg>
+                    Nolabel
+                    expression (lib/InputFile.ml[63,2726+24]..lib/InputFile.ml[66,2844+3])
+                      Texp_record
+                        fields =
+                          [
+                            "input_file_name"
+                              expression (lib/InputFile.ml[64,2752+22]..lib/InputFile.ml[64,2752+26])
+                                Texp_ident "name/1149"
+                            "input_file_index"
+                              expression (lib/InputFile.ml[65,2780+23]..lib/InputFile.ml[65,2780+63])
+                                Texp_apply
+                                expression (lib/InputFile.ml[65,2780+60]..lib/InputFile.ml[65,2780+61])
+                                  Texp_ident "Stdlib!.+"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/InputFile.ml[65,2780+23]..lib/InputFile.ml[65,2780+59])
+                                      Texp_field
+                                      expression (lib/InputFile.ml[65,2780+23]..lib/InputFile.ml[65,2780+42])
+                                        Texp_apply
+                                        expression (lib/InputFile.ml[65,2780+23]..lib/InputFile.ml[65,2780+24])
+                                          Texp_ident "Stdlib!.!"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/InputFile.ml[65,2780+24]..lib/InputFile.ml[65,2780+42])
+                                              Texp_ident "current_input_file/1146"
+                                        ]
+                                      "input_file_index"
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/InputFile.ml[65,2780+62]..lib/InputFile.ml[65,2780+63])
+                                      Texp_constant Const_int 1
+                                ]
+                          ]
+                        representation =
+                          Record_regular
+                        extended_expression =
+                          None
+                ]
+          ]
+    ]
+  structure_item (lib/InputFile.ml[68,2849+0]..lib/InputFile.ml[71,2942+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[68,2849+4]..lib/InputFile.ml[68,2849+18])
+          Tpat_var "get_input_file/1150"
+        expression (lib/InputFile.ml[68,2849+19]..lib/InputFile.ml[71,2942+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/InputFile.ml[68,2849+19]..lib/InputFile.ml[68,2849+21])
+                Tpat_construct "()"
+                []
+                None
+              expression (lib/InputFile.ml[68,2849+37]..lib/InputFile.ml[71,2942+3])
+                extra
+                  Texp_constraint
+                  core_type (lib/InputFile.ml[68,2849+24]..lib/InputFile.ml[68,2849+34])
+                    Ttyp_constr "input_file/1132"
+                    []
+                Texp_record
+                  fields =
+                    [
+                      "input_file_name"
+                        expression (lib/InputFile.ml[69,2888+21]..lib/InputFile.ml[69,2888+28])
+                          Texp_constant Const_string("dummy",(lib/InputFile.ml[69,2888+22]..lib/InputFile.ml[69,2888+27]),None)
+                      "input_file_index"
+                        expression (lib/InputFile.ml[70,2918+22]..lib/InputFile.ml[70,2918+23])
+                          Texp_constant Const_int 0
+                    ]
+                  representation =
+                    Record_regular
+                  extended_expression =
+                    None
+          ]
+    ]
+  structure_item (lib/InputFile.ml[73,2947+0]..lib/InputFile.ml[74,2985+36])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[73,2947+4]..lib/InputFile.ml[73,2947+23])
+          Tpat_var "get_input_file_name/1153"
+        expression (lib/InputFile.ml[73,2947+24]..lib/InputFile.ml[74,2985+36]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/InputFile.ml[73,2947+24]..lib/InputFile.ml[73,2947+26])
+                Tpat_construct "()"
+                []
+                None
+              expression (lib/InputFile.ml[74,2985+2]..lib/InputFile.ml[74,2985+36])
+                extra
+                  Texp_constraint
+                  core_type (lib/InputFile.ml[73,2947+29]..lib/InputFile.ml[73,2947+35])
+                    Ttyp_constr "string/15!"
+                    []
+                Texp_field
+                expression (lib/InputFile.ml[74,2985+2]..lib/InputFile.ml[74,2985+20])
+                  Texp_apply
+                  expression (lib/InputFile.ml[74,2985+3]..lib/InputFile.ml[74,2985+17])
+                    Texp_ident "get_input_file/1150"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (lib/InputFile.ml[74,2985+17]..lib/InputFile.ml[74,2985+19])
+                        Texp_construct "()"
+                        []
+                  ]
+                "input_file_name"
+          ]
+    ]
+  structure_item (lib/InputFile.ml[80,3154+0]..lib/InputFile.ml[85,3254+14])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[80,3154+4]..lib/InputFile.ml[80,3154+23])
+          Tpat_var "get_initialized_ref/1156"
+        expression (lib/InputFile.ml[80,3154+24]..lib/InputFile.ml[85,3254+14]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/InputFile.ml[80,3154+24]..lib/InputFile.ml[80,3154+27])
+                Tpat_var "ref/1158"
+              expression (lib/InputFile.ml[81,3184+2]..lib/InputFile.ml[85,3254+14])
+                Texp_match
+                expression (lib/InputFile.ml[81,3184+8]..lib/InputFile.ml[81,3184+12])
+                  Texp_apply
+                  expression (lib/InputFile.ml[81,3184+8]..lib/InputFile.ml[81,3184+9])
+                    Texp_ident "Stdlib!.!"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (lib/InputFile.ml[81,3184+9]..lib/InputFile.ml[81,3184+12])
+                        Texp_ident "ref/1158"
+                  ]
+                [
+                  <case>
+                    pattern (lib/InputFile.ml[82,3202+4]..lib/InputFile.ml[82,3202+8])
+                      Tpat_value
+                      pattern (lib/InputFile.ml[82,3202+4]..lib/InputFile.ml[82,3202+8])
+                        Tpat_construct "None"
+                        []
+                        None
+                    expression (lib/InputFile.ml[83,3214+6]..lib/InputFile.ml[83,3214+18])
+                      Texp_assert                      expression (lib/InputFile.ml[83,3214+13]..lib/InputFile.ml[83,3214+18])
+                        Texp_construct "false"
+                        []
+                  <case>
+                    pattern (lib/InputFile.ml[84,3233+4]..lib/InputFile.ml[84,3233+17])
+                      Tpat_value
+                      pattern (lib/InputFile.ml[84,3233+4]..lib/InputFile.ml[84,3233+17])
+                        Tpat_construct "Some"
+                        [
+                          pattern (lib/InputFile.ml[84,3233+9]..lib/InputFile.ml[84,3233+17])
+                            Tpat_var "contents/1159"
+                        ]
+                        None
+                    expression (lib/InputFile.ml[85,3254+6]..lib/InputFile.ml[85,3254+14])
+                      Texp_ident "contents/1159"
+                ]
+          ]
+    ]
+  structure_item (lib/InputFile.ml[87,3270+0]..lib/InputFile.ml[88,3290+28])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[87,3270+4]..lib/InputFile.ml[87,3270+17])
+          Tpat_var "file_contents/1160"
+        expression (lib/InputFile.ml[88,3290+2]..lib/InputFile.ml[88,3290+28])
+          Texp_apply
+          expression (lib/InputFile.ml[88,3290+2]..lib/InputFile.ml[88,3290+5])
+            Texp_ident "Stdlib!.ref"
+          [
+            <arg>
+              Nolabel
+              expression (lib/InputFile.ml[88,3290+7]..lib/InputFile.ml[88,3290+11])
+                extra
+                  Texp_constraint
+                  core_type (lib/InputFile.ml[88,3290+14]..lib/InputFile.ml[88,3290+27])
+                    Ttyp_constr "option/10!"
+                    [
+                      core_type (lib/InputFile.ml[88,3290+14]..lib/InputFile.ml[88,3290+20])
+                        Ttyp_constr "string/15!"
+                        []
+                    ]
+                Texp_construct "None"
+                []
+          ]
+    ]
+  structure_item (lib/InputFile.ml[90,3320+0]..lib/InputFile.ml[91,3347+35])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[90,3320+4]..lib/InputFile.ml[90,3320+21])
+          Tpat_var "get_file_contents/1161"
+        expression (lib/InputFile.ml[90,3320+22]..lib/InputFile.ml[91,3347+35]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/InputFile.ml[90,3320+22]..lib/InputFile.ml[90,3320+24])
+                Tpat_construct "()"
+                []
+                None
+              expression (lib/InputFile.ml[91,3347+2]..lib/InputFile.ml[91,3347+35])
+                Texp_apply
+                expression (lib/InputFile.ml[91,3347+2]..lib/InputFile.ml[91,3347+21])
+                  Texp_ident "get_initialized_ref/1156"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/InputFile.ml[91,3347+22]..lib/InputFile.ml[91,3347+35])
+                      Texp_ident "file_contents/1160"
+                ]
+          ]
+    ]
+  structure_item (lib/InputFile.ml[93,3384+0]..lib/InputFile.ml[97,3525+8])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[93,3384+4]..lib/InputFile.ml[93,3384+22])
+          Tpat_var "with_file_contents/1164"
+        expression (lib/InputFile.ml[93,3384+23]..lib/InputFile.ml[97,3525+8]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/InputFile.ml[93,3384+23]..lib/InputFile.ml[93,3384+31])
+                Tpat_var "contents/1166"
+              expression (lib/InputFile.ml[93,3384+32]..lib/InputFile.ml[97,3525+8]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/InputFile.ml[93,3384+32]..lib/InputFile.ml[93,3384+33])
+                      Tpat_var "f/1167"
+                    expression (lib/InputFile.ml[94,3420+2]..lib/InputFile.ml[97,3525+8])
+                      Texp_sequence
+                      expression (lib/InputFile.ml[94,3420+2]..lib/InputFile.ml[94,3420+32])
+                        Texp_apply
+                        expression (lib/InputFile.ml[94,3420+16]..lib/InputFile.ml[94,3420+18])
+                          Texp_ident "Stdlib!.:="
+                        [
+                          <arg>
+                            Nolabel
+                            expression (lib/InputFile.ml[94,3420+2]..lib/InputFile.ml[94,3420+15])
+                              Texp_ident "file_contents/1160"
+                          <arg>
+                            Nolabel
+                            expression (lib/InputFile.ml[94,3420+19]..lib/InputFile.ml[94,3420+32])
+                              Texp_construct "Some"
+                              [
+                                expression (lib/InputFile.ml[94,3420+24]..lib/InputFile.ml[94,3420+32])
+                                  Texp_ident "contents/1166"
+                              ]
+                        ]
+                      expression (lib/InputFile.ml[95,3454+2]..lib/InputFile.ml[97,3525+8])
+                        Texp_let Nonrec
+                        [
+                          <def>
+                            pattern (lib/InputFile.ml[95,3454+6]..lib/InputFile.ml[95,3454+12])
+                              Tpat_var "result/1168"
+                            expression (lib/InputFile.ml[95,3454+15]..lib/InputFile.ml[95,3454+18])
+                              Texp_apply
+                              expression (lib/InputFile.ml[95,3454+15]..lib/InputFile.ml[95,3454+16])
+                                Texp_ident "f/1167"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (lib/InputFile.ml[95,3454+16]..lib/InputFile.ml[95,3454+18])
+                                    Texp_construct "()"
+                                    []
+                              ]
+                        ]
+                        expression (lib/InputFile.ml[96,3476+2]..lib/InputFile.ml[97,3525+8])
+                          Texp_sequence
+                          expression (lib/InputFile.ml[96,3476+2]..lib/InputFile.ml[96,3476+23])
+                            Texp_apply
+                            expression (lib/InputFile.ml[96,3476+16]..lib/InputFile.ml[96,3476+18])
+                              Texp_ident "Stdlib!.:="
+                            [
+                              <arg>
+                                Nolabel
+                                expression (lib/InputFile.ml[96,3476+2]..lib/InputFile.ml[96,3476+15])
+                                  Texp_ident "file_contents/1160"
+                              <arg>
+                                Nolabel
+                                expression (lib/InputFile.ml[96,3476+19]..lib/InputFile.ml[96,3476+23])
+                                  Texp_construct "None"
+                                  []
+                            ]
+                          expression (lib/InputFile.ml[97,3525+2]..lib/InputFile.ml[97,3525+8])
+                            Texp_ident "result/1168"
+                ]
+          ]
+    ]
+  structure_item (lib/InputFile.ml[99,3535+0]..lib/InputFile.ml[99,3535+11])
+    Tstr_open Fresh
+    module_expr (lib/InputFile.ml[99,3535+5]..lib/InputFile.ml[99,3535+11])
+      Tmod_ident "Stdlib!.Lexing"
+  structure_item (lib/InputFile.ml[101,3548+0]..lib/InputFile.ml[106,3697+30])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[101,3548+4]..lib/InputFile.ml[101,3548+9])
+          Tpat_var "chunk/1193"
+        expression (lib/InputFile.ml[101,3548+10]..lib/InputFile.ml[106,3697+30]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/InputFile.ml[101,3548+10]..lib/InputFile.ml[101,3548+22])
+                Tpat_tuple
+                [
+                  pattern (lib/InputFile.ml[101,3548+11]..lib/InputFile.ml[101,3548+15])
+                    Tpat_var "pos1/1195"
+                  pattern (lib/InputFile.ml[101,3548+17]..lib/InputFile.ml[101,3548+21])
+                    Tpat_var "pos2/1196"
+                ]
+              expression (lib/InputFile.ml[102,3573+2]..lib/InputFile.ml[106,3697+30])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (lib/InputFile.ml[102,3573+6]..lib/InputFile.ml[102,3573+10])
+                      Tpat_var "ofs1/1197"
+                    expression (lib/InputFile.ml[102,3573+13]..lib/InputFile.ml[102,3573+26])
+                      Texp_field
+                      expression (lib/InputFile.ml[102,3573+13]..lib/InputFile.ml[102,3573+17])
+                        Texp_ident "pos1/1195"
+                      "pos_cnum"
+                  <def>
+                    pattern (lib/InputFile.ml[103,3600+6]..lib/InputFile.ml[103,3600+10])
+                      Tpat_var "ofs2/1198"
+                    expression (lib/InputFile.ml[103,3600+13]..lib/InputFile.ml[103,3600+26])
+                      Texp_field
+                      expression (lib/InputFile.ml[103,3600+13]..lib/InputFile.ml[103,3600+17])
+                        Texp_ident "pos2/1196"
+                      "pos_cnum"
+                ]
+                expression (lib/InputFile.ml[104,3630+2]..lib/InputFile.ml[106,3697+30])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (lib/InputFile.ml[104,3630+6]..lib/InputFile.ml[104,3630+14])
+                        Tpat_var "contents/1199"
+                      expression (lib/InputFile.ml[104,3630+17]..lib/InputFile.ml[104,3630+36])
+                        Texp_apply
+                        expression (lib/InputFile.ml[104,3630+17]..lib/InputFile.ml[104,3630+34])
+                          Texp_ident "get_file_contents/1161"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (lib/InputFile.ml[104,3630+34]..lib/InputFile.ml[104,3630+36])
+                              Texp_construct "()"
+                              []
+                        ]
+                  ]
+                  expression (lib/InputFile.ml[105,3670+2]..lib/InputFile.ml[106,3697+30])
+                    Texp_let Nonrec
+                    [
+                      <def>
+                        pattern (lib/InputFile.ml[105,3670+6]..lib/InputFile.ml[105,3670+9])
+                          Tpat_var "len/1200"
+                        expression (lib/InputFile.ml[105,3670+12]..lib/InputFile.ml[105,3670+23])
+                          Texp_apply
+                          expression (lib/InputFile.ml[105,3670+17]..lib/InputFile.ml[105,3670+18])
+                            Texp_ident "Stdlib!.-"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/InputFile.ml[105,3670+12]..lib/InputFile.ml[105,3670+16])
+                                Texp_ident "ofs2/1198"
+                            <arg>
+                              Nolabel
+                              expression (lib/InputFile.ml[105,3670+19]..lib/InputFile.ml[105,3670+23])
+                                Texp_ident "ofs1/1197"
+                          ]
+                    ]
+                    expression (lib/InputFile.ml[106,3697+2]..lib/InputFile.ml[106,3697+30])
+                      Texp_apply
+                      expression (lib/InputFile.ml[106,3697+2]..lib/InputFile.ml[106,3697+12])
+                        Texp_ident "Stdlib!.String.sub"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/InputFile.ml[106,3697+13]..lib/InputFile.ml[106,3697+21])
+                            Texp_ident "contents/1199"
+                        <arg>
+                          Nolabel
+                          expression (lib/InputFile.ml[106,3697+22]..lib/InputFile.ml[106,3697+26])
+                            Texp_ident "ofs1/1197"
+                        <arg>
+                          Nolabel
+                          expression (lib/InputFile.ml[106,3697+27]..lib/InputFile.ml[106,3697+30])
+                            Texp_ident "len/1200"
+                      ]
+          ]
+    ]
+  structure_item (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+          Texp_apply
+          expression (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost,None)
+          ]
+    ]
+  structure_item (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+          Texp_apply
+          expression (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+          Texp_apply
+          expression (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+          Texp_apply
+          expression (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/InputFile.ml[106,3697+30]..lib/InputFile.ml[106,3697+30]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__InputFile>
+ "builtin_input_file"[value] -> <Gbnf_parser__InputFile.3>;
+ "chunk"[value] -> <Gbnf_parser__InputFile.25>;
+ "compare_input_files"[value] -> <Gbnf_parser__InputFile.8>;
+ "current_input_file"[value] -> <Gbnf_parser__InputFile.11>;
+ "dummy_input_file"[value] -> <Gbnf_parser__InputFile.4>;
+ "file_contents"[value] -> <Gbnf_parser__InputFile.19>;
+ "get_file_contents"[value] -> <Gbnf_parser__InputFile.20>;
+ "get_initialized_ref"[value] -> <Gbnf_parser__InputFile.16>;
+ "get_input_file"[value] -> <Gbnf_parser__InputFile.14>;
+ "get_input_file_name"[value] -> <Gbnf_parser__InputFile.15>;
+ "input_file"[type] -> <Gbnf_parser__InputFile.0>;
+ "new_input_file"[value] -> <Gbnf_parser__InputFile.12>;
+ "same_input_file"[value] -> <Gbnf_parser__InputFile.5>;
+ "with_file_contents"[value] -> <Gbnf_parser__InputFile.21>;
+ }
+
+(setglobal Gbnf_parser__InputFile!
+  (let
+    (*match*/1742 =
+       (after Gbnf_parser__InputFile lib/InputFile.ml(32)<ghost>:1879-1879
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__InputFile"))
+     *match*/1740 =
+       (after Gbnf_parser__InputFile lib/InputFile.ml(32)<ghost>:1879-1879
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1738 =
+       (after Gbnf_parser__InputFile lib/InputFile.ml(32)<ghost>:1879-1879
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/InputFile.ml"))
+     *match*/1736 =
+       (after Gbnf_parser__InputFile lib/InputFile.ml(32)<ghost>:1879-1879
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "InputFile.ml"))
+     builtin_input_file/1135 = [0: "<builtin>" -1]
+     dummy_input_file/1136 = [0: "<dummy>" 0]
+     same_input_file/1137 =
+       (function file1/1139 file2/1140 : int
+         (funct-body Gbnf_parser__InputFile.same_input_file lib/InputFile.ml(47)<ghost>:2142-2205
+           (before Gbnf_parser__InputFile.same_input_file lib/InputFile.ml(48):2158-2205
+             (== (field_int 1 file1/1139) (field_int 1 file2/1140)))))
+     compare_input_files/1141 =
+       (function file1/1143 file2/1144 : int
+         (funct-body Gbnf_parser__InputFile.compare_input_files lib/InputFile.ml(51)<ghost>:2291-2368
+           (before Gbnf_parser__InputFile.compare_input_files lib/InputFile.ml(52):2307-2368
+             (after Gbnf_parser__InputFile.compare_input_files lib/InputFile.ml(52):2307-2368
+               (apply (field_imm 0 (global Gbnf_parser__Generic!))
+                 (field_int 1 file1/1143) (field_int 1 file2/1144))))))
+     current_input_file/1146 = (makemutable 0 dummy_input_file/1136)
+     new_input_file/1147 =
+       (function name/1149 : int
+         (funct-body Gbnf_parser__InputFile.new_input_file lib/InputFile.ml(62)<ghost>:2712-2847
+           (before Gbnf_parser__InputFile.new_input_file lib/InputFile.ml(63):2728-2847
+             (setfield_ptr 0 current_input_file/1146
+               (makeblock 0 (*,int) name/1149
+                 (+ (field_int 1 (field_mut 0 current_input_file/1146)) 1))))))
+     get_input_file/1150 =
+       (function param/1152[int]
+         (funct-body Gbnf_parser__InputFile.get_input_file lib/InputFile.ml(68)<ghost>:2868-2945
+           (before Gbnf_parser__InputFile.get_input_file lib/InputFile.ml(68):2886-2945
+             [0: "dummy" 0])))
+     get_input_file_name/1153 =
+       (function param/1155[int]
+         (funct-body Gbnf_parser__InputFile.get_input_file_name lib/InputFile.ml(73)<ghost>:2971-3021
+           (before Gbnf_parser__InputFile.get_input_file_name lib/InputFile.ml(74):2987-3021
+             (field_imm 0
+               (after Gbnf_parser__InputFile.get_input_file_name lib/InputFile.ml(74):2987-3005
+                 (apply get_input_file/1150 0))))))
+     get_initialized_ref/1156 =
+       (function ref/1158
+         (funct-body Gbnf_parser__InputFile.get_initialized_ref lib/InputFile.ml(80)<ghost>:3178-3268
+           (before Gbnf_parser__InputFile.get_initialized_ref lib/InputFile.ml(81):3186-3268
+             (let (*match*/1726 = (field_mut 0 ref/1158))
+               (if *match*/1726
+                 (let (contents/1159 =a (field_imm 0 *match*/1726))
+                   (before Gbnf_parser__InputFile.get_initialized_ref lib/InputFile.ml(85):3260-3268
+                     contents/1159))
+                 (before Gbnf_parser__InputFile.get_initialized_ref lib/InputFile.ml(83):3220-3232
+                   (raise
+                     (after Gbnf_parser__InputFile.get_initialized_ref lib/InputFile.ml(83):3220-3232
+                       (makeblock 0 (global Assert_failure/28!)
+                         [0: "lib/InputFile.ml" 83 6])))))))))
+     file_contents/1160 = (makemutable 0 0)
+     get_file_contents/1161 =
+       (function param/1163[int]
+         (funct-body Gbnf_parser__InputFile.get_file_contents lib/InputFile.ml(90)<ghost>:3342-3382
+           (before Gbnf_parser__InputFile.get_file_contents lib/InputFile.ml(91):3349-3382
+             (after Gbnf_parser__InputFile.get_file_contents lib/InputFile.ml(91):3349-3382
+               (apply get_initialized_ref/1156 file_contents/1160)))))
+     with_file_contents/1164 =
+       (function contents/1166 f/1167
+         (funct-body Gbnf_parser__InputFile.with_file_contents lib/InputFile.ml(93)<ghost>:3407-3533
+           (before Gbnf_parser__InputFile.with_file_contents lib/InputFile.ml(94):3422-3533
+             (seq
+               (setfield_ptr 0 file_contents/1160
+                 (makeblock 0 contents/1166))
+               (before Gbnf_parser__InputFile.with_file_contents lib/InputFile.ml(95):3456-3533
+                 (let
+                   (result/1168 =
+                      (after Gbnf_parser__InputFile.with_file_contents lib/InputFile.ml(95):3469-3472
+                        (apply f/1167 0)))
+                   (before Gbnf_parser__InputFile.with_file_contents lib/InputFile.ml(96):3478-3533
+                     (seq (setfield_ptr 0 file_contents/1160 0)
+                       (before Gbnf_parser__InputFile.with_file_contents lib/InputFile.ml(97):3527-3533
+                         result/1168)))))))))
+     chunk/1193 =
+       (function param/1270
+         (funct-body Gbnf_parser__InputFile.chunk lib/InputFile.ml(101)<ghost>:3558-3727
+           (let
+             (pos2/1196 =a (field_imm 1 param/1270)
+              pos1/1195 =a (field_imm 0 param/1270))
+             (before Gbnf_parser__InputFile.chunk lib/InputFile.ml(102):3575-3727
+               (let
+                 (ofs1/1197 =[int] (field_int 3 pos1/1195)
+                  ofs2/1198 =[int] (field_int 3 pos2/1196))
+                 (before Gbnf_parser__InputFile.chunk lib/InputFile.ml(104):3632-3727
+                   (let
+                     (contents/1199 =
+                        (after Gbnf_parser__InputFile.chunk lib/InputFile.ml(104):3647-3666
+                          (apply get_file_contents/1161 0)))
+                     (before Gbnf_parser__InputFile.chunk lib/InputFile.ml(105):3672-3727
+                       (let (len/1200 =[int] (- ofs2/1198 ofs1/1197))
+                         (before Gbnf_parser__InputFile.chunk lib/InputFile.ml(106):3699-3727
+                           (after Gbnf_parser__InputFile.chunk lib/InputFile.ml(106):3699-3727
+                             (apply (field_imm 15 (global Stdlib__String!))
+                               contents/1199 ofs1/1197 len/1200))))))))))))
+     *match*/1734 =
+       (after Gbnf_parser__InputFile lib/InputFile.ml(106)<ghost>:3727-3727
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/1732 =
+       (after Gbnf_parser__InputFile lib/InputFile.ml(106)<ghost>:3727-3727
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/1730 =
+       (after Gbnf_parser__InputFile lib/InputFile.ml(106)<ghost>:3727-3727
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/1728 =
+       (after Gbnf_parser__InputFile lib/InputFile.ml(106)<ghost>:3727-3727
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__InputFile")))
+    (pseudo <unknown location>
+      (makeblock 0 builtin_input_file/1135 dummy_input_file/1136
+        same_input_file/1137 compare_input_files/1141 current_input_file/1146
+        new_input_file/1147 get_input_file/1150 get_input_file_name/1153
+        get_initialized_ref/1156 file_contents/1160 get_file_contents/1161
+        with_file_contents/1164 chunk/1193))))
+(setglobal Gbnf_parser__InputFile!
+  (let
+    (*match*/1742 =
+       (after Gbnf_parser__InputFile lib/InputFile.ml(32)<ghost>:1879-1879
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__InputFile"))
+     *match*/1740 =
+       (after Gbnf_parser__InputFile lib/InputFile.ml(32)<ghost>:1879-1879
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1738 =
+       (after Gbnf_parser__InputFile lib/InputFile.ml(32)<ghost>:1879-1879
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/InputFile.ml"))
+     *match*/1736 =
+       (after Gbnf_parser__InputFile lib/InputFile.ml(32)<ghost>:1879-1879
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "InputFile.ml"))
+     builtin_input_file/1135 = [0: "<builtin>" -1]
+     dummy_input_file/1136 = [0: "<dummy>" 0]
+     same_input_file/1137 =
+       (function file1/1139 file2/1140 : int
+         (funct-body Gbnf_parser__InputFile.same_input_file lib/InputFile.ml(47)<ghost>:2142-2205
+           (before Gbnf_parser__InputFile.same_input_file lib/InputFile.ml(48):2158-2205
+             (== (field_int 1 file1/1139) (field_int 1 file2/1140)))))
+     compare_input_files/1141 =
+       (function file1/1143 file2/1144 : int
+         (funct-body Gbnf_parser__InputFile.compare_input_files lib/InputFile.ml(51)<ghost>:2291-2368
+           (before Gbnf_parser__InputFile.compare_input_files lib/InputFile.ml(52):2307-2368
+             (after Gbnf_parser__InputFile.compare_input_files lib/InputFile.ml(52):2307-2368
+               (apply (field_imm 0 (global Gbnf_parser__Generic!))
+                 (field_int 1 file1/1143) (field_int 1 file2/1144))))))
+     current_input_file/1146 = (makemutable 0 dummy_input_file/1136)
+     new_input_file/1147 =
+       (function name/1149 : int
+         (funct-body Gbnf_parser__InputFile.new_input_file lib/InputFile.ml(62)<ghost>:2712-2847
+           (before Gbnf_parser__InputFile.new_input_file lib/InputFile.ml(63):2728-2847
+             (setfield_ptr 0 current_input_file/1146
+               (makeblock 0 (*,int) name/1149
+                 (+ (field_int 1 (field_mut 0 current_input_file/1146)) 1))))))
+     get_input_file/1150 =
+       (function param/1152[int]
+         (funct-body Gbnf_parser__InputFile.get_input_file lib/InputFile.ml(68)<ghost>:2868-2945
+           (before Gbnf_parser__InputFile.get_input_file lib/InputFile.ml(68):2886-2945
+             [0: "dummy" 0])))
+     get_input_file_name/1153 =
+       (function param/1155[int]
+         (funct-body Gbnf_parser__InputFile.get_input_file_name lib/InputFile.ml(73)<ghost>:2971-3021
+           (before Gbnf_parser__InputFile.get_input_file_name lib/InputFile.ml(74):2987-3021
+             (field_imm 0
+               (after Gbnf_parser__InputFile.get_input_file_name lib/InputFile.ml(74):2987-3005
+                 (apply get_input_file/1150 0))))))
+     get_initialized_ref/1156 =
+       (function ref/1158
+         (funct-body Gbnf_parser__InputFile.get_initialized_ref lib/InputFile.ml(80)<ghost>:3178-3268
+           (before Gbnf_parser__InputFile.get_initialized_ref lib/InputFile.ml(81):3186-3268
+             (let (*match*/1726 = (field_mut 0 ref/1158))
+               (if *match*/1726
+                 (let (contents/1159 =a (field_imm 0 *match*/1726))
+                   (before Gbnf_parser__InputFile.get_initialized_ref lib/InputFile.ml(85):3260-3268
+                     contents/1159))
+                 (before Gbnf_parser__InputFile.get_initialized_ref lib/InputFile.ml(83):3220-3232
+                   (raise
+                     (after Gbnf_parser__InputFile.get_initialized_ref lib/InputFile.ml(83):3220-3232
+                       (makeblock 0 (global Assert_failure/28!)
+                         [0: "lib/InputFile.ml" 83 6])))))))))
+     file_contents/1160 = (makemutable 0 0)
+     get_file_contents/1161 =
+       (function param/1163[int]
+         (funct-body Gbnf_parser__InputFile.get_file_contents lib/InputFile.ml(90)<ghost>:3342-3382
+           (before Gbnf_parser__InputFile.get_file_contents lib/InputFile.ml(91):3349-3382
+             (after Gbnf_parser__InputFile.get_file_contents lib/InputFile.ml(91):3349-3382
+               (apply get_initialized_ref/1156 file_contents/1160)))))
+     with_file_contents/1164 =
+       (function contents/1166 f/1167
+         (funct-body Gbnf_parser__InputFile.with_file_contents lib/InputFile.ml(93)<ghost>:3407-3533
+           (before Gbnf_parser__InputFile.with_file_contents lib/InputFile.ml(94):3422-3533
+             (seq
+               (setfield_ptr 0 file_contents/1160
+                 (makeblock 0 contents/1166))
+               (before Gbnf_parser__InputFile.with_file_contents lib/InputFile.ml(95):3456-3533
+                 (let
+                   (result/1168 =
+                      (after Gbnf_parser__InputFile.with_file_contents lib/InputFile.ml(95):3469-3472
+                        (apply f/1167 0)))
+                   (before Gbnf_parser__InputFile.with_file_contents lib/InputFile.ml(96):3478-3533
+                     (seq (setfield_ptr 0 file_contents/1160 0)
+                       (before Gbnf_parser__InputFile.with_file_contents lib/InputFile.ml(97):3527-3533
+                         result/1168)))))))))
+     chunk/1193 =
+       (function param/1270
+         (funct-body Gbnf_parser__InputFile.chunk lib/InputFile.ml(101)<ghost>:3558-3727
+           (let
+             (pos2/1196 =a (field_imm 1 param/1270)
+              pos1/1195 =a (field_imm 0 param/1270))
+             (before Gbnf_parser__InputFile.chunk lib/InputFile.ml(102):3575-3727
+               (let
+                 (ofs1/1197 =[int] (field_int 3 pos1/1195)
+                  ofs2/1198 =[int] (field_int 3 pos2/1196))
+                 (before Gbnf_parser__InputFile.chunk lib/InputFile.ml(104):3632-3727
+                   (let
+                     (contents/1199 =
+                        (after Gbnf_parser__InputFile.chunk lib/InputFile.ml(104):3647-3666
+                          (apply get_file_contents/1161 0)))
+                     (before Gbnf_parser__InputFile.chunk lib/InputFile.ml(105):3672-3727
+                       (let (len/1200 =[int] (- ofs2/1198 ofs1/1197))
+                         (before Gbnf_parser__InputFile.chunk lib/InputFile.ml(106):3699-3727
+                           (after Gbnf_parser__InputFile.chunk lib/InputFile.ml(106):3699-3727
+                             (apply (field_imm 15 (global Stdlib__String!))
+                               contents/1199 ofs1/1197 len/1200))))))))))))
+     *match*/1734 =
+       (after Gbnf_parser__InputFile lib/InputFile.ml(106)<ghost>:3727-3727
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/1732 =
+       (after Gbnf_parser__InputFile lib/InputFile.ml(106)<ghost>:3727-3727
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/1730 =
+       (after Gbnf_parser__InputFile lib/InputFile.ml(106)<ghost>:3727-3727
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/1728 =
+       (after Gbnf_parser__InputFile lib/InputFile.ml(106)<ghost>:3727-3727
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__InputFile")))
+    (pseudo <unknown location>
+      (makeblock 0 builtin_input_file/1135 dummy_input_file/1136
+        same_input_file/1137 compare_input_files/1141 current_input_file/1146
+        new_input_file/1147 get_input_file/1150 get_input_file_name/1153
+        get_initialized_ref/1156 file_contents/1160 get_file_contents/1161
+        with_file_contents/1164 chunk/1193))))

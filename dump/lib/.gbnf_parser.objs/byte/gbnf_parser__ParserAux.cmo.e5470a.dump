@@ -1,0 +1,2213 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+          ]
+    ]
+  structure_item (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/parserAux.ml[14,976+0]..[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("lib/parserAux.ml",(lib/parserAux.ml[14,976+0]..[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/parserAux.ml[14,976+0]..[14,976+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/parserAux.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("parserAux.ml",(lib/parserAux.ml[14,976+0]..[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/parserAux.ml[14,976+0]..[14,976+14])
+    Pstr_open Fresh
+    module_expr (lib/parserAux.ml[14,976+5]..[14,976+14])
+      Pmod_ident "Positions" (lib/parserAux.ml[14,976+5]..[14,976+14])
+  structure_item (lib/parserAux.ml[15,991+0]..[15,991+12])
+    Pstr_open Fresh
+    module_expr (lib/parserAux.ml[15,991+5]..[15,991+12])
+      Pmod_ident "Stretch" (lib/parserAux.ml[15,991+5]..[15,991+12])
+  structure_item (lib/parserAux.ml[16,1004+0]..[16,1004+11])
+    Pstr_open Fresh
+    module_expr (lib/parserAux.ml[16,1004+5]..[16,1004+11])
+      Pmod_ident "Syntax" (lib/parserAux.ml[16,1004+5]..[16,1004+11])
+  structure_item (lib/parserAux.ml[18,1017+0]..[20,1055+27])
+    Pstr_type Rec
+    [
+      type_declaration "early_producer" (lib/parserAux.ml[18,1017+5]..[18,1017+19]) (lib/parserAux.ml[18,1017+0]..[20,1055+27])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/parserAux.ml[19,1039+2]..[20,1055+27])
+              Ptyp_tuple
+              [
+                core_type (lib/parserAux.ml[19,1039+2]..[19,1039+13])
+                  Ptyp_constr "Positions.t" (lib/parserAux.ml[19,1039+2]..[19,1039+13])
+                  []
+                core_type (lib/parserAux.ml[20,1055+2]..[20,1055+27])
+                  Ptyp_constr "option" (lib/parserAux.ml[20,1055+21]..[20,1055+27])
+                  [
+                    core_type (lib/parserAux.ml[20,1055+2]..[20,1055+20])
+                      Ptyp_constr "located" (lib/parserAux.ml[20,1055+13]..[20,1055+20])
+                      [
+                        core_type (lib/parserAux.ml[20,1055+2]..[20,1055+12])
+                          Ptyp_constr "identifier" (lib/parserAux.ml[20,1055+2]..[20,1055+12])
+                          []
+                      ]
+                  ]
+              ]
+    ]
+  structure_item (lib/parserAux.ml[22,1085+0]..[23,1108+21])
+    Pstr_type Rec
+    [
+      type_declaration "early_producers" (lib/parserAux.ml[22,1085+5]..[22,1085+20]) (lib/parserAux.ml[22,1085+0]..[23,1108+21])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/parserAux.ml[23,1108+2]..[23,1108+21])
+              Ptyp_constr "list" (lib/parserAux.ml[23,1108+17]..[23,1108+21])
+              [
+                core_type (lib/parserAux.ml[23,1108+2]..[23,1108+16])
+                  Ptyp_constr "early_producer" (lib/parserAux.ml[23,1108+2]..[23,1108+16])
+                  []
+              ]
+    ]
+  structure_item (lib/parserAux.ml[25,1131+0]..[29,1255+13])
+    Pstr_type Rec
+    [
+      type_declaration "early_production" (lib/parserAux.ml[25,1131+5]..[25,1131+21]) (lib/parserAux.ml[25,1131+0]..[29,1255+13])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/parserAux.ml[26,1155+2]..[29,1255+13])
+              Ptyp_tuple
+              [
+                core_type (lib/parserAux.ml[26,1155+2]..[26,1155+17])
+                  Ptyp_constr "early_producers" (lib/parserAux.ml[26,1155+2]..[26,1155+17])
+                  []
+                core_type (lib/parserAux.ml[27,1175+2]..[27,1175+23])
+                  Ptyp_constr "option" (lib/parserAux.ml[27,1175+17]..[27,1175+23])
+                  [
+                    core_type (lib/parserAux.ml[27,1175+2]..[27,1175+16])
+                      Ptyp_constr "located" (lib/parserAux.ml[27,1175+9]..[27,1175+16])
+                      [
+                        core_type (lib/parserAux.ml[27,1175+2]..[27,1175+8])
+                          Ptyp_constr "string" (lib/parserAux.ml[27,1175+2]..[27,1175+8])
+                          []
+                      ]
+                  ]
+                core_type (lib/parserAux.ml[28,1227+2]..[28,1227+25])
+                  Ptyp_constr "branch_production_level" (lib/parserAux.ml[28,1227+2]..[28,1227+25])
+                  []
+                core_type (lib/parserAux.ml[29,1255+2]..[29,1255+13])
+                  Ptyp_constr "Positions.t" (lib/parserAux.ml[29,1255+2]..[29,1255+13])
+                  []
+              ]
+    ]
+  structure_item (lib/parserAux.ml[31,1270+0]..[32,1295+23])
+    Pstr_type Rec
+    [
+      type_declaration "early_productions" (lib/parserAux.ml[31,1270+5]..[31,1270+22]) (lib/parserAux.ml[31,1270+0]..[32,1295+23])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/parserAux.ml[32,1295+2]..[32,1295+23])
+              Ptyp_constr "list" (lib/parserAux.ml[32,1295+19]..[32,1295+23])
+              [
+                core_type (lib/parserAux.ml[32,1295+2]..[32,1295+18])
+                  Ptyp_constr "early_production" (lib/parserAux.ml[32,1295+2]..[32,1295+18])
+                  []
+              ]
+    ]
+  structure_item (lib/parserAux.ml[34,1320+0]..[38,1400+65])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[34,1320+4]..[34,1320+24])
+          Ppat_var "new_precedence_level" (lib/parserAux.ml[34,1320+4]..[34,1320+24])
+        expression (lib/parserAux.ml[35,1347+2]..[38,1400+65])
+          Pexp_let Nonrec
+          [
+            <def>
+              pattern (lib/parserAux.ml[35,1347+6]..[35,1347+7])
+                Ppat_var "c" (lib/parserAux.ml[35,1347+6]..[35,1347+7])
+              expression (lib/parserAux.ml[35,1347+10]..[35,1347+15])
+                Pexp_apply
+                expression (lib/parserAux.ml[35,1347+10]..[35,1347+13])
+                  Pexp_ident "ref" (lib/parserAux.ml[35,1347+10]..[35,1347+13])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/parserAux.ml[35,1347+14]..[35,1347+15])
+                      Pexp_constant PConst_int (0,None)
+                ]
+          ]
+          expression (lib/parserAux.ml[36,1366+2]..[38,1400+65])
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/parserAux.ml[36,1366+6]..[36,1366+18])
+              Ppat_tuple
+              [
+                pattern (lib/parserAux.ml[36,1366+7]..[36,1366+11])
+                  Ppat_var "pos1" (lib/parserAux.ml[36,1366+7]..[36,1366+11])
+                pattern (lib/parserAux.ml[36,1366+13]..[36,1366+17])
+                  Ppat_var "pos2" (lib/parserAux.ml[36,1366+13]..[36,1366+17])
+              ]
+            expression (lib/parserAux.ml[37,1388+4]..[38,1400+65])
+              Pexp_sequence
+              expression (lib/parserAux.ml[37,1388+4]..[37,1388+10])
+                Pexp_apply
+                expression (lib/parserAux.ml[37,1388+4]..[37,1388+8])
+                  Pexp_ident "incr" (lib/parserAux.ml[37,1388+4]..[37,1388+8])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/parserAux.ml[37,1388+9]..[37,1388+10])
+                      Pexp_ident "c" (lib/parserAux.ml[37,1388+9]..[37,1388+10])
+                ]
+              expression (lib/parserAux.ml[38,1400+4]..[38,1400+65])
+                Pexp_construct "PrecedenceLevel" (lib/parserAux.ml[38,1400+4]..[38,1400+19])
+                Some
+                  expression (lib/parserAux.ml[38,1400+20]..[38,1400+65])
+                    Pexp_tuple
+                    [
+                      expression (lib/parserAux.ml[38,1400+21]..[38,1400+48])
+                        Pexp_apply
+                        expression (lib/parserAux.ml[38,1400+21]..[38,1400+45])
+                          Pexp_ident "InputFile.get_input_file" (lib/parserAux.ml[38,1400+21]..[38,1400+45])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/parserAux.ml[38,1400+46]..[38,1400+48])
+                              Pexp_construct "()" (lib/parserAux.ml[38,1400+46]..[38,1400+48])
+                              None
+                        ]
+                      expression (lib/parserAux.ml[38,1400+50]..[38,1400+52])
+                        Pexp_apply
+                        expression (lib/parserAux.ml[38,1400+50]..[38,1400+51])
+                          Pexp_ident "!" (lib/parserAux.ml[38,1400+50]..[38,1400+51])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/parserAux.ml[38,1400+51]..[38,1400+52])
+                              Pexp_ident "c" (lib/parserAux.ml[38,1400+51]..[38,1400+52])
+                        ]
+                      expression (lib/parserAux.ml[38,1400+54]..[38,1400+58])
+                        Pexp_ident "pos1" (lib/parserAux.ml[38,1400+54]..[38,1400+58])
+                      expression (lib/parserAux.ml[38,1400+60]..[38,1400+64])
+                        Pexp_ident "pos2" (lib/parserAux.ml[38,1400+60]..[38,1400+64])
+                    ]
+    ]
+  structure_item (lib/parserAux.ml[40,1467+0]..[44,1537+53])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[40,1467+4]..[40,1467+24])
+          Ppat_var "new_production_level" (lib/parserAux.ml[40,1467+4]..[40,1467+24])
+        expression (lib/parserAux.ml[41,1494+2]..[44,1537+53])
+          Pexp_let Nonrec
+          [
+            <def>
+              pattern (lib/parserAux.ml[41,1494+6]..[41,1494+7])
+                Ppat_var "c" (lib/parserAux.ml[41,1494+6]..[41,1494+7])
+              expression (lib/parserAux.ml[41,1494+10]..[41,1494+15])
+                Pexp_apply
+                expression (lib/parserAux.ml[41,1494+10]..[41,1494+13])
+                  Pexp_ident "ref" (lib/parserAux.ml[41,1494+10]..[41,1494+13])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/parserAux.ml[41,1494+14]..[41,1494+15])
+                      Pexp_constant PConst_int (0,None)
+                ]
+          ]
+          expression (lib/parserAux.ml[42,1513+2]..[44,1537+53])
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/parserAux.ml[42,1513+6]..[42,1513+8])
+              Ppat_construct "()" (lib/parserAux.ml[42,1513+6]..[42,1513+8])
+              None
+            expression (lib/parserAux.ml[43,1525+4]..[44,1537+53])
+              Pexp_sequence
+              expression (lib/parserAux.ml[43,1525+4]..[43,1525+10])
+                Pexp_apply
+                expression (lib/parserAux.ml[43,1525+4]..[43,1525+8])
+                  Pexp_ident "incr" (lib/parserAux.ml[43,1525+4]..[43,1525+8])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/parserAux.ml[43,1525+9]..[43,1525+10])
+                      Pexp_ident "c" (lib/parserAux.ml[43,1525+9]..[43,1525+10])
+                ]
+              expression (lib/parserAux.ml[44,1537+4]..[44,1537+53])
+                Pexp_construct "ProductionLevel" (lib/parserAux.ml[44,1537+4]..[44,1537+19])
+                Some
+                  expression (lib/parserAux.ml[44,1537+20]..[44,1537+53])
+                    Pexp_tuple
+                    [
+                      expression (lib/parserAux.ml[44,1537+21]..[44,1537+48])
+                        Pexp_apply
+                        expression (lib/parserAux.ml[44,1537+21]..[44,1537+45])
+                          Pexp_ident "InputFile.get_input_file" (lib/parserAux.ml[44,1537+21]..[44,1537+45])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/parserAux.ml[44,1537+46]..[44,1537+48])
+                              Pexp_construct "()" (lib/parserAux.ml[44,1537+46]..[44,1537+48])
+                              None
+                        ]
+                      expression (lib/parserAux.ml[44,1537+50]..[44,1537+52])
+                        Pexp_apply
+                        expression (lib/parserAux.ml[44,1537+50]..[44,1537+51])
+                          Pexp_ident "!" (lib/parserAux.ml[44,1537+50]..[44,1537+51])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/parserAux.ml[44,1537+51]..[44,1537+52])
+                              Pexp_ident "c" (lib/parserAux.ml[44,1537+51]..[44,1537+52])
+                        ]
+                    ]
+    ]
+  structure_item (lib/parserAux.ml[46,1592+0]..[47,1624+22])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[46,1592+4]..[46,1592+29])
+          Ppat_var "new_on_error_reduce_level" (lib/parserAux.ml[46,1592+4]..[46,1592+29])
+        expression (lib/parserAux.ml[47,1624+2]..[47,1624+22])
+          Pexp_ident "new_production_level" (lib/parserAux.ml[47,1624+2]..[47,1624+22])
+    ]
+  structure_item (lib/parserAux.ml[51,1739+0]..[55,1861+4])
+    Pstr_module
+    "IdSet" (lib/parserAux.ml[51,1739+7]..[51,1739+12])
+      module_expr (lib/parserAux.ml[51,1739+15]..[55,1861+4])
+        Pmod_apply
+        module_expr (lib/parserAux.ml[51,1739+15]..[51,1739+23])
+          Pmod_ident "Set.Make" (lib/parserAux.ml[51,1739+15]..[51,1739+23])
+        module_expr (lib/parserAux.ml[51,1739+25]..[55,1861+3])
+          Pmod_structure
+          [
+            structure_item (lib/parserAux.ml[52,1771+2]..[52,1771+29])
+              Pstr_type Rec
+              [
+                type_declaration "t" (lib/parserAux.ml[52,1771+7]..[52,1771+8]) (lib/parserAux.ml[52,1771+2]..[52,1771+29])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ptype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    Some
+                      core_type (lib/parserAux.ml[52,1771+11]..[52,1771+29])
+                        Ptyp_constr "located" (lib/parserAux.ml[52,1771+22]..[52,1771+29])
+                        [
+                          core_type (lib/parserAux.ml[52,1771+11]..[52,1771+21])
+                            Ptyp_constr "identifier" (lib/parserAux.ml[52,1771+11]..[52,1771+21])
+                            []
+                        ]
+              ]
+            structure_item (lib/parserAux.ml[53,1801+2]..[54,1825+35])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (lib/parserAux.ml[53,1801+6]..[53,1801+13])
+                    Ppat_var "compare" (lib/parserAux.ml[53,1801+6]..[53,1801+13])
+                  expression (lib/parserAux.ml[53,1801+14]..[54,1825+35]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (lib/parserAux.ml[53,1801+14]..[53,1801+17])
+                      Ppat_var "id1" (lib/parserAux.ml[53,1801+14]..[53,1801+17])
+                    expression (lib/parserAux.ml[53,1801+18]..[54,1825+35]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/parserAux.ml[53,1801+18]..[53,1801+21])
+                        Ppat_var "id2" (lib/parserAux.ml[53,1801+18]..[53,1801+21])
+                      expression (lib/parserAux.ml[54,1825+4]..[54,1825+35])
+                        Pexp_apply
+                        expression (lib/parserAux.ml[54,1825+4]..[54,1825+11])
+                          Pexp_ident "compare" (lib/parserAux.ml[54,1825+4]..[54,1825+11])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/parserAux.ml[54,1825+12]..[54,1825+23])
+                              Pexp_apply
+                              expression (lib/parserAux.ml[54,1825+13]..[54,1825+18])
+                                Pexp_ident "value" (lib/parserAux.ml[54,1825+13]..[54,1825+18])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (lib/parserAux.ml[54,1825+19]..[54,1825+22])
+                                    Pexp_ident "id1" (lib/parserAux.ml[54,1825+19]..[54,1825+22])
+                              ]
+                          <arg>
+                          Nolabel
+                            expression (lib/parserAux.ml[54,1825+24]..[54,1825+35])
+                              Pexp_apply
+                              expression (lib/parserAux.ml[54,1825+25]..[54,1825+30])
+                                Pexp_ident "value" (lib/parserAux.ml[54,1825+25]..[54,1825+30])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (lib/parserAux.ml[54,1825+31]..[54,1825+34])
+                                    Pexp_ident "id2" (lib/parserAux.ml[54,1825+31]..[54,1825+34])
+                              ]
+                        ]
+              ]
+          ]
+  structure_item (lib/parserAux.ml[100,3589+0]..[107,3777+8])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[100,3589+4]..[100,3589+12])
+          Ppat_var "override" (lib/parserAux.ml[100,3589+4]..[100,3589+12])
+        expression (lib/parserAux.ml[100,3589+13]..[107,3777+8]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/parserAux.ml[100,3589+13]..[100,3589+16])
+            Ppat_var "pos" (lib/parserAux.ml[100,3589+13]..[100,3589+16])
+          expression (lib/parserAux.ml[100,3589+17]..[107,3777+8]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/parserAux.ml[100,3589+17]..[100,3589+19])
+              Ppat_var "o1" (lib/parserAux.ml[100,3589+17]..[100,3589+19])
+            expression (lib/parserAux.ml[100,3589+20]..[107,3777+8]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (lib/parserAux.ml[100,3589+20]..[100,3589+22])
+                Ppat_var "o2" (lib/parserAux.ml[100,3589+20]..[100,3589+22])
+              expression (lib/parserAux.ml[101,3614+2]..[107,3777+8])
+                Pexp_match
+                expression (lib/parserAux.ml[101,3614+8]..[101,3614+14])
+                  Pexp_tuple
+                  [
+                    expression (lib/parserAux.ml[101,3614+8]..[101,3614+10])
+                      Pexp_ident "o1" (lib/parserAux.ml[101,3614+8]..[101,3614+10])
+                    expression (lib/parserAux.ml[101,3614+12]..[101,3614+14])
+                      Pexp_ident "o2" (lib/parserAux.ml[101,3614+12]..[101,3614+14])
+                  ]
+                [
+                  <case>
+                    pattern (lib/parserAux.ml[102,3634+4]..[102,3634+18])
+                      Ppat_tuple
+                      [
+                        pattern (lib/parserAux.ml[102,3634+4]..[102,3634+10])
+                          Ppat_construct "Some" (lib/parserAux.ml[102,3634+4]..[102,3634+8])
+                          Some
+                            []
+                            pattern (lib/parserAux.ml[102,3634+9]..[102,3634+10])
+                              Ppat_any
+                        pattern (lib/parserAux.ml[102,3634+12]..[102,3634+18])
+                          Ppat_construct "Some" (lib/parserAux.ml[102,3634+12]..[102,3634+16])
+                          Some
+                            []
+                            pattern (lib/parserAux.ml[102,3634+17]..[102,3634+18])
+                              Ppat_any
+                      ]
+                    expression (lib/parserAux.ml[103,3656+6]..[103,3656+76])
+                      Pexp_apply
+                      expression (lib/parserAux.ml[103,3656+6]..[103,3656+17])
+                        Pexp_ident "Error.error" (lib/parserAux.ml[103,3656+6]..[103,3656+17])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/parserAux.ml[103,3656+18]..[103,3656+25])
+                            Pexp_construct "::" (lib/parserAux.ml[103,3656+20]..[103,3656+25]) ghost
+                            Some
+                              expression (lib/parserAux.ml[103,3656+20]..[103,3656+25]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (lib/parserAux.ml[103,3656+20]..[103,3656+23])
+                                    Pexp_ident "pos" (lib/parserAux.ml[103,3656+20]..[103,3656+23])
+                                  expression (lib/parserAux.ml[103,3656+24]..[103,3656+25]) ghost
+                                    Pexp_construct "[]" (lib/parserAux.ml[103,3656+24]..[103,3656+25]) ghost
+                                    None
+                                ]
+                        <arg>
+                        Nolabel
+                          expression (lib/parserAux.ml[103,3656+26]..[103,3656+76])
+                            Pexp_constant PConst_string("this production carries two %%prec declarations.",(lib/parserAux.ml[103,3656+27]..[103,3656+75]),None)
+                      ]
+                  <case>
+                    pattern (lib/parserAux.ml[104,3733+4]..[104,3733+16])
+                      Ppat_tuple
+                      [
+                        pattern (lib/parserAux.ml[104,3733+4]..[104,3733+8])
+                          Ppat_construct "None" (lib/parserAux.ml[104,3733+4]..[104,3733+8])
+                          None
+                        pattern (lib/parserAux.ml[104,3733+10]..[104,3733+16])
+                          Ppat_construct "Some" (lib/parserAux.ml[104,3733+10]..[104,3733+14])
+                          Some
+                            []
+                            pattern (lib/parserAux.ml[104,3733+15]..[104,3733+16])
+                              Ppat_any
+                      ]
+                    expression (lib/parserAux.ml[105,3753+6]..[105,3753+8])
+                      Pexp_ident "o2" (lib/parserAux.ml[105,3753+6]..[105,3753+8])
+                  <case>
+                    pattern (lib/parserAux.ml[106,3762+4]..[106,3762+11])
+                      Ppat_tuple
+                      [
+                        pattern (lib/parserAux.ml[106,3762+4]..[106,3762+5])
+                          Ppat_any
+                        pattern (lib/parserAux.ml[106,3762+7]..[106,3762+11])
+                          Ppat_construct "None" (lib/parserAux.ml[106,3762+7]..[106,3762+11])
+                          None
+                      ]
+                    expression (lib/parserAux.ml[107,3777+6]..[107,3777+8])
+                      Pexp_ident "o1" (lib/parserAux.ml[107,3777+6]..[107,3777+8])
+                ]
+    ]
+  structure_item (lib/parserAux.ml[122,4401+0]..[131,4699+12])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[122,4401+4]..[122,4401+29])
+          Ppat_var "validate_pointfree_action" (lib/parserAux.ml[122,4401+4]..[122,4401+29])
+        expression (lib/parserAux.ml[122,4401+30]..[131,4699+12]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/parserAux.ml[122,4401+30]..[122,4401+46])
+            Ppat_constraint
+            pattern (lib/parserAux.ml[122,4401+31]..[122,4401+33])
+              Ppat_var "ty" (lib/parserAux.ml[122,4401+31]..[122,4401+33])
+            core_type (lib/parserAux.ml[122,4401+36]..[122,4401+45])
+              Ptyp_constr "ocamltype" (lib/parserAux.ml[122,4401+36]..[122,4401+45])
+              []
+          expression (lib/parserAux.ml[122,4401+47]..[131,4699+12])
+            Pexp_constraint
+            expression (lib/parserAux.ml[123,4469+2]..[131,4699+12])
+              Pexp_match
+              expression (lib/parserAux.ml[123,4469+8]..[123,4469+10])
+                Pexp_ident "ty" (lib/parserAux.ml[123,4469+8]..[123,4469+10])
+              [
+                <case>
+                  pattern (lib/parserAux.ml[124,4485+4]..[124,4485+14])
+                    Ppat_construct "Inferred" (lib/parserAux.ml[124,4485+4]..[124,4485+12])
+                    Some
+                      []
+                      pattern (lib/parserAux.ml[124,4485+13]..[124,4485+14])
+                        Ppat_any
+                  expression (lib/parserAux.ml[125,4503+6]..[125,4503+18])
+                    Pexp_assert
+                    expression (lib/parserAux.ml[125,4503+13]..[125,4503+18])
+                      Pexp_construct "false" (lib/parserAux.ml[125,4503+13]..[125,4503+18])
+                      None
+                <case>
+                  pattern (lib/parserAux.ml[126,4522+4]..[126,4522+20])
+                    Ppat_construct "Declared" (lib/parserAux.ml[126,4522+4]..[126,4522+12])
+                    Some
+                      []
+                      pattern (lib/parserAux.ml[126,4522+13]..[126,4522+20])
+                        Ppat_var "stretch" (lib/parserAux.ml[126,4522+13]..[126,4522+20])
+                  expression (lib/parserAux.ml[127,4546+6]..[131,4699+12])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (lib/parserAux.ml[127,4546+10]..[127,4546+11])
+                          Ppat_var "s" (lib/parserAux.ml[127,4546+10]..[127,4546+11])
+                        expression (lib/parserAux.ml[127,4546+14]..[127,4546+41])
+                          Pexp_field
+                          expression (lib/parserAux.ml[127,4546+14]..[127,4546+21])
+                            Pexp_ident "stretch" (lib/parserAux.ml[127,4546+14]..[127,4546+21])
+                          "stretch_raw_content" (lib/parserAux.ml[127,4546+22]..[127,4546+41])
+                    ]
+                    expression (lib/parserAux.ml[128,4591+6]..[131,4699+12])
+                      Pexp_ifthenelse
+                      expression (lib/parserAux.ml[128,4591+9]..[128,4591+70])
+                        Pexp_apply
+                        expression (lib/parserAux.ml[128,4591+9]..[128,4591+47])
+                          Pexp_ident "Lexpointfree.validate_pointfree_action" (lib/parserAux.ml[128,4591+9]..[128,4591+47])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/parserAux.ml[128,4591+48]..[128,4591+70])
+                              Pexp_apply
+                              expression (lib/parserAux.ml[128,4591+49]..[128,4591+67])
+                                Pexp_ident "Lexing.from_string" (lib/parserAux.ml[128,4591+49]..[128,4591+67])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (lib/parserAux.ml[128,4591+68]..[128,4591+69])
+                                    Pexp_ident "s" (lib/parserAux.ml[128,4591+68]..[128,4591+69])
+                              ]
+                        ]
+                      expression (lib/parserAux.ml[129,4667+8]..[129,4667+20])
+                        Pexp_construct "Some" (lib/parserAux.ml[129,4667+8]..[129,4667+12])
+                        Some
+                          expression (lib/parserAux.ml[129,4667+13]..[129,4667+20])
+                            Pexp_ident "stretch" (lib/parserAux.ml[129,4667+13]..[129,4667+20])
+                      Some
+                        expression (lib/parserAux.ml[131,4699+8]..[131,4699+12])
+                          Pexp_construct "None" (lib/parserAux.ml[131,4699+8]..[131,4699+12])
+                          None
+              ]
+            core_type (lib/parserAux.ml[122,4401+49]..[122,4401+65])
+              Ptyp_constr "option" (lib/parserAux.ml[122,4401+59]..[122,4401+65])
+              [
+                core_type (lib/parserAux.ml[122,4401+49]..[122,4401+58])
+                  Ptyp_constr "Stretch.t" (lib/parserAux.ml[122,4401+49]..[122,4401+58])
+                  []
+              ]
+    ]
+  structure_item (lib/parserAux.ml[139,4958+0]..[140,5019+78])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[139,4958+4]..[139,4958+26])
+          Ppat_var "valid_ocaml_identifier" (lib/parserAux.ml[139,4958+4]..[139,4958+26])
+        expression (lib/parserAux.ml[139,4958+27]..[140,5019+78]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/parserAux.ml[139,4958+27]..[139,4958+51])
+            Ppat_constraint
+            pattern (lib/parserAux.ml[139,4958+28]..[139,4958+29])
+              Ppat_var "x" (lib/parserAux.ml[139,4958+28]..[139,4958+29])
+            core_type (lib/parserAux.ml[139,4958+32]..[139,4958+50])
+              Ptyp_constr "located" (lib/parserAux.ml[139,4958+43]..[139,4958+50])
+              [
+                core_type (lib/parserAux.ml[139,4958+32]..[139,4958+42])
+                  Ptyp_constr "identifier" (lib/parserAux.ml[139,4958+32]..[139,4958+42])
+                  []
+              ]
+          expression (lib/parserAux.ml[139,4958+52]..[140,5019+78])
+            Pexp_constraint
+            expression (lib/parserAux.ml[140,5019+2]..[140,5019+78])
+              Pexp_apply
+              expression (lib/parserAux.ml[140,5019+2]..[140,5019+37])
+                Pexp_ident "Lexpointfree.valid_ocaml_identifier" (lib/parserAux.ml[140,5019+2]..[140,5019+37])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/parserAux.ml[140,5019+38]..[140,5019+78])
+                    Pexp_apply
+                    expression (lib/parserAux.ml[140,5019+39]..[140,5019+57])
+                      Pexp_ident "Lexing.from_string" (lib/parserAux.ml[140,5019+39]..[140,5019+57])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/parserAux.ml[140,5019+58]..[140,5019+77])
+                          Pexp_apply
+                          expression (lib/parserAux.ml[140,5019+59]..[140,5019+74])
+                            Pexp_ident "Positions.value" (lib/parserAux.ml[140,5019+59]..[140,5019+74])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (lib/parserAux.ml[140,5019+75]..[140,5019+76])
+                                Pexp_ident "x" (lib/parserAux.ml[140,5019+75]..[140,5019+76])
+                          ]
+                    ]
+              ]
+            core_type (lib/parserAux.ml[139,4958+54]..[139,4958+58])
+              Ptyp_constr "bool" (lib/parserAux.ml[139,4958+54]..[139,4958+58])
+              []
+    ]
+  structure_item (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+          Ppat_construct "()" (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+          None
+        expression (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+          Pexp_apply
+          expression (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost,None)
+          ]
+    ]
+  structure_item (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+          Ppat_construct "()" (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+          None
+        expression (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+          Pexp_apply
+          expression (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+                Pexp_construct "()" (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+          Ppat_construct "()" (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+          None
+        expression (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+          Pexp_apply
+          expression (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+                Pexp_construct "()" (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+          Ppat_construct "()" (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+          None
+        expression (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+          Pexp_apply
+          expression (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/parserAux.ml[140,5019+78]..[140,5019+78]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set
+    ~absolute_filename:"lib/parserAux.ml"
+let () =
+  Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "parserAux.ml"
+open Positions
+open Stretch
+open Syntax
+type early_producer = (Positions.t * identifier located option)
+type early_producers = early_producer list
+type early_production =
+  (early_producers * string located option * branch_production_level *
+    Positions.t)
+type early_productions = early_production list
+let new_precedence_level =
+  let c = ref 0 in
+  fun (pos1, pos2) ->
+    incr c; PrecedenceLevel ((InputFile.get_input_file ()), (!c), pos1, pos2)
+let new_production_level =
+  let c = ref 0 in
+  fun () -> incr c; ProductionLevel ((InputFile.get_input_file ()), (!c))
+let new_on_error_reduce_level = new_production_level
+module IdSet =
+  (Set.Make)(struct
+               type t = identifier located
+               let compare id1 id2 = compare (value id1) (value id2)
+             end)
+let override pos o1 o2 =
+  match (o1, o2) with
+  | (Some _, Some _) ->
+      Error.error [pos] "this production carries two %%prec declarations."
+  | (None, Some _) -> o2
+  | (_, None) -> o1
+let validate_pointfree_action (ty : ocamltype) =
+  (match ty with
+   | Inferred _ -> assert false
+   | Declared stretch ->
+       let s = stretch.stretch_raw_content in
+       if Lexpointfree.validate_pointfree_action (Lexing.from_string s)
+       then Some stretch
+       else None : Stretch.t option)
+let valid_ocaml_identifier (x : identifier located) =
+  (Lexpointfree.valid_ocaml_identifier
+     (Lexing.from_string (Positions.value x)) : bool)
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+                Texp_constant Const_string("lib/parserAux.ml",(lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost
+                Texp_constant Const_string("parserAux.ml",(lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/parserAux.ml[14,976+0]..lib/parserAux.ml[14,976+14])
+    Tstr_open Fresh
+    module_expr (lib/parserAux.ml[14,976+5]..lib/parserAux.ml[14,976+14])
+      Tmod_ident "Gbnf_parser!.Positions"
+  structure_item (lib/parserAux.ml[15,991+0]..lib/parserAux.ml[15,991+12])
+    Tstr_open Fresh
+    module_expr (lib/parserAux.ml[15,991+5]..lib/parserAux.ml[15,991+12])
+      Tmod_ident "Gbnf_parser!.Stretch"
+  structure_item (lib/parserAux.ml[16,1004+0]..lib/parserAux.ml[16,1004+11])
+    Tstr_open Fresh
+    module_expr (lib/parserAux.ml[16,1004+5]..lib/parserAux.ml[16,1004+11])
+      Tmod_ident "Gbnf_parser!.Syntax"
+  structure_item (lib/parserAux.ml[18,1017+0]..lib/parserAux.ml[20,1055+27])
+    Tstr_type Rec
+    [
+      type_declaration early_producer/1206 (lib/parserAux.ml[18,1017+0]..lib/parserAux.ml[20,1055+27])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/parserAux.ml[19,1039+2]..lib/parserAux.ml[20,1055+27])
+              Ttyp_tuple
+              [
+                core_type (lib/parserAux.ml[19,1039+2]..lib/parserAux.ml[19,1039+13])
+                  Ttyp_constr "Gbnf_parser!.Positions.t"
+                  []
+                core_type (lib/parserAux.ml[20,1055+2]..lib/parserAux.ml[20,1055+27])
+                  Ttyp_constr "option/10!"
+                  [
+                    core_type (lib/parserAux.ml[20,1055+2]..lib/parserAux.ml[20,1055+20])
+                      Ttyp_constr "Gbnf_parser!.Syntax.located"
+                      [
+                        core_type (lib/parserAux.ml[20,1055+2]..lib/parserAux.ml[20,1055+12])
+                          Ttyp_constr "Gbnf_parser!.Syntax.identifier"
+                          []
+                      ]
+                  ]
+              ]
+    ]
+  structure_item (lib/parserAux.ml[22,1085+0]..lib/parserAux.ml[23,1108+21])
+    Tstr_type Rec
+    [
+      type_declaration early_producers/1290 (lib/parserAux.ml[22,1085+0]..lib/parserAux.ml[23,1108+21])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/parserAux.ml[23,1108+2]..lib/parserAux.ml[23,1108+21])
+              Ttyp_constr "list/9!"
+              [
+                core_type (lib/parserAux.ml[23,1108+2]..lib/parserAux.ml[23,1108+16])
+                  Ttyp_constr "early_producer/1206"
+                  []
+              ]
+    ]
+  structure_item (lib/parserAux.ml[25,1131+0]..lib/parserAux.ml[29,1255+13])
+    Tstr_type Rec
+    [
+      type_declaration early_production/1291 (lib/parserAux.ml[25,1131+0]..lib/parserAux.ml[29,1255+13])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/parserAux.ml[26,1155+2]..lib/parserAux.ml[29,1255+13])
+              Ttyp_tuple
+              [
+                core_type (lib/parserAux.ml[26,1155+2]..lib/parserAux.ml[26,1155+17])
+                  Ttyp_constr "early_producers/1290"
+                  []
+                core_type (lib/parserAux.ml[27,1175+2]..lib/parserAux.ml[27,1175+23])
+                  Ttyp_constr "option/10!"
+                  [
+                    core_type (lib/parserAux.ml[27,1175+2]..lib/parserAux.ml[27,1175+16])
+                      Ttyp_constr "Gbnf_parser!.Syntax.located"
+                      [
+                        core_type (lib/parserAux.ml[27,1175+2]..lib/parserAux.ml[27,1175+8])
+                          Ttyp_constr "string/15!"
+                          []
+                      ]
+                  ]
+                core_type (lib/parserAux.ml[28,1227+2]..lib/parserAux.ml[28,1227+25])
+                  Ttyp_constr "Gbnf_parser!.Syntax.branch_production_level"
+                  []
+                core_type (lib/parserAux.ml[29,1255+2]..lib/parserAux.ml[29,1255+13])
+                  Ttyp_constr "Gbnf_parser!.Positions.t"
+                  []
+              ]
+    ]
+  structure_item (lib/parserAux.ml[31,1270+0]..lib/parserAux.ml[32,1295+23])
+    Tstr_type Rec
+    [
+      type_declaration early_productions/1329 (lib/parserAux.ml[31,1270+0]..lib/parserAux.ml[32,1295+23])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/parserAux.ml[32,1295+2]..lib/parserAux.ml[32,1295+23])
+              Ttyp_constr "list/9!"
+              [
+                core_type (lib/parserAux.ml[32,1295+2]..lib/parserAux.ml[32,1295+18])
+                  Ttyp_constr "early_production/1291"
+                  []
+              ]
+    ]
+  structure_item (lib/parserAux.ml[34,1320+0]..lib/parserAux.ml[38,1400+65])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[34,1320+4]..lib/parserAux.ml[34,1320+24])
+          Tpat_var "new_precedence_level/1330"
+        expression (lib/parserAux.ml[35,1347+2]..lib/parserAux.ml[38,1400+65])
+          Texp_let Nonrec
+          [
+            <def>
+              pattern (lib/parserAux.ml[35,1347+6]..lib/parserAux.ml[35,1347+7])
+                Tpat_var "c/1331"
+              expression (lib/parserAux.ml[35,1347+10]..lib/parserAux.ml[35,1347+15])
+                Texp_apply
+                expression (lib/parserAux.ml[35,1347+10]..lib/parserAux.ml[35,1347+13])
+                  Texp_ident "Stdlib!.ref"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/parserAux.ml[35,1347+14]..lib/parserAux.ml[35,1347+15])
+                      Texp_constant Const_int 0
+                ]
+          ]
+          expression (lib/parserAux.ml[36,1366+2]..lib/parserAux.ml[38,1400+65])
+            Texp_function
+            Nolabel
+            [
+              <case>
+                pattern (lib/parserAux.ml[36,1366+6]..lib/parserAux.ml[36,1366+18])
+                  Tpat_tuple
+                  [
+                    pattern (lib/parserAux.ml[36,1366+7]..lib/parserAux.ml[36,1366+11])
+                      Tpat_var "pos1/1332"
+                    pattern (lib/parserAux.ml[36,1366+13]..lib/parserAux.ml[36,1366+17])
+                      Tpat_var "pos2/1333"
+                  ]
+                expression (lib/parserAux.ml[37,1388+4]..lib/parserAux.ml[38,1400+65])
+                  Texp_sequence
+                  expression (lib/parserAux.ml[37,1388+4]..lib/parserAux.ml[37,1388+10])
+                    Texp_apply
+                    expression (lib/parserAux.ml[37,1388+4]..lib/parserAux.ml[37,1388+8])
+                      Texp_ident "Stdlib!.incr"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (lib/parserAux.ml[37,1388+9]..lib/parserAux.ml[37,1388+10])
+                          Texp_ident "c/1331"
+                    ]
+                  expression (lib/parserAux.ml[38,1400+4]..lib/parserAux.ml[38,1400+65])
+                    Texp_construct "PrecedenceLevel"
+                    [
+                      expression (lib/parserAux.ml[38,1400+21]..lib/parserAux.ml[38,1400+48])
+                        Texp_apply
+                        expression (lib/parserAux.ml[38,1400+21]..lib/parserAux.ml[38,1400+45])
+                          Texp_ident "Gbnf_parser!.InputFile.get_input_file"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (lib/parserAux.ml[38,1400+46]..lib/parserAux.ml[38,1400+48])
+                              Texp_construct "()"
+                              []
+                        ]
+                      expression (lib/parserAux.ml[38,1400+50]..lib/parserAux.ml[38,1400+52])
+                        Texp_apply
+                        expression (lib/parserAux.ml[38,1400+50]..lib/parserAux.ml[38,1400+51])
+                          Texp_ident "Stdlib!.!"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (lib/parserAux.ml[38,1400+51]..lib/parserAux.ml[38,1400+52])
+                              Texp_ident "c/1331"
+                        ]
+                      expression (lib/parserAux.ml[38,1400+54]..lib/parserAux.ml[38,1400+58])
+                        Texp_ident "pos1/1332"
+                      expression (lib/parserAux.ml[38,1400+60]..lib/parserAux.ml[38,1400+64])
+                        Texp_ident "pos2/1333"
+                    ]
+            ]
+    ]
+  structure_item (lib/parserAux.ml[40,1467+0]..lib/parserAux.ml[44,1537+53])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[40,1467+4]..lib/parserAux.ml[40,1467+24])
+          Tpat_var "new_production_level/1363"
+        expression (lib/parserAux.ml[41,1494+2]..lib/parserAux.ml[44,1537+53])
+          Texp_let Nonrec
+          [
+            <def>
+              pattern (lib/parserAux.ml[41,1494+6]..lib/parserAux.ml[41,1494+7])
+                Tpat_var "c/1364"
+              expression (lib/parserAux.ml[41,1494+10]..lib/parserAux.ml[41,1494+15])
+                Texp_apply
+                expression (lib/parserAux.ml[41,1494+10]..lib/parserAux.ml[41,1494+13])
+                  Texp_ident "Stdlib!.ref"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/parserAux.ml[41,1494+14]..lib/parserAux.ml[41,1494+15])
+                      Texp_constant Const_int 0
+                ]
+          ]
+          expression (lib/parserAux.ml[42,1513+2]..lib/parserAux.ml[44,1537+53])
+            Texp_function
+            Nolabel
+            [
+              <case>
+                pattern (lib/parserAux.ml[42,1513+6]..lib/parserAux.ml[42,1513+8])
+                  Tpat_construct "()"
+                  []
+                  None
+                expression (lib/parserAux.ml[43,1525+4]..lib/parserAux.ml[44,1537+53])
+                  Texp_sequence
+                  expression (lib/parserAux.ml[43,1525+4]..lib/parserAux.ml[43,1525+10])
+                    Texp_apply
+                    expression (lib/parserAux.ml[43,1525+4]..lib/parserAux.ml[43,1525+8])
+                      Texp_ident "Stdlib!.incr"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (lib/parserAux.ml[43,1525+9]..lib/parserAux.ml[43,1525+10])
+                          Texp_ident "c/1364"
+                    ]
+                  expression (lib/parserAux.ml[44,1537+4]..lib/parserAux.ml[44,1537+53])
+                    Texp_construct "ProductionLevel"
+                    [
+                      expression (lib/parserAux.ml[44,1537+21]..lib/parserAux.ml[44,1537+48])
+                        Texp_apply
+                        expression (lib/parserAux.ml[44,1537+21]..lib/parserAux.ml[44,1537+45])
+                          Texp_ident "Gbnf_parser!.InputFile.get_input_file"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (lib/parserAux.ml[44,1537+46]..lib/parserAux.ml[44,1537+48])
+                              Texp_construct "()"
+                              []
+                        ]
+                      expression (lib/parserAux.ml[44,1537+50]..lib/parserAux.ml[44,1537+52])
+                        Texp_apply
+                        expression (lib/parserAux.ml[44,1537+50]..lib/parserAux.ml[44,1537+51])
+                          Texp_ident "Stdlib!.!"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (lib/parserAux.ml[44,1537+51]..lib/parserAux.ml[44,1537+52])
+                              Texp_ident "c/1364"
+                        ]
+                    ]
+            ]
+    ]
+  structure_item (lib/parserAux.ml[46,1592+0]..lib/parserAux.ml[47,1624+22])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[46,1592+4]..lib/parserAux.ml[46,1592+29])
+          Tpat_var "new_on_error_reduce_level/1366"
+        expression (lib/parserAux.ml[47,1624+2]..lib/parserAux.ml[47,1624+22])
+          Texp_ident "new_production_level/1363"
+    ]
+  structure_item (lib/parserAux.ml[51,1739+0]..lib/parserAux.ml[55,1861+4])
+    Tstr_module
+    IdSet/1594
+      module_expr (lib/parserAux.ml[51,1739+15]..lib/parserAux.ml[55,1861+4])
+        Tmod_apply
+        module_expr (lib/parserAux.ml[51,1739+15]..lib/parserAux.ml[51,1739+23])
+          module_expr (lib/parserAux.ml[51,1739+15]..lib/parserAux.ml[51,1739+23])
+            Tmod_ident "Stdlib!.Set.Make"
+        module_expr (lib/parserAux.ml[51,1739+25]..lib/parserAux.ml[55,1861+3])
+          Tmod_structure
+          [
+            structure_item (lib/parserAux.ml[52,1771+2]..lib/parserAux.ml[52,1771+29])
+              Tstr_type Rec
+              [
+                type_declaration t/1367 (lib/parserAux.ml[52,1771+2]..lib/parserAux.ml[52,1771+29])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ttype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    Some
+                      core_type (lib/parserAux.ml[52,1771+11]..lib/parserAux.ml[52,1771+29])
+                        Ttyp_constr "Gbnf_parser!.Syntax.located"
+                        [
+                          core_type (lib/parserAux.ml[52,1771+11]..lib/parserAux.ml[52,1771+21])
+                            Ttyp_constr "Gbnf_parser!.Syntax.identifier"
+                            []
+                        ]
+              ]
+            structure_item (lib/parserAux.ml[53,1801+2]..lib/parserAux.ml[54,1825+35])
+              Tstr_value Nonrec
+              [
+                <def>
+                  pattern (lib/parserAux.ml[53,1801+6]..lib/parserAux.ml[53,1801+13])
+                    Tpat_var "compare/1368"
+                  expression (lib/parserAux.ml[53,1801+14]..lib/parserAux.ml[54,1825+35]) ghost
+                    Texp_function
+                    Nolabel
+                    [
+                      <case>
+                        pattern (lib/parserAux.ml[53,1801+14]..lib/parserAux.ml[53,1801+17])
+                          Tpat_var "id1/1369"
+                        expression (lib/parserAux.ml[53,1801+18]..lib/parserAux.ml[54,1825+35]) ghost
+                          Texp_function
+                          Nolabel
+                          [
+                            <case>
+                              pattern (lib/parserAux.ml[53,1801+18]..lib/parserAux.ml[53,1801+21])
+                                Tpat_var "id2/1370"
+                              expression (lib/parserAux.ml[54,1825+4]..lib/parserAux.ml[54,1825+35])
+                                Texp_apply
+                                expression (lib/parserAux.ml[54,1825+4]..lib/parserAux.ml[54,1825+11])
+                                  Texp_ident "Stdlib!.compare"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/parserAux.ml[54,1825+12]..lib/parserAux.ml[54,1825+23])
+                                      Texp_apply
+                                      expression (lib/parserAux.ml[54,1825+13]..lib/parserAux.ml[54,1825+18])
+                                        Texp_ident "Gbnf_parser!.Positions.value"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (lib/parserAux.ml[54,1825+19]..lib/parserAux.ml[54,1825+22])
+                                            Texp_ident "id1/1369"
+                                      ]
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/parserAux.ml[54,1825+24]..lib/parserAux.ml[54,1825+35])
+                                      Texp_apply
+                                      expression (lib/parserAux.ml[54,1825+25]..lib/parserAux.ml[54,1825+30])
+                                        Texp_ident "Gbnf_parser!.Positions.value"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (lib/parserAux.ml[54,1825+31]..lib/parserAux.ml[54,1825+34])
+                                            Texp_ident "id2/1370"
+                                      ]
+                                ]
+                          ]
+                    ]
+              ]
+          ]
+  structure_item (lib/parserAux.ml[100,3589+0]..lib/parserAux.ml[107,3777+8])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[100,3589+4]..lib/parserAux.ml[100,3589+12])
+          Tpat_var "override/1595"
+        expression (lib/parserAux.ml[100,3589+13]..lib/parserAux.ml[107,3777+8]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/parserAux.ml[100,3589+13]..lib/parserAux.ml[100,3589+16])
+                Tpat_var "pos/1597"
+              expression (lib/parserAux.ml[100,3589+17]..lib/parserAux.ml[107,3777+8]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/parserAux.ml[100,3589+17]..lib/parserAux.ml[100,3589+19])
+                      Tpat_var "o1/1598"
+                    expression (lib/parserAux.ml[100,3589+20]..lib/parserAux.ml[107,3777+8]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/parserAux.ml[100,3589+20]..lib/parserAux.ml[100,3589+22])
+                            Tpat_var "o2/1599"
+                          expression (lib/parserAux.ml[101,3614+2]..lib/parserAux.ml[107,3777+8])
+                            Texp_match
+                            expression (lib/parserAux.ml[101,3614+8]..lib/parserAux.ml[101,3614+14])
+                              Texp_tuple
+                              [
+                                expression (lib/parserAux.ml[101,3614+8]..lib/parserAux.ml[101,3614+10])
+                                  Texp_ident "o1/1598"
+                                expression (lib/parserAux.ml[101,3614+12]..lib/parserAux.ml[101,3614+14])
+                                  Texp_ident "o2/1599"
+                              ]
+                            [
+                              <case>
+                                pattern (lib/parserAux.ml[102,3634+4]..lib/parserAux.ml[102,3634+18])
+                                  Tpat_value
+                                  pattern (lib/parserAux.ml[102,3634+4]..lib/parserAux.ml[102,3634+18])
+                                    Tpat_tuple
+                                    [
+                                      pattern (lib/parserAux.ml[102,3634+4]..lib/parserAux.ml[102,3634+10])
+                                        Tpat_construct "Some"
+                                        [
+                                          pattern (lib/parserAux.ml[102,3634+9]..lib/parserAux.ml[102,3634+10])
+                                            Tpat_any
+                                        ]
+                                        None
+                                      pattern (lib/parserAux.ml[102,3634+12]..lib/parserAux.ml[102,3634+18])
+                                        Tpat_construct "Some"
+                                        [
+                                          pattern (lib/parserAux.ml[102,3634+17]..lib/parserAux.ml[102,3634+18])
+                                            Tpat_any
+                                        ]
+                                        None
+                                    ]
+                                expression (lib/parserAux.ml[103,3656+6]..lib/parserAux.ml[103,3656+76])
+                                  Texp_apply
+                                  expression (lib/parserAux.ml[103,3656+6]..lib/parserAux.ml[103,3656+17])
+                                    Texp_ident "Gbnf_parser!.Error.error"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/parserAux.ml[103,3656+18]..lib/parserAux.ml[103,3656+25])
+                                        Texp_construct "::"
+                                        [
+                                          expression (lib/parserAux.ml[103,3656+20]..lib/parserAux.ml[103,3656+23])
+                                            Texp_ident "pos/1597"
+                                          expression (lib/parserAux.ml[103,3656+24]..lib/parserAux.ml[103,3656+25]) ghost
+                                            Texp_construct "[]"
+                                            []
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/parserAux.ml[103,3656+26]..lib/parserAux.ml[103,3656+76])
+                                        Texp_construct "CamlinternalFormatBasics.Format"
+                                        [
+                                          expression (lib/parserAux.ml[103,3656+26]..lib/parserAux.ml[103,3656+76]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.String_literal"
+                                            [
+                                              expression (lib/parserAux.ml[103,3656+26]..lib/parserAux.ml[103,3656+76]) ghost
+                                                Texp_constant Const_string("this production carries two ",(lib/parserAux.ml[103,3656+26]..lib/parserAux.ml[103,3656+76]) ghost,None)
+                                              expression (lib/parserAux.ml[103,3656+26]..lib/parserAux.ml[103,3656+76]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                                [
+                                                  expression (lib/parserAux.ml[103,3656+26]..lib/parserAux.ml[103,3656+76]) ghost
+                                                    Texp_constant Const_char 25
+                                                  expression (lib/parserAux.ml[103,3656+26]..lib/parserAux.ml[103,3656+76]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                    [
+                                                      expression (lib/parserAux.ml[103,3656+26]..lib/parserAux.ml[103,3656+76]) ghost
+                                                        Texp_constant Const_string("prec declarations.",(lib/parserAux.ml[103,3656+26]..lib/parserAux.ml[103,3656+76]) ghost,None)
+                                                      expression (lib/parserAux.ml[103,3656+26]..lib/parserAux.ml[103,3656+76]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                        []
+                                                    ]
+                                                ]
+                                            ]
+                                          expression (lib/parserAux.ml[103,3656+26]..lib/parserAux.ml[103,3656+76]) ghost
+                                            Texp_constant Const_string("this production carries two %%prec declarations.",(lib/parserAux.ml[103,3656+26]..lib/parserAux.ml[103,3656+76]) ghost,None)
+                                        ]
+                                  ]
+                              <case>
+                                pattern (lib/parserAux.ml[104,3733+4]..lib/parserAux.ml[104,3733+16])
+                                  Tpat_value
+                                  pattern (lib/parserAux.ml[104,3733+4]..lib/parserAux.ml[104,3733+16])
+                                    Tpat_tuple
+                                    [
+                                      pattern (lib/parserAux.ml[104,3733+4]..lib/parserAux.ml[104,3733+8])
+                                        Tpat_construct "None"
+                                        []
+                                        None
+                                      pattern (lib/parserAux.ml[104,3733+10]..lib/parserAux.ml[104,3733+16])
+                                        Tpat_construct "Some"
+                                        [
+                                          pattern (lib/parserAux.ml[104,3733+15]..lib/parserAux.ml[104,3733+16])
+                                            Tpat_any
+                                        ]
+                                        None
+                                    ]
+                                expression (lib/parserAux.ml[105,3753+6]..lib/parserAux.ml[105,3753+8])
+                                  Texp_ident "o2/1599"
+                              <case>
+                                pattern (lib/parserAux.ml[106,3762+4]..lib/parserAux.ml[106,3762+11])
+                                  Tpat_value
+                                  pattern (lib/parserAux.ml[106,3762+4]..lib/parserAux.ml[106,3762+11])
+                                    Tpat_tuple
+                                    [
+                                      pattern (lib/parserAux.ml[106,3762+4]..lib/parserAux.ml[106,3762+5])
+                                        Tpat_any
+                                      pattern (lib/parserAux.ml[106,3762+7]..lib/parserAux.ml[106,3762+11])
+                                        Tpat_construct "None"
+                                        []
+                                        None
+                                    ]
+                                expression (lib/parserAux.ml[107,3777+6]..lib/parserAux.ml[107,3777+8])
+                                  Texp_ident "o1/1598"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/parserAux.ml[122,4401+0]..lib/parserAux.ml[131,4699+12])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[122,4401+4]..lib/parserAux.ml[122,4401+29])
+          Tpat_var "validate_pointfree_action/1638"
+        expression (lib/parserAux.ml[122,4401+30]..lib/parserAux.ml[131,4699+12]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/parserAux.ml[122,4401+31]..lib/parserAux.ml[122,4401+33])
+                extra
+                  Tpat_extra_constraint
+                  core_type (lib/parserAux.ml[122,4401+36]..lib/parserAux.ml[122,4401+45])
+                    Ttyp_constr "Gbnf_parser!.Stretch.ocamltype"
+                    []
+                Tpat_alias "ty/1640"
+                pattern (lib/parserAux.ml[122,4401+31]..lib/parserAux.ml[122,4401+33])
+                  Tpat_any
+              expression (lib/parserAux.ml[123,4469+2]..lib/parserAux.ml[131,4699+12])
+                extra
+                  Texp_constraint
+                  core_type (lib/parserAux.ml[122,4401+49]..lib/parserAux.ml[122,4401+65])
+                    Ttyp_constr "option/10!"
+                    [
+                      core_type (lib/parserAux.ml[122,4401+49]..lib/parserAux.ml[122,4401+58])
+                        Ttyp_constr "Gbnf_parser!.Stretch.t"
+                        []
+                    ]
+                Texp_match
+                expression (lib/parserAux.ml[123,4469+8]..lib/parserAux.ml[123,4469+10])
+                  Texp_ident "ty/1640"
+                [
+                  <case>
+                    pattern (lib/parserAux.ml[124,4485+4]..lib/parserAux.ml[124,4485+14])
+                      Tpat_value
+                      pattern (lib/parserAux.ml[124,4485+4]..lib/parserAux.ml[124,4485+14])
+                        Tpat_construct "Inferred"
+                        [
+                          pattern (lib/parserAux.ml[124,4485+13]..lib/parserAux.ml[124,4485+14])
+                            Tpat_any
+                        ]
+                        None
+                    expression (lib/parserAux.ml[125,4503+6]..lib/parserAux.ml[125,4503+18])
+                      Texp_assert                      expression (lib/parserAux.ml[125,4503+13]..lib/parserAux.ml[125,4503+18])
+                        Texp_construct "false"
+                        []
+                  <case>
+                    pattern (lib/parserAux.ml[126,4522+4]..lib/parserAux.ml[126,4522+20])
+                      Tpat_value
+                      pattern (lib/parserAux.ml[126,4522+4]..lib/parserAux.ml[126,4522+20])
+                        Tpat_construct "Declared"
+                        [
+                          pattern (lib/parserAux.ml[126,4522+13]..lib/parserAux.ml[126,4522+20])
+                            Tpat_var "stretch/1643"
+                        ]
+                        None
+                    expression (lib/parserAux.ml[127,4546+6]..lib/parserAux.ml[131,4699+12])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (lib/parserAux.ml[127,4546+10]..lib/parserAux.ml[127,4546+11])
+                            Tpat_var "s/1644"
+                          expression (lib/parserAux.ml[127,4546+14]..lib/parserAux.ml[127,4546+41])
+                            Texp_field
+                            expression (lib/parserAux.ml[127,4546+14]..lib/parserAux.ml[127,4546+21])
+                              Texp_ident "stretch/1643"
+                            "stretch_raw_content"
+                      ]
+                      expression (lib/parserAux.ml[128,4591+6]..lib/parserAux.ml[131,4699+12])
+                        Texp_ifthenelse
+                        expression (lib/parserAux.ml[128,4591+9]..lib/parserAux.ml[128,4591+70])
+                          Texp_apply
+                          expression (lib/parserAux.ml[128,4591+9]..lib/parserAux.ml[128,4591+47])
+                            Texp_ident "Gbnf_parser!.Lexpointfree.validate_pointfree_action"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/parserAux.ml[128,4591+48]..lib/parserAux.ml[128,4591+70])
+                                Texp_apply
+                                expression (lib/parserAux.ml[128,4591+49]..lib/parserAux.ml[128,4591+67])
+                                  Texp_ident "Stdlib!.Lexing.from_string"
+                                [
+                                  <arg>
+                                    Optional "with_positions"
+                                    expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                                      Texp_construct "None"
+                                      []
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/parserAux.ml[128,4591+68]..lib/parserAux.ml[128,4591+69])
+                                      Texp_ident "s/1644"
+                                ]
+                          ]
+                        expression (lib/parserAux.ml[129,4667+8]..lib/parserAux.ml[129,4667+20])
+                          Texp_construct "Some"
+                          [
+                            expression (lib/parserAux.ml[129,4667+13]..lib/parserAux.ml[129,4667+20])
+                              Texp_ident "stretch/1643"
+                          ]
+                        Some
+                          expression (lib/parserAux.ml[131,4699+8]..lib/parserAux.ml[131,4699+12])
+                            Texp_construct "None"
+                            []
+                ]
+          ]
+    ]
+  structure_item (lib/parserAux.ml[139,4958+0]..lib/parserAux.ml[140,5019+78])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[139,4958+4]..lib/parserAux.ml[139,4958+26])
+          Tpat_var "valid_ocaml_identifier/1651"
+        expression (lib/parserAux.ml[139,4958+27]..lib/parserAux.ml[140,5019+78]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/parserAux.ml[139,4958+28]..lib/parserAux.ml[139,4958+29])
+                extra
+                  Tpat_extra_constraint
+                  core_type (lib/parserAux.ml[139,4958+32]..lib/parserAux.ml[139,4958+50])
+                    Ttyp_constr "Gbnf_parser!.Syntax.located"
+                    [
+                      core_type (lib/parserAux.ml[139,4958+32]..lib/parserAux.ml[139,4958+42])
+                        Ttyp_constr "Gbnf_parser!.Syntax.identifier"
+                        []
+                    ]
+                Tpat_alias "x/1653"
+                pattern (lib/parserAux.ml[139,4958+28]..lib/parserAux.ml[139,4958+29])
+                  Tpat_any
+              expression (lib/parserAux.ml[140,5019+2]..lib/parserAux.ml[140,5019+78])
+                extra
+                  Texp_constraint
+                  core_type (lib/parserAux.ml[139,4958+54]..lib/parserAux.ml[139,4958+58])
+                    Ttyp_constr "bool/5!"
+                    []
+                Texp_apply
+                expression (lib/parserAux.ml[140,5019+2]..lib/parserAux.ml[140,5019+37])
+                  Texp_ident "Gbnf_parser!.Lexpointfree.valid_ocaml_identifier"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/parserAux.ml[140,5019+38]..lib/parserAux.ml[140,5019+78])
+                      Texp_apply
+                      expression (lib/parserAux.ml[140,5019+39]..lib/parserAux.ml[140,5019+57])
+                        Texp_ident "Stdlib!.Lexing.from_string"
+                      [
+                        <arg>
+                          Optional "with_positions"
+                          expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                            Texp_construct "None"
+                            []
+                        <arg>
+                          Nolabel
+                          expression (lib/parserAux.ml[140,5019+58]..lib/parserAux.ml[140,5019+77])
+                            Texp_apply
+                            expression (lib/parserAux.ml[140,5019+59]..lib/parserAux.ml[140,5019+74])
+                              Texp_ident "Gbnf_parser!.Positions.value"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (lib/parserAux.ml[140,5019+75]..lib/parserAux.ml[140,5019+76])
+                                  Texp_ident "x/1653"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+          Texp_apply
+          expression (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost,None)
+          ]
+    ]
+  structure_item (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+          Texp_apply
+          expression (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+          Texp_apply
+          expression (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+          Texp_apply
+          expression (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/parserAux.ml[140,5019+78]..lib/parserAux.ml[140,5019+78]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__ParserAux>
+ "IdSet"[module] ->
+   CU Stdlib . "Set"[module] . "Make"[module](
+   {
+    "compare"[value] -> <Gbnf_parser__ParserAux.12>;
+    "t"[type] -> <Gbnf_parser__ParserAux.11>;
+    })<Gbnf_parser__ParserAux.15>;
+ "early_producer"[type] -> <Gbnf_parser__ParserAux.0>;
+ "early_producers"[type] -> <Gbnf_parser__ParserAux.1>;
+ "early_production"[type] -> <Gbnf_parser__ParserAux.2>;
+ "early_productions"[type] -> <Gbnf_parser__ParserAux.3>;
+ "new_on_error_reduce_level"[value] -> <Gbnf_parser__ParserAux.10>;
+ "new_precedence_level"[value] -> <Gbnf_parser__ParserAux.4>;
+ "new_production_level"[value] -> <Gbnf_parser__ParserAux.8>;
+ "override"[value] -> <Gbnf_parser__ParserAux.16>;
+ "valid_ocaml_identifier"[value] -> <Gbnf_parser__ParserAux.24>;
+ "validate_pointfree_action"[value] -> <Gbnf_parser__ParserAux.20>;
+ }
+
+(setglobal Gbnf_parser__ParserAux!
+  (let
+    (*match*/2484 =
+       (after Gbnf_parser__ParserAux lib/parserAux.ml(14)<ghost>:976-976
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__ParserAux"))
+     *match*/2482 =
+       (after Gbnf_parser__ParserAux lib/parserAux.ml(14)<ghost>:976-976
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/2480 =
+       (after Gbnf_parser__ParserAux lib/parserAux.ml(14)<ghost>:976-976
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/parserAux.ml"))
+     *match*/2478 =
+       (after Gbnf_parser__ParserAux lib/parserAux.ml(14)<ghost>:976-976
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "parserAux.ml"))
+     new_precedence_level/1330 =
+       (let (c/1331 = (makemutable 0 (int) 0))
+         (before Gbnf_parser__ParserAux.new_precedence_level lib/parserAux.ml(36):1368-1465
+           (function param/1362
+             (funct-body Gbnf_parser__ParserAux.new_precedence_level.(fun) lib/parserAux.ml(36):1368-1465
+               (let
+                 (pos2/1333 =a (field_imm 1 param/1362)
+                  pos1/1332 =a (field_imm 0 param/1362))
+                 (before Gbnf_parser__ParserAux.new_precedence_level.(fun) lib/parserAux.ml(37):1392-1465
+                   (seq (+:=1 c/1331)
+                     (before Gbnf_parser__ParserAux.new_precedence_level.(fun) lib/parserAux.ml(38):1404-1465
+                       (makeblock 0 (*,int,*,*)
+                         (after Gbnf_parser__ParserAux.new_precedence_level.(fun) lib/parserAux.ml(38):1421-1448
+                           (apply
+                             (field_imm 6 (global Gbnf_parser__InputFile!))
+                             0))
+                         (field_int 0 c/1331) pos1/1332 pos2/1333)))))))))
+     new_production_level/1363 =
+       (let (c/1364 = (makemutable 0 (int) 0))
+         (before Gbnf_parser__ParserAux.new_production_level lib/parserAux.ml(42):1515-1590
+           (function param/1365[int]
+             (funct-body Gbnf_parser__ParserAux.new_production_level.(fun) lib/parserAux.ml(42):1515-1590
+               (before Gbnf_parser__ParserAux.new_production_level.(fun) lib/parserAux.ml(43):1529-1590
+                 (seq (+:=1 c/1364)
+                   (before Gbnf_parser__ParserAux.new_production_level.(fun) lib/parserAux.ml(44):1541-1590
+                     (makeblock 0 (*,int)
+                       (after Gbnf_parser__ParserAux.new_production_level.(fun) lib/parserAux.ml(44):1558-1585
+                         (apply
+                           (field_imm 6 (global Gbnf_parser__InputFile!)) 0))
+                       (field_int 0 c/1364)))))))))
+     new_on_error_reduce_level/1366 = new_production_level/1363
+     IdSet/1594 =
+       (apply
+         (let (let/2464 = (field_imm 0 (global Stdlib__Set!)))
+           (field_imm 0 (global Stdlib__Set!)))
+         (let
+           (compare/1368 =
+              (function id1/1369 id2/1370 : int
+                (funct-body Gbnf_parser__ParserAux.IdSet.compare lib/parserAux.ml(53)<ghost>:1815-1860
+                  (before Gbnf_parser__ParserAux.IdSet.compare lib/parserAux.ml(54):1829-1860
+                    (after Gbnf_parser__ParserAux.IdSet.compare lib/parserAux.ml(54):1829-1860
+                      (caml_compare
+                        (after Gbnf_parser__ParserAux.IdSet.compare lib/parserAux.ml(54):1837-1848
+                          (apply
+                            (field_imm 0 (global Gbnf_parser__Positions!))
+                            id1/1369))
+                        (after Gbnf_parser__ParserAux.IdSet.compare lib/parserAux.ml(54):1849-1860
+                          (apply
+                            (field_imm 0 (global Gbnf_parser__Positions!))
+                            id2/1370))))))))
+           (pseudo Gbnf_parser__ParserAux.IdSet lib/parserAux.ml(51):1764-1864
+             (makeblock 0 compare/1368))))
+     override/1595 =
+       (function pos/1597 o1/1598 o2/1599
+         (funct-body Gbnf_parser__ParserAux.override lib/parserAux.ml(100)<ghost>:3602-3785
+           (before Gbnf_parser__ParserAux.override lib/parserAux.ml(101):3616-3785
+             (catch
+               (if o1/1598
+                 (if o2/1599
+                   (let
+                     (*match*/2466 =a (field_imm 0 o2/1599)
+                      *match*/2465 =a (field_imm 0 o1/1598))
+                     (before Gbnf_parser__ParserAux.override lib/parserAux.ml(103):3662-3732
+                       (after Gbnf_parser__ParserAux.override lib/parserAux.ml(103):3662-3732
+                         (apply (field_imm 6 (global Gbnf_parser__Error!))
+                           (makeblock 0 pos/1597 0)
+                           [0:
+                            [11:
+                             "this production carries two "
+                             [12: '%' [11: "prec declarations." 0]]]
+                            "this production carries two %%prec declarations."]))))
+                   (exit 1))
+                 (if o2/1599
+                   (let (*match*/2467 =a (field_imm 0 o2/1599))
+                     (before Gbnf_parser__ParserAux.override lib/parserAux.ml(105):3759-3761
+                       o2/1599))
+                   (exit 1)))
+              with (1)
+               (before Gbnf_parser__ParserAux.override lib/parserAux.ml(107):3783-3785
+                 o1/1598)))))
+     validate_pointfree_action/1638 =
+       (function ty/1640
+         (funct-body Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(122)<ghost>:4431-4711
+           (before Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(123):4471-4711
+             (switch* ty/1640
+              case tag 0:
+               (let (stretch/1643 =a (field_imm 0 ty/1640))
+                 (before Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(127):4552-4711
+                   (let (s/1644 = (field_imm 3 stretch/1643))
+                     (before Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(128):4597-4711
+                       (if
+                         (after Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(128):4600-4661
+                           (apply
+                             (field_imm 2
+                               (global Gbnf_parser__Lexpointfree!))
+                             (after Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(128):4639-4661
+                               (apply (field_imm 2 (global Stdlib__Lexing!))
+                                 0 s/1644))))
+                         (before Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(129):4675-4687
+                           (makeblock 0 stretch/1643))
+                         (before Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(131):4707-4711
+                           0))))))
+              case tag 1:
+               (let (*match*/2468 =a (field_imm 0 ty/1640))
+                 (before Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(125):4509-4521
+                   (raise
+                     (after Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(125):4509-4521
+                       (makeblock 0 (global Assert_failure/28!)
+                         [0: "lib/parserAux.ml" 125 6])))))))))
+     valid_ocaml_identifier/1651 =
+       (function x/1653 : int
+         (funct-body Gbnf_parser__ParserAux.valid_ocaml_identifier lib/parserAux.ml(139)<ghost>:4985-5097
+           (before Gbnf_parser__ParserAux.valid_ocaml_identifier lib/parserAux.ml(140):5021-5097
+             (after Gbnf_parser__ParserAux.valid_ocaml_identifier lib/parserAux.ml(140):5021-5097
+               (apply (field_imm 4 (global Gbnf_parser__Lexpointfree!))
+                 (after Gbnf_parser__ParserAux.valid_ocaml_identifier lib/parserAux.ml(140):5057-5097
+                   (apply (field_imm 2 (global Stdlib__Lexing!)) 0
+                     (after Gbnf_parser__ParserAux.valid_ocaml_identifier lib/parserAux.ml(140):5077-5096
+                       (apply (field_imm 0 (global Gbnf_parser__Positions!))
+                         x/1653)))))))))
+     *match*/2476 =
+       (after Gbnf_parser__ParserAux lib/parserAux.ml(140)<ghost>:5097-5097
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/2474 =
+       (after Gbnf_parser__ParserAux lib/parserAux.ml(140)<ghost>:5097-5097
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/2472 =
+       (after Gbnf_parser__ParserAux lib/parserAux.ml(140)<ghost>:5097-5097
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/2470 =
+       (after Gbnf_parser__ParserAux lib/parserAux.ml(140)<ghost>:5097-5097
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__ParserAux")))
+    (pseudo <unknown location>
+      (makeblock 0 new_precedence_level/1330 new_production_level/1363
+        new_on_error_reduce_level/1366 IdSet/1594 override/1595
+        validate_pointfree_action/1638 valid_ocaml_identifier/1651))))
+(setglobal Gbnf_parser__ParserAux!
+  (let
+    (*match*/2484 =
+       (after Gbnf_parser__ParserAux lib/parserAux.ml(14)<ghost>:976-976
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__ParserAux"))
+     *match*/2482 =
+       (after Gbnf_parser__ParserAux lib/parserAux.ml(14)<ghost>:976-976
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/2480 =
+       (after Gbnf_parser__ParserAux lib/parserAux.ml(14)<ghost>:976-976
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/parserAux.ml"))
+     *match*/2478 =
+       (after Gbnf_parser__ParserAux lib/parserAux.ml(14)<ghost>:976-976
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "parserAux.ml"))
+     new_precedence_level/1330 =
+       (let (c/1331 = (makemutable 0 (int) 0))
+         (before Gbnf_parser__ParserAux.new_precedence_level lib/parserAux.ml(36):1368-1465
+           (function param/1362
+             (funct-body Gbnf_parser__ParserAux.new_precedence_level.(fun) lib/parserAux.ml(36):1368-1465
+               (let
+                 (pos2/1333 =a (field_imm 1 param/1362)
+                  pos1/1332 =a (field_imm 0 param/1362))
+                 (before Gbnf_parser__ParserAux.new_precedence_level.(fun) lib/parserAux.ml(37):1392-1465
+                   (seq (+:=1 c/1331)
+                     (before Gbnf_parser__ParserAux.new_precedence_level.(fun) lib/parserAux.ml(38):1404-1465
+                       (makeblock 0 (*,int,*,*)
+                         (after Gbnf_parser__ParserAux.new_precedence_level.(fun) lib/parserAux.ml(38):1421-1448
+                           (apply
+                             (field_imm 6 (global Gbnf_parser__InputFile!))
+                             0))
+                         (field_int 0 c/1331) pos1/1332 pos2/1333)))))))))
+     new_production_level/1363 =
+       (let (c/1364 = (makemutable 0 (int) 0))
+         (before Gbnf_parser__ParserAux.new_production_level lib/parserAux.ml(42):1515-1590
+           (function param/1365[int]
+             (funct-body Gbnf_parser__ParserAux.new_production_level.(fun) lib/parserAux.ml(42):1515-1590
+               (before Gbnf_parser__ParserAux.new_production_level.(fun) lib/parserAux.ml(43):1529-1590
+                 (seq (+:=1 c/1364)
+                   (before Gbnf_parser__ParserAux.new_production_level.(fun) lib/parserAux.ml(44):1541-1590
+                     (makeblock 0 (*,int)
+                       (after Gbnf_parser__ParserAux.new_production_level.(fun) lib/parserAux.ml(44):1558-1585
+                         (apply
+                           (field_imm 6 (global Gbnf_parser__InputFile!)) 0))
+                       (field_int 0 c/1364)))))))))
+     new_on_error_reduce_level/1366 = new_production_level/1363
+     IdSet/1594 =
+       (apply
+         (let (let/2464 = (field_imm 0 (global Stdlib__Set!)))
+           (field_imm 0 (global Stdlib__Set!)))
+         (let
+           (compare/1368 =
+              (function id1/1369 id2/1370 : int
+                (funct-body Gbnf_parser__ParserAux.IdSet.compare lib/parserAux.ml(53)<ghost>:1815-1860
+                  (before Gbnf_parser__ParserAux.IdSet.compare lib/parserAux.ml(54):1829-1860
+                    (after Gbnf_parser__ParserAux.IdSet.compare lib/parserAux.ml(54):1829-1860
+                      (caml_compare
+                        (after Gbnf_parser__ParserAux.IdSet.compare lib/parserAux.ml(54):1837-1848
+                          (apply
+                            (field_imm 0 (global Gbnf_parser__Positions!))
+                            id1/1369))
+                        (after Gbnf_parser__ParserAux.IdSet.compare lib/parserAux.ml(54):1849-1860
+                          (apply
+                            (field_imm 0 (global Gbnf_parser__Positions!))
+                            id2/1370))))))))
+           (pseudo Gbnf_parser__ParserAux.IdSet lib/parserAux.ml(51):1764-1864
+             (makeblock 0 compare/1368))))
+     override/1595 =
+       (function pos/1597 o1/1598 o2/1599
+         (funct-body Gbnf_parser__ParserAux.override lib/parserAux.ml(100)<ghost>:3602-3785
+           (before Gbnf_parser__ParserAux.override lib/parserAux.ml(101):3616-3785
+             (catch
+               (if o1/1598
+                 (if o2/1599
+                   (before Gbnf_parser__ParserAux.override lib/parserAux.ml(103):3662-3732
+                     (after Gbnf_parser__ParserAux.override lib/parserAux.ml(103):3662-3732
+                       (apply (field_imm 6 (global Gbnf_parser__Error!))
+                         (makeblock 0 pos/1597 0)
+                         [0:
+                          [11:
+                           "this production carries two "
+                           [12: '%' [11: "prec declarations." 0]]]
+                          "this production carries two %%prec declarations."])))
+                   (exit 1))
+                 (if o2/1599
+                   (before Gbnf_parser__ParserAux.override lib/parserAux.ml(105):3759-3761
+                     o2/1599)
+                   (exit 1)))
+              with (1)
+               (before Gbnf_parser__ParserAux.override lib/parserAux.ml(107):3783-3785
+                 o1/1598)))))
+     validate_pointfree_action/1638 =
+       (function ty/1640
+         (funct-body Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(122)<ghost>:4431-4711
+           (before Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(123):4471-4711
+             (switch* ty/1640
+              case tag 0:
+               (let (stretch/1643 =a (field_imm 0 ty/1640))
+                 (before Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(127):4552-4711
+                   (let (s/1644 = (field_imm 3 stretch/1643))
+                     (before Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(128):4597-4711
+                       (if
+                         (after Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(128):4600-4661
+                           (apply
+                             (field_imm 2
+                               (global Gbnf_parser__Lexpointfree!))
+                             (after Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(128):4639-4661
+                               (apply (field_imm 2 (global Stdlib__Lexing!))
+                                 0 s/1644))))
+                         (before Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(129):4675-4687
+                           (makeblock 0 stretch/1643))
+                         (before Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(131):4707-4711
+                           0))))))
+              case tag 1:
+               (before Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(125):4509-4521
+                 (raise
+                   (after Gbnf_parser__ParserAux.validate_pointfree_action lib/parserAux.ml(125):4509-4521
+                     (makeblock 0 (global Assert_failure/28!)
+                       [0: "lib/parserAux.ml" 125 6]))))))))
+     valid_ocaml_identifier/1651 =
+       (function x/1653 : int
+         (funct-body Gbnf_parser__ParserAux.valid_ocaml_identifier lib/parserAux.ml(139)<ghost>:4985-5097
+           (before Gbnf_parser__ParserAux.valid_ocaml_identifier lib/parserAux.ml(140):5021-5097
+             (after Gbnf_parser__ParserAux.valid_ocaml_identifier lib/parserAux.ml(140):5021-5097
+               (apply (field_imm 4 (global Gbnf_parser__Lexpointfree!))
+                 (after Gbnf_parser__ParserAux.valid_ocaml_identifier lib/parserAux.ml(140):5057-5097
+                   (apply (field_imm 2 (global Stdlib__Lexing!)) 0
+                     (after Gbnf_parser__ParserAux.valid_ocaml_identifier lib/parserAux.ml(140):5077-5096
+                       (apply (field_imm 0 (global Gbnf_parser__Positions!))
+                         x/1653)))))))))
+     *match*/2476 =
+       (after Gbnf_parser__ParserAux lib/parserAux.ml(140)<ghost>:5097-5097
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/2474 =
+       (after Gbnf_parser__ParserAux lib/parserAux.ml(140)<ghost>:5097-5097
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/2472 =
+       (after Gbnf_parser__ParserAux lib/parserAux.ml(140)<ghost>:5097-5097
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/2470 =
+       (after Gbnf_parser__ParserAux lib/parserAux.ml(140)<ghost>:5097-5097
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__ParserAux")))
+    (pseudo <unknown location>
+      (makeblock 0 new_precedence_level/1330 new_production_level/1363
+        new_on_error_reduce_level/1366 IdSet/1594 override/1595
+        validate_pointfree_action/1638 valid_ocaml_identifier/1651))))

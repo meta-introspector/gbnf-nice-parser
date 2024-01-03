@@ -1,0 +1,1215 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+          ]
+    ]
+  structure_item (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/stringSet.ml[14,976+0]..[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("lib/stringSet.ml",(lib/stringSet.ml[14,976+0]..[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/stringSet.ml[14,976+0]..[14,976+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/stringSet.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("stringSet.ml",(lib/stringSet.ml[14,976+0]..[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stringSet.ml[14,976+0]..[14,976+25])
+    Pstr_include    module_expr (lib/stringSet.ml[14,976+8]..[14,976+25])
+      Pmod_apply
+      module_expr (lib/stringSet.ml[14,976+8]..[14,976+16])
+        Pmod_ident "Set.Make" (lib/stringSet.ml[14,976+8]..[14,976+16])
+      module_expr (lib/stringSet.ml[14,976+18]..[14,976+24])
+        Pmod_ident "String" (lib/stringSet.ml[14,976+18]..[14,976+24])
+  structure_item (lib/stringSet.ml[17,1038+0]..[18,1053+46])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[17,1038+4]..[17,1038+7])
+          Ppat_var "map" (lib/stringSet.ml[17,1038+4]..[17,1038+7])
+        expression (lib/stringSet.ml[17,1038+8]..[18,1053+46]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/stringSet.ml[17,1038+8]..[17,1038+9])
+            Ppat_var "f" (lib/stringSet.ml[17,1038+8]..[17,1038+9])
+          expression (lib/stringSet.ml[17,1038+10]..[18,1053+46]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/stringSet.ml[17,1038+10]..[17,1038+12])
+              Ppat_var "xs" (lib/stringSet.ml[17,1038+10]..[17,1038+12])
+            expression (lib/stringSet.ml[18,1053+2]..[18,1053+46])
+              Pexp_apply
+              expression (lib/stringSet.ml[18,1053+2]..[18,1053+6])
+                Pexp_ident "fold" (lib/stringSet.ml[18,1053+2]..[18,1053+6])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/stringSet.ml[18,1053+7]..[18,1053+37])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (lib/stringSet.ml[18,1053+12]..[18,1053+13])
+                      Ppat_var "x" (lib/stringSet.ml[18,1053+12]..[18,1053+13])
+                    expression (lib/stringSet.ml[18,1053+14]..[18,1053+36]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/stringSet.ml[18,1053+14]..[18,1053+18])
+                        Ppat_var "accu" (lib/stringSet.ml[18,1053+14]..[18,1053+18])
+                      expression (lib/stringSet.ml[18,1053+22]..[18,1053+36])
+                        Pexp_apply
+                        expression (lib/stringSet.ml[18,1053+22]..[18,1053+25])
+                          Pexp_ident "add" (lib/stringSet.ml[18,1053+22]..[18,1053+25])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/stringSet.ml[18,1053+26]..[18,1053+31])
+                              Pexp_apply
+                              expression (lib/stringSet.ml[18,1053+27]..[18,1053+28])
+                                Pexp_ident "f" (lib/stringSet.ml[18,1053+27]..[18,1053+28])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (lib/stringSet.ml[18,1053+29]..[18,1053+30])
+                                    Pexp_ident "x" (lib/stringSet.ml[18,1053+29]..[18,1053+30])
+                              ]
+                          <arg>
+                          Nolabel
+                            expression (lib/stringSet.ml[18,1053+32]..[18,1053+36])
+                              Pexp_ident "accu" (lib/stringSet.ml[18,1053+32]..[18,1053+36])
+                        ]
+                <arg>
+                Nolabel
+                  expression (lib/stringSet.ml[18,1053+38]..[18,1053+40])
+                    Pexp_ident "xs" (lib/stringSet.ml[18,1053+38]..[18,1053+40])
+                <arg>
+                Nolabel
+                  expression (lib/stringSet.ml[18,1053+41]..[18,1053+46])
+                    Pexp_ident "empty" (lib/stringSet.ml[18,1053+41]..[18,1053+46])
+              ]
+    ]
+  structure_item (lib/stringSet.ml[20,1101+0]..[21,1115+69])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[20,1101+4]..[20,1101+9])
+          Ppat_var "print" (lib/stringSet.ml[20,1101+4]..[20,1101+9])
+        expression (lib/stringSet.ml[20,1101+10]..[21,1115+69]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/stringSet.ml[20,1101+10]..[20,1101+11])
+            Ppat_var "s" (lib/stringSet.ml[20,1101+10]..[20,1101+11])
+          expression (lib/stringSet.ml[21,1115+2]..[21,1115+69])
+            Pexp_apply
+            expression (lib/stringSet.ml[21,1115+2]..[21,1115+31])
+              Pexp_ident "Misc.separated_iter_to_string" (lib/stringSet.ml[21,1115+2]..[21,1115+31])
+            [
+              <arg>
+              Nolabel
+                expression (lib/stringSet.ml[21,1115+32]..[21,1115+44])
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (lib/stringSet.ml[21,1115+37]..[21,1115+38])
+                    Ppat_var "s" (lib/stringSet.ml[21,1115+37]..[21,1115+38])
+                  expression (lib/stringSet.ml[21,1115+42]..[21,1115+43])
+                    Pexp_ident "s" (lib/stringSet.ml[21,1115+42]..[21,1115+43])
+              <arg>
+              Nolabel
+                expression (lib/stringSet.ml[21,1115+45]..[21,1115+49])
+                  Pexp_constant PConst_string(", ",(lib/stringSet.ml[21,1115+46]..[21,1115+48]),None)
+              <arg>
+              Nolabel
+                expression (lib/stringSet.ml[21,1115+50]..[21,1115+69])
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (lib/stringSet.ml[21,1115+55]..[21,1115+56])
+                    Ppat_var "f" (lib/stringSet.ml[21,1115+55]..[21,1115+56])
+                  expression (lib/stringSet.ml[21,1115+60]..[21,1115+68])
+                    Pexp_apply
+                    expression (lib/stringSet.ml[21,1115+60]..[21,1115+64])
+                      Pexp_ident "iter" (lib/stringSet.ml[21,1115+60]..[21,1115+64])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/stringSet.ml[21,1115+65]..[21,1115+66])
+                          Pexp_ident "f" (lib/stringSet.ml[21,1115+65]..[21,1115+66])
+                      <arg>
+                      Nolabel
+                        expression (lib/stringSet.ml[21,1115+67]..[21,1115+68])
+                          Pexp_ident "s" (lib/stringSet.ml[21,1115+67]..[21,1115+68])
+                    ]
+            ]
+    ]
+  structure_item (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+          Ppat_construct "()" (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+          None
+        expression (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+          Pexp_apply
+          expression (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+          Ppat_construct "()" (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+          None
+        expression (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+          Pexp_apply
+          expression (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+                Pexp_construct "()" (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+          Ppat_construct "()" (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+          None
+        expression (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+          Pexp_apply
+          expression (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+                Pexp_construct "()" (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+          Ppat_construct "()" (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+          None
+        expression (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+          Pexp_apply
+          expression (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/stringSet.ml[21,1115+69]..[21,1115+69]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set
+    ~absolute_filename:"lib/stringSet.ml"
+let () =
+  Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "stringSet.ml"
+include (Set.Make)(String)
+let map f xs = fold (fun x -> fun accu -> add (f x) accu) xs empty
+let print s =
+  Misc.separated_iter_to_string (fun s -> s) ", " (fun f -> iter f s)
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+                Texp_constant Const_string("lib/stringSet.ml",(lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost
+                Texp_constant Const_string("stringSet.ml",(lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stringSet.ml[14,976+0]..lib/stringSet.ml[14,976+25])
+    Tstr_include    module_expr (lib/stringSet.ml[14,976+8]..lib/stringSet.ml[14,976+25])
+      Tmod_apply
+      module_expr (lib/stringSet.ml[14,976+8]..lib/stringSet.ml[14,976+16])
+        module_expr (lib/stringSet.ml[14,976+8]..lib/stringSet.ml[14,976+16])
+          Tmod_ident "Stdlib!.Set.Make"
+      module_expr (lib/stringSet.ml[14,976+18]..lib/stringSet.ml[14,976+24])
+        module_expr (lib/stringSet.ml[14,976+18]..lib/stringSet.ml[14,976+24])
+          Tmod_ident "Stdlib!.String"
+  structure_item (lib/stringSet.ml[17,1038+0]..lib/stringSet.ml[18,1053+46])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[17,1038+4]..lib/stringSet.ml[17,1038+7])
+          Tpat_var "map/1347"
+        expression (lib/stringSet.ml[17,1038+8]..lib/stringSet.ml[18,1053+46]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/stringSet.ml[17,1038+8]..lib/stringSet.ml[17,1038+9])
+                Tpat_var "f/1348"
+              expression (lib/stringSet.ml[17,1038+10]..lib/stringSet.ml[18,1053+46]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/stringSet.ml[17,1038+10]..lib/stringSet.ml[17,1038+12])
+                      Tpat_var "xs/1349"
+                    expression (lib/stringSet.ml[18,1053+2]..lib/stringSet.ml[18,1053+46])
+                      Texp_apply
+                      expression (lib/stringSet.ml[18,1053+2]..lib/stringSet.ml[18,1053+6])
+                        Texp_ident "fold/1327"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/stringSet.ml[18,1053+7]..lib/stringSet.ml[18,1053+37])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (lib/stringSet.ml[18,1053+12]..lib/stringSet.ml[18,1053+13])
+                                  Tpat_var "x/1350"
+                                expression (lib/stringSet.ml[18,1053+14]..lib/stringSet.ml[18,1053+36]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (lib/stringSet.ml[18,1053+14]..lib/stringSet.ml[18,1053+18])
+                                        Tpat_var "accu/1351"
+                                      expression (lib/stringSet.ml[18,1053+22]..lib/stringSet.ml[18,1053+36])
+                                        Texp_apply
+                                        expression (lib/stringSet.ml[18,1053+22]..lib/stringSet.ml[18,1053+25])
+                                          Texp_ident "add/1305"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/stringSet.ml[18,1053+26]..lib/stringSet.ml[18,1053+31])
+                                              Texp_apply
+                                              expression (lib/stringSet.ml[18,1053+27]..lib/stringSet.ml[18,1053+28])
+                                                Texp_ident "f/1348"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/stringSet.ml[18,1053+29]..lib/stringSet.ml[18,1053+30])
+                                                    Texp_ident "x/1350"
+                                              ]
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/stringSet.ml[18,1053+32]..lib/stringSet.ml[18,1053+36])
+                                              Texp_ident "accu/1351"
+                                        ]
+                                  ]
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (lib/stringSet.ml[18,1053+38]..lib/stringSet.ml[18,1053+40])
+                            Texp_ident "xs/1349"
+                        <arg>
+                          Nolabel
+                          expression (lib/stringSet.ml[18,1053+41]..lib/stringSet.ml[18,1053+46])
+                            Texp_ident "empty/1304"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/stringSet.ml[20,1101+0]..lib/stringSet.ml[21,1115+69])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[20,1101+4]..lib/stringSet.ml[20,1101+9])
+          Tpat_var "print/1487"
+        expression (lib/stringSet.ml[20,1101+10]..lib/stringSet.ml[21,1115+69]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/stringSet.ml[20,1101+10]..lib/stringSet.ml[20,1101+11])
+                Tpat_var "s/1489"
+              expression (lib/stringSet.ml[21,1115+2]..lib/stringSet.ml[21,1115+69])
+                Texp_apply
+                expression (lib/stringSet.ml[21,1115+2]..lib/stringSet.ml[21,1115+31])
+                  Texp_ident "Gbnf_parser!.Misc.separated_iter_to_string"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/stringSet.ml[21,1115+32]..lib/stringSet.ml[21,1115+44])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/stringSet.ml[21,1115+37]..lib/stringSet.ml[21,1115+38])
+                            Tpat_var "s/1531"
+                          expression (lib/stringSet.ml[21,1115+42]..lib/stringSet.ml[21,1115+43])
+                            Texp_ident "s/1531"
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (lib/stringSet.ml[21,1115+45]..lib/stringSet.ml[21,1115+49])
+                      Texp_constant Const_string(", ",(lib/stringSet.ml[21,1115+46]..lib/stringSet.ml[21,1115+48]),None)
+                  <arg>
+                    Nolabel
+                    expression (lib/stringSet.ml[21,1115+50]..lib/stringSet.ml[21,1115+69])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/stringSet.ml[21,1115+55]..lib/stringSet.ml[21,1115+56])
+                            Tpat_var "f/1532"
+                          expression (lib/stringSet.ml[21,1115+60]..lib/stringSet.ml[21,1115+68])
+                            Texp_apply
+                            expression (lib/stringSet.ml[21,1115+60]..lib/stringSet.ml[21,1115+64])
+                              Texp_ident "iter/1326"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (lib/stringSet.ml[21,1115+65]..lib/stringSet.ml[21,1115+66])
+                                  Texp_ident "f/1532"
+                              <arg>
+                                Nolabel
+                                expression (lib/stringSet.ml[21,1115+67]..lib/stringSet.ml[21,1115+68])
+                                  Texp_ident "s/1489"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+          Texp_apply
+          expression (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+          Texp_apply
+          expression (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+          Texp_apply
+          expression (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+          Texp_apply
+          expression (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stringSet.ml[21,1115+69]..lib/stringSet.ml[21,1115+69]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__StringSet>
+ "add"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "add"[value];
+ "add_seq"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "add_seq"[value];
+ "cardinal"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "cardinal"[value];
+ "choose"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "choose"[value];
+ "choose_opt"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "choose_opt"[value];
+ "compare"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "compare"[value];
+ "diff"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "diff"[value];
+ "disjoint"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "disjoint"[value];
+ "elements"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "elements"[value];
+ "elt"[type] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "elt"[type];
+ "empty"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "empty"[value];
+ "equal"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "equal"[value];
+ "exists"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "exists"[value];
+ "filter"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "filter"[value];
+ "filter_map"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "filter_map"[value];
+ "find"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find"[value];
+ "find_first"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_first"[value];
+ "find_first_opt"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_first_opt"[value];
+ "find_last"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_last"[value];
+ "find_last_opt"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_last_opt"[value];
+ "find_opt"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_opt"[value];
+ "fold"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "fold"[value];
+ "for_all"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "for_all"[value];
+ "inter"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "inter"[value];
+ "is_empty"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "is_empty"[value];
+ "iter"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "iter"[value];
+ "map"[value] -> <Gbnf_parser__StringSet.0>;
+ "max_elt"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "max_elt"[value];
+ "max_elt_opt"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "max_elt_opt"[value];
+ "mem"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "mem"[value];
+ "min_elt"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "min_elt"[value];
+ "min_elt_opt"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "min_elt_opt"[value];
+ "of_list"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "of_list"[value];
+ "of_seq"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "of_seq"[value];
+ "partition"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "partition"[value];
+ "print"[value] -> <Gbnf_parser__StringSet.5>;
+ "remove"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "remove"[value];
+ "singleton"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "singleton"[value];
+ "split"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "split"[value];
+ "subset"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "subset"[value];
+ "t"[type] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "t"[type];
+ "to_list"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "to_list"[value];
+ "to_rev_seq"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "to_rev_seq"[value];
+ "to_seq"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "to_seq"[value];
+ "to_seq_from"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "to_seq_from"[value];
+ "union"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "union"[value];
+ }
+
+(setglobal Gbnf_parser__StringSet!
+  (let
+    (*match*/2001 =
+       (after Gbnf_parser__StringSet lib/stringSet.ml(14)<ghost>:976-976
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__StringSet"))
+     *match*/1999 =
+       (after Gbnf_parser__StringSet lib/stringSet.ml(14)<ghost>:976-976
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1997 =
+       (after Gbnf_parser__StringSet lib/stringSet.ml(14)<ghost>:976-976
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/stringSet.ml"))
+     *match*/1995 =
+       (after Gbnf_parser__StringSet lib/stringSet.ml(14)<ghost>:976-976
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "stringSet.ml"))
+     include/1982 =
+       (apply
+         (let (let/1993 = (field_imm 0 (global Stdlib__Set!)))
+           (field_imm 0 (global Stdlib__Set!)))
+         (let
+           (let/1991 = (global Stdlib__String!)
+            let/1992 =a (global Stdlib__String!))
+           (makeblock 0 (field_mut 9 let/1992))))
+     empty/1304 =a (field_mut 0 include/1982)
+     add/1305 =a (field_mut 1 include/1982)
+     singleton/1306 =a (field_mut 2 include/1982)
+     remove/1307 =a (field_mut 3 include/1982)
+     union/1308 =a (field_mut 4 include/1982)
+     inter/1309 =a (field_mut 5 include/1982)
+     disjoint/1310 =a (field_mut 6 include/1982)
+     diff/1311 =a (field_mut 7 include/1982)
+     cardinal/1312 =a (field_mut 8 include/1982)
+     elements/1313 =a (field_mut 9 include/1982)
+     min_elt/1314 =a (field_mut 10 include/1982)
+     min_elt_opt/1315 =a (field_mut 11 include/1982)
+     max_elt/1316 =a (field_mut 12 include/1982)
+     max_elt_opt/1317 =a (field_mut 13 include/1982)
+     choose/1318 =a (field_mut 14 include/1982)
+     choose_opt/1319 =a (field_mut 15 include/1982)
+     find/1320 =a (field_mut 16 include/1982)
+     find_opt/1321 =a (field_mut 17 include/1982)
+     find_first/1322 =a (field_mut 18 include/1982)
+     find_first_opt/1323 =a (field_mut 19 include/1982)
+     find_last/1324 =a (field_mut 20 include/1982)
+     find_last_opt/1325 =a (field_mut 21 include/1982)
+     iter/1326 =a (field_mut 22 include/1982)
+     fold/1327 =a (field_mut 23 include/1982)
+     map/1328 =a (field_mut 24 include/1982)
+     filter/1329 =a (field_mut 25 include/1982)
+     filter_map/1330 =a (field_mut 26 include/1982)
+     partition/1331 =a (field_mut 27 include/1982)
+     split/1332 =a (field_mut 28 include/1982)
+     is_empty/1333 =a (field_mut 29 include/1982)
+     mem/1334 =a (field_mut 30 include/1982)
+     equal/1335 =a (field_mut 31 include/1982)
+     compare/1336 =a (field_mut 32 include/1982)
+     subset/1337 =a (field_mut 33 include/1982)
+     for_all/1338 =a (field_mut 34 include/1982)
+     exists/1339 =a (field_mut 35 include/1982)
+     to_list/1340 =a (field_mut 36 include/1982)
+     of_list/1341 =a (field_mut 37 include/1982)
+     to_seq_from/1342 =a (field_mut 38 include/1982)
+     to_seq/1343 =a (field_mut 39 include/1982)
+     to_rev_seq/1344 =a (field_mut 40 include/1982)
+     add_seq/1345 =a (field_mut 41 include/1982)
+     of_seq/1346 =a (field_mut 42 include/1982)
+     map/1347 =
+       (function f/1348 xs/1349
+         (funct-body Gbnf_parser__StringSet.map lib/stringSet.ml(17)<ghost>:1046-1099
+           (before Gbnf_parser__StringSet.map lib/stringSet.ml(18):1055-1099
+             (after Gbnf_parser__StringSet.map lib/stringSet.ml(18):1055-1099
+               (apply fold/1327
+                 (function x/1350 accu/1351
+                   (funct-body Gbnf_parser__StringSet.map.(fun) lib/stringSet.ml(18):1060-1090
+                     (before Gbnf_parser__StringSet.map.(fun) lib/stringSet.ml(18):1075-1089
+                       (after Gbnf_parser__StringSet.map.(fun) lib/stringSet.ml(18):1075-1089
+                         (apply add/1305
+                           (after Gbnf_parser__StringSet.map.(fun) lib/stringSet.ml(18):1079-1084
+                             (apply f/1348 x/1350))
+                           accu/1351)))))
+                 xs/1349 empty/1304)))))
+     print/1487 =
+       (function s/1489
+         (funct-body Gbnf_parser__StringSet.print lib/stringSet.ml(20)<ghost>:1111-1184
+           (before Gbnf_parser__StringSet.print lib/stringSet.ml(21):1117-1184
+             (after Gbnf_parser__StringSet.print lib/stringSet.ml(21):1117-1184
+               (apply (field_imm 5 (global Gbnf_parser__Misc!))
+                 (function s/1531
+                   (funct-body Gbnf_parser__StringSet.print.(fun) lib/stringSet.ml(21):1147-1159
+                     (before Gbnf_parser__StringSet.print.(fun) lib/stringSet.ml(21):1157-1158
+                       s/1531)))
+                 ", "
+                 (function f/1532 : int
+                   (funct-body Gbnf_parser__StringSet.print.(fun) lib/stringSet.ml(21):1165-1184
+                     (before Gbnf_parser__StringSet.print.(fun) lib/stringSet.ml(21):1175-1183
+                       (after Gbnf_parser__StringSet.print.(fun) lib/stringSet.ml(21):1175-1183
+                         (apply iter/1326 f/1532 s/1489))))))))))
+     *match*/1990 =
+       (after Gbnf_parser__StringSet lib/stringSet.ml(21)<ghost>:1184-1184
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/1988 =
+       (after Gbnf_parser__StringSet lib/stringSet.ml(21)<ghost>:1184-1184
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/1986 =
+       (after Gbnf_parser__StringSet lib/stringSet.ml(21)<ghost>:1184-1184
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/1984 =
+       (after Gbnf_parser__StringSet lib/stringSet.ml(21)<ghost>:1184-1184
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__StringSet")))
+    (pseudo <unknown location>
+      (makeblock 0 empty/1304 add/1305 singleton/1306 remove/1307 union/1308
+        inter/1309 disjoint/1310 diff/1311 cardinal/1312 elements/1313
+        min_elt/1314 min_elt_opt/1315 max_elt/1316 max_elt_opt/1317
+        choose/1318 choose_opt/1319 find/1320 find_opt/1321 find_first/1322
+        find_first_opt/1323 find_last/1324 find_last_opt/1325 iter/1326
+        fold/1327 filter/1329 filter_map/1330 partition/1331 split/1332
+        is_empty/1333 mem/1334 equal/1335 compare/1336 subset/1337
+        for_all/1338 exists/1339 to_list/1340 of_list/1341 to_seq_from/1342
+        to_seq/1343 to_rev_seq/1344 add_seq/1345 of_seq/1346 map/1347
+        print/1487))))
+(setglobal Gbnf_parser__StringSet!
+  (let
+    (*match*/2001 =
+       (after Gbnf_parser__StringSet lib/stringSet.ml(14)<ghost>:976-976
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__StringSet"))
+     *match*/1999 =
+       (after Gbnf_parser__StringSet lib/stringSet.ml(14)<ghost>:976-976
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1997 =
+       (after Gbnf_parser__StringSet lib/stringSet.ml(14)<ghost>:976-976
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/stringSet.ml"))
+     *match*/1995 =
+       (after Gbnf_parser__StringSet lib/stringSet.ml(14)<ghost>:976-976
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "stringSet.ml"))
+     include/1982 =
+       (apply
+         (let (let/1993 = (field_imm 0 (global Stdlib__Set!)))
+           (field_imm 0 (global Stdlib__Set!)))
+         (let
+           (let/1991 = (global Stdlib__String!)
+            let/1992 =a (global Stdlib__String!))
+           (makeblock 0 (field_mut 9 let/1992))))
+     empty/1304 =a (field_mut 0 include/1982)
+     add/1305 =a (field_mut 1 include/1982)
+     singleton/1306 =a (field_mut 2 include/1982)
+     remove/1307 =a (field_mut 3 include/1982)
+     union/1308 =a (field_mut 4 include/1982)
+     inter/1309 =a (field_mut 5 include/1982)
+     disjoint/1310 =a (field_mut 6 include/1982)
+     diff/1311 =a (field_mut 7 include/1982)
+     cardinal/1312 =a (field_mut 8 include/1982)
+     elements/1313 =a (field_mut 9 include/1982)
+     min_elt/1314 =a (field_mut 10 include/1982)
+     min_elt_opt/1315 =a (field_mut 11 include/1982)
+     max_elt/1316 =a (field_mut 12 include/1982)
+     max_elt_opt/1317 =a (field_mut 13 include/1982)
+     choose/1318 =a (field_mut 14 include/1982)
+     choose_opt/1319 =a (field_mut 15 include/1982)
+     find/1320 =a (field_mut 16 include/1982)
+     find_opt/1321 =a (field_mut 17 include/1982)
+     find_first/1322 =a (field_mut 18 include/1982)
+     find_first_opt/1323 =a (field_mut 19 include/1982)
+     find_last/1324 =a (field_mut 20 include/1982)
+     find_last_opt/1325 =a (field_mut 21 include/1982)
+     iter/1326 =a (field_mut 22 include/1982)
+     fold/1327 =a (field_mut 23 include/1982)
+     filter/1329 =a (field_mut 25 include/1982)
+     filter_map/1330 =a (field_mut 26 include/1982)
+     partition/1331 =a (field_mut 27 include/1982)
+     split/1332 =a (field_mut 28 include/1982)
+     is_empty/1333 =a (field_mut 29 include/1982)
+     mem/1334 =a (field_mut 30 include/1982)
+     equal/1335 =a (field_mut 31 include/1982)
+     compare/1336 =a (field_mut 32 include/1982)
+     subset/1337 =a (field_mut 33 include/1982)
+     for_all/1338 =a (field_mut 34 include/1982)
+     exists/1339 =a (field_mut 35 include/1982)
+     to_list/1340 =a (field_mut 36 include/1982)
+     of_list/1341 =a (field_mut 37 include/1982)
+     to_seq_from/1342 =a (field_mut 38 include/1982)
+     to_seq/1343 =a (field_mut 39 include/1982)
+     to_rev_seq/1344 =a (field_mut 40 include/1982)
+     add_seq/1345 =a (field_mut 41 include/1982)
+     of_seq/1346 =a (field_mut 42 include/1982)
+     map/1347 =
+       (function f/1348 xs/1349
+         (funct-body Gbnf_parser__StringSet.map lib/stringSet.ml(17)<ghost>:1046-1099
+           (before Gbnf_parser__StringSet.map lib/stringSet.ml(18):1055-1099
+             (after Gbnf_parser__StringSet.map lib/stringSet.ml(18):1055-1099
+               (apply fold/1327
+                 (function x/1350 accu/1351
+                   (funct-body Gbnf_parser__StringSet.map.(fun) lib/stringSet.ml(18):1060-1090
+                     (before Gbnf_parser__StringSet.map.(fun) lib/stringSet.ml(18):1075-1089
+                       (after Gbnf_parser__StringSet.map.(fun) lib/stringSet.ml(18):1075-1089
+                         (apply add/1305
+                           (after Gbnf_parser__StringSet.map.(fun) lib/stringSet.ml(18):1079-1084
+                             (apply f/1348 x/1350))
+                           accu/1351)))))
+                 xs/1349 empty/1304)))))
+     print/1487 =
+       (function s/1489
+         (funct-body Gbnf_parser__StringSet.print lib/stringSet.ml(20)<ghost>:1111-1184
+           (before Gbnf_parser__StringSet.print lib/stringSet.ml(21):1117-1184
+             (after Gbnf_parser__StringSet.print lib/stringSet.ml(21):1117-1184
+               (apply (field_imm 5 (global Gbnf_parser__Misc!))
+                 (function s/1531
+                   (funct-body Gbnf_parser__StringSet.print.(fun) lib/stringSet.ml(21):1147-1159
+                     (before Gbnf_parser__StringSet.print.(fun) lib/stringSet.ml(21):1157-1158
+                       s/1531)))
+                 ", "
+                 (function f/1532 : int
+                   (funct-body Gbnf_parser__StringSet.print.(fun) lib/stringSet.ml(21):1165-1184
+                     (before Gbnf_parser__StringSet.print.(fun) lib/stringSet.ml(21):1175-1183
+                       (after Gbnf_parser__StringSet.print.(fun) lib/stringSet.ml(21):1175-1183
+                         (apply iter/1326 f/1532 s/1489))))))))))
+     *match*/1990 =
+       (after Gbnf_parser__StringSet lib/stringSet.ml(21)<ghost>:1184-1184
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/1988 =
+       (after Gbnf_parser__StringSet lib/stringSet.ml(21)<ghost>:1184-1184
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/1986 =
+       (after Gbnf_parser__StringSet lib/stringSet.ml(21)<ghost>:1184-1184
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/1984 =
+       (after Gbnf_parser__StringSet lib/stringSet.ml(21)<ghost>:1184-1184
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__StringSet")))
+    (pseudo <unknown location>
+      (makeblock 0 empty/1304 add/1305 singleton/1306 remove/1307 union/1308
+        inter/1309 disjoint/1310 diff/1311 cardinal/1312 elements/1313
+        min_elt/1314 min_elt_opt/1315 max_elt/1316 max_elt_opt/1317
+        choose/1318 choose_opt/1319 find/1320 find_opt/1321 find_first/1322
+        find_first_opt/1323 find_last/1324 find_last_opt/1325 iter/1326
+        fold/1327 filter/1329 filter_map/1330 partition/1331 split/1332
+        is_empty/1333 mem/1334 equal/1335 compare/1336 subset/1337
+        for_all/1338 exists/1339 to_list/1340 of_list/1341 to_seq_from/1342
+        to_seq/1343 to_rev_seq/1344 add_seq/1345 of_seq/1346 map/1347
+        print/1487))))

@@ -1,0 +1,779 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+          Ppat_construct "()" (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+          None
+        expression (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+          Pexp_apply
+          expression (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+          ]
+    ]
+  structure_item (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+          Ppat_construct "()" (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+          None
+        expression (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+          Pexp_apply
+          expression (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+          Ppat_construct "()" (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+          None
+        expression (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+          Pexp_apply
+          expression (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+                Pexp_constant PConst_string("lib/Driver.ml",(lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+          Ppat_construct "()" (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+          None
+        expression (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+          Pexp_apply
+          expression (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost
+                Pexp_constant PConst_string("Driver.ml",(lib/Driver.ml[49,2493+0]..[49,2493+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Driver.ml[49,2493+0]..[55,2664+18])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[49,2493+4]..[49,2493+8])
+          Ppat_var "fail" (lib/Driver.ml[49,2493+4]..[49,2493+8])
+        expression (lib/Driver.ml[49,2493+9]..[55,2664+18]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/Driver.ml[49,2493+9]..[49,2493+10])
+            Ppat_any
+          expression (lib/Driver.ml[49,2493+11]..[55,2664+18]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/Driver.ml[49,2493+11]..[49,2493+12])
+              Ppat_any
+            expression (lib/Driver.ml[49,2493+13]..[55,2664+18]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (lib/Driver.ml[49,2493+13]..[49,2493+23])
+                Ppat_var "checkpoint" (lib/Driver.ml[49,2493+13]..[49,2493+23])
+              expression (lib/Driver.ml[50,2519+2]..[55,2664+18])
+                Pexp_match
+                expression (lib/Driver.ml[50,2519+8]..[50,2519+18])
+                  Pexp_ident "checkpoint" (lib/Driver.ml[50,2519+8]..[50,2519+18])
+                [
+                  <case>
+                    pattern (lib/Driver.ml[54,2655+4]..[54,2655+5])
+                      Ppat_any
+                    expression (lib/Driver.ml[55,2664+6]..[55,2664+18])
+                      Pexp_assert
+                      expression (lib/Driver.ml[55,2664+13]..[55,2664+18])
+                        Pexp_construct "false" (lib/Driver.ml[55,2664+13]..[55,2664+18])
+                        None
+                ]
+    ]
+  structure_item (lib/Driver.ml[59,2733+0]..[59,2733+20])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[59,2733+4]..[59,2733+11])
+          Ppat_var "grammar" (lib/Driver.ml[59,2733+4]..[59,2733+11])
+        expression (lib/Driver.ml[59,2733+12]..[59,2733+20]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/Driver.ml[59,2733+12]..[59,2733+13])
+            Ppat_any
+          expression (lib/Driver.ml[59,2733+14]..[59,2733+20]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/Driver.ml[59,2733+14]..[59,2733+15])
+              Ppat_any
+            expression (lib/Driver.ml[59,2733+18]..[59,2733+20])
+              Pexp_constant PConst_string("",(lib/Driver.ml[59,2733+19]..[59,2733+19]),None)
+    ]
+  structure_item (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+          Ppat_construct "()" (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+          None
+        expression (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+          Pexp_apply
+          expression (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+          Ppat_construct "()" (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+          None
+        expression (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+          Pexp_apply
+          expression (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+                Pexp_construct "()" (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+          Ppat_construct "()" (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+          None
+        expression (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+          Pexp_apply
+          expression (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+                Pexp_construct "()" (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+          Ppat_construct "()" (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+          None
+        expression (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+          Pexp_apply
+          expression (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/Driver.ml[59,2733+20]..[59,2733+20]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set ~absolute_filename:"lib/Driver.ml"
+let () = Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "Driver.ml"
+let fail _ _ checkpoint = match checkpoint with | _ -> assert false
+let grammar _ _ = ""
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+          Texp_apply
+          expression (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+          Texp_apply
+          expression (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+          Texp_apply
+          expression (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+                Texp_constant Const_string("lib/Driver.ml",(lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+          Texp_apply
+          expression (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost
+                Texp_constant Const_string("Driver.ml",(lib/Driver.ml[49,2493+0]..lib/Driver.ml[49,2493+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Driver.ml[49,2493+0]..lib/Driver.ml[55,2664+18])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[49,2493+4]..lib/Driver.ml[49,2493+8])
+          Tpat_var "fail/1132"
+        expression (lib/Driver.ml[49,2493+9]..lib/Driver.ml[55,2664+18]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/Driver.ml[49,2493+9]..lib/Driver.ml[49,2493+10])
+                Tpat_any
+              expression (lib/Driver.ml[49,2493+11]..lib/Driver.ml[55,2664+18]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/Driver.ml[49,2493+11]..lib/Driver.ml[49,2493+12])
+                      Tpat_any
+                    expression (lib/Driver.ml[49,2493+13]..lib/Driver.ml[55,2664+18]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/Driver.ml[49,2493+13]..lib/Driver.ml[49,2493+23])
+                            Tpat_var "checkpoint/1134"
+                          expression (lib/Driver.ml[50,2519+2]..lib/Driver.ml[55,2664+18])
+                            Texp_match
+                            expression (lib/Driver.ml[50,2519+8]..lib/Driver.ml[50,2519+18])
+                              Texp_ident "checkpoint/1134"
+                            [
+                              <case>
+                                pattern (lib/Driver.ml[54,2655+4]..lib/Driver.ml[54,2655+5])
+                                  Tpat_value
+                                  pattern (lib/Driver.ml[54,2655+4]..lib/Driver.ml[54,2655+5])
+                                    Tpat_any
+                                expression (lib/Driver.ml[55,2664+6]..lib/Driver.ml[55,2664+18])
+                                  Texp_assert                                  expression (lib/Driver.ml[55,2664+13]..lib/Driver.ml[55,2664+18])
+                                    Texp_construct "false"
+                                    []
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/Driver.ml[59,2733+0]..lib/Driver.ml[59,2733+20])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[59,2733+4]..lib/Driver.ml[59,2733+11])
+          Tpat_var "grammar/1137"
+        expression (lib/Driver.ml[59,2733+12]..lib/Driver.ml[59,2733+20]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/Driver.ml[59,2733+12]..lib/Driver.ml[59,2733+13])
+                Tpat_any
+              expression (lib/Driver.ml[59,2733+14]..lib/Driver.ml[59,2733+20]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/Driver.ml[59,2733+14]..lib/Driver.ml[59,2733+15])
+                      Tpat_any
+                    expression (lib/Driver.ml[59,2733+18]..lib/Driver.ml[59,2733+20])
+                      Texp_constant Const_string("",(lib/Driver.ml[59,2733+19]..lib/Driver.ml[59,2733+19]),None)
+                ]
+          ]
+    ]
+  structure_item (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+          Texp_apply
+          expression (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+          Texp_apply
+          expression (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+          Texp_apply
+          expression (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+          Texp_apply
+          expression (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Driver.ml[59,2733+20]..lib/Driver.ml[59,2733+20]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__Driver>
+ "fail"[value] -> <Gbnf_parser__Driver.0>;
+ "grammar"[value] -> <Gbnf_parser__Driver.2>;
+ }
+
+(seq
+  (let
+    (*match*/1425 =
+       (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Driver"))
+    0)
+  (let
+    (*match*/1427 =
+       (apply
+         (field_imm 0
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/1429 =
+       (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+         "lib/Driver.ml"))
+    0)
+  (let
+    (*match*/1431 =
+       (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "Driver.ml"))
+    0)
+  (let
+    (fail/1132 =
+       (function param/1136 param/1135 checkpoint/1134
+         (raise
+           (makeblock 0 (global Assert_failure/28!)
+             [0: "lib/Driver.ml" 55 6]))))
+    (setfield_ptr(root-init) 0 (global Gbnf_parser__Driver!) fail/1132))
+  (let (grammar/1137 = (function param/1140 param/1139 ""))
+    (setfield_ptr(root-init) 1 (global Gbnf_parser__Driver!) grammar/1137))
+  (let
+    (*match*/1433 =
+       (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+    0)
+  (let
+    (*match*/1435 =
+       (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!))) 0))
+    0)
+  (let
+    (*match*/1437 =
+       (apply
+         (field_imm 1
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         0))
+    0)
+  (let
+    (*match*/1439 =
+       (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Driver"))
+    0)
+  0)
+(seq
+  (let
+    (*match*/1425 =
+       (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Driver"))
+    0)
+  (let
+    (*match*/1427 =
+       (apply
+         (field_imm 0
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/1429 =
+       (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+         "lib/Driver.ml"))
+    0)
+  (let
+    (*match*/1431 =
+       (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "Driver.ml"))
+    0)
+  (let
+    (fail/1132 =
+       (function param/1136 param/1135 checkpoint/1134
+         (raise
+           (makeblock 0 (global Assert_failure/28!)
+             [0: "lib/Driver.ml" 55 6]))))
+    (setfield_ptr(root-init) 0 (global Gbnf_parser__Driver!) fail/1132))
+  (let (grammar/1137 = (function param/1140 param/1139 ""))
+    (setfield_ptr(root-init) 1 (global Gbnf_parser__Driver!) grammar/1137))
+  (let
+    (*match*/1433 =
+       (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+    0)
+  (let
+    (*match*/1435 =
+       (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!))) 0))
+    0)
+  (let
+    (*match*/1437 =
+       (apply
+         (field_imm 1
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         0))
+    0)
+  (let
+    (*match*/1439 =
+       (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Driver"))
+    0)
+  0)

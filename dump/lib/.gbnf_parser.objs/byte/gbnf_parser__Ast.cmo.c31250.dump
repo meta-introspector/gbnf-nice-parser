@@ -1,0 +1,2239 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+          Ppat_construct "()" (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+          None
+        expression (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+          Pexp_apply
+          expression (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+          ]
+    ]
+  structure_item (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+          Ppat_construct "()" (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+          None
+        expression (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+          Pexp_apply
+          expression (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/ast.ml[1,0+0]..[1,0+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+          Ppat_construct "()" (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+          None
+        expression (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+          Pexp_apply
+          expression (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+                Pexp_constant PConst_string("lib/ast.ml",(lib/ast.ml[1,0+0]..[1,0+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+          Ppat_construct "()" (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+          None
+        expression (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+          Pexp_apply
+          expression (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/ast.ml[1,0+0]..[1,0+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/ast.ml[1,0+0]..[1,0+0]) ghost
+                Pexp_constant PConst_string("ast.ml",(lib/ast.ml[1,0+0]..[1,0+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/ast.ml[1,0+0]..[1,0+16])
+    Pstr_open Fresh
+    module_expr (lib/ast.ml[1,0+5]..[1,0+16])
+      Pmod_ident "Sexplib.Std" (lib/ast.ml[1,0+5]..[1,0+16])
+  structure_item (lib/ast.ml[3,18+0]..[6,71+19])
+    Pstr_type Rec
+    [
+      type_declaration "sexp" (lib/ast.ml[3,18+5]..[3,18+9]) (lib/ast.ml[3,18+0]..[6,71+19])
+        attribute "deriving"
+          [
+            structure_item (lib/ast.ml[6,71+14]..[6,71+18])
+              Pstr_eval
+              expression (lib/ast.ml[6,71+14]..[6,71+18])
+                Pexp_ident "sexp" (lib/ast.ml[6,71+14]..[6,71+18])
+          ]
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/ast.ml[4,30+2]..[4,30+18])
+                "Atom" (lib/ast.ml[4,30+4]..[4,30+8])
+                [
+                  core_type (lib/ast.ml[4,30+12]..[4,30+18])
+                    Ptyp_constr "string" (lib/ast.ml[4,30+12]..[4,30+18])
+                    []
+                ]
+                None
+              (lib/ast.ml[5,49+2]..[5,49+21])
+                "List" (lib/ast.ml[5,49+4]..[5,49+8])
+                [
+                  core_type (lib/ast.ml[5,49+12]..[5,49+21])
+                    Ptyp_constr "list" (lib/ast.ml[5,49+17]..[5,49+21])
+                    [
+                      core_type (lib/ast.ml[5,49+12]..[5,49+16])
+                        Ptyp_constr "sexp" (lib/ast.ml[5,49+12]..[5,49+16])
+                        []
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/ast.ml[3,18+0]..[6,71+19]) ghost
+    Pstr_include      attribute "ocaml.doc"
+        [
+          structure_item (_none_[1,0+-1]..[1,0+-1]) ghost
+            Pstr_eval
+            expression (_none_[1,0+-1]..[1,0+-1]) ghost
+              Pexp_constant PConst_string("@inline",(_none_[1,0+-1]..[1,0+-1]) ghost,None)
+        ]
+      attribute "merlin.hide"
+        []
+    module_expr (lib/ast.ml[3,18+0]..[6,71+19]) ghost
+      Pmod_structure
+      [
+        structure_item (lib/ast.ml[3,18+0]..[6,71+19])
+          Pstr_value Nonrec
+          [
+            <def>
+              pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                Ppat_any
+              expression (lib/ast.ml[3,18+0]..[6,71+19])
+                Pexp_fun
+                Nolabel
+                None
+                pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                  Ppat_constraint
+                  pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                    Ppat_any
+                  core_type (lib/ast.ml[3,18+5]..[3,18+9])
+                    Ptyp_constr "sexp" (lib/ast.ml[3,18+5]..[3,18+9])
+                    []
+                expression (lib/ast.ml[3,18+0]..[6,71+19])
+                  Pexp_construct "()" (lib/ast.ml[3,18+0]..[6,71+19])
+                  None
+          ]
+        structure_item (lib/ast.ml[3,18+0]..[6,71+19])
+          Pstr_value Rec
+          [
+            <def>
+              pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                Ppat_var "sexp_of_sexp" (lib/ast.ml[3,18+0]..[6,71+19])
+              expression (lib/ast.ml[3,18+0]..[6,71+19])
+                Pexp_constraint
+                expression (lib/ast.ml[3,18+0]..[6,71+19])
+                  Pexp_let Nonrec
+                  [
+                    <def>
+                      pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                        Ppat_var "error_source__003_" (lib/ast.ml[3,18+0]..[6,71+19])
+                      expression (lib/ast.ml[3,18+0]..[6,71+19])
+                        Pexp_constant PConst_string("lib/ast.ml.sexp",(lib/ast.ml[3,18+0]..[6,71+19]),None)
+                  ]
+                  expression (lib/ast.ml[3,18+0]..[6,71+19])
+                    Pexp_function
+                    [
+                      <case>
+                        pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                          Ppat_alias "_sexp__005_" (lib/ast.ml[4,30+2]..[4,30+18])
+                          pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                            Ppat_construct "Sexplib0.Sexp.List" (lib/ast.ml[4,30+2]..[4,30+18])
+                            Some
+                              []
+                              pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                                Ppat_construct "::" (lib/ast.ml[4,30+2]..[4,30+18])
+                                Some
+                                  []
+                                  pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                                    Ppat_tuple
+                                    [
+                                      pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                                        Ppat_construct "Sexplib0.Sexp.Atom" (lib/ast.ml[4,30+2]..[4,30+18])
+                                        Some
+                                          []
+                                          pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                                            Ppat_alias "_tag__006_" (lib/ast.ml[4,30+2]..[4,30+18])
+                                            pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                                              Ppat_or
+                                              pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                                                Ppat_constant PConst_string("atom",(lib/ast.ml[4,30+2]..[4,30+18]),None)
+                                              pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                                                Ppat_constant PConst_string("Atom",(lib/ast.ml[4,30+2]..[4,30+18]),None)
+                                      pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                                        Ppat_var "sexp_args__007_" (lib/ast.ml[4,30+2]..[4,30+18])
+                                    ]
+                        expression (lib/ast.ml[4,30+2]..[4,30+18])
+                          Pexp_match
+                          expression (lib/ast.ml[4,30+2]..[4,30+18])
+                            Pexp_ident "sexp_args__007_" (lib/ast.ml[4,30+2]..[4,30+18])
+                          [
+                            <case>
+                              pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                                Ppat_construct "::" (lib/ast.ml[4,30+2]..[4,30+18])
+                                Some
+                                  []
+                                  pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                                    Ppat_tuple
+                                    [
+                                      pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                                        Ppat_var "arg0__008_" (lib/ast.ml[4,30+2]..[4,30+18])
+                                      pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                                        Ppat_construct "[]" (lib/ast.ml[4,30+2]..[4,30+18])
+                                        None
+                                    ]
+                              expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                Pexp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                                      Ppat_var "res0__009_" (lib/ast.ml[4,30+2]..[4,30+18])
+                                    expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                      Pexp_apply
+                                      expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                        Pexp_ident "string_of_sexp" (lib/ast.ml[4,30+12]..[4,30+18]) ghost
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                            Pexp_ident "arg0__008_" (lib/ast.ml[4,30+2]..[4,30+18])
+                                      ]
+                                ]
+                                expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                  Pexp_construct "Atom" (lib/ast.ml[4,30+2]..[4,30+18])
+                                  Some
+                                    expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                      Pexp_ident "res0__009_" (lib/ast.ml[4,30+2]..[4,30+18])
+                            <case>
+                              pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                                Ppat_any
+                              expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                Pexp_apply
+                                expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                  Pexp_ident "Sexplib0.Sexp_conv_error.stag_incorrect_n_args" (lib/ast.ml[4,30+2]..[4,30+18])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/ast.ml[3,18+0]..[6,71+19])
+                                      Pexp_ident "error_source__003_" (lib/ast.ml[3,18+0]..[6,71+19])
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                      Pexp_ident "_tag__006_" (lib/ast.ml[4,30+2]..[4,30+18])
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                      Pexp_ident "_sexp__005_" (lib/ast.ml[4,30+2]..[4,30+18])
+                                ]
+                          ]
+                      <case>
+                        pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                          Ppat_alias "_sexp__010_" (lib/ast.ml[5,49+2]..[5,49+21])
+                          pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                            Ppat_construct "Sexplib0.Sexp.List" (lib/ast.ml[5,49+2]..[5,49+21])
+                            Some
+                              []
+                              pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                                Ppat_construct "::" (lib/ast.ml[5,49+2]..[5,49+21])
+                                Some
+                                  []
+                                  pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                                    Ppat_tuple
+                                    [
+                                      pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                                        Ppat_construct "Sexplib0.Sexp.Atom" (lib/ast.ml[5,49+2]..[5,49+21])
+                                        Some
+                                          []
+                                          pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                                            Ppat_alias "_tag__011_" (lib/ast.ml[5,49+2]..[5,49+21])
+                                            pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                                              Ppat_or
+                                              pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                                                Ppat_constant PConst_string("list",(lib/ast.ml[5,49+2]..[5,49+21]),None)
+                                              pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                                                Ppat_constant PConst_string("List",(lib/ast.ml[5,49+2]..[5,49+21]),None)
+                                      pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                                        Ppat_var "sexp_args__012_" (lib/ast.ml[5,49+2]..[5,49+21])
+                                    ]
+                        expression (lib/ast.ml[5,49+2]..[5,49+21])
+                          Pexp_match
+                          expression (lib/ast.ml[5,49+2]..[5,49+21])
+                            Pexp_ident "sexp_args__012_" (lib/ast.ml[5,49+2]..[5,49+21])
+                          [
+                            <case>
+                              pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                                Ppat_construct "::" (lib/ast.ml[5,49+2]..[5,49+21])
+                                Some
+                                  []
+                                  pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                                    Ppat_tuple
+                                    [
+                                      pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                                        Ppat_var "arg0__013_" (lib/ast.ml[5,49+2]..[5,49+21])
+                                      pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                                        Ppat_construct "[]" (lib/ast.ml[5,49+2]..[5,49+21])
+                                        None
+                                    ]
+                              expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                Pexp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                                      Ppat_var "res0__014_" (lib/ast.ml[5,49+2]..[5,49+21])
+                                    expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                      Pexp_apply
+                                      expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                        Pexp_ident "list_of_sexp" (lib/ast.ml[5,49+17]..[5,49+21]) ghost
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (lib/ast.ml[5,49+12]..[5,49+21])
+                                            Pexp_ident "sexp_of_sexp" (lib/ast.ml[5,49+12]..[5,49+16]) ghost
+                                        <arg>
+                                        Nolabel
+                                          expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                            Pexp_ident "arg0__013_" (lib/ast.ml[5,49+2]..[5,49+21])
+                                      ]
+                                ]
+                                expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                  Pexp_construct "List" (lib/ast.ml[5,49+2]..[5,49+21])
+                                  Some
+                                    expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                      Pexp_ident "res0__014_" (lib/ast.ml[5,49+2]..[5,49+21])
+                            <case>
+                              pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                                Ppat_any
+                              expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                Pexp_apply
+                                expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                  Pexp_ident "Sexplib0.Sexp_conv_error.stag_incorrect_n_args" (lib/ast.ml[5,49+2]..[5,49+21])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/ast.ml[3,18+0]..[6,71+19])
+                                      Pexp_ident "error_source__003_" (lib/ast.ml[3,18+0]..[6,71+19])
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                      Pexp_ident "_tag__011_" (lib/ast.ml[5,49+2]..[5,49+21])
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                      Pexp_ident "_sexp__010_" (lib/ast.ml[5,49+2]..[5,49+21])
+                                ]
+                          ]
+                      <case>
+                        pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                          Ppat_alias "sexp__004_" (lib/ast.ml[3,18+0]..[6,71+19])
+                          pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                            Ppat_construct "Sexplib0.Sexp.Atom" (lib/ast.ml[3,18+0]..[6,71+19])
+                            Some
+                              []
+                              pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                                Ppat_or
+                                pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                                  Ppat_constant PConst_string("atom",(lib/ast.ml[3,18+0]..[6,71+19]),None)
+                                pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                                  Ppat_constant PConst_string("Atom",(lib/ast.ml[3,18+0]..[6,71+19]),None)
+                        expression (lib/ast.ml[3,18+0]..[6,71+19])
+                          Pexp_apply
+                          expression (lib/ast.ml[3,18+0]..[6,71+19])
+                            Pexp_ident "Sexplib0.Sexp_conv_error.stag_takes_args" (lib/ast.ml[3,18+0]..[6,71+19])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (lib/ast.ml[3,18+0]..[6,71+19])
+                                Pexp_ident "error_source__003_" (lib/ast.ml[3,18+0]..[6,71+19])
+                            <arg>
+                            Nolabel
+                              expression (lib/ast.ml[3,18+0]..[6,71+19])
+                                Pexp_ident "sexp__004_" (lib/ast.ml[3,18+0]..[6,71+19])
+                          ]
+                      <case>
+                        pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                          Ppat_alias "sexp__004_" (lib/ast.ml[3,18+0]..[6,71+19])
+                          pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                            Ppat_construct "Sexplib0.Sexp.Atom" (lib/ast.ml[3,18+0]..[6,71+19])
+                            Some
+                              []
+                              pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                                Ppat_or
+                                pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                                  Ppat_constant PConst_string("list",(lib/ast.ml[3,18+0]..[6,71+19]),None)
+                                pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                                  Ppat_constant PConst_string("List",(lib/ast.ml[3,18+0]..[6,71+19]),None)
+                        expression (lib/ast.ml[3,18+0]..[6,71+19])
+                          Pexp_apply
+                          expression (lib/ast.ml[3,18+0]..[6,71+19])
+                            Pexp_ident "Sexplib0.Sexp_conv_error.stag_takes_args" (lib/ast.ml[3,18+0]..[6,71+19])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (lib/ast.ml[3,18+0]..[6,71+19])
+                                Pexp_ident "error_source__003_" (lib/ast.ml[3,18+0]..[6,71+19])
+                            <arg>
+                            Nolabel
+                              expression (lib/ast.ml[3,18+0]..[6,71+19])
+                                Pexp_ident "sexp__004_" (lib/ast.ml[3,18+0]..[6,71+19])
+                          ]
+                      <case>
+                        pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                          Ppat_alias "sexp__002_" (lib/ast.ml[3,18+0]..[6,71+19])
+                          pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                            Ppat_construct "Sexplib0.Sexp.List" (lib/ast.ml[3,18+0]..[6,71+19])
+                            Some
+                              []
+                              pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                                Ppat_construct "::" (lib/ast.ml[3,18+0]..[6,71+19])
+                                Some
+                                  []
+                                  pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                                    Ppat_tuple
+                                    [
+                                      pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                                        Ppat_construct "Sexplib0.Sexp.List" (lib/ast.ml[3,18+0]..[6,71+19])
+                                        Some
+                                          []
+                                          pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                                            Ppat_any
+                                      pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                                        Ppat_any
+                                    ]
+                        expression (lib/ast.ml[3,18+0]..[6,71+19])
+                          Pexp_apply
+                          expression (lib/ast.ml[3,18+0]..[6,71+19])
+                            Pexp_ident "Sexplib0.Sexp_conv_error.nested_list_invalid_sum" (lib/ast.ml[3,18+0]..[6,71+19])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (lib/ast.ml[3,18+0]..[6,71+19])
+                                Pexp_ident "error_source__003_" (lib/ast.ml[3,18+0]..[6,71+19])
+                            <arg>
+                            Nolabel
+                              expression (lib/ast.ml[3,18+0]..[6,71+19])
+                                Pexp_ident "sexp__002_" (lib/ast.ml[3,18+0]..[6,71+19])
+                          ]
+                      <case>
+                        pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                          Ppat_alias "sexp__002_" (lib/ast.ml[3,18+0]..[6,71+19])
+                          pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                            Ppat_construct "Sexplib0.Sexp.List" (lib/ast.ml[3,18+0]..[6,71+19])
+                            Some
+                              []
+                              pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                                Ppat_construct "[]" (lib/ast.ml[3,18+0]..[6,71+19])
+                                None
+                        expression (lib/ast.ml[3,18+0]..[6,71+19])
+                          Pexp_apply
+                          expression (lib/ast.ml[3,18+0]..[6,71+19])
+                            Pexp_ident "Sexplib0.Sexp_conv_error.empty_list_invalid_sum" (lib/ast.ml[3,18+0]..[6,71+19])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (lib/ast.ml[3,18+0]..[6,71+19])
+                                Pexp_ident "error_source__003_" (lib/ast.ml[3,18+0]..[6,71+19])
+                            <arg>
+                            Nolabel
+                              expression (lib/ast.ml[3,18+0]..[6,71+19])
+                                Pexp_ident "sexp__002_" (lib/ast.ml[3,18+0]..[6,71+19])
+                          ]
+                      <case>
+                        pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                          Ppat_var "sexp__002_" (lib/ast.ml[3,18+0]..[6,71+19])
+                        expression (lib/ast.ml[3,18+0]..[6,71+19])
+                          Pexp_apply
+                          expression (lib/ast.ml[3,18+0]..[6,71+19])
+                            Pexp_ident "Sexplib0.Sexp_conv_error.unexpected_stag" (lib/ast.ml[3,18+0]..[6,71+19])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (lib/ast.ml[3,18+0]..[6,71+19])
+                                Pexp_ident "error_source__003_" (lib/ast.ml[3,18+0]..[6,71+19])
+                            <arg>
+                            Nolabel
+                              expression (lib/ast.ml[3,18+0]..[6,71+19])
+                                Pexp_ident "sexp__002_" (lib/ast.ml[3,18+0]..[6,71+19])
+                          ]
+                    ]
+                core_type (lib/ast.ml[3,18+5]..[3,18+9]) ghost
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (lib/ast.ml[3,18+5]..[3,18+9]) ghost
+                    Ptyp_constr "Sexplib0.Sexp.t" (lib/ast.ml[3,18+5]..[3,18+9]) ghost
+                    []
+                  core_type (lib/ast.ml[3,18+5]..[3,18+9])
+                    Ptyp_constr "sexp" (lib/ast.ml[3,18+5]..[3,18+9])
+                    []
+          ]
+        structure_item (lib/ast.ml[3,18+0]..[6,71+19])
+          Pstr_value Nonrec
+          [
+            <def>
+              pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                Ppat_any
+              expression (lib/ast.ml[3,18+0]..[6,71+19])
+                Pexp_ident "sexp_of_sexp" (lib/ast.ml[3,18+0]..[6,71+19])
+          ]
+        structure_item (lib/ast.ml[3,18+0]..[6,71+19])
+          Pstr_value Rec
+          [
+            <def>
+              pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                Ppat_var "sexp_of_sexp" (lib/ast.ml[3,18+0]..[6,71+19])
+              expression (lib/ast.ml[3,18+0]..[6,71+19])
+                Pexp_constraint
+                expression (lib/ast.ml[3,18+0]..[6,71+19])
+                  Pexp_function
+                  [
+                    <case>
+                      pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                        Ppat_construct "Atom" (lib/ast.ml[4,30+4]..[4,30+8])
+                        Some
+                          []
+                          pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                            Ppat_var "arg0__015_" (lib/ast.ml[4,30+2]..[4,30+18])
+                      expression (lib/ast.ml[4,30+2]..[4,30+18])
+                        Pexp_let Nonrec
+                        [
+                          <def>
+                            pattern (lib/ast.ml[4,30+2]..[4,30+18])
+                              Ppat_var "res0__016_" (lib/ast.ml[4,30+2]..[4,30+18])
+                            expression (lib/ast.ml[4,30+2]..[4,30+18])
+                              Pexp_apply
+                              expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                Pexp_ident "sexp_of_string" (lib/ast.ml[4,30+12]..[4,30+18]) ghost
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                    Pexp_ident "arg0__015_" (lib/ast.ml[4,30+2]..[4,30+18])
+                              ]
+                        ]
+                        expression (lib/ast.ml[4,30+2]..[4,30+18])
+                          Pexp_construct "Sexplib0.Sexp.List" (lib/ast.ml[4,30+2]..[4,30+18])
+                          Some
+                            expression (lib/ast.ml[4,30+2]..[4,30+18])
+                              Pexp_construct "::" (lib/ast.ml[4,30+2]..[4,30+18])
+                              Some
+                                expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                  Pexp_tuple
+                                  [
+                                    expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                      Pexp_construct "Sexplib0.Sexp.Atom" (lib/ast.ml[4,30+2]..[4,30+18])
+                                      Some
+                                        expression (lib/ast.ml[4,30+4]..[4,30+8])
+                                          Pexp_constant PConst_string("Atom",(lib/ast.ml[4,30+4]..[4,30+8]),None)
+                                    expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                      Pexp_construct "::" (lib/ast.ml[4,30+2]..[4,30+18])
+                                      Some
+                                        expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                          Pexp_tuple
+                                          [
+                                            expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                              Pexp_ident "res0__016_" (lib/ast.ml[4,30+2]..[4,30+18])
+                                            expression (lib/ast.ml[4,30+2]..[4,30+18])
+                                              Pexp_construct "[]" (lib/ast.ml[4,30+2]..[4,30+18])
+                                              None
+                                          ]
+                                  ]
+                    <case>
+                      pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                        Ppat_construct "List" (lib/ast.ml[5,49+4]..[5,49+8])
+                        Some
+                          []
+                          pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                            Ppat_var "arg0__017_" (lib/ast.ml[5,49+2]..[5,49+21])
+                      expression (lib/ast.ml[5,49+2]..[5,49+21])
+                        Pexp_let Nonrec
+                        [
+                          <def>
+                            pattern (lib/ast.ml[5,49+2]..[5,49+21])
+                              Ppat_var "res0__018_" (lib/ast.ml[5,49+2]..[5,49+21])
+                            expression (lib/ast.ml[5,49+2]..[5,49+21])
+                              Pexp_apply
+                              expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                Pexp_ident "sexp_of_list" (lib/ast.ml[5,49+17]..[5,49+21]) ghost
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (lib/ast.ml[5,49+12]..[5,49+21]) ghost
+                                    Pexp_ident "sexp_of_sexp" (lib/ast.ml[5,49+12]..[5,49+16]) ghost
+                                <arg>
+                                Nolabel
+                                  expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                    Pexp_ident "arg0__017_" (lib/ast.ml[5,49+2]..[5,49+21])
+                              ]
+                        ]
+                        expression (lib/ast.ml[5,49+2]..[5,49+21])
+                          Pexp_construct "Sexplib0.Sexp.List" (lib/ast.ml[5,49+2]..[5,49+21])
+                          Some
+                            expression (lib/ast.ml[5,49+2]..[5,49+21])
+                              Pexp_construct "::" (lib/ast.ml[5,49+2]..[5,49+21])
+                              Some
+                                expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                  Pexp_tuple
+                                  [
+                                    expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                      Pexp_construct "Sexplib0.Sexp.Atom" (lib/ast.ml[5,49+2]..[5,49+21])
+                                      Some
+                                        expression (lib/ast.ml[5,49+4]..[5,49+8])
+                                          Pexp_constant PConst_string("List",(lib/ast.ml[5,49+4]..[5,49+8]),None)
+                                    expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                      Pexp_construct "::" (lib/ast.ml[5,49+2]..[5,49+21])
+                                      Some
+                                        expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                          Pexp_tuple
+                                          [
+                                            expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                              Pexp_ident "res0__018_" (lib/ast.ml[5,49+2]..[5,49+21])
+                                            expression (lib/ast.ml[5,49+2]..[5,49+21])
+                                              Pexp_construct "[]" (lib/ast.ml[5,49+2]..[5,49+21])
+                                              None
+                                          ]
+                                  ]
+                  ]
+                core_type (lib/ast.ml[3,18+5]..[3,18+9]) ghost
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (lib/ast.ml[3,18+5]..[3,18+9])
+                    Ptyp_constr "sexp" (lib/ast.ml[3,18+5]..[3,18+9])
+                    []
+                  core_type (lib/ast.ml[3,18+5]..[3,18+9]) ghost
+                    Ptyp_constr "Sexplib0.Sexp.t" (lib/ast.ml[3,18+5]..[3,18+9]) ghost
+                    []
+          ]
+        structure_item (lib/ast.ml[3,18+0]..[6,71+19])
+          Pstr_value Nonrec
+          [
+            <def>
+              pattern (lib/ast.ml[3,18+0]..[6,71+19])
+                Ppat_any
+              expression (lib/ast.ml[3,18+0]..[6,71+19])
+                Pexp_ident "sexp_of_sexp" (lib/ast.ml[3,18+0]..[6,71+19])
+          ]
+      ]
+  structure_item (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+          Ppat_construct "()" (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+          None
+        expression (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+          Pexp_apply
+          expression (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/ast.ml[6,71+19]..[6,71+19]) ghost,None)
+          ]
+    ]
+  structure_item (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+          Ppat_construct "()" (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+          None
+        expression (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+          Pexp_apply
+          expression (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+                Pexp_construct "()" (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+          Ppat_construct "()" (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+          None
+        expression (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+          Pexp_apply
+          expression (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+                Pexp_construct "()" (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+          Ppat_construct "()" (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+          None
+        expression (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+          Pexp_apply
+          expression (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/ast.ml[6,71+19]..[6,71+19]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set ~absolute_filename:"lib/ast.ml"
+let () = Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "ast.ml"
+open Sexplib.Std
+type sexp =
+  | Atom of string 
+  | List of sexp list [@@deriving sexp]
+include
+  struct
+    let _ = fun (_ : sexp) -> ()
+    let rec sexp_of_sexp =
+      (let error_source__003_ = "lib/ast.ml.sexp" in
+       function
+       | Sexplib0.Sexp.List ((Sexplib0.Sexp.Atom
+           ("atom" | "Atom" as _tag__006_))::sexp_args__007_) as _sexp__005_
+           ->
+           (match sexp_args__007_ with
+            | arg0__008_::[] ->
+                let res0__009_ = string_of_sexp arg0__008_ in Atom res0__009_
+            | _ ->
+                Sexplib0.Sexp_conv_error.stag_incorrect_n_args
+                  error_source__003_ _tag__006_ _sexp__005_)
+       | Sexplib0.Sexp.List ((Sexplib0.Sexp.Atom
+           ("list" | "List" as _tag__011_))::sexp_args__012_) as _sexp__010_
+           ->
+           (match sexp_args__012_ with
+            | arg0__013_::[] ->
+                let res0__014_ = list_of_sexp sexp_of_sexp arg0__013_ in
+                List res0__014_
+            | _ ->
+                Sexplib0.Sexp_conv_error.stag_incorrect_n_args
+                  error_source__003_ _tag__011_ _sexp__010_)
+       | Sexplib0.Sexp.Atom ("atom" | "Atom") as sexp__004_ ->
+           Sexplib0.Sexp_conv_error.stag_takes_args error_source__003_
+             sexp__004_
+       | Sexplib0.Sexp.Atom ("list" | "List") as sexp__004_ ->
+           Sexplib0.Sexp_conv_error.stag_takes_args error_source__003_
+             sexp__004_
+       | Sexplib0.Sexp.List ((Sexplib0.Sexp.List _)::_) as sexp__002_ ->
+           Sexplib0.Sexp_conv_error.nested_list_invalid_sum
+             error_source__003_ sexp__002_
+       | Sexplib0.Sexp.List [] as sexp__002_ ->
+           Sexplib0.Sexp_conv_error.empty_list_invalid_sum error_source__003_
+             sexp__002_
+       | sexp__002_ ->
+           Sexplib0.Sexp_conv_error.unexpected_stag error_source__003_
+             sexp__002_ : Sexplib0.Sexp.t -> sexp)
+    let _ = sexp_of_sexp
+    let rec sexp_of_sexp =
+      (function
+       | Atom arg0__015_ ->
+           let res0__016_ = sexp_of_string arg0__015_ in
+           Sexplib0.Sexp.List [Sexplib0.Sexp.Atom "Atom"; res0__016_]
+       | List arg0__017_ ->
+           let res0__018_ = sexp_of_list sexp_of_sexp arg0__017_ in
+           Sexplib0.Sexp.List [Sexplib0.Sexp.Atom "List"; res0__018_] : 
+      sexp -> Sexplib0.Sexp.t)
+    let _ = sexp_of_sexp
+  end[@@ocaml.doc "@inline"][@@merlin.hide ]
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+          Texp_apply
+          expression (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+          Texp_apply
+          expression (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+          Texp_apply
+          expression (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+                Texp_constant Const_string("lib/ast.ml",(lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+          Texp_apply
+          expression (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost
+                Texp_constant Const_string("ast.ml",(lib/ast.ml[1,0+0]..lib/ast.ml[1,0+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/ast.ml[1,0+0]..lib/ast.ml[1,0+16])
+    Tstr_open Fresh
+    module_expr (lib/ast.ml[1,0+5]..lib/ast.ml[1,0+16])
+      Tmod_ident "Sexplib!.Std"
+  structure_item (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+    Tstr_type Rec
+    [
+      type_declaration sexp/1195 (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+        attribute "deriving"
+          [
+            structure_item (lib/ast.ml[6,71+14]..[6,71+18])
+              Pstr_eval
+              expression (lib/ast.ml[6,71+14]..[6,71+18])
+                Pexp_ident "sexp" (lib/ast.ml[6,71+14]..[6,71+18])
+          ]
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                Atom/1196
+                [
+                  core_type (lib/ast.ml[4,30+12]..lib/ast.ml[4,30+18])
+                    Ttyp_constr "string/15!"
+                    []
+                ]
+                None
+              (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                List/1197
+                [
+                  core_type (lib/ast.ml[5,49+12]..lib/ast.ml[5,49+21])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/ast.ml[5,49+12]..lib/ast.ml[5,49+16])
+                        Ttyp_constr "sexp/1195"
+                        []
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19]) ghost
+    Tstr_include      attribute "ocaml.doc"
+        [
+          structure_item (_none_[1,0+-1]..[1,0+-1]) ghost
+            Pstr_eval
+            expression (_none_[1,0+-1]..[1,0+-1]) ghost
+              Pexp_constant PConst_string("@inline",(_none_[1,0+-1]..[1,0+-1]) ghost,None)
+        ]
+      attribute "merlin.hide"
+        []
+    module_expr (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19]) ghost
+      module_expr (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19]) ghost
+        Tmod_structure
+        [
+          structure_item (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+            Tstr_value Nonrec
+            [
+              <def>
+                pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                  Tpat_any
+                expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                  Texp_function
+                  Nolabel
+                  [
+                    <case>
+                      pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                        extra
+                          Tpat_extra_constraint
+                          core_type (lib/ast.ml[3,18+5]..lib/ast.ml[3,18+9])
+                            Ttyp_constr "sexp/1195"
+                            []
+                        Tpat_any
+                      expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                        Texp_construct "()"
+                        []
+                  ]
+            ]
+          structure_item (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+            Tstr_value Rec
+            [
+              <def>
+                pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                  Tpat_var "sexp_of_sexp/1199"
+                expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                  extra
+                    Texp_constraint
+                    core_type (lib/ast.ml[3,18+5]..lib/ast.ml[3,18+9]) ghost
+                      Ttyp_arrow
+                      Nolabel
+                      core_type (lib/ast.ml[3,18+5]..lib/ast.ml[3,18+9]) ghost
+                        Ttyp_constr "Sexplib0!.Sexp.t"
+                        []
+                      core_type (lib/ast.ml[3,18+5]..lib/ast.ml[3,18+9])
+                        Ttyp_constr "sexp/1195"
+                        []
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                        Tpat_var "error_source__003_/1232"
+                      expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                        Texp_constant Const_string("lib/ast.ml.sexp",(lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19]),None)
+                  ]
+                  expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                    Texp_function
+                    Nolabel
+                    [
+                      <case>
+                        pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                          Tpat_alias "_sexp__005_/1254"
+                          pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                            Tpat_construct "Sexplib0.Sexp.List"
+                            [
+                              pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                Tpat_construct "::"
+                                [
+                                  pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                    Tpat_construct "Sexplib0.Sexp.Atom"
+                                    [
+                                      pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                        Tpat_alias "_tag__006_/1252"
+                                        pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                          Tpat_or
+                                          pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                            Tpat_constant Const_string("atom",(lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18]),None)
+                                          pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                            Tpat_constant Const_string("Atom",(lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18]),None)
+                                    ]
+                                    None
+                                  pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                    Tpat_var "sexp_args__007_/1253"
+                                ]
+                                None
+                            ]
+                            None
+                        expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                          Texp_match
+                          expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                            Texp_ident "sexp_args__007_/1253"
+                          [
+                            <case>
+                              pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                Tpat_value
+                                pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                  Tpat_construct "::"
+                                  [
+                                    pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                      Tpat_var "arg0__008_/1263"
+                                    pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                      Tpat_construct "[]"
+                                      []
+                                      None
+                                  ]
+                                  None
+                              expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                Texp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                      Tpat_var "res0__009_/1264"
+                                    expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                      Texp_apply
+                                      expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                        Texp_ident "Sexplib!.Std.string_of_sexp"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                            Texp_ident "arg0__008_/1263"
+                                      ]
+                                ]
+                                expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                  Texp_construct "Atom"
+                                  [
+                                    expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                      Texp_ident "res0__009_/1264"
+                                  ]
+                            <case>
+                              pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                Tpat_value
+                                pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                  Tpat_any
+                              expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                Texp_apply
+                                expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                  Texp_ident "Sexplib0!.Sexp_conv_error.stag_incorrect_n_args"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                      Texp_ident "error_source__003_/1232"
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                      Texp_ident "_tag__006_/1252"
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                      Texp_ident "_sexp__005_/1254"
+                                ]
+                          ]
+                      <case>
+                        pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                          Tpat_alias "_sexp__010_/1257"
+                          pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                            Tpat_construct "Sexplib0.Sexp.List"
+                            [
+                              pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                Tpat_construct "::"
+                                [
+                                  pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                    Tpat_construct "Sexplib0.Sexp.Atom"
+                                    [
+                                      pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                        Tpat_alias "_tag__011_/1255"
+                                        pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                          Tpat_or
+                                          pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                            Tpat_constant Const_string("list",(lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21]),None)
+                                          pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                            Tpat_constant Const_string("List",(lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21]),None)
+                                    ]
+                                    None
+                                  pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                    Tpat_var "sexp_args__012_/1256"
+                                ]
+                                None
+                            ]
+                            None
+                        expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                          Texp_match
+                          expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                            Texp_ident "sexp_args__012_/1256"
+                          [
+                            <case>
+                              pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                Tpat_value
+                                pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                  Tpat_construct "::"
+                                  [
+                                    pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                      Tpat_var "arg0__013_/1291"
+                                    pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                      Tpat_construct "[]"
+                                      []
+                                      None
+                                  ]
+                                  None
+                              expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                Texp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                      Tpat_var "res0__014_/1292"
+                                    expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                      Texp_apply
+                                      expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                        Texp_ident "Sexplib!.Std.list_of_sexp"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (lib/ast.ml[5,49+12]..lib/ast.ml[5,49+21])
+                                            Texp_ident "sexp_of_sexp/1199"
+                                        <arg>
+                                          Nolabel
+                                          expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                            Texp_ident "arg0__013_/1291"
+                                      ]
+                                ]
+                                expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                  Texp_construct "List"
+                                  [
+                                    expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                      Texp_ident "res0__014_/1292"
+                                  ]
+                            <case>
+                              pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                Tpat_value
+                                pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                  Tpat_any
+                              expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                Texp_apply
+                                expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                  Texp_ident "Sexplib0!.Sexp_conv_error.stag_incorrect_n_args"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                      Texp_ident "error_source__003_/1232"
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                      Texp_ident "_tag__011_/1255"
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                      Texp_ident "_sexp__010_/1257"
+                                ]
+                          ]
+                      <case>
+                        pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                          Tpat_alias "sexp__004_/1258"
+                          pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                            Tpat_construct "Sexplib0.Sexp.Atom"
+                            [
+                              pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                Tpat_or
+                                pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                  Tpat_constant Const_string("atom",(lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19]),None)
+                                pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                  Tpat_constant Const_string("Atom",(lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19]),None)
+                            ]
+                            None
+                        expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                          Texp_apply
+                          expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                            Texp_ident "Sexplib0!.Sexp_conv_error.stag_takes_args"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                Texp_ident "error_source__003_/1232"
+                            <arg>
+                              Nolabel
+                              expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                Texp_ident "sexp__004_/1258"
+                          ]
+                      <case>
+                        pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                          Tpat_alias "sexp__004_/1259"
+                          pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                            Tpat_construct "Sexplib0.Sexp.Atom"
+                            [
+                              pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                Tpat_or
+                                pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                  Tpat_constant Const_string("list",(lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19]),None)
+                                pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                  Tpat_constant Const_string("List",(lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19]),None)
+                            ]
+                            None
+                        expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                          Texp_apply
+                          expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                            Texp_ident "Sexplib0!.Sexp_conv_error.stag_takes_args"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                Texp_ident "error_source__003_/1232"
+                            <arg>
+                              Nolabel
+                              expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                Texp_ident "sexp__004_/1259"
+                          ]
+                      <case>
+                        pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                          Tpat_alias "sexp__002_/1260"
+                          pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                            Tpat_construct "Sexplib0.Sexp.List"
+                            [
+                              pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                Tpat_construct "::"
+                                [
+                                  pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                    Tpat_construct "Sexplib0.Sexp.List"
+                                    [
+                                      pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                        Tpat_any
+                                    ]
+                                    None
+                                  pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                    Tpat_any
+                                ]
+                                None
+                            ]
+                            None
+                        expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                          Texp_apply
+                          expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                            Texp_ident "Sexplib0!.Sexp_conv_error.nested_list_invalid_sum"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                Texp_ident "error_source__003_/1232"
+                            <arg>
+                              Nolabel
+                              expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                Texp_ident "sexp__002_/1260"
+                          ]
+                      <case>
+                        pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                          Tpat_alias "sexp__002_/1261"
+                          pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                            Tpat_construct "Sexplib0.Sexp.List"
+                            [
+                              pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                Tpat_construct "[]"
+                                []
+                                None
+                            ]
+                            None
+                        expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                          Texp_apply
+                          expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                            Texp_ident "Sexplib0!.Sexp_conv_error.empty_list_invalid_sum"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                Texp_ident "error_source__003_/1232"
+                            <arg>
+                              Nolabel
+                              expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                Texp_ident "sexp__002_/1261"
+                          ]
+                      <case>
+                        pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                          Tpat_var "sexp__002_/1262"
+                        expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                          Texp_apply
+                          expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                            Texp_ident "Sexplib0!.Sexp_conv_error.unexpected_stag"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                Texp_ident "error_source__003_/1232"
+                            <arg>
+                              Nolabel
+                              expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                                Texp_ident "sexp__002_/1262"
+                          ]
+                    ]
+            ]
+          structure_item (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+            Tstr_value Nonrec
+            [
+              <def>
+                pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                  Tpat_any
+                expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                  Texp_ident "sexp_of_sexp/1199"
+            ]
+          structure_item (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+            Tstr_value Rec
+            [
+              <def>
+                pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                  Tpat_var "sexp_of_sexp/1293"
+                expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                  extra
+                    Texp_constraint
+                    core_type (lib/ast.ml[3,18+5]..lib/ast.ml[3,18+9]) ghost
+                      Ttyp_arrow
+                      Nolabel
+                      core_type (lib/ast.ml[3,18+5]..lib/ast.ml[3,18+9])
+                        Ttyp_constr "sexp/1195"
+                        []
+                      core_type (lib/ast.ml[3,18+5]..lib/ast.ml[3,18+9]) ghost
+                        Ttyp_constr "Sexplib0!.Sexp.t"
+                        []
+                  Texp_function
+                  Nolabel
+                  [
+                    <case>
+                      pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                        Tpat_construct "Atom"
+                        [
+                          pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                            Tpat_var "arg0__015_/1294"
+                        ]
+                        None
+                      expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                        Texp_let Nonrec
+                        [
+                          <def>
+                            pattern (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                              Tpat_var "res0__016_/1296"
+                            expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                              Texp_apply
+                              expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                Texp_ident "Sexplib!.Std.sexp_of_string"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                    Texp_ident "arg0__015_/1294"
+                              ]
+                        ]
+                        expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                          Texp_construct "Sexplib0.Sexp.List"
+                          [
+                            expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                              Texp_construct "::"
+                              [
+                                expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                  Texp_construct "Sexplib0.Sexp.Atom"
+                                  [
+                                    expression (lib/ast.ml[4,30+4]..lib/ast.ml[4,30+8])
+                                      Texp_constant Const_string("Atom",(lib/ast.ml[4,30+4]..lib/ast.ml[4,30+8]),None)
+                                  ]
+                                expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                  Texp_construct "::"
+                                  [
+                                    expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                      Texp_ident "res0__016_/1296"
+                                    expression (lib/ast.ml[4,30+2]..lib/ast.ml[4,30+18])
+                                      Texp_construct "[]"
+                                      []
+                                  ]
+                              ]
+                          ]
+                    <case>
+                      pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                        Tpat_construct "List"
+                        [
+                          pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                            Tpat_var "arg0__017_/1295"
+                        ]
+                        None
+                      expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                        Texp_let Nonrec
+                        [
+                          <def>
+                            pattern (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                              Tpat_var "res0__018_/1297"
+                            expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                              Texp_apply
+                              expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                Texp_ident "Sexplib!.Std.sexp_of_list"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (lib/ast.ml[5,49+12]..lib/ast.ml[5,49+21]) ghost
+                                    Texp_ident "sexp_of_sexp/1293"
+                                <arg>
+                                  Nolabel
+                                  expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                    Texp_ident "arg0__017_/1295"
+                              ]
+                        ]
+                        expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                          Texp_construct "Sexplib0.Sexp.List"
+                          [
+                            expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                              Texp_construct "::"
+                              [
+                                expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                  Texp_construct "Sexplib0.Sexp.Atom"
+                                  [
+                                    expression (lib/ast.ml[5,49+4]..lib/ast.ml[5,49+8])
+                                      Texp_constant Const_string("List",(lib/ast.ml[5,49+4]..lib/ast.ml[5,49+8]),None)
+                                  ]
+                                expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                  Texp_construct "::"
+                                  [
+                                    expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                      Texp_ident "res0__018_/1297"
+                                    expression (lib/ast.ml[5,49+2]..lib/ast.ml[5,49+21])
+                                      Texp_construct "[]"
+                                      []
+                                  ]
+                              ]
+                          ]
+                  ]
+            ]
+          structure_item (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+            Tstr_value Nonrec
+            [
+              <def>
+                pattern (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                  Tpat_any
+                expression (lib/ast.ml[3,18+0]..lib/ast.ml[6,71+19])
+                  Texp_ident "sexp_of_sexp/1293"
+            ]
+        ]
+  structure_item (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+          Texp_apply
+          expression (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost,None)
+          ]
+    ]
+  structure_item (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+          Texp_apply
+          expression (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+          Texp_apply
+          expression (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+          Texp_apply
+          expression (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/ast.ml[6,71+19]..lib/ast.ml[6,71+19]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__Ast>
+ "sexp"[type] -> <Gbnf_parser__Ast.0>;
+ "sexp_of_sexp"[value] -> <Gbnf_parser__Ast.20>;
+ }
+
+(setglobal Gbnf_parser__Ast!
+  (let
+    (*match*/2076 =
+       (after Gbnf_parser__Ast lib/ast.ml(1)<ghost>:0-0
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Ast"))
+     *match*/2074 =
+       (after Gbnf_parser__Ast lib/ast.ml(1)<ghost>:0-0
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/2072 =
+       (after Gbnf_parser__Ast lib/ast.ml(1)<ghost>:0-0
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/ast.ml"))
+     *match*/2070 =
+       (after Gbnf_parser__Ast lib/ast.ml(1)<ghost>:0-0
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "ast.ml"))
+     include/2049 =
+       (seq
+         (function param/1198 : int
+           (funct-body Gbnf_parser__Ast.(fun) lib/ast.ml(3):18-90
+             (before Gbnf_parser__Ast.(fun) lib/ast.ml(3):18-90 0)))
+         (letrec
+           (sexp_of_sexp/1199
+              (let (error_source__003_/1232 = "lib/ast.ml.sexp")
+                (before Gbnf_parser__Ast.sexp_of_sexp lib/ast.ml(3):18-90
+                  (function _sexp__005_/1254
+                    (funct-body Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                      (catch
+                        (switch* _sexp__005_/1254
+                         case tag 0:
+                          (let
+                            (*match*/2060 =a (field_imm 0 _sexp__005_/1254))
+                            (catch
+                              (catch
+                                (stringswitch *match*/2060
+                                 case "Atom": (exit 16)
+                                 case "List": (exit 17)
+                                 case "atom": (exit 16)
+                                 case "list": (exit 17)
+                                 default: (exit 15))
+                               with (16)
+                                (let (sexp__004_/1258 =a _sexp__005_/1254)
+                                  (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                                    (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                                      (apply
+                                        (field_imm 4
+                                          (global Sexplib0__Sexp_conv_error!))
+                                        error_source__003_/1232
+                                        sexp__004_/1258)))))
+                             with (17)
+                              (let (sexp__004_/1259 =a _sexp__005_/1254)
+                                (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                                  (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                                    (apply
+                                      (field_imm 4
+                                        (global Sexplib0__Sexp_conv_error!))
+                                      error_source__003_/1232
+                                      sexp__004_/1259))))))
+                         case tag 1:
+                          (let
+                            (*match*/2061 =a (field_imm 0 _sexp__005_/1254))
+                            (if *match*/2061
+                              (let
+                                (*match*/2062 =a (field_imm 0 *match*/2061))
+                                (switch* *match*/2062
+                                 case tag 0:
+                                  (let
+                                    (_tag__006_/1252 =a
+                                       (field_imm 0 *match*/2062))
+                                    (catch
+                                      (catch
+                                        (stringswitch _tag__006_/1252
+                                         case "Atom": (exit 18)
+                                         case "List": (exit 19)
+                                         case "atom": (exit 18)
+                                         case "list": (exit 19)
+                                         default: (exit 15))
+                                       with (18)
+                                        (let
+                                          (sexp_args__007_/1253 =a
+                                             (field_imm 1 *match*/2061))
+                                          (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(4):32-48
+                                            (catch
+                                              (if sexp_args__007_/1253
+                                                (let
+                                                  (*match*/2058 =a
+                                                     (field_imm 1
+                                                       sexp_args__007_/1253))
+                                                  (if *match*/2058 (exit 13)
+                                                    (let
+                                                      (arg0__008_/1263 =a
+                                                         (field_imm 0
+                                                           sexp_args__007_/1253))
+                                                      (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(4):32-48
+                                                        (let
+                                                          (res0__009_/1264 =
+                                                             (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(4):32-48
+                                                               (apply
+                                                                 (field_imm 9
+                                                                   (global Sexplib__Std!))
+                                                                 arg0__008_/1263)))
+                                                          (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(4):32-48
+                                                            (makeblock 0
+                                                              res0__009_/1264)))))))
+                                                (exit 13))
+                                             with (13)
+                                              (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(4):32-48
+                                                (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(4):32-48
+                                                  (apply
+                                                    (field_imm 3
+                                                      (global Sexplib0__Sexp_conv_error!))
+                                                    error_source__003_/1232
+                                                    _tag__006_/1252
+                                                    _sexp__005_/1254)))))))
+                                     with (19)
+                                      (let
+                                        (_tag__011_/1255 =a _tag__006_/1252
+                                         _sexp__010_/1257 =a _sexp__005_/1254
+                                         sexp_args__012_/1256 =a
+                                           (field_imm 1 *match*/2061))
+                                        (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(5):51-70
+                                          (catch
+                                            (if sexp_args__012_/1256
+                                              (let
+                                                (*match*/2059 =a
+                                                   (field_imm 1
+                                                     sexp_args__012_/1256))
+                                                (if *match*/2059 (exit 14)
+                                                  (let
+                                                    (arg0__013_/1291 =a
+                                                       (field_imm 0
+                                                         sexp_args__012_/1256))
+                                                    (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(5):51-70
+                                                      (let
+                                                        (res0__014_/1292 =
+                                                           (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(5):51-70
+                                                             (apply
+                                                               (field_imm 39
+                                                                 (global Sexplib__Std!))
+                                                               sexp_of_sexp/1199
+                                                               arg0__013_/1291)))
+                                                        (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(5):51-70
+                                                          (makeblock 1
+                                                            res0__014_/1292)))))))
+                                              (exit 14))
+                                           with (14)
+                                            (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(5):51-70
+                                              (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(5):51-70
+                                                (apply
+                                                  (field_imm 3
+                                                    (global Sexplib0__Sexp_conv_error!))
+                                                  error_source__003_/1232
+                                                  _tag__011_/1255
+                                                  _sexp__010_/1257))))))))
+                                 case tag 1:
+                                  (let
+                                    (sexp__002_/1260 =a _sexp__005_/1254
+                                     *match*/2068 =a
+                                       (field_imm 1 *match*/2061)
+                                     *match*/2067 =a
+                                       (field_imm 0 *match*/2062))
+                                    (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                                      (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                                        (apply
+                                          (field_imm 5
+                                            (global Sexplib0__Sexp_conv_error!))
+                                          error_source__003_/1232
+                                          sexp__002_/1260))))))
+                              (let (sexp__002_/1261 =a _sexp__005_/1254)
+                                (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                                  (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                                    (apply
+                                      (field_imm 6
+                                        (global Sexplib0__Sexp_conv_error!))
+                                      error_source__003_/1232
+                                      sexp__002_/1261)))))))
+                       with (15)
+                        (let (sexp__002_/1262 =a _sexp__005_/1254)
+                          (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                            (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                              (apply
+                                (field_imm 7
+                                  (global Sexplib0__Sexp_conv_error!))
+                                error_source__003_/1232 sexp__002_/1262))))))))))
+           (seq sexp_of_sexp/1199
+             (letrec
+               (sexp_of_sexp/1293
+                  (function param/1298
+                    (funct-body Gbnf_parser__Ast.sexp_of_sexp lib/ast.ml(3):18-90
+                      (switch* param/1298
+                       case tag 0:
+                        (let (arg0__015_/1294 =a (field_imm 0 param/1298))
+                          (before Gbnf_parser__Ast.sexp_of_sexp lib/ast.ml(4):32-48
+                            (let
+                              (res0__016_/1296 =
+                                 (after Gbnf_parser__Ast.sexp_of_sexp lib/ast.ml(4):32-48
+                                   (apply
+                                     (field_imm 8 (global Sexplib__Std!))
+                                     arg0__015_/1294)))
+                              (before Gbnf_parser__Ast.sexp_of_sexp lib/ast.ml(4):32-48
+                                (makeblock 1
+                                  (makeblock 0 [0: "Atom"]
+                                    (makeblock 0 res0__016_/1296 0)))))))
+                       case tag 1:
+                        (let (arg0__017_/1295 =a (field_imm 0 param/1298))
+                          (before Gbnf_parser__Ast.sexp_of_sexp lib/ast.ml(5):51-70
+                            (let
+                              (res0__018_/1297 =
+                                 (after Gbnf_parser__Ast.sexp_of_sexp lib/ast.ml(5):51-70
+                                   (apply
+                                     (field_imm 38 (global Sexplib__Std!))
+                                     sexp_of_sexp/1293 arg0__017_/1295)))
+                              (before Gbnf_parser__Ast.sexp_of_sexp lib/ast.ml(5):51-70
+                                (makeblock 1
+                                  (makeblock 0 [0: "List"]
+                                    (makeblock 0 res0__018_/1297 0)))))))))))
+               (seq sexp_of_sexp/1293
+                 (pseudo Gbnf_parser__Ast lib/ast.ml(3)<ghost>:18-90
+                   (makeblock 0 sexp_of_sexp/1293)))))))
+     sexp_of_sexp/1299 =a (field_mut 0 include/2049)
+     *match*/2057 =
+       (after Gbnf_parser__Ast lib/ast.ml(6)<ghost>:90-90
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/2055 =
+       (after Gbnf_parser__Ast lib/ast.ml(6)<ghost>:90-90
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/2053 =
+       (after Gbnf_parser__Ast lib/ast.ml(6)<ghost>:90-90
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/2051 =
+       (after Gbnf_parser__Ast lib/ast.ml(6)<ghost>:90-90
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Ast")))
+    (pseudo <unknown location> (makeblock 0 sexp_of_sexp/1299))))
+(setglobal Gbnf_parser__Ast!
+  (let
+    (*match*/2076 =
+       (after Gbnf_parser__Ast lib/ast.ml(1)<ghost>:0-0
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Ast"))
+     *match*/2074 =
+       (after Gbnf_parser__Ast lib/ast.ml(1)<ghost>:0-0
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/2072 =
+       (after Gbnf_parser__Ast lib/ast.ml(1)<ghost>:0-0
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/ast.ml"))
+     *match*/2070 =
+       (after Gbnf_parser__Ast lib/ast.ml(1)<ghost>:0-0
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "ast.ml"))
+     include/2049 =
+       (seq
+         (function param/1198 : int
+           (funct-body Gbnf_parser__Ast.(fun) lib/ast.ml(3):18-90
+             (before Gbnf_parser__Ast.(fun) lib/ast.ml(3):18-90 0)))
+         (letrec
+           (sexp_of_sexp/1199
+              (let (error_source__003_/1232 = "lib/ast.ml.sexp")
+                (before Gbnf_parser__Ast.sexp_of_sexp lib/ast.ml(3):18-90
+                  (function _sexp__005_/1254
+                    (funct-body Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                      (catch
+                        (switch* _sexp__005_/1254
+                         case tag 0:
+                          (let
+                            (*match*/2060 =a (field_imm 0 _sexp__005_/1254))
+                            (catch
+                              (catch
+                                (stringswitch *match*/2060
+                                 case "Atom": (exit 16)
+                                 case "List": (exit 17)
+                                 case "atom": (exit 16)
+                                 case "list": (exit 17)
+                                 default: (exit 15))
+                               with (16)
+                                (let (sexp__004_/1258 =a _sexp__005_/1254)
+                                  (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                                    (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                                      (apply
+                                        (field_imm 4
+                                          (global Sexplib0__Sexp_conv_error!))
+                                        error_source__003_/1232
+                                        sexp__004_/1258)))))
+                             with (17)
+                              (let (sexp__004_/1259 =a _sexp__005_/1254)
+                                (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                                  (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                                    (apply
+                                      (field_imm 4
+                                        (global Sexplib0__Sexp_conv_error!))
+                                      error_source__003_/1232
+                                      sexp__004_/1259))))))
+                         case tag 1:
+                          (let
+                            (*match*/2061 =a (field_imm 0 _sexp__005_/1254))
+                            (if *match*/2061
+                              (let
+                                (*match*/2062 =a (field_imm 0 *match*/2061))
+                                (switch* *match*/2062
+                                 case tag 0:
+                                  (let
+                                    (_tag__006_/1252 =a
+                                       (field_imm 0 *match*/2062))
+                                    (catch
+                                      (catch
+                                        (stringswitch _tag__006_/1252
+                                         case "Atom": (exit 18)
+                                         case "List": (exit 19)
+                                         case "atom": (exit 18)
+                                         case "list": (exit 19)
+                                         default: (exit 15))
+                                       with (18)
+                                        (let
+                                          (sexp_args__007_/1253 =a
+                                             (field_imm 1 *match*/2061))
+                                          (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(4):32-48
+                                            (catch
+                                              (if sexp_args__007_/1253
+                                                (let
+                                                  (*match*/2058 =a
+                                                     (field_imm 1
+                                                       sexp_args__007_/1253))
+                                                  (if *match*/2058 (exit 13)
+                                                    (let
+                                                      (arg0__008_/1263 =a
+                                                         (field_imm 0
+                                                           sexp_args__007_/1253))
+                                                      (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(4):32-48
+                                                        (let
+                                                          (res0__009_/1264 =
+                                                             (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(4):32-48
+                                                               (apply
+                                                                 (field_imm 9
+                                                                   (global Sexplib__Std!))
+                                                                 arg0__008_/1263)))
+                                                          (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(4):32-48
+                                                            (makeblock 0
+                                                              res0__009_/1264)))))))
+                                                (exit 13))
+                                             with (13)
+                                              (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(4):32-48
+                                                (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(4):32-48
+                                                  (apply
+                                                    (field_imm 3
+                                                      (global Sexplib0__Sexp_conv_error!))
+                                                    error_source__003_/1232
+                                                    _tag__006_/1252
+                                                    _sexp__005_/1254)))))))
+                                     with (19)
+                                      (let
+                                        (_tag__011_/1255 =a _tag__006_/1252
+                                         _sexp__010_/1257 =a _sexp__005_/1254
+                                         sexp_args__012_/1256 =a
+                                           (field_imm 1 *match*/2061))
+                                        (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(5):51-70
+                                          (catch
+                                            (if sexp_args__012_/1256
+                                              (let
+                                                (*match*/2059 =a
+                                                   (field_imm 1
+                                                     sexp_args__012_/1256))
+                                                (if *match*/2059 (exit 14)
+                                                  (let
+                                                    (arg0__013_/1291 =a
+                                                       (field_imm 0
+                                                         sexp_args__012_/1256))
+                                                    (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(5):51-70
+                                                      (let
+                                                        (res0__014_/1292 =
+                                                           (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(5):51-70
+                                                             (apply
+                                                               (field_imm 39
+                                                                 (global Sexplib__Std!))
+                                                               sexp_of_sexp/1199
+                                                               arg0__013_/1291)))
+                                                        (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(5):51-70
+                                                          (makeblock 1
+                                                            res0__014_/1292)))))))
+                                              (exit 14))
+                                           with (14)
+                                            (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(5):51-70
+                                              (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(5):51-70
+                                                (apply
+                                                  (field_imm 3
+                                                    (global Sexplib0__Sexp_conv_error!))
+                                                  error_source__003_/1232
+                                                  _tag__011_/1255
+                                                  _sexp__010_/1257))))))))
+                                 case tag 1:
+                                  (let (sexp__002_/1260 =a _sexp__005_/1254)
+                                    (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                                      (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                                        (apply
+                                          (field_imm 5
+                                            (global Sexplib0__Sexp_conv_error!))
+                                          error_source__003_/1232
+                                          sexp__002_/1260))))))
+                              (let (sexp__002_/1261 =a _sexp__005_/1254)
+                                (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                                  (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                                    (apply
+                                      (field_imm 6
+                                        (global Sexplib0__Sexp_conv_error!))
+                                      error_source__003_/1232
+                                      sexp__002_/1261)))))))
+                       with (15)
+                        (let (sexp__002_/1262 =a _sexp__005_/1254)
+                          (before Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                            (after Gbnf_parser__Ast.sexp_of_sexp.(fun) lib/ast.ml(3):18-90
+                              (apply
+                                (field_imm 7
+                                  (global Sexplib0__Sexp_conv_error!))
+                                error_source__003_/1232 sexp__002_/1262))))))))))
+           (seq sexp_of_sexp/1199
+             (letrec
+               (sexp_of_sexp/1293
+                  (function param/1298
+                    (funct-body Gbnf_parser__Ast.sexp_of_sexp lib/ast.ml(3):18-90
+                      (switch* param/1298
+                       case tag 0:
+                        (let (arg0__015_/1294 =a (field_imm 0 param/1298))
+                          (before Gbnf_parser__Ast.sexp_of_sexp lib/ast.ml(4):32-48
+                            (let
+                              (res0__016_/1296 =
+                                 (after Gbnf_parser__Ast.sexp_of_sexp lib/ast.ml(4):32-48
+                                   (apply
+                                     (field_imm 8 (global Sexplib__Std!))
+                                     arg0__015_/1294)))
+                              (before Gbnf_parser__Ast.sexp_of_sexp lib/ast.ml(4):32-48
+                                (makeblock 1
+                                  (makeblock 0 [0: "Atom"]
+                                    (makeblock 0 res0__016_/1296 0)))))))
+                       case tag 1:
+                        (let (arg0__017_/1295 =a (field_imm 0 param/1298))
+                          (before Gbnf_parser__Ast.sexp_of_sexp lib/ast.ml(5):51-70
+                            (let
+                              (res0__018_/1297 =
+                                 (after Gbnf_parser__Ast.sexp_of_sexp lib/ast.ml(5):51-70
+                                   (apply
+                                     (field_imm 38 (global Sexplib__Std!))
+                                     sexp_of_sexp/1293 arg0__017_/1295)))
+                              (before Gbnf_parser__Ast.sexp_of_sexp lib/ast.ml(5):51-70
+                                (makeblock 1
+                                  (makeblock 0 [0: "List"]
+                                    (makeblock 0 res0__018_/1297 0)))))))))))
+               (seq sexp_of_sexp/1293
+                 (pseudo Gbnf_parser__Ast lib/ast.ml(3)<ghost>:18-90
+                   (makeblock 0 sexp_of_sexp/1293)))))))
+     sexp_of_sexp/1299 =a (field_mut 0 include/2049)
+     *match*/2057 =
+       (after Gbnf_parser__Ast lib/ast.ml(6)<ghost>:90-90
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/2055 =
+       (after Gbnf_parser__Ast lib/ast.ml(6)<ghost>:90-90
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/2053 =
+       (after Gbnf_parser__Ast lib/ast.ml(6)<ghost>:90-90
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/2051 =
+       (after Gbnf_parser__Ast lib/ast.ml(6)<ghost>:90-90
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Ast")))
+    (pseudo <unknown location> (makeblock 0 sexp_of_sexp/1299))))

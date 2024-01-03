@@ -1,0 +1,44 @@
+[
+  structure_item (test/test_gbnf_parser.ml[1,0+0]..[1,0+16])
+    Pstr_open Fresh
+    module_expr (test/test_gbnf_parser.ml[1,0+5]..[1,0+16])
+      Pmod_ident "Gbnf_parser" (test/test_gbnf_parser.ml[1,0+5]..[1,0+16])
+  structure_item (test/test_gbnf_parser.ml[2,17+0]..[2,17+33])
+    Pstr_module
+    "E" (test/test_gbnf_parser.ml[2,17+7]..[2,17+8])
+      module_expr (test/test_gbnf_parser.ml[2,17+11]..[2,17+33])
+        Pmod_ident "MenhirLib.ErrorReports" (test/test_gbnf_parser.ml[2,17+11]..[2,17+33])
+  structure_item (test/test_gbnf_parser.ml[3,51+0]..[3,51+30])
+    Pstr_module
+    "L" (test/test_gbnf_parser.ml[3,51+7]..[3,51+8])
+      module_expr (test/test_gbnf_parser.ml[3,51+11]..[3,51+30])
+        Pmod_ident "MenhirLib.LexerUtil" (test/test_gbnf_parser.ml[3,51+11]..[3,51+30])
+]
+
+open Gbnf_parser
+module E = MenhirLib.ErrorReports
+module L = MenhirLib.LexerUtil
+[
+  structure_item (test/test_gbnf_parser.ml[1,0+0]..test/test_gbnf_parser.ml[1,0+16])
+    Tstr_open Fresh
+    module_expr (test/test_gbnf_parser.ml[1,0+5]..test/test_gbnf_parser.ml[1,0+16])
+      Tmod_ident "Gbnf_parser!"
+  structure_item (test/test_gbnf_parser.ml[2,17+0]..test/test_gbnf_parser.ml[2,17+33])
+    Tstr_module
+    E/345
+      module_expr (test/test_gbnf_parser.ml[2,17+11]..test/test_gbnf_parser.ml[2,17+33])
+        Tmod_ident "MenhirLib!.ErrorReports"
+  structure_item (test/test_gbnf_parser.ml[3,51+0]..test/test_gbnf_parser.ml[3,51+30])
+    Tstr_module
+    L/346
+      module_expr (test/test_gbnf_parser.ml[3,51+11]..test/test_gbnf_parser.ml[3,51+30])
+        Tmod_ident "MenhirLib!.LexerUtil"
+]
+
+{<Dune__exe__Test_gbnf_parser>
+ }
+
+(setglobal Dune__exe__Test_gbnf_parser!
+  (pseudo <unknown location> (makeblock 0)))
+(setglobal Dune__exe__Test_gbnf_parser!
+  (pseudo <unknown location> (makeblock 0)))

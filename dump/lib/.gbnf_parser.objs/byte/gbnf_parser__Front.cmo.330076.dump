@@ -1,0 +1,939 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+          Ppat_construct "()" (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+          None
+        expression (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+          Pexp_apply
+          expression (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+          ]
+    ]
+  structure_item (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+          Ppat_construct "()" (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+          None
+        expression (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+          Pexp_apply
+          expression (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/front.ml[20,1173+0]..[20,1173+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+          Ppat_construct "()" (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+          None
+        expression (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+          Pexp_apply
+          expression (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+                Pexp_constant PConst_string("lib/front.ml",(lib/front.ml[20,1173+0]..[20,1173+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+          Ppat_construct "()" (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+          None
+        expression (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+          Pexp_apply
+          expression (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/front.ml[20,1173+0]..[20,1173+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/front.ml[20,1173+0]..[20,1173+0]) ghost
+                Pexp_constant PConst_string("front.ml",(lib/front.ml[20,1173+0]..[20,1173+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/front.ml[20,1173+0]..[29,1576+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[20,1173+4]..[20,1173+30])
+          Ppat_var "load_grammar_from_contents" (lib/front.ml[20,1173+4]..[20,1173+30])
+        expression (lib/front.ml[20,1173+31]..[29,1576+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/front.ml[20,1173+31]..[20,1173+39])
+            Ppat_var "filename" (lib/front.ml[20,1173+31]..[20,1173+39])
+          expression (lib/front.ml[20,1173+40]..[29,1576+3]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/front.ml[20,1173+40]..[20,1173+48])
+              Ppat_var "contents" (lib/front.ml[20,1173+40]..[20,1173+48])
+            expression (lib/front.ml[21,1224+2]..[29,1576+3])
+              Pexp_sequence
+              expression (lib/front.ml[21,1224+2]..[21,1224+35])
+                Pexp_apply
+                expression (lib/front.ml[21,1224+2]..[21,1224+26])
+                  Pexp_ident "InputFile.new_input_file" (lib/front.ml[21,1224+2]..[21,1224+26])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/front.ml[21,1224+27]..[21,1224+35])
+                      Pexp_ident "filename" (lib/front.ml[21,1224+27]..[21,1224+35])
+                ]
+              expression (lib/front.ml[22,1261+2]..[29,1576+3])
+                Pexp_apply
+                expression (lib/front.ml[22,1261+2]..[22,1261+30])
+                  Pexp_ident "InputFile.with_file_contents" (lib/front.ml[22,1261+2]..[22,1261+30])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/front.ml[22,1261+31]..[22,1261+39])
+                      Pexp_ident "contents" (lib/front.ml[22,1261+31]..[22,1261+39])
+                  <arg>
+                  Nolabel
+                    expression (lib/front.ml[22,1261+40]..[29,1576+3])
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/front.ml[22,1261+45]..[22,1261+47])
+                        Ppat_construct "()" (lib/front.ml[22,1261+45]..[22,1261+47])
+                        None
+                      expression (lib/front.ml[23,1312+4]..[25,1383+73])
+                        Pexp_open Fresh
+                        module_expr (lib/front.ml[23,1312+13]..[23,1312+19])
+                          Pmod_ident "Lexing" (lib/front.ml[23,1312+13]..[23,1312+19])
+                        expression (lib/front.ml[24,1335+4]..[25,1383+73])
+                          Pexp_let Nonrec
+                          [
+                            <def>
+                              pattern (lib/front.ml[24,1335+8]..[24,1335+14])
+                                Ppat_var "lexbuf" (lib/front.ml[24,1335+8]..[24,1335+14])
+                              expression (lib/front.ml[24,1335+17]..[24,1335+44])
+                                Pexp_apply
+                                expression (lib/front.ml[24,1335+17]..[24,1335+35])
+                                  Pexp_ident "Lexing.from_string" (lib/front.ml[24,1335+17]..[24,1335+35])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/front.ml[24,1335+36]..[24,1335+44])
+                                      Pexp_ident "contents" (lib/front.ml[24,1335+36]..[24,1335+44])
+                                ]
+                          ]
+                          expression (lib/front.ml[25,1383+4]..[25,1383+72])
+                            Pexp_setfield
+                            expression (lib/front.ml[25,1383+4]..[25,1383+10])
+                              Pexp_ident "lexbuf" (lib/front.ml[25,1383+4]..[25,1383+10])
+                            "lex_curr_p" (lib/front.ml[25,1383+11]..[25,1383+21])
+                            expression (lib/front.ml[25,1383+25]..[25,1383+72])
+                              Pexp_record
+                              [
+                                "pos_fname" (lib/front.ml[25,1383+50]..[25,1383+59])
+                                  expression (lib/front.ml[25,1383+62]..[25,1383+70])
+                                    Pexp_ident "filename" (lib/front.ml[25,1383+62]..[25,1383+70])
+                              ]
+                              Some
+                                expression (lib/front.ml[25,1383+27]..[25,1383+44])
+                                  Pexp_field
+                                  expression (lib/front.ml[25,1383+27]..[25,1383+33])
+                                    Pexp_ident "lexbuf" (lib/front.ml[25,1383+27]..[25,1383+33])
+                                  "lex_curr_p" (lib/front.ml[25,1383+34]..[25,1383+44])
+                ]
+    ]
+  structure_item (lib/front.ml[43,1930+0]..[43,1930+16])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[43,1930+4]..[43,1930+12])
+          Ppat_var "grammars" (lib/front.ml[43,1930+4]..[43,1930+12])
+        expression (lib/front.ml[43,1930+14]..[43,1930+16])
+          Pexp_construct "()" (lib/front.ml[43,1930+14]..[43,1930+16])
+          None
+    ]
+  structure_item (lib/front.ml[49,2089+0]..[49,2089+15])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[49,2089+4]..[49,2089+11])
+          Ppat_var "grammar" (lib/front.ml[49,2089+4]..[49,2089+11])
+        expression (lib/front.ml[49,2089+13]..[49,2089+15])
+          Pexp_construct "()" (lib/front.ml[49,2089+13]..[49,2089+15])
+          None
+    ]
+  structure_item (lib/front.ml[55,2265+0]..[55,2265+13])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[55,2265+4]..[55,2265+9])
+          Ppat_var "sorts" (lib/front.ml[55,2265+4]..[55,2265+9])
+        expression (lib/front.ml[55,2265+11]..[55,2265+13])
+          Pexp_construct "()" (lib/front.ml[55,2265+11]..[55,2265+13])
+          None
+    ]
+  structure_item (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+          Ppat_construct "()" (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+          None
+        expression (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+          Pexp_apply
+          expression (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/front.ml[55,2265+13]..[55,2265+13]) ghost,None)
+          ]
+    ]
+  structure_item (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+          Ppat_construct "()" (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+          None
+        expression (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+          Pexp_apply
+          expression (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+                Pexp_construct "()" (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+          Ppat_construct "()" (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+          None
+        expression (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+          Pexp_apply
+          expression (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+                Pexp_construct "()" (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+          Ppat_construct "()" (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+          None
+        expression (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+          Pexp_apply
+          expression (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/front.ml[55,2265+13]..[55,2265+13]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set ~absolute_filename:"lib/front.ml"
+let () = Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "front.ml"
+let load_grammar_from_contents filename contents =
+  InputFile.new_input_file filename;
+  InputFile.with_file_contents contents
+    (fun () ->
+       let open Lexing in
+         let lexbuf = Lexing.from_string contents in
+         lexbuf.lex_curr_p <-
+           { (lexbuf.lex_curr_p) with pos_fname = filename })
+let grammars = ()
+let grammar = ()
+let sorts = ()
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+          Texp_apply
+          expression (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+          Texp_apply
+          expression (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+          Texp_apply
+          expression (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+                Texp_constant Const_string("lib/front.ml",(lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+          Texp_apply
+          expression (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost
+                Texp_constant Const_string("front.ml",(lib/front.ml[20,1173+0]..lib/front.ml[20,1173+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/front.ml[20,1173+0]..lib/front.ml[29,1576+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[20,1173+4]..lib/front.ml[20,1173+30])
+          Tpat_var "load_grammar_from_contents/1128"
+        expression (lib/front.ml[20,1173+31]..lib/front.ml[29,1576+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/front.ml[20,1173+31]..lib/front.ml[20,1173+39])
+                Tpat_var "filename/1130"
+              expression (lib/front.ml[20,1173+40]..lib/front.ml[29,1576+3]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/front.ml[20,1173+40]..lib/front.ml[20,1173+48])
+                      Tpat_var "contents/1131"
+                    expression (lib/front.ml[21,1224+2]..lib/front.ml[29,1576+3])
+                      Texp_sequence
+                      expression (lib/front.ml[21,1224+2]..lib/front.ml[21,1224+35])
+                        Texp_apply
+                        expression (lib/front.ml[21,1224+2]..lib/front.ml[21,1224+26])
+                          Texp_ident "Gbnf_parser!.InputFile.new_input_file"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (lib/front.ml[21,1224+27]..lib/front.ml[21,1224+35])
+                              Texp_ident "filename/1130"
+                        ]
+                      expression (lib/front.ml[22,1261+2]..lib/front.ml[29,1576+3])
+                        Texp_apply
+                        expression (lib/front.ml[22,1261+2]..lib/front.ml[22,1261+30])
+                          Texp_ident "Gbnf_parser!.InputFile.with_file_contents"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (lib/front.ml[22,1261+31]..lib/front.ml[22,1261+39])
+                              Texp_ident "contents/1131"
+                          <arg>
+                            Nolabel
+                            expression (lib/front.ml[22,1261+40]..lib/front.ml[29,1576+3])
+                              Texp_function
+                              Nolabel
+                              [
+                                <case>
+                                  pattern (lib/front.ml[22,1261+45]..lib/front.ml[22,1261+47])
+                                    Tpat_construct "()"
+                                    []
+                                    None
+                                  expression (lib/front.ml[23,1312+4]..lib/front.ml[25,1383+73])
+                                    Texp_open Fresh
+                                    module_expr (lib/front.ml[23,1312+13]..lib/front.ml[23,1312+19])
+                                      Tmod_ident "Stdlib!.Lexing"
+                                    expression (lib/front.ml[24,1335+4]..lib/front.ml[25,1383+73])
+                                      Texp_let Nonrec
+                                      [
+                                        <def>
+                                          pattern (lib/front.ml[24,1335+8]..lib/front.ml[24,1335+14])
+                                            Tpat_var "lexbuf/1170"
+                                          expression (lib/front.ml[24,1335+17]..lib/front.ml[24,1335+44])
+                                            Texp_apply
+                                            expression (lib/front.ml[24,1335+17]..lib/front.ml[24,1335+35])
+                                              Texp_ident "Stdlib!.Lexing.from_string"
+                                            [
+                                              <arg>
+                                                Optional "with_positions"
+                                                expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                                                  Texp_construct "None"
+                                                  []
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/front.ml[24,1335+36]..lib/front.ml[24,1335+44])
+                                                  Texp_ident "contents/1131"
+                                            ]
+                                      ]
+                                      expression (lib/front.ml[25,1383+4]..lib/front.ml[25,1383+72])
+                                        Texp_setfield
+                                        expression (lib/front.ml[25,1383+4]..lib/front.ml[25,1383+10])
+                                          Texp_ident "lexbuf/1170"
+                                        "lex_curr_p"
+                                        expression (lib/front.ml[25,1383+25]..lib/front.ml[25,1383+72])
+                                          Texp_record
+                                            fields =
+                                              [
+                                                "pos_fname"
+                                                  expression (lib/front.ml[25,1383+62]..lib/front.ml[25,1383+70])
+                                                    Texp_ident "filename/1130"
+                                                <kept>                                                <kept>                                                <kept>                                              ]
+                                            representation =
+                                              Record_regular
+                                            extended_expression =
+                                              Some
+                                                expression (lib/front.ml[25,1383+27]..lib/front.ml[25,1383+44])
+                                                  Texp_field
+                                                  expression (lib/front.ml[25,1383+27]..lib/front.ml[25,1383+33])
+                                                    Texp_ident "lexbuf/1170"
+                                                  "lex_curr_p"
+                              ]
+                        ]
+                ]
+          ]
+    ]
+  structure_item (lib/front.ml[43,1930+0]..lib/front.ml[43,1930+16])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[43,1930+4]..lib/front.ml[43,1930+12])
+          Tpat_var "grammars/1196"
+        expression (lib/front.ml[43,1930+14]..lib/front.ml[43,1930+16])
+          Texp_construct "()"
+          []
+    ]
+  structure_item (lib/front.ml[49,2089+0]..lib/front.ml[49,2089+15])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[49,2089+4]..lib/front.ml[49,2089+11])
+          Tpat_var "grammar/1197"
+        expression (lib/front.ml[49,2089+13]..lib/front.ml[49,2089+15])
+          Texp_construct "()"
+          []
+    ]
+  structure_item (lib/front.ml[55,2265+0]..lib/front.ml[55,2265+13])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[55,2265+4]..lib/front.ml[55,2265+9])
+          Tpat_var "sorts/1198"
+        expression (lib/front.ml[55,2265+11]..lib/front.ml[55,2265+13])
+          Texp_construct "()"
+          []
+    ]
+  structure_item (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+          Texp_apply
+          expression (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost,None)
+          ]
+    ]
+  structure_item (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+          Texp_apply
+          expression (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+          Texp_apply
+          expression (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+          Texp_apply
+          expression (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/front.ml[55,2265+13]..lib/front.ml[55,2265+13]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__Front>
+ "grammar"[value] -> <Gbnf_parser__Front.5>;
+ "grammars"[value] -> <Gbnf_parser__Front.4>;
+ "load_grammar_from_contents"[value] -> <Gbnf_parser__Front.0>;
+ "sorts"[value] -> <Gbnf_parser__Front.6>;
+ }
+
+(setglobal Gbnf_parser__Front!
+  (let
+    (*match*/1749 =
+       (after Gbnf_parser__Front lib/front.ml(20)<ghost>:1173-1173
+         (apply (field 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Front"))
+     *match*/1747 =
+       (after Gbnf_parser__Front lib/front.ml(20)<ghost>:1173-1173
+         (apply
+           (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1745 =
+       (after Gbnf_parser__Front lib/front.ml(20)<ghost>:1173-1173
+         (apply (field 0 (field 5 (global Expect_test_collector!)))
+           "lib/front.ml"))
+     *match*/1743 =
+       (after Gbnf_parser__Front lib/front.ml(20)<ghost>:1173-1173
+         (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "front.ml"))
+     load_grammar_from_contents/1128 =
+       (function filename/1130 contents/1131 : int
+         (funct-body Gbnf_parser__Front.load_grammar_from_contents lib/front.ml(20)<ghost>:1204-1579
+           (before Gbnf_parser__Front.load_grammar_from_contents lib/front.ml(21):1226-1579
+             (seq
+               (after Gbnf_parser__Front.load_grammar_from_contents lib/front.ml(21):1226-1259
+                 (apply (field 5 (global Gbnf_parser__InputFile!))
+                   filename/1130))
+               (before Gbnf_parser__Front.load_grammar_from_contents lib/front.ml(22):1263-1579
+                 (after Gbnf_parser__Front.load_grammar_from_contents lib/front.ml(22):1263-1579
+                   (apply (field 11 (global Gbnf_parser__InputFile!))
+                     contents/1131
+                     (function param/1195[int] : int
+                       (funct-body Gbnf_parser__Front.load_grammar_from_contents.(fun) lib/front.ml(22):1301-1579
+                         (before Gbnf_parser__Front.load_grammar_from_contents.(fun) lib/front.ml(23):1316-1456
+                           (let
+                             (lexbuf/1170 =
+                                (after Gbnf_parser__Front.load_grammar_from_contents.(fun) lib/front.ml(24):1352-1379
+                                  (apply (field 2 (global Stdlib__Lexing!)) 0
+                                    contents/1131)))
+                             (before Gbnf_parser__Front.load_grammar_from_contents.(fun) lib/front.ml(25):1387-1455
+                               (setfield_ptr 11 lexbuf/1170
+                                 (let (init/1733 = (field 11 lexbuf/1170))
+                                   (makeblock 0 (*,int,int,int) filename/1130
+                                     (field 1 init/1733) (field 2 init/1733)
+                                     (field 3 init/1733))))))))))))))))
+     grammars/1196 =[int] 0
+     grammar/1197 =[int] 0
+     sorts/1198 =[int] 0
+     *match*/1741 =
+       (after Gbnf_parser__Front lib/front.ml(55)<ghost>:2278-2278
+         (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/1739 =
+       (after Gbnf_parser__Front lib/front.ml(55)<ghost>:2278-2278
+         (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+     *match*/1737 =
+       (after Gbnf_parser__Front lib/front.ml(55)<ghost>:2278-2278
+         (apply
+           (field 1 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/1735 =
+       (after Gbnf_parser__Front lib/front.ml(55)<ghost>:2278-2278
+         (apply (field 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Front")))
+    (pseudo <unknown location>
+      (makeblock 0 load_grammar_from_contents/1128 grammars/1196 grammar/1197
+        sorts/1198))))
+(setglobal Gbnf_parser__Front!
+  (let
+    (*match*/1749 =
+       (after Gbnf_parser__Front lib/front.ml(20)<ghost>:1173-1173
+         (apply (field 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Front"))
+     *match*/1747 =
+       (after Gbnf_parser__Front lib/front.ml(20)<ghost>:1173-1173
+         (apply
+           (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1745 =
+       (after Gbnf_parser__Front lib/front.ml(20)<ghost>:1173-1173
+         (apply (field 0 (field 5 (global Expect_test_collector!)))
+           "lib/front.ml"))
+     *match*/1743 =
+       (after Gbnf_parser__Front lib/front.ml(20)<ghost>:1173-1173
+         (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "front.ml"))
+     load_grammar_from_contents/1128 =
+       (function filename/1130 contents/1131 : int
+         (funct-body Gbnf_parser__Front.load_grammar_from_contents lib/front.ml(20)<ghost>:1204-1579
+           (before Gbnf_parser__Front.load_grammar_from_contents lib/front.ml(21):1226-1579
+             (seq
+               (after Gbnf_parser__Front.load_grammar_from_contents lib/front.ml(21):1226-1259
+                 (apply (field 5 (global Gbnf_parser__InputFile!))
+                   filename/1130))
+               (before Gbnf_parser__Front.load_grammar_from_contents lib/front.ml(22):1263-1579
+                 (after Gbnf_parser__Front.load_grammar_from_contents lib/front.ml(22):1263-1579
+                   (apply (field 11 (global Gbnf_parser__InputFile!))
+                     contents/1131
+                     (function param/1195[int] : int
+                       (funct-body Gbnf_parser__Front.load_grammar_from_contents.(fun) lib/front.ml(22):1301-1579
+                         (before Gbnf_parser__Front.load_grammar_from_contents.(fun) lib/front.ml(23):1316-1456
+                           (let
+                             (lexbuf/1170 =
+                                (after Gbnf_parser__Front.load_grammar_from_contents.(fun) lib/front.ml(24):1352-1379
+                                  (apply (field 2 (global Stdlib__Lexing!)) 0
+                                    contents/1131)))
+                             (before Gbnf_parser__Front.load_grammar_from_contents.(fun) lib/front.ml(25):1387-1455
+                               (setfield_ptr 11 lexbuf/1170
+                                 (let (init/1733 = (field 11 lexbuf/1170))
+                                   (makeblock 0 (*,int,int,int) filename/1130
+                                     (field 1 init/1733) (field 2 init/1733)
+                                     (field 3 init/1733))))))))))))))))
+     grammars/1196 =[int] 0
+     grammar/1197 =[int] 0
+     sorts/1198 =[int] 0
+     *match*/1741 =
+       (after Gbnf_parser__Front lib/front.ml(55)<ghost>:2278-2278
+         (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/1739 =
+       (after Gbnf_parser__Front lib/front.ml(55)<ghost>:2278-2278
+         (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+     *match*/1737 =
+       (after Gbnf_parser__Front lib/front.ml(55)<ghost>:2278-2278
+         (apply
+           (field 1 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/1735 =
+       (after Gbnf_parser__Front lib/front.ml(55)<ghost>:2278-2278
+         (apply (field 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Front")))
+    (pseudo <unknown location>
+      (makeblock 0 load_grammar_from_contents/1128 grammars/1196 grammar/1197
+        sorts/1198))))

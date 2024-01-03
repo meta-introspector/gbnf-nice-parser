@@ -1,0 +1,1430 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+          ]
+    ]
+  structure_item (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/HashCons.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("lib/HashCons.ml",(lib/HashCons.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/HashCons.ml[13,893+0]..[13,893+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/HashCons.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("HashCons.ml",(lib/HashCons.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/HashCons.ml[13,893+0]..[13,893+9])
+    Pstr_open Fresh
+    module_expr (lib/HashCons.ml[13,893+5]..[13,893+9])
+      Pmod_ident "Sigs" (lib/HashCons.ml[13,893+5]..[13,893+9])
+  structure_item (lib/HashCons.ml[29,1777+0]..[30,1795+26])
+    Pstr_type Rec
+    [
+      type_declaration "cell" (lib/HashCons.ml[29,1777+11]..[29,1777+15]) (lib/HashCons.ml[29,1777+0]..[30,1795+26])
+        ptype_params =
+          [
+            core_type (lib/HashCons.ml[29,1777+5]..[29,1777+10])
+              Ptyp_var data
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (lib/HashCons.ml[30,1795+4]..[30,1795+12])
+                Immutable
+                "id" (lib/HashCons.ml[30,1795+4]..[30,1795+6])                core_type (lib/HashCons.ml[30,1795+8]..[30,1795+11])
+                  Ptyp_constr "int" (lib/HashCons.ml[30,1795+8]..[30,1795+11])
+                  []
+              (lib/HashCons.ml[30,1795+13]..[30,1795+24])
+                Immutable
+                "data" (lib/HashCons.ml[30,1795+13]..[30,1795+17])                core_type (lib/HashCons.ml[30,1795+19]..[30,1795+24])
+                  Ptyp_var data
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/HashCons.ml[32,1823+0]..[33,1834+6])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[32,1823+4]..[32,1823+6])
+          Ppat_var "id" (lib/HashCons.ml[32,1823+4]..[32,1823+6])
+        expression (lib/HashCons.ml[32,1823+7]..[33,1834+6]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/HashCons.ml[32,1823+7]..[32,1823+8])
+            Ppat_var "x" (lib/HashCons.ml[32,1823+7]..[32,1823+8])
+          expression (lib/HashCons.ml[33,1834+2]..[33,1834+6])
+            Pexp_field
+            expression (lib/HashCons.ml[33,1834+2]..[33,1834+3])
+              Pexp_ident "x" (lib/HashCons.ml[33,1834+2]..[33,1834+3])
+            "id" (lib/HashCons.ml[33,1834+4]..[33,1834+6])
+    ]
+  structure_item (lib/HashCons.ml[35,1842+0]..[36,1855+8])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[35,1842+4]..[35,1842+8])
+          Ppat_var "data" (lib/HashCons.ml[35,1842+4]..[35,1842+8])
+        expression (lib/HashCons.ml[35,1842+9]..[36,1855+8]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/HashCons.ml[35,1842+9]..[35,1842+10])
+            Ppat_var "x" (lib/HashCons.ml[35,1842+9]..[35,1842+10])
+          expression (lib/HashCons.ml[36,1855+2]..[36,1855+8])
+            Pexp_field
+            expression (lib/HashCons.ml[36,1855+2]..[36,1855+3])
+              Pexp_ident "x" (lib/HashCons.ml[36,1855+2]..[36,1855+3])
+            "data" (lib/HashCons.ml[36,1855+4]..[36,1855+8])
+    ]
+  structure_item (lib/HashCons.ml[38,1865+0]..[39,1881+13])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[38,1865+4]..[38,1865+9])
+          Ppat_var "equal" (lib/HashCons.ml[38,1865+4]..[38,1865+9])
+        expression (lib/HashCons.ml[38,1865+10]..[39,1881+13]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/HashCons.ml[38,1865+10]..[38,1865+11])
+            Ppat_var "x" (lib/HashCons.ml[38,1865+10]..[38,1865+11])
+          expression (lib/HashCons.ml[38,1865+12]..[39,1881+13]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/HashCons.ml[38,1865+12]..[38,1865+13])
+              Ppat_var "y" (lib/HashCons.ml[38,1865+12]..[38,1865+13])
+            expression (lib/HashCons.ml[39,1881+2]..[39,1881+13])
+              Pexp_apply
+              expression (lib/HashCons.ml[39,1881+7]..[39,1881+8])
+                Pexp_ident "=" (lib/HashCons.ml[39,1881+7]..[39,1881+8])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/HashCons.ml[39,1881+2]..[39,1881+6])
+                    Pexp_field
+                    expression (lib/HashCons.ml[39,1881+2]..[39,1881+3])
+                      Pexp_ident "x" (lib/HashCons.ml[39,1881+2]..[39,1881+3])
+                    "id" (lib/HashCons.ml[39,1881+4]..[39,1881+6])
+                <arg>
+                Nolabel
+                  expression (lib/HashCons.ml[39,1881+9]..[39,1881+13])
+                    Pexp_field
+                    expression (lib/HashCons.ml[39,1881+9]..[39,1881+10])
+                      Pexp_ident "y" (lib/HashCons.ml[39,1881+9]..[39,1881+10])
+                    "id" (lib/HashCons.ml[39,1881+11]..[39,1881+13])
+              ]
+    ]
+  structure_item (lib/HashCons.ml[42,1961+0]..[43,1979+19])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[42,1961+4]..[42,1961+11])
+          Ppat_var "compare" (lib/HashCons.ml[42,1961+4]..[42,1961+11])
+        expression (lib/HashCons.ml[42,1961+12]..[43,1979+19]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/HashCons.ml[42,1961+12]..[42,1961+13])
+            Ppat_var "x" (lib/HashCons.ml[42,1961+12]..[42,1961+13])
+          expression (lib/HashCons.ml[42,1961+14]..[43,1979+19]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/HashCons.ml[42,1961+14]..[42,1961+15])
+              Ppat_var "y" (lib/HashCons.ml[42,1961+14]..[42,1961+15])
+            expression (lib/HashCons.ml[43,1979+2]..[43,1979+19])
+              Pexp_apply
+              expression (lib/HashCons.ml[43,1979+2]..[43,1979+9])
+                Pexp_ident "compare" (lib/HashCons.ml[43,1979+2]..[43,1979+9])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/HashCons.ml[43,1979+10]..[43,1979+14])
+                    Pexp_field
+                    expression (lib/HashCons.ml[43,1979+10]..[43,1979+11])
+                      Pexp_ident "x" (lib/HashCons.ml[43,1979+10]..[43,1979+11])
+                    "id" (lib/HashCons.ml[43,1979+12]..[43,1979+14])
+                <arg>
+                Nolabel
+                  expression (lib/HashCons.ml[43,1979+15]..[43,1979+19])
+                    Pexp_field
+                    expression (lib/HashCons.ml[43,1979+15]..[43,1979+16])
+                      Pexp_ident "y" (lib/HashCons.ml[43,1979+15]..[43,1979+16])
+                    "id" (lib/HashCons.ml[43,1979+17]..[43,1979+19])
+              ]
+    ]
+  structure_item (lib/HashCons.ml[46,2069+0]..[47,2082+19])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[46,2069+4]..[46,2069+8])
+          Ppat_var "hash" (lib/HashCons.ml[46,2069+4]..[46,2069+8])
+        expression (lib/HashCons.ml[46,2069+9]..[47,2082+19]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/HashCons.ml[46,2069+9]..[46,2069+10])
+            Ppat_var "x" (lib/HashCons.ml[46,2069+9]..[46,2069+10])
+          expression (lib/HashCons.ml[47,2082+2]..[47,2082+19])
+            Pexp_apply
+            expression (lib/HashCons.ml[47,2082+2]..[47,2082+14])
+              Pexp_ident "Hashtbl.hash" (lib/HashCons.ml[47,2082+2]..[47,2082+14])
+            [
+              <arg>
+              Nolabel
+                expression (lib/HashCons.ml[47,2082+15]..[47,2082+19])
+                  Pexp_field
+                  expression (lib/HashCons.ml[47,2082+15]..[47,2082+16])
+                    Pexp_ident "x" (lib/HashCons.ml[47,2082+15]..[47,2082+16])
+                  "id" (lib/HashCons.ml[47,2082+17]..[47,2082+19])
+            ]
+    ]
+  structure_item (lib/HashCons.ml[51,2218+0]..[54,2286+3])
+    Pstr_modtype "SERVICE" (lib/HashCons.ml[51,2218+12]..[51,2218+19])
+      module_type (lib/HashCons.ml[51,2218+22]..[54,2286+3])
+        Pmty_signature
+        [
+          signature_item (lib/HashCons.ml[52,2244+2]..[52,2244+11])
+            Psig_type Rec
+            [
+              type_declaration "data" (lib/HashCons.ml[52,2244+7]..[52,2244+11]) (lib/HashCons.ml[52,2244+2]..[52,2244+11])
+                ptype_params =
+                  []
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ptype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  None
+            ]
+          signature_item (lib/HashCons.ml[53,2256+2]..[53,2256+29])
+            Psig_value
+            value_description "make" (lib/HashCons.ml[53,2256+6]..[53,2256+10]) (lib/HashCons.ml[53,2256+2]..[53,2256+29])
+              core_type (lib/HashCons.ml[53,2256+12]..[53,2256+29])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/HashCons.ml[53,2256+12]..[53,2256+16])
+                  Ptyp_constr "data" (lib/HashCons.ml[53,2256+12]..[53,2256+16])
+                  []
+                core_type (lib/HashCons.ml[53,2256+20]..[53,2256+29])
+                  Ptyp_constr "cell" (lib/HashCons.ml[53,2256+25]..[53,2256+29])
+                  [
+                    core_type (lib/HashCons.ml[53,2256+20]..[53,2256+24])
+                      Ptyp_constr "data" (lib/HashCons.ml[53,2256+20]..[53,2256+24])
+                      []
+                  ]
+              []
+        ]
+  structure_item (lib/HashCons.ml[60,2456+0]..[71,2618+3])
+    Pstr_module
+    "Make" (lib/HashCons.ml[60,2456+7]..[60,2456+11])
+      module_expr (lib/HashCons.ml[60,2456+12]..[71,2618+3])
+        Pmod_functor "M" (lib/HashCons.ml[60,2456+13]..[60,2456+14])
+        module_type (lib/HashCons.ml[60,2456+17]..[60,2456+25])
+          Pmty_ident "MEMOIZER" (lib/HashCons.ml[60,2456+17]..[60,2456+25])
+        module_expr (lib/HashCons.ml[60,2456+29]..[71,2618+3])
+          Pmod_structure
+          [
+            structure_item (lib/HashCons.ml[62,2493+2]..[63,2507+9])
+              Pstr_type Rec
+              [
+                type_declaration "data" (lib/HashCons.ml[62,2493+7]..[62,2493+11]) (lib/HashCons.ml[62,2493+2]..[63,2507+9])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ptype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    Some
+                      core_type (lib/HashCons.ml[63,2507+4]..[63,2507+9])
+                        Ptyp_constr "M.key" (lib/HashCons.ml[63,2507+4]..[63,2507+9])
+                        []
+              ]
+            structure_item (lib/HashCons.ml[65,2518+2]..[66,2533+17])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (lib/HashCons.ml[65,2518+6]..[65,2518+12])
+                    Ppat_var "gensym" (lib/HashCons.ml[65,2518+6]..[65,2518+12])
+                  expression (lib/HashCons.ml[66,2533+4]..[66,2533+17])
+                    Pexp_apply
+                    expression (lib/HashCons.ml[66,2533+4]..[66,2533+15])
+                      Pexp_ident "Gensym.make" (lib/HashCons.ml[66,2533+4]..[66,2533+15])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/HashCons.ml[66,2533+15]..[66,2533+17])
+                          Pexp_construct "()" (lib/HashCons.ml[66,2533+15]..[66,2533+17])
+                          None
+                    ]
+              ]
+            structure_item (lib/HashCons.ml[68,2552+2]..[69,2565+51])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (lib/HashCons.ml[68,2552+6]..[68,2552+10])
+                    Ppat_var "make" (lib/HashCons.ml[68,2552+6]..[68,2552+10])
+                  expression (lib/HashCons.ml[69,2565+4]..[69,2565+51])
+                    Pexp_apply
+                    expression (lib/HashCons.ml[69,2565+4]..[69,2565+13])
+                      Pexp_ident "M.memoize" (lib/HashCons.ml[69,2565+4]..[69,2565+13])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/HashCons.ml[69,2565+14]..[69,2565+51])
+                          Pexp_fun
+                          Nolabel
+                          None
+                          pattern (lib/HashCons.ml[69,2565+19]..[69,2565+23])
+                            Ppat_var "data" (lib/HashCons.ml[69,2565+19]..[69,2565+23])
+                          expression (lib/HashCons.ml[69,2565+27]..[69,2565+50])
+                            Pexp_record
+                            [
+                              "id" (lib/HashCons.ml[69,2565+29]..[69,2565+31])
+                                expression (lib/HashCons.ml[69,2565+34]..[69,2565+42])
+                                  Pexp_apply
+                                  expression (lib/HashCons.ml[69,2565+34]..[69,2565+40])
+                                    Pexp_ident "gensym" (lib/HashCons.ml[69,2565+34]..[69,2565+40])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (lib/HashCons.ml[69,2565+40]..[69,2565+42])
+                                        Pexp_construct "()" (lib/HashCons.ml[69,2565+40]..[69,2565+42])
+                                        None
+                                  ]
+                              "data" (lib/HashCons.ml[69,2565+44]..[69,2565+48]) ghost
+                                expression (lib/HashCons.ml[69,2565+44]..[69,2565+48])
+                                  Pexp_ident "data" (lib/HashCons.ml[69,2565+44]..[69,2565+48])
+                            ]
+                            None
+                    ]
+              ]
+          ]
+  structure_item (lib/HashCons.ml[73,2623+0]..[75,2663+37])
+    Pstr_module
+    "ForHashedType" (lib/HashCons.ml[73,2623+7]..[73,2623+20])
+      module_expr (lib/HashCons.ml[74,2644+2]..[75,2663+37])
+        Pmod_functor "T" (lib/HashCons.ml[74,2644+3]..[74,2644+4])
+        module_type (lib/HashCons.ml[74,2644+7]..[74,2644+17])
+          Pmty_ident "HashedType" (lib/HashCons.ml[74,2644+7]..[74,2644+17])
+        module_expr (lib/HashCons.ml[75,2663+7]..[75,2663+37])
+          Pmod_apply
+          module_expr (lib/HashCons.ml[75,2663+7]..[75,2663+11])
+            Pmod_ident "Make" (lib/HashCons.ml[75,2663+7]..[75,2663+11])
+          module_expr (lib/HashCons.ml[75,2663+12]..[75,2663+36])
+            Pmod_apply
+            module_expr (lib/HashCons.ml[75,2663+12]..[75,2663+33])
+              Pmod_ident "Memoize.ForHashedType" (lib/HashCons.ml[75,2663+12]..[75,2663+33])
+            module_expr (lib/HashCons.ml[75,2663+34]..[75,2663+35])
+              Pmod_ident "T" (lib/HashCons.ml[75,2663+34]..[75,2663+35])
+  structure_item (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+          Ppat_construct "()" (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+          None
+        expression (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+          Pexp_apply
+          expression (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost,None)
+          ]
+    ]
+  structure_item (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+          Ppat_construct "()" (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+          None
+        expression (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+          Pexp_apply
+          expression (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+                Pexp_construct "()" (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+          Ppat_construct "()" (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+          None
+        expression (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+          Pexp_apply
+          expression (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+                Pexp_construct "()" (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+          Ppat_construct "()" (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+          None
+        expression (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+          Pexp_apply
+          expression (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/HashCons.ml[75,2663+37]..[75,2663+37]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set ~absolute_filename:"lib/HashCons.ml"
+let () =
+  Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "HashCons.ml"
+open Sigs
+type 'data cell = {
+  id: int ;
+  data: 'data }
+let id x = x.id
+let data x = x.data
+let equal x y = x.id = y.id
+let compare x y = compare x.id y.id
+let hash x = Hashtbl.hash x.id
+module type SERVICE  = sig type data val make : data -> data cell end
+module Make(M:MEMOIZER) =
+  struct
+    type data = M.key
+    let gensym = Gensym.make ()
+    let make = M.memoize (fun data -> { id = (gensym ()); data })
+  end
+module ForHashedType(T:HashedType) = (Make)((Memoize.ForHashedType)(T))
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+                Texp_constant Const_string("lib/HashCons.ml",(lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost
+                Texp_constant Const_string("HashCons.ml",(lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/HashCons.ml[13,893+0]..lib/HashCons.ml[13,893+9])
+    Tstr_open Fresh
+    module_expr (lib/HashCons.ml[13,893+5]..lib/HashCons.ml[13,893+9])
+      Tmod_ident "Gbnf_parser!.Sigs"
+  structure_item (lib/HashCons.ml[29,1777+0]..lib/HashCons.ml[30,1795+26])
+    Tstr_type Rec
+    [
+      type_declaration cell/1153 (lib/HashCons.ml[29,1777+0]..lib/HashCons.ml[30,1795+26])
+        ptype_params =
+          [
+            core_type (lib/HashCons.ml[29,1777+5]..lib/HashCons.ml[29,1777+10])
+              Ttyp_var data
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (lib/HashCons.ml[30,1795+4]..lib/HashCons.ml[30,1795+12])
+                Immutable
+                id/1154                core_type (lib/HashCons.ml[30,1795+8]..lib/HashCons.ml[30,1795+11])
+                  Ttyp_poly
+                  core_type (lib/HashCons.ml[30,1795+8]..lib/HashCons.ml[30,1795+11])
+                    Ttyp_constr "int/1!"
+                    []
+              (lib/HashCons.ml[30,1795+13]..lib/HashCons.ml[30,1795+24])
+                Immutable
+                data/1155                core_type (lib/HashCons.ml[30,1795+19]..lib/HashCons.ml[30,1795+24])
+                  Ttyp_poly
+                  core_type (lib/HashCons.ml[30,1795+19]..lib/HashCons.ml[30,1795+24])
+                    Ttyp_var data
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/HashCons.ml[32,1823+0]..lib/HashCons.ml[33,1834+6])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[32,1823+4]..lib/HashCons.ml[32,1823+6])
+          Tpat_var "id/1156"
+        expression (lib/HashCons.ml[32,1823+7]..lib/HashCons.ml[33,1834+6]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/HashCons.ml[32,1823+7]..lib/HashCons.ml[32,1823+8])
+                Tpat_var "x/1158"
+              expression (lib/HashCons.ml[33,1834+2]..lib/HashCons.ml[33,1834+6])
+                Texp_field
+                expression (lib/HashCons.ml[33,1834+2]..lib/HashCons.ml[33,1834+3])
+                  Texp_ident "x/1158"
+                "id"
+          ]
+    ]
+  structure_item (lib/HashCons.ml[35,1842+0]..lib/HashCons.ml[36,1855+8])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[35,1842+4]..lib/HashCons.ml[35,1842+8])
+          Tpat_var "data/1159"
+        expression (lib/HashCons.ml[35,1842+9]..lib/HashCons.ml[36,1855+8]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/HashCons.ml[35,1842+9]..lib/HashCons.ml[35,1842+10])
+                Tpat_var "x/1161"
+              expression (lib/HashCons.ml[36,1855+2]..lib/HashCons.ml[36,1855+8])
+                Texp_field
+                expression (lib/HashCons.ml[36,1855+2]..lib/HashCons.ml[36,1855+3])
+                  Texp_ident "x/1161"
+                "data"
+          ]
+    ]
+  structure_item (lib/HashCons.ml[38,1865+0]..lib/HashCons.ml[39,1881+13])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[38,1865+4]..lib/HashCons.ml[38,1865+9])
+          Tpat_var "equal/1162"
+        expression (lib/HashCons.ml[38,1865+10]..lib/HashCons.ml[39,1881+13]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/HashCons.ml[38,1865+10]..lib/HashCons.ml[38,1865+11])
+                Tpat_var "x/1164"
+              expression (lib/HashCons.ml[38,1865+12]..lib/HashCons.ml[39,1881+13]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/HashCons.ml[38,1865+12]..lib/HashCons.ml[38,1865+13])
+                      Tpat_var "y/1165"
+                    expression (lib/HashCons.ml[39,1881+2]..lib/HashCons.ml[39,1881+13])
+                      Texp_apply
+                      expression (lib/HashCons.ml[39,1881+7]..lib/HashCons.ml[39,1881+8])
+                        Texp_ident "Stdlib!.="
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/HashCons.ml[39,1881+2]..lib/HashCons.ml[39,1881+6])
+                            Texp_field
+                            expression (lib/HashCons.ml[39,1881+2]..lib/HashCons.ml[39,1881+3])
+                              Texp_ident "x/1164"
+                            "id"
+                        <arg>
+                          Nolabel
+                          expression (lib/HashCons.ml[39,1881+9]..lib/HashCons.ml[39,1881+13])
+                            Texp_field
+                            expression (lib/HashCons.ml[39,1881+9]..lib/HashCons.ml[39,1881+10])
+                              Texp_ident "y/1165"
+                            "id"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/HashCons.ml[42,1961+0]..lib/HashCons.ml[43,1979+19])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[42,1961+4]..lib/HashCons.ml[42,1961+11])
+          Tpat_var "compare/1166"
+        expression (lib/HashCons.ml[42,1961+12]..lib/HashCons.ml[43,1979+19]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/HashCons.ml[42,1961+12]..lib/HashCons.ml[42,1961+13])
+                Tpat_var "x/1167"
+              expression (lib/HashCons.ml[42,1961+14]..lib/HashCons.ml[43,1979+19]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/HashCons.ml[42,1961+14]..lib/HashCons.ml[42,1961+15])
+                      Tpat_var "y/1168"
+                    expression (lib/HashCons.ml[43,1979+2]..lib/HashCons.ml[43,1979+19])
+                      Texp_apply
+                      expression (lib/HashCons.ml[43,1979+2]..lib/HashCons.ml[43,1979+9])
+                        Texp_ident "Stdlib!.compare"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/HashCons.ml[43,1979+10]..lib/HashCons.ml[43,1979+14])
+                            Texp_field
+                            expression (lib/HashCons.ml[43,1979+10]..lib/HashCons.ml[43,1979+11])
+                              Texp_ident "x/1167"
+                            "id"
+                        <arg>
+                          Nolabel
+                          expression (lib/HashCons.ml[43,1979+15]..lib/HashCons.ml[43,1979+19])
+                            Texp_field
+                            expression (lib/HashCons.ml[43,1979+15]..lib/HashCons.ml[43,1979+16])
+                              Texp_ident "y/1168"
+                            "id"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/HashCons.ml[46,2069+0]..lib/HashCons.ml[47,2082+19])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[46,2069+4]..lib/HashCons.ml[46,2069+8])
+          Tpat_var "hash/1169"
+        expression (lib/HashCons.ml[46,2069+9]..lib/HashCons.ml[47,2082+19]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/HashCons.ml[46,2069+9]..lib/HashCons.ml[46,2069+10])
+                Tpat_var "x/1171"
+              expression (lib/HashCons.ml[47,2082+2]..lib/HashCons.ml[47,2082+19])
+                Texp_apply
+                expression (lib/HashCons.ml[47,2082+2]..lib/HashCons.ml[47,2082+14])
+                  Texp_ident "Stdlib!.Hashtbl.hash"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/HashCons.ml[47,2082+15]..lib/HashCons.ml[47,2082+19])
+                      Texp_field
+                      expression (lib/HashCons.ml[47,2082+15]..lib/HashCons.ml[47,2082+16])
+                        Texp_ident "x/1171"
+                      "id"
+                ]
+          ]
+    ]
+  structure_item (lib/HashCons.ml[51,2218+0]..lib/HashCons.ml[54,2286+3])
+    Tstr_modtype "SERVICE/1213"
+      module_type (lib/HashCons.ml[51,2218+22]..lib/HashCons.ml[54,2286+3])
+        Tmty_signature
+        [
+          signature_item (lib/HashCons.ml[52,2244+2]..lib/HashCons.ml[52,2244+11])
+            Tsig_type Rec
+            [
+              type_declaration data/1211 (lib/HashCons.ml[52,2244+2]..lib/HashCons.ml[52,2244+11])
+                ptype_params =
+                  []
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ttype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  None
+            ]
+          signature_item (lib/HashCons.ml[53,2256+2]..lib/HashCons.ml[53,2256+29])
+            Tsig_value
+            value_description make/1212 (lib/HashCons.ml[53,2256+2]..lib/HashCons.ml[53,2256+29])
+              core_type (lib/HashCons.ml[53,2256+12]..lib/HashCons.ml[53,2256+29])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/HashCons.ml[53,2256+12]..lib/HashCons.ml[53,2256+16])
+                  Ttyp_constr "data/1211"
+                  []
+                core_type (lib/HashCons.ml[53,2256+20]..lib/HashCons.ml[53,2256+29])
+                  Ttyp_constr "cell/1153"
+                  [
+                    core_type (lib/HashCons.ml[53,2256+20]..lib/HashCons.ml[53,2256+24])
+                      Ttyp_constr "data/1211"
+                      []
+                  ]
+              []
+        ]
+  structure_item (lib/HashCons.ml[60,2456+0]..lib/HashCons.ml[71,2618+3])
+    Tstr_module
+    Make/1255
+      module_expr (lib/HashCons.ml[60,2456+12]..lib/HashCons.ml[71,2618+3])
+        Tmod_functor "M/1243"
+        module_type (lib/HashCons.ml[60,2456+17]..lib/HashCons.ml[60,2456+25])
+          Tmty_ident "Gbnf_parser!.Sigs.MEMOIZER"
+        module_expr (lib/HashCons.ml[60,2456+29]..lib/HashCons.ml[71,2618+3])
+          Tmod_structure
+          [
+            structure_item (lib/HashCons.ml[62,2493+2]..lib/HashCons.ml[63,2507+9])
+              Tstr_type Rec
+              [
+                type_declaration data/1244 (lib/HashCons.ml[62,2493+2]..lib/HashCons.ml[63,2507+9])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ttype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    Some
+                      core_type (lib/HashCons.ml[63,2507+4]..lib/HashCons.ml[63,2507+9])
+                        Ttyp_constr "M/1243.key"
+                        []
+              ]
+            structure_item (lib/HashCons.ml[65,2518+2]..lib/HashCons.ml[66,2533+17])
+              Tstr_value Nonrec
+              [
+                <def>
+                  pattern (lib/HashCons.ml[65,2518+6]..lib/HashCons.ml[65,2518+12])
+                    Tpat_var "gensym/1245"
+                  expression (lib/HashCons.ml[66,2533+4]..lib/HashCons.ml[66,2533+17])
+                    Texp_apply
+                    expression (lib/HashCons.ml[66,2533+4]..lib/HashCons.ml[66,2533+15])
+                      Texp_ident "Gbnf_parser!.Gensym.make"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (lib/HashCons.ml[66,2533+15]..lib/HashCons.ml[66,2533+17])
+                          Texp_construct "()"
+                          []
+                    ]
+              ]
+            structure_item (lib/HashCons.ml[68,2552+2]..lib/HashCons.ml[69,2565+51])
+              Tstr_value Nonrec
+              [
+                <def>
+                  pattern (lib/HashCons.ml[68,2552+6]..lib/HashCons.ml[68,2552+10])
+                    Tpat_var "make/1253"
+                  expression (lib/HashCons.ml[69,2565+4]..lib/HashCons.ml[69,2565+51])
+                    Texp_apply
+                    expression (lib/HashCons.ml[69,2565+4]..lib/HashCons.ml[69,2565+13])
+                      Texp_ident "M/1243.memoize"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (lib/HashCons.ml[69,2565+14]..lib/HashCons.ml[69,2565+51])
+                          Texp_function
+                          Nolabel
+                          [
+                            <case>
+                              pattern (lib/HashCons.ml[69,2565+19]..lib/HashCons.ml[69,2565+23])
+                                Tpat_var "data/1254"
+                              expression (lib/HashCons.ml[69,2565+27]..lib/HashCons.ml[69,2565+50])
+                                Texp_record
+                                  fields =
+                                    [
+                                      "id"
+                                        expression (lib/HashCons.ml[69,2565+34]..lib/HashCons.ml[69,2565+42])
+                                          Texp_apply
+                                          expression (lib/HashCons.ml[69,2565+34]..lib/HashCons.ml[69,2565+40])
+                                            Texp_ident "gensym/1245"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (lib/HashCons.ml[69,2565+40]..lib/HashCons.ml[69,2565+42])
+                                                Texp_construct "()"
+                                                []
+                                          ]
+                                      "data"
+                                        expression (lib/HashCons.ml[69,2565+44]..lib/HashCons.ml[69,2565+48])
+                                          Texp_ident "data/1254"
+                                    ]
+                                  representation =
+                                    Record_regular
+                                  extended_expression =
+                                    None
+                          ]
+                    ]
+              ]
+          ]
+  structure_item (lib/HashCons.ml[73,2623+0]..lib/HashCons.ml[75,2663+37])
+    Tstr_module
+    ForHashedType/1622
+      module_expr (lib/HashCons.ml[74,2644+2]..lib/HashCons.ml[75,2663+37])
+        Tmod_functor "T/1300"
+        module_type (lib/HashCons.ml[74,2644+7]..lib/HashCons.ml[74,2644+17])
+          Tmty_ident "Gbnf_parser!.Sigs.HashedType"
+        module_expr (lib/HashCons.ml[75,2663+7]..lib/HashCons.ml[75,2663+37])
+          Tmod_apply
+          module_expr (lib/HashCons.ml[75,2663+7]..lib/HashCons.ml[75,2663+11])
+            Tmod_ident "Make/1255"
+          module_expr (lib/HashCons.ml[75,2663+12]..lib/HashCons.ml[75,2663+36])
+            Tmod_apply
+            module_expr (lib/HashCons.ml[75,2663+12]..lib/HashCons.ml[75,2663+33])
+              module_expr (lib/HashCons.ml[75,2663+12]..lib/HashCons.ml[75,2663+33])
+                Tmod_ident "Gbnf_parser!.Memoize.ForHashedType"
+            module_expr (lib/HashCons.ml[75,2663+34]..lib/HashCons.ml[75,2663+35])
+              Tmod_ident "T/1300"
+  structure_item (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+          Texp_apply
+          expression (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost,None)
+          ]
+    ]
+  structure_item (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+          Texp_apply
+          expression (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+          Texp_apply
+          expression (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+          Texp_apply
+          expression (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/HashCons.ml[75,2663+37]..lib/HashCons.ml[75,2663+37]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__HashCons>
+ "ForHashedType"[module] ->
+   Abs<Gbnf_parser__HashCons.25>
+      (T/1300,
+       {
+        "data"[type] -> <Gbnf_parser__HashCons.19>;
+        "gensym"[value] -> <Gbnf_parser__HashCons.20>;
+        "make"[value] -> <Gbnf_parser__HashCons.21>;
+        });
+ "Make"[module] ->
+   Abs<Gbnf_parser__HashCons.23>
+      (M/1243,
+       {
+        "data"[type] -> <Gbnf_parser__HashCons.19>;
+        "gensym"[value] -> <Gbnf_parser__HashCons.20>;
+        "make"[value] -> <Gbnf_parser__HashCons.21>;
+        });
+ "SERVICE"[module type] -> <Gbnf_parser__HashCons.17>;
+ "cell"[type] -> <Gbnf_parser__HashCons.0>;
+ "compare"[value] -> <Gbnf_parser__HashCons.10>;
+ "data"[value] -> <Gbnf_parser__HashCons.5>;
+ "equal"[value] -> <Gbnf_parser__HashCons.7>;
+ "hash"[value] -> <Gbnf_parser__HashCons.13>;
+ "id"[value] -> <Gbnf_parser__HashCons.3>;
+ }
+
+(seq
+  (let
+    (*match*/2080 =
+       (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__HashCons"))
+    0)
+  (let
+    (*match*/2082 =
+       (apply
+         (field_imm 0
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/2084 =
+       (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+         "lib/HashCons.ml"))
+    0)
+  (let
+    (*match*/2086 =
+       (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "HashCons.ml"))
+    0)
+  (let (id/1156 = (function x/1158 : int (field_int 0 x/1158)))
+    (setfield_ptr(root-init) 0 (global Gbnf_parser__HashCons!) id/1156))
+  (let (data/1159 = (function x/1161 (field_imm 1 x/1161)))
+    (setfield_ptr(root-init) 1 (global Gbnf_parser__HashCons!) data/1159))
+  (let
+    (equal/1162 =
+       (function x/1164 y/1165 : int
+         (== (field_int 0 x/1164) (field_int 0 y/1165))))
+    (setfield_ptr(root-init) 2 (global Gbnf_parser__HashCons!) equal/1162))
+  (let
+    (compare/1166 =
+       (function x/1167 y/1168 : int
+         (compare_ints (field_int 0 x/1167) (field_int 0 y/1168))))
+    (setfield_ptr(root-init) 3 (global Gbnf_parser__HashCons!) compare/1166))
+  (let
+    (hash/1169 =
+       (function x/1171 : int
+         (apply (field_imm 27 (global Stdlib__Hashtbl!))
+           (field_int 0 x/1171))))
+    (setfield_ptr(root-init) 4 (global Gbnf_parser__HashCons!) hash/1169))
+  (let
+    (Make/1255 =
+       (function M/2088 is_a_functor
+         (let
+           (M/1243 =a M/2088
+            gensym/1245 =
+              (apply (field_imm 1 (global Gbnf_parser__Gensym!)) 0)
+            make/1253 =
+              (apply (field_imm 0 M/1243)
+                (function data/1254
+                  (makeblock 0 (int,*) (apply gensym/1245 0) data/1254))))
+           (makeblock 0 gensym/1245 make/1253))))
+    (seq
+      (setfield_ptr(root-init) 5 (global Gbnf_parser__HashCons!) Make/1255)
+      (let
+        (ForHashedType/1622 =
+           (function T/2091 is_a_functor
+             (let (T/1300 =a T/2091)
+               (apply (field_imm 5 (global Gbnf_parser__HashCons!))
+                 (let
+                   (let/2090 =
+                      (apply
+                        (let
+                          (let/2089 =
+                             (field_imm 3 (global Gbnf_parser__Memoize!)))
+                          (field_imm 3 (global Gbnf_parser__Memoize!)))
+                        T/1300))
+                   (makeblock 0 (field_mut 2 let/2090) (field_mut 1 let/2090)
+                     (field_mut 3 let/2090) (field_mut 4 let/2090)
+                     (field_mut 5 let/2090) (field_mut 8 let/2090)))))))
+        (seq
+          (setfield_ptr(root-init) 6 (global Gbnf_parser__HashCons!)
+            ForHashedType/1622)
+          (let
+            (*match*/2093 =
+               (apply (field_imm 5 (global Ppx_inline_test_lib!))
+                 "gbnf_parser"))
+            0)
+          (let
+            (*match*/2095 =
+               (apply
+                 (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+                 0))
+            0)
+          (let
+            (*match*/2097 =
+               (apply
+                 (field_imm 1
+                   (field_imm 0
+                     (global Ppx_bench_lib__Benchmark_accumulator!)))
+                 0))
+            0)
+          (let
+            (*match*/2099 =
+               (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+                 #"Gbnf_parser__HashCons"))
+            0)
+          0)))))
+(seq
+  (let
+    (*match*/2080 =
+       (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__HashCons"))
+    0)
+  (let
+    (*match*/2082 =
+       (apply
+         (field_imm 0
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/2084 =
+       (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+         "lib/HashCons.ml"))
+    0)
+  (let
+    (*match*/2086 =
+       (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "HashCons.ml"))
+    0)
+  (let (id/1156 = (function x/1158 : int (field_int 0 x/1158)))
+    (setfield_ptr(root-init) 0 (global Gbnf_parser__HashCons!) id/1156))
+  (let (data/1159 = (function x/1161 (field_imm 1 x/1161)))
+    (setfield_ptr(root-init) 1 (global Gbnf_parser__HashCons!) data/1159))
+  (let
+    (equal/1162 =
+       (function x/1164 y/1165 : int
+         (== (field_int 0 x/1164) (field_int 0 y/1165))))
+    (setfield_ptr(root-init) 2 (global Gbnf_parser__HashCons!) equal/1162))
+  (let
+    (compare/1166 =
+       (function x/1167 y/1168 : int
+         (compare_ints (field_int 0 x/1167) (field_int 0 y/1168))))
+    (setfield_ptr(root-init) 3 (global Gbnf_parser__HashCons!) compare/1166))
+  (let
+    (hash/1169 =
+       (function x/1171 : int
+         (apply (field_imm 27 (global Stdlib__Hashtbl!))
+           (field_int 0 x/1171))))
+    (setfield_ptr(root-init) 4 (global Gbnf_parser__HashCons!) hash/1169))
+  (let
+    (Make/1255 =
+       (function M/2088 is_a_functor
+         (let
+           (gensym/1245 =
+              (apply (field_imm 1 (global Gbnf_parser__Gensym!)) 0)
+            make/1253 =
+              (apply (field_imm 0 M/2088)
+                (function data/1254
+                  (makeblock 0 (int,*) (apply gensym/1245 0) data/1254))))
+           (makeblock 0 gensym/1245 make/1253))))
+    (seq
+      (setfield_ptr(root-init) 5 (global Gbnf_parser__HashCons!) Make/1255)
+      (let
+        (ForHashedType/1622 =
+           (function T/2091 is_a_functor
+             (apply (field_imm 5 (global Gbnf_parser__HashCons!))
+               (let
+                 (let/2090 =
+                    (apply
+                      (let
+                        (let/2089 =
+                           (field_imm 3 (global Gbnf_parser__Memoize!)))
+                        (field_imm 3 (global Gbnf_parser__Memoize!)))
+                      T/2091))
+                 (makeblock 0 (field_mut 2 let/2090) (field_mut 1 let/2090)
+                   (field_mut 3 let/2090) (field_mut 4 let/2090)
+                   (field_mut 5 let/2090) (field_mut 8 let/2090))))))
+        (seq
+          (setfield_ptr(root-init) 6 (global Gbnf_parser__HashCons!)
+            ForHashedType/1622)
+          (let
+            (*match*/2093 =
+               (apply (field_imm 5 (global Ppx_inline_test_lib!))
+                 "gbnf_parser"))
+            0)
+          (let
+            (*match*/2095 =
+               (apply
+                 (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+                 0))
+            0)
+          (let
+            (*match*/2097 =
+               (apply
+                 (field_imm 1
+                   (field_imm 0
+                     (global Ppx_bench_lib__Benchmark_accumulator!)))
+                 0))
+            0)
+          (let
+            (*match*/2099 =
+               (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+                 #"Gbnf_parser__HashCons"))
+            0)
+          0)))))

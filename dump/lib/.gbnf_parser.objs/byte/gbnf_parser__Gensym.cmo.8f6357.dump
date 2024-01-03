@@ -1,0 +1,1209 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+          ]
+    ]
+  structure_item (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/Gensym.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("lib/Gensym.ml",(lib/Gensym.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/Gensym.ml[13,893+0]..[13,893+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/Gensym.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("Gensym.ml",(lib/Gensym.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Gensym.ml[13,893+0]..[14,907+13])
+    Pstr_type Rec
+    [
+      type_declaration "gensym" (lib/Gensym.ml[13,893+5]..[13,893+11]) (lib/Gensym.ml[13,893+0]..[14,907+13])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/Gensym.ml[14,907+2]..[14,907+13])
+              Ptyp_arrow
+              Nolabel
+              core_type (lib/Gensym.ml[14,907+2]..[14,907+6])
+                Ptyp_constr "unit" (lib/Gensym.ml[14,907+2]..[14,907+6])
+                []
+              core_type (lib/Gensym.ml[14,907+10]..[14,907+13])
+                Ptyp_constr "int" (lib/Gensym.ml[14,907+10]..[14,907+13])
+                []
+    ]
+  structure_item (lib/Gensym.ml[16,922+0]..[19,979+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[16,922+4]..[16,922+19])
+          Ppat_var "postincrementor" (lib/Gensym.ml[16,922+4]..[16,922+19])
+        expression (lib/Gensym.ml[16,922+20]..[19,979+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/Gensym.ml[16,922+20]..[16,922+21])
+            Ppat_var "c" (lib/Gensym.ml[16,922+20]..[16,922+21])
+          expression (lib/Gensym.ml[16,922+22]..[19,979+3]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/Gensym.ml[16,922+22]..[16,922+24])
+              Ppat_construct "()" (lib/Gensym.ml[16,922+22]..[16,922+24])
+              None
+            expression (lib/Gensym.ml[17,949+2]..[19,979+3])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (lib/Gensym.ml[17,949+6]..[17,949+7])
+                    Ppat_var "y" (lib/Gensym.ml[17,949+6]..[17,949+7])
+                  expression (lib/Gensym.ml[17,949+10]..[17,949+12])
+                    Pexp_apply
+                    expression (lib/Gensym.ml[17,949+10]..[17,949+11])
+                      Pexp_ident "!" (lib/Gensym.ml[17,949+10]..[17,949+11])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/Gensym.ml[17,949+11]..[17,949+12])
+                          Pexp_ident "c" (lib/Gensym.ml[17,949+11]..[17,949+12])
+                    ]
+              ]
+              expression (lib/Gensym.ml[18,965+2]..[19,979+3])
+                Pexp_sequence
+                expression (lib/Gensym.ml[18,965+2]..[18,965+12])
+                  Pexp_apply
+                  expression (lib/Gensym.ml[18,965+4]..[18,965+6])
+                    Pexp_ident ":=" (lib/Gensym.ml[18,965+4]..[18,965+6])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/Gensym.ml[18,965+2]..[18,965+3])
+                        Pexp_ident "c" (lib/Gensym.ml[18,965+2]..[18,965+3])
+                    <arg>
+                    Nolabel
+                      expression (lib/Gensym.ml[18,965+7]..[18,965+12])
+                        Pexp_apply
+                        expression (lib/Gensym.ml[18,965+9]..[18,965+10])
+                          Pexp_ident "+" (lib/Gensym.ml[18,965+9]..[18,965+10])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/Gensym.ml[18,965+7]..[18,965+8])
+                              Pexp_ident "y" (lib/Gensym.ml[18,965+7]..[18,965+8])
+                          <arg>
+                          Nolabel
+                            expression (lib/Gensym.ml[18,965+11]..[18,965+12])
+                              Pexp_constant PConst_int (1,None)
+                        ]
+                  ]
+                expression (lib/Gensym.ml[19,979+2]..[19,979+3])
+                  Pexp_ident "y" (lib/Gensym.ml[19,979+2]..[19,979+3])
+    ]
+  structure_item (lib/Gensym.ml[21,984+0]..[22,998+25])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[21,984+4]..[21,984+8])
+          Ppat_var "make" (lib/Gensym.ml[21,984+4]..[21,984+8])
+        expression (lib/Gensym.ml[21,984+9]..[22,998+25]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/Gensym.ml[21,984+9]..[21,984+11])
+            Ppat_construct "()" (lib/Gensym.ml[21,984+9]..[21,984+11])
+            None
+          expression (lib/Gensym.ml[22,998+2]..[22,998+25])
+            Pexp_apply
+            expression (lib/Gensym.ml[22,998+2]..[22,998+17])
+              Pexp_ident "postincrementor" (lib/Gensym.ml[22,998+2]..[22,998+17])
+            [
+              <arg>
+              Nolabel
+                expression (lib/Gensym.ml[22,998+18]..[22,998+25])
+                  Pexp_apply
+                  expression (lib/Gensym.ml[22,998+19]..[22,998+22])
+                    Pexp_ident "ref" (lib/Gensym.ml[22,998+19]..[22,998+22])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/Gensym.ml[22,998+23]..[22,998+24])
+                        Pexp_constant PConst_int (0,None)
+                  ]
+            ]
+    ]
+  structure_item (lib/Gensym.ml[27,1125+0]..[28,1142+9])
+    Pstr_type Rec
+    [
+      type_declaration "generator" (lib/Gensym.ml[27,1125+5]..[27,1125+14]) (lib/Gensym.ml[27,1125+0]..[28,1142+9])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/Gensym.ml[28,1142+2]..[28,1142+9])
+              Ptyp_constr "ref" (lib/Gensym.ml[28,1142+6]..[28,1142+9])
+              [
+                core_type (lib/Gensym.ml[28,1142+2]..[28,1142+5])
+                  Ptyp_constr "int" (lib/Gensym.ml[28,1142+2]..[28,1142+5])
+                  []
+              ]
+    ]
+  structure_item (lib/Gensym.ml[30,1153+0]..[31,1172+7])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[30,1153+4]..[30,1153+13])
+          Ppat_var "generator" (lib/Gensym.ml[30,1153+4]..[30,1153+13])
+        expression (lib/Gensym.ml[30,1153+14]..[31,1172+7]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/Gensym.ml[30,1153+14]..[30,1153+16])
+            Ppat_construct "()" (lib/Gensym.ml[30,1153+14]..[30,1153+16])
+            None
+          expression (lib/Gensym.ml[31,1172+2]..[31,1172+7])
+            Pexp_apply
+            expression (lib/Gensym.ml[31,1172+2]..[31,1172+5])
+              Pexp_ident "ref" (lib/Gensym.ml[31,1172+2]..[31,1172+5])
+            [
+              <arg>
+              Nolabel
+                expression (lib/Gensym.ml[31,1172+6]..[31,1172+7])
+                  Pexp_constant PConst_int (0,None)
+            ]
+    ]
+  structure_item (lib/Gensym.ml[33,1181+0]..[36,1225+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[33,1181+4]..[33,1181+9])
+          Ppat_var "fresh" (lib/Gensym.ml[33,1181+4]..[33,1181+9])
+        expression (lib/Gensym.ml[33,1181+10]..[36,1225+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/Gensym.ml[33,1181+10]..[33,1181+11])
+            Ppat_var "c" (lib/Gensym.ml[33,1181+10]..[33,1181+11])
+          expression (lib/Gensym.ml[34,1195+2]..[36,1225+3])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (lib/Gensym.ml[34,1195+6]..[34,1195+7])
+                  Ppat_var "y" (lib/Gensym.ml[34,1195+6]..[34,1195+7])
+                expression (lib/Gensym.ml[34,1195+10]..[34,1195+12])
+                  Pexp_apply
+                  expression (lib/Gensym.ml[34,1195+10]..[34,1195+11])
+                    Pexp_ident "!" (lib/Gensym.ml[34,1195+10]..[34,1195+11])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/Gensym.ml[34,1195+11]..[34,1195+12])
+                        Pexp_ident "c" (lib/Gensym.ml[34,1195+11]..[34,1195+12])
+                  ]
+            ]
+            expression (lib/Gensym.ml[35,1211+2]..[36,1225+3])
+              Pexp_sequence
+              expression (lib/Gensym.ml[35,1211+2]..[35,1211+12])
+                Pexp_apply
+                expression (lib/Gensym.ml[35,1211+4]..[35,1211+6])
+                  Pexp_ident ":=" (lib/Gensym.ml[35,1211+4]..[35,1211+6])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/Gensym.ml[35,1211+2]..[35,1211+3])
+                      Pexp_ident "c" (lib/Gensym.ml[35,1211+2]..[35,1211+3])
+                  <arg>
+                  Nolabel
+                    expression (lib/Gensym.ml[35,1211+7]..[35,1211+12])
+                      Pexp_apply
+                      expression (lib/Gensym.ml[35,1211+9]..[35,1211+10])
+                        Pexp_ident "+" (lib/Gensym.ml[35,1211+9]..[35,1211+10])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/Gensym.ml[35,1211+7]..[35,1211+8])
+                            Pexp_ident "y" (lib/Gensym.ml[35,1211+7]..[35,1211+8])
+                        <arg>
+                        Nolabel
+                          expression (lib/Gensym.ml[35,1211+11]..[35,1211+12])
+                            Pexp_constant PConst_int (1,None)
+                      ]
+                ]
+              expression (lib/Gensym.ml[36,1225+2]..[36,1225+3])
+                Pexp_ident "y" (lib/Gensym.ml[36,1225+2]..[36,1225+3])
+    ]
+  structure_item (lib/Gensym.ml[38,1230+0]..[39,1246+4])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[38,1230+4]..[38,1230+11])
+          Ppat_var "current" (lib/Gensym.ml[38,1230+4]..[38,1230+11])
+        expression (lib/Gensym.ml[38,1230+12]..[39,1246+4]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/Gensym.ml[38,1230+12]..[38,1230+13])
+            Ppat_var "c" (lib/Gensym.ml[38,1230+12]..[38,1230+13])
+          expression (lib/Gensym.ml[39,1246+2]..[39,1246+4])
+            Pexp_apply
+            expression (lib/Gensym.ml[39,1246+2]..[39,1246+3])
+              Pexp_ident "!" (lib/Gensym.ml[39,1246+2]..[39,1246+3])
+            [
+              <arg>
+              Nolabel
+                expression (lib/Gensym.ml[39,1246+3]..[39,1246+4])
+                  Pexp_ident "c" (lib/Gensym.ml[39,1246+3]..[39,1246+4])
+            ]
+    ]
+  structure_item (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+          Ppat_construct "()" (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+          None
+        expression (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+          Pexp_apply
+          expression (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+          Ppat_construct "()" (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+          None
+        expression (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+          Pexp_apply
+          expression (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+                Pexp_construct "()" (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+          Ppat_construct "()" (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+          None
+        expression (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+          Pexp_apply
+          expression (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+                Pexp_construct "()" (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+          Ppat_construct "()" (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+          None
+        expression (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+          Pexp_apply
+          expression (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/Gensym.ml[39,1246+4]..[39,1246+4]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set ~absolute_filename:"lib/Gensym.ml"
+let () = Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "Gensym.ml"
+type gensym = unit -> int
+let postincrementor c () = let y = !c in c := (y + 1); y
+let make () = postincrementor (ref 0)
+type generator = int ref
+let generator () = ref 0
+let fresh c = let y = !c in c := (y + 1); y
+let current c = !c
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+                Texp_constant Const_string("lib/Gensym.ml",(lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost
+                Texp_constant Const_string("Gensym.ml",(lib/Gensym.ml[13,893+0]..lib/Gensym.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[14,907+13])
+    Tstr_type Rec
+    [
+      type_declaration gensym/1128 (lib/Gensym.ml[13,893+0]..lib/Gensym.ml[14,907+13])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/Gensym.ml[14,907+2]..lib/Gensym.ml[14,907+13])
+              Ttyp_arrow
+              Nolabel
+              core_type (lib/Gensym.ml[14,907+2]..lib/Gensym.ml[14,907+6])
+                Ttyp_constr "unit/6!"
+                []
+              core_type (lib/Gensym.ml[14,907+10]..lib/Gensym.ml[14,907+13])
+                Ttyp_constr "int/1!"
+                []
+    ]
+  structure_item (lib/Gensym.ml[16,922+0]..lib/Gensym.ml[19,979+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[16,922+4]..lib/Gensym.ml[16,922+19])
+          Tpat_var "postincrementor/1129"
+        expression (lib/Gensym.ml[16,922+20]..lib/Gensym.ml[19,979+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/Gensym.ml[16,922+20]..lib/Gensym.ml[16,922+21])
+                Tpat_var "c/1131"
+              expression (lib/Gensym.ml[16,922+22]..lib/Gensym.ml[19,979+3]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/Gensym.ml[16,922+22]..lib/Gensym.ml[16,922+24])
+                      Tpat_construct "()"
+                      []
+                      None
+                    expression (lib/Gensym.ml[17,949+2]..lib/Gensym.ml[19,979+3])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (lib/Gensym.ml[17,949+6]..lib/Gensym.ml[17,949+7])
+                            Tpat_var "y/1132"
+                          expression (lib/Gensym.ml[17,949+10]..lib/Gensym.ml[17,949+12])
+                            Texp_apply
+                            expression (lib/Gensym.ml[17,949+10]..lib/Gensym.ml[17,949+11])
+                              Texp_ident "Stdlib!.!"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (lib/Gensym.ml[17,949+11]..lib/Gensym.ml[17,949+12])
+                                  Texp_ident "c/1131"
+                            ]
+                      ]
+                      expression (lib/Gensym.ml[18,965+2]..lib/Gensym.ml[19,979+3])
+                        Texp_sequence
+                        expression (lib/Gensym.ml[18,965+2]..lib/Gensym.ml[18,965+12])
+                          Texp_apply
+                          expression (lib/Gensym.ml[18,965+4]..lib/Gensym.ml[18,965+6])
+                            Texp_ident "Stdlib!.:="
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/Gensym.ml[18,965+2]..lib/Gensym.ml[18,965+3])
+                                Texp_ident "c/1131"
+                            <arg>
+                              Nolabel
+                              expression (lib/Gensym.ml[18,965+7]..lib/Gensym.ml[18,965+12])
+                                Texp_apply
+                                expression (lib/Gensym.ml[18,965+9]..lib/Gensym.ml[18,965+10])
+                                  Texp_ident "Stdlib!.+"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/Gensym.ml[18,965+7]..lib/Gensym.ml[18,965+8])
+                                      Texp_ident "y/1132"
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/Gensym.ml[18,965+11]..lib/Gensym.ml[18,965+12])
+                                      Texp_constant Const_int 1
+                                ]
+                          ]
+                        expression (lib/Gensym.ml[19,979+2]..lib/Gensym.ml[19,979+3])
+                          Texp_ident "y/1132"
+                ]
+          ]
+    ]
+  structure_item (lib/Gensym.ml[21,984+0]..lib/Gensym.ml[22,998+25])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[21,984+4]..lib/Gensym.ml[21,984+8])
+          Tpat_var "make/1134"
+        expression (lib/Gensym.ml[21,984+9]..lib/Gensym.ml[22,998+25]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/Gensym.ml[21,984+9]..lib/Gensym.ml[21,984+11])
+                Tpat_construct "()"
+                []
+                None
+              expression (lib/Gensym.ml[22,998+2]..lib/Gensym.ml[22,998+25])
+                Texp_apply
+                expression (lib/Gensym.ml[22,998+2]..lib/Gensym.ml[22,998+17])
+                  Texp_ident "postincrementor/1129"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/Gensym.ml[22,998+18]..lib/Gensym.ml[22,998+25])
+                      Texp_apply
+                      expression (lib/Gensym.ml[22,998+19]..lib/Gensym.ml[22,998+22])
+                        Texp_ident "Stdlib!.ref"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/Gensym.ml[22,998+23]..lib/Gensym.ml[22,998+24])
+                            Texp_constant Const_int 0
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/Gensym.ml[27,1125+0]..lib/Gensym.ml[28,1142+9])
+    Tstr_type Rec
+    [
+      type_declaration generator/1137 (lib/Gensym.ml[27,1125+0]..lib/Gensym.ml[28,1142+9])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/Gensym.ml[28,1142+2]..lib/Gensym.ml[28,1142+9])
+              Ttyp_constr "Stdlib!.ref"
+              [
+                core_type (lib/Gensym.ml[28,1142+2]..lib/Gensym.ml[28,1142+5])
+                  Ttyp_constr "int/1!"
+                  []
+              ]
+    ]
+  structure_item (lib/Gensym.ml[30,1153+0]..lib/Gensym.ml[31,1172+7])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[30,1153+4]..lib/Gensym.ml[30,1153+13])
+          Tpat_var "generator/1138"
+        expression (lib/Gensym.ml[30,1153+14]..lib/Gensym.ml[31,1172+7]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/Gensym.ml[30,1153+14]..lib/Gensym.ml[30,1153+16])
+                Tpat_construct "()"
+                []
+                None
+              expression (lib/Gensym.ml[31,1172+2]..lib/Gensym.ml[31,1172+7])
+                Texp_apply
+                expression (lib/Gensym.ml[31,1172+2]..lib/Gensym.ml[31,1172+5])
+                  Texp_ident "Stdlib!.ref"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/Gensym.ml[31,1172+6]..lib/Gensym.ml[31,1172+7])
+                      Texp_constant Const_int 0
+                ]
+          ]
+    ]
+  structure_item (lib/Gensym.ml[33,1181+0]..lib/Gensym.ml[36,1225+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[33,1181+4]..lib/Gensym.ml[33,1181+9])
+          Tpat_var "fresh/1141"
+        expression (lib/Gensym.ml[33,1181+10]..lib/Gensym.ml[36,1225+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/Gensym.ml[33,1181+10]..lib/Gensym.ml[33,1181+11])
+                Tpat_var "c/1143"
+              expression (lib/Gensym.ml[34,1195+2]..lib/Gensym.ml[36,1225+3])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (lib/Gensym.ml[34,1195+6]..lib/Gensym.ml[34,1195+7])
+                      Tpat_var "y/1144"
+                    expression (lib/Gensym.ml[34,1195+10]..lib/Gensym.ml[34,1195+12])
+                      Texp_apply
+                      expression (lib/Gensym.ml[34,1195+10]..lib/Gensym.ml[34,1195+11])
+                        Texp_ident "Stdlib!.!"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/Gensym.ml[34,1195+11]..lib/Gensym.ml[34,1195+12])
+                            Texp_ident "c/1143"
+                      ]
+                ]
+                expression (lib/Gensym.ml[35,1211+2]..lib/Gensym.ml[36,1225+3])
+                  Texp_sequence
+                  expression (lib/Gensym.ml[35,1211+2]..lib/Gensym.ml[35,1211+12])
+                    Texp_apply
+                    expression (lib/Gensym.ml[35,1211+4]..lib/Gensym.ml[35,1211+6])
+                      Texp_ident "Stdlib!.:="
+                    [
+                      <arg>
+                        Nolabel
+                        expression (lib/Gensym.ml[35,1211+2]..lib/Gensym.ml[35,1211+3])
+                          Texp_ident "c/1143"
+                      <arg>
+                        Nolabel
+                        expression (lib/Gensym.ml[35,1211+7]..lib/Gensym.ml[35,1211+12])
+                          Texp_apply
+                          expression (lib/Gensym.ml[35,1211+9]..lib/Gensym.ml[35,1211+10])
+                            Texp_ident "Stdlib!.+"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/Gensym.ml[35,1211+7]..lib/Gensym.ml[35,1211+8])
+                                Texp_ident "y/1144"
+                            <arg>
+                              Nolabel
+                              expression (lib/Gensym.ml[35,1211+11]..lib/Gensym.ml[35,1211+12])
+                                Texp_constant Const_int 1
+                          ]
+                    ]
+                  expression (lib/Gensym.ml[36,1225+2]..lib/Gensym.ml[36,1225+3])
+                    Texp_ident "y/1144"
+          ]
+    ]
+  structure_item (lib/Gensym.ml[38,1230+0]..lib/Gensym.ml[39,1246+4])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[38,1230+4]..lib/Gensym.ml[38,1230+11])
+          Tpat_var "current/1145"
+        expression (lib/Gensym.ml[38,1230+12]..lib/Gensym.ml[39,1246+4]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/Gensym.ml[38,1230+12]..lib/Gensym.ml[38,1230+13])
+                Tpat_var "c/1147"
+              expression (lib/Gensym.ml[39,1246+2]..lib/Gensym.ml[39,1246+4])
+                Texp_apply
+                expression (lib/Gensym.ml[39,1246+2]..lib/Gensym.ml[39,1246+3])
+                  Texp_ident "Stdlib!.!"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/Gensym.ml[39,1246+3]..lib/Gensym.ml[39,1246+4])
+                      Texp_ident "c/1147"
+                ]
+          ]
+    ]
+  structure_item (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+          Texp_apply
+          expression (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+          Texp_apply
+          expression (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+          Texp_apply
+          expression (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+          Texp_apply
+          expression (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Gensym.ml[39,1246+4]..lib/Gensym.ml[39,1246+4]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__Gensym>
+ "current"[value] -> <Gbnf_parser__Gensym.10>;
+ "fresh"[value] -> <Gbnf_parser__Gensym.7>;
+ "generator"[value] -> <Gbnf_parser__Gensym.6>;
+ "generator"[type] -> <Gbnf_parser__Gensym.5>;
+ "gensym"[type] -> <Gbnf_parser__Gensym.0>;
+ "make"[value] -> <Gbnf_parser__Gensym.4>;
+ "postincrementor"[value] -> <Gbnf_parser__Gensym.1>;
+ }
+
+(setglobal Gbnf_parser__Gensym!
+  (let
+    (*match*/1571 =
+       (after Gbnf_parser__Gensym lib/Gensym.ml(13)<ghost>:893-893
+         (apply (field 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Gensym"))
+     *match*/1569 =
+       (after Gbnf_parser__Gensym lib/Gensym.ml(13)<ghost>:893-893
+         (apply
+           (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1567 =
+       (after Gbnf_parser__Gensym lib/Gensym.ml(13)<ghost>:893-893
+         (apply (field 0 (field 5 (global Expect_test_collector!)))
+           "lib/Gensym.ml"))
+     *match*/1565 =
+       (after Gbnf_parser__Gensym lib/Gensym.ml(13)<ghost>:893-893
+         (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "Gensym.ml"))
+     postincrementor/1129 =
+       (function c/1131 param/1133[int] : int
+         (funct-body Gbnf_parser__Gensym.postincrementor lib/Gensym.ml(16)<ghost>:942-982
+           (before Gbnf_parser__Gensym.postincrementor lib/Gensym.ml(17):951-982
+             (let (y/1132 =[int] (field 0 c/1131))
+               (before Gbnf_parser__Gensym.postincrementor lib/Gensym.ml(18):967-982
+                 (seq (setfield_imm 0 c/1131 (+ y/1132 1))
+                   (before Gbnf_parser__Gensym.postincrementor lib/Gensym.ml(19):981-982
+                     y/1132)))))))
+     make/1134 =
+       (function param/1136[int]
+         (funct-body Gbnf_parser__Gensym.make lib/Gensym.ml(21)<ghost>:993-1023
+           (before Gbnf_parser__Gensym.make lib/Gensym.ml(22):1000-1023
+             (after Gbnf_parser__Gensym.make lib/Gensym.ml(22):1000-1023
+               (apply postincrementor/1129 (makemutable 0 (int) 0))))))
+     generator/1138 =
+       (function param/1140[int]
+         (funct-body Gbnf_parser__Gensym.generator lib/Gensym.ml(30)<ghost>:1167-1179
+           (before Gbnf_parser__Gensym.generator lib/Gensym.ml(31):1174-1179
+             (makemutable 0 (int) 0))))
+     fresh/1141 =
+       (function c/1143 : int
+         (funct-body Gbnf_parser__Gensym.fresh lib/Gensym.ml(33)<ghost>:1191-1228
+           (before Gbnf_parser__Gensym.fresh lib/Gensym.ml(34):1197-1228
+             (let (y/1144 =[int] (field 0 c/1143))
+               (before Gbnf_parser__Gensym.fresh lib/Gensym.ml(35):1213-1228
+                 (seq (setfield_imm 0 c/1143 (+ y/1144 1))
+                   (before Gbnf_parser__Gensym.fresh lib/Gensym.ml(36):1227-1228
+                     y/1144)))))))
+     current/1145 =
+       (function c/1147
+         (funct-body Gbnf_parser__Gensym.current lib/Gensym.ml(38)<ghost>:1242-1250
+           (before Gbnf_parser__Gensym.current lib/Gensym.ml(39):1248-1250
+             (field 0 c/1147))))
+     *match*/1563 =
+       (after Gbnf_parser__Gensym lib/Gensym.ml(39)<ghost>:1250-1250
+         (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/1561 =
+       (after Gbnf_parser__Gensym lib/Gensym.ml(39)<ghost>:1250-1250
+         (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+     *match*/1559 =
+       (after Gbnf_parser__Gensym lib/Gensym.ml(39)<ghost>:1250-1250
+         (apply
+           (field 1 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/1557 =
+       (after Gbnf_parser__Gensym lib/Gensym.ml(39)<ghost>:1250-1250
+         (apply (field 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Gensym")))
+    (pseudo <unknown location>
+      (makeblock 0 postincrementor/1129 make/1134 generator/1138 fresh/1141
+        current/1145))))
+(setglobal Gbnf_parser__Gensym!
+  (let
+    (*match*/1571 =
+       (after Gbnf_parser__Gensym lib/Gensym.ml(13)<ghost>:893-893
+         (apply (field 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Gensym"))
+     *match*/1569 =
+       (after Gbnf_parser__Gensym lib/Gensym.ml(13)<ghost>:893-893
+         (apply
+           (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1567 =
+       (after Gbnf_parser__Gensym lib/Gensym.ml(13)<ghost>:893-893
+         (apply (field 0 (field 5 (global Expect_test_collector!)))
+           "lib/Gensym.ml"))
+     *match*/1565 =
+       (after Gbnf_parser__Gensym lib/Gensym.ml(13)<ghost>:893-893
+         (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "Gensym.ml"))
+     postincrementor/1129 =
+       (function c/1131 param/1133[int] : int
+         (funct-body Gbnf_parser__Gensym.postincrementor lib/Gensym.ml(16)<ghost>:942-982
+           (before Gbnf_parser__Gensym.postincrementor lib/Gensym.ml(17):951-982
+             (let (y/1132 =[int] (field 0 c/1131))
+               (before Gbnf_parser__Gensym.postincrementor lib/Gensym.ml(18):967-982
+                 (seq (setfield_imm 0 c/1131 (+ y/1132 1))
+                   (before Gbnf_parser__Gensym.postincrementor lib/Gensym.ml(19):981-982
+                     y/1132)))))))
+     make/1134 =
+       (function param/1136[int]
+         (funct-body Gbnf_parser__Gensym.make lib/Gensym.ml(21)<ghost>:993-1023
+           (before Gbnf_parser__Gensym.make lib/Gensym.ml(22):1000-1023
+             (after Gbnf_parser__Gensym.make lib/Gensym.ml(22):1000-1023
+               (apply postincrementor/1129 (makemutable 0 (int) 0))))))
+     generator/1138 =
+       (function param/1140[int]
+         (funct-body Gbnf_parser__Gensym.generator lib/Gensym.ml(30)<ghost>:1167-1179
+           (before Gbnf_parser__Gensym.generator lib/Gensym.ml(31):1174-1179
+             (makemutable 0 (int) 0))))
+     fresh/1141 =
+       (function c/1143 : int
+         (funct-body Gbnf_parser__Gensym.fresh lib/Gensym.ml(33)<ghost>:1191-1228
+           (before Gbnf_parser__Gensym.fresh lib/Gensym.ml(34):1197-1228
+             (let (y/1144 =[int] (field 0 c/1143))
+               (before Gbnf_parser__Gensym.fresh lib/Gensym.ml(35):1213-1228
+                 (seq (setfield_imm 0 c/1143 (+ y/1144 1))
+                   (before Gbnf_parser__Gensym.fresh lib/Gensym.ml(36):1227-1228
+                     y/1144)))))))
+     current/1145 =
+       (function c/1147
+         (funct-body Gbnf_parser__Gensym.current lib/Gensym.ml(38)<ghost>:1242-1250
+           (before Gbnf_parser__Gensym.current lib/Gensym.ml(39):1248-1250
+             (field 0 c/1147))))
+     *match*/1563 =
+       (after Gbnf_parser__Gensym lib/Gensym.ml(39)<ghost>:1250-1250
+         (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/1561 =
+       (after Gbnf_parser__Gensym lib/Gensym.ml(39)<ghost>:1250-1250
+         (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+     *match*/1559 =
+       (after Gbnf_parser__Gensym lib/Gensym.ml(39)<ghost>:1250-1250
+         (apply
+           (field 1 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/1557 =
+       (after Gbnf_parser__Gensym lib/Gensym.ml(39)<ghost>:1250-1250
+         (apply (field 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Gensym")))
+    (pseudo <unknown location>
+      (makeblock 0 postincrementor/1129 make/1134 generator/1138 fresh/1141
+        current/1145))))

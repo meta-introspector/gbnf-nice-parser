@@ -1,0 +1,2247 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+          Ppat_construct "()" (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+          None
+        expression (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+          Pexp_apply
+          expression (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+          Ppat_construct "()" (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+          None
+        expression (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+          Pexp_apply
+          expression (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+          Ppat_construct "()" (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+          None
+        expression (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+          Pexp_apply
+          expression (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+                Pexp_constant PConst_string("lib/CoreDependencyGraph.ml",(lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+          Ppat_construct "()" (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+          None
+        expression (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+          Pexp_apply
+          expression (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost
+                Pexp_constant PConst_string("CoreDependencyGraph.ml",(lib/CoreDependencyGraph.ml[28,1734+0]..[28,1734+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[28,1734+0]..[61,2604+1])
+    Pstr_type Rec
+    [
+      type_declaration "node" (lib/CoreDependencyGraph.ml[28,1734+11]..[28,1734+15]) (lib/CoreDependencyGraph.ml[28,1734+0]..[44,2104+1])
+        ptype_params =
+          [
+            core_type (lib/CoreDependencyGraph.ml[28,1734+5]..[28,1734+10])
+              Ptyp_var data
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (lib/CoreDependencyGraph.ml[32,1814+2]..[32,1814+14])
+                Immutable
+                "data" (lib/CoreDependencyGraph.ml[32,1814+2]..[32,1814+6])                core_type (lib/CoreDependencyGraph.ml[32,1814+8]..[32,1814+13])
+                  Ptyp_var data
+              (lib/CoreDependencyGraph.ml[36,1880+2]..[36,1880+36])
+                Mutable
+                "outgoing" (lib/CoreDependencyGraph.ml[36,1880+10]..[36,1880+18])                core_type (lib/CoreDependencyGraph.ml[36,1880+20]..[36,1880+35])
+                  Ptyp_constr "list" (lib/CoreDependencyGraph.ml[36,1880+31]..[36,1880+35])
+                  [
+                    core_type (lib/CoreDependencyGraph.ml[36,1880+20]..[36,1880+30])
+                      Ptyp_constr "edge" (lib/CoreDependencyGraph.ml[36,1880+26]..[36,1880+30])
+                      [
+                        core_type (lib/CoreDependencyGraph.ml[36,1880+20]..[36,1880+25])
+                          Ptyp_var data
+                      ]
+                  ]
+              (lib/CoreDependencyGraph.ml[37,1917+2]..[37,1917+36])
+                Mutable
+                "incoming" (lib/CoreDependencyGraph.ml[37,1917+10]..[37,1917+18])                core_type (lib/CoreDependencyGraph.ml[37,1917+20]..[37,1917+35])
+                  Ptyp_constr "list" (lib/CoreDependencyGraph.ml[37,1917+31]..[37,1917+35])
+                  [
+                    core_type (lib/CoreDependencyGraph.ml[37,1917+20]..[37,1917+30])
+                      Ptyp_constr "edge" (lib/CoreDependencyGraph.ml[37,1917+26]..[37,1917+30])
+                      [
+                        core_type (lib/CoreDependencyGraph.ml[37,1917+20]..[37,1917+25])
+                          Ptyp_var data
+                      ]
+                  ]
+              (lib/CoreDependencyGraph.ml[42,2079+2]..[42,2079+23])
+                Mutable
+                "marked" (lib/CoreDependencyGraph.ml[42,2079+10]..[42,2079+16])                core_type (lib/CoreDependencyGraph.ml[42,2079+18]..[42,2079+22])
+                  Ptyp_constr "bool" (lib/CoreDependencyGraph.ml[42,2079+18]..[42,2079+22])
+                  []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration "edge" (lib/CoreDependencyGraph.ml[46,2107+10]..[46,2107+14]) (lib/CoreDependencyGraph.ml[46,2107+0]..[61,2604+1])
+        ptype_params =
+          [
+            core_type (lib/CoreDependencyGraph.ml[46,2107+4]..[46,2107+9])
+              Ptyp_var data
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (lib/CoreDependencyGraph.ml[53,2416+2]..[53,2416+20])
+                Immutable
+                "node1" (lib/CoreDependencyGraph.ml[53,2416+2]..[53,2416+7])                core_type (lib/CoreDependencyGraph.ml[53,2416+9]..[53,2416+19])
+                  Ptyp_constr "node" (lib/CoreDependencyGraph.ml[53,2416+15]..[53,2416+19])
+                  [
+                    core_type (lib/CoreDependencyGraph.ml[53,2416+9]..[53,2416+14])
+                      Ptyp_var data
+                  ]
+              (lib/CoreDependencyGraph.ml[54,2437+2]..[54,2437+20])
+                Immutable
+                "node2" (lib/CoreDependencyGraph.ml[54,2437+2]..[54,2437+7])                core_type (lib/CoreDependencyGraph.ml[54,2437+9]..[54,2437+19])
+                  Ptyp_constr "node" (lib/CoreDependencyGraph.ml[54,2437+15]..[54,2437+19])
+                  [
+                    core_type (lib/CoreDependencyGraph.ml[54,2437+9]..[54,2437+14])
+                      Ptyp_var data
+                  ]
+              (lib/CoreDependencyGraph.ml[59,2576+2]..[59,2576+26])
+                Mutable
+                "destroyed" (lib/CoreDependencyGraph.ml[59,2576+10]..[59,2576+19])                core_type (lib/CoreDependencyGraph.ml[59,2576+21]..[59,2576+25])
+                  Ptyp_constr "bool" (lib/CoreDependencyGraph.ml[59,2576+21]..[59,2576+25])
+                  []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[67,2711+0]..[72,2798+1])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[67,2711+4]..[67,2711+10])
+          Ppat_var "create" (lib/CoreDependencyGraph.ml[67,2711+4]..[67,2711+10])
+        expression (lib/CoreDependencyGraph.ml[67,2711+11]..[72,2798+1]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/CoreDependencyGraph.ml[67,2711+11]..[67,2711+15])
+            Ppat_var "data" (lib/CoreDependencyGraph.ml[67,2711+11]..[67,2711+15])
+          expression (lib/CoreDependencyGraph.ml[67,2711+18]..[72,2798+1])
+            Pexp_record
+            [
+              "data" (lib/CoreDependencyGraph.ml[68,2731+2]..[68,2731+6])
+                expression (lib/CoreDependencyGraph.ml[68,2731+9]..[68,2731+13])
+                  Pexp_ident "data" (lib/CoreDependencyGraph.ml[68,2731+9]..[68,2731+13])
+              "outgoing" (lib/CoreDependencyGraph.ml[69,2746+2]..[69,2746+10])
+                expression (lib/CoreDependencyGraph.ml[69,2746+13]..[69,2746+15])
+                  Pexp_construct "[]" (lib/CoreDependencyGraph.ml[69,2746+13]..[69,2746+15])
+                  None
+              "incoming" (lib/CoreDependencyGraph.ml[70,2763+2]..[70,2763+10])
+                expression (lib/CoreDependencyGraph.ml[70,2763+13]..[70,2763+15])
+                  Pexp_construct "[]" (lib/CoreDependencyGraph.ml[70,2763+13]..[70,2763+15])
+                  None
+              "marked" (lib/CoreDependencyGraph.ml[71,2780+2]..[71,2780+8])
+                expression (lib/CoreDependencyGraph.ml[71,2780+11]..[71,2780+16])
+                  Pexp_construct "false" (lib/CoreDependencyGraph.ml[71,2780+11]..[71,2780+16])
+                  None
+            ]
+            None
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[76,2821+0]..[77,2837+11])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[76,2821+4]..[76,2821+8])
+          Ppat_var "data" (lib/CoreDependencyGraph.ml[76,2821+4]..[76,2821+8])
+        expression (lib/CoreDependencyGraph.ml[76,2821+9]..[77,2837+11]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/CoreDependencyGraph.ml[76,2821+9]..[76,2821+13])
+            Ppat_var "node" (lib/CoreDependencyGraph.ml[76,2821+9]..[76,2821+13])
+          expression (lib/CoreDependencyGraph.ml[77,2837+2]..[77,2837+11])
+            Pexp_field
+            expression (lib/CoreDependencyGraph.ml[77,2837+2]..[77,2837+6])
+              Pexp_ident "node" (lib/CoreDependencyGraph.ml[77,2837+2]..[77,2837+6])
+            "data" (lib/CoreDependencyGraph.ml[77,2837+7]..[77,2837+11])
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[82,2960+0]..[88,3085+5])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[82,2960+4]..[82,2960+10])
+          Ppat_var "follow" (lib/CoreDependencyGraph.ml[82,2960+4]..[82,2960+10])
+        expression (lib/CoreDependencyGraph.ml[82,2960+11]..[88,3085+5]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/CoreDependencyGraph.ml[82,2960+11]..[82,2960+14])
+            Ppat_var "src" (lib/CoreDependencyGraph.ml[82,2960+11]..[82,2960+14])
+          expression (lib/CoreDependencyGraph.ml[82,2960+15]..[88,3085+5]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/CoreDependencyGraph.ml[82,2960+15]..[82,2960+19])
+              Ppat_var "edge" (lib/CoreDependencyGraph.ml[82,2960+15]..[82,2960+19])
+            expression (lib/CoreDependencyGraph.ml[83,2982+2]..[88,3085+5])
+              Pexp_ifthenelse
+              expression (lib/CoreDependencyGraph.ml[83,2982+5]..[83,2982+22])
+                Pexp_apply
+                expression (lib/CoreDependencyGraph.ml[83,2982+16]..[83,2982+18])
+                  Pexp_ident "==" (lib/CoreDependencyGraph.ml[83,2982+16]..[83,2982+18])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/CoreDependencyGraph.ml[83,2982+5]..[83,2982+15])
+                      Pexp_field
+                      expression (lib/CoreDependencyGraph.ml[83,2982+5]..[83,2982+9])
+                        Pexp_ident "edge" (lib/CoreDependencyGraph.ml[83,2982+5]..[83,2982+9])
+                      "node1" (lib/CoreDependencyGraph.ml[83,2982+10]..[83,2982+15])
+                  <arg>
+                  Nolabel
+                    expression (lib/CoreDependencyGraph.ml[83,2982+19]..[83,2982+22])
+                      Pexp_ident "src" (lib/CoreDependencyGraph.ml[83,2982+19]..[83,2982+22])
+                ]
+              expression (lib/CoreDependencyGraph.ml[84,3010+4]..[84,3010+14])
+                Pexp_field
+                expression (lib/CoreDependencyGraph.ml[84,3010+4]..[84,3010+8])
+                  Pexp_ident "edge" (lib/CoreDependencyGraph.ml[84,3010+4]..[84,3010+8])
+                "node2" (lib/CoreDependencyGraph.ml[84,3010+9]..[84,3010+14])
+              Some
+                expression (lib/CoreDependencyGraph.ml[85,3025+7]..[88,3085+5])
+                  Pexp_sequence
+                  expression (lib/CoreDependencyGraph.ml[86,3038+4]..[86,3038+30])
+                    Pexp_assert
+                    expression (lib/CoreDependencyGraph.ml[86,3038+11]..[86,3038+30])
+                      Pexp_apply
+                      expression (lib/CoreDependencyGraph.ml[86,3038+23]..[86,3038+25])
+                        Pexp_ident "==" (lib/CoreDependencyGraph.ml[86,3038+23]..[86,3038+25])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/CoreDependencyGraph.ml[86,3038+12]..[86,3038+22])
+                            Pexp_field
+                            expression (lib/CoreDependencyGraph.ml[86,3038+12]..[86,3038+16])
+                              Pexp_ident "edge" (lib/CoreDependencyGraph.ml[86,3038+12]..[86,3038+16])
+                            "node2" (lib/CoreDependencyGraph.ml[86,3038+17]..[86,3038+22])
+                        <arg>
+                        Nolabel
+                          expression (lib/CoreDependencyGraph.ml[86,3038+26]..[86,3038+29])
+                            Pexp_ident "src" (lib/CoreDependencyGraph.ml[86,3038+26]..[86,3038+29])
+                      ]
+                  expression (lib/CoreDependencyGraph.ml[87,3070+4]..[87,3070+14])
+                    Pexp_field
+                    expression (lib/CoreDependencyGraph.ml[87,3070+4]..[87,3070+8])
+                      Pexp_ident "edge" (lib/CoreDependencyGraph.ml[87,3070+4]..[87,3070+8])
+                    "node1" (lib/CoreDependencyGraph.ml[87,3070+9]..[87,3070+14])
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[95,3332+0]..[100,3511+37])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[95,3332+4]..[95,3332+16])
+          Ppat_var "predecessors" (lib/CoreDependencyGraph.ml[95,3332+4]..[95,3332+16])
+        expression (lib/CoreDependencyGraph.ml[95,3332+17]..[100,3511+37]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/CoreDependencyGraph.ml[95,3332+17]..[95,3332+36])
+            Ppat_constraint
+            pattern (lib/CoreDependencyGraph.ml[95,3332+18]..[95,3332+22])
+              Ppat_var "node" (lib/CoreDependencyGraph.ml[95,3332+18]..[95,3332+22])
+            core_type (lib/CoreDependencyGraph.ml[95,3332+25]..[95,3332+35])
+              Ptyp_constr "node" (lib/CoreDependencyGraph.ml[95,3332+31]..[95,3332+35])
+              [
+                core_type (lib/CoreDependencyGraph.ml[95,3332+25]..[95,3332+30])
+                  Ptyp_var data
+              ]
+          expression (lib/CoreDependencyGraph.ml[95,3332+37]..[100,3511+37])
+            Pexp_constraint
+            expression (lib/CoreDependencyGraph.ml[96,3389+2]..[100,3511+37])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (lib/CoreDependencyGraph.ml[96,3389+6]..[96,3389+18])
+                    Ppat_var "predecessors" (lib/CoreDependencyGraph.ml[96,3389+6]..[96,3389+18])
+                  expression (lib/CoreDependencyGraph.ml[97,3410+4]..[97,3410+62])
+                    Pexp_apply
+                    expression (lib/CoreDependencyGraph.ml[97,3410+4]..[97,3410+15])
+                      Pexp_ident "List.filter" (lib/CoreDependencyGraph.ml[97,3410+4]..[97,3410+15])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/CoreDependencyGraph.ml[97,3410+16]..[97,3410+48])
+                          Pexp_fun
+                          Nolabel
+                          None
+                          pattern (lib/CoreDependencyGraph.ml[97,3410+21]..[97,3410+25])
+                            Ppat_var "edge" (lib/CoreDependencyGraph.ml[97,3410+21]..[97,3410+25])
+                          expression (lib/CoreDependencyGraph.ml[97,3410+29]..[97,3410+47])
+                            Pexp_apply
+                            expression (lib/CoreDependencyGraph.ml[97,3410+29]..[97,3410+32])
+                              Pexp_ident "not" (lib/CoreDependencyGraph.ml[97,3410+29]..[97,3410+32])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (lib/CoreDependencyGraph.ml[97,3410+33]..[97,3410+47])
+                                  Pexp_field
+                                  expression (lib/CoreDependencyGraph.ml[97,3410+33]..[97,3410+37])
+                                    Pexp_ident "edge" (lib/CoreDependencyGraph.ml[97,3410+33]..[97,3410+37])
+                                  "destroyed" (lib/CoreDependencyGraph.ml[97,3410+38]..[97,3410+47])
+                            ]
+                      <arg>
+                      Nolabel
+                        expression (lib/CoreDependencyGraph.ml[97,3410+49]..[97,3410+62])
+                          Pexp_field
+                          expression (lib/CoreDependencyGraph.ml[97,3410+49]..[97,3410+53])
+                            Pexp_ident "node" (lib/CoreDependencyGraph.ml[97,3410+49]..[97,3410+53])
+                          "incoming" (lib/CoreDependencyGraph.ml[97,3410+54]..[97,3410+62])
+                    ]
+              ]
+              expression (lib/CoreDependencyGraph.ml[99,3478+2]..[100,3511+37])
+                Pexp_sequence
+                expression (lib/CoreDependencyGraph.ml[99,3478+2]..[99,3478+31])
+                  Pexp_setfield
+                  expression (lib/CoreDependencyGraph.ml[99,3478+2]..[99,3478+6])
+                    Pexp_ident "node" (lib/CoreDependencyGraph.ml[99,3478+2]..[99,3478+6])
+                  "incoming" (lib/CoreDependencyGraph.ml[99,3478+7]..[99,3478+15])
+                  expression (lib/CoreDependencyGraph.ml[99,3478+19]..[99,3478+31])
+                    Pexp_ident "predecessors" (lib/CoreDependencyGraph.ml[99,3478+19]..[99,3478+31])
+                expression (lib/CoreDependencyGraph.ml[100,3511+2]..[100,3511+37])
+                  Pexp_apply
+                  expression (lib/CoreDependencyGraph.ml[100,3511+2]..[100,3511+10])
+                    Pexp_ident "List.map" (lib/CoreDependencyGraph.ml[100,3511+2]..[100,3511+10])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/CoreDependencyGraph.ml[100,3511+11]..[100,3511+24])
+                        Pexp_apply
+                        expression (lib/CoreDependencyGraph.ml[100,3511+12]..[100,3511+18])
+                          Pexp_ident "follow" (lib/CoreDependencyGraph.ml[100,3511+12]..[100,3511+18])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/CoreDependencyGraph.ml[100,3511+19]..[100,3511+23])
+                              Pexp_ident "node" (lib/CoreDependencyGraph.ml[100,3511+19]..[100,3511+23])
+                        ]
+                    <arg>
+                    Nolabel
+                      expression (lib/CoreDependencyGraph.ml[100,3511+25]..[100,3511+37])
+                        Pexp_ident "predecessors" (lib/CoreDependencyGraph.ml[100,3511+25]..[100,3511+37])
+                  ]
+            core_type (lib/CoreDependencyGraph.ml[95,3332+39]..[95,3332+54])
+              Ptyp_constr "list" (lib/CoreDependencyGraph.ml[95,3332+50]..[95,3332+54])
+              [
+                core_type (lib/CoreDependencyGraph.ml[95,3332+39]..[95,3332+49])
+                  Ptyp_constr "node" (lib/CoreDependencyGraph.ml[95,3332+45]..[95,3332+49])
+                  [
+                    core_type (lib/CoreDependencyGraph.ml[95,3332+39]..[95,3332+44])
+                      Ptyp_var data
+                  ]
+              ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[105,3674+0]..[112,3842+38])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[105,3674+4]..[105,3674+8])
+          Ppat_var "link" (lib/CoreDependencyGraph.ml[105,3674+4]..[105,3674+8])
+        expression (lib/CoreDependencyGraph.ml[105,3674+9]..[112,3842+38]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/CoreDependencyGraph.ml[105,3674+9]..[105,3674+27])
+            Ppat_constraint
+            pattern (lib/CoreDependencyGraph.ml[105,3674+10]..[105,3674+13])
+              Ppat_var "src" (lib/CoreDependencyGraph.ml[105,3674+10]..[105,3674+13])
+            core_type (lib/CoreDependencyGraph.ml[105,3674+16]..[105,3674+26])
+              Ptyp_constr "node" (lib/CoreDependencyGraph.ml[105,3674+22]..[105,3674+26])
+              [
+                core_type (lib/CoreDependencyGraph.ml[105,3674+16]..[105,3674+21])
+                  Ptyp_var data
+              ]
+          expression (lib/CoreDependencyGraph.ml[105,3674+28]..[112,3842+38]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/CoreDependencyGraph.ml[105,3674+28]..[105,3674+46])
+              Ppat_constraint
+              pattern (lib/CoreDependencyGraph.ml[105,3674+29]..[105,3674+32])
+                Ppat_var "dst" (lib/CoreDependencyGraph.ml[105,3674+29]..[105,3674+32])
+              core_type (lib/CoreDependencyGraph.ml[105,3674+35]..[105,3674+45])
+                Ptyp_constr "node" (lib/CoreDependencyGraph.ml[105,3674+41]..[105,3674+45])
+                [
+                  core_type (lib/CoreDependencyGraph.ml[105,3674+35]..[105,3674+40])
+                    Ptyp_var data
+                ]
+            expression (lib/CoreDependencyGraph.ml[106,3723+2]..[112,3842+38])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (lib/CoreDependencyGraph.ml[106,3723+6]..[106,3723+10])
+                    Ppat_var "edge" (lib/CoreDependencyGraph.ml[106,3723+6]..[106,3723+10])
+                  expression (lib/CoreDependencyGraph.ml[106,3723+13]..[110,3795+3])
+                    Pexp_record
+                    [
+                      "node1" (lib/CoreDependencyGraph.ml[107,3738+4]..[107,3738+9])
+                        expression (lib/CoreDependencyGraph.ml[107,3738+12]..[107,3738+15])
+                          Pexp_ident "src" (lib/CoreDependencyGraph.ml[107,3738+12]..[107,3738+15])
+                      "node2" (lib/CoreDependencyGraph.ml[108,3755+4]..[108,3755+9])
+                        expression (lib/CoreDependencyGraph.ml[108,3755+12]..[108,3755+15])
+                          Pexp_ident "dst" (lib/CoreDependencyGraph.ml[108,3755+12]..[108,3755+15])
+                      "destroyed" (lib/CoreDependencyGraph.ml[109,3772+4]..[109,3772+13])
+                        expression (lib/CoreDependencyGraph.ml[109,3772+16]..[109,3772+21])
+                          Pexp_construct "false" (lib/CoreDependencyGraph.ml[109,3772+16]..[109,3772+21])
+                          None
+                    ]
+                    None
+              ]
+              expression (lib/CoreDependencyGraph.ml[111,3802+2]..[112,3842+38])
+                Pexp_sequence
+                expression (lib/CoreDependencyGraph.ml[111,3802+2]..[111,3802+38])
+                  Pexp_setfield
+                  expression (lib/CoreDependencyGraph.ml[111,3802+2]..[111,3802+5])
+                    Pexp_ident "src" (lib/CoreDependencyGraph.ml[111,3802+2]..[111,3802+5])
+                  "outgoing" (lib/CoreDependencyGraph.ml[111,3802+6]..[111,3802+14])
+                  expression (lib/CoreDependencyGraph.ml[111,3802+18]..[111,3802+38])
+                    Pexp_construct "::" (lib/CoreDependencyGraph.ml[111,3802+23]..[111,3802+25])
+                    Some
+                      expression (lib/CoreDependencyGraph.ml[111,3802+18]..[111,3802+38]) ghost
+                        Pexp_tuple
+                        [
+                          expression (lib/CoreDependencyGraph.ml[111,3802+18]..[111,3802+22])
+                            Pexp_ident "edge" (lib/CoreDependencyGraph.ml[111,3802+18]..[111,3802+22])
+                          expression (lib/CoreDependencyGraph.ml[111,3802+26]..[111,3802+38])
+                            Pexp_field
+                            expression (lib/CoreDependencyGraph.ml[111,3802+26]..[111,3802+29])
+                              Pexp_ident "src" (lib/CoreDependencyGraph.ml[111,3802+26]..[111,3802+29])
+                            "outgoing" (lib/CoreDependencyGraph.ml[111,3802+30]..[111,3802+38])
+                        ]
+                expression (lib/CoreDependencyGraph.ml[112,3842+2]..[112,3842+38])
+                  Pexp_setfield
+                  expression (lib/CoreDependencyGraph.ml[112,3842+2]..[112,3842+5])
+                    Pexp_ident "dst" (lib/CoreDependencyGraph.ml[112,3842+2]..[112,3842+5])
+                  "incoming" (lib/CoreDependencyGraph.ml[112,3842+6]..[112,3842+14])
+                  expression (lib/CoreDependencyGraph.ml[112,3842+18]..[112,3842+38])
+                    Pexp_construct "::" (lib/CoreDependencyGraph.ml[112,3842+23]..[112,3842+25])
+                    Some
+                      expression (lib/CoreDependencyGraph.ml[112,3842+18]..[112,3842+38]) ghost
+                        Pexp_tuple
+                        [
+                          expression (lib/CoreDependencyGraph.ml[112,3842+18]..[112,3842+22])
+                            Pexp_ident "edge" (lib/CoreDependencyGraph.ml[112,3842+18]..[112,3842+22])
+                          expression (lib/CoreDependencyGraph.ml[112,3842+26]..[112,3842+38])
+                            Pexp_field
+                            expression (lib/CoreDependencyGraph.ml[112,3842+26]..[112,3842+29])
+                              Pexp_ident "dst" (lib/CoreDependencyGraph.ml[112,3842+26]..[112,3842+29])
+                            "incoming" (lib/CoreDependencyGraph.ml[112,3842+30]..[112,3842+38])
+                        ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[114,3882+0]..[129,4265+11])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[114,3882+4]..[114,3882+18])
+          Ppat_var "set_successors" (lib/CoreDependencyGraph.ml[114,3882+4]..[114,3882+18])
+        expression (lib/CoreDependencyGraph.ml[114,3882+19]..[129,4265+11]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/CoreDependencyGraph.ml[114,3882+19]..[114,3882+37])
+            Ppat_constraint
+            pattern (lib/CoreDependencyGraph.ml[114,3882+20]..[114,3882+23])
+              Ppat_var "src" (lib/CoreDependencyGraph.ml[114,3882+20]..[114,3882+23])
+            core_type (lib/CoreDependencyGraph.ml[114,3882+26]..[114,3882+36])
+              Ptyp_constr "node" (lib/CoreDependencyGraph.ml[114,3882+32]..[114,3882+36])
+              [
+                core_type (lib/CoreDependencyGraph.ml[114,3882+26]..[114,3882+31])
+                  Ptyp_var data
+              ]
+          expression (lib/CoreDependencyGraph.ml[114,3882+38]..[129,4265+11]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/CoreDependencyGraph.ml[114,3882+38]..[114,3882+62])
+              Ppat_constraint
+              pattern (lib/CoreDependencyGraph.ml[114,3882+39]..[114,3882+43])
+                Ppat_var "dsts" (lib/CoreDependencyGraph.ml[114,3882+39]..[114,3882+43])
+              core_type (lib/CoreDependencyGraph.ml[114,3882+46]..[114,3882+61])
+                Ptyp_constr "list" (lib/CoreDependencyGraph.ml[114,3882+57]..[114,3882+61])
+                [
+                  core_type (lib/CoreDependencyGraph.ml[114,3882+46]..[114,3882+56])
+                    Ptyp_constr "node" (lib/CoreDependencyGraph.ml[114,3882+52]..[114,3882+56])
+                    [
+                      core_type (lib/CoreDependencyGraph.ml[114,3882+46]..[114,3882+51])
+                        Ptyp_var data
+                    ]
+                ]
+            expression (lib/CoreDependencyGraph.ml[115,3947+2]..[129,4265+11])
+              Pexp_sequence
+              expression (lib/CoreDependencyGraph.ml[115,3947+2]..[115,3947+28])
+                Pexp_assert
+                expression (lib/CoreDependencyGraph.ml[115,3947+9]..[115,3947+28])
+                  Pexp_apply
+                  expression (lib/CoreDependencyGraph.ml[115,3947+23]..[115,3947+24])
+                    Pexp_ident "=" (lib/CoreDependencyGraph.ml[115,3947+23]..[115,3947+24])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/CoreDependencyGraph.ml[115,3947+10]..[115,3947+22])
+                        Pexp_field
+                        expression (lib/CoreDependencyGraph.ml[115,3947+10]..[115,3947+13])
+                          Pexp_ident "src" (lib/CoreDependencyGraph.ml[115,3947+10]..[115,3947+13])
+                        "outgoing" (lib/CoreDependencyGraph.ml[115,3947+14]..[115,3947+22])
+                    <arg>
+                    Nolabel
+                      expression (lib/CoreDependencyGraph.ml[115,3947+25]..[115,3947+27])
+                        Pexp_construct "[]" (lib/CoreDependencyGraph.ml[115,3947+25]..[115,3947+27])
+                        None
+                  ]
+              expression (lib/CoreDependencyGraph.ml[116,3977+2]..[129,4265+11])
+                Pexp_let Rec
+                [
+                  <def>
+                    pattern (lib/CoreDependencyGraph.ml[116,3977+10]..[116,3977+14])
+                      Ppat_var "loop" (lib/CoreDependencyGraph.ml[116,3977+10]..[116,3977+14])
+                    expression (lib/CoreDependencyGraph.ml[116,3977+17]..[127,4248+11])
+                      Pexp_function
+                      [
+                        <case>
+                          pattern (lib/CoreDependencyGraph.ml[117,4003+6]..[117,4003+8])
+                            Ppat_construct "[]" (lib/CoreDependencyGraph.ml[117,4003+6]..[117,4003+8])
+                            None
+                          expression (lib/CoreDependencyGraph.ml[118,4015+8]..[118,4015+10])
+                            Pexp_construct "()" (lib/CoreDependencyGraph.ml[118,4015+8]..[118,4015+10])
+                            None
+                        <case>
+                          pattern (lib/CoreDependencyGraph.ml[119,4026+6]..[119,4026+17])
+                            Ppat_construct "::" (lib/CoreDependencyGraph.ml[119,4026+10]..[119,4026+12])
+                            Some
+                              []
+                              pattern (lib/CoreDependencyGraph.ml[119,4026+6]..[119,4026+17]) ghost
+                                Ppat_tuple
+                                [
+                                  pattern (lib/CoreDependencyGraph.ml[119,4026+6]..[119,4026+9])
+                                    Ppat_var "dst" (lib/CoreDependencyGraph.ml[119,4026+6]..[119,4026+9])
+                                  pattern (lib/CoreDependencyGraph.ml[119,4026+13]..[119,4026+17])
+                                    Ppat_var "dsts" (lib/CoreDependencyGraph.ml[119,4026+13]..[119,4026+17])
+                                ]
+                          expression (lib/CoreDependencyGraph.ml[120,4047+8]..[127,4248+11])
+                            Pexp_ifthenelse
+                            expression (lib/CoreDependencyGraph.ml[120,4047+11]..[120,4047+21])
+                              Pexp_field
+                              expression (lib/CoreDependencyGraph.ml[120,4047+11]..[120,4047+14])
+                                Pexp_ident "dst" (lib/CoreDependencyGraph.ml[120,4047+11]..[120,4047+14])
+                              "marked" (lib/CoreDependencyGraph.ml[120,4047+15]..[120,4047+21])
+                            expression (lib/CoreDependencyGraph.ml[121,4074+10]..[121,4074+19])
+                              Pexp_apply
+                              expression (lib/CoreDependencyGraph.ml[121,4074+10]..[121,4074+14])
+                                Pexp_ident "loop" (lib/CoreDependencyGraph.ml[121,4074+10]..[121,4074+14])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (lib/CoreDependencyGraph.ml[121,4074+15]..[121,4074+19])
+                                    Pexp_ident "dsts" (lib/CoreDependencyGraph.ml[121,4074+15]..[121,4074+19])
+                              ]
+                            Some
+                              expression (lib/CoreDependencyGraph.ml[122,4124+13]..[127,4248+11])
+                                Pexp_sequence
+                                expression (lib/CoreDependencyGraph.ml[123,4143+10]..[123,4143+28])
+                                  Pexp_setfield
+                                  expression (lib/CoreDependencyGraph.ml[123,4143+10]..[123,4143+13])
+                                    Pexp_ident "dst" (lib/CoreDependencyGraph.ml[123,4143+10]..[123,4143+13])
+                                  "marked" (lib/CoreDependencyGraph.ml[123,4143+14]..[123,4143+20])
+                                  expression (lib/CoreDependencyGraph.ml[123,4143+24]..[123,4143+28])
+                                    Pexp_construct "true" (lib/CoreDependencyGraph.ml[123,4143+24]..[123,4143+28])
+                                    None
+                                expression (lib/CoreDependencyGraph.ml[124,4173+10]..[126,4218+29])
+                                  Pexp_sequence
+                                  expression (lib/CoreDependencyGraph.ml[124,4173+10]..[124,4173+22])
+                                    Pexp_apply
+                                    expression (lib/CoreDependencyGraph.ml[124,4173+10]..[124,4173+14])
+                                      Pexp_ident "link" (lib/CoreDependencyGraph.ml[124,4173+10]..[124,4173+14])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (lib/CoreDependencyGraph.ml[124,4173+15]..[124,4173+18])
+                                          Pexp_ident "src" (lib/CoreDependencyGraph.ml[124,4173+15]..[124,4173+18])
+                                      <arg>
+                                      Nolabel
+                                        expression (lib/CoreDependencyGraph.ml[124,4173+19]..[124,4173+22])
+                                          Pexp_ident "dst" (lib/CoreDependencyGraph.ml[124,4173+19]..[124,4173+22])
+                                    ]
+                                  expression (lib/CoreDependencyGraph.ml[125,4197+10]..[126,4218+29])
+                                    Pexp_sequence
+                                    expression (lib/CoreDependencyGraph.ml[125,4197+10]..[125,4197+19])
+                                      Pexp_apply
+                                      expression (lib/CoreDependencyGraph.ml[125,4197+10]..[125,4197+14])
+                                        Pexp_ident "loop" (lib/CoreDependencyGraph.ml[125,4197+10]..[125,4197+14])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (lib/CoreDependencyGraph.ml[125,4197+15]..[125,4197+19])
+                                            Pexp_ident "dsts" (lib/CoreDependencyGraph.ml[125,4197+15]..[125,4197+19])
+                                      ]
+                                    expression (lib/CoreDependencyGraph.ml[126,4218+10]..[126,4218+29])
+                                      Pexp_setfield
+                                      expression (lib/CoreDependencyGraph.ml[126,4218+10]..[126,4218+13])
+                                        Pexp_ident "dst" (lib/CoreDependencyGraph.ml[126,4218+10]..[126,4218+13])
+                                      "marked" (lib/CoreDependencyGraph.ml[126,4218+14]..[126,4218+20])
+                                      expression (lib/CoreDependencyGraph.ml[126,4218+24]..[126,4218+29])
+                                        Pexp_construct "false" (lib/CoreDependencyGraph.ml[126,4218+24]..[126,4218+29])
+                                        None
+                      ]
+                ]
+                expression (lib/CoreDependencyGraph.ml[129,4265+2]..[129,4265+11])
+                  Pexp_apply
+                  expression (lib/CoreDependencyGraph.ml[129,4265+2]..[129,4265+6])
+                    Pexp_ident "loop" (lib/CoreDependencyGraph.ml[129,4265+2]..[129,4265+6])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/CoreDependencyGraph.ml[129,4265+7]..[129,4265+11])
+                        Pexp_ident "dsts" (lib/CoreDependencyGraph.ml[129,4265+7]..[129,4265+11])
+                  ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[131,4278+0]..[136,4411+21])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[131,4278+4]..[131,4278+20])
+          Ppat_var "clear_successors" (lib/CoreDependencyGraph.ml[131,4278+4]..[131,4278+20])
+        expression (lib/CoreDependencyGraph.ml[131,4278+21]..[136,4411+21]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/CoreDependencyGraph.ml[131,4278+21]..[131,4278+25])
+            Ppat_var "node" (lib/CoreDependencyGraph.ml[131,4278+21]..[131,4278+25])
+          expression (lib/CoreDependencyGraph.ml[132,4306+2]..[136,4411+21])
+            Pexp_sequence
+            expression (lib/CoreDependencyGraph.ml[132,4306+2]..[135,4392+17])
+              Pexp_apply
+              expression (lib/CoreDependencyGraph.ml[132,4306+2]..[132,4306+11])
+                Pexp_ident "List.iter" (lib/CoreDependencyGraph.ml[132,4306+2]..[132,4306+11])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/CoreDependencyGraph.ml[132,4306+12]..[135,4392+3])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (lib/CoreDependencyGraph.ml[132,4306+17]..[132,4306+21])
+                      Ppat_var "edge" (lib/CoreDependencyGraph.ml[132,4306+17]..[132,4306+21])
+                    expression (lib/CoreDependencyGraph.ml[133,4331+4]..[134,4364+27])
+                      Pexp_sequence
+                      expression (lib/CoreDependencyGraph.ml[133,4331+4]..[133,4331+31])
+                        Pexp_assert
+                        expression (lib/CoreDependencyGraph.ml[133,4331+11]..[133,4331+31])
+                          Pexp_apply
+                          expression (lib/CoreDependencyGraph.ml[133,4331+12]..[133,4331+15])
+                            Pexp_ident "not" (lib/CoreDependencyGraph.ml[133,4331+12]..[133,4331+15])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (lib/CoreDependencyGraph.ml[133,4331+16]..[133,4331+30])
+                                Pexp_field
+                                expression (lib/CoreDependencyGraph.ml[133,4331+16]..[133,4331+20])
+                                  Pexp_ident "edge" (lib/CoreDependencyGraph.ml[133,4331+16]..[133,4331+20])
+                                "destroyed" (lib/CoreDependencyGraph.ml[133,4331+21]..[133,4331+30])
+                          ]
+                      expression (lib/CoreDependencyGraph.ml[134,4364+4]..[134,4364+26])
+                        Pexp_setfield
+                        expression (lib/CoreDependencyGraph.ml[134,4364+4]..[134,4364+8])
+                          Pexp_ident "edge" (lib/CoreDependencyGraph.ml[134,4364+4]..[134,4364+8])
+                        "destroyed" (lib/CoreDependencyGraph.ml[134,4364+9]..[134,4364+18])
+                        expression (lib/CoreDependencyGraph.ml[134,4364+22]..[134,4364+26])
+                          Pexp_construct "true" (lib/CoreDependencyGraph.ml[134,4364+22]..[134,4364+26])
+                          None
+                <arg>
+                Nolabel
+                  expression (lib/CoreDependencyGraph.ml[135,4392+4]..[135,4392+17])
+                    Pexp_field
+                    expression (lib/CoreDependencyGraph.ml[135,4392+4]..[135,4392+8])
+                      Pexp_ident "node" (lib/CoreDependencyGraph.ml[135,4392+4]..[135,4392+8])
+                    "outgoing" (lib/CoreDependencyGraph.ml[135,4392+9]..[135,4392+17])
+              ]
+            expression (lib/CoreDependencyGraph.ml[136,4411+2]..[136,4411+21])
+              Pexp_setfield
+              expression (lib/CoreDependencyGraph.ml[136,4411+2]..[136,4411+6])
+                Pexp_ident "node" (lib/CoreDependencyGraph.ml[136,4411+2]..[136,4411+6])
+              "outgoing" (lib/CoreDependencyGraph.ml[136,4411+7]..[136,4411+15])
+              expression (lib/CoreDependencyGraph.ml[136,4411+19]..[136,4411+21])
+                Pexp_construct "[]" (lib/CoreDependencyGraph.ml[136,4411+19]..[136,4411+21])
+                None
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+          Ppat_construct "()" (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+          None
+        expression (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+          Pexp_apply
+          expression (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost,None)
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+          Ppat_construct "()" (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+          None
+        expression (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+          Pexp_apply
+          expression (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+                Pexp_construct "()" (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+          Ppat_construct "()" (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+          None
+        expression (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+          Pexp_apply
+          expression (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+                Pexp_construct "()" (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+          Ppat_construct "()" (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+          None
+        expression (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+          Pexp_apply
+          expression (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/CoreDependencyGraph.ml[136,4411+21]..[136,4411+21]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set
+    ~absolute_filename:"lib/CoreDependencyGraph.ml"
+let () =
+  Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser"
+    "CoreDependencyGraph.ml"
+type 'data node =
+  {
+  data: 'data ;
+  mutable outgoing: 'data edge list ;
+  mutable incoming: 'data edge list ;
+  mutable marked: bool }
+and 'data edge =
+  {
+  node1: 'data node ;
+  node2: 'data node ;
+  mutable destroyed: bool }
+let create data = { data; outgoing = []; incoming = []; marked = false }
+let data node = node.data
+let follow src edge =
+  if edge.node1 == src
+  then edge.node2
+  else (assert (edge.node2 == src); edge.node1)
+let predecessors (node : 'data node) =
+  (let predecessors =
+     List.filter (fun edge -> not edge.destroyed) node.incoming in
+   node.incoming <- predecessors; List.map (follow node) predecessors : 
+  'data node list)
+let link (src : 'data node) (dst : 'data node) =
+  let edge = { node1 = src; node2 = dst; destroyed = false } in
+  src.outgoing <- (edge :: (src.outgoing));
+  dst.incoming <- (edge :: (dst.incoming))
+let set_successors (src : 'data node) (dsts : 'data node list) =
+  assert (src.outgoing = []);
+  (let rec loop =
+     function
+     | [] -> ()
+     | dst::dsts ->
+         if dst.marked
+         then loop dsts
+         else
+           (dst.marked <- true; link src dst; loop dsts; dst.marked <- false) in
+   loop dsts)
+let clear_successors node =
+  List.iter (fun edge -> assert (not edge.destroyed); edge.destroyed <- true)
+    node.outgoing;
+  node.outgoing <- []
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+          Texp_apply
+          expression (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+          Texp_apply
+          expression (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+          Texp_apply
+          expression (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+                Texp_constant Const_string("lib/CoreDependencyGraph.ml",(lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+          Texp_apply
+          expression (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost
+                Texp_constant Const_string("CoreDependencyGraph.ml",(lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[28,1734+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[61,2604+1])
+    Tstr_type Rec
+    [
+      type_declaration node/1128 (lib/CoreDependencyGraph.ml[28,1734+0]..lib/CoreDependencyGraph.ml[44,2104+1])
+        ptype_params =
+          [
+            core_type (lib/CoreDependencyGraph.ml[28,1734+5]..lib/CoreDependencyGraph.ml[28,1734+10])
+              Ttyp_var data
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (lib/CoreDependencyGraph.ml[32,1814+2]..lib/CoreDependencyGraph.ml[32,1814+14])
+                Immutable
+                data/1130                core_type (lib/CoreDependencyGraph.ml[32,1814+8]..lib/CoreDependencyGraph.ml[32,1814+13])
+                  Ttyp_poly
+                  core_type (lib/CoreDependencyGraph.ml[32,1814+8]..lib/CoreDependencyGraph.ml[32,1814+13])
+                    Ttyp_var data
+              (lib/CoreDependencyGraph.ml[36,1880+2]..lib/CoreDependencyGraph.ml[36,1880+36])
+                Mutable
+                outgoing/1131                core_type (lib/CoreDependencyGraph.ml[36,1880+20]..lib/CoreDependencyGraph.ml[36,1880+35])
+                  Ttyp_poly
+                  core_type (lib/CoreDependencyGraph.ml[36,1880+20]..lib/CoreDependencyGraph.ml[36,1880+35])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/CoreDependencyGraph.ml[36,1880+20]..lib/CoreDependencyGraph.ml[36,1880+30])
+                        Ttyp_constr "edge/1129"
+                        [
+                          core_type (lib/CoreDependencyGraph.ml[36,1880+20]..lib/CoreDependencyGraph.ml[36,1880+25])
+                            Ttyp_var data
+                        ]
+                    ]
+              (lib/CoreDependencyGraph.ml[37,1917+2]..lib/CoreDependencyGraph.ml[37,1917+36])
+                Mutable
+                incoming/1132                core_type (lib/CoreDependencyGraph.ml[37,1917+20]..lib/CoreDependencyGraph.ml[37,1917+35])
+                  Ttyp_poly
+                  core_type (lib/CoreDependencyGraph.ml[37,1917+20]..lib/CoreDependencyGraph.ml[37,1917+35])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/CoreDependencyGraph.ml[37,1917+20]..lib/CoreDependencyGraph.ml[37,1917+30])
+                        Ttyp_constr "edge/1129"
+                        [
+                          core_type (lib/CoreDependencyGraph.ml[37,1917+20]..lib/CoreDependencyGraph.ml[37,1917+25])
+                            Ttyp_var data
+                        ]
+                    ]
+              (lib/CoreDependencyGraph.ml[42,2079+2]..lib/CoreDependencyGraph.ml[42,2079+23])
+                Mutable
+                marked/1133                core_type (lib/CoreDependencyGraph.ml[42,2079+18]..lib/CoreDependencyGraph.ml[42,2079+22])
+                  Ttyp_poly
+                  core_type (lib/CoreDependencyGraph.ml[42,2079+18]..lib/CoreDependencyGraph.ml[42,2079+22])
+                    Ttyp_constr "bool/5!"
+                    []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration edge/1129 (lib/CoreDependencyGraph.ml[46,2107+0]..lib/CoreDependencyGraph.ml[61,2604+1])
+        ptype_params =
+          [
+            core_type (lib/CoreDependencyGraph.ml[46,2107+4]..lib/CoreDependencyGraph.ml[46,2107+9])
+              Ttyp_var data
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (lib/CoreDependencyGraph.ml[53,2416+2]..lib/CoreDependencyGraph.ml[53,2416+20])
+                Immutable
+                node1/1134                core_type (lib/CoreDependencyGraph.ml[53,2416+9]..lib/CoreDependencyGraph.ml[53,2416+19])
+                  Ttyp_poly
+                  core_type (lib/CoreDependencyGraph.ml[53,2416+9]..lib/CoreDependencyGraph.ml[53,2416+19])
+                    Ttyp_constr "node/1128"
+                    [
+                      core_type (lib/CoreDependencyGraph.ml[53,2416+9]..lib/CoreDependencyGraph.ml[53,2416+14])
+                        Ttyp_var data
+                    ]
+              (lib/CoreDependencyGraph.ml[54,2437+2]..lib/CoreDependencyGraph.ml[54,2437+20])
+                Immutable
+                node2/1135                core_type (lib/CoreDependencyGraph.ml[54,2437+9]..lib/CoreDependencyGraph.ml[54,2437+19])
+                  Ttyp_poly
+                  core_type (lib/CoreDependencyGraph.ml[54,2437+9]..lib/CoreDependencyGraph.ml[54,2437+19])
+                    Ttyp_constr "node/1128"
+                    [
+                      core_type (lib/CoreDependencyGraph.ml[54,2437+9]..lib/CoreDependencyGraph.ml[54,2437+14])
+                        Ttyp_var data
+                    ]
+              (lib/CoreDependencyGraph.ml[59,2576+2]..lib/CoreDependencyGraph.ml[59,2576+26])
+                Mutable
+                destroyed/1136                core_type (lib/CoreDependencyGraph.ml[59,2576+21]..lib/CoreDependencyGraph.ml[59,2576+25])
+                  Ttyp_poly
+                  core_type (lib/CoreDependencyGraph.ml[59,2576+21]..lib/CoreDependencyGraph.ml[59,2576+25])
+                    Ttyp_constr "bool/5!"
+                    []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[67,2711+0]..lib/CoreDependencyGraph.ml[72,2798+1])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[67,2711+4]..lib/CoreDependencyGraph.ml[67,2711+10])
+          Tpat_var "create/1137"
+        expression (lib/CoreDependencyGraph.ml[67,2711+11]..lib/CoreDependencyGraph.ml[72,2798+1]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/CoreDependencyGraph.ml[67,2711+11]..lib/CoreDependencyGraph.ml[67,2711+15])
+                Tpat_var "data/1139"
+              expression (lib/CoreDependencyGraph.ml[67,2711+18]..lib/CoreDependencyGraph.ml[72,2798+1])
+                Texp_record
+                  fields =
+                    [
+                      "data"
+                        expression (lib/CoreDependencyGraph.ml[68,2731+9]..lib/CoreDependencyGraph.ml[68,2731+13])
+                          Texp_ident "data/1139"
+                      "outgoing"
+                        expression (lib/CoreDependencyGraph.ml[69,2746+13]..lib/CoreDependencyGraph.ml[69,2746+15])
+                          Texp_construct "[]"
+                          []
+                      "incoming"
+                        expression (lib/CoreDependencyGraph.ml[70,2763+13]..lib/CoreDependencyGraph.ml[70,2763+15])
+                          Texp_construct "[]"
+                          []
+                      "marked"
+                        expression (lib/CoreDependencyGraph.ml[71,2780+11]..lib/CoreDependencyGraph.ml[71,2780+16])
+                          Texp_construct "false"
+                          []
+                    ]
+                  representation =
+                    Record_regular
+                  extended_expression =
+                    None
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[76,2821+0]..lib/CoreDependencyGraph.ml[77,2837+11])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[76,2821+4]..lib/CoreDependencyGraph.ml[76,2821+8])
+          Tpat_var "data/1140"
+        expression (lib/CoreDependencyGraph.ml[76,2821+9]..lib/CoreDependencyGraph.ml[77,2837+11]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/CoreDependencyGraph.ml[76,2821+9]..lib/CoreDependencyGraph.ml[76,2821+13])
+                Tpat_var "node/1142"
+              expression (lib/CoreDependencyGraph.ml[77,2837+2]..lib/CoreDependencyGraph.ml[77,2837+11])
+                Texp_field
+                expression (lib/CoreDependencyGraph.ml[77,2837+2]..lib/CoreDependencyGraph.ml[77,2837+6])
+                  Texp_ident "node/1142"
+                "data"
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[82,2960+0]..lib/CoreDependencyGraph.ml[88,3085+5])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[82,2960+4]..lib/CoreDependencyGraph.ml[82,2960+10])
+          Tpat_var "follow/1143"
+        expression (lib/CoreDependencyGraph.ml[82,2960+11]..lib/CoreDependencyGraph.ml[88,3085+5]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/CoreDependencyGraph.ml[82,2960+11]..lib/CoreDependencyGraph.ml[82,2960+14])
+                Tpat_var "src/1145"
+              expression (lib/CoreDependencyGraph.ml[82,2960+15]..lib/CoreDependencyGraph.ml[88,3085+5]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/CoreDependencyGraph.ml[82,2960+15]..lib/CoreDependencyGraph.ml[82,2960+19])
+                      Tpat_var "edge/1146"
+                    expression (lib/CoreDependencyGraph.ml[83,2982+2]..lib/CoreDependencyGraph.ml[88,3085+5])
+                      Texp_ifthenelse
+                      expression (lib/CoreDependencyGraph.ml[83,2982+5]..lib/CoreDependencyGraph.ml[83,2982+22])
+                        Texp_apply
+                        expression (lib/CoreDependencyGraph.ml[83,2982+16]..lib/CoreDependencyGraph.ml[83,2982+18])
+                          Texp_ident "Stdlib!.=="
+                        [
+                          <arg>
+                            Nolabel
+                            expression (lib/CoreDependencyGraph.ml[83,2982+5]..lib/CoreDependencyGraph.ml[83,2982+15])
+                              Texp_field
+                              expression (lib/CoreDependencyGraph.ml[83,2982+5]..lib/CoreDependencyGraph.ml[83,2982+9])
+                                Texp_ident "edge/1146"
+                              "node1"
+                          <arg>
+                            Nolabel
+                            expression (lib/CoreDependencyGraph.ml[83,2982+19]..lib/CoreDependencyGraph.ml[83,2982+22])
+                              Texp_ident "src/1145"
+                        ]
+                      expression (lib/CoreDependencyGraph.ml[84,3010+4]..lib/CoreDependencyGraph.ml[84,3010+14])
+                        Texp_field
+                        expression (lib/CoreDependencyGraph.ml[84,3010+4]..lib/CoreDependencyGraph.ml[84,3010+8])
+                          Texp_ident "edge/1146"
+                        "node2"
+                      Some
+                        expression (lib/CoreDependencyGraph.ml[85,3025+7]..lib/CoreDependencyGraph.ml[88,3085+5])
+                          Texp_sequence
+                          expression (lib/CoreDependencyGraph.ml[86,3038+4]..lib/CoreDependencyGraph.ml[86,3038+30])
+                            Texp_assert                            expression (lib/CoreDependencyGraph.ml[86,3038+11]..lib/CoreDependencyGraph.ml[86,3038+30])
+                              Texp_apply
+                              expression (lib/CoreDependencyGraph.ml[86,3038+23]..lib/CoreDependencyGraph.ml[86,3038+25])
+                                Texp_ident "Stdlib!.=="
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (lib/CoreDependencyGraph.ml[86,3038+12]..lib/CoreDependencyGraph.ml[86,3038+22])
+                                    Texp_field
+                                    expression (lib/CoreDependencyGraph.ml[86,3038+12]..lib/CoreDependencyGraph.ml[86,3038+16])
+                                      Texp_ident "edge/1146"
+                                    "node2"
+                                <arg>
+                                  Nolabel
+                                  expression (lib/CoreDependencyGraph.ml[86,3038+26]..lib/CoreDependencyGraph.ml[86,3038+29])
+                                    Texp_ident "src/1145"
+                              ]
+                          expression (lib/CoreDependencyGraph.ml[87,3070+4]..lib/CoreDependencyGraph.ml[87,3070+14])
+                            Texp_field
+                            expression (lib/CoreDependencyGraph.ml[87,3070+4]..lib/CoreDependencyGraph.ml[87,3070+8])
+                              Texp_ident "edge/1146"
+                            "node1"
+                ]
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[95,3332+0]..lib/CoreDependencyGraph.ml[100,3511+37])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[95,3332+4]..lib/CoreDependencyGraph.ml[95,3332+16])
+          Tpat_var "predecessors/1147"
+        expression (lib/CoreDependencyGraph.ml[95,3332+17]..lib/CoreDependencyGraph.ml[100,3511+37]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/CoreDependencyGraph.ml[95,3332+18]..lib/CoreDependencyGraph.ml[95,3332+22])
+                extra
+                  Tpat_extra_constraint
+                  core_type (lib/CoreDependencyGraph.ml[95,3332+25]..lib/CoreDependencyGraph.ml[95,3332+35])
+                    Ttyp_constr "node/1128"
+                    [
+                      core_type (lib/CoreDependencyGraph.ml[95,3332+25]..lib/CoreDependencyGraph.ml[95,3332+30])
+                        Ttyp_var data
+                    ]
+                Tpat_alias "node/1149"
+                pattern (lib/CoreDependencyGraph.ml[95,3332+18]..lib/CoreDependencyGraph.ml[95,3332+22])
+                  Tpat_any
+              expression (lib/CoreDependencyGraph.ml[96,3389+2]..lib/CoreDependencyGraph.ml[100,3511+37])
+                extra
+                  Texp_constraint
+                  core_type (lib/CoreDependencyGraph.ml[95,3332+39]..lib/CoreDependencyGraph.ml[95,3332+54])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/CoreDependencyGraph.ml[95,3332+39]..lib/CoreDependencyGraph.ml[95,3332+49])
+                        Ttyp_constr "node/1128"
+                        [
+                          core_type (lib/CoreDependencyGraph.ml[95,3332+39]..lib/CoreDependencyGraph.ml[95,3332+44])
+                            Ttyp_var data
+                        ]
+                    ]
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (lib/CoreDependencyGraph.ml[96,3389+6]..lib/CoreDependencyGraph.ml[96,3389+18])
+                      Tpat_var "predecessors/1150"
+                    expression (lib/CoreDependencyGraph.ml[97,3410+4]..lib/CoreDependencyGraph.ml[97,3410+62])
+                      Texp_apply
+                      expression (lib/CoreDependencyGraph.ml[97,3410+4]..lib/CoreDependencyGraph.ml[97,3410+15])
+                        Texp_ident "Stdlib!.List.filter"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/CoreDependencyGraph.ml[97,3410+16]..lib/CoreDependencyGraph.ml[97,3410+48])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (lib/CoreDependencyGraph.ml[97,3410+21]..lib/CoreDependencyGraph.ml[97,3410+25])
+                                  Tpat_var "edge/1214"
+                                expression (lib/CoreDependencyGraph.ml[97,3410+29]..lib/CoreDependencyGraph.ml[97,3410+47])
+                                  Texp_apply
+                                  expression (lib/CoreDependencyGraph.ml[97,3410+29]..lib/CoreDependencyGraph.ml[97,3410+32])
+                                    Texp_ident "Stdlib!.not"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/CoreDependencyGraph.ml[97,3410+33]..lib/CoreDependencyGraph.ml[97,3410+47])
+                                        Texp_field
+                                        expression (lib/CoreDependencyGraph.ml[97,3410+33]..lib/CoreDependencyGraph.ml[97,3410+37])
+                                          Texp_ident "edge/1214"
+                                        "destroyed"
+                                  ]
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (lib/CoreDependencyGraph.ml[97,3410+49]..lib/CoreDependencyGraph.ml[97,3410+62])
+                            Texp_field
+                            expression (lib/CoreDependencyGraph.ml[97,3410+49]..lib/CoreDependencyGraph.ml[97,3410+53])
+                              Texp_ident "node/1149"
+                            "incoming"
+                      ]
+                ]
+                expression (lib/CoreDependencyGraph.ml[99,3478+2]..lib/CoreDependencyGraph.ml[100,3511+37])
+                  Texp_sequence
+                  expression (lib/CoreDependencyGraph.ml[99,3478+2]..lib/CoreDependencyGraph.ml[99,3478+31])
+                    Texp_setfield
+                    expression (lib/CoreDependencyGraph.ml[99,3478+2]..lib/CoreDependencyGraph.ml[99,3478+6])
+                      Texp_ident "node/1149"
+                    "incoming"
+                    expression (lib/CoreDependencyGraph.ml[99,3478+19]..lib/CoreDependencyGraph.ml[99,3478+31])
+                      Texp_ident "predecessors/1150"
+                  expression (lib/CoreDependencyGraph.ml[100,3511+2]..lib/CoreDependencyGraph.ml[100,3511+37])
+                    Texp_apply
+                    expression (lib/CoreDependencyGraph.ml[100,3511+2]..lib/CoreDependencyGraph.ml[100,3511+10])
+                      Texp_ident "Stdlib!.List.map"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (lib/CoreDependencyGraph.ml[100,3511+11]..lib/CoreDependencyGraph.ml[100,3511+24])
+                          Texp_apply
+                          expression (lib/CoreDependencyGraph.ml[100,3511+12]..lib/CoreDependencyGraph.ml[100,3511+18])
+                            Texp_ident "follow/1143"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/CoreDependencyGraph.ml[100,3511+19]..lib/CoreDependencyGraph.ml[100,3511+23])
+                                Texp_ident "node/1149"
+                          ]
+                      <arg>
+                        Nolabel
+                        expression (lib/CoreDependencyGraph.ml[100,3511+25]..lib/CoreDependencyGraph.ml[100,3511+37])
+                          Texp_ident "predecessors/1150"
+                    ]
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[105,3674+0]..lib/CoreDependencyGraph.ml[112,3842+38])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[105,3674+4]..lib/CoreDependencyGraph.ml[105,3674+8])
+          Tpat_var "link/1215"
+        expression (lib/CoreDependencyGraph.ml[105,3674+9]..lib/CoreDependencyGraph.ml[112,3842+38]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/CoreDependencyGraph.ml[105,3674+10]..lib/CoreDependencyGraph.ml[105,3674+13])
+                extra
+                  Tpat_extra_constraint
+                  core_type (lib/CoreDependencyGraph.ml[105,3674+16]..lib/CoreDependencyGraph.ml[105,3674+26])
+                    Ttyp_constr "node/1128"
+                    [
+                      core_type (lib/CoreDependencyGraph.ml[105,3674+16]..lib/CoreDependencyGraph.ml[105,3674+21])
+                        Ttyp_var data
+                    ]
+                Tpat_alias "src/1217"
+                pattern (lib/CoreDependencyGraph.ml[105,3674+10]..lib/CoreDependencyGraph.ml[105,3674+13])
+                  Tpat_any
+              expression (lib/CoreDependencyGraph.ml[105,3674+28]..lib/CoreDependencyGraph.ml[112,3842+38]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/CoreDependencyGraph.ml[105,3674+29]..lib/CoreDependencyGraph.ml[105,3674+32])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (lib/CoreDependencyGraph.ml[105,3674+35]..lib/CoreDependencyGraph.ml[105,3674+45])
+                          Ttyp_constr "node/1128"
+                          [
+                            core_type (lib/CoreDependencyGraph.ml[105,3674+35]..lib/CoreDependencyGraph.ml[105,3674+40])
+                              Ttyp_var data
+                          ]
+                      Tpat_alias "dst/1218"
+                      pattern (lib/CoreDependencyGraph.ml[105,3674+29]..lib/CoreDependencyGraph.ml[105,3674+32])
+                        Tpat_any
+                    expression (lib/CoreDependencyGraph.ml[106,3723+2]..lib/CoreDependencyGraph.ml[112,3842+38])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (lib/CoreDependencyGraph.ml[106,3723+6]..lib/CoreDependencyGraph.ml[106,3723+10])
+                            Tpat_var "edge/1219"
+                          expression (lib/CoreDependencyGraph.ml[106,3723+13]..lib/CoreDependencyGraph.ml[110,3795+3])
+                            Texp_record
+                              fields =
+                                [
+                                  "node1"
+                                    expression (lib/CoreDependencyGraph.ml[107,3738+12]..lib/CoreDependencyGraph.ml[107,3738+15])
+                                      Texp_ident "src/1217"
+                                  "node2"
+                                    expression (lib/CoreDependencyGraph.ml[108,3755+12]..lib/CoreDependencyGraph.ml[108,3755+15])
+                                      Texp_ident "dst/1218"
+                                  "destroyed"
+                                    expression (lib/CoreDependencyGraph.ml[109,3772+16]..lib/CoreDependencyGraph.ml[109,3772+21])
+                                      Texp_construct "false"
+                                      []
+                                ]
+                              representation =
+                                Record_regular
+                              extended_expression =
+                                None
+                      ]
+                      expression (lib/CoreDependencyGraph.ml[111,3802+2]..lib/CoreDependencyGraph.ml[112,3842+38])
+                        Texp_sequence
+                        expression (lib/CoreDependencyGraph.ml[111,3802+2]..lib/CoreDependencyGraph.ml[111,3802+38])
+                          Texp_setfield
+                          expression (lib/CoreDependencyGraph.ml[111,3802+2]..lib/CoreDependencyGraph.ml[111,3802+5])
+                            Texp_ident "src/1217"
+                          "outgoing"
+                          expression (lib/CoreDependencyGraph.ml[111,3802+18]..lib/CoreDependencyGraph.ml[111,3802+38])
+                            Texp_construct "::"
+                            [
+                              expression (lib/CoreDependencyGraph.ml[111,3802+18]..lib/CoreDependencyGraph.ml[111,3802+22])
+                                Texp_ident "edge/1219"
+                              expression (lib/CoreDependencyGraph.ml[111,3802+26]..lib/CoreDependencyGraph.ml[111,3802+38])
+                                Texp_field
+                                expression (lib/CoreDependencyGraph.ml[111,3802+26]..lib/CoreDependencyGraph.ml[111,3802+29])
+                                  Texp_ident "src/1217"
+                                "outgoing"
+                            ]
+                        expression (lib/CoreDependencyGraph.ml[112,3842+2]..lib/CoreDependencyGraph.ml[112,3842+38])
+                          Texp_setfield
+                          expression (lib/CoreDependencyGraph.ml[112,3842+2]..lib/CoreDependencyGraph.ml[112,3842+5])
+                            Texp_ident "dst/1218"
+                          "incoming"
+                          expression (lib/CoreDependencyGraph.ml[112,3842+18]..lib/CoreDependencyGraph.ml[112,3842+38])
+                            Texp_construct "::"
+                            [
+                              expression (lib/CoreDependencyGraph.ml[112,3842+18]..lib/CoreDependencyGraph.ml[112,3842+22])
+                                Texp_ident "edge/1219"
+                              expression (lib/CoreDependencyGraph.ml[112,3842+26]..lib/CoreDependencyGraph.ml[112,3842+38])
+                                Texp_field
+                                expression (lib/CoreDependencyGraph.ml[112,3842+26]..lib/CoreDependencyGraph.ml[112,3842+29])
+                                  Texp_ident "dst/1218"
+                                "incoming"
+                            ]
+                ]
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[114,3882+0]..lib/CoreDependencyGraph.ml[129,4265+11])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[114,3882+4]..lib/CoreDependencyGraph.ml[114,3882+18])
+          Tpat_var "set_successors/1220"
+        expression (lib/CoreDependencyGraph.ml[114,3882+19]..lib/CoreDependencyGraph.ml[129,4265+11]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/CoreDependencyGraph.ml[114,3882+20]..lib/CoreDependencyGraph.ml[114,3882+23])
+                extra
+                  Tpat_extra_constraint
+                  core_type (lib/CoreDependencyGraph.ml[114,3882+26]..lib/CoreDependencyGraph.ml[114,3882+36])
+                    Ttyp_constr "node/1128"
+                    [
+                      core_type (lib/CoreDependencyGraph.ml[114,3882+26]..lib/CoreDependencyGraph.ml[114,3882+31])
+                        Ttyp_var data
+                    ]
+                Tpat_alias "src/1222"
+                pattern (lib/CoreDependencyGraph.ml[114,3882+20]..lib/CoreDependencyGraph.ml[114,3882+23])
+                  Tpat_any
+              expression (lib/CoreDependencyGraph.ml[114,3882+38]..lib/CoreDependencyGraph.ml[129,4265+11]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/CoreDependencyGraph.ml[114,3882+39]..lib/CoreDependencyGraph.ml[114,3882+43])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (lib/CoreDependencyGraph.ml[114,3882+46]..lib/CoreDependencyGraph.ml[114,3882+61])
+                          Ttyp_constr "list/9!"
+                          [
+                            core_type (lib/CoreDependencyGraph.ml[114,3882+46]..lib/CoreDependencyGraph.ml[114,3882+56])
+                              Ttyp_constr "node/1128"
+                              [
+                                core_type (lib/CoreDependencyGraph.ml[114,3882+46]..lib/CoreDependencyGraph.ml[114,3882+51])
+                                  Ttyp_var data
+                              ]
+                          ]
+                      Tpat_alias "dsts/1223"
+                      pattern (lib/CoreDependencyGraph.ml[114,3882+39]..lib/CoreDependencyGraph.ml[114,3882+43])
+                        Tpat_any
+                    expression (lib/CoreDependencyGraph.ml[115,3947+2]..lib/CoreDependencyGraph.ml[129,4265+11])
+                      Texp_sequence
+                      expression (lib/CoreDependencyGraph.ml[115,3947+2]..lib/CoreDependencyGraph.ml[115,3947+28])
+                        Texp_assert                        expression (lib/CoreDependencyGraph.ml[115,3947+9]..lib/CoreDependencyGraph.ml[115,3947+28])
+                          Texp_apply
+                          expression (lib/CoreDependencyGraph.ml[115,3947+23]..lib/CoreDependencyGraph.ml[115,3947+24])
+                            Texp_ident "Stdlib!.="
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/CoreDependencyGraph.ml[115,3947+10]..lib/CoreDependencyGraph.ml[115,3947+22])
+                                Texp_field
+                                expression (lib/CoreDependencyGraph.ml[115,3947+10]..lib/CoreDependencyGraph.ml[115,3947+13])
+                                  Texp_ident "src/1222"
+                                "outgoing"
+                            <arg>
+                              Nolabel
+                              expression (lib/CoreDependencyGraph.ml[115,3947+25]..lib/CoreDependencyGraph.ml[115,3947+27])
+                                Texp_construct "[]"
+                                []
+                          ]
+                      expression (lib/CoreDependencyGraph.ml[116,3977+2]..lib/CoreDependencyGraph.ml[129,4265+11])
+                        Texp_let Rec
+                        [
+                          <def>
+                            pattern (lib/CoreDependencyGraph.ml[116,3977+10]..lib/CoreDependencyGraph.ml[116,3977+14])
+                              Tpat_var "loop/1224"
+                            expression (lib/CoreDependencyGraph.ml[116,3977+17]..lib/CoreDependencyGraph.ml[127,4248+11])
+                              Texp_function
+                              Nolabel
+                              [
+                                <case>
+                                  pattern (lib/CoreDependencyGraph.ml[117,4003+6]..lib/CoreDependencyGraph.ml[117,4003+8])
+                                    Tpat_construct "[]"
+                                    []
+                                    None
+                                  expression (lib/CoreDependencyGraph.ml[118,4015+8]..lib/CoreDependencyGraph.ml[118,4015+10])
+                                    Texp_construct "()"
+                                    []
+                                <case>
+                                  pattern (lib/CoreDependencyGraph.ml[119,4026+6]..lib/CoreDependencyGraph.ml[119,4026+17])
+                                    Tpat_construct "::"
+                                    [
+                                      pattern (lib/CoreDependencyGraph.ml[119,4026+6]..lib/CoreDependencyGraph.ml[119,4026+9])
+                                        Tpat_var "dst/1225"
+                                      pattern (lib/CoreDependencyGraph.ml[119,4026+13]..lib/CoreDependencyGraph.ml[119,4026+17])
+                                        Tpat_var "dsts/1226"
+                                    ]
+                                    None
+                                  expression (lib/CoreDependencyGraph.ml[120,4047+8]..lib/CoreDependencyGraph.ml[127,4248+11])
+                                    Texp_ifthenelse
+                                    expression (lib/CoreDependencyGraph.ml[120,4047+11]..lib/CoreDependencyGraph.ml[120,4047+21])
+                                      Texp_field
+                                      expression (lib/CoreDependencyGraph.ml[120,4047+11]..lib/CoreDependencyGraph.ml[120,4047+14])
+                                        Texp_ident "dst/1225"
+                                      "marked"
+                                    expression (lib/CoreDependencyGraph.ml[121,4074+10]..lib/CoreDependencyGraph.ml[121,4074+19])
+                                      Texp_apply
+                                      expression (lib/CoreDependencyGraph.ml[121,4074+10]..lib/CoreDependencyGraph.ml[121,4074+14])
+                                        Texp_ident "loop/1224"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (lib/CoreDependencyGraph.ml[121,4074+15]..lib/CoreDependencyGraph.ml[121,4074+19])
+                                            Texp_ident "dsts/1226"
+                                      ]
+                                    Some
+                                      expression (lib/CoreDependencyGraph.ml[122,4124+13]..lib/CoreDependencyGraph.ml[127,4248+11])
+                                        Texp_sequence
+                                        expression (lib/CoreDependencyGraph.ml[123,4143+10]..lib/CoreDependencyGraph.ml[123,4143+28])
+                                          Texp_setfield
+                                          expression (lib/CoreDependencyGraph.ml[123,4143+10]..lib/CoreDependencyGraph.ml[123,4143+13])
+                                            Texp_ident "dst/1225"
+                                          "marked"
+                                          expression (lib/CoreDependencyGraph.ml[123,4143+24]..lib/CoreDependencyGraph.ml[123,4143+28])
+                                            Texp_construct "true"
+                                            []
+                                        expression (lib/CoreDependencyGraph.ml[124,4173+10]..lib/CoreDependencyGraph.ml[126,4218+29])
+                                          Texp_sequence
+                                          expression (lib/CoreDependencyGraph.ml[124,4173+10]..lib/CoreDependencyGraph.ml[124,4173+22])
+                                            Texp_apply
+                                            expression (lib/CoreDependencyGraph.ml[124,4173+10]..lib/CoreDependencyGraph.ml[124,4173+14])
+                                              Texp_ident "link/1215"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/CoreDependencyGraph.ml[124,4173+15]..lib/CoreDependencyGraph.ml[124,4173+18])
+                                                  Texp_ident "src/1222"
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/CoreDependencyGraph.ml[124,4173+19]..lib/CoreDependencyGraph.ml[124,4173+22])
+                                                  Texp_ident "dst/1225"
+                                            ]
+                                          expression (lib/CoreDependencyGraph.ml[125,4197+10]..lib/CoreDependencyGraph.ml[126,4218+29])
+                                            Texp_sequence
+                                            expression (lib/CoreDependencyGraph.ml[125,4197+10]..lib/CoreDependencyGraph.ml[125,4197+19])
+                                              Texp_apply
+                                              expression (lib/CoreDependencyGraph.ml[125,4197+10]..lib/CoreDependencyGraph.ml[125,4197+14])
+                                                Texp_ident "loop/1224"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/CoreDependencyGraph.ml[125,4197+15]..lib/CoreDependencyGraph.ml[125,4197+19])
+                                                    Texp_ident "dsts/1226"
+                                              ]
+                                            expression (lib/CoreDependencyGraph.ml[126,4218+10]..lib/CoreDependencyGraph.ml[126,4218+29])
+                                              Texp_setfield
+                                              expression (lib/CoreDependencyGraph.ml[126,4218+10]..lib/CoreDependencyGraph.ml[126,4218+13])
+                                                Texp_ident "dst/1225"
+                                              "marked"
+                                              expression (lib/CoreDependencyGraph.ml[126,4218+24]..lib/CoreDependencyGraph.ml[126,4218+29])
+                                                Texp_construct "false"
+                                                []
+                              ]
+                        ]
+                        expression (lib/CoreDependencyGraph.ml[129,4265+2]..lib/CoreDependencyGraph.ml[129,4265+11])
+                          Texp_apply
+                          expression (lib/CoreDependencyGraph.ml[129,4265+2]..lib/CoreDependencyGraph.ml[129,4265+6])
+                            Texp_ident "loop/1224"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/CoreDependencyGraph.ml[129,4265+7]..lib/CoreDependencyGraph.ml[129,4265+11])
+                                Texp_ident "dsts/1223"
+                          ]
+                ]
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[131,4278+0]..lib/CoreDependencyGraph.ml[136,4411+21])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[131,4278+4]..lib/CoreDependencyGraph.ml[131,4278+20])
+          Tpat_var "clear_successors/1228"
+        expression (lib/CoreDependencyGraph.ml[131,4278+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/CoreDependencyGraph.ml[131,4278+21]..lib/CoreDependencyGraph.ml[131,4278+25])
+                Tpat_var "node/1230"
+              expression (lib/CoreDependencyGraph.ml[132,4306+2]..lib/CoreDependencyGraph.ml[136,4411+21])
+                Texp_sequence
+                expression (lib/CoreDependencyGraph.ml[132,4306+2]..lib/CoreDependencyGraph.ml[135,4392+17])
+                  Texp_apply
+                  expression (lib/CoreDependencyGraph.ml[132,4306+2]..lib/CoreDependencyGraph.ml[132,4306+11])
+                    Texp_ident "Stdlib!.List.iter"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (lib/CoreDependencyGraph.ml[132,4306+12]..lib/CoreDependencyGraph.ml[135,4392+3])
+                        Texp_function
+                        Nolabel
+                        [
+                          <case>
+                            pattern (lib/CoreDependencyGraph.ml[132,4306+17]..lib/CoreDependencyGraph.ml[132,4306+21])
+                              Tpat_var "edge/1231"
+                            expression (lib/CoreDependencyGraph.ml[133,4331+4]..lib/CoreDependencyGraph.ml[134,4364+27])
+                              Texp_sequence
+                              expression (lib/CoreDependencyGraph.ml[133,4331+4]..lib/CoreDependencyGraph.ml[133,4331+31])
+                                Texp_assert                                expression (lib/CoreDependencyGraph.ml[133,4331+11]..lib/CoreDependencyGraph.ml[133,4331+31])
+                                  Texp_apply
+                                  expression (lib/CoreDependencyGraph.ml[133,4331+12]..lib/CoreDependencyGraph.ml[133,4331+15])
+                                    Texp_ident "Stdlib!.not"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/CoreDependencyGraph.ml[133,4331+16]..lib/CoreDependencyGraph.ml[133,4331+30])
+                                        Texp_field
+                                        expression (lib/CoreDependencyGraph.ml[133,4331+16]..lib/CoreDependencyGraph.ml[133,4331+20])
+                                          Texp_ident "edge/1231"
+                                        "destroyed"
+                                  ]
+                              expression (lib/CoreDependencyGraph.ml[134,4364+4]..lib/CoreDependencyGraph.ml[134,4364+26])
+                                Texp_setfield
+                                expression (lib/CoreDependencyGraph.ml[134,4364+4]..lib/CoreDependencyGraph.ml[134,4364+8])
+                                  Texp_ident "edge/1231"
+                                "destroyed"
+                                expression (lib/CoreDependencyGraph.ml[134,4364+22]..lib/CoreDependencyGraph.ml[134,4364+26])
+                                  Texp_construct "true"
+                                  []
+                        ]
+                    <arg>
+                      Nolabel
+                      expression (lib/CoreDependencyGraph.ml[135,4392+4]..lib/CoreDependencyGraph.ml[135,4392+17])
+                        Texp_field
+                        expression (lib/CoreDependencyGraph.ml[135,4392+4]..lib/CoreDependencyGraph.ml[135,4392+8])
+                          Texp_ident "node/1230"
+                        "outgoing"
+                  ]
+                expression (lib/CoreDependencyGraph.ml[136,4411+2]..lib/CoreDependencyGraph.ml[136,4411+21])
+                  Texp_setfield
+                  expression (lib/CoreDependencyGraph.ml[136,4411+2]..lib/CoreDependencyGraph.ml[136,4411+6])
+                    Texp_ident "node/1230"
+                  "outgoing"
+                  expression (lib/CoreDependencyGraph.ml[136,4411+19]..lib/CoreDependencyGraph.ml[136,4411+21])
+                    Texp_construct "[]"
+                    []
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+          Texp_apply
+          expression (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost,None)
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+          Texp_apply
+          expression (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+          Texp_apply
+          expression (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+          Texp_apply
+          expression (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/CoreDependencyGraph.ml[136,4411+21]..lib/CoreDependencyGraph.ml[136,4411+21]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__CoreDependencyGraph>
+ "clear_successors"[value] -> <Gbnf_parser__CoreDependencyGraph.30>;
+ "create"[value] -> <Gbnf_parser__CoreDependencyGraph.9>;
+ "data"[value] -> <Gbnf_parser__CoreDependencyGraph.11>;
+ "edge"[type] -> <Gbnf_parser__CoreDependencyGraph.1>;
+ "follow"[value] -> <Gbnf_parser__CoreDependencyGraph.13>;
+ "link"[value] -> <Gbnf_parser__CoreDependencyGraph.20>;
+ "node"[type] -> <Gbnf_parser__CoreDependencyGraph.0>;
+ "predecessors"[value] -> <Gbnf_parser__CoreDependencyGraph.16>;
+ "set_successors"[value] -> <Gbnf_parser__CoreDependencyGraph.24>;
+ }
+
+(setglobal Gbnf_parser__CoreDependencyGraph!
+  (let
+    (*match*/1533 =
+       (after Gbnf_parser__CoreDependencyGraph lib/CoreDependencyGraph.ml(28)<ghost>:1734-1734
+         (apply (field 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__CoreDependencyGraph"))
+     *match*/1531 =
+       (after Gbnf_parser__CoreDependencyGraph lib/CoreDependencyGraph.ml(28)<ghost>:1734-1734
+         (apply
+           (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1529 =
+       (after Gbnf_parser__CoreDependencyGraph lib/CoreDependencyGraph.ml(28)<ghost>:1734-1734
+         (apply (field 0 (field 5 (global Expect_test_collector!)))
+           "lib/CoreDependencyGraph.ml"))
+     *match*/1527 =
+       (after Gbnf_parser__CoreDependencyGraph lib/CoreDependencyGraph.ml(28)<ghost>:1734-1734
+         (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "CoreDependencyGraph.ml"))
+     create/1137 =
+       (function data/1139
+         (funct-body Gbnf_parser__CoreDependencyGraph.create lib/CoreDependencyGraph.ml(67)<ghost>:2722-2799
+           (before Gbnf_parser__CoreDependencyGraph.create lib/CoreDependencyGraph.ml(67):2729-2799
+             (makemutable 0 (*,*,*,int) data/1139 0 0 0))))
+     data/1140 =
+       (function node/1142
+         (funct-body Gbnf_parser__CoreDependencyGraph.data lib/CoreDependencyGraph.ml(76)<ghost>:2830-2848
+           (before Gbnf_parser__CoreDependencyGraph.data lib/CoreDependencyGraph.ml(77):2839-2848
+             (field 0 node/1142))))
+     follow/1143 =
+       (function src/1145 edge/1146
+         (funct-body Gbnf_parser__CoreDependencyGraph.follow lib/CoreDependencyGraph.ml(82)<ghost>:2971-3090
+           (before Gbnf_parser__CoreDependencyGraph.follow lib/CoreDependencyGraph.ml(83):2984-3090
+             (if (== (field 0 edge/1146) src/1145)
+               (before Gbnf_parser__CoreDependencyGraph.follow lib/CoreDependencyGraph.ml(84):3014-3024
+                 (field 1 edge/1146))
+               (before Gbnf_parser__CoreDependencyGraph.follow lib/CoreDependencyGraph.ml(85):3032-3090
+                 (seq
+                   (if (== (field 1 edge/1146) src/1145) 0
+                     (raise
+                       (after Gbnf_parser__CoreDependencyGraph.follow lib/CoreDependencyGraph.ml(86):3042-3068
+                         (makeblock 0 (global Assert_failure/28!)
+                           [0: "lib/CoreDependencyGraph.ml" 86 4]))))
+                   (before Gbnf_parser__CoreDependencyGraph.follow lib/CoreDependencyGraph.ml(87):3074-3084
+                     (field 0 edge/1146))))))))
+     predecessors/1147 =
+       (function node/1149
+         (funct-body Gbnf_parser__CoreDependencyGraph.predecessors lib/CoreDependencyGraph.ml(95)<ghost>:3349-3548
+           (before Gbnf_parser__CoreDependencyGraph.predecessors lib/CoreDependencyGraph.ml(96):3391-3548
+             (let
+               (predecessors/1150 =
+                  (after Gbnf_parser__CoreDependencyGraph.predecessors lib/CoreDependencyGraph.ml(97):3414-3472
+                    (apply (field 40 (global Stdlib__List!))
+                      (function edge/1214 : int
+                        (funct-body Gbnf_parser__CoreDependencyGraph.predecessors.(fun) lib/CoreDependencyGraph.ml(97):3426-3458
+                          (before Gbnf_parser__CoreDependencyGraph.predecessors.(fun) lib/CoreDependencyGraph.ml(97):3439-3457
+                            (not (field 2 edge/1214)))))
+                      (field 2 node/1149))))
+               (before Gbnf_parser__CoreDependencyGraph.predecessors lib/CoreDependencyGraph.ml(99):3480-3548
+                 (seq (setfield_ptr 2 node/1149 predecessors/1150)
+                   (before Gbnf_parser__CoreDependencyGraph.predecessors lib/CoreDependencyGraph.ml(100):3513-3548
+                     (after Gbnf_parser__CoreDependencyGraph.predecessors lib/CoreDependencyGraph.ml(100):3513-3548
+                       (apply (field 18 (global Stdlib__List!))
+                         (after Gbnf_parser__CoreDependencyGraph.predecessors lib/CoreDependencyGraph.ml(100):3522-3535
+                           (apply follow/1143 node/1149))
+                         predecessors/1150)))))))))
+     link/1215 =
+       (function src/1217 dst/1218 : int
+         (funct-body Gbnf_parser__CoreDependencyGraph.link lib/CoreDependencyGraph.ml(105)<ghost>:3683-3880
+           (before Gbnf_parser__CoreDependencyGraph.link lib/CoreDependencyGraph.ml(106):3725-3880
+             (let (edge/1219 = (makemutable 0 (*,*,int) src/1217 dst/1218 0))
+               (before Gbnf_parser__CoreDependencyGraph.link lib/CoreDependencyGraph.ml(111):3804-3880
+                 (seq
+                   (setfield_ptr 1 src/1217
+                     (makeblock 0 edge/1219 (field 1 src/1217)))
+                   (before Gbnf_parser__CoreDependencyGraph.link lib/CoreDependencyGraph.ml(112):3844-3880
+                     (setfield_ptr 2 dst/1218
+                       (makeblock 0 edge/1219 (field 2 dst/1218))))))))))
+     set_successors/1220 =
+       (function src/1222 dsts/1223 : int
+         (funct-body Gbnf_parser__CoreDependencyGraph.set_successors lib/CoreDependencyGraph.ml(114)<ghost>:3901-4276
+           (before Gbnf_parser__CoreDependencyGraph.set_successors lib/CoreDependencyGraph.ml(115):3949-4276
+             (seq
+               (if (== (field 1 src/1222) 0) 0
+                 (raise
+                   (after Gbnf_parser__CoreDependencyGraph.set_successors lib/CoreDependencyGraph.ml(115):3949-3975
+                     (makeblock 0 (global Assert_failure/28!)
+                       [0: "lib/CoreDependencyGraph.ml" 115 2]))))
+               (before Gbnf_parser__CoreDependencyGraph.set_successors lib/CoreDependencyGraph.ml(116):3979-4276
+                 (letrec
+                   (loop/1224
+                      (function param/1227 : int
+                        (funct-body Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(116):3994-4259
+                          (if param/1227
+                            (let
+                              (dsts/1226 =a (field 1 param/1227)
+                               dst/1225 =a (field 0 param/1227))
+                              (before Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(120):4055-4259
+                                (if (field 3 dst/1225)
+                                  (before Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(121):4084-4093
+                                    (after Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(121):4084-4093
+                                      (apply loop/1224 dsts/1226)))
+                                  (before Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(122):4137-4259
+                                    (seq (setfield_imm 3 dst/1225 1)
+                                      (before Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(124):4183-4247
+                                        (seq
+                                          (after Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(124):4183-4195
+                                            (apply link/1215 src/1222
+                                              dst/1225))
+                                          (before Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(125):4207-4247
+                                            (seq
+                                              (after Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(125):4207-4216
+                                                (apply loop/1224 dsts/1226))
+                                              (before Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(126):4228-4247
+                                                (setfield_imm 3 dst/1225 0)))))))))))
+                            (before Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(118):4023-4025
+                              0)))))
+                   (before Gbnf_parser__CoreDependencyGraph.set_successors lib/CoreDependencyGraph.ml(129):4267-4276
+                     (after Gbnf_parser__CoreDependencyGraph.set_successors lib/CoreDependencyGraph.ml(129):4267-4276
+                       (apply loop/1224 dsts/1223)))))))))
+     clear_successors/1228 =
+       (function node/1230 : int
+         (funct-body Gbnf_parser__CoreDependencyGraph.clear_successors lib/CoreDependencyGraph.ml(131)<ghost>:4299-4432
+           (before Gbnf_parser__CoreDependencyGraph.clear_successors lib/CoreDependencyGraph.ml(132):4308-4432
+             (seq
+               (after Gbnf_parser__CoreDependencyGraph.clear_successors lib/CoreDependencyGraph.ml(132):4308-4409
+                 (apply (field 16 (global Stdlib__List!))
+                   (function edge/1231 : int
+                     (funct-body Gbnf_parser__CoreDependencyGraph.clear_successors.(fun) lib/CoreDependencyGraph.ml(132):4318-4395
+                       (before Gbnf_parser__CoreDependencyGraph.clear_successors.(fun) lib/CoreDependencyGraph.ml(133):4335-4391
+                         (seq
+                           (if (not (field 2 edge/1231)) 0
+                             (raise
+                               (after Gbnf_parser__CoreDependencyGraph.clear_successors.(fun) lib/CoreDependencyGraph.ml(133):4335-4362
+                                 (makeblock 0 (global Assert_failure/28!)
+                                   [0: "lib/CoreDependencyGraph.ml" 133 4]))))
+                           (before Gbnf_parser__CoreDependencyGraph.clear_successors.(fun) lib/CoreDependencyGraph.ml(134):4368-4390
+                             (setfield_imm 2 edge/1231 1))))))
+                   (field 1 node/1230)))
+               (before Gbnf_parser__CoreDependencyGraph.clear_successors lib/CoreDependencyGraph.ml(136):4413-4432
+                 (setfield_ptr 1 node/1230 0))))))
+     *match*/1525 =
+       (after Gbnf_parser__CoreDependencyGraph lib/CoreDependencyGraph.ml(136)<ghost>:4432-4432
+         (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/1523 =
+       (after Gbnf_parser__CoreDependencyGraph lib/CoreDependencyGraph.ml(136)<ghost>:4432-4432
+         (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+     *match*/1521 =
+       (after Gbnf_parser__CoreDependencyGraph lib/CoreDependencyGraph.ml(136)<ghost>:4432-4432
+         (apply
+           (field 1 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/1519 =
+       (after Gbnf_parser__CoreDependencyGraph lib/CoreDependencyGraph.ml(136)<ghost>:4432-4432
+         (apply (field 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__CoreDependencyGraph")))
+    (pseudo <unknown location>
+      (makeblock 0 create/1137 data/1140 follow/1143 predecessors/1147
+        link/1215 set_successors/1220 clear_successors/1228))))
+(setglobal Gbnf_parser__CoreDependencyGraph!
+  (let
+    (*match*/1533 =
+       (after Gbnf_parser__CoreDependencyGraph lib/CoreDependencyGraph.ml(28)<ghost>:1734-1734
+         (apply (field 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__CoreDependencyGraph"))
+     *match*/1531 =
+       (after Gbnf_parser__CoreDependencyGraph lib/CoreDependencyGraph.ml(28)<ghost>:1734-1734
+         (apply
+           (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1529 =
+       (after Gbnf_parser__CoreDependencyGraph lib/CoreDependencyGraph.ml(28)<ghost>:1734-1734
+         (apply (field 0 (field 5 (global Expect_test_collector!)))
+           "lib/CoreDependencyGraph.ml"))
+     *match*/1527 =
+       (after Gbnf_parser__CoreDependencyGraph lib/CoreDependencyGraph.ml(28)<ghost>:1734-1734
+         (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "CoreDependencyGraph.ml"))
+     create/1137 =
+       (function data/1139
+         (funct-body Gbnf_parser__CoreDependencyGraph.create lib/CoreDependencyGraph.ml(67)<ghost>:2722-2799
+           (before Gbnf_parser__CoreDependencyGraph.create lib/CoreDependencyGraph.ml(67):2729-2799
+             (makemutable 0 (*,*,*,int) data/1139 0 0 0))))
+     data/1140 =
+       (function node/1142
+         (funct-body Gbnf_parser__CoreDependencyGraph.data lib/CoreDependencyGraph.ml(76)<ghost>:2830-2848
+           (before Gbnf_parser__CoreDependencyGraph.data lib/CoreDependencyGraph.ml(77):2839-2848
+             (field 0 node/1142))))
+     follow/1143 =
+       (function src/1145 edge/1146
+         (funct-body Gbnf_parser__CoreDependencyGraph.follow lib/CoreDependencyGraph.ml(82)<ghost>:2971-3090
+           (before Gbnf_parser__CoreDependencyGraph.follow lib/CoreDependencyGraph.ml(83):2984-3090
+             (if (== (field 0 edge/1146) src/1145)
+               (before Gbnf_parser__CoreDependencyGraph.follow lib/CoreDependencyGraph.ml(84):3014-3024
+                 (field 1 edge/1146))
+               (before Gbnf_parser__CoreDependencyGraph.follow lib/CoreDependencyGraph.ml(85):3032-3090
+                 (seq
+                   (if (== (field 1 edge/1146) src/1145) 0
+                     (raise
+                       (after Gbnf_parser__CoreDependencyGraph.follow lib/CoreDependencyGraph.ml(86):3042-3068
+                         (makeblock 0 (global Assert_failure/28!)
+                           [0: "lib/CoreDependencyGraph.ml" 86 4]))))
+                   (before Gbnf_parser__CoreDependencyGraph.follow lib/CoreDependencyGraph.ml(87):3074-3084
+                     (field 0 edge/1146))))))))
+     predecessors/1147 =
+       (function node/1149
+         (funct-body Gbnf_parser__CoreDependencyGraph.predecessors lib/CoreDependencyGraph.ml(95)<ghost>:3349-3548
+           (before Gbnf_parser__CoreDependencyGraph.predecessors lib/CoreDependencyGraph.ml(96):3391-3548
+             (let
+               (predecessors/1150 =
+                  (after Gbnf_parser__CoreDependencyGraph.predecessors lib/CoreDependencyGraph.ml(97):3414-3472
+                    (apply (field 40 (global Stdlib__List!))
+                      (function edge/1214 : int
+                        (funct-body Gbnf_parser__CoreDependencyGraph.predecessors.(fun) lib/CoreDependencyGraph.ml(97):3426-3458
+                          (before Gbnf_parser__CoreDependencyGraph.predecessors.(fun) lib/CoreDependencyGraph.ml(97):3439-3457
+                            (not (field 2 edge/1214)))))
+                      (field 2 node/1149))))
+               (before Gbnf_parser__CoreDependencyGraph.predecessors lib/CoreDependencyGraph.ml(99):3480-3548
+                 (seq (setfield_ptr 2 node/1149 predecessors/1150)
+                   (before Gbnf_parser__CoreDependencyGraph.predecessors lib/CoreDependencyGraph.ml(100):3513-3548
+                     (after Gbnf_parser__CoreDependencyGraph.predecessors lib/CoreDependencyGraph.ml(100):3513-3548
+                       (apply (field 18 (global Stdlib__List!))
+                         (after Gbnf_parser__CoreDependencyGraph.predecessors lib/CoreDependencyGraph.ml(100):3522-3535
+                           (apply follow/1143 node/1149))
+                         predecessors/1150)))))))))
+     link/1215 =
+       (function src/1217 dst/1218 : int
+         (funct-body Gbnf_parser__CoreDependencyGraph.link lib/CoreDependencyGraph.ml(105)<ghost>:3683-3880
+           (before Gbnf_parser__CoreDependencyGraph.link lib/CoreDependencyGraph.ml(106):3725-3880
+             (let (edge/1219 = (makemutable 0 (*,*,int) src/1217 dst/1218 0))
+               (before Gbnf_parser__CoreDependencyGraph.link lib/CoreDependencyGraph.ml(111):3804-3880
+                 (seq
+                   (setfield_ptr 1 src/1217
+                     (makeblock 0 edge/1219 (field 1 src/1217)))
+                   (before Gbnf_parser__CoreDependencyGraph.link lib/CoreDependencyGraph.ml(112):3844-3880
+                     (setfield_ptr 2 dst/1218
+                       (makeblock 0 edge/1219 (field 2 dst/1218))))))))))
+     set_successors/1220 =
+       (function src/1222 dsts/1223 : int
+         (funct-body Gbnf_parser__CoreDependencyGraph.set_successors lib/CoreDependencyGraph.ml(114)<ghost>:3901-4276
+           (before Gbnf_parser__CoreDependencyGraph.set_successors lib/CoreDependencyGraph.ml(115):3949-4276
+             (seq
+               (if (== (field 1 src/1222) 0) 0
+                 (raise
+                   (after Gbnf_parser__CoreDependencyGraph.set_successors lib/CoreDependencyGraph.ml(115):3949-3975
+                     (makeblock 0 (global Assert_failure/28!)
+                       [0: "lib/CoreDependencyGraph.ml" 115 2]))))
+               (before Gbnf_parser__CoreDependencyGraph.set_successors lib/CoreDependencyGraph.ml(116):3979-4276
+                 (letrec
+                   (loop/1224
+                      (function param/1227 : int
+                        (funct-body Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(116):3994-4259
+                          (if param/1227
+                            (let
+                              (dsts/1226 =a (field 1 param/1227)
+                               dst/1225 =a (field 0 param/1227))
+                              (before Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(120):4055-4259
+                                (if (field 3 dst/1225)
+                                  (before Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(121):4084-4093
+                                    (after Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(121):4084-4093
+                                      (apply loop/1224 dsts/1226)))
+                                  (before Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(122):4137-4259
+                                    (seq (setfield_imm 3 dst/1225 1)
+                                      (before Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(124):4183-4247
+                                        (seq
+                                          (after Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(124):4183-4195
+                                            (apply link/1215 src/1222
+                                              dst/1225))
+                                          (before Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(125):4207-4247
+                                            (seq
+                                              (after Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(125):4207-4216
+                                                (apply loop/1224 dsts/1226))
+                                              (before Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(126):4228-4247
+                                                (setfield_imm 3 dst/1225 0)))))))))))
+                            (before Gbnf_parser__CoreDependencyGraph.set_successors.loop lib/CoreDependencyGraph.ml(118):4023-4025
+                              0)))))
+                   (before Gbnf_parser__CoreDependencyGraph.set_successors lib/CoreDependencyGraph.ml(129):4267-4276
+                     (after Gbnf_parser__CoreDependencyGraph.set_successors lib/CoreDependencyGraph.ml(129):4267-4276
+                       (apply loop/1224 dsts/1223)))))))))
+     clear_successors/1228 =
+       (function node/1230 : int
+         (funct-body Gbnf_parser__CoreDependencyGraph.clear_successors lib/CoreDependencyGraph.ml(131)<ghost>:4299-4432
+           (before Gbnf_parser__CoreDependencyGraph.clear_successors lib/CoreDependencyGraph.ml(132):4308-4432
+             (seq
+               (after Gbnf_parser__CoreDependencyGraph.clear_successors lib/CoreDependencyGraph.ml(132):4308-4409
+                 (apply (field 16 (global Stdlib__List!))
+                   (function edge/1231 : int
+                     (funct-body Gbnf_parser__CoreDependencyGraph.clear_successors.(fun) lib/CoreDependencyGraph.ml(132):4318-4395
+                       (before Gbnf_parser__CoreDependencyGraph.clear_successors.(fun) lib/CoreDependencyGraph.ml(133):4335-4391
+                         (seq
+                           (if (not (field 2 edge/1231)) 0
+                             (raise
+                               (after Gbnf_parser__CoreDependencyGraph.clear_successors.(fun) lib/CoreDependencyGraph.ml(133):4335-4362
+                                 (makeblock 0 (global Assert_failure/28!)
+                                   [0: "lib/CoreDependencyGraph.ml" 133 4]))))
+                           (before Gbnf_parser__CoreDependencyGraph.clear_successors.(fun) lib/CoreDependencyGraph.ml(134):4368-4390
+                             (setfield_imm 2 edge/1231 1))))))
+                   (field 1 node/1230)))
+               (before Gbnf_parser__CoreDependencyGraph.clear_successors lib/CoreDependencyGraph.ml(136):4413-4432
+                 (setfield_ptr 1 node/1230 0))))))
+     *match*/1525 =
+       (after Gbnf_parser__CoreDependencyGraph lib/CoreDependencyGraph.ml(136)<ghost>:4432-4432
+         (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/1523 =
+       (after Gbnf_parser__CoreDependencyGraph lib/CoreDependencyGraph.ml(136)<ghost>:4432-4432
+         (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+     *match*/1521 =
+       (after Gbnf_parser__CoreDependencyGraph lib/CoreDependencyGraph.ml(136)<ghost>:4432-4432
+         (apply
+           (field 1 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/1519 =
+       (after Gbnf_parser__CoreDependencyGraph lib/CoreDependencyGraph.ml(136)<ghost>:4432-4432
+         (apply (field 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__CoreDependencyGraph")))
+    (pseudo <unknown location>
+      (makeblock 0 create/1137 data/1140 follow/1143 predecessors/1147
+        link/1215 set_successors/1220 clear_successors/1228))))

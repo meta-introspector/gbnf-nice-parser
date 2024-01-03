@@ -1,0 +1,2507 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/error.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/error.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/error.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/error.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/error.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/error.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/error.ml[14,976+0]..[14,976+0]) ghost
+          ]
+    ]
+  structure_item (lib/error.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/error.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/error.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/error.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/error.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/error.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/error.ml[14,976+0]..[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/error.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/error.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/error.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/error.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/error.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/error.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("lib/error.ml",(lib/error.ml[14,976+0]..[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/error.ml[14,976+0]..[14,976+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[14,976+0]..[14,976+0]) ghost
+          Ppat_construct "()" (lib/error.ml[14,976+0]..[14,976+0]) ghost
+          None
+        expression (lib/error.ml[14,976+0]..[14,976+0]) ghost
+          Pexp_apply
+          expression (lib/error.ml[14,976+0]..[14,976+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/error.ml[14,976+0]..[14,976+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/error.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/error.ml[14,976+0]..[14,976+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/error.ml[14,976+0]..[14,976+0]) ghost
+                Pexp_constant PConst_string("error.ml",(lib/error.ml[14,976+0]..[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/error.ml[14,976+0]..[14,976+11])
+    Pstr_open Fresh
+    module_expr (lib/error.ml[14,976+5]..[14,976+11])
+      Pmod_ident "Printf" (lib/error.ml[14,976+5]..[14,976+11])
+  structure_item (lib/error.ml[20,1152+0]..[21,1166+10])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[20,1152+4]..[20,1152+11])
+          Ppat_var "enabled" (lib/error.ml[20,1152+4]..[20,1152+11])
+        expression (lib/error.ml[21,1166+2]..[21,1166+10])
+          Pexp_apply
+          expression (lib/error.ml[21,1166+2]..[21,1166+5])
+            Pexp_ident "ref" (lib/error.ml[21,1166+2]..[21,1166+5])
+          [
+            <arg>
+            Nolabel
+              expression (lib/error.ml[21,1166+6]..[21,1166+10])
+                Pexp_construct "true" (lib/error.ml[21,1166+6]..[21,1166+10])
+                None
+          ]
+    ]
+  structure_item (lib/error.ml[23,1178+0]..[24,1194+17])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[23,1178+4]..[23,1178+10])
+          Ppat_var "enable" (lib/error.ml[23,1178+4]..[23,1178+10])
+        expression (lib/error.ml[23,1178+11]..[24,1194+17]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/error.ml[23,1178+11]..[23,1178+13])
+            Ppat_construct "()" (lib/error.ml[23,1178+11]..[23,1178+13])
+            None
+          expression (lib/error.ml[24,1194+2]..[24,1194+17])
+            Pexp_apply
+            expression (lib/error.ml[24,1194+10]..[24,1194+12])
+              Pexp_ident ":=" (lib/error.ml[24,1194+10]..[24,1194+12])
+            [
+              <arg>
+              Nolabel
+                expression (lib/error.ml[24,1194+2]..[24,1194+9])
+                  Pexp_ident "enabled" (lib/error.ml[24,1194+2]..[24,1194+9])
+              <arg>
+              Nolabel
+                expression (lib/error.ml[24,1194+13]..[24,1194+17])
+                  Pexp_construct "true" (lib/error.ml[24,1194+13]..[24,1194+17])
+                  None
+            ]
+    ]
+  structure_item (lib/error.ml[26,1213+0]..[27,1230+18])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[26,1213+4]..[26,1213+11])
+          Ppat_var "disable" (lib/error.ml[26,1213+4]..[26,1213+11])
+        expression (lib/error.ml[26,1213+12]..[27,1230+18]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/error.ml[26,1213+12]..[26,1213+14])
+            Ppat_construct "()" (lib/error.ml[26,1213+12]..[26,1213+14])
+            None
+          expression (lib/error.ml[27,1230+2]..[27,1230+18])
+            Pexp_apply
+            expression (lib/error.ml[27,1230+10]..[27,1230+12])
+              Pexp_ident ":=" (lib/error.ml[27,1230+10]..[27,1230+12])
+            [
+              <arg>
+              Nolabel
+                expression (lib/error.ml[27,1230+2]..[27,1230+9])
+                  Pexp_ident "enabled" (lib/error.ml[27,1230+2]..[27,1230+9])
+              <arg>
+              Nolabel
+                expression (lib/error.ml[27,1230+13]..[27,1230+18])
+                  Pexp_construct "false" (lib/error.ml[27,1230+13]..[27,1230+18])
+                  None
+            ]
+    ]
+  structure_item (lib/error.ml[53,2237+0]..[55,2306+36])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[53,2237+4]..[53,2237+7])
+          Ppat_var "log" (lib/error.ml[53,2237+4]..[53,2237+7])
+        expression (lib/error.ml[53,2237+8]..[55,2306+36]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/error.ml[53,2237+8]..[53,2237+12])
+            Ppat_var "kind" (lib/error.ml[53,2237+8]..[53,2237+12])
+          expression (lib/error.ml[53,2237+13]..[55,2306+36]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/error.ml[53,2237+13]..[53,2237+22])
+              Ppat_var "verbosity" (lib/error.ml[53,2237+13]..[53,2237+22])
+            expression (lib/error.ml[53,2237+23]..[55,2306+36]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (lib/error.ml[53,2237+23]..[53,2237+26])
+                Ppat_var "msg" (lib/error.ml[53,2237+23]..[53,2237+26])
+              expression (lib/error.ml[54,2266+2]..[55,2306+36])
+                Pexp_ifthenelse
+                expression (lib/error.ml[54,2266+5]..[54,2266+34])
+                  Pexp_apply
+                  expression (lib/error.ml[54,2266+23]..[54,2266+25])
+                    Pexp_ident "&&" (lib/error.ml[54,2266+23]..[54,2266+25])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/error.ml[54,2266+5]..[54,2266+22])
+                        Pexp_apply
+                        expression (lib/error.ml[54,2266+10]..[54,2266+12])
+                          Pexp_ident ">=" (lib/error.ml[54,2266+10]..[54,2266+12])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/error.ml[54,2266+5]..[54,2266+9])
+                              Pexp_ident "kind" (lib/error.ml[54,2266+5]..[54,2266+9])
+                          <arg>
+                          Nolabel
+                            expression (lib/error.ml[54,2266+13]..[54,2266+22])
+                              Pexp_ident "verbosity" (lib/error.ml[54,2266+13]..[54,2266+22])
+                        ]
+                    <arg>
+                    Nolabel
+                      expression (lib/error.ml[54,2266+26]..[54,2266+34])
+                        Pexp_apply
+                        expression (lib/error.ml[54,2266+26]..[54,2266+27])
+                          Pexp_ident "!" (lib/error.ml[54,2266+26]..[54,2266+27])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/error.ml[54,2266+27]..[54,2266+34])
+                              Pexp_ident "enabled" (lib/error.ml[54,2266+27]..[54,2266+34])
+                        ]
+                  ]
+                expression (lib/error.ml[55,2306+4]..[55,2306+36])
+                  Pexp_apply
+                  expression (lib/error.ml[55,2306+4]..[55,2306+18])
+                    Pexp_ident "Printf.fprintf" (lib/error.ml[55,2306+4]..[55,2306+18])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/error.ml[55,2306+19]..[55,2306+25])
+                        Pexp_ident "stderr" (lib/error.ml[55,2306+19]..[55,2306+25])
+                    <arg>
+                    Nolabel
+                      expression (lib/error.ml[55,2306+26]..[55,2306+32])
+                        Pexp_constant PConst_string("%t%!",(lib/error.ml[55,2306+27]..[55,2306+31]),None)
+                    <arg>
+                    Nolabel
+                      expression (lib/error.ml[55,2306+33]..[55,2306+36])
+                        Pexp_ident "msg" (lib/error.ml[55,2306+33]..[55,2306+36])
+                  ]
+                None
+    ]
+  structure_item (lib/error.ml[70,2588+0]..[73,2708+13])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[70,2588+4]..[70,2588+19])
+          Ppat_var "print_positions" (lib/error.ml[70,2588+4]..[70,2588+19])
+        expression (lib/error.ml[70,2588+20]..[73,2708+13]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/error.ml[70,2588+20]..[70,2588+21])
+            Ppat_var "f" (lib/error.ml[70,2588+20]..[70,2588+21])
+          expression (lib/error.ml[70,2588+22]..[73,2708+13]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/error.ml[70,2588+22]..[70,2588+31])
+              Ppat_var "positions" (lib/error.ml[70,2588+22]..[70,2588+31])
+            expression (lib/error.ml[71,2622+2]..[73,2708+13])
+              Pexp_apply
+              expression (lib/error.ml[71,2622+2]..[71,2622+11])
+                Pexp_ident "List.iter" (lib/error.ml[71,2622+2]..[71,2622+11])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/error.ml[71,2622+12]..[73,2708+3])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (lib/error.ml[71,2622+17]..[71,2622+25])
+                      Ppat_var "position" (lib/error.ml[71,2622+17]..[71,2622+25])
+                    expression (lib/error.ml[72,2651+4]..[72,2651+56])
+                      Pexp_apply
+                      expression (lib/error.ml[72,2651+4]..[72,2651+11])
+                        Pexp_ident "fprintf" (lib/error.ml[72,2651+4]..[72,2651+11])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/error.ml[72,2651+12]..[72,2651+13])
+                            Pexp_ident "f" (lib/error.ml[72,2651+12]..[72,2651+13])
+                        <arg>
+                        Nolabel
+                          expression (lib/error.ml[72,2651+14]..[72,2651+21])
+                            Pexp_constant PConst_string("%s:\n",(lib/error.ml[72,2651+15]..[72,2651+20]),None)
+                        <arg>
+                        Nolabel
+                          expression (lib/error.ml[72,2651+22]..[72,2651+56])
+                            Pexp_apply
+                            expression (lib/error.ml[72,2651+23]..[72,2651+46])
+                              Pexp_ident "Positions.string_of_pos" (lib/error.ml[72,2651+23]..[72,2651+46])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (lib/error.ml[72,2651+47]..[72,2651+55])
+                                  Pexp_ident "position" (lib/error.ml[72,2651+47]..[72,2651+55])
+                            ]
+                      ]
+                <arg>
+                Nolabel
+                  expression (lib/error.ml[73,2708+4]..[73,2708+13])
+                    Pexp_ident "positions" (lib/error.ml[73,2708+4]..[73,2708+13])
+              ]
+    ]
+  structure_item (lib/error.ml[75,2723+0]..[79,2919+29])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[75,2723+4]..[75,2723+11])
+          Ppat_var "display" (lib/error.ml[75,2723+4]..[75,2723+11])
+        expression (lib/error.ml[75,2723+12]..[79,2919+29]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/error.ml[75,2723+12]..[75,2723+24])
+            Ppat_var "continuation" (lib/error.ml[75,2723+12]..[75,2723+24])
+          expression (lib/error.ml[75,2723+25]..[79,2919+29]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/error.ml[75,2723+25]..[75,2723+31])
+              Ppat_var "header" (lib/error.ml[75,2723+25]..[75,2723+31])
+            expression (lib/error.ml[75,2723+32]..[79,2919+29]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (lib/error.ml[75,2723+32]..[75,2723+41])
+                Ppat_var "positions" (lib/error.ml[75,2723+32]..[75,2723+41])
+              expression (lib/error.ml[75,2723+42]..[79,2919+29]) ghost
+                Pexp_fun
+                Nolabel
+                None
+                pattern (lib/error.ml[75,2723+42]..[75,2723+48])
+                  Ppat_var "format" (lib/error.ml[75,2723+42]..[75,2723+48])
+                expression (lib/error.ml[76,2774+2]..[79,2919+29])
+                  Pexp_let Nonrec
+                  [
+                    <def>
+                      pattern (lib/error.ml[76,2774+6]..[76,2774+13])
+                        Ppat_var "kprintf" (lib/error.ml[76,2774+6]..[76,2774+13])
+                      expression (lib/error.ml[76,2774+16]..[76,2774+70])
+                        Pexp_ifthenelse
+                        expression (lib/error.ml[76,2774+19]..[76,2774+27])
+                          Pexp_apply
+                          expression (lib/error.ml[76,2774+19]..[76,2774+20])
+                            Pexp_ident "!" (lib/error.ml[76,2774+19]..[76,2774+20])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (lib/error.ml[76,2774+20]..[76,2774+27])
+                                Pexp_ident "enabled" (lib/error.ml[76,2774+20]..[76,2774+27])
+                          ]
+                        expression (lib/error.ml[76,2774+33]..[76,2774+48])
+                          Pexp_ident "Printf.kfprintf" (lib/error.ml[76,2774+33]..[76,2774+48])
+                        Some
+                          expression (lib/error.ml[76,2774+54]..[76,2774+70])
+                            Pexp_ident "Printf.ikfprintf" (lib/error.ml[76,2774+54]..[76,2774+70])
+                  ]
+                  expression (lib/error.ml[77,2848+2]..[79,2919+29])
+                    Pexp_apply
+                    expression (lib/error.ml[77,2848+2]..[77,2848+9])
+                      Pexp_ident "kprintf" (lib/error.ml[77,2848+2]..[77,2848+9])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/error.ml[77,2848+10]..[77,2848+22])
+                          Pexp_ident "continuation" (lib/error.ml[77,2848+10]..[77,2848+22])
+                      <arg>
+                      Nolabel
+                        expression (lib/error.ml[77,2848+23]..[77,2848+29])
+                          Pexp_ident "stderr" (lib/error.ml[77,2848+23]..[77,2848+29])
+                      <arg>
+                      Nolabel
+                        expression (lib/error.ml[78,2878+4]..[78,2878+40])
+                          Pexp_apply
+                          expression (lib/error.ml[78,2878+10]..[78,2878+12])
+                            Pexp_ident "^^" (lib/error.ml[78,2878+10]..[78,2878+12])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (lib/error.ml[78,2878+5]..[78,2878+9])
+                                Pexp_constant PConst_string("%a",(lib/error.ml[78,2878+6]..[78,2878+8]),None)
+                            <arg>
+                            Nolabel
+                              expression (lib/error.ml[78,2878+13]..[78,2878+39])
+                                Pexp_apply
+                                expression (lib/error.ml[78,2878+20]..[78,2878+22])
+                                  Pexp_ident "^^" (lib/error.ml[78,2878+20]..[78,2878+22])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/error.ml[78,2878+13]..[78,2878+19])
+                                      Pexp_ident "header" (lib/error.ml[78,2878+13]..[78,2878+19])
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/error.ml[78,2878+23]..[78,2878+39])
+                                      Pexp_apply
+                                      expression (lib/error.ml[78,2878+30]..[78,2878+32])
+                                        Pexp_ident "^^" (lib/error.ml[78,2878+30]..[78,2878+32])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (lib/error.ml[78,2878+23]..[78,2878+29])
+                                            Pexp_ident "format" (lib/error.ml[78,2878+23]..[78,2878+29])
+                                        <arg>
+                                        Nolabel
+                                          expression (lib/error.ml[78,2878+33]..[78,2878+39])
+                                            Pexp_constant PConst_string("\n%!",(lib/error.ml[78,2878+34]..[78,2878+38]),None)
+                                      ]
+                                ]
+                          ]
+                      <arg>
+                      Nolabel
+                        expression (lib/error.ml[79,2919+4]..[79,2919+19])
+                          Pexp_ident "print_positions" (lib/error.ml[79,2919+4]..[79,2919+19])
+                      <arg>
+                      Nolabel
+                        expression (lib/error.ml[79,2919+20]..[79,2919+29])
+                          Pexp_ident "positions" (lib/error.ml[79,2919+20]..[79,2919+29])
+                    ]
+    ]
+  structure_item (lib/error.ml[81,2950+0]..[85,3025+20])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[81,2950+4]..[81,2950+9])
+          Ppat_var "error" (lib/error.ml[81,2950+4]..[81,2950+9])
+        expression (lib/error.ml[81,2950+10]..[85,3025+20]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/error.ml[81,2950+10]..[81,2950+19])
+            Ppat_var "positions" (lib/error.ml[81,2950+10]..[81,2950+19])
+          expression (lib/error.ml[81,2950+20]..[85,3025+20]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/error.ml[81,2950+20]..[81,2950+26])
+              Ppat_var "format" (lib/error.ml[81,2950+20]..[81,2950+26])
+            expression (lib/error.ml[82,2979+2]..[85,3025+20])
+              Pexp_apply
+              expression (lib/error.ml[82,2979+2]..[82,2979+9])
+                Pexp_ident "display" (lib/error.ml[82,2979+2]..[82,2979+9])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/error.ml[83,2989+4]..[83,2989+21])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (lib/error.ml[83,2989+9]..[83,2989+10])
+                      Ppat_any
+                    expression (lib/error.ml[83,2989+14]..[83,2989+20])
+                      Pexp_apply
+                      expression (lib/error.ml[83,2989+14]..[83,2989+18])
+                        Pexp_ident "exit" (lib/error.ml[83,2989+14]..[83,2989+18])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/error.ml[83,2989+19]..[83,2989+20])
+                            Pexp_constant PConst_int (1,None)
+                      ]
+                <arg>
+                Nolabel
+                  expression (lib/error.ml[84,3011+4]..[84,3011+13])
+                    Pexp_constant PConst_string("Error: ",(lib/error.ml[84,3011+5]..[84,3011+12]),None)
+                <arg>
+                Nolabel
+                  expression (lib/error.ml[85,3025+4]..[85,3025+13])
+                    Pexp_ident "positions" (lib/error.ml[85,3025+4]..[85,3025+13])
+                <arg>
+                Nolabel
+                  expression (lib/error.ml[85,3025+14]..[85,3025+20])
+                    Pexp_ident "format" (lib/error.ml[85,3025+14]..[85,3025+20])
+              ]
+    ]
+  structure_item (lib/error.ml[87,3047+0]..[91,3122+20])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[87,3047+4]..[87,3047+11])
+          Ppat_var "warning" (lib/error.ml[87,3047+4]..[87,3047+11])
+        expression (lib/error.ml[87,3047+12]..[91,3122+20]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/error.ml[87,3047+12]..[87,3047+21])
+            Ppat_var "positions" (lib/error.ml[87,3047+12]..[87,3047+21])
+          expression (lib/error.ml[87,3047+22]..[91,3122+20]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/error.ml[87,3047+22]..[87,3047+28])
+              Ppat_var "format" (lib/error.ml[87,3047+22]..[87,3047+28])
+            expression (lib/error.ml[88,3078+2]..[91,3122+20])
+              Pexp_apply
+              expression (lib/error.ml[88,3078+2]..[88,3078+9])
+                Pexp_ident "display" (lib/error.ml[88,3078+2]..[88,3078+9])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/error.ml[89,3088+4]..[89,3088+17])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (lib/error.ml[89,3088+9]..[89,3088+10])
+                      Ppat_any
+                    expression (lib/error.ml[89,3088+14]..[89,3088+16])
+                      Pexp_construct "()" (lib/error.ml[89,3088+14]..[89,3088+16])
+                      None
+                <arg>
+                Nolabel
+                  expression (lib/error.ml[90,3106+4]..[90,3106+15])
+                    Pexp_constant PConst_string("Warning: ",(lib/error.ml[90,3106+5]..[90,3106+14]),None)
+                <arg>
+                Nolabel
+                  expression (lib/error.ml[91,3122+4]..[91,3122+13])
+                    Pexp_ident "positions" (lib/error.ml[91,3122+4]..[91,3122+13])
+                <arg>
+                Nolabel
+                  expression (lib/error.ml[91,3122+14]..[91,3122+20])
+                    Pexp_ident "format" (lib/error.ml[91,3122+14]..[91,3122+20])
+              ]
+    ]
+  structure_item (lib/error.ml[93,3144+0]..[94,3159+32])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[93,3144+4]..[93,3144+10])
+          Ppat_var "errorp" (lib/error.ml[93,3144+4]..[93,3144+10])
+        expression (lib/error.ml[93,3144+11]..[94,3159+32]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/error.ml[93,3144+11]..[93,3144+12])
+            Ppat_var "v" (lib/error.ml[93,3144+11]..[93,3144+12])
+          expression (lib/error.ml[94,3159+2]..[94,3159+32])
+            Pexp_apply
+            expression (lib/error.ml[94,3159+2]..[94,3159+7])
+              Pexp_ident "error" (lib/error.ml[94,3159+2]..[94,3159+7])
+            [
+              <arg>
+              Nolabel
+                expression (lib/error.ml[94,3159+8]..[94,3159+32])
+                  Pexp_construct "::" (lib/error.ml[94,3159+10]..[94,3159+32]) ghost
+                  Some
+                    expression (lib/error.ml[94,3159+10]..[94,3159+32]) ghost
+                      Pexp_tuple
+                      [
+                        expression (lib/error.ml[94,3159+10]..[94,3159+30])
+                          Pexp_apply
+                          expression (lib/error.ml[94,3159+10]..[94,3159+28])
+                            Pexp_ident "Positions.position" (lib/error.ml[94,3159+10]..[94,3159+28])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (lib/error.ml[94,3159+29]..[94,3159+30])
+                                Pexp_ident "v" (lib/error.ml[94,3159+29]..[94,3159+30])
+                          ]
+                        expression (lib/error.ml[94,3159+31]..[94,3159+32]) ghost
+                          Pexp_construct "[]" (lib/error.ml[94,3159+31]..[94,3159+32]) ghost
+                          None
+                      ]
+            ]
+    ]
+  structure_item (lib/error.ml[100,3356+0]..[101,3372+10])
+    Pstr_type Rec
+    [
+      type_declaration "category" (lib/error.ml[100,3356+5]..[100,3356+13]) (lib/error.ml[100,3356+0]..[101,3372+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/error.ml[101,3372+2]..[101,3372+10])
+              Ptyp_constr "ref" (lib/error.ml[101,3372+7]..[101,3372+10])
+              [
+                core_type (lib/error.ml[101,3372+2]..[101,3372+6])
+                  Ptyp_constr "bool" (lib/error.ml[101,3372+2]..[101,3372+6])
+                  []
+              ]
+    ]
+  structure_item (lib/error.ml[103,3384+0]..[104,3406+11])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[103,3384+4]..[103,3384+16])
+          Ppat_var "new_category" (lib/error.ml[103,3384+4]..[103,3384+16])
+        expression (lib/error.ml[103,3384+17]..[104,3406+11]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/error.ml[103,3384+17]..[103,3384+19])
+            Ppat_construct "()" (lib/error.ml[103,3384+17]..[103,3384+19])
+            None
+          expression (lib/error.ml[104,3406+2]..[104,3406+11])
+            Pexp_apply
+            expression (lib/error.ml[104,3406+2]..[104,3406+5])
+              Pexp_ident "ref" (lib/error.ml[104,3406+2]..[104,3406+5])
+            [
+              <arg>
+              Nolabel
+                expression (lib/error.ml[104,3406+6]..[104,3406+11])
+                  Pexp_construct "false" (lib/error.ml[104,3406+6]..[104,3406+11])
+                  None
+            ]
+    ]
+  structure_item (lib/error.ml[106,3419+0]..[110,3514+20])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[106,3419+4]..[106,3419+10])
+          Ppat_var "signal" (lib/error.ml[106,3419+4]..[106,3419+10])
+        expression (lib/error.ml[106,3419+11]..[110,3514+20]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/error.ml[106,3419+11]..[106,3419+19])
+            Ppat_var "category" (lib/error.ml[106,3419+11]..[106,3419+19])
+          expression (lib/error.ml[106,3419+20]..[110,3514+20]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/error.ml[106,3419+20]..[106,3419+29])
+              Ppat_var "positions" (lib/error.ml[106,3419+20]..[106,3419+29])
+            expression (lib/error.ml[106,3419+30]..[110,3514+20]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (lib/error.ml[106,3419+30]..[106,3419+36])
+                Ppat_var "format" (lib/error.ml[106,3419+30]..[106,3419+36])
+              expression (lib/error.ml[107,3458+2]..[110,3514+20])
+                Pexp_apply
+                expression (lib/error.ml[107,3458+2]..[107,3458+9])
+                  Pexp_ident "display" (lib/error.ml[107,3458+2]..[107,3458+9])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/error.ml[108,3468+4]..[108,3468+31])
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/error.ml[108,3468+9]..[108,3468+10])
+                        Ppat_any
+                      expression (lib/error.ml[108,3468+14]..[108,3468+30])
+                        Pexp_apply
+                        expression (lib/error.ml[108,3468+23]..[108,3468+25])
+                          Pexp_ident ":=" (lib/error.ml[108,3468+23]..[108,3468+25])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/error.ml[108,3468+14]..[108,3468+22])
+                              Pexp_ident "category" (lib/error.ml[108,3468+14]..[108,3468+22])
+                          <arg>
+                          Nolabel
+                            expression (lib/error.ml[108,3468+26]..[108,3468+30])
+                              Pexp_construct "true" (lib/error.ml[108,3468+26]..[108,3468+30])
+                              None
+                        ]
+                  <arg>
+                  Nolabel
+                    expression (lib/error.ml[109,3500+4]..[109,3500+13])
+                      Pexp_constant PConst_string("Error: ",(lib/error.ml[109,3500+5]..[109,3500+12]),None)
+                  <arg>
+                  Nolabel
+                    expression (lib/error.ml[110,3514+4]..[110,3514+13])
+                      Pexp_ident "positions" (lib/error.ml[110,3514+4]..[110,3514+13])
+                  <arg>
+                  Nolabel
+                    expression (lib/error.ml[110,3514+14]..[110,3514+20])
+                      Pexp_ident "format" (lib/error.ml[110,3514+14]..[110,3514+20])
+                ]
+    ]
+  structure_item (lib/error.ml[112,3536+0]..[114,3579+10])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[112,3536+4]..[112,3536+11])
+          Ppat_var "exit_if" (lib/error.ml[112,3536+4]..[112,3536+11])
+        expression (lib/error.ml[112,3536+12]..[114,3579+10]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/error.ml[112,3536+12]..[112,3536+20])
+            Ppat_var "category" (lib/error.ml[112,3536+12]..[112,3536+20])
+          expression (lib/error.ml[113,3559+2]..[114,3579+10])
+            Pexp_ifthenelse
+            expression (lib/error.ml[113,3559+5]..[113,3559+14])
+              Pexp_apply
+              expression (lib/error.ml[113,3559+5]..[113,3559+6])
+                Pexp_ident "!" (lib/error.ml[113,3559+5]..[113,3559+6])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/error.ml[113,3559+6]..[113,3559+14])
+                    Pexp_ident "category" (lib/error.ml[113,3559+6]..[113,3559+14])
+              ]
+            expression (lib/error.ml[114,3579+4]..[114,3579+10])
+              Pexp_apply
+              expression (lib/error.ml[114,3579+4]..[114,3579+8])
+                Pexp_ident "exit" (lib/error.ml[114,3579+4]..[114,3579+8])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/error.ml[114,3579+9]..[114,3579+10])
+                    Pexp_constant PConst_int (1,None)
+              ]
+            None
+    ]
+  structure_item (lib/error.ml[116,3591+0]..[124,3732+13])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[116,3591+4]..[116,3591+21])
+          Ppat_var "with_new_category" (lib/error.ml[116,3591+4]..[116,3591+21])
+        expression (lib/error.ml[116,3591+22]..[124,3732+13]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/error.ml[116,3591+22]..[116,3591+23])
+            Ppat_var "f" (lib/error.ml[116,3591+22]..[116,3591+23])
+          expression (lib/error.ml[117,3617+2]..[124,3732+13])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (lib/error.ml[117,3617+6]..[117,3617+7])
+                  Ppat_var "c" (lib/error.ml[117,3617+6]..[117,3617+7])
+                expression (lib/error.ml[117,3617+10]..[117,3617+24])
+                  Pexp_apply
+                  expression (lib/error.ml[117,3617+10]..[117,3617+22])
+                    Pexp_ident "new_category" (lib/error.ml[117,3617+10]..[117,3617+22])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/error.ml[117,3617+22]..[117,3617+24])
+                        Pexp_construct "()" (lib/error.ml[117,3617+22]..[117,3617+24])
+                        None
+                  ]
+            ]
+            expression (lib/error.ml[118,3645+2]..[124,3732+13])
+              Pexp_match
+              expression (lib/error.ml[118,3645+8]..[118,3645+11])
+                Pexp_apply
+                expression (lib/error.ml[118,3645+8]..[118,3645+9])
+                  Pexp_ident "f" (lib/error.ml[118,3645+8]..[118,3645+9])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/error.ml[118,3645+10]..[118,3645+11])
+                      Pexp_ident "c" (lib/error.ml[118,3645+10]..[118,3645+11])
+                ]
+              [
+                <case>
+                  pattern (lib/error.ml[119,3662+4]..[119,3662+5])
+                    Ppat_var "y" (lib/error.ml[119,3662+4]..[119,3662+5])
+                  expression (lib/error.ml[120,3671+6]..[121,3688+7])
+                    Pexp_sequence
+                    expression (lib/error.ml[120,3671+6]..[120,3671+15])
+                      Pexp_apply
+                      expression (lib/error.ml[120,3671+6]..[120,3671+13])
+                        Pexp_ident "exit_if" (lib/error.ml[120,3671+6]..[120,3671+13])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/error.ml[120,3671+14]..[120,3671+15])
+                            Pexp_ident "c" (lib/error.ml[120,3671+14]..[120,3671+15])
+                      ]
+                    expression (lib/error.ml[121,3688+6]..[121,3688+7])
+                      Pexp_ident "y" (lib/error.ml[121,3688+6]..[121,3688+7])
+                <case>
+                  pattern (lib/error.ml[122,3696+4]..[122,3696+15])
+                    Ppat_exception
+                    pattern (lib/error.ml[122,3696+14]..[122,3696+15])
+                      Ppat_var "e" (lib/error.ml[122,3696+14]..[122,3696+15])
+                  expression (lib/error.ml[123,3715+6]..[124,3732+13])
+                    Pexp_sequence
+                    expression (lib/error.ml[123,3715+6]..[123,3715+15])
+                      Pexp_apply
+                      expression (lib/error.ml[123,3715+6]..[123,3715+13])
+                        Pexp_ident "exit_if" (lib/error.ml[123,3715+6]..[123,3715+13])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/error.ml[123,3715+14]..[123,3715+15])
+                            Pexp_ident "c" (lib/error.ml[123,3715+14]..[123,3715+15])
+                      ]
+                    expression (lib/error.ml[124,3732+6]..[124,3732+13])
+                      Pexp_apply
+                      expression (lib/error.ml[124,3732+6]..[124,3732+11])
+                        Pexp_ident "raise" (lib/error.ml[124,3732+6]..[124,3732+11])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/error.ml[124,3732+12]..[124,3732+13])
+                            Pexp_ident "e" (lib/error.ml[124,3732+12]..[124,3732+13])
+                      ]
+              ]
+    ]
+  structure_item (lib/error.ml[130,3910+0]..[131,3934+16])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[130,3910+4]..[130,3910+21])
+          Ppat_var "grammatical_error" (lib/error.ml[130,3910+4]..[130,3910+21])
+        expression (lib/error.ml[131,3934+2]..[131,3934+16])
+          Pexp_apply
+          expression (lib/error.ml[131,3934+2]..[131,3934+14])
+            Pexp_ident "new_category" (lib/error.ml[131,3934+2]..[131,3934+14])
+          [
+            <arg>
+            Nolabel
+              expression (lib/error.ml[131,3934+14]..[131,3934+16])
+                Pexp_construct "()" (lib/error.ml[131,3934+14]..[131,3934+16])
+                None
+          ]
+    ]
+  structure_item (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+          Ppat_construct "()" (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+          None
+        expression (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+          Pexp_apply
+          expression (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/error.ml[131,3934+16]..[131,3934+16]) ghost,None)
+          ]
+    ]
+  structure_item (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+          Ppat_construct "()" (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+          None
+        expression (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+          Pexp_apply
+          expression (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+                Pexp_construct "()" (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+          Ppat_construct "()" (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+          None
+        expression (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+          Pexp_apply
+          expression (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+                Pexp_construct "()" (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+          Ppat_construct "()" (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+          None
+        expression (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+          Pexp_apply
+          expression (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/error.ml[131,3934+16]..[131,3934+16]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set ~absolute_filename:"lib/error.ml"
+let () = Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "error.ml"
+open Printf
+let enabled = ref true
+let enable () = enabled := true
+let disable () = enabled := false
+let log kind verbosity msg =
+  if (kind >= verbosity) && (!enabled) then Printf.fprintf stderr "%t%!" msg
+let print_positions f positions =
+  List.iter
+    (fun position -> fprintf f "%s:\n" (Positions.string_of_pos position))
+    positions
+let display continuation header positions format =
+  let kprintf = if !enabled then Printf.kfprintf else Printf.ikfprintf in
+  kprintf continuation stderr ("%a" ^^ (header ^^ (format ^^ "\n%!")))
+    print_positions positions
+let error positions format =
+  display (fun _ -> exit 1) "Error: " positions format
+let warning positions format =
+  display (fun _ -> ()) "Warning: " positions format
+let errorp v = error [Positions.position v]
+type category = bool ref
+let new_category () = ref false
+let signal category positions format =
+  display (fun _ -> category := true) "Error: " positions format
+let exit_if category = if !category then exit 1
+let with_new_category f =
+  let c = new_category () in
+  match f c with | y -> (exit_if c; y) | exception e -> (exit_if c; raise e)
+let grammatical_error = new_category ()
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+                Texp_constant Const_string("lib/error.ml",(lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+          Texp_apply
+          expression (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost
+                Texp_constant Const_string("error.ml",(lib/error.ml[14,976+0]..lib/error.ml[14,976+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/error.ml[14,976+0]..lib/error.ml[14,976+11])
+    Tstr_open Fresh
+    module_expr (lib/error.ml[14,976+5]..lib/error.ml[14,976+11])
+      Tmod_ident "Stdlib!.Printf"
+  structure_item (lib/error.ml[20,1152+0]..lib/error.ml[21,1166+10])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[20,1152+4]..lib/error.ml[20,1152+11])
+          Tpat_var "enabled/1141"
+        expression (lib/error.ml[21,1166+2]..lib/error.ml[21,1166+10])
+          Texp_apply
+          expression (lib/error.ml[21,1166+2]..lib/error.ml[21,1166+5])
+            Texp_ident "Stdlib!.ref"
+          [
+            <arg>
+              Nolabel
+              expression (lib/error.ml[21,1166+6]..lib/error.ml[21,1166+10])
+                Texp_construct "true"
+                []
+          ]
+    ]
+  structure_item (lib/error.ml[23,1178+0]..lib/error.ml[24,1194+17])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[23,1178+4]..lib/error.ml[23,1178+10])
+          Tpat_var "enable/1142"
+        expression (lib/error.ml[23,1178+11]..lib/error.ml[24,1194+17]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/error.ml[23,1178+11]..lib/error.ml[23,1178+13])
+                Tpat_construct "()"
+                []
+                None
+              expression (lib/error.ml[24,1194+2]..lib/error.ml[24,1194+17])
+                Texp_apply
+                expression (lib/error.ml[24,1194+10]..lib/error.ml[24,1194+12])
+                  Texp_ident "Stdlib!.:="
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/error.ml[24,1194+2]..lib/error.ml[24,1194+9])
+                      Texp_ident "enabled/1141"
+                  <arg>
+                    Nolabel
+                    expression (lib/error.ml[24,1194+13]..lib/error.ml[24,1194+17])
+                      Texp_construct "true"
+                      []
+                ]
+          ]
+    ]
+  structure_item (lib/error.ml[26,1213+0]..lib/error.ml[27,1230+18])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[26,1213+4]..lib/error.ml[26,1213+11])
+          Tpat_var "disable/1145"
+        expression (lib/error.ml[26,1213+12]..lib/error.ml[27,1230+18]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/error.ml[26,1213+12]..lib/error.ml[26,1213+14])
+                Tpat_construct "()"
+                []
+                None
+              expression (lib/error.ml[27,1230+2]..lib/error.ml[27,1230+18])
+                Texp_apply
+                expression (lib/error.ml[27,1230+10]..lib/error.ml[27,1230+12])
+                  Texp_ident "Stdlib!.:="
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/error.ml[27,1230+2]..lib/error.ml[27,1230+9])
+                      Texp_ident "enabled/1141"
+                  <arg>
+                    Nolabel
+                    expression (lib/error.ml[27,1230+13]..lib/error.ml[27,1230+18])
+                      Texp_construct "false"
+                      []
+                ]
+          ]
+    ]
+  structure_item (lib/error.ml[53,2237+0]..lib/error.ml[55,2306+36])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[53,2237+4]..lib/error.ml[53,2237+7])
+          Tpat_var "log/1148"
+        expression (lib/error.ml[53,2237+8]..lib/error.ml[55,2306+36]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/error.ml[53,2237+8]..lib/error.ml[53,2237+12])
+                Tpat_var "kind/1149"
+              expression (lib/error.ml[53,2237+13]..lib/error.ml[55,2306+36]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/error.ml[53,2237+13]..lib/error.ml[53,2237+22])
+                      Tpat_var "verbosity/1150"
+                    expression (lib/error.ml[53,2237+23]..lib/error.ml[55,2306+36]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/error.ml[53,2237+23]..lib/error.ml[53,2237+26])
+                            Tpat_var "msg/1151"
+                          expression (lib/error.ml[54,2266+2]..lib/error.ml[55,2306+36])
+                            Texp_ifthenelse
+                            expression (lib/error.ml[54,2266+5]..lib/error.ml[54,2266+34])
+                              Texp_apply
+                              expression (lib/error.ml[54,2266+23]..lib/error.ml[54,2266+25])
+                                Texp_ident "Stdlib!.&&"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (lib/error.ml[54,2266+5]..lib/error.ml[54,2266+22])
+                                    Texp_apply
+                                    expression (lib/error.ml[54,2266+10]..lib/error.ml[54,2266+12])
+                                      Texp_ident "Stdlib!.>="
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (lib/error.ml[54,2266+5]..lib/error.ml[54,2266+9])
+                                          Texp_ident "kind/1149"
+                                      <arg>
+                                        Nolabel
+                                        expression (lib/error.ml[54,2266+13]..lib/error.ml[54,2266+22])
+                                          Texp_ident "verbosity/1150"
+                                    ]
+                                <arg>
+                                  Nolabel
+                                  expression (lib/error.ml[54,2266+26]..lib/error.ml[54,2266+34])
+                                    Texp_apply
+                                    expression (lib/error.ml[54,2266+26]..lib/error.ml[54,2266+27])
+                                      Texp_ident "Stdlib!.!"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (lib/error.ml[54,2266+27]..lib/error.ml[54,2266+34])
+                                          Texp_ident "enabled/1141"
+                                    ]
+                              ]
+                            expression (lib/error.ml[55,2306+4]..lib/error.ml[55,2306+36])
+                              Texp_apply
+                              expression (lib/error.ml[55,2306+4]..lib/error.ml[55,2306+18])
+                                Texp_ident "Stdlib!.Printf.fprintf"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (lib/error.ml[55,2306+19]..lib/error.ml[55,2306+25])
+                                    Texp_ident "Stdlib!.stderr"
+                                <arg>
+                                  Nolabel
+                                  expression (lib/error.ml[55,2306+26]..lib/error.ml[55,2306+32])
+                                    Texp_construct "CamlinternalFormatBasics.Format"
+                                    [
+                                      expression (lib/error.ml[55,2306+26]..lib/error.ml[55,2306+32]) ghost
+                                        Texp_construct "CamlinternalFormatBasics.Theta"
+                                        [
+                                          expression (lib/error.ml[55,2306+26]..lib/error.ml[55,2306+32]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.Flush"
+                                            [
+                                              expression (lib/error.ml[55,2306+26]..lib/error.ml[55,2306+32]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                []
+                                            ]
+                                        ]
+                                      expression (lib/error.ml[55,2306+26]..lib/error.ml[55,2306+32]) ghost
+                                        Texp_constant Const_string("%t%!",(lib/error.ml[55,2306+26]..lib/error.ml[55,2306+32]) ghost,None)
+                                    ]
+                                <arg>
+                                  Nolabel
+                                  expression (lib/error.ml[55,2306+33]..lib/error.ml[55,2306+36])
+                                    Texp_ident "msg/1151"
+                              ]
+                            None
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/error.ml[70,2588+0]..lib/error.ml[73,2708+13])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[70,2588+4]..lib/error.ml[70,2588+19])
+          Tpat_var "print_positions/1175"
+        expression (lib/error.ml[70,2588+20]..lib/error.ml[73,2708+13]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/error.ml[70,2588+20]..lib/error.ml[70,2588+21])
+                Tpat_var "f/1177"
+              expression (lib/error.ml[70,2588+22]..lib/error.ml[73,2708+13]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/error.ml[70,2588+22]..lib/error.ml[70,2588+31])
+                      Tpat_var "positions/1178"
+                    expression (lib/error.ml[71,2622+2]..lib/error.ml[73,2708+13])
+                      Texp_apply
+                      expression (lib/error.ml[71,2622+2]..lib/error.ml[71,2622+11])
+                        Texp_ident "Stdlib!.List.iter"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/error.ml[71,2622+12]..lib/error.ml[73,2708+3])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (lib/error.ml[71,2622+17]..lib/error.ml[71,2622+25])
+                                  Tpat_var "position/1242"
+                                expression (lib/error.ml[72,2651+4]..lib/error.ml[72,2651+56])
+                                  Texp_apply
+                                  expression (lib/error.ml[72,2651+4]..lib/error.ml[72,2651+11])
+                                    Texp_ident "Stdlib!.Printf.fprintf"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/error.ml[72,2651+12]..lib/error.ml[72,2651+13])
+                                        Texp_ident "f/1177"
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/error.ml[72,2651+14]..lib/error.ml[72,2651+21])
+                                        Texp_construct "CamlinternalFormatBasics.Format"
+                                        [
+                                          expression (lib/error.ml[72,2651+14]..lib/error.ml[72,2651+21]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.String"
+                                            [
+                                              expression (lib/error.ml[72,2651+14]..lib/error.ml[72,2651+21]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                []
+                                              expression (lib/error.ml[72,2651+14]..lib/error.ml[72,2651+21]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                [
+                                                  expression (lib/error.ml[72,2651+14]..lib/error.ml[72,2651+21]) ghost
+                                                    Texp_constant Const_string(":\n",(lib/error.ml[72,2651+14]..lib/error.ml[72,2651+21]) ghost,None)
+                                                  expression (lib/error.ml[72,2651+14]..lib/error.ml[72,2651+21]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                    []
+                                                ]
+                                            ]
+                                          expression (lib/error.ml[72,2651+14]..lib/error.ml[72,2651+21]) ghost
+                                            Texp_constant Const_string("%s:\n",(lib/error.ml[72,2651+14]..lib/error.ml[72,2651+21]) ghost,None)
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/error.ml[72,2651+22]..lib/error.ml[72,2651+56])
+                                        Texp_apply
+                                        expression (lib/error.ml[72,2651+23]..lib/error.ml[72,2651+46])
+                                          Texp_ident "Gbnf_parser!.Positions.string_of_pos"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/error.ml[72,2651+47]..lib/error.ml[72,2651+55])
+                                              Texp_ident "position/1242"
+                                        ]
+                                  ]
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (lib/error.ml[73,2708+4]..lib/error.ml[73,2708+13])
+                            Texp_ident "positions/1178"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/error.ml[75,2723+0]..lib/error.ml[79,2919+29])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[75,2723+4]..lib/error.ml[75,2723+11])
+          Tpat_var "display/1278"
+        expression (lib/error.ml[75,2723+12]..lib/error.ml[79,2919+29]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/error.ml[75,2723+12]..lib/error.ml[75,2723+24])
+                Tpat_var "continuation/1280"
+              expression (lib/error.ml[75,2723+25]..lib/error.ml[79,2919+29]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/error.ml[75,2723+25]..lib/error.ml[75,2723+31])
+                      Tpat_var "header/1281"
+                    expression (lib/error.ml[75,2723+32]..lib/error.ml[79,2919+29]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/error.ml[75,2723+32]..lib/error.ml[75,2723+41])
+                            Tpat_var "positions/1282"
+                          expression (lib/error.ml[75,2723+42]..lib/error.ml[79,2919+29]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (lib/error.ml[75,2723+42]..lib/error.ml[75,2723+48])
+                                  Tpat_var "format/1283"
+                                expression (lib/error.ml[76,2774+2]..lib/error.ml[79,2919+29])
+                                  Texp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (lib/error.ml[76,2774+6]..lib/error.ml[76,2774+13])
+                                        Tpat_var "kprintf/1284"
+                                      expression (lib/error.ml[76,2774+16]..lib/error.ml[76,2774+70])
+                                        Texp_ifthenelse
+                                        expression (lib/error.ml[76,2774+19]..lib/error.ml[76,2774+27])
+                                          Texp_apply
+                                          expression (lib/error.ml[76,2774+19]..lib/error.ml[76,2774+20])
+                                            Texp_ident "Stdlib!.!"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (lib/error.ml[76,2774+20]..lib/error.ml[76,2774+27])
+                                                Texp_ident "enabled/1141"
+                                          ]
+                                        expression (lib/error.ml[76,2774+33]..lib/error.ml[76,2774+48])
+                                          Texp_ident "Stdlib!.Printf.kfprintf"
+                                        Some
+                                          expression (lib/error.ml[76,2774+54]..lib/error.ml[76,2774+70])
+                                            Texp_ident "Stdlib!.Printf.ikfprintf"
+                                  ]
+                                  expression (lib/error.ml[77,2848+2]..lib/error.ml[79,2919+29])
+                                    Texp_apply
+                                    expression (lib/error.ml[77,2848+2]..lib/error.ml[77,2848+9])
+                                      Texp_ident "kprintf/1284"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (lib/error.ml[77,2848+10]..lib/error.ml[77,2848+22])
+                                          Texp_ident "continuation/1280"
+                                      <arg>
+                                        Nolabel
+                                        expression (lib/error.ml[77,2848+23]..lib/error.ml[77,2848+29])
+                                          Texp_ident "Stdlib!.stderr"
+                                      <arg>
+                                        Nolabel
+                                        expression (lib/error.ml[78,2878+4]..lib/error.ml[78,2878+40])
+                                          Texp_apply
+                                          expression (lib/error.ml[78,2878+10]..lib/error.ml[78,2878+12])
+                                            Texp_ident "Stdlib!.^^"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (lib/error.ml[78,2878+5]..lib/error.ml[78,2878+9])
+                                                Texp_construct "CamlinternalFormatBasics.Format"
+                                                [
+                                                  expression (lib/error.ml[78,2878+5]..lib/error.ml[78,2878+9]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.Alpha"
+                                                    [
+                                                      expression (lib/error.ml[78,2878+5]..lib/error.ml[78,2878+9]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                        []
+                                                    ]
+                                                  expression (lib/error.ml[78,2878+5]..lib/error.ml[78,2878+9]) ghost
+                                                    Texp_constant Const_string("%a",(lib/error.ml[78,2878+5]..lib/error.ml[78,2878+9]) ghost,None)
+                                                ]
+                                            <arg>
+                                              Nolabel
+                                              expression (lib/error.ml[78,2878+13]..lib/error.ml[78,2878+39])
+                                                Texp_apply
+                                                expression (lib/error.ml[78,2878+20]..lib/error.ml[78,2878+22])
+                                                  Texp_ident "Stdlib!.^^"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (lib/error.ml[78,2878+13]..lib/error.ml[78,2878+19])
+                                                      Texp_ident "header/1281"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (lib/error.ml[78,2878+23]..lib/error.ml[78,2878+39])
+                                                      Texp_apply
+                                                      expression (lib/error.ml[78,2878+30]..lib/error.ml[78,2878+32])
+                                                        Texp_ident "Stdlib!.^^"
+                                                      [
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (lib/error.ml[78,2878+23]..lib/error.ml[78,2878+29])
+                                                            Texp_ident "format/1283"
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (lib/error.ml[78,2878+33]..lib/error.ml[78,2878+39])
+                                                            Texp_construct "CamlinternalFormatBasics.Format"
+                                                            [
+                                                              expression (lib/error.ml[78,2878+33]..lib/error.ml[78,2878+39]) ghost
+                                                                Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                                                [
+                                                                  expression (lib/error.ml[78,2878+33]..lib/error.ml[78,2878+39]) ghost
+                                                                    Texp_constant Const_char 0a
+                                                                  expression (lib/error.ml[78,2878+33]..lib/error.ml[78,2878+39]) ghost
+                                                                    Texp_construct "CamlinternalFormatBasics.Flush"
+                                                                    [
+                                                                      expression (lib/error.ml[78,2878+33]..lib/error.ml[78,2878+39]) ghost
+                                                                        Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                                        []
+                                                                    ]
+                                                                ]
+                                                              expression (lib/error.ml[78,2878+33]..lib/error.ml[78,2878+39]) ghost
+                                                                Texp_constant Const_string("\n%!",(lib/error.ml[78,2878+33]..lib/error.ml[78,2878+39]) ghost,None)
+                                                            ]
+                                                      ]
+                                                ]
+                                          ]
+                                      <arg>
+                                        Nolabel
+                                        expression (lib/error.ml[79,2919+4]..lib/error.ml[79,2919+19])
+                                          Texp_ident "print_positions/1175"
+                                      <arg>
+                                        Nolabel
+                                        expression (lib/error.ml[79,2919+20]..lib/error.ml[79,2919+29])
+                                          Texp_ident "positions/1282"
+                                    ]
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/error.ml[81,2950+0]..lib/error.ml[85,3025+20])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[81,2950+4]..lib/error.ml[81,2950+9])
+          Tpat_var "error/1285"
+        expression (lib/error.ml[81,2950+10]..lib/error.ml[85,3025+20]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/error.ml[81,2950+10]..lib/error.ml[81,2950+19])
+                Tpat_var "positions/1287"
+              expression (lib/error.ml[81,2950+20]..lib/error.ml[85,3025+20]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/error.ml[81,2950+20]..lib/error.ml[81,2950+26])
+                      Tpat_var "format/1288"
+                    expression (lib/error.ml[82,2979+2]..lib/error.ml[85,3025+20])
+                      Texp_apply
+                      expression (lib/error.ml[82,2979+2]..lib/error.ml[82,2979+9])
+                        Texp_ident "display/1278"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/error.ml[83,2989+4]..lib/error.ml[83,2989+21])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (lib/error.ml[83,2989+9]..lib/error.ml[83,2989+10])
+                                  Tpat_any
+                                expression (lib/error.ml[83,2989+14]..lib/error.ml[83,2989+20])
+                                  Texp_apply
+                                  expression (lib/error.ml[83,2989+14]..lib/error.ml[83,2989+18])
+                                    Texp_ident "Stdlib!.exit"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/error.ml[83,2989+19]..lib/error.ml[83,2989+20])
+                                        Texp_constant Const_int 1
+                                  ]
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (lib/error.ml[84,3011+4]..lib/error.ml[84,3011+13])
+                            Texp_construct "CamlinternalFormatBasics.Format"
+                            [
+                              expression (lib/error.ml[84,3011+4]..lib/error.ml[84,3011+13]) ghost
+                                Texp_construct "CamlinternalFormatBasics.String_literal"
+                                [
+                                  expression (lib/error.ml[84,3011+4]..lib/error.ml[84,3011+13]) ghost
+                                    Texp_constant Const_string("Error: ",(lib/error.ml[84,3011+4]..lib/error.ml[84,3011+13]) ghost,None)
+                                  expression (lib/error.ml[84,3011+4]..lib/error.ml[84,3011+13]) ghost
+                                    Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                    []
+                                ]
+                              expression (lib/error.ml[84,3011+4]..lib/error.ml[84,3011+13]) ghost
+                                Texp_constant Const_string("Error: ",(lib/error.ml[84,3011+4]..lib/error.ml[84,3011+13]) ghost,None)
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (lib/error.ml[85,3025+4]..lib/error.ml[85,3025+13])
+                            Texp_ident "positions/1287"
+                        <arg>
+                          Nolabel
+                          expression (lib/error.ml[85,3025+14]..lib/error.ml[85,3025+20])
+                            Texp_ident "format/1288"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/error.ml[87,3047+0]..lib/error.ml[91,3122+20])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[87,3047+4]..lib/error.ml[87,3047+11])
+          Tpat_var "warning/1290"
+        expression (lib/error.ml[87,3047+12]..lib/error.ml[91,3122+20]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/error.ml[87,3047+12]..lib/error.ml[87,3047+21])
+                Tpat_var "positions/1292"
+              expression (lib/error.ml[87,3047+22]..lib/error.ml[91,3122+20]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/error.ml[87,3047+22]..lib/error.ml[87,3047+28])
+                      Tpat_var "format/1293"
+                    expression (lib/error.ml[88,3078+2]..lib/error.ml[91,3122+20])
+                      Texp_apply
+                      expression (lib/error.ml[88,3078+2]..lib/error.ml[88,3078+9])
+                        Texp_ident "display/1278"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/error.ml[89,3088+4]..lib/error.ml[89,3088+17])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (lib/error.ml[89,3088+9]..lib/error.ml[89,3088+10])
+                                  Tpat_any
+                                expression (lib/error.ml[89,3088+14]..lib/error.ml[89,3088+16])
+                                  Texp_construct "()"
+                                  []
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (lib/error.ml[90,3106+4]..lib/error.ml[90,3106+15])
+                            Texp_construct "CamlinternalFormatBasics.Format"
+                            [
+                              expression (lib/error.ml[90,3106+4]..lib/error.ml[90,3106+15]) ghost
+                                Texp_construct "CamlinternalFormatBasics.String_literal"
+                                [
+                                  expression (lib/error.ml[90,3106+4]..lib/error.ml[90,3106+15]) ghost
+                                    Texp_constant Const_string("Warning: ",(lib/error.ml[90,3106+4]..lib/error.ml[90,3106+15]) ghost,None)
+                                  expression (lib/error.ml[90,3106+4]..lib/error.ml[90,3106+15]) ghost
+                                    Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                    []
+                                ]
+                              expression (lib/error.ml[90,3106+4]..lib/error.ml[90,3106+15]) ghost
+                                Texp_constant Const_string("Warning: ",(lib/error.ml[90,3106+4]..lib/error.ml[90,3106+15]) ghost,None)
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (lib/error.ml[91,3122+4]..lib/error.ml[91,3122+13])
+                            Texp_ident "positions/1292"
+                        <arg>
+                          Nolabel
+                          expression (lib/error.ml[91,3122+14]..lib/error.ml[91,3122+20])
+                            Texp_ident "format/1293"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/error.ml[93,3144+0]..lib/error.ml[94,3159+32])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[93,3144+4]..lib/error.ml[93,3144+10])
+          Tpat_var "errorp/1295"
+        expression (lib/error.ml[93,3144+11]..lib/error.ml[94,3159+32]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/error.ml[93,3144+11]..lib/error.ml[93,3144+12])
+                Tpat_var "v/1297"
+              expression (lib/error.ml[94,3159+2]..lib/error.ml[94,3159+32])
+                Texp_apply
+                expression (lib/error.ml[94,3159+2]..lib/error.ml[94,3159+7])
+                  Texp_ident "error/1285"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/error.ml[94,3159+8]..lib/error.ml[94,3159+32])
+                      Texp_construct "::"
+                      [
+                        expression (lib/error.ml[94,3159+10]..lib/error.ml[94,3159+30])
+                          Texp_apply
+                          expression (lib/error.ml[94,3159+10]..lib/error.ml[94,3159+28])
+                            Texp_ident "Gbnf_parser!.Positions.position"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/error.ml[94,3159+29]..lib/error.ml[94,3159+30])
+                                Texp_ident "v/1297"
+                          ]
+                        expression (lib/error.ml[94,3159+31]..lib/error.ml[94,3159+32]) ghost
+                          Texp_construct "[]"
+                          []
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/error.ml[100,3356+0]..lib/error.ml[101,3372+10])
+    Tstr_type Rec
+    [
+      type_declaration category/1333 (lib/error.ml[100,3356+0]..lib/error.ml[101,3372+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/error.ml[101,3372+2]..lib/error.ml[101,3372+10])
+              Ttyp_constr "Stdlib!.ref"
+              [
+                core_type (lib/error.ml[101,3372+2]..lib/error.ml[101,3372+6])
+                  Ttyp_constr "bool/5!"
+                  []
+              ]
+    ]
+  structure_item (lib/error.ml[103,3384+0]..lib/error.ml[104,3406+11])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[103,3384+4]..lib/error.ml[103,3384+16])
+          Tpat_var "new_category/1334"
+        expression (lib/error.ml[103,3384+17]..lib/error.ml[104,3406+11]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/error.ml[103,3384+17]..lib/error.ml[103,3384+19])
+                Tpat_construct "()"
+                []
+                None
+              expression (lib/error.ml[104,3406+2]..lib/error.ml[104,3406+11])
+                Texp_apply
+                expression (lib/error.ml[104,3406+2]..lib/error.ml[104,3406+5])
+                  Texp_ident "Stdlib!.ref"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/error.ml[104,3406+6]..lib/error.ml[104,3406+11])
+                      Texp_construct "false"
+                      []
+                ]
+          ]
+    ]
+  structure_item (lib/error.ml[106,3419+0]..lib/error.ml[110,3514+20])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[106,3419+4]..lib/error.ml[106,3419+10])
+          Tpat_var "signal/1337"
+        expression (lib/error.ml[106,3419+11]..lib/error.ml[110,3514+20]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/error.ml[106,3419+11]..lib/error.ml[106,3419+19])
+                Tpat_var "category/1339"
+              expression (lib/error.ml[106,3419+20]..lib/error.ml[110,3514+20]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/error.ml[106,3419+20]..lib/error.ml[106,3419+29])
+                      Tpat_var "positions/1340"
+                    expression (lib/error.ml[106,3419+30]..lib/error.ml[110,3514+20]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/error.ml[106,3419+30]..lib/error.ml[106,3419+36])
+                            Tpat_var "format/1341"
+                          expression (lib/error.ml[107,3458+2]..lib/error.ml[110,3514+20])
+                            Texp_apply
+                            expression (lib/error.ml[107,3458+2]..lib/error.ml[107,3458+9])
+                              Texp_ident "display/1278"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (lib/error.ml[108,3468+4]..lib/error.ml[108,3468+31])
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (lib/error.ml[108,3468+9]..lib/error.ml[108,3468+10])
+                                        Tpat_any
+                                      expression (lib/error.ml[108,3468+14]..lib/error.ml[108,3468+30])
+                                        Texp_apply
+                                        expression (lib/error.ml[108,3468+23]..lib/error.ml[108,3468+25])
+                                          Texp_ident "Stdlib!.:="
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/error.ml[108,3468+14]..lib/error.ml[108,3468+22])
+                                              Texp_ident "category/1339"
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/error.ml[108,3468+26]..lib/error.ml[108,3468+30])
+                                              Texp_construct "true"
+                                              []
+                                        ]
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (lib/error.ml[109,3500+4]..lib/error.ml[109,3500+13])
+                                  Texp_construct "CamlinternalFormatBasics.Format"
+                                  [
+                                    expression (lib/error.ml[109,3500+4]..lib/error.ml[109,3500+13]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.String_literal"
+                                      [
+                                        expression (lib/error.ml[109,3500+4]..lib/error.ml[109,3500+13]) ghost
+                                          Texp_constant Const_string("Error: ",(lib/error.ml[109,3500+4]..lib/error.ml[109,3500+13]) ghost,None)
+                                        expression (lib/error.ml[109,3500+4]..lib/error.ml[109,3500+13]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                          []
+                                      ]
+                                    expression (lib/error.ml[109,3500+4]..lib/error.ml[109,3500+13]) ghost
+                                      Texp_constant Const_string("Error: ",(lib/error.ml[109,3500+4]..lib/error.ml[109,3500+13]) ghost,None)
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (lib/error.ml[110,3514+4]..lib/error.ml[110,3514+13])
+                                  Texp_ident "positions/1340"
+                              <arg>
+                                Nolabel
+                                expression (lib/error.ml[110,3514+14]..lib/error.ml[110,3514+20])
+                                  Texp_ident "format/1341"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/error.ml[112,3536+0]..lib/error.ml[114,3579+10])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[112,3536+4]..lib/error.ml[112,3536+11])
+          Tpat_var "exit_if/1343"
+        expression (lib/error.ml[112,3536+12]..lib/error.ml[114,3579+10]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/error.ml[112,3536+12]..lib/error.ml[112,3536+20])
+                Tpat_var "category/1345"
+              expression (lib/error.ml[113,3559+2]..lib/error.ml[114,3579+10])
+                Texp_ifthenelse
+                expression (lib/error.ml[113,3559+5]..lib/error.ml[113,3559+14])
+                  Texp_apply
+                  expression (lib/error.ml[113,3559+5]..lib/error.ml[113,3559+6])
+                    Texp_ident "Stdlib!.!"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (lib/error.ml[113,3559+6]..lib/error.ml[113,3559+14])
+                        Texp_ident "category/1345"
+                  ]
+                expression (lib/error.ml[114,3579+4]..lib/error.ml[114,3579+10])
+                  Texp_apply
+                  expression (lib/error.ml[114,3579+4]..lib/error.ml[114,3579+8])
+                    Texp_ident "Stdlib!.exit"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (lib/error.ml[114,3579+9]..lib/error.ml[114,3579+10])
+                        Texp_constant Const_int 1
+                  ]
+                None
+          ]
+    ]
+  structure_item (lib/error.ml[116,3591+0]..lib/error.ml[124,3732+13])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[116,3591+4]..lib/error.ml[116,3591+21])
+          Tpat_var "with_new_category/1346"
+        expression (lib/error.ml[116,3591+22]..lib/error.ml[124,3732+13]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/error.ml[116,3591+22]..lib/error.ml[116,3591+23])
+                Tpat_var "f/1348"
+              expression (lib/error.ml[117,3617+2]..lib/error.ml[124,3732+13])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (lib/error.ml[117,3617+6]..lib/error.ml[117,3617+7])
+                      Tpat_var "c/1349"
+                    expression (lib/error.ml[117,3617+10]..lib/error.ml[117,3617+24])
+                      Texp_apply
+                      expression (lib/error.ml[117,3617+10]..lib/error.ml[117,3617+22])
+                        Texp_ident "new_category/1334"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/error.ml[117,3617+22]..lib/error.ml[117,3617+24])
+                            Texp_construct "()"
+                            []
+                      ]
+                ]
+                expression (lib/error.ml[118,3645+2]..lib/error.ml[124,3732+13])
+                  Texp_match
+                  expression (lib/error.ml[118,3645+8]..lib/error.ml[118,3645+11])
+                    Texp_apply
+                    expression (lib/error.ml[118,3645+8]..lib/error.ml[118,3645+9])
+                      Texp_ident "f/1348"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (lib/error.ml[118,3645+10]..lib/error.ml[118,3645+11])
+                          Texp_ident "c/1349"
+                    ]
+                  [
+                    <case>
+                      pattern (lib/error.ml[119,3662+4]..lib/error.ml[119,3662+5])
+                        Tpat_value
+                        pattern (lib/error.ml[119,3662+4]..lib/error.ml[119,3662+5])
+                          Tpat_var "y/1350"
+                      expression (lib/error.ml[120,3671+6]..lib/error.ml[121,3688+7])
+                        Texp_sequence
+                        expression (lib/error.ml[120,3671+6]..lib/error.ml[120,3671+15])
+                          Texp_apply
+                          expression (lib/error.ml[120,3671+6]..lib/error.ml[120,3671+13])
+                            Texp_ident "exit_if/1343"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/error.ml[120,3671+14]..lib/error.ml[120,3671+15])
+                                Texp_ident "c/1349"
+                          ]
+                        expression (lib/error.ml[121,3688+6]..lib/error.ml[121,3688+7])
+                          Texp_ident "y/1350"
+                    <case>
+                      pattern (lib/error.ml[122,3696+4]..lib/error.ml[122,3696+15])
+                        Tpat_exception
+                        pattern (lib/error.ml[122,3696+14]..lib/error.ml[122,3696+15])
+                          Tpat_var "e/1351"
+                      expression (lib/error.ml[123,3715+6]..lib/error.ml[124,3732+13])
+                        Texp_sequence
+                        expression (lib/error.ml[123,3715+6]..lib/error.ml[123,3715+15])
+                          Texp_apply
+                          expression (lib/error.ml[123,3715+6]..lib/error.ml[123,3715+13])
+                            Texp_ident "exit_if/1343"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/error.ml[123,3715+14]..lib/error.ml[123,3715+15])
+                                Texp_ident "c/1349"
+                          ]
+                        expression (lib/error.ml[124,3732+6]..lib/error.ml[124,3732+13])
+                          Texp_apply
+                          expression (lib/error.ml[124,3732+6]..lib/error.ml[124,3732+11])
+                            Texp_ident "Stdlib!.raise"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/error.ml[124,3732+12]..lib/error.ml[124,3732+13])
+                                Texp_ident "e/1351"
+                          ]
+                  ]
+          ]
+    ]
+  structure_item (lib/error.ml[130,3910+0]..lib/error.ml[131,3934+16])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[130,3910+4]..lib/error.ml[130,3910+21])
+          Tpat_var "grammatical_error/1352"
+        expression (lib/error.ml[131,3934+2]..lib/error.ml[131,3934+16])
+          Texp_apply
+          expression (lib/error.ml[131,3934+2]..lib/error.ml[131,3934+14])
+            Texp_ident "new_category/1334"
+          [
+            <arg>
+              Nolabel
+              expression (lib/error.ml[131,3934+14]..lib/error.ml[131,3934+16])
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+          Texp_apply
+          expression (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost,None)
+          ]
+    ]
+  structure_item (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+          Texp_apply
+          expression (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+          Texp_apply
+          expression (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+          Texp_apply
+          expression (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/error.ml[131,3934+16]..lib/error.ml[131,3934+16]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__Error>
+ "category"[type] -> <Gbnf_parser__Error.25>;
+ "disable"[value] -> <Gbnf_parser__Error.2>;
+ "display"[value] -> <Gbnf_parser__Error.11>;
+ "enable"[value] -> <Gbnf_parser__Error.1>;
+ "enabled"[value] -> <Gbnf_parser__Error.0>;
+ "error"[value] -> <Gbnf_parser__Error.17>;
+ "errorp"[value] -> <Gbnf_parser__Error.23>;
+ "exit_if"[value] -> <Gbnf_parser__Error.31>;
+ "grammatical_error"[value] -> <Gbnf_parser__Error.38>;
+ "log"[value] -> <Gbnf_parser__Error.3>;
+ "new_category"[value] -> <Gbnf_parser__Error.26>;
+ "print_positions"[value] -> <Gbnf_parser__Error.7>;
+ "signal"[value] -> <Gbnf_parser__Error.27>;
+ "warning"[value] -> <Gbnf_parser__Error.20>;
+ "with_new_category"[value] -> <Gbnf_parser__Error.33>;
+ }
+
+(seq
+  (let
+    (*match*/1801 =
+       (apply (field 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Error"))
+    0)
+  (let
+    (*match*/1803 =
+       (apply
+         (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/1805 =
+       (apply (field 0 (field 5 (global Expect_test_collector!)))
+         "lib/error.ml"))
+    0)
+  (let
+    (*match*/1807 =
+       (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "error.ml"))
+    0)
+  (let (enabled/1141 = (makemutable 0 (int) 1))
+    (setfield_ptr(root-init) 0 (global Gbnf_parser__Error!) enabled/1141))
+  (let
+    (enable/1142 =
+       (function param/1144[int] : int
+         (setfield_imm 0 (field 0 (global Gbnf_parser__Error!)) 1)))
+    (setfield_ptr(root-init) 1 (global Gbnf_parser__Error!) enable/1142))
+  (let
+    (disable/1145 =
+       (function param/1147[int] : int
+         (setfield_imm 0 (field 0 (global Gbnf_parser__Error!)) 0)))
+    (setfield_ptr(root-init) 2 (global Gbnf_parser__Error!) disable/1145))
+  (let
+    (log/1148 =
+       (function kind/1149 verbosity/1150 msg/1151 : int
+         (if
+           (&& (caml_greaterequal kind/1149 verbosity/1150)
+             (field 0 (field 0 (global Gbnf_parser__Error!))))
+           (apply (field 0 (global Stdlib__Printf!))
+             (field 39 (global Stdlib!)) [0: [16: [10: 0]] "%t%!"] msg/1151)
+           0)))
+    (setfield_ptr(root-init) 3 (global Gbnf_parser__Error!) log/1148))
+  (let
+    (print_positions/1175 =
+       (function f/1177 positions/1178 : int
+         (apply (field 16 (global Stdlib__List!))
+           (function position/1242 : int
+             (apply (field 0 (global Stdlib__Printf!)) f/1177
+               [0: [2: 0 [11: ":\n" 0]] "%s:\n"]
+               (apply (field 21 (global Gbnf_parser__Positions!))
+                 position/1242)))
+           positions/1178)))
+    (setfield_ptr(root-init) 4 (global Gbnf_parser__Error!)
+      print_positions/1175))
+  (let
+    (display/1278 =
+       (function continuation/1280 header/1281 positions/1282 format/1283
+         (let
+           (kprintf/1284 =
+              (if (field 0 (field 0 (global Gbnf_parser__Error!)))
+                (field 7 (global Stdlib__Printf!))
+                (field 8 (global Stdlib__Printf!))))
+           (apply kprintf/1284 continuation/1280 (field 39 (global Stdlib!))
+             (apply (field 97 (global Stdlib!)) [0: [15: 0] "%a"]
+               (apply (field 97 (global Stdlib!)) header/1281
+                 (apply (field 97 (global Stdlib!)) format/1283
+                   [0: [12: '\n' [10: 0]] "\n%!"])))
+             (field 4 (global Gbnf_parser__Error!)) positions/1282))))
+    (setfield_ptr(root-init) 5 (global Gbnf_parser__Error!) display/1278))
+  (let
+    (error/1285 =
+       (function positions/1287 format/1288
+         (apply (field 5 (global Gbnf_parser__Error!))
+           (function param/1289 (apply (field 98 (global Stdlib!)) 1))
+           [0: [11: "Error: " 0] "Error: "] positions/1287 format/1288)))
+    (setfield_ptr(root-init) 6 (global Gbnf_parser__Error!) error/1285))
+  (let
+    (warning/1290 =
+       (function positions/1292 format/1293
+         (apply (field 5 (global Gbnf_parser__Error!))
+           (function param/1294 : int 0) [0: [11: "Warning: " 0] "Warning: "]
+           positions/1292 format/1293)))
+    (setfield_ptr(root-init) 7 (global Gbnf_parser__Error!) warning/1290))
+  (let
+    (errorp/1295 =
+       (function v/1297
+         (apply (field 6 (global Gbnf_parser__Error!))
+           (makeblock 0
+             (apply (field 1 (global Gbnf_parser__Positions!)) v/1297) 0))))
+    (setfield_ptr(root-init) 8 (global Gbnf_parser__Error!) errorp/1295))
+  (let
+    (new_category/1334 = (function param/1336[int] (makemutable 0 (int) 0)))
+    (setfield_ptr(root-init) 9 (global Gbnf_parser__Error!)
+      new_category/1334))
+  (let
+    (signal/1337 =
+       (function category/1339 positions/1340 format/1341
+         (apply (field 5 (global Gbnf_parser__Error!))
+           (function param/1342 : int (setfield_imm 0 category/1339 1))
+           [0: [11: "Error: " 0] "Error: "] positions/1340 format/1341)))
+    (setfield_ptr(root-init) 10 (global Gbnf_parser__Error!) signal/1337))
+  (let
+    (exit_if/1343 =
+       (function category/1345 : int
+         (if (field 0 category/1345) (apply (field 98 (global Stdlib!)) 1) 0)))
+    (setfield_ptr(root-init) 11 (global Gbnf_parser__Error!) exit_if/1343))
+  (let
+    (with_new_category/1346 =
+       (function f/1348
+         (let (c/1349 = (apply (field 9 (global Gbnf_parser__Error!)) 0))
+           (catch
+             (try (exit 13 (apply f/1348 c/1349)) with e/1351
+               (seq (apply (field 11 (global Gbnf_parser__Error!)) c/1349)
+                 (reraise e/1351)))
+            with (13 y/1350)
+             (seq (apply (field 11 (global Gbnf_parser__Error!)) c/1349)
+               y/1350)))))
+    (setfield_ptr(root-init) 12 (global Gbnf_parser__Error!)
+      with_new_category/1346))
+  (let
+    (grammatical_error/1352 =
+       (apply (field 9 (global Gbnf_parser__Error!)) 0))
+    (setfield_ptr(root-init) 13 (global Gbnf_parser__Error!)
+      grammatical_error/1352))
+  (let
+    (*match*/1809 =
+       (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+    0)
+  (let
+    (*match*/1811 =
+       (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+    0)
+  (let
+    (*match*/1813 =
+       (apply
+         (field 1 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         0))
+    0)
+  (let
+    (*match*/1815 =
+       (apply (field 4 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Error"))
+    0)
+  0)
+(seq
+  (let
+    (*match*/1801 =
+       (apply (field 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Error"))
+    0)
+  (let
+    (*match*/1803 =
+       (apply
+         (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/1805 =
+       (apply (field 0 (field 5 (global Expect_test_collector!)))
+         "lib/error.ml"))
+    0)
+  (let
+    (*match*/1807 =
+       (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "error.ml"))
+    0)
+  (let (enabled/1141 = (makemutable 0 (int) 1))
+    (setfield_ptr(root-init) 0 (global Gbnf_parser__Error!) enabled/1141))
+  (let
+    (enable/1142 =
+       (function param/1144[int] : int
+         (setfield_imm 0 (field 0 (global Gbnf_parser__Error!)) 1)))
+    (setfield_ptr(root-init) 1 (global Gbnf_parser__Error!) enable/1142))
+  (let
+    (disable/1145 =
+       (function param/1147[int] : int
+         (setfield_imm 0 (field 0 (global Gbnf_parser__Error!)) 0)))
+    (setfield_ptr(root-init) 2 (global Gbnf_parser__Error!) disable/1145))
+  (let
+    (log/1148 =
+       (function kind/1149 verbosity/1150 msg/1151 : int
+         (if
+           (&& (caml_greaterequal kind/1149 verbosity/1150)
+             (field 0 (field 0 (global Gbnf_parser__Error!))))
+           (apply (field 0 (global Stdlib__Printf!))
+             (field 39 (global Stdlib!)) [0: [16: [10: 0]] "%t%!"] msg/1151)
+           0)))
+    (setfield_ptr(root-init) 3 (global Gbnf_parser__Error!) log/1148))
+  (let
+    (print_positions/1175 =
+       (function f/1177 positions/1178 : int
+         (apply (field 16 (global Stdlib__List!))
+           (function position/1242 : int
+             (apply (field 0 (global Stdlib__Printf!)) f/1177
+               [0: [2: 0 [11: ":\n" 0]] "%s:\n"]
+               (apply (field 21 (global Gbnf_parser__Positions!))
+                 position/1242)))
+           positions/1178)))
+    (setfield_ptr(root-init) 4 (global Gbnf_parser__Error!)
+      print_positions/1175))
+  (let
+    (display/1278 =
+       (function continuation/1280 header/1281 positions/1282 format/1283
+         (let
+           (kprintf/1284 =
+              (if (field 0 (field 0 (global Gbnf_parser__Error!)))
+                (field 7 (global Stdlib__Printf!))
+                (field 8 (global Stdlib__Printf!))))
+           (apply kprintf/1284 continuation/1280 (field 39 (global Stdlib!))
+             (apply (field 97 (global Stdlib!)) [0: [15: 0] "%a"]
+               (apply (field 97 (global Stdlib!)) header/1281
+                 (apply (field 97 (global Stdlib!)) format/1283
+                   [0: [12: '\n' [10: 0]] "\n%!"])))
+             (field 4 (global Gbnf_parser__Error!)) positions/1282))))
+    (setfield_ptr(root-init) 5 (global Gbnf_parser__Error!) display/1278))
+  (let
+    (error/1285 =
+       (function positions/1287 format/1288
+         (apply (field 5 (global Gbnf_parser__Error!))
+           (function param/1289 (apply (field 98 (global Stdlib!)) 1))
+           [0: [11: "Error: " 0] "Error: "] positions/1287 format/1288)))
+    (setfield_ptr(root-init) 6 (global Gbnf_parser__Error!) error/1285))
+  (let
+    (warning/1290 =
+       (function positions/1292 format/1293
+         (apply (field 5 (global Gbnf_parser__Error!))
+           (function param/1294 : int 0) [0: [11: "Warning: " 0] "Warning: "]
+           positions/1292 format/1293)))
+    (setfield_ptr(root-init) 7 (global Gbnf_parser__Error!) warning/1290))
+  (let
+    (errorp/1295 =
+       (function v/1297
+         (apply (field 6 (global Gbnf_parser__Error!))
+           (makeblock 0
+             (apply (field 1 (global Gbnf_parser__Positions!)) v/1297) 0))))
+    (setfield_ptr(root-init) 8 (global Gbnf_parser__Error!) errorp/1295))
+  (let
+    (new_category/1334 = (function param/1336[int] (makemutable 0 (int) 0)))
+    (setfield_ptr(root-init) 9 (global Gbnf_parser__Error!)
+      new_category/1334))
+  (let
+    (signal/1337 =
+       (function category/1339 positions/1340 format/1341
+         (apply (field 5 (global Gbnf_parser__Error!))
+           (function param/1342 : int (setfield_imm 0 category/1339 1))
+           [0: [11: "Error: " 0] "Error: "] positions/1340 format/1341)))
+    (setfield_ptr(root-init) 10 (global Gbnf_parser__Error!) signal/1337))
+  (let
+    (exit_if/1343 =
+       (function category/1345 : int
+         (if (field 0 category/1345) (apply (field 98 (global Stdlib!)) 1) 0)))
+    (setfield_ptr(root-init) 11 (global Gbnf_parser__Error!) exit_if/1343))
+  (let
+    (with_new_category/1346 =
+       (function f/1348
+         (let (c/1349 = (apply (field 9 (global Gbnf_parser__Error!)) 0))
+           (catch
+             (try (exit 13 (apply f/1348 c/1349)) with e/1351
+               (seq (apply (field 11 (global Gbnf_parser__Error!)) c/1349)
+                 (reraise e/1351)))
+            with (13 y/1350)
+             (seq (apply (field 11 (global Gbnf_parser__Error!)) c/1349)
+               y/1350)))))
+    (setfield_ptr(root-init) 12 (global Gbnf_parser__Error!)
+      with_new_category/1346))
+  (let
+    (grammatical_error/1352 =
+       (apply (field 9 (global Gbnf_parser__Error!)) 0))
+    (setfield_ptr(root-init) 13 (global Gbnf_parser__Error!)
+      grammatical_error/1352))
+  (let
+    (*match*/1809 =
+       (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+    0)
+  (let
+    (*match*/1811 =
+       (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+    0)
+  (let
+    (*match*/1813 =
+       (apply
+         (field 1 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         0))
+    0)
+  (let
+    (*match*/1815 =
+       (apply (field 4 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Error"))
+    0)
+  0)
