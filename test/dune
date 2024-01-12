@@ -1,10 +1,12 @@
 (test
  (name test_gbnf_parser)
  (modes byte exe)
-  (modules test_gbnf_parser)
+ (modules test_gbnf_parser)
+ (preprocess  (pps ppx-introspector) )
  (libraries gbnf_parser menhirLib batteries))
 (test
  (name test_gbnf_parser2)
  (modes byte exe)
  (modules test_gbnf_parser2)
+ (preprocess  (pps ppx-introspector) )
  (libraries gbnf_parser menhirLib batteries))

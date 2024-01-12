@@ -1,6 +1,6 @@
-open Sexplib.Std
+(* open Sexplib.Std *)
 
 type sexp =
   | Atom of string
   | List of sexp list
-  [@@deriving sexp]
+  (* [@@deriving sexp] *)

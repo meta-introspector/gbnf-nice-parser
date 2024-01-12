@@ -1,6 +1,7 @@
 (lang dune 3.5)
 
 (name gbnf_parser)
+(version 0b7449c-dirty)
 (using menhir 2.0)
 (generate_opam_files true)
 

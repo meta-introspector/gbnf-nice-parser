@@ -25,9 +25,6 @@
 (library
  (name gbnf_parser)
 
- (libraries  menhirLib)
-
+ (libraries  menhirLib batteries ocaml_ocaml_types )
+ (preprocess  (pps ppx-introspector) )
 )
-
-
-

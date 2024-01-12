@@ -1,10 +1,12 @@
 (env
  (_
   (flags
-   (:standard -warn-error -9-27-26 -dtypedtree -dparsetree -dlambda -annot  -dsource -dump-into-file -drawlambda  -dprofile))))
+   (:standard -warn-error -9-27-26 -dtypedtree -dparsetree -dlambda -annot  -dsource -dump-into-file -drawlambda  ))))
 
 
 
 (library
- (name grammar))
+ (name grammar)
+ (preprocess  (pps ppx-introspector) )
+)
 

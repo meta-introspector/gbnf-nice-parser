@@ -15,15 +15,6 @@
     unsafe_string = false;
     cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
   }]
-let () =
-  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
-let () =
-  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
-let () =
-  Expect_test_collector.Current_file.set
-    ~absolute_filename:"lib/sentenceParser.ml"
-let () =
-  Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "sentenceParser.ml"
 
 module MenhirBasics =
   struct
@@ -1443,8 +1434,8 @@ module Incremental =
       (Obj.magic (MenhirInterpreter.start 0 initial_position) : Syntax.partial_grammar
                                                                   MenhirInterpreter.checkpoint)
   end
-let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
-let () = Expect_test_collector.Current_file.unset ()
-let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
-let () =
-  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+(* let () = Ppx_inline_test_lib.unset_lib "gbnf_parser" *)
+(* let () = Expect_test_collector.Current_file.unset () *)
+(* let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset () *)
+(* let () = *)
+(*   Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__ *)
