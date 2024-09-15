@@ -1,0 +1,1704 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+          ]
+    ]
+  structure_item (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("lib/GraphNumbering.ml",(lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("GraphNumbering.ml",(lib/GraphNumbering.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/GraphNumbering.ml[13,893+0]..[13,893+9])
+    Pstr_open Fresh
+    module_expr (lib/GraphNumbering.ml[13,893+5]..[13,893+9])
+      Pmod_ident "Sigs" (lib/GraphNumbering.ml[13,893+5]..[13,893+9])
+  structure_item (lib/GraphNumbering.ml[15,904+0]..[61,1964+3])
+    Pstr_module
+    "Make" (lib/GraphNumbering.ml[15,904+7]..[15,904+11])
+      module_expr (lib/GraphNumbering.ml[16,916+2]..[61,1964+3])
+        Pmod_functor "M" (lib/GraphNumbering.ml[16,916+3]..[16,916+4])
+        module_type (lib/GraphNumbering.ml[16,916+7]..[16,916+22])
+          Pmty_ident "IMPERATIVE_MAPS" (lib/GraphNumbering.ml[16,916+7]..[16,916+22])
+        module_expr (lib/GraphNumbering.ml[17,940+2]..[61,1964+3])
+          Pmod_functor "G" (lib/GraphNumbering.ml[17,940+3]..[17,940+4])
+          module_type (lib/GraphNumbering.ml[17,940+7]..[17,940+32])
+            Pmty_with
+            module_type (lib/GraphNumbering.ml[17,940+7]..[17,940+12])
+              Pmty_ident "GRAPH" (lib/GraphNumbering.ml[17,940+7]..[17,940+12])
+            [
+              Pwith_type "t" (lib/GraphNumbering.ml[17,940+23]..[17,940+24])
+                type_declaration "t" (lib/GraphNumbering.ml[17,940+23]..[17,940+24]) (lib/GraphNumbering.ml[17,940+18]..[17,940+32])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ptype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    Some
+                      core_type (lib/GraphNumbering.ml[17,940+27]..[17,940+32])
+                        Ptyp_constr "M.key" (lib/GraphNumbering.ml[17,940+27]..[17,940+32])
+                        []
+            ]
+          module_expr (lib/GraphNumbering.ml[18,974+2]..[61,1964+3])
+            Pmod_structure
+            [
+              structure_item (lib/GraphNumbering.ml[22,1035+2]..[23,1048+21])
+                Pstr_module
+                "N" (lib/GraphNumbering.ml[22,1035+9]..[22,1035+10])
+                  module_expr (lib/GraphNumbering.ml[23,1048+4]..[23,1048+21])
+                    Pmod_apply
+                    module_expr (lib/GraphNumbering.ml[23,1048+4]..[23,1048+18])
+                      Pmod_ident "Numbering.Make" (lib/GraphNumbering.ml[23,1048+4]..[23,1048+18])
+                    module_expr (lib/GraphNumbering.ml[23,1048+19]..[23,1048+20])
+                      Pmod_ident "M" (lib/GraphNumbering.ml[23,1048+19]..[23,1048+20])
+              structure_item (lib/GraphNumbering.ml[30,1306+2]..[31,1323+18])
+                Pstr_value Nonrec
+                [
+                  <def>
+                    pattern (lib/GraphNumbering.ml[30,1306+6]..[30,1306+14])
+                      Ppat_var "frontier" (lib/GraphNumbering.ml[30,1306+6]..[30,1306+14])
+                    expression (lib/GraphNumbering.ml[31,1323+4]..[31,1323+18])
+                      Pexp_apply
+                      expression (lib/GraphNumbering.ml[31,1323+4]..[31,1323+16])
+                        Pexp_ident "Stack.create" (lib/GraphNumbering.ml[31,1323+4]..[31,1323+16])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/GraphNumbering.ml[31,1323+16]..[31,1323+18])
+                            Pexp_construct "()" (lib/GraphNumbering.ml[31,1323+16]..[31,1323+18])
+                            None
+                      ]
+                ]
+              structure_item (lib/GraphNumbering.ml[33,1343+2]..[34,1358+25])
+                Pstr_value Nonrec
+                [
+                  <def>
+                    pattern (lib/GraphNumbering.ml[33,1343+6]..[33,1343+10])
+                      Ppat_var "push" (lib/GraphNumbering.ml[33,1343+6]..[33,1343+10])
+                    expression (lib/GraphNumbering.ml[33,1343+11]..[34,1358+25]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/GraphNumbering.ml[33,1343+11]..[33,1343+12])
+                        Ppat_var "x" (lib/GraphNumbering.ml[33,1343+11]..[33,1343+12])
+                      expression (lib/GraphNumbering.ml[34,1358+4]..[34,1358+25])
+                        Pexp_apply
+                        expression (lib/GraphNumbering.ml[34,1358+4]..[34,1358+14])
+                          Pexp_ident "Stack.push" (lib/GraphNumbering.ml[34,1358+4]..[34,1358+14])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/GraphNumbering.ml[34,1358+15]..[34,1358+16])
+                              Pexp_ident "x" (lib/GraphNumbering.ml[34,1358+15]..[34,1358+16])
+                          <arg>
+                          Nolabel
+                            expression (lib/GraphNumbering.ml[34,1358+17]..[34,1358+25])
+                              Pexp_ident "frontier" (lib/GraphNumbering.ml[34,1358+17]..[34,1358+25])
+                        ]
+                ]
+              structure_item (lib/GraphNumbering.ml[36,1385+2]..[49,1775+17])
+                Pstr_value Rec
+                [
+                  <def>
+                    pattern (lib/GraphNumbering.ml[36,1385+10]..[36,1385+15])
+                      Ppat_var "visit" (lib/GraphNumbering.ml[36,1385+10]..[36,1385+15])
+                    expression (lib/GraphNumbering.ml[36,1385+16]..[49,1775+17]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/GraphNumbering.ml[36,1385+16]..[36,1385+18])
+                        Ppat_construct "()" (lib/GraphNumbering.ml[36,1385+16]..[36,1385+18])
+                        None
+                      expression (lib/GraphNumbering.ml[37,1406+4]..[49,1775+17])
+                        Pexp_match
+                        expression (lib/GraphNumbering.ml[37,1406+10]..[37,1406+28])
+                          Pexp_apply
+                          expression (lib/GraphNumbering.ml[37,1406+10]..[37,1406+19])
+                            Pexp_ident "Stack.pop" (lib/GraphNumbering.ml[37,1406+10]..[37,1406+19])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (lib/GraphNumbering.ml[37,1406+20]..[37,1406+28])
+                                Pexp_ident "frontier" (lib/GraphNumbering.ml[37,1406+20]..[37,1406+28])
+                          ]
+                        [
+                          <case>
+                            pattern (lib/GraphNumbering.ml[38,1440+6]..[38,1440+27])
+                              Ppat_exception
+                              pattern (lib/GraphNumbering.ml[38,1440+16]..[38,1440+27])
+                                Ppat_construct "Stack.Empty" (lib/GraphNumbering.ml[38,1440+16]..[38,1440+27])
+                                None
+                            expression (lib/GraphNumbering.ml[40,1518+8]..[40,1518+10])
+                              Pexp_construct "()" (lib/GraphNumbering.ml[40,1518+8]..[40,1518+10])
+                              None
+                          <case>
+                            pattern (lib/GraphNumbering.ml[41,1529+6]..[41,1529+7])
+                              Ppat_var "x" (lib/GraphNumbering.ml[41,1529+6]..[41,1529+7])
+                            expression (lib/GraphNumbering.ml[42,1540+8]..[49,1775+17])
+                              Pexp_ifthenelse
+                              expression (lib/GraphNumbering.ml[42,1540+11]..[42,1540+31])
+                                Pexp_apply
+                                expression (lib/GraphNumbering.ml[42,1540+11]..[42,1540+29])
+                                  Pexp_ident "N.has_been_encoded" (lib/GraphNumbering.ml[42,1540+11]..[42,1540+29])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/GraphNumbering.ml[42,1540+30]..[42,1540+31])
+                                      Pexp_ident "x" (lib/GraphNumbering.ml[42,1540+30]..[42,1540+31])
+                                ]
+                              expression (lib/GraphNumbering.ml[44,1626+10]..[44,1626+17])
+                                Pexp_apply
+                                expression (lib/GraphNumbering.ml[44,1626+10]..[44,1626+15])
+                                  Pexp_ident "visit" (lib/GraphNumbering.ml[44,1626+10]..[44,1626+15])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/GraphNumbering.ml[44,1626+15]..[44,1626+17])
+                                      Pexp_construct "()" (lib/GraphNumbering.ml[44,1626+15]..[44,1626+17])
+                                      None
+                                ]
+                              Some
+                                expression (lib/GraphNumbering.ml[47,1697+10]..[49,1775+17])
+                                  Pexp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (lib/GraphNumbering.ml[47,1697+15]..[47,1697+16])
+                                        Ppat_any
+                                      core_type (lib/GraphNumbering.ml[47,1697+19]..[47,1697+22])
+                                        Ptyp_constr "int" (lib/GraphNumbering.ml[47,1697+19]..[47,1697+22])
+                                        []
+                                      expression (lib/GraphNumbering.ml[47,1697+26]..[47,1697+36])
+                                        Pexp_apply
+                                        expression (lib/GraphNumbering.ml[47,1697+26]..[47,1697+34])
+                                          Pexp_ident "N.encode" (lib/GraphNumbering.ml[47,1697+26]..[47,1697+34])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (lib/GraphNumbering.ml[47,1697+35]..[47,1697+36])
+                                              Pexp_ident "x" (lib/GraphNumbering.ml[47,1697+35]..[47,1697+36])
+                                        ]
+                                  ]
+                                  expression (lib/GraphNumbering.ml[48,1737+10]..[49,1775+17])
+                                    Pexp_sequence
+                                    expression (lib/GraphNumbering.ml[48,1737+10]..[48,1737+36])
+                                      Pexp_apply
+                                      expression (lib/GraphNumbering.ml[48,1737+10]..[48,1737+29])
+                                        Pexp_ident "G.foreach_successor" (lib/GraphNumbering.ml[48,1737+10]..[48,1737+29])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (lib/GraphNumbering.ml[48,1737+30]..[48,1737+31])
+                                            Pexp_ident "x" (lib/GraphNumbering.ml[48,1737+30]..[48,1737+31])
+                                        <arg>
+                                        Nolabel
+                                          expression (lib/GraphNumbering.ml[48,1737+32]..[48,1737+36])
+                                            Pexp_ident "push" (lib/GraphNumbering.ml[48,1737+32]..[48,1737+36])
+                                      ]
+                                    expression (lib/GraphNumbering.ml[49,1775+10]..[49,1775+17])
+                                      Pexp_apply
+                                      expression (lib/GraphNumbering.ml[49,1775+10]..[49,1775+15])
+                                        Pexp_ident "visit" (lib/GraphNumbering.ml[49,1775+10]..[49,1775+15])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (lib/GraphNumbering.ml[49,1775+15]..[49,1775+17])
+                                            Pexp_construct "()" (lib/GraphNumbering.ml[49,1775+15]..[49,1775+17])
+                                            None
+                                      ]
+                        ]
+                ]
+              structure_item (lib/GraphNumbering.ml[53,1835+2]..[55,1871+11])
+                Pstr_value Nonrec
+                [
+                  <def>
+                    pattern (lib/GraphNumbering.ml[53,1835+6]..[53,1835+8])
+                      Ppat_construct "()" (lib/GraphNumbering.ml[53,1835+6]..[53,1835+8])
+                      None
+                    expression (lib/GraphNumbering.ml[54,1846+4]..[55,1871+11])
+                      Pexp_sequence
+                      expression (lib/GraphNumbering.ml[54,1846+4]..[54,1846+23])
+                        Pexp_apply
+                        expression (lib/GraphNumbering.ml[54,1846+4]..[54,1846+18])
+                          Pexp_ident "G.foreach_root" (lib/GraphNumbering.ml[54,1846+4]..[54,1846+18])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/GraphNumbering.ml[54,1846+19]..[54,1846+23])
+                              Pexp_ident "push" (lib/GraphNumbering.ml[54,1846+19]..[54,1846+23])
+                        ]
+                      expression (lib/GraphNumbering.ml[55,1871+4]..[55,1871+11])
+                        Pexp_apply
+                        expression (lib/GraphNumbering.ml[55,1871+4]..[55,1871+9])
+                          Pexp_ident "visit" (lib/GraphNumbering.ml[55,1871+4]..[55,1871+9])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/GraphNumbering.ml[55,1871+9]..[55,1871+11])
+                              Pexp_construct "()" (lib/GraphNumbering.ml[55,1871+9]..[55,1871+11])
+                              None
+                        ]
+                ]
+              structure_item (lib/GraphNumbering.ml[59,1944+2]..[59,1944+18])
+                Pstr_include                module_expr (lib/GraphNumbering.ml[59,1944+10]..[59,1944+18])
+                  Pmod_apply_unit
+                  module_expr (lib/GraphNumbering.ml[59,1944+10]..[59,1944+16])
+                    Pmod_ident "N.Done" (lib/GraphNumbering.ml[59,1944+10]..[59,1944+16])
+            ]
+  structure_item (lib/GraphNumbering.ml[63,1969+0]..[64,2011+56])
+    Pstr_module
+    "ForOrderedType" (lib/GraphNumbering.ml[63,1969+7]..[63,1969+21])
+      module_expr (lib/GraphNumbering.ml[63,1969+22]..[64,2011+56])
+        Pmod_functor "T" (lib/GraphNumbering.ml[63,1969+23]..[63,1969+24])
+        module_type (lib/GraphNumbering.ml[63,1969+27]..[63,1969+38])
+          Pmty_ident "OrderedType" (lib/GraphNumbering.ml[63,1969+27]..[63,1969+38])
+        module_expr (lib/GraphNumbering.ml[64,2011+2]..[64,2011+56])
+          Pmod_apply
+          module_expr (lib/GraphNumbering.ml[64,2011+2]..[64,2011+6])
+            Pmod_ident "Make" (lib/GraphNumbering.ml[64,2011+2]..[64,2011+6])
+          module_expr (lib/GraphNumbering.ml[64,2011+7]..[64,2011+55])
+            Pmod_apply
+            module_expr (lib/GraphNumbering.ml[64,2011+7]..[64,2011+42])
+              Pmod_ident "Glue.PersistentMapsToImperativeMaps" (lib/GraphNumbering.ml[64,2011+7]..[64,2011+42])
+            module_expr (lib/GraphNumbering.ml[64,2011+43]..[64,2011+54])
+              Pmod_apply
+              module_expr (lib/GraphNumbering.ml[64,2011+43]..[64,2011+51])
+                Pmod_ident "Map.Make" (lib/GraphNumbering.ml[64,2011+43]..[64,2011+51])
+              module_expr (lib/GraphNumbering.ml[64,2011+52]..[64,2011+53])
+                Pmod_ident "T" (lib/GraphNumbering.ml[64,2011+52]..[64,2011+53])
+  structure_item (lib/GraphNumbering.ml[66,2069+0]..[67,2109+42])
+    Pstr_module
+    "ForHashedType" (lib/GraphNumbering.ml[66,2069+7]..[66,2069+20])
+      module_expr (lib/GraphNumbering.ml[66,2069+21]..[67,2109+42])
+        Pmod_functor "T" (lib/GraphNumbering.ml[66,2069+22]..[66,2069+23])
+        module_type (lib/GraphNumbering.ml[66,2069+26]..[66,2069+36])
+          Pmty_ident "HashedType" (lib/GraphNumbering.ml[66,2069+26]..[66,2069+36])
+        module_expr (lib/GraphNumbering.ml[67,2109+2]..[67,2109+42])
+          Pmod_apply
+          module_expr (lib/GraphNumbering.ml[67,2109+2]..[67,2109+6])
+            Pmod_ident "Make" (lib/GraphNumbering.ml[67,2109+2]..[67,2109+6])
+          module_expr (lib/GraphNumbering.ml[67,2109+7]..[67,2109+41])
+            Pmod_apply
+            module_expr (lib/GraphNumbering.ml[67,2109+7]..[67,2109+38])
+              Pmod_ident "Glue.HashTablesAsImperativeMaps" (lib/GraphNumbering.ml[67,2109+7]..[67,2109+38])
+            module_expr (lib/GraphNumbering.ml[67,2109+39]..[67,2109+40])
+              Pmod_ident "T" (lib/GraphNumbering.ml[67,2109+39]..[67,2109+40])
+  structure_item (lib/GraphNumbering.ml[69,2153+0]..[70,2181+42])
+    Pstr_module
+    "ForType" (lib/GraphNumbering.ml[69,2153+7]..[69,2153+14])
+      module_expr (lib/GraphNumbering.ml[69,2153+15]..[70,2181+42])
+        Pmod_functor "T" (lib/GraphNumbering.ml[69,2153+16]..[69,2153+17])
+        module_type (lib/GraphNumbering.ml[69,2153+20]..[69,2153+24])
+          Pmty_ident "TYPE" (lib/GraphNumbering.ml[69,2153+20]..[69,2153+24])
+        module_expr (lib/GraphNumbering.ml[70,2181+2]..[70,2181+42])
+          Pmod_apply
+          module_expr (lib/GraphNumbering.ml[70,2181+2]..[70,2181+15])
+            Pmod_ident "ForHashedType" (lib/GraphNumbering.ml[70,2181+2]..[70,2181+15])
+          module_expr (lib/GraphNumbering.ml[70,2181+16]..[70,2181+41])
+            Pmod_apply
+            module_expr (lib/GraphNumbering.ml[70,2181+16]..[70,2181+38])
+              Pmod_ident "Glue.TrivialHashedType" (lib/GraphNumbering.ml[70,2181+16]..[70,2181+38])
+            module_expr (lib/GraphNumbering.ml[70,2181+39]..[70,2181+40])
+              Pmod_ident "T" (lib/GraphNumbering.ml[70,2181+39]..[70,2181+40])
+  structure_item (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+          Ppat_construct "()" (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+          None
+        expression (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+          Pexp_apply
+          expression (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost,None)
+          ]
+    ]
+  structure_item (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+          Ppat_construct "()" (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+          None
+        expression (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+          Pexp_apply
+          expression (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+                Pexp_construct "()" (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+          Ppat_construct "()" (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+          None
+        expression (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+          Pexp_apply
+          expression (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+                Pexp_construct "()" (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+          Ppat_construct "()" (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+          None
+        expression (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+          Pexp_apply
+          expression (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/GraphNumbering.ml[70,2181+42]..[70,2181+42]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set
+    ~absolute_filename:"lib/GraphNumbering.ml"
+let () =
+  Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "GraphNumbering.ml"
+open Sigs
+module Make(M:IMPERATIVE_MAPS)(G:GRAPH with type  t =  M.key) =
+  struct
+    module N = (Numbering.Make)(M)
+    let frontier = Stack.create ()
+    let push x = Stack.push x frontier
+    let rec visit () =
+      match Stack.pop frontier with
+      | exception Stack.Empty -> ()
+      | x ->
+          if N.has_been_encoded x
+          then visit ()
+          else
+            (let _ : int = N.encode x in G.foreach_successor x push; visit ())
+    let () = G.foreach_root push; visit ()
+    include (N.Done)()
+  end
+module ForOrderedType(T:OrderedType) =
+  (Make)((Glue.PersistentMapsToImperativeMaps)((Map.Make)(T)))
+module ForHashedType(T:HashedType) =
+  (Make)((Glue.HashTablesAsImperativeMaps)(T))
+module ForType(T:TYPE) = (ForHashedType)((Glue.TrivialHashedType)(T))
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+                Texp_constant Const_string("lib/GraphNumbering.ml",(lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost
+                Texp_constant Const_string("GraphNumbering.ml",(lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/GraphNumbering.ml[13,893+0]..lib/GraphNumbering.ml[13,893+9])
+    Tstr_open Fresh
+    module_expr (lib/GraphNumbering.ml[13,893+5]..lib/GraphNumbering.ml[13,893+9])
+      Tmod_ident "Gbnf_parser!.Sigs"
+  structure_item (lib/GraphNumbering.ml[15,904+0]..lib/GraphNumbering.ml[61,1964+3])
+    Tstr_module
+    Make/1292
+      module_expr (lib/GraphNumbering.ml[16,916+2]..lib/GraphNumbering.ml[61,1964+3])
+        Tmod_functor "M/1181"
+        module_type (lib/GraphNumbering.ml[16,916+7]..lib/GraphNumbering.ml[16,916+22])
+          Tmty_ident "Gbnf_parser!.Sigs.IMPERATIVE_MAPS"
+        module_expr (lib/GraphNumbering.ml[17,940+2]..lib/GraphNumbering.ml[61,1964+3])
+          Tmod_functor "G/1189"
+          module_type (lib/GraphNumbering.ml[17,940+7]..lib/GraphNumbering.ml[17,940+32])
+            Tmty_with
+            module_type (lib/GraphNumbering.ml[17,940+7]..lib/GraphNumbering.ml[17,940+12])
+              Tmty_ident "Gbnf_parser!.Sigs.GRAPH"
+            [
+              "t/1182"
+                Twith_type
+                  type_declaration t/1182 (lib/GraphNumbering.ml[17,940+18]..lib/GraphNumbering.ml[17,940+32])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ttype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (lib/GraphNumbering.ml[17,940+27]..lib/GraphNumbering.ml[17,940+32])
+                          Ttyp_constr "M/1181.key"
+                          []
+            ]
+          module_expr (lib/GraphNumbering.ml[18,974+2]..lib/GraphNumbering.ml[61,1964+3])
+            Tmod_structure
+            [
+              structure_item (lib/GraphNumbering.ml[22,1035+2]..lib/GraphNumbering.ml[23,1048+21])
+                Tstr_module
+                N/1238
+                  module_expr (lib/GraphNumbering.ml[23,1048+4]..lib/GraphNumbering.ml[23,1048+21])
+                    Tmod_apply
+                    module_expr (lib/GraphNumbering.ml[23,1048+4]..lib/GraphNumbering.ml[23,1048+18])
+                      module_expr (lib/GraphNumbering.ml[23,1048+4]..lib/GraphNumbering.ml[23,1048+18])
+                        Tmod_ident "Gbnf_parser!.Numbering.Make"
+                    module_expr (lib/GraphNumbering.ml[23,1048+19]..lib/GraphNumbering.ml[23,1048+20])
+                      Tmod_ident "M/1181"
+              structure_item (lib/GraphNumbering.ml[30,1306+2]..lib/GraphNumbering.ml[31,1323+18])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (lib/GraphNumbering.ml[30,1306+6]..lib/GraphNumbering.ml[30,1306+14])
+                      Tpat_var "frontier/1239"
+                    expression (lib/GraphNumbering.ml[31,1323+4]..lib/GraphNumbering.ml[31,1323+18])
+                      Texp_apply
+                      expression (lib/GraphNumbering.ml[31,1323+4]..lib/GraphNumbering.ml[31,1323+16])
+                        Texp_ident "Stdlib!.Stack.create"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/GraphNumbering.ml[31,1323+16]..lib/GraphNumbering.ml[31,1323+18])
+                            Texp_construct "()"
+                            []
+                      ]
+                ]
+              structure_item (lib/GraphNumbering.ml[33,1343+2]..lib/GraphNumbering.ml[34,1358+25])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (lib/GraphNumbering.ml[33,1343+6]..lib/GraphNumbering.ml[33,1343+10])
+                      Tpat_var "push/1276"
+                    expression (lib/GraphNumbering.ml[33,1343+11]..lib/GraphNumbering.ml[34,1358+25]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/GraphNumbering.ml[33,1343+11]..lib/GraphNumbering.ml[33,1343+12])
+                            Tpat_var "x/1278"
+                          expression (lib/GraphNumbering.ml[34,1358+4]..lib/GraphNumbering.ml[34,1358+25])
+                            Texp_apply
+                            expression (lib/GraphNumbering.ml[34,1358+4]..lib/GraphNumbering.ml[34,1358+14])
+                              Texp_ident "Stdlib!.Stack.push"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (lib/GraphNumbering.ml[34,1358+15]..lib/GraphNumbering.ml[34,1358+16])
+                                  Texp_ident "x/1278"
+                              <arg>
+                                Nolabel
+                                expression (lib/GraphNumbering.ml[34,1358+17]..lib/GraphNumbering.ml[34,1358+25])
+                                  Texp_ident "frontier/1239"
+                            ]
+                      ]
+                ]
+              structure_item (lib/GraphNumbering.ml[36,1385+2]..lib/GraphNumbering.ml[49,1775+17])
+                Tstr_value Rec
+                [
+                  <def>
+                    pattern (lib/GraphNumbering.ml[36,1385+10]..lib/GraphNumbering.ml[36,1385+15])
+                      Tpat_var "visit/1279"
+                    expression (lib/GraphNumbering.ml[36,1385+16]..lib/GraphNumbering.ml[49,1775+17]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/GraphNumbering.ml[36,1385+16]..lib/GraphNumbering.ml[36,1385+18])
+                            Tpat_construct "()"
+                            []
+                            None
+                          expression (lib/GraphNumbering.ml[37,1406+4]..lib/GraphNumbering.ml[49,1775+17])
+                            Texp_match
+                            expression (lib/GraphNumbering.ml[37,1406+10]..lib/GraphNumbering.ml[37,1406+28])
+                              Texp_apply
+                              expression (lib/GraphNumbering.ml[37,1406+10]..lib/GraphNumbering.ml[37,1406+19])
+                                Texp_ident "Stdlib!.Stack.pop"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (lib/GraphNumbering.ml[37,1406+20]..lib/GraphNumbering.ml[37,1406+28])
+                                    Texp_ident "frontier/1239"
+                              ]
+                            [
+                              <case>
+                                pattern (lib/GraphNumbering.ml[38,1440+6]..lib/GraphNumbering.ml[38,1440+27])
+                                  Tpat_exception
+                                  pattern (lib/GraphNumbering.ml[38,1440+16]..lib/GraphNumbering.ml[38,1440+27])
+                                    Tpat_construct "Stack.Empty"
+                                    []
+                                    None
+                                expression (lib/GraphNumbering.ml[40,1518+8]..lib/GraphNumbering.ml[40,1518+10])
+                                  Texp_construct "()"
+                                  []
+                              <case>
+                                pattern (lib/GraphNumbering.ml[41,1529+6]..lib/GraphNumbering.ml[41,1529+7])
+                                  Tpat_value
+                                  pattern (lib/GraphNumbering.ml[41,1529+6]..lib/GraphNumbering.ml[41,1529+7])
+                                    Tpat_var "x/1280"
+                                expression (lib/GraphNumbering.ml[42,1540+8]..lib/GraphNumbering.ml[49,1775+17])
+                                  Texp_ifthenelse
+                                  expression (lib/GraphNumbering.ml[42,1540+11]..lib/GraphNumbering.ml[42,1540+31])
+                                    Texp_apply
+                                    expression (lib/GraphNumbering.ml[42,1540+11]..lib/GraphNumbering.ml[42,1540+29])
+                                      Texp_ident "N/1238.has_been_encoded"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (lib/GraphNumbering.ml[42,1540+30]..lib/GraphNumbering.ml[42,1540+31])
+                                          Texp_ident "x/1280"
+                                    ]
+                                  expression (lib/GraphNumbering.ml[44,1626+10]..lib/GraphNumbering.ml[44,1626+17])
+                                    Texp_apply
+                                    expression (lib/GraphNumbering.ml[44,1626+10]..lib/GraphNumbering.ml[44,1626+15])
+                                      Texp_ident "visit/1279"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (lib/GraphNumbering.ml[44,1626+15]..lib/GraphNumbering.ml[44,1626+17])
+                                          Texp_construct "()"
+                                          []
+                                    ]
+                                  Some
+                                    expression (lib/GraphNumbering.ml[47,1697+10]..lib/GraphNumbering.ml[49,1775+17])
+                                      Texp_let Nonrec
+                                      [
+                                        <def>
+                                          pattern (lib/GraphNumbering.ml[47,1697+15]..lib/GraphNumbering.ml[47,1697+16])
+                                            extra
+                                              Tpat_extra_constraint
+                                              core_type (lib/GraphNumbering.ml[47,1697+19]..lib/GraphNumbering.ml[47,1697+22])
+                                                Ttyp_constr "int/1!"
+                                                []
+                                            Tpat_any
+                                          expression (lib/GraphNumbering.ml[47,1697+26]..lib/GraphNumbering.ml[47,1697+36])
+                                            extra
+                                              Texp_constraint
+                                              core_type (lib/GraphNumbering.ml[47,1697+19]..lib/GraphNumbering.ml[47,1697+22])
+                                                Ttyp_constr "int/1!"
+                                                []
+                                            Texp_apply
+                                            expression (lib/GraphNumbering.ml[47,1697+26]..lib/GraphNumbering.ml[47,1697+34])
+                                              Texp_ident "N/1238.encode"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/GraphNumbering.ml[47,1697+35]..lib/GraphNumbering.ml[47,1697+36])
+                                                  Texp_ident "x/1280"
+                                            ]
+                                      ]
+                                      expression (lib/GraphNumbering.ml[48,1737+10]..lib/GraphNumbering.ml[49,1775+17])
+                                        Texp_sequence
+                                        expression (lib/GraphNumbering.ml[48,1737+10]..lib/GraphNumbering.ml[48,1737+36])
+                                          Texp_apply
+                                          expression (lib/GraphNumbering.ml[48,1737+10]..lib/GraphNumbering.ml[48,1737+29])
+                                            Texp_ident "G/1189.foreach_successor"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (lib/GraphNumbering.ml[48,1737+30]..lib/GraphNumbering.ml[48,1737+31])
+                                                Texp_ident "x/1280"
+                                            <arg>
+                                              Nolabel
+                                              expression (lib/GraphNumbering.ml[48,1737+32]..lib/GraphNumbering.ml[48,1737+36])
+                                                Texp_ident "push/1276"
+                                          ]
+                                        expression (lib/GraphNumbering.ml[49,1775+10]..lib/GraphNumbering.ml[49,1775+17])
+                                          Texp_apply
+                                          expression (lib/GraphNumbering.ml[49,1775+10]..lib/GraphNumbering.ml[49,1775+15])
+                                            Texp_ident "visit/1279"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (lib/GraphNumbering.ml[49,1775+15]..lib/GraphNumbering.ml[49,1775+17])
+                                                Texp_construct "()"
+                                                []
+                                          ]
+                            ]
+                      ]
+                ]
+              structure_item (lib/GraphNumbering.ml[53,1835+2]..lib/GraphNumbering.ml[55,1871+11])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (lib/GraphNumbering.ml[53,1835+6]..lib/GraphNumbering.ml[53,1835+8])
+                      Tpat_construct "()"
+                      []
+                      None
+                    expression (lib/GraphNumbering.ml[54,1846+4]..lib/GraphNumbering.ml[55,1871+11])
+                      Texp_sequence
+                      expression (lib/GraphNumbering.ml[54,1846+4]..lib/GraphNumbering.ml[54,1846+23])
+                        Texp_apply
+                        expression (lib/GraphNumbering.ml[54,1846+4]..lib/GraphNumbering.ml[54,1846+18])
+                          Texp_ident "G/1189.foreach_root"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (lib/GraphNumbering.ml[54,1846+19]..lib/GraphNumbering.ml[54,1846+23])
+                              Texp_ident "push/1276"
+                        ]
+                      expression (lib/GraphNumbering.ml[55,1871+4]..lib/GraphNumbering.ml[55,1871+11])
+                        Texp_apply
+                        expression (lib/GraphNumbering.ml[55,1871+4]..lib/GraphNumbering.ml[55,1871+9])
+                          Texp_ident "visit/1279"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (lib/GraphNumbering.ml[55,1871+9]..lib/GraphNumbering.ml[55,1871+11])
+                              Texp_construct "()"
+                              []
+                        ]
+                ]
+              structure_item (lib/GraphNumbering.ml[59,1944+2]..lib/GraphNumbering.ml[59,1944+18])
+                Tstr_include                module_expr (lib/GraphNumbering.ml[59,1944+10]..lib/GraphNumbering.ml[59,1944+16])
+                  Tmod_apply_unit
+                  module_expr (lib/GraphNumbering.ml[59,1944+10]..lib/GraphNumbering.ml[59,1944+16])
+                    Tmod_ident "N/1238.Done"
+            ]
+  structure_item (lib/GraphNumbering.ml[63,1969+0]..lib/GraphNumbering.ml[64,2011+56])
+    Tstr_module
+    ForOrderedType/1697
+      module_expr (lib/GraphNumbering.ml[63,1969+22]..lib/GraphNumbering.ml[64,2011+56])
+        Tmod_functor "T/1304"
+        module_type (lib/GraphNumbering.ml[63,1969+27]..lib/GraphNumbering.ml[63,1969+38])
+          Tmty_ident "Gbnf_parser!.Sigs.OrderedType"
+        module_expr (lib/GraphNumbering.ml[64,2011+2]..lib/GraphNumbering.ml[64,2011+56])
+          Tmod_apply
+          module_expr (lib/GraphNumbering.ml[64,2011+2]..lib/GraphNumbering.ml[64,2011+6])
+            Tmod_ident "Make/1292"
+          module_expr (lib/GraphNumbering.ml[64,2011+7]..lib/GraphNumbering.ml[64,2011+55])
+            Tmod_apply
+            module_expr (lib/GraphNumbering.ml[64,2011+7]..lib/GraphNumbering.ml[64,2011+42])
+              module_expr (lib/GraphNumbering.ml[64,2011+7]..lib/GraphNumbering.ml[64,2011+42])
+                Tmod_ident "Gbnf_parser!.Glue.PersistentMapsToImperativeMaps"
+            module_expr (lib/GraphNumbering.ml[64,2011+43]..lib/GraphNumbering.ml[64,2011+54])
+              Tmod_apply
+              module_expr (lib/GraphNumbering.ml[64,2011+43]..lib/GraphNumbering.ml[64,2011+51])
+                module_expr (lib/GraphNumbering.ml[64,2011+43]..lib/GraphNumbering.ml[64,2011+51])
+                  Tmod_ident "Stdlib!.Map.Make"
+              module_expr (lib/GraphNumbering.ml[64,2011+52]..lib/GraphNumbering.ml[64,2011+53])
+                Tmod_ident "T/1304"
+  structure_item (lib/GraphNumbering.ml[66,2069+0]..lib/GraphNumbering.ml[67,2109+42])
+    Tstr_module
+    ForHashedType/1976
+      module_expr (lib/GraphNumbering.ml[66,2069+21]..lib/GraphNumbering.ml[67,2109+42])
+        Tmod_functor "T/1781"
+        module_type (lib/GraphNumbering.ml[66,2069+26]..lib/GraphNumbering.ml[66,2069+36])
+          Tmty_ident "Gbnf_parser!.Sigs.HashedType"
+        module_expr (lib/GraphNumbering.ml[67,2109+2]..lib/GraphNumbering.ml[67,2109+42])
+          Tmod_apply
+          module_expr (lib/GraphNumbering.ml[67,2109+2]..lib/GraphNumbering.ml[67,2109+6])
+            Tmod_ident "Make/1292"
+          module_expr (lib/GraphNumbering.ml[67,2109+7]..lib/GraphNumbering.ml[67,2109+41])
+            Tmod_apply
+            module_expr (lib/GraphNumbering.ml[67,2109+7]..lib/GraphNumbering.ml[67,2109+38])
+              module_expr (lib/GraphNumbering.ml[67,2109+7]..lib/GraphNumbering.ml[67,2109+38])
+                Tmod_ident "Gbnf_parser!.Glue.HashTablesAsImperativeMaps"
+            module_expr (lib/GraphNumbering.ml[67,2109+39]..lib/GraphNumbering.ml[67,2109+40])
+              Tmod_ident "T/1781"
+  structure_item (lib/GraphNumbering.ml[69,2153+0]..lib/GraphNumbering.ml[70,2181+42])
+    Tstr_module
+    ForType/2011
+      module_expr (lib/GraphNumbering.ml[69,2153+15]..lib/GraphNumbering.ml[70,2181+42])
+        Tmod_functor "T/1978"
+        module_type (lib/GraphNumbering.ml[69,2153+20]..lib/GraphNumbering.ml[69,2153+24])
+          Tmty_ident "Gbnf_parser!.Sigs.TYPE"
+        module_expr (lib/GraphNumbering.ml[70,2181+2]..lib/GraphNumbering.ml[70,2181+42])
+          Tmod_apply
+          module_expr (lib/GraphNumbering.ml[70,2181+2]..lib/GraphNumbering.ml[70,2181+15])
+            Tmod_ident "ForHashedType/1976"
+          module_expr (lib/GraphNumbering.ml[70,2181+16]..lib/GraphNumbering.ml[70,2181+41])
+            Tmod_apply
+            module_expr (lib/GraphNumbering.ml[70,2181+16]..lib/GraphNumbering.ml[70,2181+38])
+              module_expr (lib/GraphNumbering.ml[70,2181+16]..lib/GraphNumbering.ml[70,2181+38])
+                Tmod_ident "Gbnf_parser!.Glue.TrivialHashedType"
+            module_expr (lib/GraphNumbering.ml[70,2181+39]..lib/GraphNumbering.ml[70,2181+40])
+              Tmod_ident "T/1978"
+  structure_item (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+          Texp_apply
+          expression (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost,None)
+          ]
+    ]
+  structure_item (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+          Texp_apply
+          expression (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+          Texp_apply
+          expression (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+          Texp_apply
+          expression (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/GraphNumbering.ml[70,2181+42]..lib/GraphNumbering.ml[70,2181+42]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__GraphNumbering>
+ "ForHashedType"[module] ->
+   Abs<Gbnf_parser__GraphNumbering.13>
+      (T/1781, G/1189,
+       {
+        "N"[module] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "HashTablesAsImperativeMaps"[module](
+          T/1781<Gbnf_parser__GraphNumbering.12>))<Gbnf_parser__GraphNumbering.3>;
+        "decode"[value] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "HashTablesAsImperativeMaps"[module](
+          T/1781<Gbnf_parser__GraphNumbering.12>))<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "decode"[value];
+        "encode"[value] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "HashTablesAsImperativeMaps"[module](
+          T/1781<Gbnf_parser__GraphNumbering.12>))<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "encode"[value];
+        "frontier"[value] -> <Gbnf_parser__GraphNumbering.4>;
+        "n"[value] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "HashTablesAsImperativeMaps"[module](
+          T/1781<Gbnf_parser__GraphNumbering.12>))<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "n"[value];
+        "push"[value] -> <Gbnf_parser__GraphNumbering.5>;
+        "reverse"[value] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "HashTablesAsImperativeMaps"[module](
+          T/1781<Gbnf_parser__GraphNumbering.12>))<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "reverse"[value];
+        "t"[type] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "HashTablesAsImperativeMaps"[module](
+          T/1781<Gbnf_parser__GraphNumbering.12>))<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "t"[type];
+        "visit"[value] -> <Gbnf_parser__GraphNumbering.7>;
+        });
+ "ForOrderedType"[module] ->
+   Abs<Gbnf_parser__GraphNumbering.11>
+      (T/1304, G/1189,
+       {
+        "N"[module] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "PersistentMapsToImperativeMaps"[module](
+          CU Stdlib . "Map"[module] . "Make"[module](
+          T/1304<Gbnf_parser__GraphNumbering.10>)))<Gbnf_parser__GraphNumbering.3>;
+        "decode"[value] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "PersistentMapsToImperativeMaps"[module](
+          CU Stdlib . "Map"[module] . "Make"[module](
+          T/1304<Gbnf_parser__GraphNumbering.10>)))<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "decode"[value];
+        "encode"[value] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "PersistentMapsToImperativeMaps"[module](
+          CU Stdlib . "Map"[module] . "Make"[module](
+          T/1304<Gbnf_parser__GraphNumbering.10>)))<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "encode"[value];
+        "frontier"[value] -> <Gbnf_parser__GraphNumbering.4>;
+        "n"[value] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "PersistentMapsToImperativeMaps"[module](
+          CU Stdlib . "Map"[module] . "Make"[module](
+          T/1304<Gbnf_parser__GraphNumbering.10>)))<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "n"[value];
+        "push"[value] -> <Gbnf_parser__GraphNumbering.5>;
+        "reverse"[value] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "PersistentMapsToImperativeMaps"[module](
+          CU Stdlib . "Map"[module] . "Make"[module](
+          T/1304<Gbnf_parser__GraphNumbering.10>)))<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "reverse"[value];
+        "t"[type] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "PersistentMapsToImperativeMaps"[module](
+          CU Stdlib . "Map"[module] . "Make"[module](
+          T/1304<Gbnf_parser__GraphNumbering.10>)))<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "t"[type];
+        "visit"[value] -> <Gbnf_parser__GraphNumbering.7>;
+        });
+ "ForType"[module] ->
+   Abs<Gbnf_parser__GraphNumbering.15>
+      (T/1978, G/1189,
+       {
+        "N"[module] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "HashTablesAsImperativeMaps"[module](
+          CU Gbnf_parser . "Glue"[module] . "TrivialHashedType"[module](
+          T/1978<Gbnf_parser__GraphNumbering.14>)))<Gbnf_parser__GraphNumbering.3>;
+        "decode"[value] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "HashTablesAsImperativeMaps"[module](
+          CU Gbnf_parser . "Glue"[module] . "TrivialHashedType"[module](
+          T/1978<Gbnf_parser__GraphNumbering.14>)))<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "decode"[value];
+        "encode"[value] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "HashTablesAsImperativeMaps"[module](
+          CU Gbnf_parser . "Glue"[module] . "TrivialHashedType"[module](
+          T/1978<Gbnf_parser__GraphNumbering.14>)))<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "encode"[value];
+        "frontier"[value] -> <Gbnf_parser__GraphNumbering.4>;
+        "n"[value] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "HashTablesAsImperativeMaps"[module](
+          CU Gbnf_parser . "Glue"[module] . "TrivialHashedType"[module](
+          T/1978<Gbnf_parser__GraphNumbering.14>)))<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "n"[value];
+        "push"[value] -> <Gbnf_parser__GraphNumbering.5>;
+        "reverse"[value] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "HashTablesAsImperativeMaps"[module](
+          CU Gbnf_parser . "Glue"[module] . "TrivialHashedType"[module](
+          T/1978<Gbnf_parser__GraphNumbering.14>)))<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "reverse"[value];
+        "t"[type] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          CU Gbnf_parser . "Glue"[module] .
+          "HashTablesAsImperativeMaps"[module](
+          CU Gbnf_parser . "Glue"[module] . "TrivialHashedType"[module](
+          T/1978<Gbnf_parser__GraphNumbering.14>)))<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "t"[type];
+        "visit"[value] -> <Gbnf_parser__GraphNumbering.7>;
+        });
+ "Make"[module] ->
+   Abs<Gbnf_parser__GraphNumbering.9>
+      (M/1181, G/1189,
+       {
+        "N"[module] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          M/1181<Gbnf_parser__GraphNumbering.0>)<Gbnf_parser__GraphNumbering.3>;
+        "decode"[value] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          M/1181<Gbnf_parser__GraphNumbering.0>)<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "decode"[value];
+        "encode"[value] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          M/1181<Gbnf_parser__GraphNumbering.0>)<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "encode"[value];
+        "frontier"[value] -> <Gbnf_parser__GraphNumbering.4>;
+        "n"[value] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          M/1181<Gbnf_parser__GraphNumbering.0>)<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "n"[value];
+        "push"[value] -> <Gbnf_parser__GraphNumbering.5>;
+        "reverse"[value] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          M/1181<Gbnf_parser__GraphNumbering.0>)<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "reverse"[value];
+        "t"[type] ->
+          CU Gbnf_parser . "Numbering"[module] . "Make"[module](
+          M/1181<Gbnf_parser__GraphNumbering.0>)<Gbnf_parser__GraphNumbering.3>
+          . "Done"[module]({
+                            })
+          . "t"[type];
+        "visit"[value] -> <Gbnf_parser__GraphNumbering.7>;
+        });
+ }
+
+(setglobal Gbnf_parser__GraphNumbering!
+  (let
+    (*match*/2651 =
+       (after Gbnf_parser__GraphNumbering lib/GraphNumbering.ml(13)<ghost>:893-893
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__GraphNumbering"))
+     *match*/2649 =
+       (after Gbnf_parser__GraphNumbering lib/GraphNumbering.ml(13)<ghost>:893-893
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/2647 =
+       (after Gbnf_parser__GraphNumbering lib/GraphNumbering.ml(13)<ghost>:893-893
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/GraphNumbering.ml"))
+     *match*/2645 =
+       (after Gbnf_parser__GraphNumbering lib/GraphNumbering.ml(13)<ghost>:893-893
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "GraphNumbering.ml"))
+     Make/1292 =
+       (function M/2625 G/2624 is_a_functor
+         (let
+           (M/1181 =a M/2625
+            G/1189 =a G/2624
+            N/1238 =
+              (apply
+                (let
+                  (let/2619 = (field_imm 1 (global Gbnf_parser__Numbering!)))
+                  (field_imm 1 (global Gbnf_parser__Numbering!)))
+                M/1181)
+            frontier/1239 =
+              (after Gbnf_parser__GraphNumbering.Make.frontier lib/GraphNumbering.ml(31):1327-1341
+                (apply (field_imm 1 (global Stdlib__Stack!)) 0))
+            push/1276 =
+              (function x/1278 : int
+                (funct-body Gbnf_parser__GraphNumbering.Make.push lib/GraphNumbering.ml(33)<ghost>:1354-1383
+                  (before Gbnf_parser__GraphNumbering.Make.push lib/GraphNumbering.ml(34):1362-1383
+                    (after Gbnf_parser__GraphNumbering.Make.push lib/GraphNumbering.ml(34):1362-1383
+                      (apply (field_imm 2 (global Stdlib__Stack!)) x/1278
+                        frontier/1239))))))
+           (letrec
+             (visit/1279
+                (function param/1281[int] : int
+                  (funct-body Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(36)<ghost>:1401-1792
+                    (before Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(37):1410-1792
+                      (catch
+                        (try
+                          (exit 1
+                            (after Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(37):1416-1434
+                              (apply (field_imm 3 (global Stdlib__Stack!))
+                                frontier/1239)))
+                         with exn/2620
+                          (catch
+                            (if
+                              (== exn/2620
+                                (field_imm 0 (global Stdlib__Stack!)))
+                              (before Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(40):1526-1528
+                                0)
+                              (exit 2))
+                           with (2) (reraise exn/2620)))
+                       with (1 x/1280)
+                        (before Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(42):1548-1792
+                          (if
+                            (after Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(42):1551-1571
+                              (apply (field_imm 4 N/1238) x/1280))
+                            (before Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(44):1636-1643
+                              (after Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(44):1636-1643
+                                (apply visit/1279 0)))
+                            (before Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(47):1707-1792
+                              (seq
+                                (after Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(47):1723-1733
+                                  (apply (field_imm 2 N/1238) x/1280))
+                                (before Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(48):1747-1792
+                                  (seq
+                                    (after Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(48):1747-1773
+                                      (apply (field_imm 1 G/1189) x/1280
+                                        push/1276))
+                                    (before Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(49):1785-1792
+                                      (after Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(49):1785-1792
+                                        (apply visit/1279 0))))))))))))))
+             (let
+               (*match*/2623 =
+                  (seq
+                    (after Gbnf_parser__GraphNumbering.Make lib/GraphNumbering.ml(54):1850-1869
+                      (apply (field_imm 0 G/1189) push/1276))
+                    (before Gbnf_parser__GraphNumbering.Make lib/GraphNumbering.ml(55):1875-1882
+                      (after Gbnf_parser__GraphNumbering.Make lib/GraphNumbering.ml(55):1875-1882
+                        (apply visit/1279 0))))
+                include/2621 = (apply (field_imm 6 N/1238) 0)
+                n/1288 =a (field_mut 0 include/2621)
+                encode/1289 =a (field_mut 1 include/2621)
+                reverse/1290 =a (field_mut 2 include/2621)
+                decode/1291 =a (field_mut 3 include/2621))
+               (pseudo Gbnf_parser__GraphNumbering.Make lib/GraphNumbering.ml(18):976-1967
+                 (makeblock 0 N/1238 frontier/1239 push/1276 visit/1279
+                   n/1288 encode/1289 reverse/1290 decode/1291))))))
+     ForOrderedType/1697 =
+       (function T/2630 is_a_functor
+         (let (T/1304 =a T/2630)
+           (apply Make/1292
+             (let
+               (let/2629 =
+                  (apply
+                    (let
+                      (let/2628 = (field_imm 9 (global Gbnf_parser__Glue!)))
+                      (field_imm 9 (global Gbnf_parser__Glue!)))
+                    (let
+                      (let/2627 =
+                         (apply
+                           (let
+                             (let/2626 = (field_imm 0 (global Stdlib__Map!)))
+                             (field_imm 0 (global Stdlib__Map!)))
+                           T/1304))
+                      (makeblock 0 (field_mut 0 let/2627)
+                        (field_mut 1 let/2627) (field_mut 16 let/2627)
+                        (field_mut 22 let/2627)))))
+               (makeblock 0 (field_mut 0 let/2629) (field_mut 2 let/2629)
+                 (field_mut 3 let/2629) (field_mut 1 let/2629)
+                 (field_mut 4 let/2629))))))
+     ForHashedType/1976 =
+       (function T/2633 is_a_functor
+         (let (T/1781 =a T/2633)
+           (apply Make/1292
+             (let
+               (let/2632 =
+                  (apply
+                    (let
+                      (let/2631 = (field_imm 12 (global Gbnf_parser__Glue!)))
+                      (field_imm 12 (global Gbnf_parser__Glue!)))
+                    T/1781))
+               (makeblock 0 (field_mut 19 let/2632) (field_mut 20 let/2632)
+                 (field_mut 21 let/2632) (field_mut 0 let/2632)
+                 (field_mut 8 let/2632))))))
+     ForType/2011 =
+       (function T/2635 is_a_functor
+         (let (T/1978 =a T/2635)
+           (apply ForHashedType/1976
+             (apply
+               (let (let/2634 = (field_imm 4 (global Gbnf_parser__Glue!)))
+                 (field_imm 4 (global Gbnf_parser__Glue!)))
+               T/1978))))
+     *match*/2643 =
+       (after Gbnf_parser__GraphNumbering lib/GraphNumbering.ml(70)<ghost>:2223-2223
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/2641 =
+       (after Gbnf_parser__GraphNumbering lib/GraphNumbering.ml(70)<ghost>:2223-2223
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/2639 =
+       (after Gbnf_parser__GraphNumbering lib/GraphNumbering.ml(70)<ghost>:2223-2223
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/2637 =
+       (after Gbnf_parser__GraphNumbering lib/GraphNumbering.ml(70)<ghost>:2223-2223
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__GraphNumbering")))
+    (pseudo <unknown location>
+      (makeblock 0 Make/1292 ForOrderedType/1697 ForHashedType/1976
+        ForType/2011))))
+(setglobal Gbnf_parser__GraphNumbering!
+  (let
+    (*match*/2651 =
+       (after Gbnf_parser__GraphNumbering lib/GraphNumbering.ml(13)<ghost>:893-893
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__GraphNumbering"))
+     *match*/2649 =
+       (after Gbnf_parser__GraphNumbering lib/GraphNumbering.ml(13)<ghost>:893-893
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/2647 =
+       (after Gbnf_parser__GraphNumbering lib/GraphNumbering.ml(13)<ghost>:893-893
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/GraphNumbering.ml"))
+     *match*/2645 =
+       (after Gbnf_parser__GraphNumbering lib/GraphNumbering.ml(13)<ghost>:893-893
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "GraphNumbering.ml"))
+     Make/1292 =
+       (function M/2625 G/2624 is_a_functor
+         (let
+           (M/1181 =a M/2625
+            G/1189 =a G/2624
+            N/1238 =
+              (apply
+                (let
+                  (let/2619 = (field_imm 1 (global Gbnf_parser__Numbering!)))
+                  (field_imm 1 (global Gbnf_parser__Numbering!)))
+                M/1181)
+            frontier/1239 =
+              (after Gbnf_parser__GraphNumbering.Make.frontier lib/GraphNumbering.ml(31):1327-1341
+                (apply (field_imm 1 (global Stdlib__Stack!)) 0))
+            push/1276 =
+              (function x/1278 : int
+                (funct-body Gbnf_parser__GraphNumbering.Make.push lib/GraphNumbering.ml(33)<ghost>:1354-1383
+                  (before Gbnf_parser__GraphNumbering.Make.push lib/GraphNumbering.ml(34):1362-1383
+                    (after Gbnf_parser__GraphNumbering.Make.push lib/GraphNumbering.ml(34):1362-1383
+                      (apply (field_imm 2 (global Stdlib__Stack!)) x/1278
+                        frontier/1239))))))
+           (letrec
+             (visit/1279
+                (function param/1281[int] : int
+                  (funct-body Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(36)<ghost>:1401-1792
+                    (before Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(37):1410-1792
+                      (catch
+                        (try
+                          (exit 1
+                            (after Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(37):1416-1434
+                              (apply (field_imm 3 (global Stdlib__Stack!))
+                                frontier/1239)))
+                         with exn/2620
+                          (if
+                            (== exn/2620
+                              (field_imm 0 (global Stdlib__Stack!)))
+                            (before Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(40):1526-1528
+                              0)
+                            (reraise exn/2620)))
+                       with (1 x/1280)
+                        (before Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(42):1548-1792
+                          (if
+                            (after Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(42):1551-1571
+                              (apply (field_imm 4 N/1238) x/1280))
+                            (before Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(44):1636-1643
+                              (after Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(44):1636-1643
+                                (apply visit/1279 0)))
+                            (before Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(47):1707-1792
+                              (seq
+                                (after Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(47):1723-1733
+                                  (apply (field_imm 2 N/1238) x/1280))
+                                (before Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(48):1747-1792
+                                  (seq
+                                    (after Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(48):1747-1773
+                                      (apply (field_imm 1 G/1189) x/1280
+                                        push/1276))
+                                    (before Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(49):1785-1792
+                                      (after Gbnf_parser__GraphNumbering.Make.visit lib/GraphNumbering.ml(49):1785-1792
+                                        (apply visit/1279 0))))))))))))))
+             (let
+               (*match*/2623 =
+                  (seq
+                    (after Gbnf_parser__GraphNumbering.Make lib/GraphNumbering.ml(54):1850-1869
+                      (apply (field_imm 0 G/1189) push/1276))
+                    (before Gbnf_parser__GraphNumbering.Make lib/GraphNumbering.ml(55):1875-1882
+                      (after Gbnf_parser__GraphNumbering.Make lib/GraphNumbering.ml(55):1875-1882
+                        (apply visit/1279 0))))
+                include/2621 = (apply (field_imm 6 N/1238) 0)
+                n/1288 =a (field_mut 0 include/2621)
+                encode/1289 =a (field_mut 1 include/2621)
+                reverse/1290 =a (field_mut 2 include/2621)
+                decode/1291 =a (field_mut 3 include/2621))
+               (pseudo Gbnf_parser__GraphNumbering.Make lib/GraphNumbering.ml(18):976-1967
+                 (makeblock 0 N/1238 frontier/1239 push/1276 visit/1279
+                   n/1288 encode/1289 reverse/1290 decode/1291))))))
+     ForOrderedType/1697 =
+       (function T/2630 is_a_functor
+         (let (T/1304 =a T/2630)
+           (apply Make/1292
+             (let
+               (let/2629 =
+                  (apply
+                    (let
+                      (let/2628 = (field_imm 9 (global Gbnf_parser__Glue!)))
+                      (field_imm 9 (global Gbnf_parser__Glue!)))
+                    (let
+                      (let/2627 =
+                         (apply
+                           (let
+                             (let/2626 = (field_imm 0 (global Stdlib__Map!)))
+                             (field_imm 0 (global Stdlib__Map!)))
+                           T/1304))
+                      (makeblock 0 (field_mut 0 let/2627)
+                        (field_mut 1 let/2627) (field_mut 16 let/2627)
+                        (field_mut 22 let/2627)))))
+               (makeblock 0 (field_mut 0 let/2629) (field_mut 2 let/2629)
+                 (field_mut 3 let/2629) (field_mut 1 let/2629)
+                 (field_mut 4 let/2629))))))
+     ForHashedType/1976 =
+       (function T/2633 is_a_functor
+         (let (T/1781 =a T/2633)
+           (apply Make/1292
+             (let
+               (let/2632 =
+                  (apply
+                    (let
+                      (let/2631 = (field_imm 12 (global Gbnf_parser__Glue!)))
+                      (field_imm 12 (global Gbnf_parser__Glue!)))
+                    T/1781))
+               (makeblock 0 (field_mut 19 let/2632) (field_mut 20 let/2632)
+                 (field_mut 21 let/2632) (field_mut 0 let/2632)
+                 (field_mut 8 let/2632))))))
+     ForType/2011 =
+       (function T/2635 is_a_functor
+         (let (T/1978 =a T/2635)
+           (apply ForHashedType/1976
+             (apply
+               (let (let/2634 = (field_imm 4 (global Gbnf_parser__Glue!)))
+                 (field_imm 4 (global Gbnf_parser__Glue!)))
+               T/1978))))
+     *match*/2643 =
+       (after Gbnf_parser__GraphNumbering lib/GraphNumbering.ml(70)<ghost>:2223-2223
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/2641 =
+       (after Gbnf_parser__GraphNumbering lib/GraphNumbering.ml(70)<ghost>:2223-2223
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/2639 =
+       (after Gbnf_parser__GraphNumbering lib/GraphNumbering.ml(70)<ghost>:2223-2223
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/2637 =
+       (after Gbnf_parser__GraphNumbering lib/GraphNumbering.ml(70)<ghost>:2223-2223
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__GraphNumbering")))
+    (pseudo <unknown location>
+      (makeblock 0 Make/1292 ForOrderedType/1697 ForHashedType/1976
+        ForType/2011))))

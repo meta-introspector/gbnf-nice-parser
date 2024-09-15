@@ -1,0 +1,625 @@
+[
+  signature_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Psig_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  signature_item (lib/sentenceParser.mli[4,28+0]..[19,289+7])
+    Psig_type Rec
+    [
+      type_declaration "token" (lib/sentenceParser.mli[4,28+5]..[4,28+10]) (lib/sentenceParser.mli[4,28+0]..[19,289+7])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/sentenceParser.mli[5,42+2]..[5,42+18])
+                "Tchar" (lib/sentenceParser.mli[5,42+4]..[5,42+9])
+                [
+                  core_type (lib/sentenceParser.mli[5,42+14]..[5,42+17])
+                    Ptyp_constr "int" (lib/sentenceParser.mli[5,42+14]..[5,42+17])
+                    []
+                ]
+                None
+              (lib/sentenceParser.mli[6,61+2]..[6,61+8])
+                "STAR" (lib/sentenceParser.mli[6,61+4]..[6,61+8])
+                []
+                None
+              (lib/sentenceParser.mli[7,70+2]..[7,70+10])
+                "RPAREN" (lib/sentenceParser.mli[7,70+4]..[7,70+10])
+                []
+                None
+              (lib/sentenceParser.mli[8,81+2]..[8,81+39])
+                "REGEX" (lib/sentenceParser.mli[8,81+4]..[8,81+9])
+                [
+                  core_type (lib/sentenceParser.mli[8,81+14]..[8,81+38])
+                    Ptyp_constr "Positions.located" (lib/sentenceParser.mli[8,81+21]..[8,81+38])
+                    [
+                      core_type (lib/sentenceParser.mli[8,81+14]..[8,81+20])
+                        Ptyp_constr "string" (lib/sentenceParser.mli[8,81+14]..[8,81+20])
+                        []
+                    ]
+                ]
+                None
+              (lib/sentenceParser.mli[9,121+2]..[9,121+12])
+                "QUESTION" (lib/sentenceParser.mli[9,121+4]..[9,121+12])
+                []
+                None
+              (lib/sentenceParser.mli[10,134+2]..[10,134+37])
+                "QID" (lib/sentenceParser.mli[10,134+4]..[10,134+7])
+                [
+                  core_type (lib/sentenceParser.mli[10,134+12]..[10,134+36])
+                    Ptyp_constr "Positions.located" (lib/sentenceParser.mli[10,134+19]..[10,134+36])
+                    [
+                      core_type (lib/sentenceParser.mli[10,134+12]..[10,134+18])
+                        Ptyp_constr "string" (lib/sentenceParser.mli[10,134+12]..[10,134+18])
+                        []
+                    ]
+                ]
+                None
+              (lib/sentenceParser.mli[11,172+2]..[11,172+8])
+                "PLUS" (lib/sentenceParser.mli[11,172+4]..[11,172+8])
+                []
+                None
+              (lib/sentenceParser.mli[12,181+2]..[12,181+11])
+                "NEWLINE" (lib/sentenceParser.mli[12,181+4]..[12,181+11])
+                []
+                None
+              (lib/sentenceParser.mli[13,193+2]..[13,193+10])
+                "LPAREN" (lib/sentenceParser.mli[13,193+4]..[13,193+10])
+                []
+                None
+              (lib/sentenceParser.mli[14,204+2]..[14,204+37])
+                "LID" (lib/sentenceParser.mli[14,204+4]..[14,204+7])
+                [
+                  core_type (lib/sentenceParser.mli[14,204+12]..[14,204+36])
+                    Ptyp_constr "Positions.located" (lib/sentenceParser.mli[14,204+19]..[14,204+36])
+                    [
+                      core_type (lib/sentenceParser.mli[14,204+12]..[14,204+18])
+                        Ptyp_constr "string" (lib/sentenceParser.mli[14,204+12]..[14,204+18])
+                        []
+                    ]
+                ]
+                None
+              (lib/sentenceParser.mli[15,242+2]..[15,242+7])
+                "EOF" (lib/sentenceParser.mli[15,242+4]..[15,242+7])
+                []
+                None
+              (lib/sentenceParser.mli[16,250+2]..[16,250+8])
+                "DASH" (lib/sentenceParser.mli[16,250+4]..[16,250+8])
+                []
+                None
+              (lib/sentenceParser.mli[17,259+2]..[17,259+19])
+                "COLONCOLONEQUAL" (lib/sentenceParser.mli[17,259+4]..[17,259+19])
+                []
+                None
+              (lib/sentenceParser.mli[18,279+2]..[18,279+9])
+                "CARET" (lib/sentenceParser.mli[18,279+4]..[18,279+9])
+                []
+                None
+              (lib/sentenceParser.mli[19,289+2]..[19,289+7])
+                "BAR" (lib/sentenceParser.mli[19,289+4]..[19,289+7])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (lib/sentenceParser.mli[23,363+0]..[23,363+15])
+    Psig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (lib/sentenceParser.mli[23,363+0]..[23,363+15])
+          pext_name = "Error"
+          pext_kind =
+            Pext_decl
+              []
+              None
+  signature_item (lib/sentenceParser.mli[27,407+0]..[27,407+82])
+    Psig_value
+    value_description "grammar" (lib/sentenceParser.mli[27,407+4]..[27,407+11]) (lib/sentenceParser.mli[27,407+0]..[27,407+82])
+      core_type (lib/sentenceParser.mli[27,407+13]..[27,407+82])
+        Ptyp_arrow
+        Nolabel
+        core_type (lib/sentenceParser.mli[27,407+14]..[27,407+36])
+          Ptyp_arrow
+          Nolabel
+          core_type (lib/sentenceParser.mli[27,407+14]..[27,407+27])
+            Ptyp_constr "Lexing.lexbuf" (lib/sentenceParser.mli[27,407+14]..[27,407+27])
+            []
+          core_type (lib/sentenceParser.mli[27,407+31]..[27,407+36])
+            Ptyp_constr "token" (lib/sentenceParser.mli[27,407+31]..[27,407+36])
+            []
+        core_type (lib/sentenceParser.mli[27,407+41]..[27,407+82])
+          Ptyp_arrow
+          Nolabel
+          core_type (lib/sentenceParser.mli[27,407+41]..[27,407+54])
+            Ptyp_constr "Lexing.lexbuf" (lib/sentenceParser.mli[27,407+41]..[27,407+54])
+            []
+          core_type (lib/sentenceParser.mli[27,407+59]..[27,407+81])
+            Ptyp_constr "Syntax.partial_grammar" (lib/sentenceParser.mli[27,407+59]..[27,407+81])
+            []
+      []
+  signature_item (lib/sentenceParser.mli[29,491+0]..[36,645+3])
+    Psig_module "MenhirInterpreter" (lib/sentenceParser.mli[29,491+7]..[29,491+24])
+    module_type (lib/sentenceParser.mli[29,491+27]..[36,645+3])
+      Pmty_signature
+      [
+        signature_item (lib/sentenceParser.mli[33,557+2]..[34,614+27])
+          Psig_include
+          module_type (lib/sentenceParser.mli[33,557+10]..[34,614+27])
+            Pmty_with
+            module_type (lib/sentenceParser.mli[33,557+10]..[33,557+56])
+              Pmty_ident "MenhirLib.IncrementalEngine.INCREMENTAL_ENGINE" (lib/sentenceParser.mli[33,557+10]..[33,557+56])
+            [
+              Pwith_type "token" (lib/sentenceParser.mli[34,614+14]..[34,614+19])
+                type_declaration "token" (lib/sentenceParser.mli[34,614+14]..[34,614+19]) (lib/sentenceParser.mli[34,614+9]..[34,614+27])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ptype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    Some
+                      core_type (lib/sentenceParser.mli[34,614+22]..[34,614+27])
+                        Ptyp_constr "token" (lib/sentenceParser.mli[34,614+22]..[34,614+27])
+                        []
+            ]
+      ]
+  signature_item (lib/sentenceParser.mli[40,700+0]..[44,819+3])
+    Psig_module "Incremental" (lib/sentenceParser.mli[40,700+7]..[40,700+18])
+    module_type (lib/sentenceParser.mli[40,700+21]..[44,819+3])
+      Pmty_signature
+      [
+        signature_item (lib/sentenceParser.mli[42,728+2]..[42,728+87])
+          Psig_value
+          value_description "grammar" (lib/sentenceParser.mli[42,728+6]..[42,728+13]) (lib/sentenceParser.mli[42,728+2]..[42,728+87])
+            core_type (lib/sentenceParser.mli[42,728+15]..[42,728+87])
+              Ptyp_arrow
+              Nolabel
+              core_type (lib/sentenceParser.mli[42,728+15]..[42,728+30])
+                Ptyp_constr "Lexing.position" (lib/sentenceParser.mli[42,728+15]..[42,728+30])
+                []
+              core_type (lib/sentenceParser.mli[42,728+34]..[42,728+87])
+                Ptyp_constr "MenhirInterpreter.checkpoint" (lib/sentenceParser.mli[42,728+59]..[42,728+87])
+                [
+                  core_type (lib/sentenceParser.mli[42,728+35]..[42,728+57])
+                    Ptyp_constr "Syntax.partial_grammar" (lib/sentenceParser.mli[42,728+35]..[42,728+57])
+                    []
+                ]
+            []
+      ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+type token =
+  | Tchar of int 
+  | STAR 
+  | RPAREN 
+  | REGEX of string Positions.located 
+  | QUESTION 
+  | QID of string Positions.located 
+  | PLUS 
+  | NEWLINE 
+  | LPAREN 
+  | LID of string Positions.located 
+  | EOF 
+  | DASH 
+  | COLONCOLONEQUAL 
+  | CARET 
+  | BAR 
+exception Error 
+val grammar :
+  (Lexing.lexbuf -> token) -> Lexing.lexbuf -> Syntax.partial_grammar
+module MenhirInterpreter :
+sig
+  include
+    MenhirLib.IncrementalEngine.INCREMENTAL_ENGINE with type  token =  token
+end
+module Incremental :
+sig
+  val grammar :
+    Lexing.position -> Syntax.partial_grammar MenhirInterpreter.checkpoint
+end
+[
+  signature_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tsig_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  signature_item (lib/sentenceParser.mli[4,28+0]..lib/sentenceParser.mli[19,289+7])
+    Tsig_type Rec
+    [
+      type_declaration token/328 (lib/sentenceParser.mli[4,28+0]..lib/sentenceParser.mli[19,289+7])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/sentenceParser.mli[5,42+2]..lib/sentenceParser.mli[5,42+18])
+                Tchar/329
+                [
+                  core_type (lib/sentenceParser.mli[5,42+14]..lib/sentenceParser.mli[5,42+17])
+                    Ttyp_constr "int/1!"
+                    []
+                ]
+                None
+              (lib/sentenceParser.mli[6,61+2]..lib/sentenceParser.mli[6,61+8])
+                STAR/330
+                []
+                None
+              (lib/sentenceParser.mli[7,70+2]..lib/sentenceParser.mli[7,70+10])
+                RPAREN/331
+                []
+                None
+              (lib/sentenceParser.mli[8,81+2]..lib/sentenceParser.mli[8,81+39])
+                REGEX/332
+                [
+                  core_type (lib/sentenceParser.mli[8,81+14]..lib/sentenceParser.mli[8,81+38])
+                    Ttyp_constr "Gbnf_parser!.Positions.located"
+                    [
+                      core_type (lib/sentenceParser.mli[8,81+14]..lib/sentenceParser.mli[8,81+20])
+                        Ttyp_constr "string/15!"
+                        []
+                    ]
+                ]
+                None
+              (lib/sentenceParser.mli[9,121+2]..lib/sentenceParser.mli[9,121+12])
+                QUESTION/368
+                []
+                None
+              (lib/sentenceParser.mli[10,134+2]..lib/sentenceParser.mli[10,134+37])
+                QID/369
+                [
+                  core_type (lib/sentenceParser.mli[10,134+12]..lib/sentenceParser.mli[10,134+36])
+                    Ttyp_constr "Gbnf_parser!.Positions.located"
+                    [
+                      core_type (lib/sentenceParser.mli[10,134+12]..lib/sentenceParser.mli[10,134+18])
+                        Ttyp_constr "string/15!"
+                        []
+                    ]
+                ]
+                None
+              (lib/sentenceParser.mli[11,172+2]..lib/sentenceParser.mli[11,172+8])
+                PLUS/370
+                []
+                None
+              (lib/sentenceParser.mli[12,181+2]..lib/sentenceParser.mli[12,181+11])
+                NEWLINE/371
+                []
+                None
+              (lib/sentenceParser.mli[13,193+2]..lib/sentenceParser.mli[13,193+10])
+                LPAREN/372
+                []
+                None
+              (lib/sentenceParser.mli[14,204+2]..lib/sentenceParser.mli[14,204+37])
+                LID/373
+                [
+                  core_type (lib/sentenceParser.mli[14,204+12]..lib/sentenceParser.mli[14,204+36])
+                    Ttyp_constr "Gbnf_parser!.Positions.located"
+                    [
+                      core_type (lib/sentenceParser.mli[14,204+12]..lib/sentenceParser.mli[14,204+18])
+                        Ttyp_constr "string/15!"
+                        []
+                    ]
+                ]
+                None
+              (lib/sentenceParser.mli[15,242+2]..lib/sentenceParser.mli[15,242+7])
+                EOF/374
+                []
+                None
+              (lib/sentenceParser.mli[16,250+2]..lib/sentenceParser.mli[16,250+8])
+                DASH/375
+                []
+                None
+              (lib/sentenceParser.mli[17,259+2]..lib/sentenceParser.mli[17,259+19])
+                COLONCOLONEQUAL/376
+                []
+                None
+              (lib/sentenceParser.mli[18,279+2]..lib/sentenceParser.mli[18,279+9])
+                CARET/377
+                []
+                None
+              (lib/sentenceParser.mli[19,289+2]..lib/sentenceParser.mli[19,289+7])
+                BAR/378
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (lib/sentenceParser.mli[23,363+0]..lib/sentenceParser.mli[23,363+15])
+    Tsig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (lib/sentenceParser.mli[23,363+0]..lib/sentenceParser.mli[23,363+15])
+          pext_name = "Error/414"
+          pext_kind =
+            Text_decl
+              []
+              None
+  signature_item (lib/sentenceParser.mli[27,407+0]..lib/sentenceParser.mli[27,407+82])
+    Tsig_value
+    value_description grammar/476 (lib/sentenceParser.mli[27,407+0]..lib/sentenceParser.mli[27,407+82])
+      core_type (lib/sentenceParser.mli[27,407+13]..lib/sentenceParser.mli[27,407+82])
+        Ttyp_arrow
+        Nolabel
+        core_type (lib/sentenceParser.mli[27,407+14]..lib/sentenceParser.mli[27,407+36])
+          Ttyp_arrow
+          Nolabel
+          core_type (lib/sentenceParser.mli[27,407+14]..lib/sentenceParser.mli[27,407+27])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (lib/sentenceParser.mli[27,407+31]..lib/sentenceParser.mli[27,407+36])
+            Ttyp_constr "token/328"
+            []
+        core_type (lib/sentenceParser.mli[27,407+41]..lib/sentenceParser.mli[27,407+82])
+          Ttyp_arrow
+          Nolabel
+          core_type (lib/sentenceParser.mli[27,407+41]..lib/sentenceParser.mli[27,407+54])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (lib/sentenceParser.mli[27,407+59]..lib/sentenceParser.mli[27,407+81])
+            Ttyp_constr "Gbnf_parser!.Syntax.partial_grammar"
+            []
+      []
+  signature_item (lib/sentenceParser.mli[29,491+0]..lib/sentenceParser.mli[36,645+3])
+    Tsig_module "MenhirInterpreter/596"
+    module_type (lib/sentenceParser.mli[29,491+27]..lib/sentenceParser.mli[36,645+3])
+      Tmty_signature
+      [
+        signature_item (lib/sentenceParser.mli[33,557+2]..lib/sentenceParser.mli[34,614+27])
+          Tsig_include
+          module_type (lib/sentenceParser.mli[33,557+10]..lib/sentenceParser.mli[34,614+27])
+            Tmty_with
+            module_type (lib/sentenceParser.mli[33,557+10]..lib/sentenceParser.mli[33,557+56])
+              Tmty_ident "MenhirLib!.IncrementalEngine.INCREMENTAL_ENGINE"
+            [
+              "token/499"
+                Twith_type
+                  type_declaration token/499 (lib/sentenceParser.mli[34,614+9]..lib/sentenceParser.mli[34,614+27])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ttype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (lib/sentenceParser.mli[34,614+22]..lib/sentenceParser.mli[34,614+27])
+                          Ttyp_constr "token/328"
+                          []
+            ]
+      ]
+  signature_item (lib/sentenceParser.mli[40,700+0]..lib/sentenceParser.mli[44,819+3])
+    Tsig_module "Incremental/598"
+    module_type (lib/sentenceParser.mli[40,700+21]..lib/sentenceParser.mli[44,819+3])
+      Tmty_signature
+      [
+        signature_item (lib/sentenceParser.mli[42,728+2]..lib/sentenceParser.mli[42,728+87])
+          Tsig_value
+          value_description grammar/597 (lib/sentenceParser.mli[42,728+2]..lib/sentenceParser.mli[42,728+87])
+            core_type (lib/sentenceParser.mli[42,728+15]..lib/sentenceParser.mli[42,728+87])
+              Ttyp_arrow
+              Nolabel
+              core_type (lib/sentenceParser.mli[42,728+15]..lib/sentenceParser.mli[42,728+30])
+                Ttyp_constr "Stdlib!.Lexing.position"
+                []
+              core_type (lib/sentenceParser.mli[42,728+34]..lib/sentenceParser.mli[42,728+87])
+                Ttyp_constr "MenhirInterpreter/596.checkpoint"
+                [
+                  core_type (lib/sentenceParser.mli[42,728+35]..lib/sentenceParser.mli[42,728+57])
+                    Ttyp_constr "Gbnf_parser!.Syntax.partial_grammar"
+                    []
+                ]
+            []
+      ]
+]
+

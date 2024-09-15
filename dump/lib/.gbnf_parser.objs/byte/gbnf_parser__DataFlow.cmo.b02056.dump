@@ -1,0 +1,2754 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+          ]
+    ]
+  structure_item (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("lib/DataFlow.ml",(lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("DataFlow.ml",(lib/DataFlow.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/DataFlow.ml[13,893+0]..[13,893+9])
+    Pstr_open Fresh
+    module_expr (lib/DataFlow.ml[13,893+5]..[13,893+9])
+      Pmod_ident "Sigs" (lib/DataFlow.ml[13,893+5]..[13,893+9])
+  structure_item (lib/DataFlow.ml[32,1958+0]..[129,4839+3])
+    Pstr_module
+    "Run" (lib/DataFlow.ml[32,1958+7]..[32,1958+10])
+      module_expr (lib/DataFlow.ml[33,1969+2]..[129,4839+3])
+        Pmod_functor "M" (lib/DataFlow.ml[33,1969+3]..[33,1969+4])
+        module_type (lib/DataFlow.ml[33,1969+7]..[33,1969+30])
+          Pmty_ident "MINIMAL_IMPERATIVE_MAPS" (lib/DataFlow.ml[33,1969+7]..[33,1969+30])
+        module_expr (lib/DataFlow.ml[34,2001+2]..[129,4839+3])
+          Pmod_functor "P" (lib/DataFlow.ml[34,2001+3]..[34,2001+4])
+          module_type (lib/DataFlow.ml[34,2001+7]..[34,2001+27])
+            Pmty_ident "MINIMAL_SEMI_LATTICE" (lib/DataFlow.ml[34,2001+7]..[34,2001+27])
+          module_expr (lib/DataFlow.ml[35,2030+2]..[129,4839+3])
+            Pmod_functor "G" (lib/DataFlow.ml[35,2030+3]..[35,2030+4])
+            module_type (lib/DataFlow.ml[35,2030+7]..[35,2030+80])
+              Pmty_with
+              module_type (lib/DataFlow.ml[35,2030+7]..[35,2030+22])
+                Pmty_ident "DATA_FLOW_GRAPH" (lib/DataFlow.ml[35,2030+7]..[35,2030+22])
+              [
+                Pwith_type "variable" (lib/DataFlow.ml[35,2030+33]..[35,2030+41])
+                  type_declaration "variable" (lib/DataFlow.ml[35,2030+33]..[35,2030+41]) (lib/DataFlow.ml[35,2030+28]..[35,2030+49])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ptype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (lib/DataFlow.ml[35,2030+44]..[35,2030+49])
+                          Ptyp_constr "M.key" (lib/DataFlow.ml[35,2030+44]..[35,2030+49])
+                          []
+                Pwith_type "property" (lib/DataFlow.ml[35,2030+59]..[35,2030+67])
+                  type_declaration "property" (lib/DataFlow.ml[35,2030+59]..[35,2030+67]) (lib/DataFlow.ml[35,2030+54]..[35,2030+80])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ptype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (lib/DataFlow.ml[35,2030+70]..[35,2030+80])
+                          Ptyp_constr "P.property" (lib/DataFlow.ml[35,2030+70]..[35,2030+80])
+                          []
+              ]
+            module_expr (lib/DataFlow.ml[36,2112+2]..[129,4839+3])
+              Pmod_structure
+              [
+                structure_item (lib/DataFlow.ml[37,2121+2]..[37,2121+8])
+                  Pstr_open Fresh
+                  module_expr (lib/DataFlow.ml[37,2121+7]..[37,2121+8])
+                    Pmod_ident "P" (lib/DataFlow.ml[37,2121+7]..[37,2121+8])
+                structure_item (lib/DataFlow.ml[39,2131+2]..[39,2131+23])
+                  Pstr_type Rec
+                  [
+                    type_declaration "variable" (lib/DataFlow.ml[39,2131+7]..[39,2131+15]) (lib/DataFlow.ml[39,2131+2]..[39,2131+23])
+                      ptype_params =
+                        []
+                      ptype_cstrs =
+                        []
+                      ptype_kind =
+                        Ptype_abstract
+                      ptype_private = Public
+                      ptype_manifest =
+                        Some
+                          core_type (lib/DataFlow.ml[39,2131+18]..[39,2131+23])
+                            Ptyp_constr "M.key" (lib/DataFlow.ml[39,2131+18]..[39,2131+23])
+                            []
+                  ]
+                structure_item (lib/DataFlow.ml[43,2236+2]..[44,2255+14])
+                  Pstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[43,2236+6]..[43,2236+16])
+                        Ppat_var "properties" (lib/DataFlow.ml[43,2236+6]..[43,2236+16])
+                      expression (lib/DataFlow.ml[44,2255+4]..[44,2255+14])
+                        Pexp_apply
+                        expression (lib/DataFlow.ml[44,2255+4]..[44,2255+12])
+                          Pexp_ident "M.create" (lib/DataFlow.ml[44,2255+4]..[44,2255+12])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/DataFlow.ml[44,2255+12]..[44,2255+14])
+                              Pexp_construct "()" (lib/DataFlow.ml[44,2255+12]..[44,2255+14])
+                              None
+                        ]
+                  ]
+                structure_item (lib/DataFlow.ml[55,2812+2]..[56,2847+18])
+                  Pstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[55,2812+6]..[55,2812+13])
+                        Ppat_var "pending" (lib/DataFlow.ml[55,2812+6]..[55,2812+13])
+                      core_type (lib/DataFlow.ml[55,2812+16]..[55,2812+32])
+                        Ptyp_constr "Queue.t" (lib/DataFlow.ml[55,2812+25]..[55,2812+32])
+                        [
+                          core_type (lib/DataFlow.ml[55,2812+16]..[55,2812+24])
+                            Ptyp_constr "variable" (lib/DataFlow.ml[55,2812+16]..[55,2812+24])
+                            []
+                        ]
+                      expression (lib/DataFlow.ml[56,2847+4]..[56,2847+18])
+                        Pexp_apply
+                        expression (lib/DataFlow.ml[56,2847+4]..[56,2847+16])
+                          Pexp_ident "Queue.create" (lib/DataFlow.ml[56,2847+4]..[56,2847+16])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/DataFlow.ml[56,2847+16]..[56,2847+18])
+                              Pexp_construct "()" (lib/DataFlow.ml[56,2847+16]..[56,2847+18])
+                              None
+                        ]
+                  ]
+                structure_item (lib/DataFlow.ml[58,2867+2]..[59,2892+14])
+                  Pstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[58,2867+6]..[58,2867+11])
+                        Ppat_var "dirty" (lib/DataFlow.ml[58,2867+6]..[58,2867+11])
+                      core_type (lib/DataFlow.ml[58,2867+14]..[58,2867+22])
+                        Ptyp_constr "M.t" (lib/DataFlow.ml[58,2867+19]..[58,2867+22])
+                        [
+                          core_type (lib/DataFlow.ml[58,2867+14]..[58,2867+18])
+                            Ptyp_constr "bool" (lib/DataFlow.ml[58,2867+14]..[58,2867+18])
+                            []
+                        ]
+                      expression (lib/DataFlow.ml[59,2892+4]..[59,2892+14])
+                        Pexp_apply
+                        expression (lib/DataFlow.ml[59,2892+4]..[59,2892+12])
+                          Pexp_ident "M.create" (lib/DataFlow.ml[59,2892+4]..[59,2892+12])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/DataFlow.ml[59,2892+12]..[59,2892+14])
+                              Pexp_construct "()" (lib/DataFlow.ml[59,2892+12]..[59,2892+14])
+                              None
+                        ]
+                  ]
+                structure_item (lib/DataFlow.ml[61,2908+2]..[62,2940+46])
+                  Pstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[61,2908+6]..[61,2908+14])
+                        Ppat_var "is_dirty" (lib/DataFlow.ml[61,2908+6]..[61,2908+14])
+                      expression (lib/DataFlow.ml[61,2908+15]..[62,2940+46]) ghost
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (lib/DataFlow.ml[61,2908+15]..[61,2908+29])
+                          Ppat_constraint
+                          pattern (lib/DataFlow.ml[61,2908+16]..[61,2908+17])
+                            Ppat_var "x" (lib/DataFlow.ml[61,2908+16]..[61,2908+17])
+                          core_type (lib/DataFlow.ml[61,2908+20]..[61,2908+28])
+                            Ptyp_constr "variable" (lib/DataFlow.ml[61,2908+20]..[61,2908+28])
+                            []
+                        expression (lib/DataFlow.ml[62,2940+4]..[62,2940+46])
+                          Pexp_try
+                          expression (lib/DataFlow.ml[62,2940+8]..[62,2940+22])
+                            Pexp_apply
+                            expression (lib/DataFlow.ml[62,2940+8]..[62,2940+14])
+                              Pexp_ident "M.find" (lib/DataFlow.ml[62,2940+8]..[62,2940+14])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (lib/DataFlow.ml[62,2940+15]..[62,2940+16])
+                                  Pexp_ident "x" (lib/DataFlow.ml[62,2940+15]..[62,2940+16])
+                              <arg>
+                              Nolabel
+                                expression (lib/DataFlow.ml[62,2940+17]..[62,2940+22])
+                                  Pexp_ident "dirty" (lib/DataFlow.ml[62,2940+17]..[62,2940+22])
+                            ]
+                          [
+                            <case>
+                              pattern (lib/DataFlow.ml[62,2940+28]..[62,2940+37])
+                                Ppat_construct "Not_found" (lib/DataFlow.ml[62,2940+28]..[62,2940+37])
+                                None
+                              expression (lib/DataFlow.ml[62,2940+41]..[62,2940+46])
+                                Pexp_construct "false" (lib/DataFlow.ml[62,2940+41]..[62,2940+46])
+                                None
+                          ]
+                  ]
+                structure_item (lib/DataFlow.ml[64,2988+2]..[68,3108+7])
+                  Pstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[64,2988+6]..[64,2988+14])
+                        Ppat_var "schedule" (lib/DataFlow.ml[64,2988+6]..[64,2988+14])
+                      expression (lib/DataFlow.ml[64,2988+15]..[68,3108+7]) ghost
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (lib/DataFlow.ml[64,2988+15]..[64,2988+29])
+                          Ppat_constraint
+                          pattern (lib/DataFlow.ml[64,2988+16]..[64,2988+17])
+                            Ppat_var "x" (lib/DataFlow.ml[64,2988+16]..[64,2988+17])
+                          core_type (lib/DataFlow.ml[64,2988+20]..[64,2988+28])
+                            Ptyp_constr "variable" (lib/DataFlow.ml[64,2988+20]..[64,2988+28])
+                            []
+                        expression (lib/DataFlow.ml[65,3020+4]..[68,3108+7])
+                          Pexp_ifthenelse
+                          expression (lib/DataFlow.ml[65,3020+7]..[65,3020+23])
+                            Pexp_apply
+                            expression (lib/DataFlow.ml[65,3020+7]..[65,3020+10])
+                              Pexp_ident "not" (lib/DataFlow.ml[65,3020+7]..[65,3020+10])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (lib/DataFlow.ml[65,3020+11]..[65,3020+23])
+                                  Pexp_apply
+                                  expression (lib/DataFlow.ml[65,3020+12]..[65,3020+20])
+                                    Pexp_ident "is_dirty" (lib/DataFlow.ml[65,3020+12]..[65,3020+20])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (lib/DataFlow.ml[65,3020+21]..[65,3020+22])
+                                        Pexp_ident "x" (lib/DataFlow.ml[65,3020+21]..[65,3020+22])
+                                  ]
+                            ]
+                          expression (lib/DataFlow.ml[65,3020+29]..[68,3108+7])
+                            Pexp_sequence
+                            expression (lib/DataFlow.ml[66,3055+6]..[66,3055+24])
+                              Pexp_apply
+                              expression (lib/DataFlow.ml[66,3055+6]..[66,3055+11])
+                                Pexp_ident "M.add" (lib/DataFlow.ml[66,3055+6]..[66,3055+11])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (lib/DataFlow.ml[66,3055+12]..[66,3055+13])
+                                    Pexp_ident "x" (lib/DataFlow.ml[66,3055+12]..[66,3055+13])
+                                <arg>
+                                Nolabel
+                                  expression (lib/DataFlow.ml[66,3055+14]..[66,3055+18])
+                                    Pexp_construct "true" (lib/DataFlow.ml[66,3055+14]..[66,3055+18])
+                                    None
+                                <arg>
+                                Nolabel
+                                  expression (lib/DataFlow.ml[66,3055+19]..[66,3055+24])
+                                    Pexp_ident "dirty" (lib/DataFlow.ml[66,3055+19]..[66,3055+24])
+                              ]
+                            expression (lib/DataFlow.ml[67,3081+6]..[67,3081+26])
+                              Pexp_apply
+                              expression (lib/DataFlow.ml[67,3081+6]..[67,3081+16])
+                                Pexp_ident "Queue.push" (lib/DataFlow.ml[67,3081+6]..[67,3081+16])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (lib/DataFlow.ml[67,3081+17]..[67,3081+18])
+                                    Pexp_ident "x" (lib/DataFlow.ml[67,3081+17]..[67,3081+18])
+                                <arg>
+                                Nolabel
+                                  expression (lib/DataFlow.ml[67,3081+19]..[67,3081+26])
+                                    Pexp_ident "pending" (lib/DataFlow.ml[67,3081+19]..[67,3081+26])
+                              ]
+                          None
+                  ]
+                structure_item (lib/DataFlow.ml[74,3316+2]..[89,3908+11])
+                  Pstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[74,3316+6]..[74,3316+12])
+                        Ppat_var "update" (lib/DataFlow.ml[74,3316+6]..[74,3316+12])
+                      expression (lib/DataFlow.ml[74,3316+13]..[89,3908+11]) ghost
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (lib/DataFlow.ml[74,3316+13]..[74,3316+28])
+                          Ppat_constraint
+                          pattern (lib/DataFlow.ml[74,3316+14]..[74,3316+16])
+                            Ppat_var "x'" (lib/DataFlow.ml[74,3316+14]..[74,3316+16])
+                          core_type (lib/DataFlow.ml[74,3316+19]..[74,3316+27])
+                            Ptyp_constr "variable" (lib/DataFlow.ml[74,3316+19]..[74,3316+27])
+                            []
+                        expression (lib/DataFlow.ml[74,3316+29]..[89,3908+11]) ghost
+                          Pexp_fun
+                          Nolabel
+                          None
+                          pattern (lib/DataFlow.ml[74,3316+29]..[74,3316+44])
+                            Ppat_constraint
+                            pattern (lib/DataFlow.ml[74,3316+30]..[74,3316+32])
+                              Ppat_var "p'" (lib/DataFlow.ml[74,3316+30]..[74,3316+32])
+                            core_type (lib/DataFlow.ml[74,3316+35]..[74,3316+43])
+                              Ptyp_constr "property" (lib/DataFlow.ml[74,3316+35]..[74,3316+43])
+                              []
+                          expression (lib/DataFlow.ml[75,3363+4]..[89,3908+11])
+                            Pexp_match
+                            expression (lib/DataFlow.ml[75,3363+10]..[75,3363+30])
+                              Pexp_apply
+                              expression (lib/DataFlow.ml[75,3363+10]..[75,3363+16])
+                                Pexp_ident "M.find" (lib/DataFlow.ml[75,3363+10]..[75,3363+16])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (lib/DataFlow.ml[75,3363+17]..[75,3363+19])
+                                    Pexp_ident "x'" (lib/DataFlow.ml[75,3363+17]..[75,3363+19])
+                                <arg>
+                                Nolabel
+                                  expression (lib/DataFlow.ml[75,3363+20]..[75,3363+30])
+                                    Pexp_ident "properties" (lib/DataFlow.ml[75,3363+20]..[75,3363+30])
+                              ]
+                            [
+                              <case>
+                                pattern (lib/DataFlow.ml[76,3399+6]..[76,3399+25])
+                                  Ppat_exception
+                                  pattern (lib/DataFlow.ml[76,3399+16]..[76,3399+25])
+                                    Ppat_construct "Not_found" (lib/DataFlow.ml[76,3399+16]..[76,3399+25])
+                                    None
+                                expression (lib/DataFlow.ml[78,3468+8]..[79,3500+19])
+                                  Pexp_sequence
+                                  expression (lib/DataFlow.ml[78,3468+8]..[78,3468+30])
+                                    Pexp_apply
+                                    expression (lib/DataFlow.ml[78,3468+8]..[78,3468+13])
+                                      Pexp_ident "M.add" (lib/DataFlow.ml[78,3468+8]..[78,3468+13])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (lib/DataFlow.ml[78,3468+14]..[78,3468+16])
+                                          Pexp_ident "x'" (lib/DataFlow.ml[78,3468+14]..[78,3468+16])
+                                      <arg>
+                                      Nolabel
+                                        expression (lib/DataFlow.ml[78,3468+17]..[78,3468+19])
+                                          Pexp_ident "p'" (lib/DataFlow.ml[78,3468+17]..[78,3468+19])
+                                      <arg>
+                                      Nolabel
+                                        expression (lib/DataFlow.ml[78,3468+20]..[78,3468+30])
+                                          Pexp_ident "properties" (lib/DataFlow.ml[78,3468+20]..[78,3468+30])
+                                    ]
+                                  expression (lib/DataFlow.ml[79,3500+8]..[79,3500+19])
+                                    Pexp_apply
+                                    expression (lib/DataFlow.ml[79,3500+8]..[79,3500+16])
+                                      Pexp_ident "schedule" (lib/DataFlow.ml[79,3500+8]..[79,3500+16])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (lib/DataFlow.ml[79,3500+17]..[79,3500+19])
+                                          Pexp_ident "x'" (lib/DataFlow.ml[79,3500+17]..[79,3500+19])
+                                    ]
+                              <case>
+                                pattern (lib/DataFlow.ml[80,3520+6]..[80,3520+7])
+                                  Ppat_var "p" (lib/DataFlow.ml[80,3520+6]..[80,3520+7])
+                                expression (lib/DataFlow.ml[82,3579+8]..[89,3908+11])
+                                  Pexp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (lib/DataFlow.ml[82,3579+12]..[82,3579+15])
+                                        Ppat_var "p''" (lib/DataFlow.ml[82,3579+12]..[82,3579+15])
+                                      expression (lib/DataFlow.ml[82,3579+18]..[82,3579+33])
+                                        Pexp_apply
+                                        expression (lib/DataFlow.ml[82,3579+18]..[82,3579+28])
+                                          Pexp_ident "P.leq_join" (lib/DataFlow.ml[82,3579+18]..[82,3579+28])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (lib/DataFlow.ml[82,3579+29]..[82,3579+31])
+                                              Pexp_ident "p'" (lib/DataFlow.ml[82,3579+29]..[82,3579+31])
+                                          <arg>
+                                          Nolabel
+                                            expression (lib/DataFlow.ml[82,3579+32]..[82,3579+33])
+                                              Pexp_ident "p" (lib/DataFlow.ml[82,3579+32]..[82,3579+33])
+                                        ]
+                                  ]
+                                  expression (lib/DataFlow.ml[83,3616+8]..[89,3908+11])
+                                    Pexp_ifthenelse
+                                    expression (lib/DataFlow.ml[83,3616+11]..[83,3616+19])
+                                      Pexp_apply
+                                      expression (lib/DataFlow.ml[83,3616+15]..[83,3616+17])
+                                        Pexp_ident "!=" (lib/DataFlow.ml[83,3616+15]..[83,3616+17])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (lib/DataFlow.ml[83,3616+11]..[83,3616+14])
+                                            Pexp_ident "p''" (lib/DataFlow.ml[83,3616+11]..[83,3616+14])
+                                        <arg>
+                                        Nolabel
+                                          expression (lib/DataFlow.ml[83,3616+18]..[83,3616+19])
+                                            Pexp_ident "p" (lib/DataFlow.ml[83,3616+18]..[83,3616+19])
+                                      ]
+                                    expression (lib/DataFlow.ml[83,3616+25]..[89,3908+11])
+                                      Pexp_sequence
+                                      expression (lib/DataFlow.ml[87,3851+10]..[87,3851+33])
+                                        Pexp_apply
+                                        expression (lib/DataFlow.ml[87,3851+10]..[87,3851+15])
+                                          Pexp_ident "M.add" (lib/DataFlow.ml[87,3851+10]..[87,3851+15])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (lib/DataFlow.ml[87,3851+16]..[87,3851+18])
+                                              Pexp_ident "x'" (lib/DataFlow.ml[87,3851+16]..[87,3851+18])
+                                          <arg>
+                                          Nolabel
+                                            expression (lib/DataFlow.ml[87,3851+19]..[87,3851+22])
+                                              Pexp_ident "p''" (lib/DataFlow.ml[87,3851+19]..[87,3851+22])
+                                          <arg>
+                                          Nolabel
+                                            expression (lib/DataFlow.ml[87,3851+23]..[87,3851+33])
+                                              Pexp_ident "properties" (lib/DataFlow.ml[87,3851+23]..[87,3851+33])
+                                        ]
+                                      expression (lib/DataFlow.ml[88,3886+10]..[88,3886+21])
+                                        Pexp_apply
+                                        expression (lib/DataFlow.ml[88,3886+10]..[88,3886+18])
+                                          Pexp_ident "schedule" (lib/DataFlow.ml[88,3886+10]..[88,3886+18])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (lib/DataFlow.ml[88,3886+19]..[88,3886+21])
+                                              Pexp_ident "x'" (lib/DataFlow.ml[88,3886+19]..[88,3886+21])
+                                        ]
+                                    None
+                            ]
+                  ]
+                structure_item (lib/DataFlow.ml[94,4079+2]..[97,4253+34])
+                  Pstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[94,4079+6]..[94,4079+13])
+                        Ppat_var "examine" (lib/DataFlow.ml[94,4079+6]..[94,4079+13])
+                      expression (lib/DataFlow.ml[94,4079+14]..[97,4253+34]) ghost
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (lib/DataFlow.ml[94,4079+14]..[94,4079+28])
+                          Ppat_constraint
+                          pattern (lib/DataFlow.ml[94,4079+15]..[94,4079+16])
+                            Ppat_var "x" (lib/DataFlow.ml[94,4079+15]..[94,4079+16])
+                          core_type (lib/DataFlow.ml[94,4079+19]..[94,4079+27])
+                            Ptyp_constr "variable" (lib/DataFlow.ml[94,4079+19]..[94,4079+27])
+                            []
+                        expression (lib/DataFlow.ml[96,4183+4]..[97,4253+34])
+                          Pexp_let Nonrec
+                          [
+                            <def>
+                              pattern (lib/DataFlow.ml[96,4183+8]..[96,4183+9])
+                                Ppat_var "p" (lib/DataFlow.ml[96,4183+8]..[96,4183+9])
+                              expression (lib/DataFlow.ml[96,4183+12]..[96,4183+66])
+                                Pexp_try
+                                expression (lib/DataFlow.ml[96,4183+16]..[96,4183+35])
+                                  Pexp_apply
+                                  expression (lib/DataFlow.ml[96,4183+16]..[96,4183+22])
+                                    Pexp_ident "M.find" (lib/DataFlow.ml[96,4183+16]..[96,4183+22])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (lib/DataFlow.ml[96,4183+23]..[96,4183+24])
+                                        Pexp_ident "x" (lib/DataFlow.ml[96,4183+23]..[96,4183+24])
+                                    <arg>
+                                    Nolabel
+                                      expression (lib/DataFlow.ml[96,4183+25]..[96,4183+35])
+                                        Pexp_ident "properties" (lib/DataFlow.ml[96,4183+25]..[96,4183+35])
+                                  ]
+                                [
+                                  <case>
+                                    pattern (lib/DataFlow.ml[96,4183+41]..[96,4183+50])
+                                      Ppat_construct "Not_found" (lib/DataFlow.ml[96,4183+41]..[96,4183+50])
+                                      None
+                                    expression (lib/DataFlow.ml[96,4183+54]..[96,4183+66])
+                                      Pexp_assert
+                                      expression (lib/DataFlow.ml[96,4183+61]..[96,4183+66])
+                                        Pexp_construct "false" (lib/DataFlow.ml[96,4183+61]..[96,4183+66])
+                                        None
+                                ]
+                          ]
+                          expression (lib/DataFlow.ml[97,4253+4]..[97,4253+34])
+                            Pexp_apply
+                            expression (lib/DataFlow.ml[97,4253+4]..[97,4253+23])
+                              Pexp_ident "G.foreach_successor" (lib/DataFlow.ml[97,4253+4]..[97,4253+23])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (lib/DataFlow.ml[97,4253+24]..[97,4253+25])
+                                  Pexp_ident "x" (lib/DataFlow.ml[97,4253+24]..[97,4253+25])
+                              <arg>
+                              Nolabel
+                                expression (lib/DataFlow.ml[97,4253+26]..[97,4253+27])
+                                  Pexp_ident "p" (lib/DataFlow.ml[97,4253+26]..[97,4253+27])
+                              <arg>
+                              Nolabel
+                                expression (lib/DataFlow.ml[97,4253+28]..[97,4253+34])
+                                  Pexp_ident "update" (lib/DataFlow.ml[97,4253+28]..[97,4253+34])
+                            ]
+                  ]
+                structure_item (lib/DataFlow.ml[101,4342+2]..[105,4429+5])
+                  Pstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[101,4342+6]..[101,4342+8])
+                        Ppat_construct "()" (lib/DataFlow.ml[101,4342+6]..[101,4342+8])
+                        None
+                      expression (lib/DataFlow.ml[102,4353+4]..[105,4429+5])
+                        Pexp_apply
+                        expression (lib/DataFlow.ml[102,4353+4]..[102,4353+18])
+                          Pexp_ident "G.foreach_root" (lib/DataFlow.ml[102,4353+4]..[102,4353+18])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/DataFlow.ml[102,4353+19]..[105,4429+5])
+                              Pexp_fun
+                              Nolabel
+                              None
+                              pattern (lib/DataFlow.ml[102,4353+24]..[102,4353+25])
+                                Ppat_var "x" (lib/DataFlow.ml[102,4353+24]..[102,4353+25])
+                              expression (lib/DataFlow.ml[102,4353+26]..[104,4412+16]) ghost
+                                Pexp_fun
+                                Nolabel
+                                None
+                                pattern (lib/DataFlow.ml[102,4353+26]..[102,4353+27])
+                                  Ppat_var "p" (lib/DataFlow.ml[102,4353+26]..[102,4353+27])
+                                expression (lib/DataFlow.ml[103,4384+6]..[104,4412+16])
+                                  Pexp_sequence
+                                  expression (lib/DataFlow.ml[103,4384+6]..[103,4384+26])
+                                    Pexp_apply
+                                    expression (lib/DataFlow.ml[103,4384+6]..[103,4384+11])
+                                      Pexp_ident "M.add" (lib/DataFlow.ml[103,4384+6]..[103,4384+11])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (lib/DataFlow.ml[103,4384+12]..[103,4384+13])
+                                          Pexp_ident "x" (lib/DataFlow.ml[103,4384+12]..[103,4384+13])
+                                      <arg>
+                                      Nolabel
+                                        expression (lib/DataFlow.ml[103,4384+14]..[103,4384+15])
+                                          Pexp_ident "p" (lib/DataFlow.ml[103,4384+14]..[103,4384+15])
+                                      <arg>
+                                      Nolabel
+                                        expression (lib/DataFlow.ml[103,4384+16]..[103,4384+26])
+                                          Pexp_ident "properties" (lib/DataFlow.ml[103,4384+16]..[103,4384+26])
+                                    ]
+                                  expression (lib/DataFlow.ml[104,4412+6]..[104,4412+16])
+                                    Pexp_apply
+                                    expression (lib/DataFlow.ml[104,4412+6]..[104,4412+14])
+                                      Pexp_ident "schedule" (lib/DataFlow.ml[104,4412+6]..[104,4412+14])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (lib/DataFlow.ml[104,4412+15]..[104,4412+16])
+                                          Pexp_ident "x" (lib/DataFlow.ml[104,4412+15]..[104,4412+16])
+                                    ]
+                        ]
+                  ]
+                structure_item (lib/DataFlow.ml[109,4510+2]..[117,4668+8])
+                  Pstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[109,4510+6]..[109,4510+8])
+                        Ppat_construct "()" (lib/DataFlow.ml[109,4510+6]..[109,4510+8])
+                        None
+                      expression (lib/DataFlow.ml[110,4521+4]..[117,4668+8])
+                        Pexp_try
+                        expression (lib/DataFlow.ml[111,4529+6]..[115,4633+10])
+                          Pexp_while
+                          expression (lib/DataFlow.ml[111,4529+12]..[111,4529+16])
+                            Pexp_construct "true" (lib/DataFlow.ml[111,4529+12]..[111,4529+16])
+                            None
+                          expression (lib/DataFlow.ml[112,4549+8]..[114,4615+17])
+                            Pexp_let Nonrec
+                            [
+                              <def>
+                                pattern (lib/DataFlow.ml[112,4549+12]..[112,4549+13])
+                                  Ppat_var "x" (lib/DataFlow.ml[112,4549+12]..[112,4549+13])
+                                expression (lib/DataFlow.ml[112,4549+16]..[112,4549+33])
+                                  Pexp_apply
+                                  expression (lib/DataFlow.ml[112,4549+16]..[112,4549+25])
+                                    Pexp_ident "Queue.pop" (lib/DataFlow.ml[112,4549+16]..[112,4549+25])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (lib/DataFlow.ml[112,4549+26]..[112,4549+33])
+                                        Pexp_ident "pending" (lib/DataFlow.ml[112,4549+26]..[112,4549+33])
+                                  ]
+                            ]
+                            expression (lib/DataFlow.ml[113,4586+8]..[114,4615+17])
+                              Pexp_sequence
+                              expression (lib/DataFlow.ml[113,4586+8]..[113,4586+27])
+                                Pexp_apply
+                                expression (lib/DataFlow.ml[113,4586+8]..[113,4586+13])
+                                  Pexp_ident "M.add" (lib/DataFlow.ml[113,4586+8]..[113,4586+13])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/DataFlow.ml[113,4586+14]..[113,4586+15])
+                                      Pexp_ident "x" (lib/DataFlow.ml[113,4586+14]..[113,4586+15])
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/DataFlow.ml[113,4586+16]..[113,4586+21])
+                                      Pexp_construct "false" (lib/DataFlow.ml[113,4586+16]..[113,4586+21])
+                                      None
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/DataFlow.ml[113,4586+22]..[113,4586+27])
+                                      Pexp_ident "dirty" (lib/DataFlow.ml[113,4586+22]..[113,4586+27])
+                                ]
+                              expression (lib/DataFlow.ml[114,4615+8]..[114,4615+17])
+                                Pexp_apply
+                                expression (lib/DataFlow.ml[114,4615+8]..[114,4615+15])
+                                  Pexp_ident "examine" (lib/DataFlow.ml[114,4615+8]..[114,4615+15])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/DataFlow.ml[114,4615+16]..[114,4615+17])
+                                      Pexp_ident "x" (lib/DataFlow.ml[114,4615+16]..[114,4615+17])
+                                ]
+                        [
+                          <case>
+                            pattern (lib/DataFlow.ml[116,4644+9]..[116,4644+20])
+                              Ppat_construct "Queue.Empty" (lib/DataFlow.ml[116,4644+9]..[116,4644+20])
+                              None
+                            expression (lib/DataFlow.ml[117,4668+6]..[117,4668+8])
+                              Pexp_construct "()" (lib/DataFlow.ml[117,4668+6]..[117,4668+8])
+                              None
+                        ]
+                  ]
+                structure_item (lib/DataFlow.ml[121,4708+2]..[121,4708+35])
+                  Pstr_type Rec
+                  [
+                    type_declaration "property" (lib/DataFlow.ml[121,4708+7]..[121,4708+15]) (lib/DataFlow.ml[121,4708+2]..[121,4708+35])
+                      ptype_params =
+                        []
+                      ptype_cstrs =
+                        []
+                      ptype_kind =
+                        Ptype_abstract
+                      ptype_private = Public
+                      ptype_manifest =
+                        Some
+                          core_type (lib/DataFlow.ml[121,4708+18]..[121,4708+35])
+                            Ptyp_constr "option" (lib/DataFlow.ml[121,4708+29]..[121,4708+35])
+                            [
+                              core_type (lib/DataFlow.ml[121,4708+18]..[121,4708+28])
+                                Ptyp_constr "P.property" (lib/DataFlow.ml[121,4708+18]..[121,4708+28])
+                                []
+                            ]
+                  ]
+                structure_item (lib/DataFlow.ml[123,4745+2]..[127,4827+10])
+                  Pstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[123,4745+6]..[123,4745+14])
+                        Ppat_var "solution" (lib/DataFlow.ml[123,4745+6]..[123,4745+14])
+                      expression (lib/DataFlow.ml[123,4745+15]..[127,4827+10]) ghost
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (lib/DataFlow.ml[123,4745+15]..[123,4745+16])
+                          Ppat_var "x" (lib/DataFlow.ml[123,4745+15]..[123,4745+16])
+                        expression (lib/DataFlow.ml[124,4764+4]..[127,4827+10])
+                          Pexp_try
+                          expression (lib/DataFlow.ml[125,4772+6]..[125,4772+32])
+                            Pexp_construct "Some" (lib/DataFlow.ml[125,4772+6]..[125,4772+10])
+                            Some
+                              expression (lib/DataFlow.ml[125,4772+11]..[125,4772+32])
+                                Pexp_apply
+                                expression (lib/DataFlow.ml[125,4772+12]..[125,4772+18])
+                                  Pexp_ident "M.find" (lib/DataFlow.ml[125,4772+12]..[125,4772+18])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/DataFlow.ml[125,4772+19]..[125,4772+20])
+                                      Pexp_ident "x" (lib/DataFlow.ml[125,4772+19]..[125,4772+20])
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/DataFlow.ml[125,4772+21]..[125,4772+31])
+                                      Pexp_ident "properties" (lib/DataFlow.ml[125,4772+21]..[125,4772+31])
+                                ]
+                          [
+                            <case>
+                              pattern (lib/DataFlow.ml[126,4805+9]..[126,4805+18])
+                                Ppat_construct "Not_found" (lib/DataFlow.ml[126,4805+9]..[126,4805+18])
+                                None
+                              expression (lib/DataFlow.ml[127,4827+6]..[127,4827+10])
+                                Pexp_construct "None" (lib/DataFlow.ml[127,4827+6]..[127,4827+10])
+                                None
+                          ]
+                  ]
+              ]
+  structure_item (lib/DataFlow.ml[131,4844+0]..[132,4886+55])
+    Pstr_module
+    "ForOrderedType" (lib/DataFlow.ml[131,4844+7]..[131,4844+21])
+      module_expr (lib/DataFlow.ml[131,4844+22]..[132,4886+55])
+        Pmod_functor "T" (lib/DataFlow.ml[131,4844+23]..[131,4844+24])
+        module_type (lib/DataFlow.ml[131,4844+27]..[131,4844+38])
+          Pmty_ident "OrderedType" (lib/DataFlow.ml[131,4844+27]..[131,4844+38])
+        module_expr (lib/DataFlow.ml[132,4886+2]..[132,4886+55])
+          Pmod_apply
+          module_expr (lib/DataFlow.ml[132,4886+2]..[132,4886+5])
+            Pmod_ident "Run" (lib/DataFlow.ml[132,4886+2]..[132,4886+5])
+          module_expr (lib/DataFlow.ml[132,4886+6]..[132,4886+54])
+            Pmod_apply
+            module_expr (lib/DataFlow.ml[132,4886+6]..[132,4886+41])
+              Pmod_ident "Glue.PersistentMapsToImperativeMaps" (lib/DataFlow.ml[132,4886+6]..[132,4886+41])
+            module_expr (lib/DataFlow.ml[132,4886+42]..[132,4886+53])
+              Pmod_apply
+              module_expr (lib/DataFlow.ml[132,4886+42]..[132,4886+50])
+                Pmod_ident "Map.Make" (lib/DataFlow.ml[132,4886+42]..[132,4886+50])
+              module_expr (lib/DataFlow.ml[132,4886+51]..[132,4886+52])
+                Pmod_ident "T" (lib/DataFlow.ml[132,4886+51]..[132,4886+52])
+  structure_item (lib/DataFlow.ml[134,4943+0]..[135,4983+41])
+    Pstr_module
+    "ForHashedType" (lib/DataFlow.ml[134,4943+7]..[134,4943+20])
+      module_expr (lib/DataFlow.ml[134,4943+21]..[135,4983+41])
+        Pmod_functor "T" (lib/DataFlow.ml[134,4943+22]..[134,4943+23])
+        module_type (lib/DataFlow.ml[134,4943+26]..[134,4943+36])
+          Pmty_ident "HashedType" (lib/DataFlow.ml[134,4943+26]..[134,4943+36])
+        module_expr (lib/DataFlow.ml[135,4983+2]..[135,4983+41])
+          Pmod_apply
+          module_expr (lib/DataFlow.ml[135,4983+2]..[135,4983+5])
+            Pmod_ident "Run" (lib/DataFlow.ml[135,4983+2]..[135,4983+5])
+          module_expr (lib/DataFlow.ml[135,4983+6]..[135,4983+40])
+            Pmod_apply
+            module_expr (lib/DataFlow.ml[135,4983+6]..[135,4983+37])
+              Pmod_ident "Glue.HashTablesAsImperativeMaps" (lib/DataFlow.ml[135,4983+6]..[135,4983+37])
+            module_expr (lib/DataFlow.ml[135,4983+38]..[135,4983+39])
+              Pmod_ident "T" (lib/DataFlow.ml[135,4983+38]..[135,4983+39])
+  structure_item (lib/DataFlow.ml[137,5026+0]..[138,5054+42])
+    Pstr_module
+    "ForType" (lib/DataFlow.ml[137,5026+7]..[137,5026+14])
+      module_expr (lib/DataFlow.ml[137,5026+15]..[138,5054+42])
+        Pmod_functor "T" (lib/DataFlow.ml[137,5026+16]..[137,5026+17])
+        module_type (lib/DataFlow.ml[137,5026+20]..[137,5026+24])
+          Pmty_ident "TYPE" (lib/DataFlow.ml[137,5026+20]..[137,5026+24])
+        module_expr (lib/DataFlow.ml[138,5054+2]..[138,5054+42])
+          Pmod_apply
+          module_expr (lib/DataFlow.ml[138,5054+2]..[138,5054+15])
+            Pmod_ident "ForHashedType" (lib/DataFlow.ml[138,5054+2]..[138,5054+15])
+          module_expr (lib/DataFlow.ml[138,5054+16]..[138,5054+41])
+            Pmod_apply
+            module_expr (lib/DataFlow.ml[138,5054+16]..[138,5054+38])
+              Pmod_ident "Glue.TrivialHashedType" (lib/DataFlow.ml[138,5054+16]..[138,5054+38])
+            module_expr (lib/DataFlow.ml[138,5054+39]..[138,5054+40])
+              Pmod_ident "T" (lib/DataFlow.ml[138,5054+39]..[138,5054+40])
+  structure_item (lib/DataFlow.ml[140,5098+0]..[141,5146+37])
+    Pstr_module
+    "ForIntSegment" (lib/DataFlow.ml[140,5098+7]..[140,5098+20])
+      module_expr (lib/DataFlow.ml[140,5098+21]..[141,5146+37])
+        Pmod_functor "K" (lib/DataFlow.ml[140,5098+22]..[140,5098+23])
+        module_type (lib/DataFlow.ml[140,5098+26]..[140,5098+44])
+          Pmty_signature
+          [
+            signature_item (lib/DataFlow.ml[140,5098+30]..[140,5098+40])
+              Psig_value
+              value_description "n" (lib/DataFlow.ml[140,5098+34]..[140,5098+35]) (lib/DataFlow.ml[140,5098+30]..[140,5098+40])
+                core_type (lib/DataFlow.ml[140,5098+37]..[140,5098+40])
+                  Ptyp_constr "int" (lib/DataFlow.ml[140,5098+37]..[140,5098+40])
+                  []
+                []
+          ]
+        module_expr (lib/DataFlow.ml[141,5146+2]..[141,5146+37])
+          Pmod_apply
+          module_expr (lib/DataFlow.ml[141,5146+2]..[141,5146+5])
+            Pmod_ident "Run" (lib/DataFlow.ml[141,5146+2]..[141,5146+5])
+          module_expr (lib/DataFlow.ml[141,5146+6]..[141,5146+36])
+            Pmod_apply
+            module_expr (lib/DataFlow.ml[141,5146+6]..[141,5146+33])
+              Pmod_ident "Glue.ArraysAsImperativeMaps" (lib/DataFlow.ml[141,5146+6]..[141,5146+33])
+            module_expr (lib/DataFlow.ml[141,5146+34]..[141,5146+35])
+              Pmod_ident "K" (lib/DataFlow.ml[141,5146+34]..[141,5146+35])
+  structure_item (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+          Ppat_construct "()" (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+          None
+        expression (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+          Pexp_apply
+          expression (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost,None)
+          ]
+    ]
+  structure_item (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+          Ppat_construct "()" (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+          None
+        expression (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+          Pexp_apply
+          expression (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+                Pexp_construct "()" (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+          Ppat_construct "()" (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+          None
+        expression (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+          Pexp_apply
+          expression (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+                Pexp_construct "()" (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+          Ppat_construct "()" (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+          None
+        expression (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+          Pexp_apply
+          expression (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/DataFlow.ml[141,5146+37]..[141,5146+37]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set ~absolute_filename:"lib/DataFlow.ml"
+let () =
+  Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "DataFlow.ml"
+open Sigs
+module Run(M:MINIMAL_IMPERATIVE_MAPS)(P:MINIMAL_SEMI_LATTICE)(G:DATA_FLOW_GRAPH
+                                                                  with type
+                                                                   variable =
+                                                                   M.key and
+                                                                  type
+                                                                   property =
+                                                                   P.property) =
+  struct
+    open P
+    type variable = M.key
+    let properties = M.create ()
+    let pending : variable Queue.t = Queue.create ()
+    let dirty : bool M.t = M.create ()
+    let is_dirty (x : variable) =
+      try M.find x dirty with | Not_found -> false
+    let schedule (x : variable) =
+      if not (is_dirty x) then (M.add x true dirty; Queue.push x pending)
+    let update (x' : variable) (p' : property) =
+      match M.find x' properties with
+      | exception Not_found -> (M.add x' p' properties; schedule x')
+      | p ->
+          let p'' = P.leq_join p' p in
+          if p'' != p then (M.add x' p'' properties; schedule x')
+    let examine (x : variable) =
+      let p = try M.find x properties with | Not_found -> assert false in
+      G.foreach_successor x p update
+    let () =
+      G.foreach_root (fun x -> fun p -> M.add x p properties; schedule x)
+    let () =
+      try
+        while true do
+          let x = Queue.pop pending in M.add x false dirty; examine x done
+      with | Queue.Empty -> ()
+    type property = P.property option
+    let solution x = try Some (M.find x properties) with | Not_found -> None
+  end
+module ForOrderedType(T:OrderedType) =
+  (Run)((Glue.PersistentMapsToImperativeMaps)((Map.Make)(T)))
+module ForHashedType(T:HashedType) =
+  (Run)((Glue.HashTablesAsImperativeMaps)(T))
+module ForType(T:TYPE) = (ForHashedType)((Glue.TrivialHashedType)(T))
+module ForIntSegment(K:sig val n : int end) =
+  (Run)((Glue.ArraysAsImperativeMaps)(K))
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+                Texp_constant Const_string("lib/DataFlow.ml",(lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost
+                Texp_constant Const_string("DataFlow.ml",(lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/DataFlow.ml[13,893+0]..lib/DataFlow.ml[13,893+9])
+    Tstr_open Fresh
+    module_expr (lib/DataFlow.ml[13,893+5]..lib/DataFlow.ml[13,893+9])
+      Tmod_ident "Gbnf_parser!.Sigs"
+  structure_item (lib/DataFlow.ml[32,1958+0]..lib/DataFlow.ml[129,4839+3])
+    Tstr_module
+    Run/1263
+      module_expr (lib/DataFlow.ml[33,1969+2]..lib/DataFlow.ml[129,4839+3])
+        Tmod_functor "M/1179"
+        module_type (lib/DataFlow.ml[33,1969+7]..lib/DataFlow.ml[33,1969+30])
+          Tmty_ident "Gbnf_parser!.Sigs.MINIMAL_IMPERATIVE_MAPS"
+        module_expr (lib/DataFlow.ml[34,2001+2]..lib/DataFlow.ml[129,4839+3])
+          Tmod_functor "P/1182"
+          module_type (lib/DataFlow.ml[34,2001+7]..lib/DataFlow.ml[34,2001+27])
+            Tmty_ident "Gbnf_parser!.Sigs.MINIMAL_SEMI_LATTICE"
+          module_expr (lib/DataFlow.ml[35,2030+2]..lib/DataFlow.ml[129,4839+3])
+            Tmod_functor "G/1193"
+            module_type (lib/DataFlow.ml[35,2030+7]..lib/DataFlow.ml[35,2030+80])
+              Tmty_with
+              module_type (lib/DataFlow.ml[35,2030+7]..lib/DataFlow.ml[35,2030+22])
+                Tmty_ident "Gbnf_parser!.Sigs.DATA_FLOW_GRAPH"
+              [
+                "variable/1183"
+                  Twith_type
+                    type_declaration variable/1183 (lib/DataFlow.ml[35,2030+28]..lib/DataFlow.ml[35,2030+49])
+                      ptype_params =
+                        []
+                      ptype_cstrs =
+                        []
+                      ptype_kind =
+                        Ttype_abstract
+                      ptype_private = Public
+                      ptype_manifest =
+                        Some
+                          core_type (lib/DataFlow.ml[35,2030+44]..lib/DataFlow.ml[35,2030+49])
+                            Ttyp_constr "M/1179.key"
+                            []
+                "property/1184"
+                  Twith_type
+                    type_declaration property/1184 (lib/DataFlow.ml[35,2030+54]..lib/DataFlow.ml[35,2030+80])
+                      ptype_params =
+                        []
+                      ptype_cstrs =
+                        []
+                      ptype_kind =
+                        Ttype_abstract
+                      ptype_private = Public
+                      ptype_manifest =
+                        Some
+                          core_type (lib/DataFlow.ml[35,2030+70]..lib/DataFlow.ml[35,2030+80])
+                            Ttyp_constr "P/1182.property"
+                            []
+              ]
+            module_expr (lib/DataFlow.ml[36,2112+2]..lib/DataFlow.ml[129,4839+3])
+              Tmod_structure
+              [
+                structure_item (lib/DataFlow.ml[37,2121+2]..lib/DataFlow.ml[37,2121+8])
+                  Tstr_open Fresh
+                  module_expr (lib/DataFlow.ml[37,2121+7]..lib/DataFlow.ml[37,2121+8])
+                    Tmod_ident "P/1182"
+                structure_item (lib/DataFlow.ml[39,2131+2]..lib/DataFlow.ml[39,2131+23])
+                  Tstr_type Rec
+                  [
+                    type_declaration variable/1194 (lib/DataFlow.ml[39,2131+2]..lib/DataFlow.ml[39,2131+23])
+                      ptype_params =
+                        []
+                      ptype_cstrs =
+                        []
+                      ptype_kind =
+                        Ttype_abstract
+                      ptype_private = Public
+                      ptype_manifest =
+                        Some
+                          core_type (lib/DataFlow.ml[39,2131+18]..lib/DataFlow.ml[39,2131+23])
+                            Ttyp_constr "M/1179.key"
+                            []
+                  ]
+                structure_item (lib/DataFlow.ml[43,2236+2]..lib/DataFlow.ml[44,2255+14])
+                  Tstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[43,2236+6]..lib/DataFlow.ml[43,2236+16])
+                        Tpat_var "properties/1195"
+                      expression (lib/DataFlow.ml[44,2255+4]..lib/DataFlow.ml[44,2255+14])
+                        Texp_apply
+                        expression (lib/DataFlow.ml[44,2255+4]..lib/DataFlow.ml[44,2255+12])
+                          Texp_ident "M/1179.create"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (lib/DataFlow.ml[44,2255+12]..lib/DataFlow.ml[44,2255+14])
+                              Texp_construct "()"
+                              []
+                        ]
+                  ]
+                structure_item (lib/DataFlow.ml[55,2812+2]..lib/DataFlow.ml[56,2847+18])
+                  Tstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[55,2812+6]..lib/DataFlow.ml[55,2812+13])
+                        extra
+                          Tpat_extra_constraint
+                          core_type (lib/DataFlow.ml[55,2812+16]..lib/DataFlow.ml[55,2812+32])
+                            Ttyp_constr "Stdlib!.Queue.t"
+                            [
+                              core_type (lib/DataFlow.ml[55,2812+16]..lib/DataFlow.ml[55,2812+24])
+                                Ttyp_constr "variable/1194"
+                                []
+                            ]
+                        Tpat_alias "pending/1217"
+                        pattern (lib/DataFlow.ml[55,2812+6]..lib/DataFlow.ml[55,2812+13])
+                          Tpat_any
+                      expression (lib/DataFlow.ml[56,2847+4]..lib/DataFlow.ml[56,2847+18])
+                        extra
+                          Texp_constraint
+                          core_type (lib/DataFlow.ml[55,2812+16]..lib/DataFlow.ml[55,2812+32])
+                            Ttyp_constr "Stdlib!.Queue.t"
+                            [
+                              core_type (lib/DataFlow.ml[55,2812+16]..lib/DataFlow.ml[55,2812+24])
+                                Ttyp_constr "variable/1194"
+                                []
+                            ]
+                        Texp_apply
+                        expression (lib/DataFlow.ml[56,2847+4]..lib/DataFlow.ml[56,2847+16])
+                          Texp_ident "Stdlib!.Queue.create"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (lib/DataFlow.ml[56,2847+16]..lib/DataFlow.ml[56,2847+18])
+                              Texp_construct "()"
+                              []
+                        ]
+                  ]
+                structure_item (lib/DataFlow.ml[58,2867+2]..lib/DataFlow.ml[59,2892+14])
+                  Tstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[58,2867+6]..lib/DataFlow.ml[58,2867+11])
+                        extra
+                          Tpat_extra_constraint
+                          core_type (lib/DataFlow.ml[58,2867+14]..lib/DataFlow.ml[58,2867+22])
+                            Ttyp_constr "M/1179.t"
+                            [
+                              core_type (lib/DataFlow.ml[58,2867+14]..lib/DataFlow.ml[58,2867+18])
+                                Ttyp_constr "bool/5!"
+                                []
+                            ]
+                        Tpat_alias "dirty/1239"
+                        pattern (lib/DataFlow.ml[58,2867+6]..lib/DataFlow.ml[58,2867+11])
+                          Tpat_any
+                      expression (lib/DataFlow.ml[59,2892+4]..lib/DataFlow.ml[59,2892+14])
+                        extra
+                          Texp_constraint
+                          core_type (lib/DataFlow.ml[58,2867+14]..lib/DataFlow.ml[58,2867+22])
+                            Ttyp_constr "M/1179.t"
+                            [
+                              core_type (lib/DataFlow.ml[58,2867+14]..lib/DataFlow.ml[58,2867+18])
+                                Ttyp_constr "bool/5!"
+                                []
+                            ]
+                        Texp_apply
+                        expression (lib/DataFlow.ml[59,2892+4]..lib/DataFlow.ml[59,2892+12])
+                          Texp_ident "M/1179.create"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (lib/DataFlow.ml[59,2892+12]..lib/DataFlow.ml[59,2892+14])
+                              Texp_construct "()"
+                              []
+                        ]
+                  ]
+                structure_item (lib/DataFlow.ml[61,2908+2]..lib/DataFlow.ml[62,2940+46])
+                  Tstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[61,2908+6]..lib/DataFlow.ml[61,2908+14])
+                        Tpat_var "is_dirty/1240"
+                      expression (lib/DataFlow.ml[61,2908+15]..lib/DataFlow.ml[62,2940+46]) ghost
+                        Texp_function
+                        Nolabel
+                        [
+                          <case>
+                            pattern (lib/DataFlow.ml[61,2908+16]..lib/DataFlow.ml[61,2908+17])
+                              extra
+                                Tpat_extra_constraint
+                                core_type (lib/DataFlow.ml[61,2908+20]..lib/DataFlow.ml[61,2908+28])
+                                  Ttyp_constr "variable/1194"
+                                  []
+                              Tpat_alias "x/1242"
+                              pattern (lib/DataFlow.ml[61,2908+16]..lib/DataFlow.ml[61,2908+17])
+                                Tpat_any
+                            expression (lib/DataFlow.ml[62,2940+4]..lib/DataFlow.ml[62,2940+46])
+                              Texp_try
+                              expression (lib/DataFlow.ml[62,2940+8]..lib/DataFlow.ml[62,2940+22])
+                                Texp_apply
+                                expression (lib/DataFlow.ml[62,2940+8]..lib/DataFlow.ml[62,2940+14])
+                                  Texp_ident "M/1179.find"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/DataFlow.ml[62,2940+15]..lib/DataFlow.ml[62,2940+16])
+                                      Texp_ident "x/1242"
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/DataFlow.ml[62,2940+17]..lib/DataFlow.ml[62,2940+22])
+                                      Texp_ident "dirty/1239"
+                                ]
+                              [
+                                <case>
+                                  pattern (lib/DataFlow.ml[62,2940+28]..lib/DataFlow.ml[62,2940+37])
+                                    Tpat_construct "Not_found"
+                                    []
+                                    None
+                                  expression (lib/DataFlow.ml[62,2940+41]..lib/DataFlow.ml[62,2940+46])
+                                    Texp_construct "false"
+                                    []
+                              ]
+                        ]
+                  ]
+                structure_item (lib/DataFlow.ml[64,2988+2]..lib/DataFlow.ml[68,3108+7])
+                  Tstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[64,2988+6]..lib/DataFlow.ml[64,2988+14])
+                        Tpat_var "schedule/1243"
+                      expression (lib/DataFlow.ml[64,2988+15]..lib/DataFlow.ml[68,3108+7]) ghost
+                        Texp_function
+                        Nolabel
+                        [
+                          <case>
+                            pattern (lib/DataFlow.ml[64,2988+16]..lib/DataFlow.ml[64,2988+17])
+                              extra
+                                Tpat_extra_constraint
+                                core_type (lib/DataFlow.ml[64,2988+20]..lib/DataFlow.ml[64,2988+28])
+                                  Ttyp_constr "variable/1194"
+                                  []
+                              Tpat_alias "x/1245"
+                              pattern (lib/DataFlow.ml[64,2988+16]..lib/DataFlow.ml[64,2988+17])
+                                Tpat_any
+                            expression (lib/DataFlow.ml[65,3020+4]..lib/DataFlow.ml[68,3108+7])
+                              Texp_ifthenelse
+                              expression (lib/DataFlow.ml[65,3020+7]..lib/DataFlow.ml[65,3020+23])
+                                Texp_apply
+                                expression (lib/DataFlow.ml[65,3020+7]..lib/DataFlow.ml[65,3020+10])
+                                  Texp_ident "Stdlib!.not"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/DataFlow.ml[65,3020+11]..lib/DataFlow.ml[65,3020+23])
+                                      Texp_apply
+                                      expression (lib/DataFlow.ml[65,3020+12]..lib/DataFlow.ml[65,3020+20])
+                                        Texp_ident "is_dirty/1240"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (lib/DataFlow.ml[65,3020+21]..lib/DataFlow.ml[65,3020+22])
+                                            Texp_ident "x/1245"
+                                      ]
+                                ]
+                              expression (lib/DataFlow.ml[65,3020+29]..lib/DataFlow.ml[68,3108+7])
+                                Texp_sequence
+                                expression (lib/DataFlow.ml[66,3055+6]..lib/DataFlow.ml[66,3055+24])
+                                  Texp_apply
+                                  expression (lib/DataFlow.ml[66,3055+6]..lib/DataFlow.ml[66,3055+11])
+                                    Texp_ident "M/1179.add"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/DataFlow.ml[66,3055+12]..lib/DataFlow.ml[66,3055+13])
+                                        Texp_ident "x/1245"
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/DataFlow.ml[66,3055+14]..lib/DataFlow.ml[66,3055+18])
+                                        Texp_construct "true"
+                                        []
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/DataFlow.ml[66,3055+19]..lib/DataFlow.ml[66,3055+24])
+                                        Texp_ident "dirty/1239"
+                                  ]
+                                expression (lib/DataFlow.ml[67,3081+6]..lib/DataFlow.ml[67,3081+26])
+                                  Texp_apply
+                                  expression (lib/DataFlow.ml[67,3081+6]..lib/DataFlow.ml[67,3081+16])
+                                    Texp_ident "Stdlib!.Queue.push"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/DataFlow.ml[67,3081+17]..lib/DataFlow.ml[67,3081+18])
+                                        Texp_ident "x/1245"
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/DataFlow.ml[67,3081+19]..lib/DataFlow.ml[67,3081+26])
+                                        Texp_ident "pending/1217"
+                                  ]
+                              None
+                        ]
+                  ]
+                structure_item (lib/DataFlow.ml[74,3316+2]..lib/DataFlow.ml[89,3908+11])
+                  Tstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[74,3316+6]..lib/DataFlow.ml[74,3316+12])
+                        Tpat_var "update/1246"
+                      expression (lib/DataFlow.ml[74,3316+13]..lib/DataFlow.ml[89,3908+11]) ghost
+                        Texp_function
+                        Nolabel
+                        [
+                          <case>
+                            pattern (lib/DataFlow.ml[74,3316+14]..lib/DataFlow.ml[74,3316+16])
+                              extra
+                                Tpat_extra_constraint
+                                core_type (lib/DataFlow.ml[74,3316+19]..lib/DataFlow.ml[74,3316+27])
+                                  Ttyp_constr "variable/1194"
+                                  []
+                              Tpat_alias "x'/1248"
+                              pattern (lib/DataFlow.ml[74,3316+14]..lib/DataFlow.ml[74,3316+16])
+                                Tpat_any
+                            expression (lib/DataFlow.ml[74,3316+29]..lib/DataFlow.ml[89,3908+11]) ghost
+                              Texp_function
+                              Nolabel
+                              [
+                                <case>
+                                  pattern (lib/DataFlow.ml[74,3316+30]..lib/DataFlow.ml[74,3316+32])
+                                    extra
+                                      Tpat_extra_constraint
+                                      core_type (lib/DataFlow.ml[74,3316+35]..lib/DataFlow.ml[74,3316+43])
+                                        Ttyp_constr "P/1182.property"
+                                        []
+                                    Tpat_alias "p'/1249"
+                                    pattern (lib/DataFlow.ml[74,3316+30]..lib/DataFlow.ml[74,3316+32])
+                                      Tpat_any
+                                  expression (lib/DataFlow.ml[75,3363+4]..lib/DataFlow.ml[89,3908+11])
+                                    Texp_match
+                                    expression (lib/DataFlow.ml[75,3363+10]..lib/DataFlow.ml[75,3363+30])
+                                      Texp_apply
+                                      expression (lib/DataFlow.ml[75,3363+10]..lib/DataFlow.ml[75,3363+16])
+                                        Texp_ident "M/1179.find"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (lib/DataFlow.ml[75,3363+17]..lib/DataFlow.ml[75,3363+19])
+                                            Texp_ident "x'/1248"
+                                        <arg>
+                                          Nolabel
+                                          expression (lib/DataFlow.ml[75,3363+20]..lib/DataFlow.ml[75,3363+30])
+                                            Texp_ident "properties/1195"
+                                      ]
+                                    [
+                                      <case>
+                                        pattern (lib/DataFlow.ml[76,3399+6]..lib/DataFlow.ml[76,3399+25])
+                                          Tpat_exception
+                                          pattern (lib/DataFlow.ml[76,3399+16]..lib/DataFlow.ml[76,3399+25])
+                                            Tpat_construct "Not_found"
+                                            []
+                                            None
+                                        expression (lib/DataFlow.ml[78,3468+8]..lib/DataFlow.ml[79,3500+19])
+                                          Texp_sequence
+                                          expression (lib/DataFlow.ml[78,3468+8]..lib/DataFlow.ml[78,3468+30])
+                                            Texp_apply
+                                            expression (lib/DataFlow.ml[78,3468+8]..lib/DataFlow.ml[78,3468+13])
+                                              Texp_ident "M/1179.add"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/DataFlow.ml[78,3468+14]..lib/DataFlow.ml[78,3468+16])
+                                                  Texp_ident "x'/1248"
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/DataFlow.ml[78,3468+17]..lib/DataFlow.ml[78,3468+19])
+                                                  Texp_ident "p'/1249"
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/DataFlow.ml[78,3468+20]..lib/DataFlow.ml[78,3468+30])
+                                                  Texp_ident "properties/1195"
+                                            ]
+                                          expression (lib/DataFlow.ml[79,3500+8]..lib/DataFlow.ml[79,3500+19])
+                                            Texp_apply
+                                            expression (lib/DataFlow.ml[79,3500+8]..lib/DataFlow.ml[79,3500+16])
+                                              Texp_ident "schedule/1243"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/DataFlow.ml[79,3500+17]..lib/DataFlow.ml[79,3500+19])
+                                                  Texp_ident "x'/1248"
+                                            ]
+                                      <case>
+                                        pattern (lib/DataFlow.ml[80,3520+6]..lib/DataFlow.ml[80,3520+7])
+                                          Tpat_value
+                                          pattern (lib/DataFlow.ml[80,3520+6]..lib/DataFlow.ml[80,3520+7])
+                                            Tpat_var "p/1250"
+                                        expression (lib/DataFlow.ml[82,3579+8]..lib/DataFlow.ml[89,3908+11])
+                                          Texp_let Nonrec
+                                          [
+                                            <def>
+                                              pattern (lib/DataFlow.ml[82,3579+12]..lib/DataFlow.ml[82,3579+15])
+                                                Tpat_var "p''/1251"
+                                              expression (lib/DataFlow.ml[82,3579+18]..lib/DataFlow.ml[82,3579+33])
+                                                Texp_apply
+                                                expression (lib/DataFlow.ml[82,3579+18]..lib/DataFlow.ml[82,3579+28])
+                                                  Texp_ident "P/1182.leq_join"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (lib/DataFlow.ml[82,3579+29]..lib/DataFlow.ml[82,3579+31])
+                                                      Texp_ident "p'/1249"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (lib/DataFlow.ml[82,3579+32]..lib/DataFlow.ml[82,3579+33])
+                                                      Texp_ident "p/1250"
+                                                ]
+                                          ]
+                                          expression (lib/DataFlow.ml[83,3616+8]..lib/DataFlow.ml[89,3908+11])
+                                            Texp_ifthenelse
+                                            expression (lib/DataFlow.ml[83,3616+11]..lib/DataFlow.ml[83,3616+19])
+                                              Texp_apply
+                                              expression (lib/DataFlow.ml[83,3616+15]..lib/DataFlow.ml[83,3616+17])
+                                                Texp_ident "Stdlib!.!="
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/DataFlow.ml[83,3616+11]..lib/DataFlow.ml[83,3616+14])
+                                                    Texp_ident "p''/1251"
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/DataFlow.ml[83,3616+18]..lib/DataFlow.ml[83,3616+19])
+                                                    Texp_ident "p/1250"
+                                              ]
+                                            expression (lib/DataFlow.ml[83,3616+25]..lib/DataFlow.ml[89,3908+11])
+                                              Texp_sequence
+                                              expression (lib/DataFlow.ml[87,3851+10]..lib/DataFlow.ml[87,3851+33])
+                                                Texp_apply
+                                                expression (lib/DataFlow.ml[87,3851+10]..lib/DataFlow.ml[87,3851+15])
+                                                  Texp_ident "M/1179.add"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (lib/DataFlow.ml[87,3851+16]..lib/DataFlow.ml[87,3851+18])
+                                                      Texp_ident "x'/1248"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (lib/DataFlow.ml[87,3851+19]..lib/DataFlow.ml[87,3851+22])
+                                                      Texp_ident "p''/1251"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (lib/DataFlow.ml[87,3851+23]..lib/DataFlow.ml[87,3851+33])
+                                                      Texp_ident "properties/1195"
+                                                ]
+                                              expression (lib/DataFlow.ml[88,3886+10]..lib/DataFlow.ml[88,3886+21])
+                                                Texp_apply
+                                                expression (lib/DataFlow.ml[88,3886+10]..lib/DataFlow.ml[88,3886+18])
+                                                  Texp_ident "schedule/1243"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (lib/DataFlow.ml[88,3886+19]..lib/DataFlow.ml[88,3886+21])
+                                                      Texp_ident "x'/1248"
+                                                ]
+                                            None
+                                    ]
+                              ]
+                        ]
+                  ]
+                structure_item (lib/DataFlow.ml[94,4079+2]..lib/DataFlow.ml[97,4253+34])
+                  Tstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[94,4079+6]..lib/DataFlow.ml[94,4079+13])
+                        Tpat_var "examine/1252"
+                      expression (lib/DataFlow.ml[94,4079+14]..lib/DataFlow.ml[97,4253+34]) ghost
+                        Texp_function
+                        Nolabel
+                        [
+                          <case>
+                            pattern (lib/DataFlow.ml[94,4079+15]..lib/DataFlow.ml[94,4079+16])
+                              extra
+                                Tpat_extra_constraint
+                                core_type (lib/DataFlow.ml[94,4079+19]..lib/DataFlow.ml[94,4079+27])
+                                  Ttyp_constr "variable/1194"
+                                  []
+                              Tpat_alias "x/1254"
+                              pattern (lib/DataFlow.ml[94,4079+15]..lib/DataFlow.ml[94,4079+16])
+                                Tpat_any
+                            expression (lib/DataFlow.ml[96,4183+4]..lib/DataFlow.ml[97,4253+34])
+                              Texp_let Nonrec
+                              [
+                                <def>
+                                  pattern (lib/DataFlow.ml[96,4183+8]..lib/DataFlow.ml[96,4183+9])
+                                    Tpat_var "p/1255"
+                                  expression (lib/DataFlow.ml[96,4183+12]..lib/DataFlow.ml[96,4183+66])
+                                    Texp_try
+                                    expression (lib/DataFlow.ml[96,4183+16]..lib/DataFlow.ml[96,4183+35])
+                                      Texp_apply
+                                      expression (lib/DataFlow.ml[96,4183+16]..lib/DataFlow.ml[96,4183+22])
+                                        Texp_ident "M/1179.find"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (lib/DataFlow.ml[96,4183+23]..lib/DataFlow.ml[96,4183+24])
+                                            Texp_ident "x/1254"
+                                        <arg>
+                                          Nolabel
+                                          expression (lib/DataFlow.ml[96,4183+25]..lib/DataFlow.ml[96,4183+35])
+                                            Texp_ident "properties/1195"
+                                      ]
+                                    [
+                                      <case>
+                                        pattern (lib/DataFlow.ml[96,4183+41]..lib/DataFlow.ml[96,4183+50])
+                                          Tpat_construct "Not_found"
+                                          []
+                                          None
+                                        expression (lib/DataFlow.ml[96,4183+54]..lib/DataFlow.ml[96,4183+66])
+                                          Texp_assert                                          expression (lib/DataFlow.ml[96,4183+61]..lib/DataFlow.ml[96,4183+66])
+                                            Texp_construct "false"
+                                            []
+                                    ]
+                              ]
+                              expression (lib/DataFlow.ml[97,4253+4]..lib/DataFlow.ml[97,4253+34])
+                                Texp_apply
+                                expression (lib/DataFlow.ml[97,4253+4]..lib/DataFlow.ml[97,4253+23])
+                                  Texp_ident "G/1193.foreach_successor"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/DataFlow.ml[97,4253+24]..lib/DataFlow.ml[97,4253+25])
+                                      Texp_ident "x/1254"
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/DataFlow.ml[97,4253+26]..lib/DataFlow.ml[97,4253+27])
+                                      Texp_ident "p/1255"
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/DataFlow.ml[97,4253+28]..lib/DataFlow.ml[97,4253+34])
+                                      Texp_ident "update/1246"
+                                ]
+                        ]
+                  ]
+                structure_item (lib/DataFlow.ml[101,4342+2]..lib/DataFlow.ml[105,4429+5])
+                  Tstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[101,4342+6]..lib/DataFlow.ml[101,4342+8])
+                        Tpat_construct "()"
+                        []
+                        None
+                      expression (lib/DataFlow.ml[102,4353+4]..lib/DataFlow.ml[105,4429+5])
+                        Texp_apply
+                        expression (lib/DataFlow.ml[102,4353+4]..lib/DataFlow.ml[102,4353+18])
+                          Texp_ident "G/1193.foreach_root"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (lib/DataFlow.ml[102,4353+19]..lib/DataFlow.ml[105,4429+5])
+                              Texp_function
+                              Nolabel
+                              [
+                                <case>
+                                  pattern (lib/DataFlow.ml[102,4353+24]..lib/DataFlow.ml[102,4353+25])
+                                    Tpat_var "x/1256"
+                                  expression (lib/DataFlow.ml[102,4353+26]..lib/DataFlow.ml[104,4412+16]) ghost
+                                    Texp_function
+                                    Nolabel
+                                    [
+                                      <case>
+                                        pattern (lib/DataFlow.ml[102,4353+26]..lib/DataFlow.ml[102,4353+27])
+                                          Tpat_var "p/1257"
+                                        expression (lib/DataFlow.ml[103,4384+6]..lib/DataFlow.ml[104,4412+16])
+                                          Texp_sequence
+                                          expression (lib/DataFlow.ml[103,4384+6]..lib/DataFlow.ml[103,4384+26])
+                                            Texp_apply
+                                            expression (lib/DataFlow.ml[103,4384+6]..lib/DataFlow.ml[103,4384+11])
+                                              Texp_ident "M/1179.add"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/DataFlow.ml[103,4384+12]..lib/DataFlow.ml[103,4384+13])
+                                                  Texp_ident "x/1256"
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/DataFlow.ml[103,4384+14]..lib/DataFlow.ml[103,4384+15])
+                                                  Texp_ident "p/1257"
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/DataFlow.ml[103,4384+16]..lib/DataFlow.ml[103,4384+26])
+                                                  Texp_ident "properties/1195"
+                                            ]
+                                          expression (lib/DataFlow.ml[104,4412+6]..lib/DataFlow.ml[104,4412+16])
+                                            Texp_apply
+                                            expression (lib/DataFlow.ml[104,4412+6]..lib/DataFlow.ml[104,4412+14])
+                                              Texp_ident "schedule/1243"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/DataFlow.ml[104,4412+15]..lib/DataFlow.ml[104,4412+16])
+                                                  Texp_ident "x/1256"
+                                            ]
+                                    ]
+                              ]
+                        ]
+                  ]
+                structure_item (lib/DataFlow.ml[109,4510+2]..lib/DataFlow.ml[117,4668+8])
+                  Tstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[109,4510+6]..lib/DataFlow.ml[109,4510+8])
+                        Tpat_construct "()"
+                        []
+                        None
+                      expression (lib/DataFlow.ml[110,4521+4]..lib/DataFlow.ml[117,4668+8])
+                        Texp_try
+                        expression (lib/DataFlow.ml[111,4529+6]..lib/DataFlow.ml[115,4633+10])
+                          Texp_while
+                          expression (lib/DataFlow.ml[111,4529+12]..lib/DataFlow.ml[111,4529+16])
+                            Texp_construct "true"
+                            []
+                          expression (lib/DataFlow.ml[112,4549+8]..lib/DataFlow.ml[114,4615+17])
+                            Texp_let Nonrec
+                            [
+                              <def>
+                                pattern (lib/DataFlow.ml[112,4549+12]..lib/DataFlow.ml[112,4549+13])
+                                  Tpat_var "x/1258"
+                                expression (lib/DataFlow.ml[112,4549+16]..lib/DataFlow.ml[112,4549+33])
+                                  Texp_apply
+                                  expression (lib/DataFlow.ml[112,4549+16]..lib/DataFlow.ml[112,4549+25])
+                                    Texp_ident "Stdlib!.Queue.pop"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/DataFlow.ml[112,4549+26]..lib/DataFlow.ml[112,4549+33])
+                                        Texp_ident "pending/1217"
+                                  ]
+                            ]
+                            expression (lib/DataFlow.ml[113,4586+8]..lib/DataFlow.ml[114,4615+17])
+                              Texp_sequence
+                              expression (lib/DataFlow.ml[113,4586+8]..lib/DataFlow.ml[113,4586+27])
+                                Texp_apply
+                                expression (lib/DataFlow.ml[113,4586+8]..lib/DataFlow.ml[113,4586+13])
+                                  Texp_ident "M/1179.add"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/DataFlow.ml[113,4586+14]..lib/DataFlow.ml[113,4586+15])
+                                      Texp_ident "x/1258"
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/DataFlow.ml[113,4586+16]..lib/DataFlow.ml[113,4586+21])
+                                      Texp_construct "false"
+                                      []
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/DataFlow.ml[113,4586+22]..lib/DataFlow.ml[113,4586+27])
+                                      Texp_ident "dirty/1239"
+                                ]
+                              expression (lib/DataFlow.ml[114,4615+8]..lib/DataFlow.ml[114,4615+17])
+                                Texp_apply
+                                expression (lib/DataFlow.ml[114,4615+8]..lib/DataFlow.ml[114,4615+15])
+                                  Texp_ident "examine/1252"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/DataFlow.ml[114,4615+16]..lib/DataFlow.ml[114,4615+17])
+                                      Texp_ident "x/1258"
+                                ]
+                        [
+                          <case>
+                            pattern (lib/DataFlow.ml[116,4644+9]..lib/DataFlow.ml[116,4644+20])
+                              Tpat_construct "Queue.Empty"
+                              []
+                              None
+                            expression (lib/DataFlow.ml[117,4668+6]..lib/DataFlow.ml[117,4668+8])
+                              Texp_construct "()"
+                              []
+                        ]
+                  ]
+                structure_item (lib/DataFlow.ml[121,4708+2]..lib/DataFlow.ml[121,4708+35])
+                  Tstr_type Rec
+                  [
+                    type_declaration property/1259 (lib/DataFlow.ml[121,4708+2]..lib/DataFlow.ml[121,4708+35])
+                      ptype_params =
+                        []
+                      ptype_cstrs =
+                        []
+                      ptype_kind =
+                        Ttype_abstract
+                      ptype_private = Public
+                      ptype_manifest =
+                        Some
+                          core_type (lib/DataFlow.ml[121,4708+18]..lib/DataFlow.ml[121,4708+35])
+                            Ttyp_constr "option/10!"
+                            [
+                              core_type (lib/DataFlow.ml[121,4708+18]..lib/DataFlow.ml[121,4708+28])
+                                Ttyp_constr "P/1182.property"
+                                []
+                            ]
+                  ]
+                structure_item (lib/DataFlow.ml[123,4745+2]..lib/DataFlow.ml[127,4827+10])
+                  Tstr_value Nonrec
+                  [
+                    <def>
+                      pattern (lib/DataFlow.ml[123,4745+6]..lib/DataFlow.ml[123,4745+14])
+                        Tpat_var "solution/1260"
+                      expression (lib/DataFlow.ml[123,4745+15]..lib/DataFlow.ml[127,4827+10]) ghost
+                        Texp_function
+                        Nolabel
+                        [
+                          <case>
+                            pattern (lib/DataFlow.ml[123,4745+15]..lib/DataFlow.ml[123,4745+16])
+                              Tpat_var "x/1262"
+                            expression (lib/DataFlow.ml[124,4764+4]..lib/DataFlow.ml[127,4827+10])
+                              Texp_try
+                              expression (lib/DataFlow.ml[125,4772+6]..lib/DataFlow.ml[125,4772+32])
+                                Texp_construct "Some"
+                                [
+                                  expression (lib/DataFlow.ml[125,4772+11]..lib/DataFlow.ml[125,4772+32])
+                                    Texp_apply
+                                    expression (lib/DataFlow.ml[125,4772+12]..lib/DataFlow.ml[125,4772+18])
+                                      Texp_ident "M/1179.find"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (lib/DataFlow.ml[125,4772+19]..lib/DataFlow.ml[125,4772+20])
+                                          Texp_ident "x/1262"
+                                      <arg>
+                                        Nolabel
+                                        expression (lib/DataFlow.ml[125,4772+21]..lib/DataFlow.ml[125,4772+31])
+                                          Texp_ident "properties/1195"
+                                    ]
+                                ]
+                              [
+                                <case>
+                                  pattern (lib/DataFlow.ml[126,4805+9]..lib/DataFlow.ml[126,4805+18])
+                                    Tpat_construct "Not_found"
+                                    []
+                                    None
+                                  expression (lib/DataFlow.ml[127,4827+6]..lib/DataFlow.ml[127,4827+10])
+                                    Texp_construct "None"
+                                    []
+                              ]
+                        ]
+                  ]
+              ]
+  structure_item (lib/DataFlow.ml[131,4844+0]..lib/DataFlow.ml[132,4886+55])
+    Tstr_module
+    ForOrderedType/1658
+      module_expr (lib/DataFlow.ml[131,4844+22]..lib/DataFlow.ml[132,4886+55])
+        Tmod_functor "T/1275"
+        module_type (lib/DataFlow.ml[131,4844+27]..lib/DataFlow.ml[131,4844+38])
+          Tmty_ident "Gbnf_parser!.Sigs.OrderedType"
+        module_expr (lib/DataFlow.ml[132,4886+2]..lib/DataFlow.ml[132,4886+55])
+          Tmod_apply
+          module_expr (lib/DataFlow.ml[132,4886+2]..lib/DataFlow.ml[132,4886+5])
+            Tmod_ident "Run/1263"
+          module_expr (lib/DataFlow.ml[132,4886+6]..lib/DataFlow.ml[132,4886+54])
+            Tmod_apply
+            module_expr (lib/DataFlow.ml[132,4886+6]..lib/DataFlow.ml[132,4886+41])
+              module_expr (lib/DataFlow.ml[132,4886+6]..lib/DataFlow.ml[132,4886+41])
+                Tmod_ident "Gbnf_parser!.Glue.PersistentMapsToImperativeMaps"
+            module_expr (lib/DataFlow.ml[132,4886+42]..lib/DataFlow.ml[132,4886+53])
+              Tmod_apply
+              module_expr (lib/DataFlow.ml[132,4886+42]..lib/DataFlow.ml[132,4886+50])
+                module_expr (lib/DataFlow.ml[132,4886+42]..lib/DataFlow.ml[132,4886+50])
+                  Tmod_ident "Stdlib!.Map.Make"
+              module_expr (lib/DataFlow.ml[132,4886+51]..lib/DataFlow.ml[132,4886+52])
+                Tmod_ident "T/1275"
+  structure_item (lib/DataFlow.ml[134,4943+0]..lib/DataFlow.ml[135,4983+41])
+    Tstr_module
+    ForHashedType/1927
+      module_expr (lib/DataFlow.ml[134,4943+21]..lib/DataFlow.ml[135,4983+41])
+        Tmod_functor "T/1742"
+        module_type (lib/DataFlow.ml[134,4943+26]..lib/DataFlow.ml[134,4943+36])
+          Tmty_ident "Gbnf_parser!.Sigs.HashedType"
+        module_expr (lib/DataFlow.ml[135,4983+2]..lib/DataFlow.ml[135,4983+41])
+          Tmod_apply
+          module_expr (lib/DataFlow.ml[135,4983+2]..lib/DataFlow.ml[135,4983+5])
+            Tmod_ident "Run/1263"
+          module_expr (lib/DataFlow.ml[135,4983+6]..lib/DataFlow.ml[135,4983+40])
+            Tmod_apply
+            module_expr (lib/DataFlow.ml[135,4983+6]..lib/DataFlow.ml[135,4983+37])
+              module_expr (lib/DataFlow.ml[135,4983+6]..lib/DataFlow.ml[135,4983+37])
+                Tmod_ident "Gbnf_parser!.Glue.HashTablesAsImperativeMaps"
+            module_expr (lib/DataFlow.ml[135,4983+38]..lib/DataFlow.ml[135,4983+39])
+              Tmod_ident "T/1742"
+  structure_item (lib/DataFlow.ml[137,5026+0]..lib/DataFlow.ml[138,5054+42])
+    Tstr_module
+    ForType/1952
+      module_expr (lib/DataFlow.ml[137,5026+15]..lib/DataFlow.ml[138,5054+42])
+        Tmod_functor "T/1929"
+        module_type (lib/DataFlow.ml[137,5026+20]..lib/DataFlow.ml[137,5026+24])
+          Tmty_ident "Gbnf_parser!.Sigs.TYPE"
+        module_expr (lib/DataFlow.ml[138,5054+2]..lib/DataFlow.ml[138,5054+42])
+          Tmod_apply
+          module_expr (lib/DataFlow.ml[138,5054+2]..lib/DataFlow.ml[138,5054+15])
+            Tmod_ident "ForHashedType/1927"
+          module_expr (lib/DataFlow.ml[138,5054+16]..lib/DataFlow.ml[138,5054+41])
+            Tmod_apply
+            module_expr (lib/DataFlow.ml[138,5054+16]..lib/DataFlow.ml[138,5054+38])
+              module_expr (lib/DataFlow.ml[138,5054+16]..lib/DataFlow.ml[138,5054+38])
+                Tmod_ident "Gbnf_parser!.Glue.TrivialHashedType"
+            module_expr (lib/DataFlow.ml[138,5054+39]..lib/DataFlow.ml[138,5054+40])
+              Tmod_ident "T/1929"
+  structure_item (lib/DataFlow.ml[140,5098+0]..lib/DataFlow.ml[141,5146+37])
+    Tstr_module
+    ForIntSegment/1986
+      module_expr (lib/DataFlow.ml[140,5098+21]..lib/DataFlow.ml[141,5146+37])
+        Tmod_functor "K/1954"
+        module_type (lib/DataFlow.ml[140,5098+26]..lib/DataFlow.ml[140,5098+44])
+          Tmty_signature
+          [
+            signature_item (lib/DataFlow.ml[140,5098+30]..lib/DataFlow.ml[140,5098+40])
+              Tsig_value
+              value_description n/1953 (lib/DataFlow.ml[140,5098+30]..lib/DataFlow.ml[140,5098+40])
+                core_type (lib/DataFlow.ml[140,5098+37]..lib/DataFlow.ml[140,5098+40])
+                  Ttyp_constr "int/1!"
+                  []
+                []
+          ]
+        module_expr (lib/DataFlow.ml[141,5146+2]..lib/DataFlow.ml[141,5146+37])
+          Tmod_apply
+          module_expr (lib/DataFlow.ml[141,5146+2]..lib/DataFlow.ml[141,5146+5])
+            Tmod_ident "Run/1263"
+          module_expr (lib/DataFlow.ml[141,5146+6]..lib/DataFlow.ml[141,5146+36])
+            Tmod_apply
+            module_expr (lib/DataFlow.ml[141,5146+6]..lib/DataFlow.ml[141,5146+33])
+              module_expr (lib/DataFlow.ml[141,5146+6]..lib/DataFlow.ml[141,5146+33])
+                Tmod_ident "Gbnf_parser!.Glue.ArraysAsImperativeMaps"
+            module_expr (lib/DataFlow.ml[141,5146+34]..lib/DataFlow.ml[141,5146+35])
+              Tmod_ident "K/1954"
+  structure_item (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+          Texp_apply
+          expression (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost,None)
+          ]
+    ]
+  structure_item (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+          Texp_apply
+          expression (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+          Texp_apply
+          expression (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+          Texp_apply
+          expression (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/DataFlow.ml[141,5146+37]..lib/DataFlow.ml[141,5146+37]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__DataFlow>
+ "ForHashedType"[module] ->
+   Abs<Gbnf_parser__DataFlow.31>
+      (T/1742, P/1182, G/1193,
+       {
+        "dirty"[value] -> <Gbnf_parser__DataFlow.8>;
+        "examine"[value] -> <Gbnf_parser__DataFlow.18>;
+        "is_dirty"[value] -> <Gbnf_parser__DataFlow.9>;
+        "pending"[value] -> <Gbnf_parser__DataFlow.7>;
+        "properties"[value] -> <Gbnf_parser__DataFlow.6>;
+        "property"[type] -> <Gbnf_parser__DataFlow.24>;
+        "schedule"[value] -> <Gbnf_parser__DataFlow.11>;
+        "solution"[value] -> <Gbnf_parser__DataFlow.25>;
+        "update"[value] -> <Gbnf_parser__DataFlow.13>;
+        "variable"[type] -> <Gbnf_parser__DataFlow.5>;
+        });
+ "ForIntSegment"[module] ->
+   Abs<Gbnf_parser__DataFlow.36>
+      (K/1954, P/1182, G/1193,
+       {
+        "dirty"[value] -> <Gbnf_parser__DataFlow.8>;
+        "examine"[value] -> <Gbnf_parser__DataFlow.18>;
+        "is_dirty"[value] -> <Gbnf_parser__DataFlow.9>;
+        "pending"[value] -> <Gbnf_parser__DataFlow.7>;
+        "properties"[value] -> <Gbnf_parser__DataFlow.6>;
+        "property"[type] -> <Gbnf_parser__DataFlow.24>;
+        "schedule"[value] -> <Gbnf_parser__DataFlow.11>;
+        "solution"[value] -> <Gbnf_parser__DataFlow.25>;
+        "update"[value] -> <Gbnf_parser__DataFlow.13>;
+        "variable"[type] -> <Gbnf_parser__DataFlow.5>;
+        });
+ "ForOrderedType"[module] ->
+   Abs<Gbnf_parser__DataFlow.29>
+      (T/1275, P/1182, G/1193,
+       {
+        "dirty"[value] -> <Gbnf_parser__DataFlow.8>;
+        "examine"[value] -> <Gbnf_parser__DataFlow.18>;
+        "is_dirty"[value] -> <Gbnf_parser__DataFlow.9>;
+        "pending"[value] -> <Gbnf_parser__DataFlow.7>;
+        "properties"[value] -> <Gbnf_parser__DataFlow.6>;
+        "property"[type] -> <Gbnf_parser__DataFlow.24>;
+        "schedule"[value] -> <Gbnf_parser__DataFlow.11>;
+        "solution"[value] -> <Gbnf_parser__DataFlow.25>;
+        "update"[value] -> <Gbnf_parser__DataFlow.13>;
+        "variable"[type] -> <Gbnf_parser__DataFlow.5>;
+        });
+ "ForType"[module] ->
+   Abs<Gbnf_parser__DataFlow.33>
+      (T/1929, P/1182, G/1193,
+       {
+        "dirty"[value] -> <Gbnf_parser__DataFlow.8>;
+        "examine"[value] -> <Gbnf_parser__DataFlow.18>;
+        "is_dirty"[value] -> <Gbnf_parser__DataFlow.9>;
+        "pending"[value] -> <Gbnf_parser__DataFlow.7>;
+        "properties"[value] -> <Gbnf_parser__DataFlow.6>;
+        "property"[type] -> <Gbnf_parser__DataFlow.24>;
+        "schedule"[value] -> <Gbnf_parser__DataFlow.11>;
+        "solution"[value] -> <Gbnf_parser__DataFlow.25>;
+        "update"[value] -> <Gbnf_parser__DataFlow.13>;
+        "variable"[type] -> <Gbnf_parser__DataFlow.5>;
+        });
+ "Run"[module] ->
+   Abs<Gbnf_parser__DataFlow.27>
+      (M/1179, P/1182, G/1193,
+       {
+        "dirty"[value] -> <Gbnf_parser__DataFlow.8>;
+        "examine"[value] -> <Gbnf_parser__DataFlow.18>;
+        "is_dirty"[value] -> <Gbnf_parser__DataFlow.9>;
+        "pending"[value] -> <Gbnf_parser__DataFlow.7>;
+        "properties"[value] -> <Gbnf_parser__DataFlow.6>;
+        "property"[type] -> <Gbnf_parser__DataFlow.24>;
+        "schedule"[value] -> <Gbnf_parser__DataFlow.11>;
+        "solution"[value] -> <Gbnf_parser__DataFlow.25>;
+        "update"[value] -> <Gbnf_parser__DataFlow.13>;
+        "variable"[type] -> <Gbnf_parser__DataFlow.5>;
+        });
+ }
+
+(setglobal Gbnf_parser__DataFlow!
+  (let
+    (*match*/2754 =
+       (after Gbnf_parser__DataFlow lib/DataFlow.ml(13)<ghost>:893-893
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__DataFlow"))
+     *match*/2752 =
+       (after Gbnf_parser__DataFlow lib/DataFlow.ml(13)<ghost>:893-893
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/2750 =
+       (after Gbnf_parser__DataFlow lib/DataFlow.ml(13)<ghost>:893-893
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/DataFlow.ml"))
+     *match*/2748 =
+       (after Gbnf_parser__DataFlow lib/DataFlow.ml(13)<ghost>:893-893
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "DataFlow.ml"))
+     Run/1263 =
+       (function M/2725 P/2724 G/2723 is_a_functor
+         (let
+           (M/1179 =a M/2725
+            P/1182 =a P/2724
+            G/1193 =a G/2723
+            properties/1195 =
+              (after Gbnf_parser__DataFlow.Run.properties lib/DataFlow.ml(44):2259-2269
+                (apply (field_imm 0 M/1179) 0))
+            pending/1217 =
+              (after Gbnf_parser__DataFlow.Run.pending lib/DataFlow.ml(56):2851-2865
+                (apply (field_imm 1 (global Stdlib__Queue!)) 0))
+            dirty/1239 =
+              (after Gbnf_parser__DataFlow.Run.dirty lib/DataFlow.ml(59):2896-2906
+                (apply (field_imm 0 M/1179) 0))
+            is_dirty/1240 =
+              (function x/1242 : int
+                (funct-body Gbnf_parser__DataFlow.Run.is_dirty lib/DataFlow.ml(61)<ghost>:2923-2986
+                  (before Gbnf_parser__DataFlow.Run.is_dirty lib/DataFlow.ml(62):2944-2986
+                    (try
+                      (after Gbnf_parser__DataFlow.Run.is_dirty lib/DataFlow.ml(62):2948-2962
+                        (apply (field_imm 2 M/1179) x/1242 dirty/1239))
+                     with exn/2711
+                      (catch
+                        (if (== exn/2711 (field_imm 7 (global Stdlib!)))
+                          (before Gbnf_parser__DataFlow.Run.is_dirty lib/DataFlow.ml(62):2981-2986
+                            0)
+                          (exit 1))
+                       with (1) (reraise exn/2711))))))
+            schedule/1243 =
+              (function x/1245 : int
+                (funct-body Gbnf_parser__DataFlow.Run.schedule lib/DataFlow.ml(64)<ghost>:3003-3115
+                  (before Gbnf_parser__DataFlow.Run.schedule lib/DataFlow.ml(65):3024-3115
+                    (if
+                      (not
+                        (after Gbnf_parser__DataFlow.Run.schedule lib/DataFlow.ml(65):3031-3043
+                          (apply is_dirty/1240 x/1245)))
+                      (before Gbnf_parser__DataFlow.Run.schedule lib/DataFlow.ml(65):3049-3115
+                        (seq
+                          (after Gbnf_parser__DataFlow.Run.schedule lib/DataFlow.ml(66):3061-3079
+                            (apply (field_imm 1 M/1179) x/1245 1 dirty/1239))
+                          (before Gbnf_parser__DataFlow.Run.schedule lib/DataFlow.ml(67):3087-3107
+                            (after Gbnf_parser__DataFlow.Run.schedule lib/DataFlow.ml(67):3087-3107
+                              (apply (field_imm 3 (global Stdlib__Queue!))
+                                x/1245 pending/1217)))))
+                      0))))
+            update/1246 =
+              (function x'/1248 p'/1249 : int
+                (funct-body Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(74)<ghost>:3329-3919
+                  (before Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(75):3367-3919
+                    (catch
+                      (try
+                        (exit 2
+                          (after Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(75):3373-3393
+                            (apply (field_imm 2 M/1179) x'/1248
+                              properties/1195)))
+                       with exn/2712
+                        (catch
+                          (if (== exn/2712 (field_imm 7 (global Stdlib!)))
+                            (before Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(78):3476-3519
+                              (seq
+                                (after Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(78):3476-3498
+                                  (apply (field_imm 1 M/1179) x'/1248 p'/1249
+                                    properties/1195))
+                                (before Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(79):3508-3519
+                                  (after Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(79):3508-3519
+                                    (apply schedule/1243 x'/1248)))))
+                            (exit 3))
+                         with (3) (reraise exn/2712)))
+                     with (2 p/1250)
+                      (before Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(82):3587-3919
+                        (let
+                          (p''/1251 =
+                             (after Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(82):3597-3612
+                               (apply (field_imm 0 P/1182) p'/1249 p/1250)))
+                          (before Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(83):3624-3919
+                            (if (!= p''/1251 p/1250)
+                              (before Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(83):3641-3919
+                                (seq
+                                  (after Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(87):3861-3884
+                                    (apply (field_imm 1 M/1179) x'/1248
+                                      p''/1251 properties/1195))
+                                  (before Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(88):3896-3907
+                                    (after Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(88):3896-3907
+                                      (apply schedule/1243 x'/1248)))))
+                              0))))))))
+            examine/1252 =
+              (function x/1254 : int
+                (funct-body Gbnf_parser__DataFlow.Run.examine lib/DataFlow.ml(94)<ghost>:4093-4287
+                  (before Gbnf_parser__DataFlow.Run.examine lib/DataFlow.ml(96):4187-4287
+                    (let
+                      (p/1255 =
+                         (try
+                           (after Gbnf_parser__DataFlow.Run.examine lib/DataFlow.ml(96):4199-4218
+                             (apply (field_imm 2 M/1179) x/1254
+                               properties/1195))
+                          with exn/2713
+                           (catch
+                             (if (== exn/2713 (field_imm 7 (global Stdlib!)))
+                               (before Gbnf_parser__DataFlow.Run.examine lib/DataFlow.ml(96):4237-4249
+                                 (raise
+                                   (after Gbnf_parser__DataFlow.Run.examine lib/DataFlow.ml(96):4237-4249
+                                     (makeblock 0 (global Assert_failure/28!)
+                                       [0: "lib/DataFlow.ml" 96 54]))))
+                               (exit 4))
+                            with (4) (reraise exn/2713))))
+                      (before Gbnf_parser__DataFlow.Run.examine lib/DataFlow.ml(97):4257-4287
+                        (after Gbnf_parser__DataFlow.Run.examine lib/DataFlow.ml(97):4257-4287
+                          (apply (field_imm 1 G/1193) x/1254 p/1255
+                            update/1246)))))))
+            *match*/2720 =
+              (after Gbnf_parser__DataFlow.Run lib/DataFlow.ml(102):4357-4434
+                (apply (field_imm 0 G/1193)
+                  (function x/1256 p/1257 : int
+                    (funct-body Gbnf_parser__DataFlow.Run.(fun) lib/DataFlow.ml(102):4372-4434
+                      (before Gbnf_parser__DataFlow.Run.(fun) lib/DataFlow.ml(103):4390-4428
+                        (seq
+                          (after Gbnf_parser__DataFlow.Run.(fun) lib/DataFlow.ml(103):4390-4410
+                            (apply (field_imm 1 M/1179) x/1256 p/1257
+                              properties/1195))
+                          (before Gbnf_parser__DataFlow.Run.(fun) lib/DataFlow.ml(104):4418-4428
+                            (after Gbnf_parser__DataFlow.Run.(fun) lib/DataFlow.ml(104):4418-4428
+                              (apply schedule/1243 x/1256)))))))))
+            *match*/2718 =
+              (try
+                (while 1
+                  (before Gbnf_parser__DataFlow.Run lib/DataFlow.ml(112):4557-4632
+                    (let
+                      (x/1258 =
+                         (after Gbnf_parser__DataFlow.Run lib/DataFlow.ml(112):4565-4582
+                           (apply (field_imm 6 (global Stdlib__Queue!))
+                             pending/1217)))
+                      (before Gbnf_parser__DataFlow.Run lib/DataFlow.ml(113):4594-4632
+                        (seq
+                          (after Gbnf_parser__DataFlow.Run lib/DataFlow.ml(113):4594-4613
+                            (apply (field_imm 1 M/1179) x/1258 0 dirty/1239))
+                          (before Gbnf_parser__DataFlow.Run lib/DataFlow.ml(114):4623-4632
+                            (after Gbnf_parser__DataFlow.Run lib/DataFlow.ml(114):4623-4632
+                              (apply examine/1252 x/1258))))))))
+               with exn/2714
+                (catch
+                  (if (== exn/2714 (field_imm 0 (global Stdlib__Queue!)))
+                    (before Gbnf_parser__DataFlow.Run lib/DataFlow.ml(117):4674-4676
+                      0)
+                    (exit 5))
+                 with (5) (reraise exn/2714)))
+            solution/1260 =
+              (function x/1262
+                (funct-body Gbnf_parser__DataFlow.Run.solution lib/DataFlow.ml(123)<ghost>:4760-4837
+                  (before Gbnf_parser__DataFlow.Run.solution lib/DataFlow.ml(124):4768-4837
+                    (try
+                      (makeblock 0
+                        (after Gbnf_parser__DataFlow.Run.solution lib/DataFlow.ml(125):4783-4804
+                          (apply (field_imm 2 M/1179) x/1262 properties/1195)))
+                     with exn/2715
+                      (catch
+                        (if (== exn/2715 (field_imm 7 (global Stdlib!)))
+                          (before Gbnf_parser__DataFlow.Run.solution lib/DataFlow.ml(127):4833-4837
+                            0)
+                          (exit 6))
+                       with (6) (reraise exn/2715)))))))
+           (pseudo Gbnf_parser__DataFlow.Run lib/DataFlow.ml(36):2114-4842
+             (makeblock 0 properties/1195 pending/1217 dirty/1239
+               is_dirty/1240 schedule/1243 update/1246 examine/1252
+               solution/1260))))
+     ForOrderedType/1658 =
+       (function T/2730 is_a_functor
+         (let (T/1275 =a T/2730)
+           (apply Run/1263
+             (let
+               (let/2729 =
+                  (apply
+                    (let
+                      (let/2728 = (field_imm 9 (global Gbnf_parser__Glue!)))
+                      (field_imm 9 (global Gbnf_parser__Glue!)))
+                    (let
+                      (let/2727 =
+                         (apply
+                           (let
+                             (let/2726 = (field_imm 0 (global Stdlib__Map!)))
+                             (field_imm 0 (global Stdlib__Map!)))
+                           T/1275))
+                      (makeblock 0 (field_mut 0 let/2727)
+                        (field_mut 1 let/2727) (field_mut 16 let/2727)
+                        (field_mut 22 let/2727)))))
+               (makeblock 0 (field_mut 0 let/2729) (field_mut 2 let/2729)
+                 (field_mut 3 let/2729))))))
+     ForHashedType/1927 =
+       (function T/2733 is_a_functor
+         (let (T/1742 =a T/2733)
+           (apply Run/1263
+             (let
+               (let/2732 =
+                  (apply
+                    (let
+                      (let/2731 = (field_imm 12 (global Gbnf_parser__Glue!)))
+                      (field_imm 12 (global Gbnf_parser__Glue!)))
+                    T/1742))
+               (makeblock 0 (field_mut 19 let/2732) (field_mut 20 let/2732)
+                 (field_mut 21 let/2732))))))
+     ForType/1952 =
+       (function T/2735 is_a_functor
+         (let (T/1929 =a T/2735)
+           (apply ForHashedType/1927
+             (apply
+               (let (let/2734 = (field_imm 4 (global Gbnf_parser__Glue!)))
+                 (field_imm 4 (global Gbnf_parser__Glue!)))
+               T/1929))))
+     ForIntSegment/1986 =
+       (function K/2738 is_a_functor
+         (let (K/1954 =a K/2738)
+           (apply Run/1263
+             (let
+               (let/2737 =
+                  (apply
+                    (let
+                      (let/2736 = (field_imm 10 (global Gbnf_parser__Glue!)))
+                      (field_imm 10 (global Gbnf_parser__Glue!)))
+                    K/1954))
+               (makeblock 0 (field_mut 0 let/2737) (field_mut 2 let/2737)
+                 (field_mut 3 let/2737))))))
+     *match*/2746 =
+       (after Gbnf_parser__DataFlow lib/DataFlow.ml(141)<ghost>:5183-5183
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/2744 =
+       (after Gbnf_parser__DataFlow lib/DataFlow.ml(141)<ghost>:5183-5183
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/2742 =
+       (after Gbnf_parser__DataFlow lib/DataFlow.ml(141)<ghost>:5183-5183
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/2740 =
+       (after Gbnf_parser__DataFlow lib/DataFlow.ml(141)<ghost>:5183-5183
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__DataFlow")))
+    (pseudo <unknown location>
+      (makeblock 0 Run/1263 ForOrderedType/1658 ForHashedType/1927
+        ForType/1952 ForIntSegment/1986))))
+(setglobal Gbnf_parser__DataFlow!
+  (let
+    (*match*/2754 =
+       (after Gbnf_parser__DataFlow lib/DataFlow.ml(13)<ghost>:893-893
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__DataFlow"))
+     *match*/2752 =
+       (after Gbnf_parser__DataFlow lib/DataFlow.ml(13)<ghost>:893-893
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/2750 =
+       (after Gbnf_parser__DataFlow lib/DataFlow.ml(13)<ghost>:893-893
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/DataFlow.ml"))
+     *match*/2748 =
+       (after Gbnf_parser__DataFlow lib/DataFlow.ml(13)<ghost>:893-893
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "DataFlow.ml"))
+     Run/1263 =
+       (function M/2725 P/2724 G/2723 is_a_functor
+         (let
+           (M/1179 =a M/2725
+            P/1182 =a P/2724
+            G/1193 =a G/2723
+            properties/1195 =
+              (after Gbnf_parser__DataFlow.Run.properties lib/DataFlow.ml(44):2259-2269
+                (apply (field_imm 0 M/1179) 0))
+            pending/1217 =
+              (after Gbnf_parser__DataFlow.Run.pending lib/DataFlow.ml(56):2851-2865
+                (apply (field_imm 1 (global Stdlib__Queue!)) 0))
+            dirty/1239 =
+              (after Gbnf_parser__DataFlow.Run.dirty lib/DataFlow.ml(59):2896-2906
+                (apply (field_imm 0 M/1179) 0))
+            is_dirty/1240 =
+              (function x/1242 : int
+                (funct-body Gbnf_parser__DataFlow.Run.is_dirty lib/DataFlow.ml(61)<ghost>:2923-2986
+                  (before Gbnf_parser__DataFlow.Run.is_dirty lib/DataFlow.ml(62):2944-2986
+                    (try
+                      (after Gbnf_parser__DataFlow.Run.is_dirty lib/DataFlow.ml(62):2948-2962
+                        (apply (field_imm 2 M/1179) x/1242 dirty/1239))
+                     with exn/2711
+                      (if (== exn/2711 (field_imm 7 (global Stdlib!)))
+                        (before Gbnf_parser__DataFlow.Run.is_dirty lib/DataFlow.ml(62):2981-2986
+                          0)
+                        (reraise exn/2711))))))
+            schedule/1243 =
+              (function x/1245 : int
+                (funct-body Gbnf_parser__DataFlow.Run.schedule lib/DataFlow.ml(64)<ghost>:3003-3115
+                  (before Gbnf_parser__DataFlow.Run.schedule lib/DataFlow.ml(65):3024-3115
+                    (if
+                      (not
+                        (after Gbnf_parser__DataFlow.Run.schedule lib/DataFlow.ml(65):3031-3043
+                          (apply is_dirty/1240 x/1245)))
+                      (before Gbnf_parser__DataFlow.Run.schedule lib/DataFlow.ml(65):3049-3115
+                        (seq
+                          (after Gbnf_parser__DataFlow.Run.schedule lib/DataFlow.ml(66):3061-3079
+                            (apply (field_imm 1 M/1179) x/1245 1 dirty/1239))
+                          (before Gbnf_parser__DataFlow.Run.schedule lib/DataFlow.ml(67):3087-3107
+                            (after Gbnf_parser__DataFlow.Run.schedule lib/DataFlow.ml(67):3087-3107
+                              (apply (field_imm 3 (global Stdlib__Queue!))
+                                x/1245 pending/1217)))))
+                      0))))
+            update/1246 =
+              (function x'/1248 p'/1249 : int
+                (funct-body Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(74)<ghost>:3329-3919
+                  (before Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(75):3367-3919
+                    (catch
+                      (try
+                        (exit 2
+                          (after Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(75):3373-3393
+                            (apply (field_imm 2 M/1179) x'/1248
+                              properties/1195)))
+                       with exn/2712
+                        (if (== exn/2712 (field_imm 7 (global Stdlib!)))
+                          (before Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(78):3476-3519
+                            (seq
+                              (after Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(78):3476-3498
+                                (apply (field_imm 1 M/1179) x'/1248 p'/1249
+                                  properties/1195))
+                              (before Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(79):3508-3519
+                                (after Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(79):3508-3519
+                                  (apply schedule/1243 x'/1248)))))
+                          (reraise exn/2712)))
+                     with (2 p/1250)
+                      (before Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(82):3587-3919
+                        (let
+                          (p''/1251 =
+                             (after Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(82):3597-3612
+                               (apply (field_imm 0 P/1182) p'/1249 p/1250)))
+                          (before Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(83):3624-3919
+                            (if (!= p''/1251 p/1250)
+                              (before Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(83):3641-3919
+                                (seq
+                                  (after Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(87):3861-3884
+                                    (apply (field_imm 1 M/1179) x'/1248
+                                      p''/1251 properties/1195))
+                                  (before Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(88):3896-3907
+                                    (after Gbnf_parser__DataFlow.Run.update lib/DataFlow.ml(88):3896-3907
+                                      (apply schedule/1243 x'/1248)))))
+                              0))))))))
+            examine/1252 =
+              (function x/1254 : int
+                (funct-body Gbnf_parser__DataFlow.Run.examine lib/DataFlow.ml(94)<ghost>:4093-4287
+                  (before Gbnf_parser__DataFlow.Run.examine lib/DataFlow.ml(96):4187-4287
+                    (let
+                      (p/1255 =
+                         (try
+                           (after Gbnf_parser__DataFlow.Run.examine lib/DataFlow.ml(96):4199-4218
+                             (apply (field_imm 2 M/1179) x/1254
+                               properties/1195))
+                          with exn/2713
+                           (if (== exn/2713 (field_imm 7 (global Stdlib!)))
+                             (before Gbnf_parser__DataFlow.Run.examine lib/DataFlow.ml(96):4237-4249
+                               (raise
+                                 (after Gbnf_parser__DataFlow.Run.examine lib/DataFlow.ml(96):4237-4249
+                                   (makeblock 0 (global Assert_failure/28!)
+                                     [0: "lib/DataFlow.ml" 96 54]))))
+                             (reraise exn/2713))))
+                      (before Gbnf_parser__DataFlow.Run.examine lib/DataFlow.ml(97):4257-4287
+                        (after Gbnf_parser__DataFlow.Run.examine lib/DataFlow.ml(97):4257-4287
+                          (apply (field_imm 1 G/1193) x/1254 p/1255
+                            update/1246)))))))
+            *match*/2720 =
+              (after Gbnf_parser__DataFlow.Run lib/DataFlow.ml(102):4357-4434
+                (apply (field_imm 0 G/1193)
+                  (function x/1256 p/1257 : int
+                    (funct-body Gbnf_parser__DataFlow.Run.(fun) lib/DataFlow.ml(102):4372-4434
+                      (before Gbnf_parser__DataFlow.Run.(fun) lib/DataFlow.ml(103):4390-4428
+                        (seq
+                          (after Gbnf_parser__DataFlow.Run.(fun) lib/DataFlow.ml(103):4390-4410
+                            (apply (field_imm 1 M/1179) x/1256 p/1257
+                              properties/1195))
+                          (before Gbnf_parser__DataFlow.Run.(fun) lib/DataFlow.ml(104):4418-4428
+                            (after Gbnf_parser__DataFlow.Run.(fun) lib/DataFlow.ml(104):4418-4428
+                              (apply schedule/1243 x/1256)))))))))
+            *match*/2718 =
+              (try
+                (while 1
+                  (before Gbnf_parser__DataFlow.Run lib/DataFlow.ml(112):4557-4632
+                    (let
+                      (x/1258 =
+                         (after Gbnf_parser__DataFlow.Run lib/DataFlow.ml(112):4565-4582
+                           (apply (field_imm 6 (global Stdlib__Queue!))
+                             pending/1217)))
+                      (before Gbnf_parser__DataFlow.Run lib/DataFlow.ml(113):4594-4632
+                        (seq
+                          (after Gbnf_parser__DataFlow.Run lib/DataFlow.ml(113):4594-4613
+                            (apply (field_imm 1 M/1179) x/1258 0 dirty/1239))
+                          (before Gbnf_parser__DataFlow.Run lib/DataFlow.ml(114):4623-4632
+                            (after Gbnf_parser__DataFlow.Run lib/DataFlow.ml(114):4623-4632
+                              (apply examine/1252 x/1258))))))))
+               with exn/2714
+                (if (== exn/2714 (field_imm 0 (global Stdlib__Queue!)))
+                  (before Gbnf_parser__DataFlow.Run lib/DataFlow.ml(117):4674-4676
+                    0)
+                  (reraise exn/2714)))
+            solution/1260 =
+              (function x/1262
+                (funct-body Gbnf_parser__DataFlow.Run.solution lib/DataFlow.ml(123)<ghost>:4760-4837
+                  (before Gbnf_parser__DataFlow.Run.solution lib/DataFlow.ml(124):4768-4837
+                    (try
+                      (makeblock 0
+                        (after Gbnf_parser__DataFlow.Run.solution lib/DataFlow.ml(125):4783-4804
+                          (apply (field_imm 2 M/1179) x/1262 properties/1195)))
+                     with exn/2715
+                      (if (== exn/2715 (field_imm 7 (global Stdlib!)))
+                        (before Gbnf_parser__DataFlow.Run.solution lib/DataFlow.ml(127):4833-4837
+                          0)
+                        (reraise exn/2715)))))))
+           (pseudo Gbnf_parser__DataFlow.Run lib/DataFlow.ml(36):2114-4842
+             (makeblock 0 properties/1195 pending/1217 dirty/1239
+               is_dirty/1240 schedule/1243 update/1246 examine/1252
+               solution/1260))))
+     ForOrderedType/1658 =
+       (function T/2730 is_a_functor
+         (let (T/1275 =a T/2730)
+           (apply Run/1263
+             (let
+               (let/2729 =
+                  (apply
+                    (let
+                      (let/2728 = (field_imm 9 (global Gbnf_parser__Glue!)))
+                      (field_imm 9 (global Gbnf_parser__Glue!)))
+                    (let
+                      (let/2727 =
+                         (apply
+                           (let
+                             (let/2726 = (field_imm 0 (global Stdlib__Map!)))
+                             (field_imm 0 (global Stdlib__Map!)))
+                           T/1275))
+                      (makeblock 0 (field_mut 0 let/2727)
+                        (field_mut 1 let/2727) (field_mut 16 let/2727)
+                        (field_mut 22 let/2727)))))
+               (makeblock 0 (field_mut 0 let/2729) (field_mut 2 let/2729)
+                 (field_mut 3 let/2729))))))
+     ForHashedType/1927 =
+       (function T/2733 is_a_functor
+         (let (T/1742 =a T/2733)
+           (apply Run/1263
+             (let
+               (let/2732 =
+                  (apply
+                    (let
+                      (let/2731 = (field_imm 12 (global Gbnf_parser__Glue!)))
+                      (field_imm 12 (global Gbnf_parser__Glue!)))
+                    T/1742))
+               (makeblock 0 (field_mut 19 let/2732) (field_mut 20 let/2732)
+                 (field_mut 21 let/2732))))))
+     ForType/1952 =
+       (function T/2735 is_a_functor
+         (let (T/1929 =a T/2735)
+           (apply ForHashedType/1927
+             (apply
+               (let (let/2734 = (field_imm 4 (global Gbnf_parser__Glue!)))
+                 (field_imm 4 (global Gbnf_parser__Glue!)))
+               T/1929))))
+     ForIntSegment/1986 =
+       (function K/2738 is_a_functor
+         (let (K/1954 =a K/2738)
+           (apply Run/1263
+             (let
+               (let/2737 =
+                  (apply
+                    (let
+                      (let/2736 = (field_imm 10 (global Gbnf_parser__Glue!)))
+                      (field_imm 10 (global Gbnf_parser__Glue!)))
+                    K/1954))
+               (makeblock 0 (field_mut 0 let/2737) (field_mut 2 let/2737)
+                 (field_mut 3 let/2737))))))
+     *match*/2746 =
+       (after Gbnf_parser__DataFlow lib/DataFlow.ml(141)<ghost>:5183-5183
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/2744 =
+       (after Gbnf_parser__DataFlow lib/DataFlow.ml(141)<ghost>:5183-5183
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/2742 =
+       (after Gbnf_parser__DataFlow lib/DataFlow.ml(141)<ghost>:5183-5183
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/2740 =
+       (after Gbnf_parser__DataFlow lib/DataFlow.ml(141)<ghost>:5183-5183
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__DataFlow")))
+    (pseudo <unknown location>
+      (makeblock 0 Run/1263 ForOrderedType/1658 ForHashedType/1927
+        ForType/1952 ForIntSegment/1986))))

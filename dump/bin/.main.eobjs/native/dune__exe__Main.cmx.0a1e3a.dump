@@ -1,0 +1,610 @@
+[
+  structure_item (bin/main.ml[1,0+0]..[1,0+16])
+    Pstr_open Fresh
+    module_expr (bin/main.ml[1,0+5]..[1,0+16])
+      Pmod_ident "Gbnf_parser" (bin/main.ml[1,0+5]..[1,0+16])
+  structure_item (bin/main.ml[2,17+0]..[2,17+38])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (bin/main.ml[2,17+4]..[2,17+6])
+          Ppat_construct "()" (bin/main.ml[2,17+4]..[2,17+6])
+          None
+        expression (bin/main.ml[2,17+9]..[2,17+38])
+          Pexp_apply
+          expression (bin/main.ml[2,17+9]..[2,17+22])
+            Pexp_ident "print_endline" (bin/main.ml[2,17+9]..[2,17+22])
+          [
+            <arg>
+            Nolabel
+              expression (bin/main.ml[2,17+23]..[2,17+38])
+                Pexp_constant PConst_string("Hello, World!",(bin/main.ml[2,17+24]..[2,17+37]),None)
+          ]
+    ]
+  structure_item (bin/main.ml[4,57+0]..[8,255+38])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (bin/main.ml[4,57+4]..[4,57+24])
+          Ppat_var "grammar_from_channel" (bin/main.ml[4,57+4]..[4,57+24])
+        expression (bin/main.ml[4,57+25]..[8,255+38]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (bin/main.ml[4,57+25]..[4,57+27])
+            Ppat_var "ic" (bin/main.ml[4,57+25]..[4,57+27])
+          expression (bin/main.ml[5,87+2]..[8,255+38])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (bin/main.ml[5,87+6]..[5,87+12])
+                  Ppat_var "lexbuf" (bin/main.ml[5,87+6]..[5,87+12])
+                expression (bin/main.ml[5,87+15]..[5,87+37])
+                  Pexp_apply
+                  expression (bin/main.ml[5,87+15]..[5,87+34])
+                    Pexp_ident "Lexing.from_channel" (bin/main.ml[5,87+15]..[5,87+34])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (bin/main.ml[5,87+35]..[5,87+37])
+                        Pexp_ident "ic" (bin/main.ml[5,87+35]..[5,87+37])
+                  ]
+            ]
+            expression (bin/main.ml[6,128+2]..[8,255+38])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (bin/main.ml[6,128+6]..[6,128+19])
+                    Ppat_tuple
+                    [
+                      pattern (bin/main.ml[6,128+6]..[6,128+12])
+                        Ppat_var "buffer" (bin/main.ml[6,128+6]..[6,128+12])
+                      pattern (bin/main.ml[6,128+14]..[6,128+19])
+                        Ppat_var "lexer" (bin/main.ml[6,128+14]..[6,128+19])
+                    ]
+                  expression (bin/main.ml[6,128+22]..[6,128+68])
+                    Pexp_apply
+                    expression (bin/main.ml[6,128+22]..[6,128+49])
+                      Pexp_ident "MenhirLib.ErrorReports.wrap" (bin/main.ml[6,128+22]..[6,128+49])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (bin/main.ml[6,128+50]..[6,128+68])
+                          Pexp_ident "SentenceLexer.main" (bin/main.ml[6,128+50]..[6,128+68])
+                    ]
+              ]
+              expression (bin/main.ml[7,201+2]..[8,255+38])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (bin/main.ml[7,201+6]..[7,201+9])
+                      Ppat_var "dat" (bin/main.ml[7,201+6]..[7,201+9])
+                    expression (bin/main.ml[7,201+12]..[7,201+49])
+                      Pexp_apply
+                      expression (bin/main.ml[7,201+13]..[7,201+35])
+                        Pexp_ident "SentenceParser.grammar" (bin/main.ml[7,201+13]..[7,201+35])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (bin/main.ml[7,201+36]..[7,201+41])
+                            Pexp_ident "lexer" (bin/main.ml[7,201+36]..[7,201+41])
+                        <arg>
+                        Nolabel
+                          expression (bin/main.ml[7,201+42]..[7,201+48])
+                            Pexp_ident "lexbuf" (bin/main.ml[7,201+42]..[7,201+48])
+                      ]
+                ]
+                expression (bin/main.ml[8,255+2]..[8,255+38])
+                  Pexp_apply
+                  expression (bin/main.ml[8,255+3]..[8,255+16])
+                    Pexp_ident "print_endline" (bin/main.ml[8,255+3]..[8,255+16])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (bin/main.ml[8,255+17]..[8,255+37])
+                        Pexp_apply
+                        expression (bin/main.ml[8,255+18]..[8,255+32])
+                          Pexp_ident "Batteries.dump" (bin/main.ml[8,255+18]..[8,255+32])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (bin/main.ml[8,255+33]..[8,255+36])
+                              Pexp_ident "dat" (bin/main.ml[8,255+33]..[8,255+36])
+                        ]
+                  ]
+    ]
+  structure_item (bin/main.ml[10,295+0]..[14,422+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (bin/main.ml[10,295+4]..[10,295+21])
+          Ppat_var "grammar_from_file" (bin/main.ml[10,295+4]..[10,295+21])
+        expression (bin/main.ml[10,295+22]..[14,422+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (bin/main.ml[10,295+22]..[10,295+30])
+            Ppat_var "filename" (bin/main.ml[10,295+22]..[10,295+30])
+          expression (bin/main.ml[11,328+2]..[14,422+3])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (bin/main.ml[11,328+6]..[11,328+8])
+                  Ppat_var "ic" (bin/main.ml[11,328+6]..[11,328+8])
+                expression (bin/main.ml[11,328+11]..[11,328+27])
+                  Pexp_apply
+                  expression (bin/main.ml[11,328+11]..[11,328+18])
+                    Pexp_ident "open_in" (bin/main.ml[11,328+11]..[11,328+18])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (bin/main.ml[11,328+19]..[11,328+27])
+                        Pexp_ident "filename" (bin/main.ml[11,328+19]..[11,328+27])
+                  ]
+            ]
+            expression (bin/main.ml[12,359+2]..[14,422+3])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (bin/main.ml[12,359+6]..[12,359+7])
+                    Ppat_var "g" (bin/main.ml[12,359+6]..[12,359+7])
+                  expression (bin/main.ml[12,359+10]..[12,359+33])
+                    Pexp_apply
+                    expression (bin/main.ml[12,359+10]..[12,359+30])
+                      Pexp_ident "grammar_from_channel" (bin/main.ml[12,359+10]..[12,359+30])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (bin/main.ml[12,359+31]..[12,359+33])
+                          Pexp_ident "ic" (bin/main.ml[12,359+31]..[12,359+33])
+                    ]
+              ]
+              expression (bin/main.ml[13,396+2]..[14,422+3])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (bin/main.ml[13,396+6]..[13,396+8])
+                      Ppat_construct "()" (bin/main.ml[13,396+6]..[13,396+8])
+                      None
+                    expression (bin/main.ml[13,396+11]..[13,396+22])
+                      Pexp_apply
+                      expression (bin/main.ml[13,396+11]..[13,396+19])
+                        Pexp_ident "close_in" (bin/main.ml[13,396+11]..[13,396+19])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (bin/main.ml[13,396+20]..[13,396+22])
+                            Pexp_ident "ic" (bin/main.ml[13,396+20]..[13,396+22])
+                      ]
+                ]
+                expression (bin/main.ml[14,422+2]..[14,422+3])
+                  Pexp_ident "g" (bin/main.ml[14,422+2]..[14,422+3])
+    ]
+  structure_item (bin/main.ml[16,427+0]..[19,510+36])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (bin/main.ml[16,427+4]..[16,427+6])
+          Ppat_construct "()" (bin/main.ml[16,427+4]..[16,427+6])
+          None
+        expression (bin/main.ml[17,436+2]..[19,510+36])
+          Pexp_let Nonrec
+          [
+            <def>
+              pattern (bin/main.ml[17,436+6]..[17,436+14])
+                Ppat_var "filename" (bin/main.ml[17,436+6]..[17,436+14])
+              expression (bin/main.ml[17,436+17]..[17,436+29])
+                Pexp_apply
+                expression (bin/main.ml[17,436+17]..[17,436+29]) ghost
+                  Pexp_ident "Array.get" (bin/main.ml[17,436+17]..[17,436+29]) ghost
+                [
+                  <arg>
+                  Nolabel
+                    expression (bin/main.ml[17,436+17]..[17,436+25])
+                      Pexp_ident "Sys.argv" (bin/main.ml[17,436+17]..[17,436+25])
+                  <arg>
+                  Nolabel
+                    expression (bin/main.ml[17,436+27]..[17,436+28])
+                      Pexp_constant PConst_int (1,None)
+                ]
+          ]
+          expression (bin/main.ml[18,470+2]..[19,510+36])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (bin/main.ml[18,470+6]..[18,470+7])
+                  Ppat_var "g" (bin/main.ml[18,470+6]..[18,470+7])
+                expression (bin/main.ml[18,470+10]..[18,470+36])
+                  Pexp_apply
+                  expression (bin/main.ml[18,470+10]..[18,470+27])
+                    Pexp_ident "grammar_from_file" (bin/main.ml[18,470+10]..[18,470+27])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (bin/main.ml[18,470+28]..[18,470+36])
+                        Pexp_ident "filename" (bin/main.ml[18,470+28]..[18,470+36])
+                  ]
+            ]
+            expression (bin/main.ml[19,510+2]..[19,510+36])
+              Pexp_apply
+              expression (bin/main.ml[19,510+3]..[19,510+16])
+                Pexp_ident "print_endline" (bin/main.ml[19,510+3]..[19,510+16])
+              [
+                <arg>
+                Nolabel
+                  expression (bin/main.ml[19,510+17]..[19,510+35])
+                    Pexp_apply
+                    expression (bin/main.ml[19,510+18]..[19,510+32])
+                      Pexp_ident "Batteries.dump" (bin/main.ml[19,510+18]..[19,510+32])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (bin/main.ml[19,510+33]..[19,510+34])
+                          Pexp_ident "g" (bin/main.ml[19,510+33]..[19,510+34])
+                    ]
+              ]
+    ]
+]
+
+open Gbnf_parser
+let () = print_endline "Hello, World!"
+let grammar_from_channel ic =
+  let lexbuf = Lexing.from_channel ic in
+  let (buffer, lexer) = MenhirLib.ErrorReports.wrap SentenceLexer.main in
+  let dat = SentenceParser.grammar lexer lexbuf in
+  print_endline (Batteries.dump dat)
+let grammar_from_file filename =
+  let ic = open_in filename in
+  let g = grammar_from_channel ic in let () = close_in ic in g
+let () =
+  let filename = Sys.argv.(1) in
+  let g = grammar_from_file filename in print_endline (Batteries.dump g)
+[
+  structure_item (bin/main.ml[1,0+0]..bin/main.ml[1,0+16])
+    Tstr_open Fresh
+    module_expr (bin/main.ml[1,0+5]..bin/main.ml[1,0+16])
+      Tmod_ident "Gbnf_parser!"
+  structure_item (bin/main.ml[2,17+0]..bin/main.ml[2,17+38])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (bin/main.ml[2,17+4]..bin/main.ml[2,17+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (bin/main.ml[2,17+9]..bin/main.ml[2,17+38])
+          Texp_apply
+          expression (bin/main.ml[2,17+9]..bin/main.ml[2,17+22])
+            Texp_ident "Stdlib!.print_endline"
+          [
+            <arg>
+              Nolabel
+              expression (bin/main.ml[2,17+23]..bin/main.ml[2,17+38])
+                Texp_constant Const_string("Hello, World!",(bin/main.ml[2,17+24]..bin/main.ml[2,17+37]),None)
+          ]
+    ]
+  structure_item (bin/main.ml[4,57+0]..bin/main.ml[8,255+38])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (bin/main.ml[4,57+4]..bin/main.ml[4,57+24])
+          Tpat_var "grammar_from_channel/328"
+        expression (bin/main.ml[4,57+25]..bin/main.ml[8,255+38]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (bin/main.ml[4,57+25]..bin/main.ml[4,57+27])
+                Tpat_var "ic/330"
+              expression (bin/main.ml[5,87+2]..bin/main.ml[8,255+38])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (bin/main.ml[5,87+6]..bin/main.ml[5,87+12])
+                      Tpat_var "lexbuf/331"
+                    expression (bin/main.ml[5,87+15]..bin/main.ml[5,87+37])
+                      Texp_apply
+                      expression (bin/main.ml[5,87+15]..bin/main.ml[5,87+34])
+                        Texp_ident "Stdlib!.Lexing.from_channel"
+                      [
+                        <arg>
+                          Optional "with_positions"
+                          expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                            Texp_construct "None"
+                            []
+                        <arg>
+                          Nolabel
+                          expression (bin/main.ml[5,87+35]..bin/main.ml[5,87+37])
+                            Texp_ident "ic/330"
+                      ]
+                ]
+                expression (bin/main.ml[6,128+2]..bin/main.ml[8,255+38])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (bin/main.ml[6,128+6]..bin/main.ml[6,128+19])
+                        Tpat_tuple
+                        [
+                          pattern (bin/main.ml[6,128+6]..bin/main.ml[6,128+12])
+                            Tpat_var "buffer/380"
+                          pattern (bin/main.ml[6,128+14]..bin/main.ml[6,128+19])
+                            Tpat_var "lexer/381"
+                        ]
+                      expression (bin/main.ml[6,128+22]..bin/main.ml[6,128+68])
+                        Texp_apply
+                        expression (bin/main.ml[6,128+22]..bin/main.ml[6,128+49])
+                          Texp_ident "MenhirLib!.ErrorReports.wrap"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (bin/main.ml[6,128+50]..bin/main.ml[6,128+68])
+                              Texp_ident "Gbnf_parser!.SentenceLexer.main"
+                        ]
+                  ]
+                  expression (bin/main.ml[7,201+2]..bin/main.ml[8,255+38])
+                    Texp_let Nonrec
+                    [
+                      <def>
+                        pattern (bin/main.ml[7,201+6]..bin/main.ml[7,201+9])
+                          Tpat_var "dat/447"
+                        expression (bin/main.ml[7,201+12]..bin/main.ml[7,201+49])
+                          Texp_apply
+                          expression (bin/main.ml[7,201+13]..bin/main.ml[7,201+35])
+                            Texp_ident "Gbnf_parser!.SentenceParser.grammar"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (bin/main.ml[7,201+36]..bin/main.ml[7,201+41])
+                                Texp_ident "lexer/381"
+                            <arg>
+                              Nolabel
+                              expression (bin/main.ml[7,201+42]..bin/main.ml[7,201+48])
+                                Texp_ident "lexbuf/331"
+                          ]
+                    ]
+                    expression (bin/main.ml[8,255+2]..bin/main.ml[8,255+38])
+                      Texp_apply
+                      expression (bin/main.ml[8,255+3]..bin/main.ml[8,255+16])
+                        Texp_ident "Stdlib!.print_endline"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (bin/main.ml[8,255+17]..bin/main.ml[8,255+37])
+                            Texp_apply
+                            expression (bin/main.ml[8,255+18]..bin/main.ml[8,255+32])
+                              Texp_ident "Batteries!.dump"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (bin/main.ml[8,255+33]..bin/main.ml[8,255+36])
+                                  Texp_ident "dat/447"
+                            ]
+                      ]
+          ]
+    ]
+  structure_item (bin/main.ml[10,295+0]..bin/main.ml[14,422+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (bin/main.ml[10,295+4]..bin/main.ml[10,295+21])
+          Tpat_var "grammar_from_file/707"
+        expression (bin/main.ml[10,295+22]..bin/main.ml[14,422+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (bin/main.ml[10,295+22]..bin/main.ml[10,295+30])
+                Tpat_var "filename/709"
+              expression (bin/main.ml[11,328+2]..bin/main.ml[14,422+3])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (bin/main.ml[11,328+6]..bin/main.ml[11,328+8])
+                      Tpat_var "ic/710"
+                    expression (bin/main.ml[11,328+11]..bin/main.ml[11,328+27])
+                      Texp_apply
+                      expression (bin/main.ml[11,328+11]..bin/main.ml[11,328+18])
+                        Texp_ident "Stdlib!.open_in"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (bin/main.ml[11,328+19]..bin/main.ml[11,328+27])
+                            Texp_ident "filename/709"
+                      ]
+                ]
+                expression (bin/main.ml[12,359+2]..bin/main.ml[14,422+3])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (bin/main.ml[12,359+6]..bin/main.ml[12,359+7])
+                        Tpat_var "g/711"
+                      expression (bin/main.ml[12,359+10]..bin/main.ml[12,359+33])
+                        Texp_apply
+                        expression (bin/main.ml[12,359+10]..bin/main.ml[12,359+30])
+                          Texp_ident "grammar_from_channel/328"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (bin/main.ml[12,359+31]..bin/main.ml[12,359+33])
+                              Texp_ident "ic/710"
+                        ]
+                  ]
+                  expression (bin/main.ml[13,396+2]..bin/main.ml[14,422+3])
+                    Texp_match
+                    expression (bin/main.ml[13,396+11]..bin/main.ml[13,396+22])
+                      Texp_apply
+                      expression (bin/main.ml[13,396+11]..bin/main.ml[13,396+19])
+                        Texp_ident "Stdlib!.close_in"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (bin/main.ml[13,396+20]..bin/main.ml[13,396+22])
+                            Texp_ident "ic/710"
+                      ]
+                    [
+                      <case>
+                        pattern (bin/main.ml[13,396+6]..bin/main.ml[13,396+8])
+                          Tpat_value
+                          pattern (bin/main.ml[13,396+6]..bin/main.ml[13,396+8])
+                            Tpat_construct "()"
+                            []
+                            None
+                        expression (bin/main.ml[14,422+2]..bin/main.ml[14,422+3])
+                          Texp_ident "g/711"
+                    ]
+          ]
+    ]
+  structure_item (bin/main.ml[16,427+0]..bin/main.ml[19,510+36])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (bin/main.ml[16,427+4]..bin/main.ml[16,427+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (bin/main.ml[17,436+2]..bin/main.ml[19,510+36])
+          Texp_let Nonrec
+          [
+            <def>
+              pattern (bin/main.ml[17,436+6]..bin/main.ml[17,436+14])
+                Tpat_var "filename/712"
+              expression (bin/main.ml[17,436+17]..bin/main.ml[17,436+29])
+                Texp_apply
+                expression (bin/main.ml[17,436+17]..bin/main.ml[17,436+29]) ghost
+                  Texp_ident "Stdlib!.Array.get"
+                [
+                  <arg>
+                    Nolabel
+                    expression (bin/main.ml[17,436+17]..bin/main.ml[17,436+25])
+                      Texp_ident "Stdlib!.Sys.argv"
+                  <arg>
+                    Nolabel
+                    expression (bin/main.ml[17,436+27]..bin/main.ml[17,436+28])
+                      Texp_constant Const_int 1
+                ]
+          ]
+          expression (bin/main.ml[18,470+2]..bin/main.ml[19,510+36])
+            Texp_let Nonrec
+            [
+              <def>
+                pattern (bin/main.ml[18,470+6]..bin/main.ml[18,470+7])
+                  Tpat_var "g/835"
+                expression (bin/main.ml[18,470+10]..bin/main.ml[18,470+36])
+                  Texp_apply
+                  expression (bin/main.ml[18,470+10]..bin/main.ml[18,470+27])
+                    Texp_ident "grammar_from_file/707"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (bin/main.ml[18,470+28]..bin/main.ml[18,470+36])
+                        Texp_ident "filename/712"
+                  ]
+            ]
+            expression (bin/main.ml[19,510+2]..bin/main.ml[19,510+36])
+              Texp_apply
+              expression (bin/main.ml[19,510+3]..bin/main.ml[19,510+16])
+                Texp_ident "Stdlib!.print_endline"
+              [
+                <arg>
+                  Nolabel
+                  expression (bin/main.ml[19,510+17]..bin/main.ml[19,510+35])
+                    Texp_apply
+                    expression (bin/main.ml[19,510+18]..bin/main.ml[19,510+32])
+                      Texp_ident "Batteries!.dump"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (bin/main.ml[19,510+33]..bin/main.ml[19,510+34])
+                          Texp_ident "g/835"
+                    ]
+              ]
+    ]
+]
+
+{<Dune__exe__Main>
+ }
+
+(seq
+  (let
+    (*match*/1631 = (apply (field_imm 45 (global Stdlib!)) "Hello, World!"))
+    0)
+  (let
+    (grammar_from_channel/328 =
+       (function ic/330 : int
+         (let
+           (lexbuf/331 =
+              (apply (field_imm 1 (global Stdlib__Lexing!)) 0 ic/330)
+            *match*/1635 =
+              (apply (field_imm 0 (field_imm 5 (global MenhirLib!)))
+                (field_imm 18 (global Gbnf_parser__SentenceLexer!)))
+            lexer/381 =a (field_imm 1 *match*/1635)
+            buffer/380 =a (field_imm 0 *match*/1635)
+            dat/447 =
+              (apply (field_imm 1 (global Gbnf_parser__SentenceParser!))
+                lexer/381 lexbuf/331))
+           (apply (field_imm 45 (global Stdlib!))
+             (apply (field_imm 6 (global Batteries!)) dat/447)))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Main!)
+      grammar_from_channel/328))
+  (let
+    (grammar_from_file/707 =
+       (function filename/709 : int
+         (let
+           (ic/710 = (apply (field_imm 78 (global Stdlib!)) filename/709)
+            g/711 =[int]
+              (apply (field_imm 0 (global Dune__exe__Main!)) ic/710)
+            *match*/1636 = (apply (field_imm 92 (global Stdlib!)) ic/710))
+           g/711)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Main!)
+      grammar_from_file/707))
+  (let
+    (*match*/1638 =
+       (let
+         (filename/712 = (array.get[addr] (caml_sys_argv 0) 1)
+          g/835 =[int]
+            (apply (field_imm 1 (global Dune__exe__Main!)) filename/712))
+         (apply (field_imm 45 (global Stdlib!))
+           (apply (field_imm 6 (global Batteries!)) g/835))))
+    0)
+  0)
+(seq
+  (let
+    (*match*/1631 = (apply (field_imm 45 (global Stdlib!)) "Hello, World!"))
+    0)
+  (let
+    (grammar_from_channel/328 =
+       (function ic/330 : int
+         (let
+           (lexbuf/331 =
+              (apply (field_imm 1 (global Stdlib__Lexing!)) 0 ic/330)
+            *match*/1635 =
+              (apply (field_imm 0 (field_imm 5 (global MenhirLib!)))
+                (field_imm 18 (global Gbnf_parser__SentenceLexer!)))
+            dat/447 =
+              (apply (field_imm 1 (global Gbnf_parser__SentenceParser!))
+                (field_imm 1 *match*/1635) lexbuf/331))
+           (apply (field_imm 45 (global Stdlib!))
+             (apply (field_imm 6 (global Batteries!)) dat/447)))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Main!)
+      grammar_from_channel/328))
+  (let
+    (grammar_from_file/707 =
+       (function filename/709 : int
+         (let
+           (ic/710 = (apply (field_imm 78 (global Stdlib!)) filename/709)
+            g/711 =[int]
+              (apply (field_imm 0 (global Dune__exe__Main!)) ic/710)
+            *match*/1636 = (apply (field_imm 92 (global Stdlib!)) ic/710))
+           g/711)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Main!)
+      grammar_from_file/707))
+  (let
+    (*match*/1638 =
+       (let
+         (filename/712 = (array.get[addr] (caml_sys_argv 0) 1)
+          g/835 =[int]
+            (apply (field_imm 1 (global Dune__exe__Main!)) filename/712))
+         (apply (field_imm 45 (global Stdlib!))
+           (apply (field_imm 6 (global Batteries!)) g/835))))
+    0)
+  0)

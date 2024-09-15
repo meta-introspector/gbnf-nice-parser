@@ -1,0 +1,1342 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+          Ppat_construct "()" (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+          None
+        expression (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+          Pexp_apply
+          expression (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+          ]
+    ]
+  structure_item (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+          Ppat_construct "()" (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+          None
+        expression (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+          Pexp_apply
+          expression (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+          Ppat_construct "()" (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+          None
+        expression (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+          Pexp_apply
+          expression (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+                Pexp_constant PConst_string("lib/gSet.ml",(lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+          Ppat_construct "()" (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+          None
+        expression (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+          Pexp_apply
+          expression (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost
+                Pexp_constant PConst_string("gSet.ml",(lib/gSet.ml[17,1102+0]..[17,1102+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/gSet.ml[17,1102+0]..[114,3653+3])
+    Pstr_modtype "S" (lib/gSet.ml[17,1102+12]..[17,1102+13])
+      module_type (lib/gSet.ml[17,1102+16]..[114,3653+3])
+        Pmty_signature
+        [
+          signature_item (lib/gSet.ml[21,1184+2]..[21,1184+14])
+            Psig_type Rec
+            [
+              type_declaration "element" (lib/gSet.ml[21,1184+7]..[21,1184+14]) (lib/gSet.ml[21,1184+2]..[21,1184+14])
+                ptype_params =
+                  []
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ptype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  None
+            ]
+          signature_item (lib/gSet.ml[25,1215+2]..[25,1215+8])
+            Psig_type Rec
+            [
+              type_declaration "t" (lib/gSet.ml[25,1215+7]..[25,1215+8]) (lib/gSet.ml[25,1215+2]..[25,1215+8])
+                ptype_params =
+                  []
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ptype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  None
+            ]
+          signature_item (lib/gSet.ml[29,1249+2]..[29,1249+14])
+            Psig_value
+            value_description "empty" (lib/gSet.ml[29,1249+6]..[29,1249+11]) (lib/gSet.ml[29,1249+2]..[29,1249+14])
+              core_type (lib/gSet.ml[29,1249+13]..[29,1249+14])
+                Ptyp_constr "t" (lib/gSet.ml[29,1249+13]..[29,1249+14])
+                []
+              []
+          signature_item (lib/gSet.ml[33,1323+2]..[33,1323+25])
+            Psig_value
+            value_description "is_empty" (lib/gSet.ml[33,1323+6]..[33,1323+14]) (lib/gSet.ml[33,1323+2]..[33,1323+25])
+              core_type (lib/gSet.ml[33,1323+16]..[33,1323+25])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[33,1323+16]..[33,1323+17])
+                  Ptyp_constr "t" (lib/gSet.ml[33,1323+16]..[33,1323+17])
+                  []
+                core_type (lib/gSet.ml[33,1323+21]..[33,1323+25])
+                  Ptyp_constr "bool" (lib/gSet.ml[33,1323+21]..[33,1323+25])
+                  []
+              []
+          signature_item (lib/gSet.ml[38,1438+2]..[38,1438+29])
+            Psig_value
+            value_description "singleton" (lib/gSet.ml[38,1438+6]..[38,1438+15]) (lib/gSet.ml[38,1438+2]..[38,1438+29])
+              core_type (lib/gSet.ml[38,1438+17]..[38,1438+29])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[38,1438+17]..[38,1438+24])
+                  Ptyp_constr "element" (lib/gSet.ml[38,1438+17]..[38,1438+24])
+                  []
+                core_type (lib/gSet.ml[38,1438+28]..[38,1438+29])
+                  Ptyp_constr "t" (lib/gSet.ml[38,1438+28]..[38,1438+29])
+                  []
+              []
+          signature_item (lib/gSet.ml[42,1533+2]..[42,1533+29])
+            Psig_value
+            value_description "is_singleton" (lib/gSet.ml[42,1533+6]..[42,1533+18]) (lib/gSet.ml[42,1533+2]..[42,1533+29])
+              core_type (lib/gSet.ml[42,1533+20]..[42,1533+29])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[42,1533+20]..[42,1533+21])
+                  Ptyp_constr "t" (lib/gSet.ml[42,1533+20]..[42,1533+21])
+                  []
+                core_type (lib/gSet.ml[42,1533+25]..[42,1533+29])
+                  Ptyp_constr "bool" (lib/gSet.ml[42,1533+25]..[42,1533+29])
+                  []
+              []
+          signature_item (lib/gSet.ml[46,1615+2]..[46,1615+24])
+            Psig_value
+            value_description "cardinal" (lib/gSet.ml[46,1615+6]..[46,1615+14]) (lib/gSet.ml[46,1615+2]..[46,1615+24])
+              core_type (lib/gSet.ml[46,1615+16]..[46,1615+24])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[46,1615+16]..[46,1615+17])
+                  Ptyp_constr "t" (lib/gSet.ml[46,1615+16]..[46,1615+17])
+                  []
+                core_type (lib/gSet.ml[46,1615+21]..[46,1615+24])
+                  Ptyp_constr "int" (lib/gSet.ml[46,1615+21]..[46,1615+24])
+                  []
+              []
+          signature_item (lib/gSet.ml[51,1766+2]..[51,1766+26])
+            Psig_value
+            value_description "choose" (lib/gSet.ml[51,1766+6]..[51,1766+12]) (lib/gSet.ml[51,1766+2]..[51,1766+26])
+              core_type (lib/gSet.ml[51,1766+14]..[51,1766+26])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[51,1766+14]..[51,1766+15])
+                  Ptyp_constr "t" (lib/gSet.ml[51,1766+14]..[51,1766+15])
+                  []
+                core_type (lib/gSet.ml[51,1766+19]..[51,1766+26])
+                  Ptyp_constr "element" (lib/gSet.ml[51,1766+19]..[51,1766+26])
+                  []
+              []
+          signature_item (lib/gSet.ml[56,1876+2]..[56,1876+31])
+            Psig_value
+            value_description "mem" (lib/gSet.ml[56,1876+6]..[56,1876+9]) (lib/gSet.ml[56,1876+2]..[56,1876+31])
+              core_type (lib/gSet.ml[56,1876+11]..[56,1876+31])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[56,1876+11]..[56,1876+18])
+                  Ptyp_constr "element" (lib/gSet.ml[56,1876+11]..[56,1876+18])
+                  []
+                core_type (lib/gSet.ml[56,1876+22]..[56,1876+31])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[56,1876+22]..[56,1876+23])
+                    Ptyp_constr "t" (lib/gSet.ml[56,1876+22]..[56,1876+23])
+                    []
+                  core_type (lib/gSet.ml[56,1876+27]..[56,1876+31])
+                    Ptyp_constr "bool" (lib/gSet.ml[56,1876+27]..[56,1876+31])
+                    []
+              []
+          signature_item (lib/gSet.ml[61,1997+2]..[61,1997+28])
+            Psig_value
+            value_description "add" (lib/gSet.ml[61,1997+6]..[61,1997+9]) (lib/gSet.ml[61,1997+2]..[61,1997+28])
+              core_type (lib/gSet.ml[61,1997+11]..[61,1997+28])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[61,1997+11]..[61,1997+18])
+                  Ptyp_constr "element" (lib/gSet.ml[61,1997+11]..[61,1997+18])
+                  []
+                core_type (lib/gSet.ml[61,1997+22]..[61,1997+28])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[61,1997+22]..[61,1997+23])
+                    Ptyp_constr "t" (lib/gSet.ml[61,1997+22]..[61,1997+23])
+                    []
+                  core_type (lib/gSet.ml[61,1997+27]..[61,1997+28])
+                    Ptyp_constr "t" (lib/gSet.ml[61,1997+27]..[61,1997+28])
+                    []
+              []
+          signature_item (lib/gSet.ml[66,2120+2]..[66,2120+31])
+            Psig_value
+            value_description "remove" (lib/gSet.ml[66,2120+6]..[66,2120+12]) (lib/gSet.ml[66,2120+2]..[66,2120+31])
+              core_type (lib/gSet.ml[66,2120+14]..[66,2120+31])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[66,2120+14]..[66,2120+21])
+                  Ptyp_constr "element" (lib/gSet.ml[66,2120+14]..[66,2120+21])
+                  []
+                core_type (lib/gSet.ml[66,2120+25]..[66,2120+31])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[66,2120+25]..[66,2120+26])
+                    Ptyp_constr "t" (lib/gSet.ml[66,2120+25]..[66,2120+26])
+                    []
+                  core_type (lib/gSet.ml[66,2120+30]..[66,2120+31])
+                    Ptyp_constr "t" (lib/gSet.ml[66,2120+30]..[66,2120+31])
+                    []
+              []
+          signature_item (lib/gSet.ml[70,2221+2]..[70,2221+24])
+            Psig_value
+            value_description "union" (lib/gSet.ml[70,2221+6]..[70,2221+11]) (lib/gSet.ml[70,2221+2]..[70,2221+24])
+              core_type (lib/gSet.ml[70,2221+13]..[70,2221+24])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[70,2221+13]..[70,2221+14])
+                  Ptyp_constr "t" (lib/gSet.ml[70,2221+13]..[70,2221+14])
+                  []
+                core_type (lib/gSet.ml[70,2221+18]..[70,2221+24])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[70,2221+18]..[70,2221+19])
+                    Ptyp_constr "t" (lib/gSet.ml[70,2221+18]..[70,2221+19])
+                    []
+                  core_type (lib/gSet.ml[70,2221+23]..[70,2221+24])
+                    Ptyp_constr "t" (lib/gSet.ml[70,2221+23]..[70,2221+24])
+                    []
+              []
+          signature_item (lib/gSet.ml[75,2338+2]..[75,2338+24])
+            Psig_value
+            value_description "inter" (lib/gSet.ml[75,2338+6]..[75,2338+11]) (lib/gSet.ml[75,2338+2]..[75,2338+24])
+              core_type (lib/gSet.ml[75,2338+13]..[75,2338+24])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[75,2338+13]..[75,2338+14])
+                  Ptyp_constr "t" (lib/gSet.ml[75,2338+13]..[75,2338+14])
+                  []
+                core_type (lib/gSet.ml[75,2338+18]..[75,2338+24])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[75,2338+18]..[75,2338+19])
+                    Ptyp_constr "t" (lib/gSet.ml[75,2338+18]..[75,2338+19])
+                    []
+                  core_type (lib/gSet.ml[75,2338+23]..[75,2338+24])
+                    Ptyp_constr "t" (lib/gSet.ml[75,2338+23]..[75,2338+24])
+                    []
+              []
+          signature_item (lib/gSet.ml[80,2500+2]..[80,2500+30])
+            Psig_value
+            value_description "disjoint" (lib/gSet.ml[80,2500+6]..[80,2500+14]) (lib/gSet.ml[80,2500+2]..[80,2500+30])
+              core_type (lib/gSet.ml[80,2500+16]..[80,2500+30])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[80,2500+16]..[80,2500+17])
+                  Ptyp_constr "t" (lib/gSet.ml[80,2500+16]..[80,2500+17])
+                  []
+                core_type (lib/gSet.ml[80,2500+21]..[80,2500+30])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[80,2500+21]..[80,2500+22])
+                    Ptyp_constr "t" (lib/gSet.ml[80,2500+21]..[80,2500+22])
+                    []
+                  core_type (lib/gSet.ml[80,2500+26]..[80,2500+30])
+                    Ptyp_constr "bool" (lib/gSet.ml[80,2500+26]..[80,2500+30])
+                    []
+              []
+          signature_item (lib/gSet.ml[85,2669+2]..[85,2669+42])
+            Psig_value
+            value_description "iter" (lib/gSet.ml[85,2669+6]..[85,2669+10]) (lib/gSet.ml[85,2669+2]..[85,2669+42])
+              core_type (lib/gSet.ml[85,2669+12]..[85,2669+42])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[85,2669+13]..[85,2669+28])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[85,2669+13]..[85,2669+20])
+                    Ptyp_constr "element" (lib/gSet.ml[85,2669+13]..[85,2669+20])
+                    []
+                  core_type (lib/gSet.ml[85,2669+24]..[85,2669+28])
+                    Ptyp_constr "unit" (lib/gSet.ml[85,2669+24]..[85,2669+28])
+                    []
+                core_type (lib/gSet.ml[85,2669+33]..[85,2669+42])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[85,2669+33]..[85,2669+34])
+                    Ptyp_constr "t" (lib/gSet.ml[85,2669+33]..[85,2669+34])
+                    []
+                  core_type (lib/gSet.ml[85,2669+38]..[85,2669+42])
+                    Ptyp_constr "unit" (lib/gSet.ml[85,2669+38]..[85,2669+42])
+                    []
+              []
+          signature_item (lib/gSet.ml[96,3257+2]..[96,3257+50])
+            Psig_value
+            value_description "fold" (lib/gSet.ml[96,3257+6]..[96,3257+10]) (lib/gSet.ml[96,3257+2]..[96,3257+50])
+              core_type (lib/gSet.ml[96,3257+12]..[96,3257+50])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[96,3257+13]..[96,3257+32])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[96,3257+13]..[96,3257+20])
+                    Ptyp_constr "element" (lib/gSet.ml[96,3257+13]..[96,3257+20])
+                    []
+                  core_type (lib/gSet.ml[96,3257+24]..[96,3257+32])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (lib/gSet.ml[96,3257+24]..[96,3257+26])
+                      Ptyp_var b
+                    core_type (lib/gSet.ml[96,3257+30]..[96,3257+32])
+                      Ptyp_var b
+                core_type (lib/gSet.ml[96,3257+37]..[96,3257+50])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[96,3257+37]..[96,3257+38])
+                    Ptyp_constr "t" (lib/gSet.ml[96,3257+37]..[96,3257+38])
+                    []
+                  core_type (lib/gSet.ml[96,3257+42]..[96,3257+50])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (lib/gSet.ml[96,3257+42]..[96,3257+44])
+                      Ptyp_var b
+                    core_type (lib/gSet.ml[96,3257+48]..[96,3257+50])
+                      Ptyp_var b
+              []
+          signature_item (lib/gSet.ml[100,3373+2]..[100,3373+33])
+            Psig_value
+            value_description "elements" (lib/gSet.ml[100,3373+6]..[100,3373+14]) (lib/gSet.ml[100,3373+2]..[100,3373+33])
+              core_type (lib/gSet.ml[100,3373+16]..[100,3373+33])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[100,3373+16]..[100,3373+17])
+                  Ptyp_constr "t" (lib/gSet.ml[100,3373+16]..[100,3373+17])
+                  []
+                core_type (lib/gSet.ml[100,3373+21]..[100,3373+33])
+                  Ptyp_constr "list" (lib/gSet.ml[100,3373+29]..[100,3373+33])
+                  [
+                    core_type (lib/gSet.ml[100,3373+21]..[100,3373+28])
+                      Ptyp_constr "element" (lib/gSet.ml[100,3373+21]..[100,3373+28])
+                      []
+                  ]
+              []
+          signature_item (lib/gSet.ml[104,3453+2]..[104,3453+28])
+            Psig_value
+            value_description "compare" (lib/gSet.ml[104,3453+6]..[104,3453+13]) (lib/gSet.ml[104,3453+2]..[104,3453+28])
+              core_type (lib/gSet.ml[104,3453+15]..[104,3453+28])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[104,3453+15]..[104,3453+16])
+                  Ptyp_constr "t" (lib/gSet.ml[104,3453+15]..[104,3453+16])
+                  []
+                core_type (lib/gSet.ml[104,3453+20]..[104,3453+28])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[104,3453+20]..[104,3453+21])
+                    Ptyp_constr "t" (lib/gSet.ml[104,3453+20]..[104,3453+21])
+                    []
+                  core_type (lib/gSet.ml[104,3453+25]..[104,3453+28])
+                    Ptyp_constr "int" (lib/gSet.ml[104,3453+25]..[104,3453+28])
+                    []
+              []
+          signature_item (lib/gSet.ml[108,3531+2]..[108,3531+27])
+            Psig_value
+            value_description "equal" (lib/gSet.ml[108,3531+6]..[108,3531+11]) (lib/gSet.ml[108,3531+2]..[108,3531+27])
+              core_type (lib/gSet.ml[108,3531+13]..[108,3531+27])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[108,3531+13]..[108,3531+14])
+                  Ptyp_constr "t" (lib/gSet.ml[108,3531+13]..[108,3531+14])
+                  []
+                core_type (lib/gSet.ml[108,3531+18]..[108,3531+27])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[108,3531+18]..[108,3531+19])
+                    Ptyp_constr "t" (lib/gSet.ml[108,3531+18]..[108,3531+19])
+                    []
+                  core_type (lib/gSet.ml[108,3531+23]..[108,3531+27])
+                    Ptyp_constr "bool" (lib/gSet.ml[108,3531+23]..[108,3531+27])
+                    []
+              []
+          signature_item (lib/gSet.ml[112,3621+2]..[112,3621+30])
+            Psig_value
+            value_description "subset" (lib/gSet.ml[112,3621+6]..[112,3621+12]) (lib/gSet.ml[112,3621+2]..[112,3621+30])
+              core_type (lib/gSet.ml[112,3621+15]..[112,3621+29])
+                Ptyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[112,3621+15]..[112,3621+16])
+                  Ptyp_constr "t" (lib/gSet.ml[112,3621+15]..[112,3621+16])
+                  []
+                core_type (lib/gSet.ml[112,3621+20]..[112,3621+29])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[112,3621+20]..[112,3621+21])
+                    Ptyp_constr "t" (lib/gSet.ml[112,3621+20]..[112,3621+21])
+                    []
+                  core_type (lib/gSet.ml[112,3621+25]..[112,3621+29])
+                    Ptyp_constr "bool" (lib/gSet.ml[112,3621+25]..[112,3621+29])
+                    []
+              []
+        ]
+  structure_item (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+          Ppat_construct "()" (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+          None
+        expression (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+          Pexp_apply
+          expression (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost,None)
+          ]
+    ]
+  structure_item (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+          Ppat_construct "()" (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+          None
+        expression (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+          Pexp_apply
+          expression (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+                Pexp_construct "()" (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+          Ppat_construct "()" (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+          None
+        expression (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+          Pexp_apply
+          expression (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+                Pexp_construct "()" (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+          Ppat_construct "()" (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+          None
+        expression (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+          Pexp_apply
+          expression (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/gSet.ml[114,3653+3]..[114,3653+3]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set ~absolute_filename:"lib/gSet.ml"
+let () = Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "gSet.ml"
+module type S  =
+  sig
+    type element
+    type t
+    val empty : t
+    val is_empty : t -> bool
+    val singleton : element -> t
+    val is_singleton : t -> bool
+    val cardinal : t -> int
+    val choose : t -> element
+    val mem : element -> t -> bool
+    val add : element -> t -> t
+    val remove : element -> t -> t
+    val union : t -> t -> t
+    val inter : t -> t -> t
+    val disjoint : t -> t -> bool
+    val iter : (element -> unit) -> t -> unit
+    val fold : (element -> 'b -> 'b) -> t -> 'b -> 'b
+    val elements : t -> element list
+    val compare : t -> t -> int
+    val equal : t -> t -> bool
+    val subset : t -> t -> bool
+  end
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+          Texp_apply
+          expression (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+          Texp_apply
+          expression (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+          Texp_apply
+          expression (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+                Texp_constant Const_string("lib/gSet.ml",(lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+          Texp_apply
+          expression (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost
+                Texp_constant Const_string("gSet.ml",(lib/gSet.ml[17,1102+0]..lib/gSet.ml[17,1102+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/gSet.ml[17,1102+0]..lib/gSet.ml[114,3653+3])
+    Tstr_modtype "S/1152"
+      module_type (lib/gSet.ml[17,1102+16]..lib/gSet.ml[114,3653+3])
+        Tmty_signature
+        [
+          signature_item (lib/gSet.ml[21,1184+2]..lib/gSet.ml[21,1184+14])
+            Tsig_type Rec
+            [
+              type_declaration element/1132 (lib/gSet.ml[21,1184+2]..lib/gSet.ml[21,1184+14])
+                ptype_params =
+                  []
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ttype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  None
+            ]
+          signature_item (lib/gSet.ml[25,1215+2]..lib/gSet.ml[25,1215+8])
+            Tsig_type Rec
+            [
+              type_declaration t/1133 (lib/gSet.ml[25,1215+2]..lib/gSet.ml[25,1215+8])
+                ptype_params =
+                  []
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ttype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  None
+            ]
+          signature_item (lib/gSet.ml[29,1249+2]..lib/gSet.ml[29,1249+14])
+            Tsig_value
+            value_description empty/1134 (lib/gSet.ml[29,1249+2]..lib/gSet.ml[29,1249+14])
+              core_type (lib/gSet.ml[29,1249+13]..lib/gSet.ml[29,1249+14])
+                Ttyp_constr "t/1133"
+                []
+              []
+          signature_item (lib/gSet.ml[33,1323+2]..lib/gSet.ml[33,1323+25])
+            Tsig_value
+            value_description is_empty/1135 (lib/gSet.ml[33,1323+2]..lib/gSet.ml[33,1323+25])
+              core_type (lib/gSet.ml[33,1323+16]..lib/gSet.ml[33,1323+25])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[33,1323+16]..lib/gSet.ml[33,1323+17])
+                  Ttyp_constr "t/1133"
+                  []
+                core_type (lib/gSet.ml[33,1323+21]..lib/gSet.ml[33,1323+25])
+                  Ttyp_constr "bool/5!"
+                  []
+              []
+          signature_item (lib/gSet.ml[38,1438+2]..lib/gSet.ml[38,1438+29])
+            Tsig_value
+            value_description singleton/1136 (lib/gSet.ml[38,1438+2]..lib/gSet.ml[38,1438+29])
+              core_type (lib/gSet.ml[38,1438+17]..lib/gSet.ml[38,1438+29])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[38,1438+17]..lib/gSet.ml[38,1438+24])
+                  Ttyp_constr "element/1132"
+                  []
+                core_type (lib/gSet.ml[38,1438+28]..lib/gSet.ml[38,1438+29])
+                  Ttyp_constr "t/1133"
+                  []
+              []
+          signature_item (lib/gSet.ml[42,1533+2]..lib/gSet.ml[42,1533+29])
+            Tsig_value
+            value_description is_singleton/1137 (lib/gSet.ml[42,1533+2]..lib/gSet.ml[42,1533+29])
+              core_type (lib/gSet.ml[42,1533+20]..lib/gSet.ml[42,1533+29])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[42,1533+20]..lib/gSet.ml[42,1533+21])
+                  Ttyp_constr "t/1133"
+                  []
+                core_type (lib/gSet.ml[42,1533+25]..lib/gSet.ml[42,1533+29])
+                  Ttyp_constr "bool/5!"
+                  []
+              []
+          signature_item (lib/gSet.ml[46,1615+2]..lib/gSet.ml[46,1615+24])
+            Tsig_value
+            value_description cardinal/1138 (lib/gSet.ml[46,1615+2]..lib/gSet.ml[46,1615+24])
+              core_type (lib/gSet.ml[46,1615+16]..lib/gSet.ml[46,1615+24])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[46,1615+16]..lib/gSet.ml[46,1615+17])
+                  Ttyp_constr "t/1133"
+                  []
+                core_type (lib/gSet.ml[46,1615+21]..lib/gSet.ml[46,1615+24])
+                  Ttyp_constr "int/1!"
+                  []
+              []
+          signature_item (lib/gSet.ml[51,1766+2]..lib/gSet.ml[51,1766+26])
+            Tsig_value
+            value_description choose/1139 (lib/gSet.ml[51,1766+2]..lib/gSet.ml[51,1766+26])
+              core_type (lib/gSet.ml[51,1766+14]..lib/gSet.ml[51,1766+26])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[51,1766+14]..lib/gSet.ml[51,1766+15])
+                  Ttyp_constr "t/1133"
+                  []
+                core_type (lib/gSet.ml[51,1766+19]..lib/gSet.ml[51,1766+26])
+                  Ttyp_constr "element/1132"
+                  []
+              []
+          signature_item (lib/gSet.ml[56,1876+2]..lib/gSet.ml[56,1876+31])
+            Tsig_value
+            value_description mem/1140 (lib/gSet.ml[56,1876+2]..lib/gSet.ml[56,1876+31])
+              core_type (lib/gSet.ml[56,1876+11]..lib/gSet.ml[56,1876+31])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[56,1876+11]..lib/gSet.ml[56,1876+18])
+                  Ttyp_constr "element/1132"
+                  []
+                core_type (lib/gSet.ml[56,1876+22]..lib/gSet.ml[56,1876+31])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[56,1876+22]..lib/gSet.ml[56,1876+23])
+                    Ttyp_constr "t/1133"
+                    []
+                  core_type (lib/gSet.ml[56,1876+27]..lib/gSet.ml[56,1876+31])
+                    Ttyp_constr "bool/5!"
+                    []
+              []
+          signature_item (lib/gSet.ml[61,1997+2]..lib/gSet.ml[61,1997+28])
+            Tsig_value
+            value_description add/1141 (lib/gSet.ml[61,1997+2]..lib/gSet.ml[61,1997+28])
+              core_type (lib/gSet.ml[61,1997+11]..lib/gSet.ml[61,1997+28])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[61,1997+11]..lib/gSet.ml[61,1997+18])
+                  Ttyp_constr "element/1132"
+                  []
+                core_type (lib/gSet.ml[61,1997+22]..lib/gSet.ml[61,1997+28])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[61,1997+22]..lib/gSet.ml[61,1997+23])
+                    Ttyp_constr "t/1133"
+                    []
+                  core_type (lib/gSet.ml[61,1997+27]..lib/gSet.ml[61,1997+28])
+                    Ttyp_constr "t/1133"
+                    []
+              []
+          signature_item (lib/gSet.ml[66,2120+2]..lib/gSet.ml[66,2120+31])
+            Tsig_value
+            value_description remove/1142 (lib/gSet.ml[66,2120+2]..lib/gSet.ml[66,2120+31])
+              core_type (lib/gSet.ml[66,2120+14]..lib/gSet.ml[66,2120+31])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[66,2120+14]..lib/gSet.ml[66,2120+21])
+                  Ttyp_constr "element/1132"
+                  []
+                core_type (lib/gSet.ml[66,2120+25]..lib/gSet.ml[66,2120+31])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[66,2120+25]..lib/gSet.ml[66,2120+26])
+                    Ttyp_constr "t/1133"
+                    []
+                  core_type (lib/gSet.ml[66,2120+30]..lib/gSet.ml[66,2120+31])
+                    Ttyp_constr "t/1133"
+                    []
+              []
+          signature_item (lib/gSet.ml[70,2221+2]..lib/gSet.ml[70,2221+24])
+            Tsig_value
+            value_description union/1143 (lib/gSet.ml[70,2221+2]..lib/gSet.ml[70,2221+24])
+              core_type (lib/gSet.ml[70,2221+13]..lib/gSet.ml[70,2221+24])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[70,2221+13]..lib/gSet.ml[70,2221+14])
+                  Ttyp_constr "t/1133"
+                  []
+                core_type (lib/gSet.ml[70,2221+18]..lib/gSet.ml[70,2221+24])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[70,2221+18]..lib/gSet.ml[70,2221+19])
+                    Ttyp_constr "t/1133"
+                    []
+                  core_type (lib/gSet.ml[70,2221+23]..lib/gSet.ml[70,2221+24])
+                    Ttyp_constr "t/1133"
+                    []
+              []
+          signature_item (lib/gSet.ml[75,2338+2]..lib/gSet.ml[75,2338+24])
+            Tsig_value
+            value_description inter/1144 (lib/gSet.ml[75,2338+2]..lib/gSet.ml[75,2338+24])
+              core_type (lib/gSet.ml[75,2338+13]..lib/gSet.ml[75,2338+24])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[75,2338+13]..lib/gSet.ml[75,2338+14])
+                  Ttyp_constr "t/1133"
+                  []
+                core_type (lib/gSet.ml[75,2338+18]..lib/gSet.ml[75,2338+24])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[75,2338+18]..lib/gSet.ml[75,2338+19])
+                    Ttyp_constr "t/1133"
+                    []
+                  core_type (lib/gSet.ml[75,2338+23]..lib/gSet.ml[75,2338+24])
+                    Ttyp_constr "t/1133"
+                    []
+              []
+          signature_item (lib/gSet.ml[80,2500+2]..lib/gSet.ml[80,2500+30])
+            Tsig_value
+            value_description disjoint/1145 (lib/gSet.ml[80,2500+2]..lib/gSet.ml[80,2500+30])
+              core_type (lib/gSet.ml[80,2500+16]..lib/gSet.ml[80,2500+30])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[80,2500+16]..lib/gSet.ml[80,2500+17])
+                  Ttyp_constr "t/1133"
+                  []
+                core_type (lib/gSet.ml[80,2500+21]..lib/gSet.ml[80,2500+30])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[80,2500+21]..lib/gSet.ml[80,2500+22])
+                    Ttyp_constr "t/1133"
+                    []
+                  core_type (lib/gSet.ml[80,2500+26]..lib/gSet.ml[80,2500+30])
+                    Ttyp_constr "bool/5!"
+                    []
+              []
+          signature_item (lib/gSet.ml[85,2669+2]..lib/gSet.ml[85,2669+42])
+            Tsig_value
+            value_description iter/1146 (lib/gSet.ml[85,2669+2]..lib/gSet.ml[85,2669+42])
+              core_type (lib/gSet.ml[85,2669+12]..lib/gSet.ml[85,2669+42])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[85,2669+13]..lib/gSet.ml[85,2669+28])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[85,2669+13]..lib/gSet.ml[85,2669+20])
+                    Ttyp_constr "element/1132"
+                    []
+                  core_type (lib/gSet.ml[85,2669+24]..lib/gSet.ml[85,2669+28])
+                    Ttyp_constr "unit/6!"
+                    []
+                core_type (lib/gSet.ml[85,2669+33]..lib/gSet.ml[85,2669+42])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[85,2669+33]..lib/gSet.ml[85,2669+34])
+                    Ttyp_constr "t/1133"
+                    []
+                  core_type (lib/gSet.ml[85,2669+38]..lib/gSet.ml[85,2669+42])
+                    Ttyp_constr "unit/6!"
+                    []
+              []
+          signature_item (lib/gSet.ml[96,3257+2]..lib/gSet.ml[96,3257+50])
+            Tsig_value
+            value_description fold/1147 (lib/gSet.ml[96,3257+2]..lib/gSet.ml[96,3257+50])
+              core_type (lib/gSet.ml[96,3257+12]..lib/gSet.ml[96,3257+50])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[96,3257+13]..lib/gSet.ml[96,3257+32])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[96,3257+13]..lib/gSet.ml[96,3257+20])
+                    Ttyp_constr "element/1132"
+                    []
+                  core_type (lib/gSet.ml[96,3257+24]..lib/gSet.ml[96,3257+32])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (lib/gSet.ml[96,3257+24]..lib/gSet.ml[96,3257+26])
+                      Ttyp_var b
+                    core_type (lib/gSet.ml[96,3257+30]..lib/gSet.ml[96,3257+32])
+                      Ttyp_var b
+                core_type (lib/gSet.ml[96,3257+37]..lib/gSet.ml[96,3257+50])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[96,3257+37]..lib/gSet.ml[96,3257+38])
+                    Ttyp_constr "t/1133"
+                    []
+                  core_type (lib/gSet.ml[96,3257+42]..lib/gSet.ml[96,3257+50])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (lib/gSet.ml[96,3257+42]..lib/gSet.ml[96,3257+44])
+                      Ttyp_var b
+                    core_type (lib/gSet.ml[96,3257+48]..lib/gSet.ml[96,3257+50])
+                      Ttyp_var b
+              []
+          signature_item (lib/gSet.ml[100,3373+2]..lib/gSet.ml[100,3373+33])
+            Tsig_value
+            value_description elements/1148 (lib/gSet.ml[100,3373+2]..lib/gSet.ml[100,3373+33])
+              core_type (lib/gSet.ml[100,3373+16]..lib/gSet.ml[100,3373+33])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[100,3373+16]..lib/gSet.ml[100,3373+17])
+                  Ttyp_constr "t/1133"
+                  []
+                core_type (lib/gSet.ml[100,3373+21]..lib/gSet.ml[100,3373+33])
+                  Ttyp_constr "list/9!"
+                  [
+                    core_type (lib/gSet.ml[100,3373+21]..lib/gSet.ml[100,3373+28])
+                      Ttyp_constr "element/1132"
+                      []
+                  ]
+              []
+          signature_item (lib/gSet.ml[104,3453+2]..lib/gSet.ml[104,3453+28])
+            Tsig_value
+            value_description compare/1149 (lib/gSet.ml[104,3453+2]..lib/gSet.ml[104,3453+28])
+              core_type (lib/gSet.ml[104,3453+15]..lib/gSet.ml[104,3453+28])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[104,3453+15]..lib/gSet.ml[104,3453+16])
+                  Ttyp_constr "t/1133"
+                  []
+                core_type (lib/gSet.ml[104,3453+20]..lib/gSet.ml[104,3453+28])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[104,3453+20]..lib/gSet.ml[104,3453+21])
+                    Ttyp_constr "t/1133"
+                    []
+                  core_type (lib/gSet.ml[104,3453+25]..lib/gSet.ml[104,3453+28])
+                    Ttyp_constr "int/1!"
+                    []
+              []
+          signature_item (lib/gSet.ml[108,3531+2]..lib/gSet.ml[108,3531+27])
+            Tsig_value
+            value_description equal/1150 (lib/gSet.ml[108,3531+2]..lib/gSet.ml[108,3531+27])
+              core_type (lib/gSet.ml[108,3531+13]..lib/gSet.ml[108,3531+27])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[108,3531+13]..lib/gSet.ml[108,3531+14])
+                  Ttyp_constr "t/1133"
+                  []
+                core_type (lib/gSet.ml[108,3531+18]..lib/gSet.ml[108,3531+27])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[108,3531+18]..lib/gSet.ml[108,3531+19])
+                    Ttyp_constr "t/1133"
+                    []
+                  core_type (lib/gSet.ml[108,3531+23]..lib/gSet.ml[108,3531+27])
+                    Ttyp_constr "bool/5!"
+                    []
+              []
+          signature_item (lib/gSet.ml[112,3621+2]..lib/gSet.ml[112,3621+30])
+            Tsig_value
+            value_description subset/1151 (lib/gSet.ml[112,3621+2]..lib/gSet.ml[112,3621+30])
+              core_type (lib/gSet.ml[112,3621+15]..lib/gSet.ml[112,3621+29])
+                Ttyp_arrow
+                Nolabel
+                core_type (lib/gSet.ml[112,3621+15]..lib/gSet.ml[112,3621+16])
+                  Ttyp_constr "t/1133"
+                  []
+                core_type (lib/gSet.ml[112,3621+20]..lib/gSet.ml[112,3621+29])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (lib/gSet.ml[112,3621+20]..lib/gSet.ml[112,3621+21])
+                    Ttyp_constr "t/1133"
+                    []
+                  core_type (lib/gSet.ml[112,3621+25]..lib/gSet.ml[112,3621+29])
+                    Ttyp_constr "bool/5!"
+                    []
+              []
+        ]
+  structure_item (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+          Texp_apply
+          expression (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost,None)
+          ]
+    ]
+  structure_item (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+          Texp_apply
+          expression (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+          Texp_apply
+          expression (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+          Texp_apply
+          expression (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/gSet.ml[114,3653+3]..lib/gSet.ml[114,3653+3]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__GSet>
+ "S"[module type] -> <Gbnf_parser__GSet.20>;
+ }
+
+(setglobal Gbnf_parser__GSet!
+  (let
+    (*match*/1209 =
+       (after Gbnf_parser__GSet lib/gSet.ml(17)<ghost>:1102-1102
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__GSet"))
+     *match*/1207 =
+       (after Gbnf_parser__GSet lib/gSet.ml(17)<ghost>:1102-1102
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1205 =
+       (after Gbnf_parser__GSet lib/gSet.ml(17)<ghost>:1102-1102
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/gSet.ml"))
+     *match*/1203 =
+       (after Gbnf_parser__GSet lib/gSet.ml(17)<ghost>:1102-1102
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "gSet.ml"))
+     *match*/1201 =
+       (after Gbnf_parser__GSet lib/gSet.ml(114)<ghost>:3656-3656
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/1199 =
+       (after Gbnf_parser__GSet lib/gSet.ml(114)<ghost>:3656-3656
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/1197 =
+       (after Gbnf_parser__GSet lib/gSet.ml(114)<ghost>:3656-3656
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/1195 =
+       (after Gbnf_parser__GSet lib/gSet.ml(114)<ghost>:3656-3656
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__GSet")))
+    (pseudo <unknown location> (makeblock 0))))
+(setglobal Gbnf_parser__GSet!
+  (let
+    (*match*/1209 =
+       (after Gbnf_parser__GSet lib/gSet.ml(17)<ghost>:1102-1102
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__GSet"))
+     *match*/1207 =
+       (after Gbnf_parser__GSet lib/gSet.ml(17)<ghost>:1102-1102
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1205 =
+       (after Gbnf_parser__GSet lib/gSet.ml(17)<ghost>:1102-1102
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/gSet.ml"))
+     *match*/1203 =
+       (after Gbnf_parser__GSet lib/gSet.ml(17)<ghost>:1102-1102
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "gSet.ml"))
+     *match*/1201 =
+       (after Gbnf_parser__GSet lib/gSet.ml(114)<ghost>:3656-3656
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/1199 =
+       (after Gbnf_parser__GSet lib/gSet.ml(114)<ghost>:3656-3656
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/1197 =
+       (after Gbnf_parser__GSet lib/gSet.ml(114)<ghost>:3656-3656
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/1195 =
+       (after Gbnf_parser__GSet lib/gSet.ml(114)<ghost>:3656-3656
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__GSet")))
+    (pseudo <unknown location> (makeblock 0))))

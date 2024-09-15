@@ -1,0 +1,1592 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+          Ppat_construct "()" (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+          None
+        expression (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+          Pexp_apply
+          expression (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+          ]
+    ]
+  structure_item (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+          Ppat_construct "()" (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+          None
+        expression (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+          Pexp_apply
+          expression (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+          Ppat_construct "()" (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+          None
+        expression (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+          Pexp_apply
+          expression (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+                Pexp_constant PConst_string("lib/Seq.ml",(lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+          Ppat_construct "()" (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+          None
+        expression (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+          Pexp_apply
+          expression (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost
+                Pexp_constant PConst_string("Seq.ml",(lib/Seq.ml[20,1223+0]..[20,1223+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Seq.ml[20,1223+0]..[23,1258+28])
+    Pstr_type Rec
+    [
+      type_declaration "seq" (lib/Seq.ml[20,1223+8]..[20,1223+11]) (lib/Seq.ml[20,1223+0]..[23,1258+28])
+        ptype_params =
+          [
+            core_type (lib/Seq.ml[20,1223+5]..[20,1223+7])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/Seq.ml[21,1237+0]..[21,1237+7])
+                "SZero" (lib/Seq.ml[21,1237+2]..[21,1237+7])
+                []
+                None
+              (lib/Seq.ml[22,1245+0]..[22,1245+12])
+                "SOne" (lib/Seq.ml[22,1245+2]..[22,1245+6])
+                [
+                  core_type (lib/Seq.ml[22,1245+10]..[22,1245+12])
+                    Ptyp_var a
+                ]
+                None
+              (lib/Seq.ml[23,1258+0]..[23,1258+28])
+                "SConcat" (lib/Seq.ml[23,1258+2]..[23,1258+9])
+                [
+                  core_type (lib/Seq.ml[23,1258+13]..[23,1258+19])
+                    Ptyp_constr "seq" (lib/Seq.ml[23,1258+16]..[23,1258+19])
+                    [
+                      core_type (lib/Seq.ml[23,1258+13]..[23,1258+15])
+                        Ptyp_var a
+                    ]
+                  core_type (lib/Seq.ml[23,1258+22]..[23,1258+28])
+                    Ptyp_constr "seq" (lib/Seq.ml[23,1258+25]..[23,1258+28])
+                    [
+                      core_type (lib/Seq.ml[23,1258+22]..[23,1258+24])
+                        Ptyp_var a
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/Seq.ml[25,1288+0]..[26,1300+7])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[25,1288+4]..[25,1288+9])
+          Ppat_var "empty" (lib/Seq.ml[25,1288+4]..[25,1288+9])
+        expression (lib/Seq.ml[26,1300+2]..[26,1300+7])
+          Pexp_construct "SZero" (lib/Seq.ml[26,1300+2]..[26,1300+7])
+          None
+    ]
+  structure_item (lib/Seq.ml[28,1309+0]..[29,1327+8])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[28,1309+4]..[28,1309+13])
+          Ppat_var "singleton" (lib/Seq.ml[28,1309+4]..[28,1309+13])
+        expression (lib/Seq.ml[28,1309+14]..[29,1327+8]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/Seq.ml[28,1309+14]..[28,1309+15])
+            Ppat_var "x" (lib/Seq.ml[28,1309+14]..[28,1309+15])
+          expression (lib/Seq.ml[29,1327+2]..[29,1327+8])
+            Pexp_construct "SOne" (lib/Seq.ml[29,1327+2]..[29,1327+6])
+            Some
+              expression (lib/Seq.ml[29,1327+7]..[29,1327+8])
+                Pexp_ident "x" (lib/Seq.ml[29,1327+7]..[29,1327+8])
+    ]
+  structure_item (lib/Seq.ml[31,1337+0]..[37,1422+22])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[31,1337+4]..[31,1337+10])
+          Ppat_var "append" (lib/Seq.ml[31,1337+4]..[31,1337+10])
+        expression (lib/Seq.ml[31,1337+11]..[37,1422+22]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/Seq.ml[31,1337+11]..[31,1337+13])
+            Ppat_var "xs" (lib/Seq.ml[31,1337+11]..[31,1337+13])
+          expression (lib/Seq.ml[31,1337+14]..[37,1422+22]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/Seq.ml[31,1337+14]..[31,1337+16])
+              Ppat_var "ys" (lib/Seq.ml[31,1337+14]..[31,1337+16])
+            expression (lib/Seq.ml[32,1356+2]..[37,1422+22])
+              Pexp_match
+              expression (lib/Seq.ml[32,1356+8]..[32,1356+10])
+                Pexp_ident "xs" (lib/Seq.ml[32,1356+8]..[32,1356+10])
+              [
+                <case>
+                  pattern (lib/Seq.ml[33,1372+4]..[33,1372+9])
+                    Ppat_construct "SZero" (lib/Seq.ml[33,1372+4]..[33,1372+9])
+                    None
+                  expression (lib/Seq.ml[34,1385+6]..[34,1385+8])
+                    Pexp_ident "ys" (lib/Seq.ml[34,1385+6]..[34,1385+8])
+                <case>
+                  pattern (lib/Seq.ml[35,1394+4]..[36,1405+13])
+                    Ppat_or
+                    pattern (lib/Seq.ml[35,1394+4]..[35,1394+10])
+                      Ppat_construct "SOne" (lib/Seq.ml[35,1394+4]..[35,1394+8])
+                      Some
+                        []
+                        pattern (lib/Seq.ml[35,1394+9]..[35,1394+10])
+                          Ppat_any
+                    pattern (lib/Seq.ml[36,1405+4]..[36,1405+13])
+                      Ppat_construct "SConcat" (lib/Seq.ml[36,1405+4]..[36,1405+11])
+                      Some
+                        []
+                        pattern (lib/Seq.ml[36,1405+12]..[36,1405+13])
+                          Ppat_any
+                  expression (lib/Seq.ml[37,1422+6]..[37,1422+22])
+                    Pexp_construct "SConcat" (lib/Seq.ml[37,1422+6]..[37,1422+13])
+                    Some
+                      expression (lib/Seq.ml[37,1422+14]..[37,1422+22])
+                        Pexp_tuple
+                        [
+                          expression (lib/Seq.ml[37,1422+15]..[37,1422+17])
+                            Pexp_ident "xs" (lib/Seq.ml[37,1422+15]..[37,1422+17])
+                          expression (lib/Seq.ml[37,1422+19]..[37,1422+21])
+                            Pexp_ident "ys" (lib/Seq.ml[37,1422+19]..[37,1422+21])
+                        ]
+              ]
+    ]
+  structure_item (lib/Seq.ml[39,1446+0]..[46,1569+38])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (lib/Seq.ml[39,1446+8]..[39,1446+16])
+          Ppat_var "elements" (lib/Seq.ml[39,1446+8]..[39,1446+16])
+        expression (lib/Seq.ml[39,1446+17]..[46,1569+38]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/Seq.ml[39,1446+17]..[39,1446+19])
+            Ppat_var "xs" (lib/Seq.ml[39,1446+17]..[39,1446+19])
+          expression (lib/Seq.ml[39,1446+20]..[46,1569+38]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/Seq.ml[39,1446+20]..[39,1446+24])
+              Ppat_var "accu" (lib/Seq.ml[39,1446+20]..[39,1446+24])
+            expression (lib/Seq.ml[40,1473+2]..[46,1569+38])
+              Pexp_match
+              expression (lib/Seq.ml[40,1473+8]..[40,1473+10])
+                Pexp_ident "xs" (lib/Seq.ml[40,1473+8]..[40,1473+10])
+              [
+                <case>
+                  pattern (lib/Seq.ml[41,1489+4]..[41,1489+9])
+                    Ppat_construct "SZero" (lib/Seq.ml[41,1489+4]..[41,1489+9])
+                    None
+                  expression (lib/Seq.ml[42,1502+6]..[42,1502+10])
+                    Pexp_ident "accu" (lib/Seq.ml[42,1502+6]..[42,1502+10])
+                <case>
+                  pattern (lib/Seq.ml[43,1513+4]..[43,1513+10])
+                    Ppat_construct "SOne" (lib/Seq.ml[43,1513+4]..[43,1513+8])
+                    Some
+                      []
+                      pattern (lib/Seq.ml[43,1513+9]..[43,1513+10])
+                        Ppat_var "x" (lib/Seq.ml[43,1513+9]..[43,1513+10])
+                  expression (lib/Seq.ml[44,1527+6]..[44,1527+15])
+                    Pexp_construct "::" (lib/Seq.ml[44,1527+8]..[44,1527+10])
+                    Some
+                      expression (lib/Seq.ml[44,1527+6]..[44,1527+15]) ghost
+                        Pexp_tuple
+                        [
+                          expression (lib/Seq.ml[44,1527+6]..[44,1527+7])
+                            Pexp_ident "x" (lib/Seq.ml[44,1527+6]..[44,1527+7])
+                          expression (lib/Seq.ml[44,1527+11]..[44,1527+15])
+                            Pexp_ident "accu" (lib/Seq.ml[44,1527+11]..[44,1527+15])
+                        ]
+                <case>
+                  pattern (lib/Seq.ml[45,1543+4]..[45,1543+22])
+                    Ppat_construct "SConcat" (lib/Seq.ml[45,1543+4]..[45,1543+11])
+                    Some
+                      []
+                      pattern (lib/Seq.ml[45,1543+12]..[45,1543+22])
+                        Ppat_tuple
+                        [
+                          pattern (lib/Seq.ml[45,1543+13]..[45,1543+16])
+                            Ppat_var "xs1" (lib/Seq.ml[45,1543+13]..[45,1543+16])
+                          pattern (lib/Seq.ml[45,1543+18]..[45,1543+21])
+                            Ppat_var "xs2" (lib/Seq.ml[45,1543+18]..[45,1543+21])
+                        ]
+                  expression (lib/Seq.ml[46,1569+6]..[46,1569+38])
+                    Pexp_apply
+                    expression (lib/Seq.ml[46,1569+6]..[46,1569+14])
+                      Pexp_ident "elements" (lib/Seq.ml[46,1569+6]..[46,1569+14])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/Seq.ml[46,1569+15]..[46,1569+18])
+                          Pexp_ident "xs1" (lib/Seq.ml[46,1569+15]..[46,1569+18])
+                      <arg>
+                      Nolabel
+                        expression (lib/Seq.ml[46,1569+19]..[46,1569+38])
+                          Pexp_apply
+                          expression (lib/Seq.ml[46,1569+20]..[46,1569+28])
+                            Pexp_ident "elements" (lib/Seq.ml[46,1569+20]..[46,1569+28])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (lib/Seq.ml[46,1569+29]..[46,1569+32])
+                                Pexp_ident "xs2" (lib/Seq.ml[46,1569+29]..[46,1569+32])
+                            <arg>
+                            Nolabel
+                              expression (lib/Seq.ml[46,1569+33]..[46,1569+37])
+                                Pexp_ident "accu" (lib/Seq.ml[46,1569+33]..[46,1569+37])
+                          ]
+                    ]
+              ]
+    ]
+  structure_item (lib/Seq.ml[48,1609+0]..[49,1627+16])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[48,1609+4]..[48,1609+12])
+          Ppat_var "elements" (lib/Seq.ml[48,1609+4]..[48,1609+12])
+        expression (lib/Seq.ml[48,1609+13]..[49,1627+16]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/Seq.ml[48,1609+13]..[48,1609+15])
+            Ppat_var "xs" (lib/Seq.ml[48,1609+13]..[48,1609+15])
+          expression (lib/Seq.ml[49,1627+2]..[49,1627+16])
+            Pexp_apply
+            expression (lib/Seq.ml[49,1627+2]..[49,1627+10])
+              Pexp_ident "elements" (lib/Seq.ml[49,1627+2]..[49,1627+10])
+            [
+              <arg>
+              Nolabel
+                expression (lib/Seq.ml[49,1627+11]..[49,1627+13])
+                  Pexp_ident "xs" (lib/Seq.ml[49,1627+11]..[49,1627+13])
+              <arg>
+              Nolabel
+                expression (lib/Seq.ml[49,1627+14]..[49,1627+16])
+                  Pexp_construct "[]" (lib/Seq.ml[49,1627+14]..[49,1627+16])
+                  None
+            ]
+    ]
+  structure_item (lib/Seq.ml[51,1645+0]..[56,1722+28])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (lib/Seq.ml[51,1645+8]..[51,1645+14])
+          Ppat_var "concat" (lib/Seq.ml[51,1645+8]..[51,1645+14])
+        expression (lib/Seq.ml[51,1645+15]..[56,1722+28]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/Seq.ml[51,1645+15]..[51,1645+18])
+            Ppat_var "xss" (lib/Seq.ml[51,1645+15]..[51,1645+18])
+          expression (lib/Seq.ml[52,1666+2]..[56,1722+28])
+            Pexp_match
+            expression (lib/Seq.ml[52,1666+8]..[52,1666+11])
+              Pexp_ident "xss" (lib/Seq.ml[52,1666+8]..[52,1666+11])
+            [
+              <case>
+                pattern (lib/Seq.ml[53,1683+4]..[53,1683+6])
+                  Ppat_construct "[]" (lib/Seq.ml[53,1683+4]..[53,1683+6])
+                  None
+                expression (lib/Seq.ml[54,1693+6]..[54,1693+11])
+                  Pexp_ident "empty" (lib/Seq.ml[54,1693+6]..[54,1693+11])
+              <case>
+                pattern (lib/Seq.ml[55,1705+4]..[55,1705+13])
+                  Ppat_construct "::" (lib/Seq.ml[55,1705+7]..[55,1705+9])
+                  Some
+                    []
+                    pattern (lib/Seq.ml[55,1705+4]..[55,1705+13]) ghost
+                      Ppat_tuple
+                      [
+                        pattern (lib/Seq.ml[55,1705+4]..[55,1705+6])
+                          Ppat_var "xs" (lib/Seq.ml[55,1705+4]..[55,1705+6])
+                        pattern (lib/Seq.ml[55,1705+10]..[55,1705+13])
+                          Ppat_var "xss" (lib/Seq.ml[55,1705+10]..[55,1705+13])
+                      ]
+                expression (lib/Seq.ml[56,1722+6]..[56,1722+28])
+                  Pexp_apply
+                  expression (lib/Seq.ml[56,1722+6]..[56,1722+12])
+                    Pexp_ident "append" (lib/Seq.ml[56,1722+6]..[56,1722+12])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/Seq.ml[56,1722+13]..[56,1722+15])
+                        Pexp_ident "xs" (lib/Seq.ml[56,1722+13]..[56,1722+15])
+                    <arg>
+                    Nolabel
+                      expression (lib/Seq.ml[56,1722+16]..[56,1722+28])
+                        Pexp_apply
+                        expression (lib/Seq.ml[56,1722+17]..[56,1722+23])
+                          Pexp_ident "concat" (lib/Seq.ml[56,1722+17]..[56,1722+23])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/Seq.ml[56,1722+24]..[56,1722+27])
+                              Pexp_ident "xss" (lib/Seq.ml[56,1722+24]..[56,1722+27])
+                        ]
+                  ]
+            ]
+    ]
+  structure_item (lib/Seq.ml[58,1752+0]..[67,1984+15])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (lib/Seq.ml[58,1752+8]..[58,1752+13])
+          Ppat_var "first" (lib/Seq.ml[58,1752+8]..[58,1752+13])
+        expression (lib/Seq.ml[58,1752+14]..[67,1984+15]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/Seq.ml[58,1752+14]..[58,1752+16])
+            Ppat_var "xs" (lib/Seq.ml[58,1752+14]..[58,1752+16])
+          expression (lib/Seq.ml[59,1771+2]..[67,1984+15])
+            Pexp_match
+            expression (lib/Seq.ml[59,1771+8]..[59,1771+10])
+              Pexp_ident "xs" (lib/Seq.ml[59,1771+8]..[59,1771+10])
+            [
+              <case>
+                pattern (lib/Seq.ml[60,1787+4]..[60,1787+9])
+                  Ppat_construct "SZero" (lib/Seq.ml[60,1787+4]..[60,1787+9])
+                  None
+                expression (lib/Seq.ml[62,1863+6]..[62,1863+18])
+                  Pexp_assert
+                  expression (lib/Seq.ml[62,1863+13]..[62,1863+18])
+                    Pexp_construct "false" (lib/Seq.ml[62,1863+13]..[62,1863+18])
+                    None
+              <case>
+                pattern (lib/Seq.ml[63,1882+4]..[63,1882+10])
+                  Ppat_construct "SOne" (lib/Seq.ml[63,1882+4]..[63,1882+8])
+                  Some
+                    []
+                    pattern (lib/Seq.ml[63,1882+9]..[63,1882+10])
+                      Ppat_var "x" (lib/Seq.ml[63,1882+9]..[63,1882+10])
+                expression (lib/Seq.ml[64,1896+6]..[64,1896+7])
+                  Pexp_ident "x" (lib/Seq.ml[64,1896+6]..[64,1896+7])
+              <case>
+                pattern (lib/Seq.ml[65,1904+4]..[65,1904+20])
+                  Ppat_construct "SConcat" (lib/Seq.ml[65,1904+4]..[65,1904+11])
+                  Some
+                    []
+                    pattern (lib/Seq.ml[65,1904+12]..[65,1904+20])
+                      Ppat_tuple
+                      [
+                        pattern (lib/Seq.ml[65,1904+13]..[65,1904+16])
+                          Ppat_var "xs1" (lib/Seq.ml[65,1904+13]..[65,1904+16])
+                        pattern (lib/Seq.ml[65,1904+18]..[65,1904+19])
+                          Ppat_any
+                      ]
+                expression (lib/Seq.ml[67,1984+6]..[67,1984+15])
+                  Pexp_apply
+                  expression (lib/Seq.ml[67,1984+6]..[67,1984+11])
+                    Pexp_ident "first" (lib/Seq.ml[67,1984+6]..[67,1984+11])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/Seq.ml[67,1984+12]..[67,1984+15])
+                        Pexp_ident "xs1" (lib/Seq.ml[67,1984+12]..[67,1984+15])
+                  ]
+            ]
+    ]
+  structure_item (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+          Ppat_construct "()" (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+          None
+        expression (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+          Pexp_apply
+          expression (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+          Ppat_construct "()" (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+          None
+        expression (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+          Pexp_apply
+          expression (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+                Pexp_construct "()" (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+          Ppat_construct "()" (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+          None
+        expression (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+          Pexp_apply
+          expression (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+                Pexp_construct "()" (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+          Ppat_construct "()" (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+          None
+        expression (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+          Pexp_apply
+          expression (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/Seq.ml[67,1984+15]..[67,1984+15]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set ~absolute_filename:"lib/Seq.ml"
+let () = Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "Seq.ml"
+type 'a seq =
+  | SZero 
+  | SOne of 'a 
+  | SConcat of 'a seq * 'a seq 
+let empty = SZero
+let singleton x = SOne x
+let append xs ys =
+  match xs with | SZero -> ys | SOne _ | SConcat _ -> SConcat (xs, ys)
+let rec elements xs accu =
+  match xs with
+  | SZero -> accu
+  | SOne x -> x :: accu
+  | SConcat (xs1, xs2) -> elements xs1 (elements xs2 accu)
+let elements xs = elements xs []
+let rec concat xss =
+  match xss with | [] -> empty | xs::xss -> append xs (concat xss)
+let rec first xs =
+  match xs with
+  | SZero -> assert false
+  | SOne x -> x
+  | SConcat (xs1, _) -> first xs1
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+          Texp_apply
+          expression (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+          Texp_apply
+          expression (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+          Texp_apply
+          expression (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+                Texp_constant Const_string("lib/Seq.ml",(lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+          Texp_apply
+          expression (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost
+                Texp_constant Const_string("Seq.ml",(lib/Seq.ml[20,1223+0]..lib/Seq.ml[20,1223+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Seq.ml[20,1223+0]..lib/Seq.ml[23,1258+28])
+    Tstr_type Rec
+    [
+      type_declaration seq/1132 (lib/Seq.ml[20,1223+0]..lib/Seq.ml[23,1258+28])
+        ptype_params =
+          [
+            core_type (lib/Seq.ml[20,1223+5]..lib/Seq.ml[20,1223+7])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/Seq.ml[21,1237+0]..lib/Seq.ml[21,1237+7])
+                SZero/1133
+                []
+                None
+              (lib/Seq.ml[22,1245+0]..lib/Seq.ml[22,1245+12])
+                SOne/1134
+                [
+                  core_type (lib/Seq.ml[22,1245+10]..lib/Seq.ml[22,1245+12])
+                    Ttyp_var a
+                ]
+                None
+              (lib/Seq.ml[23,1258+0]..lib/Seq.ml[23,1258+28])
+                SConcat/1135
+                [
+                  core_type (lib/Seq.ml[23,1258+13]..lib/Seq.ml[23,1258+19])
+                    Ttyp_constr "seq/1132"
+                    [
+                      core_type (lib/Seq.ml[23,1258+13]..lib/Seq.ml[23,1258+15])
+                        Ttyp_var a
+                    ]
+                  core_type (lib/Seq.ml[23,1258+22]..lib/Seq.ml[23,1258+28])
+                    Ttyp_constr "seq/1132"
+                    [
+                      core_type (lib/Seq.ml[23,1258+22]..lib/Seq.ml[23,1258+24])
+                        Ttyp_var a
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/Seq.ml[25,1288+0]..lib/Seq.ml[26,1300+7])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[25,1288+4]..lib/Seq.ml[25,1288+9])
+          Tpat_var "empty/1136"
+        expression (lib/Seq.ml[26,1300+2]..lib/Seq.ml[26,1300+7])
+          Texp_construct "SZero"
+          []
+    ]
+  structure_item (lib/Seq.ml[28,1309+0]..lib/Seq.ml[29,1327+8])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[28,1309+4]..lib/Seq.ml[28,1309+13])
+          Tpat_var "singleton/1137"
+        expression (lib/Seq.ml[28,1309+14]..lib/Seq.ml[29,1327+8]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/Seq.ml[28,1309+14]..lib/Seq.ml[28,1309+15])
+                Tpat_var "x/1139"
+              expression (lib/Seq.ml[29,1327+2]..lib/Seq.ml[29,1327+8])
+                Texp_construct "SOne"
+                [
+                  expression (lib/Seq.ml[29,1327+7]..lib/Seq.ml[29,1327+8])
+                    Texp_ident "x/1139"
+                ]
+          ]
+    ]
+  structure_item (lib/Seq.ml[31,1337+0]..lib/Seq.ml[37,1422+22])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[31,1337+4]..lib/Seq.ml[31,1337+10])
+          Tpat_var "append/1140"
+        expression (lib/Seq.ml[31,1337+11]..lib/Seq.ml[37,1422+22]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/Seq.ml[31,1337+11]..lib/Seq.ml[31,1337+13])
+                Tpat_var "xs/1142"
+              expression (lib/Seq.ml[31,1337+14]..lib/Seq.ml[37,1422+22]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/Seq.ml[31,1337+14]..lib/Seq.ml[31,1337+16])
+                      Tpat_var "ys/1143"
+                    expression (lib/Seq.ml[32,1356+2]..lib/Seq.ml[37,1422+22])
+                      Texp_match
+                      expression (lib/Seq.ml[32,1356+8]..lib/Seq.ml[32,1356+10])
+                        Texp_ident "xs/1142"
+                      [
+                        <case>
+                          pattern (lib/Seq.ml[33,1372+4]..lib/Seq.ml[33,1372+9])
+                            Tpat_value
+                            pattern (lib/Seq.ml[33,1372+4]..lib/Seq.ml[33,1372+9])
+                              Tpat_construct "SZero"
+                              []
+                              None
+                          expression (lib/Seq.ml[34,1385+6]..lib/Seq.ml[34,1385+8])
+                            Texp_ident "ys/1143"
+                        <case>
+                          pattern (lib/Seq.ml[35,1394+4]..lib/Seq.ml[36,1405+13])
+                            Tpat_or
+                            pattern (lib/Seq.ml[35,1394+4]..lib/Seq.ml[35,1394+10])
+                              Tpat_value
+                              pattern (lib/Seq.ml[35,1394+4]..lib/Seq.ml[35,1394+10])
+                                Tpat_construct "SOne"
+                                [
+                                  pattern (lib/Seq.ml[35,1394+9]..lib/Seq.ml[35,1394+10])
+                                    Tpat_any
+                                ]
+                                None
+                            pattern (lib/Seq.ml[36,1405+4]..lib/Seq.ml[36,1405+13])
+                              Tpat_value
+                              pattern (lib/Seq.ml[36,1405+4]..lib/Seq.ml[36,1405+13])
+                                Tpat_construct "SConcat"
+                                [
+                                  pattern (lib/Seq.ml[36,1405+12]..lib/Seq.ml[36,1405+13])
+                                    Tpat_any
+                                  pattern (lib/Seq.ml[36,1405+12]..lib/Seq.ml[36,1405+13])
+                                    Tpat_any
+                                ]
+                                None
+                          expression (lib/Seq.ml[37,1422+6]..lib/Seq.ml[37,1422+22])
+                            Texp_construct "SConcat"
+                            [
+                              expression (lib/Seq.ml[37,1422+15]..lib/Seq.ml[37,1422+17])
+                                Texp_ident "xs/1142"
+                              expression (lib/Seq.ml[37,1422+19]..lib/Seq.ml[37,1422+21])
+                                Texp_ident "ys/1143"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/Seq.ml[39,1446+0]..lib/Seq.ml[46,1569+38])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (lib/Seq.ml[39,1446+8]..lib/Seq.ml[39,1446+16])
+          Tpat_var "elements/1144"
+        expression (lib/Seq.ml[39,1446+17]..lib/Seq.ml[46,1569+38]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/Seq.ml[39,1446+17]..lib/Seq.ml[39,1446+19])
+                Tpat_var "xs/1145"
+              expression (lib/Seq.ml[39,1446+20]..lib/Seq.ml[46,1569+38]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/Seq.ml[39,1446+20]..lib/Seq.ml[39,1446+24])
+                      Tpat_var "accu/1146"
+                    expression (lib/Seq.ml[40,1473+2]..lib/Seq.ml[46,1569+38])
+                      Texp_match
+                      expression (lib/Seq.ml[40,1473+8]..lib/Seq.ml[40,1473+10])
+                        Texp_ident "xs/1145"
+                      [
+                        <case>
+                          pattern (lib/Seq.ml[41,1489+4]..lib/Seq.ml[41,1489+9])
+                            Tpat_value
+                            pattern (lib/Seq.ml[41,1489+4]..lib/Seq.ml[41,1489+9])
+                              Tpat_construct "SZero"
+                              []
+                              None
+                          expression (lib/Seq.ml[42,1502+6]..lib/Seq.ml[42,1502+10])
+                            Texp_ident "accu/1146"
+                        <case>
+                          pattern (lib/Seq.ml[43,1513+4]..lib/Seq.ml[43,1513+10])
+                            Tpat_value
+                            pattern (lib/Seq.ml[43,1513+4]..lib/Seq.ml[43,1513+10])
+                              Tpat_construct "SOne"
+                              [
+                                pattern (lib/Seq.ml[43,1513+9]..lib/Seq.ml[43,1513+10])
+                                  Tpat_var "x/1147"
+                              ]
+                              None
+                          expression (lib/Seq.ml[44,1527+6]..lib/Seq.ml[44,1527+15])
+                            Texp_construct "::"
+                            [
+                              expression (lib/Seq.ml[44,1527+6]..lib/Seq.ml[44,1527+7])
+                                Texp_ident "x/1147"
+                              expression (lib/Seq.ml[44,1527+11]..lib/Seq.ml[44,1527+15])
+                                Texp_ident "accu/1146"
+                            ]
+                        <case>
+                          pattern (lib/Seq.ml[45,1543+4]..lib/Seq.ml[45,1543+22])
+                            Tpat_value
+                            pattern (lib/Seq.ml[45,1543+4]..lib/Seq.ml[45,1543+22])
+                              Tpat_construct "SConcat"
+                              [
+                                pattern (lib/Seq.ml[45,1543+13]..lib/Seq.ml[45,1543+16])
+                                  Tpat_var "xs1/1148"
+                                pattern (lib/Seq.ml[45,1543+18]..lib/Seq.ml[45,1543+21])
+                                  Tpat_var "xs2/1149"
+                              ]
+                              None
+                          expression (lib/Seq.ml[46,1569+6]..lib/Seq.ml[46,1569+38])
+                            Texp_apply
+                            expression (lib/Seq.ml[46,1569+6]..lib/Seq.ml[46,1569+14])
+                              Texp_ident "elements/1144"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (lib/Seq.ml[46,1569+15]..lib/Seq.ml[46,1569+18])
+                                  Texp_ident "xs1/1148"
+                              <arg>
+                                Nolabel
+                                expression (lib/Seq.ml[46,1569+19]..lib/Seq.ml[46,1569+38])
+                                  Texp_apply
+                                  expression (lib/Seq.ml[46,1569+20]..lib/Seq.ml[46,1569+28])
+                                    Texp_ident "elements/1144"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/Seq.ml[46,1569+29]..lib/Seq.ml[46,1569+32])
+                                        Texp_ident "xs2/1149"
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/Seq.ml[46,1569+33]..lib/Seq.ml[46,1569+37])
+                                        Texp_ident "accu/1146"
+                                  ]
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/Seq.ml[48,1609+0]..lib/Seq.ml[49,1627+16])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[48,1609+4]..lib/Seq.ml[48,1609+12])
+          Tpat_var "elements/1150"
+        expression (lib/Seq.ml[48,1609+13]..lib/Seq.ml[49,1627+16]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/Seq.ml[48,1609+13]..lib/Seq.ml[48,1609+15])
+                Tpat_var "xs/1151"
+              expression (lib/Seq.ml[49,1627+2]..lib/Seq.ml[49,1627+16])
+                Texp_apply
+                expression (lib/Seq.ml[49,1627+2]..lib/Seq.ml[49,1627+10])
+                  Texp_ident "elements/1144"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/Seq.ml[49,1627+11]..lib/Seq.ml[49,1627+13])
+                      Texp_ident "xs/1151"
+                  <arg>
+                    Nolabel
+                    expression (lib/Seq.ml[49,1627+14]..lib/Seq.ml[49,1627+16])
+                      Texp_construct "[]"
+                      []
+                ]
+          ]
+    ]
+  structure_item (lib/Seq.ml[51,1645+0]..lib/Seq.ml[56,1722+28])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (lib/Seq.ml[51,1645+8]..lib/Seq.ml[51,1645+14])
+          Tpat_var "concat/1152"
+        expression (lib/Seq.ml[51,1645+15]..lib/Seq.ml[56,1722+28]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/Seq.ml[51,1645+15]..lib/Seq.ml[51,1645+18])
+                Tpat_var "xss/1153"
+              expression (lib/Seq.ml[52,1666+2]..lib/Seq.ml[56,1722+28])
+                Texp_match
+                expression (lib/Seq.ml[52,1666+8]..lib/Seq.ml[52,1666+11])
+                  Texp_ident "xss/1153"
+                [
+                  <case>
+                    pattern (lib/Seq.ml[53,1683+4]..lib/Seq.ml[53,1683+6])
+                      Tpat_value
+                      pattern (lib/Seq.ml[53,1683+4]..lib/Seq.ml[53,1683+6])
+                        Tpat_construct "[]"
+                        []
+                        None
+                    expression (lib/Seq.ml[54,1693+6]..lib/Seq.ml[54,1693+11])
+                      Texp_ident "empty/1136"
+                  <case>
+                    pattern (lib/Seq.ml[55,1705+4]..lib/Seq.ml[55,1705+13])
+                      Tpat_value
+                      pattern (lib/Seq.ml[55,1705+4]..lib/Seq.ml[55,1705+13])
+                        Tpat_construct "::"
+                        [
+                          pattern (lib/Seq.ml[55,1705+4]..lib/Seq.ml[55,1705+6])
+                            Tpat_var "xs/1154"
+                          pattern (lib/Seq.ml[55,1705+10]..lib/Seq.ml[55,1705+13])
+                            Tpat_var "xss/1155"
+                        ]
+                        None
+                    expression (lib/Seq.ml[56,1722+6]..lib/Seq.ml[56,1722+28])
+                      Texp_apply
+                      expression (lib/Seq.ml[56,1722+6]..lib/Seq.ml[56,1722+12])
+                        Texp_ident "append/1140"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/Seq.ml[56,1722+13]..lib/Seq.ml[56,1722+15])
+                            Texp_ident "xs/1154"
+                        <arg>
+                          Nolabel
+                          expression (lib/Seq.ml[56,1722+16]..lib/Seq.ml[56,1722+28])
+                            Texp_apply
+                            expression (lib/Seq.ml[56,1722+17]..lib/Seq.ml[56,1722+23])
+                              Texp_ident "concat/1152"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (lib/Seq.ml[56,1722+24]..lib/Seq.ml[56,1722+27])
+                                  Texp_ident "xss/1155"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/Seq.ml[58,1752+0]..lib/Seq.ml[67,1984+15])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (lib/Seq.ml[58,1752+8]..lib/Seq.ml[58,1752+13])
+          Tpat_var "first/1156"
+        expression (lib/Seq.ml[58,1752+14]..lib/Seq.ml[67,1984+15]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/Seq.ml[58,1752+14]..lib/Seq.ml[58,1752+16])
+                Tpat_var "xs/1157"
+              expression (lib/Seq.ml[59,1771+2]..lib/Seq.ml[67,1984+15])
+                Texp_match
+                expression (lib/Seq.ml[59,1771+8]..lib/Seq.ml[59,1771+10])
+                  Texp_ident "xs/1157"
+                [
+                  <case>
+                    pattern (lib/Seq.ml[60,1787+4]..lib/Seq.ml[60,1787+9])
+                      Tpat_value
+                      pattern (lib/Seq.ml[60,1787+4]..lib/Seq.ml[60,1787+9])
+                        Tpat_construct "SZero"
+                        []
+                        None
+                    expression (lib/Seq.ml[62,1863+6]..lib/Seq.ml[62,1863+18])
+                      Texp_assert                      expression (lib/Seq.ml[62,1863+13]..lib/Seq.ml[62,1863+18])
+                        Texp_construct "false"
+                        []
+                  <case>
+                    pattern (lib/Seq.ml[63,1882+4]..lib/Seq.ml[63,1882+10])
+                      Tpat_value
+                      pattern (lib/Seq.ml[63,1882+4]..lib/Seq.ml[63,1882+10])
+                        Tpat_construct "SOne"
+                        [
+                          pattern (lib/Seq.ml[63,1882+9]..lib/Seq.ml[63,1882+10])
+                            Tpat_var "x/1158"
+                        ]
+                        None
+                    expression (lib/Seq.ml[64,1896+6]..lib/Seq.ml[64,1896+7])
+                      Texp_ident "x/1158"
+                  <case>
+                    pattern (lib/Seq.ml[65,1904+4]..lib/Seq.ml[65,1904+20])
+                      Tpat_value
+                      pattern (lib/Seq.ml[65,1904+4]..lib/Seq.ml[65,1904+20])
+                        Tpat_construct "SConcat"
+                        [
+                          pattern (lib/Seq.ml[65,1904+13]..lib/Seq.ml[65,1904+16])
+                            Tpat_var "xs1/1159"
+                          pattern (lib/Seq.ml[65,1904+18]..lib/Seq.ml[65,1904+19])
+                            Tpat_any
+                        ]
+                        None
+                    expression (lib/Seq.ml[67,1984+6]..lib/Seq.ml[67,1984+15])
+                      Texp_apply
+                      expression (lib/Seq.ml[67,1984+6]..lib/Seq.ml[67,1984+11])
+                        Texp_ident "first/1156"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/Seq.ml[67,1984+12]..lib/Seq.ml[67,1984+15])
+                            Texp_ident "xs1/1159"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+          Texp_apply
+          expression (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+          Texp_apply
+          expression (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+          Texp_apply
+          expression (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+          Texp_apply
+          expression (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Seq.ml[67,1984+15]..lib/Seq.ml[67,1984+15]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__Seq>
+ "append"[value] -> <Gbnf_parser__Seq.7>;
+ "concat"[value] -> <Gbnf_parser__Seq.18>;
+ "elements"[value] -> <Gbnf_parser__Seq.16>;
+ "empty"[value] -> <Gbnf_parser__Seq.4>;
+ "first"[value] -> <Gbnf_parser__Seq.22>;
+ "seq"[type] -> <Gbnf_parser__Seq.0>;
+ "singleton"[value] -> <Gbnf_parser__Seq.5>;
+ }
+
+(setglobal Gbnf_parser__Seq!
+  (let
+    (*match*/1467 =
+       (after Gbnf_parser__Seq lib/Seq.ml(20)<ghost>:1223-1223
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Seq"))
+     *match*/1465 =
+       (after Gbnf_parser__Seq lib/Seq.ml(20)<ghost>:1223-1223
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1463 =
+       (after Gbnf_parser__Seq lib/Seq.ml(20)<ghost>:1223-1223
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/Seq.ml"))
+     *match*/1461 =
+       (after Gbnf_parser__Seq lib/Seq.ml(20)<ghost>:1223-1223
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "Seq.ml"))
+     empty/1136 = 0
+     singleton/1137 =
+       (function x/1139
+         (funct-body Gbnf_parser__Seq.singleton lib/Seq.ml(28)<ghost>:1323-1335
+           (before Gbnf_parser__Seq.singleton lib/Seq.ml(29):1329-1335
+             (makeblock 0 x/1139))))
+     append/1140 =
+       (function xs/1142 ys/1143
+         (funct-body Gbnf_parser__Seq.append lib/Seq.ml(31)<ghost>:1348-1444
+           (before Gbnf_parser__Seq.append lib/Seq.ml(32):1358-1444
+             (catch
+               (if (isint xs/1142)
+                 (before Gbnf_parser__Seq.append lib/Seq.ml(34):1391-1393
+                   ys/1143)
+                 (let (*match*/1448 =a (field_imm 0 xs/1142)) (exit 1)))
+              with (1)
+               (before Gbnf_parser__Seq.append lib/Seq.ml(37):1428-1444
+                 (makeblock 1 xs/1142 ys/1143)))))))
+    (letrec
+      (elements/1144
+         (function xs/1145 accu/1146
+           (funct-body Gbnf_parser__Seq.elements lib/Seq.ml(39)<ghost>:1463-1607
+             (before Gbnf_parser__Seq.elements lib/Seq.ml(40):1475-1607
+               (switch* xs/1145
+                case int 0:
+                 (before Gbnf_parser__Seq.elements lib/Seq.ml(42):1508-1512
+                   accu/1146)
+                case tag 0:
+                 (let (x/1147 =a (field_imm 0 xs/1145))
+                   (before Gbnf_parser__Seq.elements lib/Seq.ml(44):1533-1542
+                     (makeblock 0 x/1147 accu/1146)))
+                case tag 1:
+                 (let
+                   (xs2/1149 =a (field_imm 1 xs/1145)
+                    xs1/1148 =a (field_imm 0 xs/1145))
+                   (before Gbnf_parser__Seq.elements lib/Seq.ml(46):1575-1607
+                     (after Gbnf_parser__Seq.elements lib/Seq.ml(46):1575-1607
+                       (apply elements/1144 xs1/1148
+                         (after Gbnf_parser__Seq.elements lib/Seq.ml(46):1588-1607
+                           (apply elements/1144 xs2/1149 accu/1146)))))))))))
+      (let
+        (elements/1150 =
+           (function xs/1151
+             (funct-body Gbnf_parser__Seq.elements lib/Seq.ml(48)<ghost>:1622-1643
+               (before Gbnf_parser__Seq.elements lib/Seq.ml(49):1629-1643
+                 (after Gbnf_parser__Seq.elements lib/Seq.ml(49):1629-1643
+                   (apply elements/1144 xs/1151 0))))))
+        (letrec
+          (concat/1152
+             (function xss/1153
+               (funct-body Gbnf_parser__Seq.concat lib/Seq.ml(51)<ghost>:1660-1750
+                 (before Gbnf_parser__Seq.concat lib/Seq.ml(52):1668-1750
+                   (if xss/1153
+                     (let
+                       (xss/1155 =a (field_imm 1 xss/1153)
+                        xs/1154 =a (field_imm 0 xss/1153))
+                       (before Gbnf_parser__Seq.concat lib/Seq.ml(56):1728-1750
+                         (after Gbnf_parser__Seq.concat lib/Seq.ml(56):1728-1750
+                           (apply append/1140 xs/1154
+                             (after Gbnf_parser__Seq.concat lib/Seq.ml(56):1738-1750
+                               (apply concat/1152 xss/1155))))))
+                     (before Gbnf_parser__Seq.concat lib/Seq.ml(54):1699-1704
+                       empty/1136))))))
+          (letrec
+            (first/1156
+               (function xs/1157
+                 (funct-body Gbnf_parser__Seq.first lib/Seq.ml(58)<ghost>:1766-1999
+                   (before Gbnf_parser__Seq.first lib/Seq.ml(59):1773-1999
+                     (switch* xs/1157
+                      case int 0:
+                       (before Gbnf_parser__Seq.first lib/Seq.ml(62):1869-1881
+                         (raise
+                           (after Gbnf_parser__Seq.first lib/Seq.ml(62):1869-1881
+                             (makeblock 0 (global Assert_failure/28!)
+                               [0: "lib/Seq.ml" 62 6]))))
+                      case tag 0:
+                       (let (x/1158 =a (field_imm 0 xs/1157))
+                         (before Gbnf_parser__Seq.first lib/Seq.ml(64):1902-1903
+                           x/1158))
+                      case tag 1:
+                       (let
+                         (*match*/1451 =a (field_imm 1 xs/1157)
+                          xs1/1159 =a (field_imm 0 xs/1157))
+                         (before Gbnf_parser__Seq.first lib/Seq.ml(67):1990-1999
+                           (after Gbnf_parser__Seq.first lib/Seq.ml(67):1990-1999
+                             (apply first/1156 xs1/1159)))))))))
+            (let
+              (*match*/1459 =
+                 (after Gbnf_parser__Seq lib/Seq.ml(67)<ghost>:1999-1999
+                   (apply (field_imm 5 (global Ppx_inline_test_lib!))
+                     "gbnf_parser"))
+               *match*/1457 =
+                 (after Gbnf_parser__Seq lib/Seq.ml(67)<ghost>:1999-1999
+                   (apply
+                     (field_imm 1
+                       (field_imm 5 (global Expect_test_collector!)))
+                     0))
+               *match*/1455 =
+                 (after Gbnf_parser__Seq lib/Seq.ml(67)<ghost>:1999-1999
+                   (apply
+                     (field_imm 1
+                       (field_imm 0
+                         (global Ppx_bench_lib__Benchmark_accumulator!)))
+                     0))
+               *match*/1453 =
+                 (after Gbnf_parser__Seq lib/Seq.ml(67)<ghost>:1999-1999
+                   (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+                     #"Gbnf_parser__Seq")))
+              (pseudo <unknown location>
+                (makeblock 0 empty/1136 singleton/1137 append/1140
+                  elements/1150 concat/1152 first/1156)))))))))
+(setglobal Gbnf_parser__Seq!
+  (let
+    (*match*/1467 =
+       (after Gbnf_parser__Seq lib/Seq.ml(20)<ghost>:1223-1223
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Seq"))
+     *match*/1465 =
+       (after Gbnf_parser__Seq lib/Seq.ml(20)<ghost>:1223-1223
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1463 =
+       (after Gbnf_parser__Seq lib/Seq.ml(20)<ghost>:1223-1223
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/Seq.ml"))
+     *match*/1461 =
+       (after Gbnf_parser__Seq lib/Seq.ml(20)<ghost>:1223-1223
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "Seq.ml"))
+     empty/1136 = 0
+     singleton/1137 =
+       (function x/1139
+         (funct-body Gbnf_parser__Seq.singleton lib/Seq.ml(28)<ghost>:1323-1335
+           (before Gbnf_parser__Seq.singleton lib/Seq.ml(29):1329-1335
+             (makeblock 0 x/1139))))
+     append/1140 =
+       (function xs/1142 ys/1143
+         (funct-body Gbnf_parser__Seq.append lib/Seq.ml(31)<ghost>:1348-1444
+           (before Gbnf_parser__Seq.append lib/Seq.ml(32):1358-1444
+             (if (isint xs/1142)
+               (before Gbnf_parser__Seq.append lib/Seq.ml(34):1391-1393
+                 ys/1143)
+               (before Gbnf_parser__Seq.append lib/Seq.ml(37):1428-1444
+                 (makeblock 1 xs/1142 ys/1143)))))))
+    (letrec
+      (elements/1144
+         (function xs/1145 accu/1146
+           (funct-body Gbnf_parser__Seq.elements lib/Seq.ml(39)<ghost>:1463-1607
+             (before Gbnf_parser__Seq.elements lib/Seq.ml(40):1475-1607
+               (switch* xs/1145
+                case int 0:
+                 (before Gbnf_parser__Seq.elements lib/Seq.ml(42):1508-1512
+                   accu/1146)
+                case tag 0:
+                 (let (x/1147 =a (field_imm 0 xs/1145))
+                   (before Gbnf_parser__Seq.elements lib/Seq.ml(44):1533-1542
+                     (makeblock 0 x/1147 accu/1146)))
+                case tag 1:
+                 (let
+                   (xs2/1149 =a (field_imm 1 xs/1145)
+                    xs1/1148 =a (field_imm 0 xs/1145))
+                   (before Gbnf_parser__Seq.elements lib/Seq.ml(46):1575-1607
+                     (after Gbnf_parser__Seq.elements lib/Seq.ml(46):1575-1607
+                       (apply elements/1144 xs1/1148
+                         (after Gbnf_parser__Seq.elements lib/Seq.ml(46):1588-1607
+                           (apply elements/1144 xs2/1149 accu/1146)))))))))))
+      (let
+        (elements/1150 =
+           (function xs/1151
+             (funct-body Gbnf_parser__Seq.elements lib/Seq.ml(48)<ghost>:1622-1643
+               (before Gbnf_parser__Seq.elements lib/Seq.ml(49):1629-1643
+                 (after Gbnf_parser__Seq.elements lib/Seq.ml(49):1629-1643
+                   (apply elements/1144 xs/1151 0))))))
+        (letrec
+          (concat/1152
+             (function xss/1153
+               (funct-body Gbnf_parser__Seq.concat lib/Seq.ml(51)<ghost>:1660-1750
+                 (before Gbnf_parser__Seq.concat lib/Seq.ml(52):1668-1750
+                   (if xss/1153
+                     (let
+                       (xss/1155 =a (field_imm 1 xss/1153)
+                        xs/1154 =a (field_imm 0 xss/1153))
+                       (before Gbnf_parser__Seq.concat lib/Seq.ml(56):1728-1750
+                         (after Gbnf_parser__Seq.concat lib/Seq.ml(56):1728-1750
+                           (apply append/1140 xs/1154
+                             (after Gbnf_parser__Seq.concat lib/Seq.ml(56):1738-1750
+                               (apply concat/1152 xss/1155))))))
+                     (before Gbnf_parser__Seq.concat lib/Seq.ml(54):1699-1704
+                       empty/1136))))))
+          (letrec
+            (first/1156
+               (function xs/1157
+                 (funct-body Gbnf_parser__Seq.first lib/Seq.ml(58)<ghost>:1766-1999
+                   (before Gbnf_parser__Seq.first lib/Seq.ml(59):1773-1999
+                     (switch* xs/1157
+                      case int 0:
+                       (before Gbnf_parser__Seq.first lib/Seq.ml(62):1869-1881
+                         (raise
+                           (after Gbnf_parser__Seq.first lib/Seq.ml(62):1869-1881
+                             (makeblock 0 (global Assert_failure/28!)
+                               [0: "lib/Seq.ml" 62 6]))))
+                      case tag 0:
+                       (let (x/1158 =a (field_imm 0 xs/1157))
+                         (before Gbnf_parser__Seq.first lib/Seq.ml(64):1902-1903
+                           x/1158))
+                      case tag 1:
+                       (let (xs1/1159 =a (field_imm 0 xs/1157))
+                         (before Gbnf_parser__Seq.first lib/Seq.ml(67):1990-1999
+                           (after Gbnf_parser__Seq.first lib/Seq.ml(67):1990-1999
+                             (apply first/1156 xs1/1159)))))))))
+            (let
+              (*match*/1459 =
+                 (after Gbnf_parser__Seq lib/Seq.ml(67)<ghost>:1999-1999
+                   (apply (field_imm 5 (global Ppx_inline_test_lib!))
+                     "gbnf_parser"))
+               *match*/1457 =
+                 (after Gbnf_parser__Seq lib/Seq.ml(67)<ghost>:1999-1999
+                   (apply
+                     (field_imm 1
+                       (field_imm 5 (global Expect_test_collector!)))
+                     0))
+               *match*/1455 =
+                 (after Gbnf_parser__Seq lib/Seq.ml(67)<ghost>:1999-1999
+                   (apply
+                     (field_imm 1
+                       (field_imm 0
+                         (global Ppx_bench_lib__Benchmark_accumulator!)))
+                     0))
+               *match*/1453 =
+                 (after Gbnf_parser__Seq lib/Seq.ml(67)<ghost>:1999-1999
+                   (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+                     #"Gbnf_parser__Seq")))
+              (pseudo <unknown location>
+                (makeblock 0 empty/1136 singleton/1137 append/1140
+                  elements/1150 concat/1152 first/1156)))))))))

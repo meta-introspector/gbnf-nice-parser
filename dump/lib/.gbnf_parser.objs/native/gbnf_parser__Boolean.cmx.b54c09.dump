@@ -1,0 +1,1036 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+          ]
+    ]
+  structure_item (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/Boolean.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("lib/Boolean.ml",(lib/Boolean.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/Boolean.ml[13,893+0]..[13,893+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/Boolean.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("Boolean.ml",(lib/Boolean.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Boolean.ml[13,893+0]..[14,909+8])
+    Pstr_type Rec
+    [
+      type_declaration "property" (lib/Boolean.ml[13,893+5]..[13,893+13]) (lib/Boolean.ml[13,893+0]..[14,909+8])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/Boolean.ml[14,909+4]..[14,909+8])
+              Ptyp_constr "bool" (lib/Boolean.ml[14,909+4]..[14,909+8])
+              []
+    ]
+  structure_item (lib/Boolean.ml[16,919+0]..[17,932+7])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[16,919+4]..[16,919+10])
+          Ppat_var "bottom" (lib/Boolean.ml[16,919+4]..[16,919+10])
+        expression (lib/Boolean.ml[17,932+2]..[17,932+7])
+          Pexp_construct "false" (lib/Boolean.ml[17,932+2]..[17,932+7])
+          None
+    ]
+  structure_item (lib/Boolean.ml[19,941+0]..[20,977+9])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[19,941+4]..[19,941+9])
+          Ppat_var "equal" (lib/Boolean.ml[19,941+4]..[19,941+9])
+        expression (lib/Boolean.ml[19,941+10]..[20,977+9]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/Boolean.ml[19,941+10]..[19,941+21])
+            Ppat_constraint
+            pattern (lib/Boolean.ml[19,941+11]..[19,941+13])
+              Ppat_var "b1" (lib/Boolean.ml[19,941+11]..[19,941+13])
+            core_type (lib/Boolean.ml[19,941+16]..[19,941+20])
+              Ptyp_constr "bool" (lib/Boolean.ml[19,941+16]..[19,941+20])
+              []
+          expression (lib/Boolean.ml[19,941+22]..[20,977+9]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/Boolean.ml[19,941+22]..[19,941+33])
+              Ppat_constraint
+              pattern (lib/Boolean.ml[19,941+23]..[19,941+25])
+                Ppat_var "b2" (lib/Boolean.ml[19,941+23]..[19,941+25])
+              core_type (lib/Boolean.ml[19,941+28]..[19,941+32])
+                Ptyp_constr "bool" (lib/Boolean.ml[19,941+28]..[19,941+32])
+                []
+            expression (lib/Boolean.ml[20,977+2]..[20,977+9])
+              Pexp_apply
+              expression (lib/Boolean.ml[20,977+5]..[20,977+6])
+                Pexp_ident "=" (lib/Boolean.ml[20,977+5]..[20,977+6])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/Boolean.ml[20,977+2]..[20,977+4])
+                    Pexp_ident "b1" (lib/Boolean.ml[20,977+2]..[20,977+4])
+                <arg>
+                Nolabel
+                  expression (lib/Boolean.ml[20,977+7]..[20,977+9])
+                    Pexp_ident "b2" (lib/Boolean.ml[20,977+7]..[20,977+9])
+              ]
+    ]
+  structure_item (lib/Boolean.ml[22,988+0]..[23,1022+10])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[22,988+4]..[22,988+7])
+          Ppat_var "leq" (lib/Boolean.ml[22,988+4]..[22,988+7])
+        expression (lib/Boolean.ml[22,988+8]..[23,1022+10]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/Boolean.ml[22,988+8]..[22,988+19])
+            Ppat_constraint
+            pattern (lib/Boolean.ml[22,988+9]..[22,988+11])
+              Ppat_var "b1" (lib/Boolean.ml[22,988+9]..[22,988+11])
+            core_type (lib/Boolean.ml[22,988+14]..[22,988+18])
+              Ptyp_constr "bool" (lib/Boolean.ml[22,988+14]..[22,988+18])
+              []
+          expression (lib/Boolean.ml[22,988+20]..[23,1022+10]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/Boolean.ml[22,988+20]..[22,988+31])
+              Ppat_constraint
+              pattern (lib/Boolean.ml[22,988+21]..[22,988+23])
+                Ppat_var "b2" (lib/Boolean.ml[22,988+21]..[22,988+23])
+              core_type (lib/Boolean.ml[22,988+26]..[22,988+30])
+                Ptyp_constr "bool" (lib/Boolean.ml[22,988+26]..[22,988+30])
+                []
+            expression (lib/Boolean.ml[23,1022+2]..[23,1022+10])
+              Pexp_apply
+              expression (lib/Boolean.ml[23,1022+5]..[23,1022+7])
+                Pexp_ident "<=" (lib/Boolean.ml[23,1022+5]..[23,1022+7])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/Boolean.ml[23,1022+2]..[23,1022+4])
+                    Pexp_ident "b1" (lib/Boolean.ml[23,1022+2]..[23,1022+4])
+                <arg>
+                Nolabel
+                  expression (lib/Boolean.ml[23,1022+8]..[23,1022+10])
+                    Pexp_ident "b2" (lib/Boolean.ml[23,1022+8]..[23,1022+10])
+              ]
+    ]
+  structure_item (lib/Boolean.ml[25,1034+0]..[26,1053+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[25,1034+4]..[25,1034+14])
+          Ppat_var "is_maximal" (lib/Boolean.ml[25,1034+4]..[25,1034+14])
+        expression (lib/Boolean.ml[25,1034+15]..[26,1053+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/Boolean.ml[25,1034+15]..[25,1034+16])
+            Ppat_var "b" (lib/Boolean.ml[25,1034+15]..[25,1034+16])
+          expression (lib/Boolean.ml[26,1053+2]..[26,1053+3])
+            Pexp_ident "b" (lib/Boolean.ml[26,1053+2]..[26,1053+3])
+    ]
+  structure_item (lib/Boolean.ml[28,1058+0]..[29,1079+10])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[28,1058+4]..[28,1058+12])
+          Ppat_var "leq_join" (lib/Boolean.ml[28,1058+4]..[28,1058+12])
+        expression (lib/Boolean.ml[28,1058+13]..[29,1079+10]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/Boolean.ml[28,1058+13]..[28,1058+15])
+            Ppat_var "b1" (lib/Boolean.ml[28,1058+13]..[28,1058+15])
+          expression (lib/Boolean.ml[28,1058+16]..[29,1079+10]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/Boolean.ml[28,1058+16]..[28,1058+18])
+              Ppat_var "b2" (lib/Boolean.ml[28,1058+16]..[28,1058+18])
+            expression (lib/Boolean.ml[29,1079+2]..[29,1079+10])
+              Pexp_apply
+              expression (lib/Boolean.ml[29,1079+5]..[29,1079+7])
+                Pexp_ident "||" (lib/Boolean.ml[29,1079+5]..[29,1079+7])
+              [
+                <arg>
+                Nolabel
+                  expression (lib/Boolean.ml[29,1079+2]..[29,1079+4])
+                    Pexp_ident "b1" (lib/Boolean.ml[29,1079+2]..[29,1079+4])
+                <arg>
+                Nolabel
+                  expression (lib/Boolean.ml[29,1079+8]..[29,1079+10])
+                    Pexp_ident "b2" (lib/Boolean.ml[29,1079+8]..[29,1079+10])
+              ]
+    ]
+  structure_item (lib/Boolean.ml[31,1091+0]..[32,1102+10])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[31,1091+4]..[31,1091+8])
+          Ppat_var "join" (lib/Boolean.ml[31,1091+4]..[31,1091+8])
+        expression (lib/Boolean.ml[32,1102+2]..[32,1102+10])
+          Pexp_ident "leq_join" (lib/Boolean.ml[32,1102+2]..[32,1102+10])
+    ]
+  structure_item (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+          Ppat_construct "()" (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+          None
+        expression (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+          Pexp_apply
+          expression (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+          Ppat_construct "()" (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+          None
+        expression (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+          Pexp_apply
+          expression (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+                Pexp_construct "()" (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+          Ppat_construct "()" (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+          None
+        expression (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+          Pexp_apply
+          expression (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+                Pexp_construct "()" (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+          Ppat_construct "()" (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+          None
+        expression (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+          Pexp_apply
+          expression (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/Boolean.ml[32,1102+10]..[32,1102+10]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set ~absolute_filename:"lib/Boolean.ml"
+let () = Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "Boolean.ml"
+type property = bool
+let bottom = false
+let equal (b1 : bool) (b2 : bool) = b1 = b2
+let leq (b1 : bool) (b2 : bool) = b1 <= b2
+let is_maximal b = b
+let leq_join b1 b2 = b1 || b2
+let join = leq_join
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+                Texp_constant Const_string("lib/Boolean.ml",(lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost
+                Texp_constant Const_string("Boolean.ml",(lib/Boolean.ml[13,893+0]..lib/Boolean.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[14,909+8])
+    Tstr_type Rec
+    [
+      type_declaration property/1128 (lib/Boolean.ml[13,893+0]..lib/Boolean.ml[14,909+8])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/Boolean.ml[14,909+4]..lib/Boolean.ml[14,909+8])
+              Ttyp_constr "bool/5!"
+              []
+    ]
+  structure_item (lib/Boolean.ml[16,919+0]..lib/Boolean.ml[17,932+7])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[16,919+4]..lib/Boolean.ml[16,919+10])
+          Tpat_var "bottom/1129"
+        expression (lib/Boolean.ml[17,932+2]..lib/Boolean.ml[17,932+7])
+          Texp_construct "false"
+          []
+    ]
+  structure_item (lib/Boolean.ml[19,941+0]..lib/Boolean.ml[20,977+9])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[19,941+4]..lib/Boolean.ml[19,941+9])
+          Tpat_var "equal/1130"
+        expression (lib/Boolean.ml[19,941+10]..lib/Boolean.ml[20,977+9]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/Boolean.ml[19,941+11]..lib/Boolean.ml[19,941+13])
+                extra
+                  Tpat_extra_constraint
+                  core_type (lib/Boolean.ml[19,941+16]..lib/Boolean.ml[19,941+20])
+                    Ttyp_constr "bool/5!"
+                    []
+                Tpat_alias "b1/1132"
+                pattern (lib/Boolean.ml[19,941+11]..lib/Boolean.ml[19,941+13])
+                  Tpat_any
+              expression (lib/Boolean.ml[19,941+22]..lib/Boolean.ml[20,977+9]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/Boolean.ml[19,941+23]..lib/Boolean.ml[19,941+25])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (lib/Boolean.ml[19,941+28]..lib/Boolean.ml[19,941+32])
+                          Ttyp_constr "bool/5!"
+                          []
+                      Tpat_alias "b2/1133"
+                      pattern (lib/Boolean.ml[19,941+23]..lib/Boolean.ml[19,941+25])
+                        Tpat_any
+                    expression (lib/Boolean.ml[20,977+2]..lib/Boolean.ml[20,977+9])
+                      Texp_apply
+                      expression (lib/Boolean.ml[20,977+5]..lib/Boolean.ml[20,977+6])
+                        Texp_ident "Stdlib!.="
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/Boolean.ml[20,977+2]..lib/Boolean.ml[20,977+4])
+                            Texp_ident "b1/1132"
+                        <arg>
+                          Nolabel
+                          expression (lib/Boolean.ml[20,977+7]..lib/Boolean.ml[20,977+9])
+                            Texp_ident "b2/1133"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/Boolean.ml[22,988+0]..lib/Boolean.ml[23,1022+10])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[22,988+4]..lib/Boolean.ml[22,988+7])
+          Tpat_var "leq/1134"
+        expression (lib/Boolean.ml[22,988+8]..lib/Boolean.ml[23,1022+10]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/Boolean.ml[22,988+9]..lib/Boolean.ml[22,988+11])
+                extra
+                  Tpat_extra_constraint
+                  core_type (lib/Boolean.ml[22,988+14]..lib/Boolean.ml[22,988+18])
+                    Ttyp_constr "bool/5!"
+                    []
+                Tpat_alias "b1/1136"
+                pattern (lib/Boolean.ml[22,988+9]..lib/Boolean.ml[22,988+11])
+                  Tpat_any
+              expression (lib/Boolean.ml[22,988+20]..lib/Boolean.ml[23,1022+10]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/Boolean.ml[22,988+21]..lib/Boolean.ml[22,988+23])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (lib/Boolean.ml[22,988+26]..lib/Boolean.ml[22,988+30])
+                          Ttyp_constr "bool/5!"
+                          []
+                      Tpat_alias "b2/1137"
+                      pattern (lib/Boolean.ml[22,988+21]..lib/Boolean.ml[22,988+23])
+                        Tpat_any
+                    expression (lib/Boolean.ml[23,1022+2]..lib/Boolean.ml[23,1022+10])
+                      Texp_apply
+                      expression (lib/Boolean.ml[23,1022+5]..lib/Boolean.ml[23,1022+7])
+                        Texp_ident "Stdlib!.<="
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/Boolean.ml[23,1022+2]..lib/Boolean.ml[23,1022+4])
+                            Texp_ident "b1/1136"
+                        <arg>
+                          Nolabel
+                          expression (lib/Boolean.ml[23,1022+8]..lib/Boolean.ml[23,1022+10])
+                            Texp_ident "b2/1137"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/Boolean.ml[25,1034+0]..lib/Boolean.ml[26,1053+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[25,1034+4]..lib/Boolean.ml[25,1034+14])
+          Tpat_var "is_maximal/1138"
+        expression (lib/Boolean.ml[25,1034+15]..lib/Boolean.ml[26,1053+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/Boolean.ml[25,1034+15]..lib/Boolean.ml[25,1034+16])
+                Tpat_var "b/1140"
+              expression (lib/Boolean.ml[26,1053+2]..lib/Boolean.ml[26,1053+3])
+                Texp_ident "b/1140"
+          ]
+    ]
+  structure_item (lib/Boolean.ml[28,1058+0]..lib/Boolean.ml[29,1079+10])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[28,1058+4]..lib/Boolean.ml[28,1058+12])
+          Tpat_var "leq_join/1141"
+        expression (lib/Boolean.ml[28,1058+13]..lib/Boolean.ml[29,1079+10]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/Boolean.ml[28,1058+13]..lib/Boolean.ml[28,1058+15])
+                Tpat_var "b1/1143"
+              expression (lib/Boolean.ml[28,1058+16]..lib/Boolean.ml[29,1079+10]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/Boolean.ml[28,1058+16]..lib/Boolean.ml[28,1058+18])
+                      Tpat_var "b2/1144"
+                    expression (lib/Boolean.ml[29,1079+2]..lib/Boolean.ml[29,1079+10])
+                      Texp_apply
+                      expression (lib/Boolean.ml[29,1079+5]..lib/Boolean.ml[29,1079+7])
+                        Texp_ident "Stdlib!.||"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/Boolean.ml[29,1079+2]..lib/Boolean.ml[29,1079+4])
+                            Texp_ident "b1/1143"
+                        <arg>
+                          Nolabel
+                          expression (lib/Boolean.ml[29,1079+8]..lib/Boolean.ml[29,1079+10])
+                            Texp_ident "b2/1144"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (lib/Boolean.ml[31,1091+0]..lib/Boolean.ml[32,1102+10])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[31,1091+4]..lib/Boolean.ml[31,1091+8])
+          Tpat_var "join/1145"
+        expression (lib/Boolean.ml[32,1102+2]..lib/Boolean.ml[32,1102+10])
+          Texp_ident "leq_join/1141"
+    ]
+  structure_item (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+          Texp_apply
+          expression (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+          Texp_apply
+          expression (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+          Texp_apply
+          expression (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+          Texp_apply
+          expression (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Boolean.ml[32,1102+10]..lib/Boolean.ml[32,1102+10]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__Boolean>
+ "bottom"[value] -> <Gbnf_parser__Boolean.1>;
+ "equal"[value] -> <Gbnf_parser__Boolean.2>;
+ "is_maximal"[value] -> <Gbnf_parser__Boolean.8>;
+ "join"[value] -> <Gbnf_parser__Boolean.13>;
+ "leq"[value] -> <Gbnf_parser__Boolean.5>;
+ "leq_join"[value] -> <Gbnf_parser__Boolean.10>;
+ "property"[type] -> <Gbnf_parser__Boolean.0>;
+ }
+
+(seq
+  (let
+    (*match*/1429 =
+       (apply (field 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Boolean"))
+    0)
+  (let
+    (*match*/1431 =
+       (apply
+         (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/1433 =
+       (apply (field 0 (field 5 (global Expect_test_collector!)))
+         "lib/Boolean.ml"))
+    0)
+  (let
+    (*match*/1435 =
+       (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "Boolean.ml"))
+    0)
+  (let (bottom/1129 =[int] 0)
+    (setfield_ptr(root-init) 0 (global Gbnf_parser__Boolean!) bottom/1129))
+  (let
+    (equal/1130 =
+       (function b1/1132[int] b2/1133[int] : int (== b1/1132 b2/1133)))
+    (setfield_ptr(root-init) 1 (global Gbnf_parser__Boolean!) equal/1130))
+  (let
+    (leq/1134 =
+       (function b1/1136[int] b2/1137[int] : int (<= b1/1136 b2/1137)))
+    (setfield_ptr(root-init) 2 (global Gbnf_parser__Boolean!) leq/1134))
+  (let (is_maximal/1138 = (function b/1140 b/1140))
+    (setfield_ptr(root-init) 3 (global Gbnf_parser__Boolean!)
+      is_maximal/1138))
+  (let
+    (leq_join/1141 =
+       (function b1/1143[int] b2/1144[int] : int (|| b1/1143 b2/1144)))
+    (setfield_ptr(root-init) 4 (global Gbnf_parser__Boolean!) leq_join/1141))
+  (let (join/1145 = (field 4 (global Gbnf_parser__Boolean!)))
+    (setfield_ptr(root-init) 5 (global Gbnf_parser__Boolean!) join/1145))
+  (let
+    (*match*/1437 =
+       (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+    0)
+  (let
+    (*match*/1439 =
+       (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+    0)
+  (let
+    (*match*/1441 =
+       (apply
+         (field 1 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         0))
+    0)
+  (let
+    (*match*/1443 =
+       (apply (field 4 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Boolean"))
+    0)
+  0)
+(seq
+  (let
+    (*match*/1429 =
+       (apply (field 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Boolean"))
+    0)
+  (let
+    (*match*/1431 =
+       (apply
+         (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/1433 =
+       (apply (field 0 (field 5 (global Expect_test_collector!)))
+         "lib/Boolean.ml"))
+    0)
+  (let
+    (*match*/1435 =
+       (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "Boolean.ml"))
+    0)
+  (let (bottom/1129 =[int] 0)
+    (setfield_ptr(root-init) 0 (global Gbnf_parser__Boolean!) bottom/1129))
+  (let
+    (equal/1130 =
+       (function b1/1132[int] b2/1133[int] : int (== b1/1132 b2/1133)))
+    (setfield_ptr(root-init) 1 (global Gbnf_parser__Boolean!) equal/1130))
+  (let
+    (leq/1134 =
+       (function b1/1136[int] b2/1137[int] : int (<= b1/1136 b2/1137)))
+    (setfield_ptr(root-init) 2 (global Gbnf_parser__Boolean!) leq/1134))
+  (let (is_maximal/1138 = (function b/1140 b/1140))
+    (setfield_ptr(root-init) 3 (global Gbnf_parser__Boolean!)
+      is_maximal/1138))
+  (let
+    (leq_join/1141 =
+       (function b1/1143[int] b2/1144[int] : int (|| b1/1143 b2/1144)))
+    (setfield_ptr(root-init) 4 (global Gbnf_parser__Boolean!) leq_join/1141))
+  (let (join/1145 = (field 4 (global Gbnf_parser__Boolean!)))
+    (setfield_ptr(root-init) 5 (global Gbnf_parser__Boolean!) join/1145))
+  (let
+    (*match*/1437 =
+       (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+    0)
+  (let
+    (*match*/1439 =
+       (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+    0)
+  (let
+    (*match*/1441 =
+       (apply
+         (field 1 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         0))
+    0)
+  (let
+    (*match*/1443 =
+       (apply (field 4 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Boolean"))
+    0)
+  0)

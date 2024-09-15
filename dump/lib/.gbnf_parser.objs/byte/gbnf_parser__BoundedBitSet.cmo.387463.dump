@@ -1,0 +1,1130 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+          Ppat_construct "()" (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+          None
+        expression (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+          Pexp_apply
+          expression (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+          ]
+    ]
+  structure_item (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+          Ppat_construct "()" (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+          None
+        expression (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+          Pexp_apply
+          expression (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+          Ppat_construct "()" (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+          None
+        expression (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+          Pexp_apply
+          expression (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+                Pexp_constant PConst_string("lib/BoundedBitSet.ml",(lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+          Ppat_construct "()" (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+          None
+        expression (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+          Pexp_apply
+          expression (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost
+                Pexp_constant PConst_string("BoundedBitSet.ml",(lib/BoundedBitSet.ml[30,1882+0]..[30,1882+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/BoundedBitSet.ml[30,1882+0]..[52,2370+3])
+    Pstr_module
+    "Make" (lib/BoundedBitSet.ml[30,1882+7]..[30,1882+11])
+      module_expr (lib/BoundedBitSet.ml[30,1882+12]..[52,2370+3])
+        Pmod_functor "N" (lib/BoundedBitSet.ml[30,1882+13]..[30,1882+14])
+        module_type (lib/BoundedBitSet.ml[30,1882+17]..[32,1916+3])
+          Pmty_signature
+          [
+            signature_item (lib/BoundedBitSet.ml[31,1903+2]..[31,1903+12])
+              Psig_value
+              value_description "n" (lib/BoundedBitSet.ml[31,1903+6]..[31,1903+7]) (lib/BoundedBitSet.ml[31,1903+2]..[31,1903+12])
+                core_type (lib/BoundedBitSet.ml[31,1903+9]..[31,1903+12])
+                  Ptyp_constr "int" (lib/BoundedBitSet.ml[31,1903+9]..[31,1903+12])
+                  []
+                []
+          ]
+        module_expr (lib/BoundedBitSet.ml[32,1916+5]..[52,2370+3])
+          Pmod_functor ()
+          module_expr (lib/BoundedBitSet.ml[33,1924+2]..[52,2370+3])
+            Pmod_structure
+            [
+              structure_item (lib/BoundedBitSet.ml[38,2034+2]..[39,2052+34])
+                Pstr_modtype "S" (lib/BoundedBitSet.ml[38,2034+14]..[38,2034+15])
+                  module_type (lib/BoundedBitSet.ml[39,2052+4]..[39,2052+34])
+                    Pmty_with
+                    module_type (lib/BoundedBitSet.ml[39,2052+4]..[39,2052+10])
+                      Pmty_ident "GSet.S" (lib/BoundedBitSet.ml[39,2052+4]..[39,2052+10])
+                    [
+                      Pwith_type "element" (lib/BoundedBitSet.ml[39,2052+21]..[39,2052+28])
+                        type_declaration "element" (lib/BoundedBitSet.ml[39,2052+21]..[39,2052+28]) (lib/BoundedBitSet.ml[39,2052+16]..[39,2052+34])
+                          ptype_params =
+                            []
+                          ptype_cstrs =
+                            []
+                          ptype_kind =
+                            Ptype_abstract
+                          ptype_private = Public
+                          ptype_manifest =
+                            Some
+                              core_type (lib/BoundedBitSet.ml[39,2052+31]..[39,2052+34])
+                                Ptyp_constr "int" (lib/BoundedBitSet.ml[39,2052+31]..[39,2052+34])
+                                []
+                    ]
+              structure_item (lib/BoundedBitSet.ml[41,2088+2]..[50,2360+8])
+                Pstr_include                module_expr (lib/BoundedBitSet.ml[41,2088+10]..[50,2360+8])
+                  Pmod_unpack
+                  expression (lib/BoundedBitSet.ml[42,2103+4]..[50,2360+7]) ghost
+                    Pexp_constraint
+                    expression (lib/BoundedBitSet.ml[42,2103+4]..[49,2328+31])
+                      Pexp_ifthenelse
+                      expression (lib/BoundedBitSet.ml[42,2103+7]..[42,2103+32])
+                        Pexp_apply
+                        expression (lib/BoundedBitSet.ml[42,2103+11]..[42,2103+13])
+                          Pexp_ident "<=" (lib/BoundedBitSet.ml[42,2103+11]..[42,2103+13])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (lib/BoundedBitSet.ml[42,2103+7]..[42,2103+10])
+                              Pexp_ident "N.n" (lib/BoundedBitSet.ml[42,2103+7]..[42,2103+10])
+                          <arg>
+                          Nolabel
+                            expression (lib/BoundedBitSet.ml[42,2103+14]..[42,2103+32])
+                              Pexp_ident "AtomicBitSet.bound" (lib/BoundedBitSet.ml[42,2103+14]..[42,2103+32])
+                        ]
+                      expression (lib/BoundedBitSet.ml[43,2141+6]..[43,2141+31])
+                        Pexp_constraint
+                        expression (lib/BoundedBitSet.ml[43,2141+6]..[43,2141+31]) ghost
+                          Pexp_pack
+                          module_expr (lib/BoundedBitSet.ml[43,2141+14]..[43,2141+26])
+                            Pmod_ident "AtomicBitSet" (lib/BoundedBitSet.ml[43,2141+14]..[43,2141+26])
+                        core_type (lib/BoundedBitSet.ml[43,2141+29]..[43,2141+30])
+                          Ptyp_package "S" (lib/BoundedBitSet.ml[43,2141+29]..[43,2141+30])
+                          []
+                      Some
+                        expression (lib/BoundedBitSet.ml[44,2173+9]..[49,2328+31])
+                          Pexp_ifthenelse
+                          expression (lib/BoundedBitSet.ml[44,2173+12]..[44,2173+36])
+                            Pexp_apply
+                            expression (lib/BoundedBitSet.ml[44,2173+16]..[44,2173+18])
+                              Pexp_ident "<=" (lib/BoundedBitSet.ml[44,2173+16]..[44,2173+18])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (lib/BoundedBitSet.ml[44,2173+12]..[44,2173+15])
+                                  Pexp_ident "N.n" (lib/BoundedBitSet.ml[44,2173+12]..[44,2173+15])
+                              <arg>
+                              Nolabel
+                                expression (lib/BoundedBitSet.ml[44,2173+19]..[44,2173+36])
+                                  Pexp_ident "DWordBitSet.bound" (lib/BoundedBitSet.ml[44,2173+19]..[44,2173+36])
+                            ]
+                          expression (lib/BoundedBitSet.ml[45,2215+6]..[45,2215+30])
+                            Pexp_constraint
+                            expression (lib/BoundedBitSet.ml[45,2215+6]..[45,2215+30]) ghost
+                              Pexp_pack
+                              module_expr (lib/BoundedBitSet.ml[45,2215+14]..[45,2215+25])
+                                Pmod_ident "DWordBitSet" (lib/BoundedBitSet.ml[45,2215+14]..[45,2215+25])
+                            core_type (lib/BoundedBitSet.ml[45,2215+28]..[45,2215+29])
+                              Ptyp_package "S" (lib/BoundedBitSet.ml[45,2215+28]..[45,2215+29])
+                              []
+                          Some
+                            expression (lib/BoundedBitSet.ml[46,2246+9]..[49,2328+31])
+                              Pexp_ifthenelse
+                              expression (lib/BoundedBitSet.ml[46,2246+12]..[46,2246+36])
+                                Pexp_apply
+                                expression (lib/BoundedBitSet.ml[46,2246+16]..[46,2246+18])
+                                  Pexp_ident "<=" (lib/BoundedBitSet.ml[46,2246+16]..[46,2246+18])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/BoundedBitSet.ml[46,2246+12]..[46,2246+15])
+                                      Pexp_ident "N.n" (lib/BoundedBitSet.ml[46,2246+12]..[46,2246+15])
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/BoundedBitSet.ml[46,2246+19]..[46,2246+36])
+                                      Pexp_ident "QWordBitSet.bound" (lib/BoundedBitSet.ml[46,2246+19]..[46,2246+36])
+                                ]
+                              expression (lib/BoundedBitSet.ml[47,2288+6]..[47,2288+30])
+                                Pexp_constraint
+                                expression (lib/BoundedBitSet.ml[47,2288+6]..[47,2288+30]) ghost
+                                  Pexp_pack
+                                  module_expr (lib/BoundedBitSet.ml[47,2288+14]..[47,2288+25])
+                                    Pmod_ident "QWordBitSet" (lib/BoundedBitSet.ml[47,2288+14]..[47,2288+25])
+                                core_type (lib/BoundedBitSet.ml[47,2288+28]..[47,2288+29])
+                                  Ptyp_package "S" (lib/BoundedBitSet.ml[47,2288+28]..[47,2288+29])
+                                  []
+                              Some
+                                expression (lib/BoundedBitSet.ml[49,2328+6]..[49,2328+31])
+                                  Pexp_constraint
+                                  expression (lib/BoundedBitSet.ml[49,2328+6]..[49,2328+31]) ghost
+                                    Pexp_pack
+                                    module_expr (lib/BoundedBitSet.ml[49,2328+14]..[49,2328+26])
+                                      Pmod_ident "SparseBitSet" (lib/BoundedBitSet.ml[49,2328+14]..[49,2328+26])
+                                  core_type (lib/BoundedBitSet.ml[49,2328+29]..[49,2328+30])
+                                    Ptyp_package "S" (lib/BoundedBitSet.ml[49,2328+29]..[49,2328+30])
+                                    []
+                    core_type (lib/BoundedBitSet.ml[50,2360+6]..[50,2360+7])
+                      Ptyp_package "S" (lib/BoundedBitSet.ml[50,2360+6]..[50,2360+7])
+                      []
+            ]
+  structure_item (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+          Ppat_construct "()" (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+          None
+        expression (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+          Pexp_apply
+          expression (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost,None)
+          ]
+    ]
+  structure_item (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+          Ppat_construct "()" (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+          None
+        expression (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+          Pexp_apply
+          expression (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+                Pexp_construct "()" (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+          Ppat_construct "()" (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+          None
+        expression (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+          Pexp_apply
+          expression (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+                Pexp_construct "()" (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+          Ppat_construct "()" (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+          None
+        expression (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+          Pexp_apply
+          expression (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/BoundedBitSet.ml[52,2370+3]..[52,2370+3]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set
+    ~absolute_filename:"lib/BoundedBitSet.ml"
+let () =
+  Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "BoundedBitSet.ml"
+module Make(N:sig val n : int end)() =
+  struct
+    module type S  = GSet.S with type  element =  int
+    include (val
+      (if N.n <= AtomicBitSet.bound
+       then ((module AtomicBitSet) : (module S))
+       else
+         if N.n <= DWordBitSet.bound
+         then ((module DWordBitSet) : (module S))
+         else
+           if N.n <= QWordBitSet.bound
+           then ((module QWordBitSet) : (module S))
+           else ((module SparseBitSet) : (module S)) : (module S)))
+  end
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+          Texp_apply
+          expression (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+          Texp_apply
+          expression (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+          Texp_apply
+          expression (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+                Texp_constant Const_string("lib/BoundedBitSet.ml",(lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+          Texp_apply
+          expression (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost
+                Texp_constant Const_string("BoundedBitSet.ml",(lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[30,1882+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/BoundedBitSet.ml[30,1882+0]..lib/BoundedBitSet.ml[52,2370+3])
+    Tstr_module
+    Make/1444
+      module_expr (lib/BoundedBitSet.ml[30,1882+12]..lib/BoundedBitSet.ml[52,2370+3])
+        Tmod_functor "N/1133"
+        module_type (lib/BoundedBitSet.ml[30,1882+17]..lib/BoundedBitSet.ml[32,1916+3])
+          Tmty_signature
+          [
+            signature_item (lib/BoundedBitSet.ml[31,1903+2]..lib/BoundedBitSet.ml[31,1903+12])
+              Tsig_value
+              value_description n/1132 (lib/BoundedBitSet.ml[31,1903+2]..lib/BoundedBitSet.ml[31,1903+12])
+                core_type (lib/BoundedBitSet.ml[31,1903+9]..lib/BoundedBitSet.ml[31,1903+12])
+                  Ttyp_constr "int/1!"
+                  []
+                []
+          ]
+        module_expr (lib/BoundedBitSet.ml[32,1916+5]..lib/BoundedBitSet.ml[52,2370+3])
+          Tmod_functor ()
+          module_expr (lib/BoundedBitSet.ml[33,1924+2]..lib/BoundedBitSet.ml[52,2370+3])
+            Tmod_structure
+            [
+              structure_item (lib/BoundedBitSet.ml[38,2034+2]..lib/BoundedBitSet.ml[39,2052+34])
+                Tstr_modtype "S/1177"
+                  module_type (lib/BoundedBitSet.ml[39,2052+4]..lib/BoundedBitSet.ml[39,2052+34])
+                    Tmty_with
+                    module_type (lib/BoundedBitSet.ml[39,2052+4]..lib/BoundedBitSet.ml[39,2052+10])
+                      Tmty_ident "Gbnf_parser!.GSet.S"
+                    [
+                      "element/1136"
+                        Twith_type
+                          type_declaration element/1136 (lib/BoundedBitSet.ml[39,2052+16]..lib/BoundedBitSet.ml[39,2052+34])
+                            ptype_params =
+                              []
+                            ptype_cstrs =
+                              []
+                            ptype_kind =
+                              Ttype_abstract
+                            ptype_private = Public
+                            ptype_manifest =
+                              Some
+                                core_type (lib/BoundedBitSet.ml[39,2052+31]..lib/BoundedBitSet.ml[39,2052+34])
+                                  Ttyp_constr "int/1!"
+                                  []
+                    ]
+              structure_item (lib/BoundedBitSet.ml[41,2088+2]..lib/BoundedBitSet.ml[50,2360+8])
+                Tstr_include                module_expr (lib/BoundedBitSet.ml[41,2088+10]..lib/BoundedBitSet.ml[50,2360+8])
+                  Tmod_unpack
+                  expression (lib/BoundedBitSet.ml[42,2103+4]..lib/BoundedBitSet.ml[49,2328+31])
+                    extra
+                      Texp_constraint
+                      core_type (lib/BoundedBitSet.ml[50,2360+6]..lib/BoundedBitSet.ml[50,2360+7])
+                        Ttyp_package "S/1177"
+                        []
+                    Texp_ifthenelse
+                    expression (lib/BoundedBitSet.ml[42,2103+7]..lib/BoundedBitSet.ml[42,2103+32])
+                      Texp_apply
+                      expression (lib/BoundedBitSet.ml[42,2103+11]..lib/BoundedBitSet.ml[42,2103+13])
+                        Texp_ident "Stdlib!.<="
+                      [
+                        <arg>
+                          Nolabel
+                          expression (lib/BoundedBitSet.ml[42,2103+7]..lib/BoundedBitSet.ml[42,2103+10])
+                            Texp_ident "N/1133.n"
+                        <arg>
+                          Nolabel
+                          expression (lib/BoundedBitSet.ml[42,2103+14]..lib/BoundedBitSet.ml[42,2103+32])
+                            Texp_ident "Gbnf_parser!.AtomicBitSet.bound"
+                      ]
+                    expression (lib/BoundedBitSet.ml[43,2141+6]..lib/BoundedBitSet.ml[43,2141+31]) ghost
+                      extra
+                        Texp_constraint
+                        core_type (lib/BoundedBitSet.ml[43,2141+29]..lib/BoundedBitSet.ml[43,2141+30])
+                          Ttyp_package "S/1177"
+                          []
+                      Texp_pack                      module_expr (lib/BoundedBitSet.ml[43,2141+14]..lib/BoundedBitSet.ml[43,2141+26])
+                        module_expr (lib/BoundedBitSet.ml[43,2141+14]..lib/BoundedBitSet.ml[43,2141+26])
+                          module_expr (lib/BoundedBitSet.ml[43,2141+14]..lib/BoundedBitSet.ml[43,2141+26])
+                            Tmod_ident "Gbnf_parser!.AtomicBitSet"
+                    Some
+                      expression (lib/BoundedBitSet.ml[44,2173+9]..lib/BoundedBitSet.ml[49,2328+31])
+                        Texp_ifthenelse
+                        expression (lib/BoundedBitSet.ml[44,2173+12]..lib/BoundedBitSet.ml[44,2173+36])
+                          Texp_apply
+                          expression (lib/BoundedBitSet.ml[44,2173+16]..lib/BoundedBitSet.ml[44,2173+18])
+                            Texp_ident "Stdlib!.<="
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/BoundedBitSet.ml[44,2173+12]..lib/BoundedBitSet.ml[44,2173+15])
+                                Texp_ident "N/1133.n"
+                            <arg>
+                              Nolabel
+                              expression (lib/BoundedBitSet.ml[44,2173+19]..lib/BoundedBitSet.ml[44,2173+36])
+                                Texp_ident "Gbnf_parser!.DWordBitSet.bound"
+                          ]
+                        expression (lib/BoundedBitSet.ml[45,2215+6]..lib/BoundedBitSet.ml[45,2215+30]) ghost
+                          extra
+                            Texp_constraint
+                            core_type (lib/BoundedBitSet.ml[45,2215+28]..lib/BoundedBitSet.ml[45,2215+29])
+                              Ttyp_package "S/1177"
+                              []
+                          Texp_pack                          module_expr (lib/BoundedBitSet.ml[45,2215+14]..lib/BoundedBitSet.ml[45,2215+25])
+                            module_expr (lib/BoundedBitSet.ml[45,2215+14]..lib/BoundedBitSet.ml[45,2215+25])
+                              module_expr (lib/BoundedBitSet.ml[45,2215+14]..lib/BoundedBitSet.ml[45,2215+25])
+                                Tmod_ident "Gbnf_parser!.DWordBitSet"
+                        Some
+                          expression (lib/BoundedBitSet.ml[46,2246+9]..lib/BoundedBitSet.ml[49,2328+31])
+                            Texp_ifthenelse
+                            expression (lib/BoundedBitSet.ml[46,2246+12]..lib/BoundedBitSet.ml[46,2246+36])
+                              Texp_apply
+                              expression (lib/BoundedBitSet.ml[46,2246+16]..lib/BoundedBitSet.ml[46,2246+18])
+                                Texp_ident "Stdlib!.<="
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (lib/BoundedBitSet.ml[46,2246+12]..lib/BoundedBitSet.ml[46,2246+15])
+                                    Texp_ident "N/1133.n"
+                                <arg>
+                                  Nolabel
+                                  expression (lib/BoundedBitSet.ml[46,2246+19]..lib/BoundedBitSet.ml[46,2246+36])
+                                    Texp_ident "Gbnf_parser!.QWordBitSet.bound"
+                              ]
+                            expression (lib/BoundedBitSet.ml[47,2288+6]..lib/BoundedBitSet.ml[47,2288+30]) ghost
+                              extra
+                                Texp_constraint
+                                core_type (lib/BoundedBitSet.ml[47,2288+28]..lib/BoundedBitSet.ml[47,2288+29])
+                                  Ttyp_package "S/1177"
+                                  []
+                              Texp_pack                              module_expr (lib/BoundedBitSet.ml[47,2288+14]..lib/BoundedBitSet.ml[47,2288+25])
+                                module_expr (lib/BoundedBitSet.ml[47,2288+14]..lib/BoundedBitSet.ml[47,2288+25])
+                                  module_expr (lib/BoundedBitSet.ml[47,2288+14]..lib/BoundedBitSet.ml[47,2288+25])
+                                    Tmod_ident "Gbnf_parser!.QWordBitSet"
+                            Some
+                              expression (lib/BoundedBitSet.ml[49,2328+6]..lib/BoundedBitSet.ml[49,2328+31]) ghost
+                                extra
+                                  Texp_constraint
+                                  core_type (lib/BoundedBitSet.ml[49,2328+29]..lib/BoundedBitSet.ml[49,2328+30])
+                                    Ttyp_package "S/1177"
+                                    []
+                                Texp_pack                                module_expr (lib/BoundedBitSet.ml[49,2328+14]..lib/BoundedBitSet.ml[49,2328+26])
+                                  module_expr (lib/BoundedBitSet.ml[49,2328+14]..lib/BoundedBitSet.ml[49,2328+26])
+                                    module_expr (lib/BoundedBitSet.ml[49,2328+14]..lib/BoundedBitSet.ml[49,2328+26])
+                                      Tmod_ident "Gbnf_parser!.SparseBitSet"
+            ]
+  structure_item (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+          Texp_apply
+          expression (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost,None)
+          ]
+    ]
+  structure_item (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+          Texp_apply
+          expression (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+          Texp_apply
+          expression (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+          Texp_apply
+          expression (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/BoundedBitSet.ml[52,2370+3]..lib/BoundedBitSet.ml[52,2370+3]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__BoundedBitSet>
+ "Make"[module] ->
+   Abs<Gbnf_parser__BoundedBitSet.4>
+      (N/1133, ()/1,
+       {
+        "S"[module type] -> <Gbnf_parser__BoundedBitSet.3>;
+        "add"[value] -> <>;
+        "cardinal"[value] -> <>;
+        "choose"[value] -> <>;
+        "compare"[value] -> <>;
+        "disjoint"[value] -> <>;
+        "element"[type] -> <>;
+        "elements"[value] -> <>;
+        "empty"[value] -> <>;
+        "equal"[value] -> <>;
+        "fold"[value] -> <>;
+        "inter"[value] -> <>;
+        "is_empty"[value] -> <>;
+        "is_singleton"[value] -> <>;
+        "iter"[value] -> <>;
+        "mem"[value] -> <>;
+        "remove"[value] -> <>;
+        "singleton"[value] -> <>;
+        "subset"[value] -> <>;
+        "t"[type] -> <>;
+        "union"[value] -> <>;
+        });
+ }
+
+(setglobal Gbnf_parser__BoundedBitSet!
+  (let
+    (*match*/1818 =
+       (after Gbnf_parser__BoundedBitSet lib/BoundedBitSet.ml(30)<ghost>:1882-1882
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__BoundedBitSet"))
+     *match*/1816 =
+       (after Gbnf_parser__BoundedBitSet lib/BoundedBitSet.ml(30)<ghost>:1882-1882
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1814 =
+       (after Gbnf_parser__BoundedBitSet lib/BoundedBitSet.ml(30)<ghost>:1882-1882
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/BoundedBitSet.ml"))
+     *match*/1812 =
+       (after Gbnf_parser__BoundedBitSet lib/BoundedBitSet.ml(30)<ghost>:1882-1882
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "BoundedBitSet.ml"))
+     Make/1444 =
+       (function N/1802 */1801 is_a_functor
+         (let
+           (N/1133 =a N/1802
+            */1791 =a */1801
+            include/1792 =
+              (if
+                (<= (field_imm 0 N/1133)
+                  (field_imm 0 (global Gbnf_parser__AtomicBitSet!)))
+                (before Gbnf_parser__BoundedBitSet.Make lib/BoundedBitSet.ml(43)<ghost>:2147-2172
+                  (let
+                    (let/1799 = (global Gbnf_parser__AtomicBitSet!)
+                     let/1800 =a (global Gbnf_parser__AtomicBitSet!))
+                    (makeblock 0 (field_mut 14 let/1800)
+                      (field_mut 15 let/1800) (field_mut 16 let/1800)
+                      (field_mut 23 let/1800) (field_mut 24 let/1800)
+                      (field_mut 31 let/1800) (field_mut 27 let/1800)
+                      (field_mut 17 let/1800) (field_mut 18 let/1800)
+                      (field_mut 28 let/1800) (field_mut 29 let/1800)
+                      (field_mut 34 let/1800) (field_mut 22 let/1800)
+                      (field_mut 21 let/1800) (field_mut 25 let/1800)
+                      (field_mut 32 let/1800) (field_mut 33 let/1800)
+                      (field_mut 26 let/1800))))
+                (before Gbnf_parser__BoundedBitSet.Make lib/BoundedBitSet.ml(44):2182-2359
+                  (if
+                    (<= (field_imm 0 N/1133)
+                      (field_imm 1 (global Gbnf_parser__DWordBitSet!)))
+                    (before Gbnf_parser__BoundedBitSet.Make lib/BoundedBitSet.ml(45)<ghost>:2221-2245
+                      (let
+                        (let/1797 = (global Gbnf_parser__DWordBitSet!)
+                         let/1798 =a (global Gbnf_parser__DWordBitSet!))
+                        (makeblock 0 (field_mut 2 let/1798)
+                          (field_mut 3 let/1798) (field_mut 4 let/1798)
+                          (field_mut 9 let/1798) (field_mut 10 let/1798)
+                          (field_mut 16 let/1798) (field_mut 13 let/1798)
+                          (field_mut 5 let/1798) (field_mut 6 let/1798)
+                          (field_mut 14 let/1798) (field_mut 15 let/1798)
+                          (field_mut 19 let/1798) (field_mut 8 let/1798)
+                          (field_mut 7 let/1798) (field_mut 11 let/1798)
+                          (field_mut 17 let/1798) (field_mut 18 let/1798)
+                          (field_mut 12 let/1798))))
+                    (before Gbnf_parser__BoundedBitSet.Make lib/BoundedBitSet.ml(46):2255-2359
+                      (if
+                        (<= (field_imm 0 N/1133)
+                          (field_imm 1 (global Gbnf_parser__QWordBitSet!)))
+                        (before Gbnf_parser__BoundedBitSet.Make lib/BoundedBitSet.ml(47)<ghost>:2294-2318
+                          (let
+                            (let/1795 = (global Gbnf_parser__QWordBitSet!)
+                             let/1796 =a (global Gbnf_parser__QWordBitSet!))
+                            (makeblock 0 (field_mut 5 let/1796)
+                              (field_mut 6 let/1796) (field_mut 7 let/1796)
+                              (field_mut 12 let/1796) (field_mut 13 let/1796)
+                              (field_mut 19 let/1796) (field_mut 16 let/1796)
+                              (field_mut 8 let/1796) (field_mut 9 let/1796)
+                              (field_mut 17 let/1796) (field_mut 18 let/1796)
+                              (field_mut 22 let/1796) (field_mut 11 let/1796)
+                              (field_mut 10 let/1796) (field_mut 14 let/1796)
+                              (field_mut 20 let/1796) (field_mut 21 let/1796)
+                              (field_mut 15 let/1796))))
+                        (before Gbnf_parser__BoundedBitSet.Make lib/BoundedBitSet.ml(49)<ghost>:2334-2359
+                          (let
+                            (let/1793 = (global Gbnf_parser__SparseBitSet!)
+                             let/1794 =a (global Gbnf_parser__SparseBitSet!))
+                            (makeblock 0 (field_mut 0 let/1794)
+                              (field_mut 1 let/1794) (field_mut 3 let/1794)
+                              (field_mut 8 let/1794) (field_mut 9 let/1794)
+                              (field_mut 14 let/1794) (field_mut 5 let/1794)
+                              (field_mut 2 let/1794) (field_mut 4 let/1794)
+                              (field_mut 12 let/1794) (field_mut 13 let/1794)
+                              (field_mut 17 let/1794) (field_mut 7 let/1794)
+                              (field_mut 6 let/1794) (field_mut 10 let/1794)
+                              (field_mut 15 let/1794) (field_mut 16 let/1794)
+                              (field_mut 11 let/1794)))))))))
+            empty/1426 =a (field_mut 0 include/1792)
+            is_empty/1427 =a (field_mut 1 include/1792)
+            singleton/1428 =a (field_mut 2 include/1792)
+            is_singleton/1429 =a (field_mut 3 include/1792)
+            cardinal/1430 =a (field_mut 4 include/1792)
+            choose/1431 =a (field_mut 5 include/1792)
+            mem/1432 =a (field_mut 6 include/1792)
+            add/1433 =a (field_mut 7 include/1792)
+            remove/1434 =a (field_mut 8 include/1792)
+            union/1435 =a (field_mut 9 include/1792)
+            inter/1436 =a (field_mut 10 include/1792)
+            disjoint/1437 =a (field_mut 11 include/1792)
+            iter/1438 =a (field_mut 12 include/1792)
+            fold/1439 =a (field_mut 13 include/1792)
+            elements/1440 =a (field_mut 14 include/1792)
+            compare/1441 =a (field_mut 15 include/1792)
+            equal/1442 =a (field_mut 16 include/1792)
+            subset/1443 =a (field_mut 17 include/1792))
+           (pseudo Gbnf_parser__BoundedBitSet.Make lib/BoundedBitSet.ml(33):1926-2373
+             (makeblock 0 empty/1426 is_empty/1427 singleton/1428
+               is_singleton/1429 cardinal/1430 choose/1431 mem/1432 add/1433
+               remove/1434 union/1435 inter/1436 disjoint/1437 iter/1438
+               fold/1439 elements/1440 compare/1441 equal/1442 subset/1443))))
+     *match*/1810 =
+       (after Gbnf_parser__BoundedBitSet lib/BoundedBitSet.ml(52)<ghost>:2373-2373
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/1808 =
+       (after Gbnf_parser__BoundedBitSet lib/BoundedBitSet.ml(52)<ghost>:2373-2373
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/1806 =
+       (after Gbnf_parser__BoundedBitSet lib/BoundedBitSet.ml(52)<ghost>:2373-2373
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/1804 =
+       (after Gbnf_parser__BoundedBitSet lib/BoundedBitSet.ml(52)<ghost>:2373-2373
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__BoundedBitSet")))
+    (pseudo <unknown location> (makeblock 0 Make/1444))))
+(setglobal Gbnf_parser__BoundedBitSet!
+  (let
+    (*match*/1818 =
+       (after Gbnf_parser__BoundedBitSet lib/BoundedBitSet.ml(30)<ghost>:1882-1882
+         (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__BoundedBitSet"))
+     *match*/1816 =
+       (after Gbnf_parser__BoundedBitSet lib/BoundedBitSet.ml(30)<ghost>:1882-1882
+         (apply
+           (field_imm 0
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/1814 =
+       (after Gbnf_parser__BoundedBitSet lib/BoundedBitSet.ml(30)<ghost>:1882-1882
+         (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+           "lib/BoundedBitSet.ml"))
+     *match*/1812 =
+       (after Gbnf_parser__BoundedBitSet lib/BoundedBitSet.ml(30)<ghost>:1882-1882
+         (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "BoundedBitSet.ml"))
+     Make/1444 =
+       (function N/1802 */1801 is_a_functor
+         (let
+           (N/1133 =a N/1802
+            include/1792 =
+              (if
+                (<= (field_imm 0 N/1133)
+                  (field_imm 0 (global Gbnf_parser__AtomicBitSet!)))
+                (before Gbnf_parser__BoundedBitSet.Make lib/BoundedBitSet.ml(43)<ghost>:2147-2172
+                  (let
+                    (let/1799 = (global Gbnf_parser__AtomicBitSet!)
+                     let/1800 =a (global Gbnf_parser__AtomicBitSet!))
+                    (makeblock 0 (field_mut 14 let/1800)
+                      (field_mut 15 let/1800) (field_mut 16 let/1800)
+                      (field_mut 23 let/1800) (field_mut 24 let/1800)
+                      (field_mut 31 let/1800) (field_mut 27 let/1800)
+                      (field_mut 17 let/1800) (field_mut 18 let/1800)
+                      (field_mut 28 let/1800) (field_mut 29 let/1800)
+                      (field_mut 34 let/1800) (field_mut 22 let/1800)
+                      (field_mut 21 let/1800) (field_mut 25 let/1800)
+                      (field_mut 32 let/1800) (field_mut 33 let/1800)
+                      (field_mut 26 let/1800))))
+                (before Gbnf_parser__BoundedBitSet.Make lib/BoundedBitSet.ml(44):2182-2359
+                  (if
+                    (<= (field_imm 0 N/1133)
+                      (field_imm 1 (global Gbnf_parser__DWordBitSet!)))
+                    (before Gbnf_parser__BoundedBitSet.Make lib/BoundedBitSet.ml(45)<ghost>:2221-2245
+                      (let
+                        (let/1797 = (global Gbnf_parser__DWordBitSet!)
+                         let/1798 =a (global Gbnf_parser__DWordBitSet!))
+                        (makeblock 0 (field_mut 2 let/1798)
+                          (field_mut 3 let/1798) (field_mut 4 let/1798)
+                          (field_mut 9 let/1798) (field_mut 10 let/1798)
+                          (field_mut 16 let/1798) (field_mut 13 let/1798)
+                          (field_mut 5 let/1798) (field_mut 6 let/1798)
+                          (field_mut 14 let/1798) (field_mut 15 let/1798)
+                          (field_mut 19 let/1798) (field_mut 8 let/1798)
+                          (field_mut 7 let/1798) (field_mut 11 let/1798)
+                          (field_mut 17 let/1798) (field_mut 18 let/1798)
+                          (field_mut 12 let/1798))))
+                    (before Gbnf_parser__BoundedBitSet.Make lib/BoundedBitSet.ml(46):2255-2359
+                      (if
+                        (<= (field_imm 0 N/1133)
+                          (field_imm 1 (global Gbnf_parser__QWordBitSet!)))
+                        (before Gbnf_parser__BoundedBitSet.Make lib/BoundedBitSet.ml(47)<ghost>:2294-2318
+                          (let
+                            (let/1795 = (global Gbnf_parser__QWordBitSet!)
+                             let/1796 =a (global Gbnf_parser__QWordBitSet!))
+                            (makeblock 0 (field_mut 5 let/1796)
+                              (field_mut 6 let/1796) (field_mut 7 let/1796)
+                              (field_mut 12 let/1796) (field_mut 13 let/1796)
+                              (field_mut 19 let/1796) (field_mut 16 let/1796)
+                              (field_mut 8 let/1796) (field_mut 9 let/1796)
+                              (field_mut 17 let/1796) (field_mut 18 let/1796)
+                              (field_mut 22 let/1796) (field_mut 11 let/1796)
+                              (field_mut 10 let/1796) (field_mut 14 let/1796)
+                              (field_mut 20 let/1796) (field_mut 21 let/1796)
+                              (field_mut 15 let/1796))))
+                        (before Gbnf_parser__BoundedBitSet.Make lib/BoundedBitSet.ml(49)<ghost>:2334-2359
+                          (let
+                            (let/1793 = (global Gbnf_parser__SparseBitSet!)
+                             let/1794 =a (global Gbnf_parser__SparseBitSet!))
+                            (makeblock 0 (field_mut 0 let/1794)
+                              (field_mut 1 let/1794) (field_mut 3 let/1794)
+                              (field_mut 8 let/1794) (field_mut 9 let/1794)
+                              (field_mut 14 let/1794) (field_mut 5 let/1794)
+                              (field_mut 2 let/1794) (field_mut 4 let/1794)
+                              (field_mut 12 let/1794) (field_mut 13 let/1794)
+                              (field_mut 17 let/1794) (field_mut 7 let/1794)
+                              (field_mut 6 let/1794) (field_mut 10 let/1794)
+                              (field_mut 15 let/1794) (field_mut 16 let/1794)
+                              (field_mut 11 let/1794)))))))))
+            empty/1426 =a (field_mut 0 include/1792)
+            is_empty/1427 =a (field_mut 1 include/1792)
+            singleton/1428 =a (field_mut 2 include/1792)
+            is_singleton/1429 =a (field_mut 3 include/1792)
+            cardinal/1430 =a (field_mut 4 include/1792)
+            choose/1431 =a (field_mut 5 include/1792)
+            mem/1432 =a (field_mut 6 include/1792)
+            add/1433 =a (field_mut 7 include/1792)
+            remove/1434 =a (field_mut 8 include/1792)
+            union/1435 =a (field_mut 9 include/1792)
+            inter/1436 =a (field_mut 10 include/1792)
+            disjoint/1437 =a (field_mut 11 include/1792)
+            iter/1438 =a (field_mut 12 include/1792)
+            fold/1439 =a (field_mut 13 include/1792)
+            elements/1440 =a (field_mut 14 include/1792)
+            compare/1441 =a (field_mut 15 include/1792)
+            equal/1442 =a (field_mut 16 include/1792)
+            subset/1443 =a (field_mut 17 include/1792))
+           (pseudo Gbnf_parser__BoundedBitSet.Make lib/BoundedBitSet.ml(33):1926-2373
+             (makeblock 0 empty/1426 is_empty/1427 singleton/1428
+               is_singleton/1429 cardinal/1430 choose/1431 mem/1432 add/1433
+               remove/1434 union/1435 inter/1436 disjoint/1437 iter/1438
+               fold/1439 elements/1440 compare/1441 equal/1442 subset/1443))))
+     *match*/1810 =
+       (after Gbnf_parser__BoundedBitSet lib/BoundedBitSet.ml(52)<ghost>:2373-2373
+         (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/1808 =
+       (after Gbnf_parser__BoundedBitSet lib/BoundedBitSet.ml(52)<ghost>:2373-2373
+         (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!)))
+           0))
+     *match*/1806 =
+       (after Gbnf_parser__BoundedBitSet lib/BoundedBitSet.ml(52)<ghost>:2373-2373
+         (apply
+           (field_imm 1
+             (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/1804 =
+       (after Gbnf_parser__BoundedBitSet lib/BoundedBitSet.ml(52)<ghost>:2373-2373
+         (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__BoundedBitSet")))
+    (pseudo <unknown location> (makeblock 0 Make/1444))))

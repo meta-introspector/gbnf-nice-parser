@@ -1,0 +1,1850 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+          ]
+    ]
+  structure_item (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("lib/Tabulate.ml",(lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+          Ppat_construct "()" (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+          None
+        expression (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+          Pexp_apply
+          expression (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost
+                Pexp_constant PConst_string("Tabulate.ml",(lib/Tabulate.ml[13,893+0]..[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Tabulate.ml[13,893+0]..[13,893+9])
+    Pstr_open Fresh
+    module_expr (lib/Tabulate.ml[13,893+5]..[13,893+9])
+      Pmod_ident "Sigs" (lib/Tabulate.ml[13,893+5]..[13,893+9])
+  structure_item (lib/Tabulate.ml[15,904+0]..[35,1468+3])
+    Pstr_module
+    "Make" (lib/Tabulate.ml[15,904+7]..[15,904+11])
+      module_expr (lib/Tabulate.ml[16,916+2]..[35,1468+3])
+        Pmod_functor "F" (lib/Tabulate.ml[16,916+3]..[16,916+4])
+        module_type (lib/Tabulate.ml[16,916+7]..[16,916+18])
+          Pmty_ident "FINITE_TYPE" (lib/Tabulate.ml[16,916+7]..[16,916+18])
+        module_expr (lib/Tabulate.ml[17,936+2]..[35,1468+3])
+          Pmod_functor "M" (lib/Tabulate.ml[17,936+3]..[17,936+4])
+          module_type (lib/Tabulate.ml[17,936+7]..[17,936+50])
+            Pmty_with
+            module_type (lib/Tabulate.ml[17,936+7]..[17,936+30])
+              Pmty_ident "MINIMAL_IMPERATIVE_MAPS" (lib/Tabulate.ml[17,936+7]..[17,936+30])
+            [
+              Pwith_type "key" (lib/Tabulate.ml[17,936+41]..[17,936+44])
+                type_declaration "key" (lib/Tabulate.ml[17,936+41]..[17,936+44]) (lib/Tabulate.ml[17,936+36]..[17,936+50])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ptype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    Some
+                      core_type (lib/Tabulate.ml[17,936+47]..[17,936+50])
+                        Ptyp_constr "F.t" (lib/Tabulate.ml[17,936+47]..[17,936+50])
+                        []
+            ]
+          module_expr (lib/Tabulate.ml[18,988+2]..[35,1468+3])
+            Pmod_structure
+            [
+              structure_item (lib/Tabulate.ml[20,998+2]..[20,998+18])
+                Pstr_type Rec
+                [
+                  type_declaration "key" (lib/Tabulate.ml[20,998+7]..[20,998+10]) (lib/Tabulate.ml[20,998+2]..[20,998+18])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ptype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (lib/Tabulate.ml[20,998+13]..[20,998+18])
+                          Ptyp_constr "M.key" (lib/Tabulate.ml[20,998+13]..[20,998+18])
+                          []
+                ]
+              structure_item (lib/Tabulate.ml[22,1018+2]..[33,1430+36])
+                Pstr_value Nonrec
+                [
+                  <def>
+                    pattern (lib/Tabulate.ml[22,1018+6]..[22,1018+14])
+                      Ppat_var "tabulate" (lib/Tabulate.ml[22,1018+6]..[22,1018+14])
+                    expression (lib/Tabulate.ml[22,1018+15]..[33,1430+36]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/Tabulate.ml[22,1018+15]..[22,1018+30])
+                        Ppat_constraint
+                        pattern (lib/Tabulate.ml[22,1018+16]..[22,1018+17])
+                          Ppat_var "f" (lib/Tabulate.ml[22,1018+16]..[22,1018+17])
+                        core_type (lib/Tabulate.ml[22,1018+20]..[22,1018+29])
+                          Ptyp_arrow
+                          Nolabel
+                          core_type (lib/Tabulate.ml[22,1018+20]..[22,1018+23])
+                            Ptyp_constr "key" (lib/Tabulate.ml[22,1018+20]..[22,1018+23])
+                            []
+                          core_type (lib/Tabulate.ml[22,1018+27]..[22,1018+29])
+                            Ptyp_var a
+                      expression (lib/Tabulate.ml[22,1018+31]..[33,1430+36])
+                        Pexp_constraint
+                        expression (lib/Tabulate.ml[23,1063+4]..[33,1430+36])
+                          Pexp_let Nonrec
+                          [
+                            <def>
+                              pattern (lib/Tabulate.ml[23,1063+8]..[23,1063+13])
+                                Ppat_var "table" (lib/Tabulate.ml[23,1063+8]..[23,1063+13])
+                              expression (lib/Tabulate.ml[23,1063+16]..[23,1063+26])
+                                Pexp_apply
+                                expression (lib/Tabulate.ml[23,1063+16]..[23,1063+24])
+                                  Pexp_ident "M.create" (lib/Tabulate.ml[23,1063+16]..[23,1063+24])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/Tabulate.ml[23,1063+24]..[23,1063+26])
+                                      Pexp_construct "()" (lib/Tabulate.ml[23,1063+24]..[23,1063+26])
+                                      None
+                                ]
+                          ]
+                          expression (lib/Tabulate.ml[24,1093+4]..[33,1430+36])
+                            Pexp_sequence
+                            expression (lib/Tabulate.ml[24,1093+4]..[24,1093+44])
+                              Pexp_apply
+                              expression (lib/Tabulate.ml[24,1093+4]..[24,1093+13])
+                                Pexp_ident "F.foreach" (lib/Tabulate.ml[24,1093+4]..[24,1093+13])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (lib/Tabulate.ml[24,1093+14]..[24,1093+44])
+                                    Pexp_fun
+                                    Nolabel
+                                    None
+                                    pattern (lib/Tabulate.ml[24,1093+19]..[24,1093+20])
+                                      Ppat_var "x" (lib/Tabulate.ml[24,1093+19]..[24,1093+20])
+                                    expression (lib/Tabulate.ml[24,1093+24]..[24,1093+43])
+                                      Pexp_apply
+                                      expression (lib/Tabulate.ml[24,1093+24]..[24,1093+29])
+                                        Pexp_ident "M.add" (lib/Tabulate.ml[24,1093+24]..[24,1093+29])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (lib/Tabulate.ml[24,1093+30]..[24,1093+31])
+                                            Pexp_ident "x" (lib/Tabulate.ml[24,1093+30]..[24,1093+31])
+                                        <arg>
+                                        Nolabel
+                                          expression (lib/Tabulate.ml[24,1093+32]..[24,1093+37])
+                                            Pexp_apply
+                                            expression (lib/Tabulate.ml[24,1093+33]..[24,1093+34])
+                                              Pexp_ident "f" (lib/Tabulate.ml[24,1093+33]..[24,1093+34])
+                                            [
+                                              <arg>
+                                              Nolabel
+                                                expression (lib/Tabulate.ml[24,1093+35]..[24,1093+36])
+                                                  Pexp_ident "x" (lib/Tabulate.ml[24,1093+35]..[24,1093+36])
+                                            ]
+                                        <arg>
+                                        Nolabel
+                                          expression (lib/Tabulate.ml[24,1093+38]..[24,1093+43])
+                                            Pexp_ident "table" (lib/Tabulate.ml[24,1093+38]..[24,1093+43])
+                                      ]
+                              ]
+                            expression (lib/Tabulate.ml[25,1139+4]..[33,1430+36])
+                              Pexp_fun
+                              Nolabel
+                              None
+                              pattern (lib/Tabulate.ml[25,1139+8]..[25,1139+9])
+                                Ppat_var "x" (lib/Tabulate.ml[25,1139+8]..[25,1139+9])
+                              expression (lib/Tabulate.ml[26,1152+6]..[33,1430+36])
+                                Pexp_try
+                                expression (lib/Tabulate.ml[27,1162+8]..[27,1162+22])
+                                  Pexp_apply
+                                  expression (lib/Tabulate.ml[27,1162+8]..[27,1162+14])
+                                    Pexp_ident "M.find" (lib/Tabulate.ml[27,1162+8]..[27,1162+14])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (lib/Tabulate.ml[27,1162+15]..[27,1162+16])
+                                        Pexp_ident "x" (lib/Tabulate.ml[27,1162+15]..[27,1162+16])
+                                    <arg>
+                                    Nolabel
+                                      expression (lib/Tabulate.ml[27,1162+17]..[27,1162+22])
+                                        Pexp_ident "table" (lib/Tabulate.ml[27,1162+17]..[27,1162+22])
+                                  ]
+                                [
+                                  <case>
+                                    pattern (lib/Tabulate.ml[28,1185+11]..[28,1185+20])
+                                      Ppat_construct "Not_found" (lib/Tabulate.ml[28,1185+11]..[28,1185+20])
+                                      None
+                                    expression (lib/Tabulate.ml[30,1270+8]..[33,1430+36])
+                                      Pexp_let Nonrec
+                                      [
+                                        <def>
+                                          pattern (lib/Tabulate.ml[30,1270+12]..[30,1270+15])
+                                            Ppat_var "msg" (lib/Tabulate.ml[30,1270+12]..[30,1270+15])
+                                          expression (lib/Tabulate.ml[30,1270+18]..[32,1388+38])
+                                            Pexp_apply
+                                            expression (lib/Tabulate.ml[30,1270+18]..[30,1270+32])
+                                              Pexp_ident "Printf.sprintf" (lib/Tabulate.ml[30,1270+18]..[30,1270+32])
+                                            [
+                                              <arg>
+                                              Nolabel
+                                                expression (lib/Tabulate.ml[30,1270+33]..[32,1388+30])
+                                                  Pexp_constant PConst_string("\n  Fix.Tabulate says: please check that your \"foreach\" function is exhaustive.\n  %s\n",(lib/Tabulate.ml[30,1270+34]..[32,1388+29]),None)
+                                              <arg>
+                                              Nolabel
+                                                expression (lib/Tabulate.ml[32,1388+31]..[32,1388+38])
+                                                  Pexp_ident "__LOC__" (lib/Tabulate.ml[32,1388+31]..[32,1388+38])
+                                            ]
+                                      ]
+                                      expression (lib/Tabulate.ml[33,1430+8]..[33,1430+36])
+                                        Pexp_apply
+                                        expression (lib/Tabulate.ml[33,1430+8]..[33,1430+13])
+                                          Pexp_ident "raise" (lib/Tabulate.ml[33,1430+8]..[33,1430+13])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (lib/Tabulate.ml[33,1430+14]..[33,1430+36])
+                                              Pexp_construct "Invalid_argument" (lib/Tabulate.ml[33,1430+15]..[33,1430+31])
+                                              Some
+                                                expression (lib/Tabulate.ml[33,1430+32]..[33,1430+35])
+                                                  Pexp_ident "msg" (lib/Tabulate.ml[33,1430+32]..[33,1430+35])
+                                        ]
+                                ]
+                        core_type (lib/Tabulate.ml[22,1018+33]..[22,1018+42])
+                          Ptyp_arrow
+                          Nolabel
+                          core_type (lib/Tabulate.ml[22,1018+33]..[22,1018+36])
+                            Ptyp_constr "key" (lib/Tabulate.ml[22,1018+33]..[22,1018+36])
+                            []
+                          core_type (lib/Tabulate.ml[22,1018+40]..[22,1018+42])
+                            Ptyp_var a
+                ]
+            ]
+  structure_item (lib/Tabulate.ml[37,1473+0]..[41,1555+59])
+    Pstr_module
+    "ForOrderedType" (lib/Tabulate.ml[37,1473+7]..[37,1473+21])
+      module_expr (lib/Tabulate.ml[38,1495+2]..[41,1555+59])
+        Pmod_functor "F" (lib/Tabulate.ml[38,1495+3]..[38,1495+4])
+        module_type (lib/Tabulate.ml[38,1495+7]..[38,1495+18])
+          Pmty_ident "FINITE_TYPE" (lib/Tabulate.ml[38,1495+7]..[38,1495+18])
+        module_expr (lib/Tabulate.ml[39,1515+2]..[41,1555+59])
+          Pmod_functor "T" (lib/Tabulate.ml[39,1515+3]..[39,1515+4])
+          module_type (lib/Tabulate.ml[39,1515+7]..[39,1515+36])
+            Pmty_with
+            module_type (lib/Tabulate.ml[39,1515+7]..[39,1515+18])
+              Pmty_ident "OrderedType" (lib/Tabulate.ml[39,1515+7]..[39,1515+18])
+            [
+              Pwith_type "t" (lib/Tabulate.ml[39,1515+29]..[39,1515+30])
+                type_declaration "t" (lib/Tabulate.ml[39,1515+29]..[39,1515+30]) (lib/Tabulate.ml[39,1515+24]..[39,1515+36])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ptype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    Some
+                      core_type (lib/Tabulate.ml[39,1515+33]..[39,1515+36])
+                        Ptyp_constr "F.t" (lib/Tabulate.ml[39,1515+33]..[39,1515+36])
+                        []
+            ]
+          module_expr (lib/Tabulate.ml[41,1555+2]..[41,1555+59])
+            Pmod_apply
+            module_expr (lib/Tabulate.ml[41,1555+2]..[41,1555+9])
+              Pmod_apply
+              module_expr (lib/Tabulate.ml[41,1555+2]..[41,1555+6])
+                Pmod_ident "Make" (lib/Tabulate.ml[41,1555+2]..[41,1555+6])
+              module_expr (lib/Tabulate.ml[41,1555+7]..[41,1555+8])
+                Pmod_ident "F" (lib/Tabulate.ml[41,1555+7]..[41,1555+8])
+            module_expr (lib/Tabulate.ml[41,1555+10]..[41,1555+58])
+              Pmod_apply
+              module_expr (lib/Tabulate.ml[41,1555+10]..[41,1555+45])
+                Pmod_ident "Glue.PersistentMapsToImperativeMaps" (lib/Tabulate.ml[41,1555+10]..[41,1555+45])
+              module_expr (lib/Tabulate.ml[41,1555+46]..[41,1555+57])
+                Pmod_apply
+                module_expr (lib/Tabulate.ml[41,1555+46]..[41,1555+54])
+                  Pmod_ident "Map.Make" (lib/Tabulate.ml[41,1555+46]..[41,1555+54])
+                module_expr (lib/Tabulate.ml[41,1555+55]..[41,1555+56])
+                  Pmod_ident "T" (lib/Tabulate.ml[41,1555+55]..[41,1555+56])
+  structure_item (lib/Tabulate.ml[43,1616+0]..[47,1696+45])
+    Pstr_module
+    "ForHashedType" (lib/Tabulate.ml[43,1616+7]..[43,1616+20])
+      module_expr (lib/Tabulate.ml[44,1637+2]..[47,1696+45])
+        Pmod_functor "F" (lib/Tabulate.ml[44,1637+3]..[44,1637+4])
+        module_type (lib/Tabulate.ml[44,1637+7]..[44,1637+18])
+          Pmty_ident "FINITE_TYPE" (lib/Tabulate.ml[44,1637+7]..[44,1637+18])
+        module_expr (lib/Tabulate.ml[45,1657+2]..[47,1696+45])
+          Pmod_functor "T" (lib/Tabulate.ml[45,1657+3]..[45,1657+4])
+          module_type (lib/Tabulate.ml[45,1657+7]..[45,1657+35])
+            Pmty_with
+            module_type (lib/Tabulate.ml[45,1657+7]..[45,1657+17])
+              Pmty_ident "HashedType" (lib/Tabulate.ml[45,1657+7]..[45,1657+17])
+            [
+              Pwith_type "t" (lib/Tabulate.ml[45,1657+28]..[45,1657+29])
+                type_declaration "t" (lib/Tabulate.ml[45,1657+28]..[45,1657+29]) (lib/Tabulate.ml[45,1657+23]..[45,1657+35])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ptype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    Some
+                      core_type (lib/Tabulate.ml[45,1657+32]..[45,1657+35])
+                        Ptyp_constr "F.t" (lib/Tabulate.ml[45,1657+32]..[45,1657+35])
+                        []
+            ]
+          module_expr (lib/Tabulate.ml[47,1696+2]..[47,1696+45])
+            Pmod_apply
+            module_expr (lib/Tabulate.ml[47,1696+2]..[47,1696+9])
+              Pmod_apply
+              module_expr (lib/Tabulate.ml[47,1696+2]..[47,1696+6])
+                Pmod_ident "Make" (lib/Tabulate.ml[47,1696+2]..[47,1696+6])
+              module_expr (lib/Tabulate.ml[47,1696+7]..[47,1696+8])
+                Pmod_ident "F" (lib/Tabulate.ml[47,1696+7]..[47,1696+8])
+            module_expr (lib/Tabulate.ml[47,1696+10]..[47,1696+44])
+              Pmod_apply
+              module_expr (lib/Tabulate.ml[47,1696+10]..[47,1696+41])
+                Pmod_ident "Glue.HashTablesAsImperativeMaps" (lib/Tabulate.ml[47,1696+10]..[47,1696+41])
+              module_expr (lib/Tabulate.ml[47,1696+42]..[47,1696+43])
+                Pmod_ident "T" (lib/Tabulate.ml[47,1696+42]..[47,1696+43])
+  structure_item (lib/Tabulate.ml[49,1743+0]..[50,1778+45])
+    Pstr_module
+    "ForType" (lib/Tabulate.ml[49,1743+7]..[49,1743+14])
+      module_expr (lib/Tabulate.ml[49,1743+15]..[50,1778+45])
+        Pmod_functor "F" (lib/Tabulate.ml[49,1743+16]..[49,1743+17])
+        module_type (lib/Tabulate.ml[49,1743+20]..[49,1743+31])
+          Pmty_ident "FINITE_TYPE" (lib/Tabulate.ml[49,1743+20]..[49,1743+31])
+        module_expr (lib/Tabulate.ml[50,1778+2]..[50,1778+45])
+          Pmod_apply
+          module_expr (lib/Tabulate.ml[50,1778+2]..[50,1778+18])
+            Pmod_apply
+            module_expr (lib/Tabulate.ml[50,1778+2]..[50,1778+15])
+              Pmod_ident "ForHashedType" (lib/Tabulate.ml[50,1778+2]..[50,1778+15])
+            module_expr (lib/Tabulate.ml[50,1778+16]..[50,1778+17])
+              Pmod_ident "F" (lib/Tabulate.ml[50,1778+16]..[50,1778+17])
+          module_expr (lib/Tabulate.ml[50,1778+19]..[50,1778+44])
+            Pmod_apply
+            module_expr (lib/Tabulate.ml[50,1778+19]..[50,1778+41])
+              Pmod_ident "Glue.TrivialHashedType" (lib/Tabulate.ml[50,1778+19]..[50,1778+41])
+            module_expr (lib/Tabulate.ml[50,1778+42]..[50,1778+43])
+              Pmod_ident "F" (lib/Tabulate.ml[50,1778+42]..[50,1778+43])
+  structure_item (lib/Tabulate.ml[52,1825+0]..[61,2010+3])
+    Pstr_module
+    "ForIntSegment" (lib/Tabulate.ml[52,1825+7]..[52,1825+20])
+      module_expr (lib/Tabulate.ml[52,1825+21]..[61,2010+3])
+        Pmod_functor "K" (lib/Tabulate.ml[52,1825+22]..[52,1825+23])
+        module_type (lib/Tabulate.ml[52,1825+26]..[52,1825+44])
+          Pmty_signature
+          [
+            signature_item (lib/Tabulate.ml[52,1825+30]..[52,1825+40])
+              Psig_value
+              value_description "n" (lib/Tabulate.ml[52,1825+34]..[52,1825+35]) (lib/Tabulate.ml[52,1825+30]..[52,1825+40])
+                core_type (lib/Tabulate.ml[52,1825+37]..[52,1825+40])
+                  Ptyp_constr "int" (lib/Tabulate.ml[52,1825+37]..[52,1825+40])
+                  []
+                []
+          ]
+        module_expr (lib/Tabulate.ml[52,1825+48]..[61,2010+3])
+          Pmod_structure
+          [
+            structure_item (lib/Tabulate.ml[54,1881+2]..[54,1881+16])
+              Pstr_type Rec
+              [
+                type_declaration "key" (lib/Tabulate.ml[54,1881+7]..[54,1881+10]) (lib/Tabulate.ml[54,1881+2]..[54,1881+16])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ptype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    Some
+                      core_type (lib/Tabulate.ml[54,1881+13]..[54,1881+16])
+                        Ptyp_constr "int" (lib/Tabulate.ml[54,1881+13]..[54,1881+16])
+                        []
+              ]
+            structure_item (lib/Tabulate.ml[56,1899+2]..[59,1993+15])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (lib/Tabulate.ml[56,1899+6]..[56,1899+14])
+                    Ppat_var "tabulate" (lib/Tabulate.ml[56,1899+6]..[56,1899+14])
+                  expression (lib/Tabulate.ml[56,1899+15]..[59,1993+15]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (lib/Tabulate.ml[56,1899+15]..[56,1899+30])
+                      Ppat_constraint
+                      pattern (lib/Tabulate.ml[56,1899+16]..[56,1899+17])
+                        Ppat_var "f" (lib/Tabulate.ml[56,1899+16]..[56,1899+17])
+                      core_type (lib/Tabulate.ml[56,1899+20]..[56,1899+29])
+                        Ptyp_arrow
+                        Nolabel
+                        core_type (lib/Tabulate.ml[56,1899+20]..[56,1899+23])
+                          Ptyp_constr "key" (lib/Tabulate.ml[56,1899+20]..[56,1899+23])
+                          []
+                        core_type (lib/Tabulate.ml[56,1899+27]..[56,1899+29])
+                          Ptyp_var a
+                    expression (lib/Tabulate.ml[56,1899+31]..[59,1993+15])
+                      Pexp_constraint
+                      expression (lib/Tabulate.ml[57,1944+4]..[59,1993+15])
+                        Pexp_let Nonrec
+                        [
+                          <def>
+                            pattern (lib/Tabulate.ml[57,1944+8]..[57,1944+13])
+                              Ppat_var "table" (lib/Tabulate.ml[57,1944+8]..[57,1944+13])
+                            expression (lib/Tabulate.ml[57,1944+16]..[57,1944+32])
+                              Pexp_apply
+                              expression (lib/Tabulate.ml[57,1944+16]..[57,1944+26])
+                                Pexp_ident "Array.init" (lib/Tabulate.ml[57,1944+16]..[57,1944+26])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (lib/Tabulate.ml[57,1944+27]..[57,1944+30])
+                                    Pexp_ident "K.n" (lib/Tabulate.ml[57,1944+27]..[57,1944+30])
+                                <arg>
+                                Nolabel
+                                  expression (lib/Tabulate.ml[57,1944+31]..[57,1944+32])
+                                    Pexp_ident "f" (lib/Tabulate.ml[57,1944+31]..[57,1944+32])
+                              ]
+                        ]
+                        expression (lib/Tabulate.ml[58,1980+4]..[59,1993+15])
+                          Pexp_fun
+                          Nolabel
+                          None
+                          pattern (lib/Tabulate.ml[58,1980+8]..[58,1980+9])
+                            Ppat_var "x" (lib/Tabulate.ml[58,1980+8]..[58,1980+9])
+                          expression (lib/Tabulate.ml[59,1993+6]..[59,1993+15])
+                            Pexp_apply
+                            expression (lib/Tabulate.ml[59,1993+6]..[59,1993+15]) ghost
+                              Pexp_ident "Array.get" (lib/Tabulate.ml[59,1993+6]..[59,1993+15]) ghost
+                            [
+                              <arg>
+                              Nolabel
+                                expression (lib/Tabulate.ml[59,1993+6]..[59,1993+11])
+                                  Pexp_ident "table" (lib/Tabulate.ml[59,1993+6]..[59,1993+11])
+                              <arg>
+                              Nolabel
+                                expression (lib/Tabulate.ml[59,1993+13]..[59,1993+14])
+                                  Pexp_ident "x" (lib/Tabulate.ml[59,1993+13]..[59,1993+14])
+                            ]
+                      core_type (lib/Tabulate.ml[56,1899+33]..[56,1899+42])
+                        Ptyp_arrow
+                        Nolabel
+                        core_type (lib/Tabulate.ml[56,1899+33]..[56,1899+36])
+                          Ptyp_constr "key" (lib/Tabulate.ml[56,1899+33]..[56,1899+36])
+                          []
+                        core_type (lib/Tabulate.ml[56,1899+40]..[56,1899+42])
+                          Ptyp_var a
+              ]
+          ]
+  structure_item (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+          Ppat_construct "()" (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+          None
+        expression (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+          Pexp_apply
+          expression (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+          Ppat_construct "()" (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+          None
+        expression (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+          Pexp_apply
+          expression (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+                Pexp_construct "()" (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+          Ppat_construct "()" (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+          None
+        expression (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+          Pexp_apply
+          expression (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+                Pexp_construct "()" (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+          Ppat_construct "()" (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+          None
+        expression (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+          Pexp_apply
+          expression (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/Tabulate.ml[61,2010+3]..[61,2010+3]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set ~absolute_filename:"lib/Tabulate.ml"
+let () =
+  Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "Tabulate.ml"
+open Sigs
+module Make(F:FINITE_TYPE)(M:MINIMAL_IMPERATIVE_MAPS with type  key =  F.t) =
+  struct
+    type key = M.key
+    let tabulate (f : key -> 'a) =
+      (let table = M.create () in
+       F.foreach (fun x -> M.add x (f x) table);
+       (fun x ->
+          try M.find x table
+          with
+          | Not_found ->
+              let msg =
+                Printf.sprintf
+                  "\n  Fix.Tabulate says: please check that your \"foreach\" function is exhaustive.\n  %s\n"
+                  __LOC__ in
+              raise (Invalid_argument msg)) : key -> 'a)
+  end
+module ForOrderedType(F:FINITE_TYPE)(T:OrderedType with type  t =  F.t) =
+  ((Make)(F))((Glue.PersistentMapsToImperativeMaps)((Map.Make)(T)))
+module ForHashedType(F:FINITE_TYPE)(T:HashedType with type  t =  F.t) =
+  ((Make)(F))((Glue.HashTablesAsImperativeMaps)(T))
+module ForType(F:FINITE_TYPE) =
+  ((ForHashedType)(F))((Glue.TrivialHashedType)(F))
+module ForIntSegment(K:sig val n : int end) =
+  struct
+    type key = int
+    let tabulate (f : key -> 'a) =
+      (let table = Array.init K.n f in fun x -> table.(x) : key -> 'a)
+  end
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+                Texp_constant Const_string("lib/Tabulate.ml",(lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+          Texp_apply
+          expression (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost
+                Texp_constant Const_string("Tabulate.ml",(lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Tabulate.ml[13,893+0]..lib/Tabulate.ml[13,893+9])
+    Tstr_open Fresh
+    module_expr (lib/Tabulate.ml[13,893+5]..lib/Tabulate.ml[13,893+9])
+      Tmod_ident "Gbnf_parser!.Sigs"
+  structure_item (lib/Tabulate.ml[15,904+0]..lib/Tabulate.ml[35,1468+3])
+    Tstr_module
+    Make/1229
+      module_expr (lib/Tabulate.ml[16,916+2]..lib/Tabulate.ml[35,1468+3])
+        Tmod_functor "F/1172"
+        module_type (lib/Tabulate.ml[16,916+7]..lib/Tabulate.ml[16,916+18])
+          Tmty_ident "Gbnf_parser!.Sigs.FINITE_TYPE"
+        module_expr (lib/Tabulate.ml[17,936+2]..lib/Tabulate.ml[35,1468+3])
+          Tmod_functor "M/1184"
+          module_type (lib/Tabulate.ml[17,936+7]..lib/Tabulate.ml[17,936+50])
+            Tmty_with
+            module_type (lib/Tabulate.ml[17,936+7]..lib/Tabulate.ml[17,936+30])
+              Tmty_ident "Gbnf_parser!.Sigs.MINIMAL_IMPERATIVE_MAPS"
+            [
+              "key/1173"
+                Twith_type
+                  type_declaration key/1173 (lib/Tabulate.ml[17,936+36]..lib/Tabulate.ml[17,936+50])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ttype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (lib/Tabulate.ml[17,936+47]..lib/Tabulate.ml[17,936+50])
+                          Ttyp_constr "F/1172.t"
+                          []
+            ]
+          module_expr (lib/Tabulate.ml[18,988+2]..lib/Tabulate.ml[35,1468+3])
+            Tmod_structure
+            [
+              structure_item (lib/Tabulate.ml[20,998+2]..lib/Tabulate.ml[20,998+18])
+                Tstr_type Rec
+                [
+                  type_declaration key/1185 (lib/Tabulate.ml[20,998+2]..lib/Tabulate.ml[20,998+18])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ttype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (lib/Tabulate.ml[20,998+13]..lib/Tabulate.ml[20,998+18])
+                          Ttyp_constr "M/1184.key"
+                          []
+                ]
+              structure_item (lib/Tabulate.ml[22,1018+2]..lib/Tabulate.ml[33,1430+36])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (lib/Tabulate.ml[22,1018+6]..lib/Tabulate.ml[22,1018+14])
+                      Tpat_var "tabulate/1186"
+                    expression (lib/Tabulate.ml[22,1018+15]..lib/Tabulate.ml[33,1430+36]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/Tabulate.ml[22,1018+16]..lib/Tabulate.ml[22,1018+17])
+                            extra
+                              Tpat_extra_constraint
+                              core_type (lib/Tabulate.ml[22,1018+20]..lib/Tabulate.ml[22,1018+29])
+                                Ttyp_arrow
+                                Nolabel
+                                core_type (lib/Tabulate.ml[22,1018+20]..lib/Tabulate.ml[22,1018+23])
+                                  Ttyp_constr "key/1185"
+                                  []
+                                core_type (lib/Tabulate.ml[22,1018+27]..lib/Tabulate.ml[22,1018+29])
+                                  Ttyp_var a
+                            Tpat_alias "f/1188"
+                            pattern (lib/Tabulate.ml[22,1018+16]..lib/Tabulate.ml[22,1018+17])
+                              Tpat_any
+                          expression (lib/Tabulate.ml[23,1063+4]..lib/Tabulate.ml[33,1430+36])
+                            extra
+                              Texp_constraint
+                              core_type (lib/Tabulate.ml[22,1018+33]..lib/Tabulate.ml[22,1018+42])
+                                Ttyp_arrow
+                                Nolabel
+                                core_type (lib/Tabulate.ml[22,1018+33]..lib/Tabulate.ml[22,1018+36])
+                                  Ttyp_constr "key/1185"
+                                  []
+                                core_type (lib/Tabulate.ml[22,1018+40]..lib/Tabulate.ml[22,1018+42])
+                                  Ttyp_var a
+                            Texp_let Nonrec
+                            [
+                              <def>
+                                pattern (lib/Tabulate.ml[23,1063+8]..lib/Tabulate.ml[23,1063+13])
+                                  Tpat_var "table/1189"
+                                expression (lib/Tabulate.ml[23,1063+16]..lib/Tabulate.ml[23,1063+26])
+                                  Texp_apply
+                                  expression (lib/Tabulate.ml[23,1063+16]..lib/Tabulate.ml[23,1063+24])
+                                    Texp_ident "M/1184.create"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/Tabulate.ml[23,1063+24]..lib/Tabulate.ml[23,1063+26])
+                                        Texp_construct "()"
+                                        []
+                                  ]
+                            ]
+                            expression (lib/Tabulate.ml[24,1093+4]..lib/Tabulate.ml[33,1430+36])
+                              Texp_sequence
+                              expression (lib/Tabulate.ml[24,1093+4]..lib/Tabulate.ml[24,1093+44])
+                                Texp_apply
+                                expression (lib/Tabulate.ml[24,1093+4]..lib/Tabulate.ml[24,1093+13])
+                                  Texp_ident "F/1172.foreach"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/Tabulate.ml[24,1093+14]..lib/Tabulate.ml[24,1093+44])
+                                      Texp_function
+                                      Nolabel
+                                      [
+                                        <case>
+                                          pattern (lib/Tabulate.ml[24,1093+19]..lib/Tabulate.ml[24,1093+20])
+                                            Tpat_var "x/1190"
+                                          expression (lib/Tabulate.ml[24,1093+24]..lib/Tabulate.ml[24,1093+43])
+                                            Texp_apply
+                                            expression (lib/Tabulate.ml[24,1093+24]..lib/Tabulate.ml[24,1093+29])
+                                              Texp_ident "M/1184.add"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/Tabulate.ml[24,1093+30]..lib/Tabulate.ml[24,1093+31])
+                                                  Texp_ident "x/1190"
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/Tabulate.ml[24,1093+32]..lib/Tabulate.ml[24,1093+37])
+                                                  Texp_apply
+                                                  expression (lib/Tabulate.ml[24,1093+33]..lib/Tabulate.ml[24,1093+34])
+                                                    Texp_ident "f/1188"
+                                                  [
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (lib/Tabulate.ml[24,1093+35]..lib/Tabulate.ml[24,1093+36])
+                                                        Texp_ident "x/1190"
+                                                  ]
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/Tabulate.ml[24,1093+38]..lib/Tabulate.ml[24,1093+43])
+                                                  Texp_ident "table/1189"
+                                            ]
+                                      ]
+                                ]
+                              expression (lib/Tabulate.ml[25,1139+4]..lib/Tabulate.ml[33,1430+36])
+                                Texp_function
+                                Nolabel
+                                [
+                                  <case>
+                                    pattern (lib/Tabulate.ml[25,1139+8]..lib/Tabulate.ml[25,1139+9])
+                                      Tpat_var "x/1191"
+                                    expression (lib/Tabulate.ml[26,1152+6]..lib/Tabulate.ml[33,1430+36])
+                                      Texp_try
+                                      expression (lib/Tabulate.ml[27,1162+8]..lib/Tabulate.ml[27,1162+22])
+                                        Texp_apply
+                                        expression (lib/Tabulate.ml[27,1162+8]..lib/Tabulate.ml[27,1162+14])
+                                          Texp_ident "M/1184.find"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/Tabulate.ml[27,1162+15]..lib/Tabulate.ml[27,1162+16])
+                                              Texp_ident "x/1191"
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/Tabulate.ml[27,1162+17]..lib/Tabulate.ml[27,1162+22])
+                                              Texp_ident "table/1189"
+                                        ]
+                                      [
+                                        <case>
+                                          pattern (lib/Tabulate.ml[28,1185+11]..lib/Tabulate.ml[28,1185+20])
+                                            Tpat_construct "Not_found"
+                                            []
+                                            None
+                                          expression (lib/Tabulate.ml[30,1270+8]..lib/Tabulate.ml[33,1430+36])
+                                            Texp_let Nonrec
+                                            [
+                                              <def>
+                                                pattern (lib/Tabulate.ml[30,1270+12]..lib/Tabulate.ml[30,1270+15])
+                                                  Tpat_var "msg/1192"
+                                                expression (lib/Tabulate.ml[30,1270+18]..lib/Tabulate.ml[32,1388+38])
+                                                  Texp_apply
+                                                  expression (lib/Tabulate.ml[30,1270+18]..lib/Tabulate.ml[30,1270+32])
+                                                    Texp_ident "Stdlib!.Printf.sprintf"
+                                                  [
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (lib/Tabulate.ml[30,1270+33]..lib/Tabulate.ml[32,1388+30])
+                                                        Texp_construct "CamlinternalFormatBasics.Format"
+                                                        [
+                                                          expression (lib/Tabulate.ml[30,1270+33]..lib/Tabulate.ml[32,1388+30]) ghost
+                                                            Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                            [
+                                                              expression (lib/Tabulate.ml[30,1270+33]..lib/Tabulate.ml[32,1388+30]) ghost
+                                                                Texp_constant Const_string("\n  Fix.Tabulate says: please check that your \"foreach\" function is exhaustive.\n  ",(lib/Tabulate.ml[30,1270+33]..lib/Tabulate.ml[32,1388+30]) ghost,None)
+                                                              expression (lib/Tabulate.ml[30,1270+33]..lib/Tabulate.ml[32,1388+30]) ghost
+                                                                Texp_construct "CamlinternalFormatBasics.String"
+                                                                [
+                                                                  expression (lib/Tabulate.ml[30,1270+33]..lib/Tabulate.ml[32,1388+30]) ghost
+                                                                    Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                                    []
+                                                                  expression (lib/Tabulate.ml[30,1270+33]..lib/Tabulate.ml[32,1388+30]) ghost
+                                                                    Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                                                    [
+                                                                      expression (lib/Tabulate.ml[30,1270+33]..lib/Tabulate.ml[32,1388+30]) ghost
+                                                                        Texp_constant Const_char 0a
+                                                                      expression (lib/Tabulate.ml[30,1270+33]..lib/Tabulate.ml[32,1388+30]) ghost
+                                                                        Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                                        []
+                                                                    ]
+                                                                ]
+                                                            ]
+                                                          expression (lib/Tabulate.ml[30,1270+33]..lib/Tabulate.ml[32,1388+30]) ghost
+                                                            Texp_constant Const_string("\n  Fix.Tabulate says: please check that your \"foreach\" function is exhaustive.\n  %s\n",(lib/Tabulate.ml[30,1270+33]..lib/Tabulate.ml[32,1388+30]) ghost,None)
+                                                        ]
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (lib/Tabulate.ml[32,1388+31]..lib/Tabulate.ml[32,1388+38])
+                                                        Texp_ident "Stdlib!.__LOC__"
+                                                  ]
+                                            ]
+                                            expression (lib/Tabulate.ml[33,1430+8]..lib/Tabulate.ml[33,1430+36])
+                                              Texp_apply
+                                              expression (lib/Tabulate.ml[33,1430+8]..lib/Tabulate.ml[33,1430+13])
+                                                Texp_ident "Stdlib!.raise"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/Tabulate.ml[33,1430+14]..lib/Tabulate.ml[33,1430+36])
+                                                    Texp_construct "Invalid_argument"
+                                                    [
+                                                      expression (lib/Tabulate.ml[33,1430+32]..lib/Tabulate.ml[33,1430+35])
+                                                        Texp_ident "msg/1192"
+                                                    ]
+                                              ]
+                                      ]
+                                ]
+                      ]
+                ]
+            ]
+  structure_item (lib/Tabulate.ml[37,1473+0]..lib/Tabulate.ml[41,1555+59])
+    Tstr_module
+    ForOrderedType/1604
+      module_expr (lib/Tabulate.ml[38,1495+2]..lib/Tabulate.ml[41,1555+59])
+        Tmod_functor "F/1230"
+        module_type (lib/Tabulate.ml[38,1495+7]..lib/Tabulate.ml[38,1495+18])
+          Tmty_ident "Gbnf_parser!.Sigs.FINITE_TYPE"
+        module_expr (lib/Tabulate.ml[39,1515+2]..lib/Tabulate.ml[41,1555+59])
+          Tmod_functor "T/1245"
+          module_type (lib/Tabulate.ml[39,1515+7]..lib/Tabulate.ml[39,1515+36])
+            Tmty_with
+            module_type (lib/Tabulate.ml[39,1515+7]..lib/Tabulate.ml[39,1515+18])
+              Tmty_ident "Gbnf_parser!.Sigs.OrderedType"
+            [
+              "t/1240"
+                Twith_type
+                  type_declaration t/1240 (lib/Tabulate.ml[39,1515+24]..lib/Tabulate.ml[39,1515+36])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ttype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (lib/Tabulate.ml[39,1515+33]..lib/Tabulate.ml[39,1515+36])
+                          Ttyp_constr "F/1230.t"
+                          []
+            ]
+          module_expr (lib/Tabulate.ml[41,1555+2]..lib/Tabulate.ml[41,1555+59])
+            Tmod_apply
+            module_expr (lib/Tabulate.ml[41,1555+2]..lib/Tabulate.ml[41,1555+9])
+              Tmod_apply
+              module_expr (lib/Tabulate.ml[41,1555+2]..lib/Tabulate.ml[41,1555+6])
+                Tmod_ident "Make/1229"
+              module_expr (lib/Tabulate.ml[41,1555+7]..lib/Tabulate.ml[41,1555+8])
+                Tmod_ident "F/1230"
+            module_expr (lib/Tabulate.ml[41,1555+10]..lib/Tabulate.ml[41,1555+58])
+              Tmod_apply
+              module_expr (lib/Tabulate.ml[41,1555+10]..lib/Tabulate.ml[41,1555+45])
+                module_expr (lib/Tabulate.ml[41,1555+10]..lib/Tabulate.ml[41,1555+45])
+                  Tmod_ident "Gbnf_parser!.Glue.PersistentMapsToImperativeMaps"
+              module_expr (lib/Tabulate.ml[41,1555+46]..lib/Tabulate.ml[41,1555+57])
+                Tmod_apply
+                module_expr (lib/Tabulate.ml[41,1555+46]..lib/Tabulate.ml[41,1555+54])
+                  module_expr (lib/Tabulate.ml[41,1555+46]..lib/Tabulate.ml[41,1555+54])
+                    Tmod_ident "Stdlib!.Map.Make"
+                module_expr (lib/Tabulate.ml[41,1555+55]..lib/Tabulate.ml[41,1555+56])
+                  Tmod_ident "T/1245"
+  structure_item (lib/Tabulate.ml[43,1616+0]..lib/Tabulate.ml[47,1696+45])
+    Tstr_module
+    ForHashedType/1872
+      module_expr (lib/Tabulate.ml[44,1637+2]..lib/Tabulate.ml[47,1696+45])
+        Tmod_functor "F/1605"
+        module_type (lib/Tabulate.ml[44,1637+7]..lib/Tabulate.ml[44,1637+18])
+          Tmty_ident "Gbnf_parser!.Sigs.FINITE_TYPE"
+        module_expr (lib/Tabulate.ml[45,1657+2]..lib/Tabulate.ml[47,1696+45])
+          Tmod_functor "T/1693"
+          module_type (lib/Tabulate.ml[45,1657+7]..lib/Tabulate.ml[45,1657+35])
+            Tmty_with
+            module_type (lib/Tabulate.ml[45,1657+7]..lib/Tabulate.ml[45,1657+17])
+              Tmty_ident "Gbnf_parser!.Sigs.HashedType"
+            [
+              "t/1686"
+                Twith_type
+                  type_declaration t/1686 (lib/Tabulate.ml[45,1657+23]..lib/Tabulate.ml[45,1657+35])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ttype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (lib/Tabulate.ml[45,1657+32]..lib/Tabulate.ml[45,1657+35])
+                          Ttyp_constr "F/1605.t"
+                          []
+            ]
+          module_expr (lib/Tabulate.ml[47,1696+2]..lib/Tabulate.ml[47,1696+45])
+            Tmod_apply
+            module_expr (lib/Tabulate.ml[47,1696+2]..lib/Tabulate.ml[47,1696+9])
+              Tmod_apply
+              module_expr (lib/Tabulate.ml[47,1696+2]..lib/Tabulate.ml[47,1696+6])
+                Tmod_ident "Make/1229"
+              module_expr (lib/Tabulate.ml[47,1696+7]..lib/Tabulate.ml[47,1696+8])
+                Tmod_ident "F/1605"
+            module_expr (lib/Tabulate.ml[47,1696+10]..lib/Tabulate.ml[47,1696+44])
+              Tmod_apply
+              module_expr (lib/Tabulate.ml[47,1696+10]..lib/Tabulate.ml[47,1696+41])
+                module_expr (lib/Tabulate.ml[47,1696+10]..lib/Tabulate.ml[47,1696+41])
+                  Tmod_ident "Gbnf_parser!.Glue.HashTablesAsImperativeMaps"
+              module_expr (lib/Tabulate.ml[47,1696+42]..lib/Tabulate.ml[47,1696+43])
+                Tmod_ident "T/1693"
+  structure_item (lib/Tabulate.ml[49,1743+0]..lib/Tabulate.ml[50,1778+45])
+    Tstr_module
+    ForType/1889
+      module_expr (lib/Tabulate.ml[49,1743+15]..lib/Tabulate.ml[50,1778+45])
+        Tmod_functor "F/1873"
+        module_type (lib/Tabulate.ml[49,1743+20]..lib/Tabulate.ml[49,1743+31])
+          Tmty_ident "Gbnf_parser!.Sigs.FINITE_TYPE"
+        module_expr (lib/Tabulate.ml[50,1778+2]..lib/Tabulate.ml[50,1778+45])
+          Tmod_apply
+          module_expr (lib/Tabulate.ml[50,1778+2]..lib/Tabulate.ml[50,1778+18])
+            Tmod_apply
+            module_expr (lib/Tabulate.ml[50,1778+2]..lib/Tabulate.ml[50,1778+15])
+              Tmod_ident "ForHashedType/1872"
+            module_expr (lib/Tabulate.ml[50,1778+16]..lib/Tabulate.ml[50,1778+17])
+              Tmod_ident "F/1873"
+          module_expr (lib/Tabulate.ml[50,1778+19]..lib/Tabulate.ml[50,1778+44])
+            Tmod_apply
+            module_expr (lib/Tabulate.ml[50,1778+19]..lib/Tabulate.ml[50,1778+41])
+              module_expr (lib/Tabulate.ml[50,1778+19]..lib/Tabulate.ml[50,1778+41])
+                Tmod_ident "Gbnf_parser!.Glue.TrivialHashedType"
+            module_expr (lib/Tabulate.ml[50,1778+42]..lib/Tabulate.ml[50,1778+43])
+              Tmod_ident "F/1873"
+  structure_item (lib/Tabulate.ml[52,1825+0]..lib/Tabulate.ml[61,2010+3])
+    Tstr_module
+    ForIntSegment/1945
+      module_expr (lib/Tabulate.ml[52,1825+21]..lib/Tabulate.ml[61,2010+3])
+        Tmod_functor "K/1891"
+        module_type (lib/Tabulate.ml[52,1825+26]..lib/Tabulate.ml[52,1825+44])
+          Tmty_signature
+          [
+            signature_item (lib/Tabulate.ml[52,1825+30]..lib/Tabulate.ml[52,1825+40])
+              Tsig_value
+              value_description n/1890 (lib/Tabulate.ml[52,1825+30]..lib/Tabulate.ml[52,1825+40])
+                core_type (lib/Tabulate.ml[52,1825+37]..lib/Tabulate.ml[52,1825+40])
+                  Ttyp_constr "int/1!"
+                  []
+                []
+          ]
+        module_expr (lib/Tabulate.ml[52,1825+48]..lib/Tabulate.ml[61,2010+3])
+          Tmod_structure
+          [
+            structure_item (lib/Tabulate.ml[54,1881+2]..lib/Tabulate.ml[54,1881+16])
+              Tstr_type Rec
+              [
+                type_declaration key/1892 (lib/Tabulate.ml[54,1881+2]..lib/Tabulate.ml[54,1881+16])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ttype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    Some
+                      core_type (lib/Tabulate.ml[54,1881+13]..lib/Tabulate.ml[54,1881+16])
+                        Ttyp_constr "int/1!"
+                        []
+              ]
+            structure_item (lib/Tabulate.ml[56,1899+2]..lib/Tabulate.ml[59,1993+15])
+              Tstr_value Nonrec
+              [
+                <def>
+                  pattern (lib/Tabulate.ml[56,1899+6]..lib/Tabulate.ml[56,1899+14])
+                    Tpat_var "tabulate/1893"
+                  expression (lib/Tabulate.ml[56,1899+15]..lib/Tabulate.ml[59,1993+15]) ghost
+                    Texp_function
+                    Nolabel
+                    [
+                      <case>
+                        pattern (lib/Tabulate.ml[56,1899+16]..lib/Tabulate.ml[56,1899+17])
+                          extra
+                            Tpat_extra_constraint
+                            core_type (lib/Tabulate.ml[56,1899+20]..lib/Tabulate.ml[56,1899+29])
+                              Ttyp_arrow
+                              Nolabel
+                              core_type (lib/Tabulate.ml[56,1899+20]..lib/Tabulate.ml[56,1899+23])
+                                Ttyp_constr "key/1892"
+                                []
+                              core_type (lib/Tabulate.ml[56,1899+27]..lib/Tabulate.ml[56,1899+29])
+                                Ttyp_var a
+                          Tpat_alias "f/1895"
+                          pattern (lib/Tabulate.ml[56,1899+16]..lib/Tabulate.ml[56,1899+17])
+                            Tpat_any
+                        expression (lib/Tabulate.ml[57,1944+4]..lib/Tabulate.ml[59,1993+15])
+                          extra
+                            Texp_constraint
+                            core_type (lib/Tabulate.ml[56,1899+33]..lib/Tabulate.ml[56,1899+42])
+                              Ttyp_arrow
+                              Nolabel
+                              core_type (lib/Tabulate.ml[56,1899+33]..lib/Tabulate.ml[56,1899+36])
+                                Ttyp_constr "key/1892"
+                                []
+                              core_type (lib/Tabulate.ml[56,1899+40]..lib/Tabulate.ml[56,1899+42])
+                                Ttyp_var a
+                          Texp_let Nonrec
+                          [
+                            <def>
+                              pattern (lib/Tabulate.ml[57,1944+8]..lib/Tabulate.ml[57,1944+13])
+                                Tpat_var "table/1896"
+                              expression (lib/Tabulate.ml[57,1944+16]..lib/Tabulate.ml[57,1944+32])
+                                Texp_apply
+                                expression (lib/Tabulate.ml[57,1944+16]..lib/Tabulate.ml[57,1944+26])
+                                  Texp_ident "Stdlib!.Array.init"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/Tabulate.ml[57,1944+27]..lib/Tabulate.ml[57,1944+30])
+                                      Texp_ident "K/1891.n"
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/Tabulate.ml[57,1944+31]..lib/Tabulate.ml[57,1944+32])
+                                      Texp_ident "f/1895"
+                                ]
+                          ]
+                          expression (lib/Tabulate.ml[58,1980+4]..lib/Tabulate.ml[59,1993+15])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (lib/Tabulate.ml[58,1980+8]..lib/Tabulate.ml[58,1980+9])
+                                  Tpat_var "x/1944"
+                                expression (lib/Tabulate.ml[59,1993+6]..lib/Tabulate.ml[59,1993+15])
+                                  Texp_apply
+                                  expression (lib/Tabulate.ml[59,1993+6]..lib/Tabulate.ml[59,1993+15]) ghost
+                                    Texp_ident "Stdlib!.Array.get"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/Tabulate.ml[59,1993+6]..lib/Tabulate.ml[59,1993+11])
+                                        Texp_ident "table/1896"
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/Tabulate.ml[59,1993+13]..lib/Tabulate.ml[59,1993+14])
+                                        Texp_ident "x/1944"
+                                  ]
+                            ]
+                    ]
+              ]
+          ]
+  structure_item (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+          Texp_apply
+          expression (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost,None)
+          ]
+    ]
+  structure_item (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+          Texp_apply
+          expression (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+          Texp_apply
+          expression (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+          Texp_apply
+          expression (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/Tabulate.ml[61,2010+3]..lib/Tabulate.ml[61,2010+3]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__Tabulate>
+ "ForHashedType"[module] ->
+     Abs<Gbnf_parser__Tabulate.18>
+        (F/1605,
+         Abs
+            (T/1693,
+             {
+              "key"[type] -> <Gbnf_parser__Tabulate.3>;
+              "tabulate"[value] -> <Gbnf_parser__Tabulate.4>;
+              }));
+ "ForIntSegment"[module] ->
+     Abs<Gbnf_parser__Tabulate.28>
+        (K/1891,
+         {
+          "key"[type] -> <Gbnf_parser__Tabulate.23>;
+          "tabulate"[value] -> <Gbnf_parser__Tabulate.24>;
+          });
+ "ForOrderedType"[module] ->
+     Abs<Gbnf_parser__Tabulate.14>
+        (F/1230,
+         Abs
+            (T/1245,
+             {
+              "key"[type] -> <Gbnf_parser__Tabulate.3>;
+              "tabulate"[value] -> <Gbnf_parser__Tabulate.4>;
+              }));
+ "ForType"[module] ->
+     Abs<Gbnf_parser__Tabulate.20>
+        (F/1873,
+         {
+          "key"[type] -> <Gbnf_parser__Tabulate.3>;
+          "tabulate"[value] -> <Gbnf_parser__Tabulate.4>;
+          });
+ "Make"[module] ->
+     Abs<Gbnf_parser__Tabulate.10>
+        (F/1172,
+         Abs
+            (M/1184,
+             {
+              "key"[type] -> <Gbnf_parser__Tabulate.3>;
+              "tabulate"[value] -> <Gbnf_parser__Tabulate.4>;
+              }));
+ }
+
+(setglobal Gbnf_parser__Tabulate!
+  (let
+    (*match*/2398 =
+       (after Gbnf_parser__Tabulate lib/Tabulate.ml(13)<ghost>:893-893
+         (apply (field 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Tabulate"))
+     *match*/2396 =
+       (after Gbnf_parser__Tabulate lib/Tabulate.ml(13)<ghost>:893-893
+         (apply
+           (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/2394 =
+       (after Gbnf_parser__Tabulate lib/Tabulate.ml(13)<ghost>:893-893
+         (apply (field 0 (field 5 (global Expect_test_collector!)))
+           "lib/Tabulate.ml"))
+     *match*/2392 =
+       (after Gbnf_parser__Tabulate lib/Tabulate.ml(13)<ghost>:893-893
+         (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "Tabulate.ml"))
+     Make/1229 =
+       (module-defn(Make/1229) Gbnf_parser__Tabulate lib/Tabulate.ml(15):904-1471
+         (function F/2369 M/2368 is_a_functor
+           (let
+             (F/1172 =a F/2369
+              M/1184 =a M/2368
+              tabulate/1186 =
+                (function f/1188
+                  (funct-body Gbnf_parser__Tabulate.Make.tabulate lib/Tabulate.ml(22)<ghost>:1033-1466
+                    (before Gbnf_parser__Tabulate.Make.tabulate lib/Tabulate.ml(23):1067-1466
+                      (let
+                        (table/1189 =
+                           (after Gbnf_parser__Tabulate.Make.tabulate lib/Tabulate.ml(23):1079-1089
+                             (apply (field 0 M/1184) 0)))
+                        (before Gbnf_parser__Tabulate.Make.tabulate lib/Tabulate.ml(24):1097-1466
+                          (seq
+                            (after Gbnf_parser__Tabulate.Make.tabulate lib/Tabulate.ml(24):1097-1137
+                              (apply (field 0 F/1172)
+                                (function x/1190 : int
+                                  (funct-body Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(24):1107-1137
+                                    (before Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(24):1117-1136
+                                      (after Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(24):1117-1136
+                                        (apply (field 1 M/1184) x/1190
+                                          (after Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(24):1125-1130
+                                            (apply f/1188 x/1190))
+                                          table/1189)))))))
+                            (before Gbnf_parser__Tabulate.Make.tabulate lib/Tabulate.ml(25):1143-1466
+                              (function x/1191
+                                (funct-body Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(25):1143-1466
+                                  (before Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(26):1158-1466
+                                    (try
+                                      (after Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(27):1170-1184
+                                        (apply (field 2 M/1184) x/1191
+                                          table/1189))
+                                     with exn/2367
+                                      (catch
+                                        (if
+                                          (== exn/2367
+                                            (field 7 (global Stdlib!)))
+                                          (before Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(30):1278-1466
+                                            (let
+                                              (msg/1192 =
+                                                 (after Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(30):1288-1426
+                                                   (apply
+                                                     (field 3
+                                                       (global Stdlib__Printf!))
+                                                     [0:
+                                                      [11:
+                                                       "\n  Fix.Tabulate says: please check that your \"foreach\" function is exhaustive.\n  "
+                                                       [2: 0 [12: '\n' 0]]]
+                                                      "\n  Fix.Tabulate says: please check that your \"foreach\" function is exhaustive.\n  %s\n"]
+                                                     #"File \"lib/Tabulate.ml\", line 32, characters 31-38")))
+                                              (before Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(33):1438-1466
+                                                (raise
+                                                  (after Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(33):1438-1466
+                                                    (makeblock 0
+                                                      (field 5
+                                                        (global Stdlib!))
+                                                      msg/1192))))))
+                                          (exit 1))
+                                       with (1) (reraise exn/2367))))))))))))))
+             (pseudo Gbnf_parser__Tabulate.Make lib/Tabulate.ml(18):990-1471
+               (makeblock 0 tabulate/1186)))))
+     ForOrderedType/1604 =
+       (module-defn(ForOrderedType/1604) Gbnf_parser__Tabulate lib/Tabulate.ml(37):1473-1614
+         (function F/2375 T/2374 is_a_functor
+           (let (F/1230 =a F/2375 T/1245 =a T/2374)
+             (apply (apply Make/1229 F/1230)
+               (let
+                 (let/2373 =
+                    (apply
+                      (let (let/2372 = (field 9 (global Gbnf_parser__Glue!)))
+                        (field 9 (global Gbnf_parser__Glue!)))
+                      (let
+                        (let/2371 =
+                           (apply
+                             (let
+                               (let/2370 = (field 0 (global Stdlib__Map!)))
+                               (field 0 (global Stdlib__Map!)))
+                             T/1245))
+                        (makeblock 0 (field 0 let/2371) (field 3 let/2371)
+                          (field 27 let/2371) (field 11 let/2371)))))
+                 (makeblock 0 (field 0 let/2373) (field 2 let/2373)
+                   (field 3 let/2373)))))))
+     ForHashedType/1872 =
+       (module-defn(ForHashedType/1872) Gbnf_parser__Tabulate lib/Tabulate.ml(43):1616-1741
+         (function F/2379 T/2378 is_a_functor
+           (let (F/1605 =a F/2379 T/1693 =a T/2378)
+             (apply (apply Make/1229 F/1605)
+               (let
+                 (let/2377 =
+                    (apply
+                      (let
+                        (let/2376 = (field 12 (global Gbnf_parser__Glue!)))
+                        (field 12 (global Gbnf_parser__Glue!)))
+                      T/1693))
+                 (makeblock 0 (field 19 let/2377) (field 20 let/2377)
+                   (field 21 let/2377)))))))
+     ForType/1889 =
+       (module-defn(ForType/1889) Gbnf_parser__Tabulate lib/Tabulate.ml(49):1743-1823
+         (function F/2381 is_a_functor
+           (let (F/1873 =a F/2381)
+             (apply (apply ForHashedType/1872 F/1873)
+               (apply
+                 (let (let/2380 = (field 4 (global Gbnf_parser__Glue!)))
+                   (field 4 (global Gbnf_parser__Glue!)))
+                 (makeblock 0))))))
+     ForIntSegment/1945 =
+       (module-defn(ForIntSegment/1945) Gbnf_parser__Tabulate lib/Tabulate.ml(52):1825-2013
+         (function K/2382 is_a_functor
+           (let
+             (K/1891 =a K/2382
+              tabulate/1893 =
+                (function f/1895
+                  (funct-body Gbnf_parser__Tabulate.ForIntSegment.tabulate lib/Tabulate.ml(56)<ghost>:1914-2008
+                    (before Gbnf_parser__Tabulate.ForIntSegment.tabulate lib/Tabulate.ml(57):1948-2008
+                      (let
+                        (table/1896 =
+                           (after Gbnf_parser__Tabulate.ForIntSegment.tabulate lib/Tabulate.ml(57):1960-1976
+                             (apply (field 1 (global Stdlib__Array!))
+                               (field 0 K/1891) f/1895)))
+                        (before Gbnf_parser__Tabulate.ForIntSegment.tabulate lib/Tabulate.ml(58):1984-2008
+                          (function x/1944[int]
+                            (funct-body Gbnf_parser__Tabulate.ForIntSegment.tabulate.(fun) lib/Tabulate.ml(58):1984-2008
+                              (before Gbnf_parser__Tabulate.ForIntSegment.tabulate.(fun) lib/Tabulate.ml(59):1999-2008
+                                (after Gbnf_parser__Tabulate.ForIntSegment.tabulate.(fun) lib/Tabulate.ml(59):1999-2008
+                                  (array.get[gen] table/1896 x/1944)))))))))))
+             (pseudo Gbnf_parser__Tabulate.ForIntSegment lib/Tabulate.ml(52):1873-2013
+               (makeblock 0 tabulate/1893)))))
+     *match*/2390 =
+       (after Gbnf_parser__Tabulate lib/Tabulate.ml(61)<ghost>:2013-2013
+         (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/2388 =
+       (after Gbnf_parser__Tabulate lib/Tabulate.ml(61)<ghost>:2013-2013
+         (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+     *match*/2386 =
+       (after Gbnf_parser__Tabulate lib/Tabulate.ml(61)<ghost>:2013-2013
+         (apply
+           (field 1 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/2384 =
+       (after Gbnf_parser__Tabulate lib/Tabulate.ml(61)<ghost>:2013-2013
+         (apply (field 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Tabulate")))
+    (pseudo <unknown location>
+      (makeblock 0 Make/1229 ForOrderedType/1604 ForHashedType/1872
+        ForType/1889 ForIntSegment/1945))))
+(setglobal Gbnf_parser__Tabulate!
+  (let
+    (*match*/2398 =
+       (after Gbnf_parser__Tabulate lib/Tabulate.ml(13)<ghost>:893-893
+         (apply (field 3 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Tabulate"))
+     *match*/2396 =
+       (after Gbnf_parser__Tabulate lib/Tabulate.ml(13)<ghost>:893-893
+         (apply
+           (field 0 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           "gbnf_parser"))
+     *match*/2394 =
+       (after Gbnf_parser__Tabulate lib/Tabulate.ml(13)<ghost>:893-893
+         (apply (field 0 (field 5 (global Expect_test_collector!)))
+           "lib/Tabulate.ml"))
+     *match*/2392 =
+       (after Gbnf_parser__Tabulate lib/Tabulate.ml(13)<ghost>:893-893
+         (apply (field 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+           "Tabulate.ml"))
+     Make/1229 =
+       (module-defn(Make/1229) Gbnf_parser__Tabulate lib/Tabulate.ml(15):904-1471
+         (function F/2369 M/2368 is_a_functor
+           (let
+             (F/1172 =a F/2369
+              M/1184 =a M/2368
+              tabulate/1186 =
+                (function f/1188
+                  (funct-body Gbnf_parser__Tabulate.Make.tabulate lib/Tabulate.ml(22)<ghost>:1033-1466
+                    (before Gbnf_parser__Tabulate.Make.tabulate lib/Tabulate.ml(23):1067-1466
+                      (let
+                        (table/1189 =
+                           (after Gbnf_parser__Tabulate.Make.tabulate lib/Tabulate.ml(23):1079-1089
+                             (apply (field 0 M/1184) 0)))
+                        (before Gbnf_parser__Tabulate.Make.tabulate lib/Tabulate.ml(24):1097-1466
+                          (seq
+                            (after Gbnf_parser__Tabulate.Make.tabulate lib/Tabulate.ml(24):1097-1137
+                              (apply (field 0 F/1172)
+                                (function x/1190 : int
+                                  (funct-body Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(24):1107-1137
+                                    (before Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(24):1117-1136
+                                      (after Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(24):1117-1136
+                                        (apply (field 1 M/1184) x/1190
+                                          (after Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(24):1125-1130
+                                            (apply f/1188 x/1190))
+                                          table/1189)))))))
+                            (before Gbnf_parser__Tabulate.Make.tabulate lib/Tabulate.ml(25):1143-1466
+                              (function x/1191
+                                (funct-body Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(25):1143-1466
+                                  (before Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(26):1158-1466
+                                    (try
+                                      (after Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(27):1170-1184
+                                        (apply (field 2 M/1184) x/1191
+                                          table/1189))
+                                     with exn/2367
+                                      (if
+                                        (== exn/2367
+                                          (field 7 (global Stdlib!)))
+                                        (before Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(30):1278-1466
+                                          (let
+                                            (msg/1192 =
+                                               (after Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(30):1288-1426
+                                                 (apply
+                                                   (field 3
+                                                     (global Stdlib__Printf!))
+                                                   [0:
+                                                    [11:
+                                                     "\n  Fix.Tabulate says: please check that your \"foreach\" function is exhaustive.\n  "
+                                                     [2: 0 [12: '\n' 0]]]
+                                                    "\n  Fix.Tabulate says: please check that your \"foreach\" function is exhaustive.\n  %s\n"]
+                                                   #"File \"lib/Tabulate.ml\", line 32, characters 31-38")))
+                                            (before Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(33):1438-1466
+                                              (raise
+                                                (after Gbnf_parser__Tabulate.Make.tabulate.(fun) lib/Tabulate.ml(33):1438-1466
+                                                  (makeblock 0
+                                                    (field 5
+                                                      (global Stdlib!))
+                                                    msg/1192))))))
+                                        (reraise exn/2367))))))))))))))
+             (pseudo Gbnf_parser__Tabulate.Make lib/Tabulate.ml(18):990-1471
+               (makeblock 0 tabulate/1186)))))
+     ForOrderedType/1604 =
+       (module-defn(ForOrderedType/1604) Gbnf_parser__Tabulate lib/Tabulate.ml(37):1473-1614
+         (function F/2375 T/2374 is_a_functor
+           (let (F/1230 =a F/2375 T/1245 =a T/2374)
+             (apply (apply Make/1229 F/1230)
+               (let
+                 (let/2373 =
+                    (apply
+                      (let (let/2372 = (field 9 (global Gbnf_parser__Glue!)))
+                        (field 9 (global Gbnf_parser__Glue!)))
+                      (let
+                        (let/2371 =
+                           (apply
+                             (let
+                               (let/2370 = (field 0 (global Stdlib__Map!)))
+                               (field 0 (global Stdlib__Map!)))
+                             T/1245))
+                        (makeblock 0 (field 0 let/2371) (field 3 let/2371)
+                          (field 27 let/2371) (field 11 let/2371)))))
+                 (makeblock 0 (field 0 let/2373) (field 2 let/2373)
+                   (field 3 let/2373)))))))
+     ForHashedType/1872 =
+       (module-defn(ForHashedType/1872) Gbnf_parser__Tabulate lib/Tabulate.ml(43):1616-1741
+         (function F/2379 T/2378 is_a_functor
+           (let (F/1605 =a F/2379 T/1693 =a T/2378)
+             (apply (apply Make/1229 F/1605)
+               (let
+                 (let/2377 =
+                    (apply
+                      (let
+                        (let/2376 = (field 12 (global Gbnf_parser__Glue!)))
+                        (field 12 (global Gbnf_parser__Glue!)))
+                      T/1693))
+                 (makeblock 0 (field 19 let/2377) (field 20 let/2377)
+                   (field 21 let/2377)))))))
+     ForType/1889 =
+       (module-defn(ForType/1889) Gbnf_parser__Tabulate lib/Tabulate.ml(49):1743-1823
+         (function F/2381 is_a_functor
+           (let (F/1873 =a F/2381)
+             (apply (apply ForHashedType/1872 F/1873)
+               (apply
+                 (let (let/2380 = (field 4 (global Gbnf_parser__Glue!)))
+                   (field 4 (global Gbnf_parser__Glue!)))
+                 (makeblock 0))))))
+     ForIntSegment/1945 =
+       (module-defn(ForIntSegment/1945) Gbnf_parser__Tabulate lib/Tabulate.ml(52):1825-2013
+         (function K/2382 is_a_functor
+           (let
+             (K/1891 =a K/2382
+              tabulate/1893 =
+                (function f/1895
+                  (funct-body Gbnf_parser__Tabulate.ForIntSegment.tabulate lib/Tabulate.ml(56)<ghost>:1914-2008
+                    (before Gbnf_parser__Tabulate.ForIntSegment.tabulate lib/Tabulate.ml(57):1948-2008
+                      (let
+                        (table/1896 =
+                           (after Gbnf_parser__Tabulate.ForIntSegment.tabulate lib/Tabulate.ml(57):1960-1976
+                             (apply (field 1 (global Stdlib__Array!))
+                               (field 0 K/1891) f/1895)))
+                        (before Gbnf_parser__Tabulate.ForIntSegment.tabulate lib/Tabulate.ml(58):1984-2008
+                          (function x/1944[int]
+                            (funct-body Gbnf_parser__Tabulate.ForIntSegment.tabulate.(fun) lib/Tabulate.ml(58):1984-2008
+                              (before Gbnf_parser__Tabulate.ForIntSegment.tabulate.(fun) lib/Tabulate.ml(59):1999-2008
+                                (after Gbnf_parser__Tabulate.ForIntSegment.tabulate.(fun) lib/Tabulate.ml(59):1999-2008
+                                  (array.get[gen] table/1896 x/1944)))))))))))
+             (pseudo Gbnf_parser__Tabulate.ForIntSegment lib/Tabulate.ml(52):1873-2013
+               (makeblock 0 tabulate/1893)))))
+     *match*/2390 =
+       (after Gbnf_parser__Tabulate lib/Tabulate.ml(61)<ghost>:2013-2013
+         (apply (field 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+     *match*/2388 =
+       (after Gbnf_parser__Tabulate lib/Tabulate.ml(61)<ghost>:2013-2013
+         (apply (field 1 (field 5 (global Expect_test_collector!))) 0))
+     *match*/2386 =
+       (after Gbnf_parser__Tabulate lib/Tabulate.ml(61)<ghost>:2013-2013
+         (apply
+           (field 1 (field 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+           0))
+     *match*/2384 =
+       (after Gbnf_parser__Tabulate lib/Tabulate.ml(61)<ghost>:2013-2013
+         (apply (field 4 (global Ppx_module_timer_runtime!))
+           #"Gbnf_parser__Tabulate")))
+    (pseudo <unknown location>
+      (makeblock 0 Make/1229 ForOrderedType/1604 ForHashedType/1872
+        ForType/1889 ForIntSegment/1945))))

@@ -1,0 +1,26 @@
+0.090s 60.2MB 5.44MB 7.35MB lib/MArray.pp.ml
+  0.001s 0.33MB ------ ------ parsing
+    0.001s 0.33MB ------ ------ other
+  0.035s 19.6MB 4.02MB 5.92MB typing
+  0.001s 0.91MB ------ ------ transl
+  0.024s 17.1MB 0.96MB 6.88MB generate
+    ------ 0.22MB ------ ------ cmm
+    0.009s 9.05MB ------ ------ compile_phrases
+      ------ 0.01MB ------ ------ cmm_invariants
+      0.002s 1.38MB ------ ------ selection
+      ------ 0.12MB ------ ------ polling
+      ------ 0.14MB ------ ------ comballoc
+      ------ 0.61MB ------ ------ cse
+      0.001s 0.99MB ------ ------ liveness
+      ------ 0.27MB ------ ------ deadcode
+      0.001s 1.01MB ------ ------ spill
+      0.001s 0.21MB ------ ------ split
+      0.003s 2.77MB ------ ------ regalloc
+      ------ 0.12MB ------ ------ linearize
+      ------ 0.01MB ------ ------ scheduling
+      0.001s 0.96MB ------ ------ emit
+      ------ 0.39MB ------ ------ other
+    0.007s ------ ------ ------ assemble
+    0.008s 7.82MB 0.96MB 6.88MB other
+  0.029s 22.2MB 0.46MB 7.35MB other
+0.028s 5.22MB 1.90MB ------ other

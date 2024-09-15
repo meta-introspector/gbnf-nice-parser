@@ -1,0 +1,815 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+          Ppat_construct "()" (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+          None
+        expression (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+          Pexp_apply
+          expression (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+          ]
+    ]
+  structure_item (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+          Ppat_construct "()" (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+          None
+        expression (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+          Pexp_apply
+          expression (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+          Ppat_construct "()" (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+          None
+        expression (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+          Pexp_apply
+          expression (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+                Pexp_constant PConst_string("lib/stretch.ml",(lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+          Ppat_construct "()" (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+          None
+        expression (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+          Pexp_apply
+          expression (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost
+                Pexp_constant PConst_string("stretch.ml",(lib/stretch.ml[24,1600+0]..[24,1600+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stretch.ml[24,1600+0]..[31,1822+3])
+    Pstr_type Rec
+    [
+      type_declaration "t" (lib/stretch.ml[24,1600+5]..[24,1600+6]) (lib/stretch.ml[24,1600+0]..[31,1822+3])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (lib/stretch.ml[25,1611+4]..[25,1611+33])
+                Immutable
+                "stretch_filename" (lib/stretch.ml[25,1611+4]..[25,1611+20])                core_type (lib/stretch.ml[25,1611+26]..[25,1611+32])
+                  Ptyp_constr "string" (lib/stretch.ml[25,1611+26]..[25,1611+32])
+                  []
+              (lib/stretch.ml[26,1645+4]..[26,1645+30])
+                Immutable
+                "stretch_linenum" (lib/stretch.ml[26,1645+4]..[26,1645+19])                core_type (lib/stretch.ml[26,1645+26]..[26,1645+29])
+                  Ptyp_constr "int" (lib/stretch.ml[26,1645+26]..[26,1645+29])
+                  []
+              (lib/stretch.ml[27,1676+4]..[27,1676+30])
+                Immutable
+                "stretch_linecount" (lib/stretch.ml[27,1676+4]..[27,1676+21])                core_type (lib/stretch.ml[27,1676+26]..[27,1676+29])
+                  Ptyp_constr "int" (lib/stretch.ml[27,1676+26]..[27,1676+29])
+                  []
+              (lib/stretch.ml[28,1707+4]..[28,1707+33])
+                Immutable
+                "stretch_raw_content" (lib/stretch.ml[28,1707+4]..[28,1707+23])                core_type (lib/stretch.ml[28,1707+26]..[28,1707+32])
+                  Ptyp_constr "string" (lib/stretch.ml[28,1707+26]..[28,1707+32])
+                  []
+              (lib/stretch.ml[29,1741+4]..[29,1741+33])
+                Immutable
+                "stretch_content" (lib/stretch.ml[29,1741+4]..[29,1741+19])                core_type (lib/stretch.ml[29,1741+26]..[29,1741+32])
+                  Ptyp_constr "string" (lib/stretch.ml[29,1741+26]..[29,1741+32])
+                  []
+              (lib/stretch.ml[30,1775+4]..[30,1775+46])
+                Immutable
+                "stretch_keywords" (lib/stretch.ml[30,1775+4]..[30,1775+20])                core_type (lib/stretch.ml[30,1775+26]..[30,1775+46])
+                  Ptyp_constr "list" (lib/stretch.ml[30,1775+42]..[30,1775+46])
+                  [
+                    core_type (lib/stretch.ml[30,1775+26]..[30,1775+41])
+                      Ptyp_constr "Keyword.keyword" (lib/stretch.ml[30,1775+26]..[30,1775+41])
+                      []
+                  ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/stretch.ml[36,1955+0]..[38,1990+22])
+    Pstr_type Rec
+    [
+      type_declaration "ocamltype" (lib/stretch.ml[36,1955+5]..[36,1955+14]) (lib/stretch.ml[36,1955+0]..[38,1990+22])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/stretch.ml[37,1972+2]..[37,1972+17])
+                "Declared" (lib/stretch.ml[37,1972+4]..[37,1972+12])
+                [
+                  core_type (lib/stretch.ml[37,1972+16]..[37,1972+17])
+                    Ptyp_constr "t" (lib/stretch.ml[37,1972+16]..[37,1972+17])
+                    []
+                ]
+                None
+              (lib/stretch.ml[38,1990+2]..[38,1990+22])
+                "Inferred" (lib/stretch.ml[38,1990+4]..[38,1990+12])
+                [
+                  core_type (lib/stretch.ml[38,1990+16]..[38,1990+22])
+                    Ptyp_constr "string" (lib/stretch.ml[38,1990+16]..[38,1990+22])
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+          Ppat_construct "()" (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+          None
+        expression (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+          Pexp_apply
+          expression (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+          Ppat_construct "()" (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+          None
+        expression (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+          Pexp_apply
+          expression (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+                Pexp_construct "()" (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+          Ppat_construct "()" (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+          None
+        expression (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+          Pexp_apply
+          expression (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+                Pexp_construct "()" (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+          Ppat_construct "()" (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+          None
+        expression (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+          Pexp_apply
+          expression (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/stretch.ml[38,1990+22]..[38,1990+22]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set ~absolute_filename:"lib/stretch.ml"
+let () = Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "stretch.ml"
+type t =
+  {
+  stretch_filename: string ;
+  stretch_linenum: int ;
+  stretch_linecount: int ;
+  stretch_raw_content: string ;
+  stretch_content: string ;
+  stretch_keywords: Keyword.keyword list }
+type ocamltype =
+  | Declared of t 
+  | Inferred of string 
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+          Texp_apply
+          expression (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+          Texp_apply
+          expression (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+          Texp_apply
+          expression (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+                Texp_constant Const_string("lib/stretch.ml",(lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+          Texp_apply
+          expression (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost
+                Texp_constant Const_string("stretch.ml",(lib/stretch.ml[24,1600+0]..lib/stretch.ml[24,1600+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stretch.ml[24,1600+0]..lib/stretch.ml[31,1822+3])
+    Tstr_type Rec
+    [
+      type_declaration t/1132 (lib/stretch.ml[24,1600+0]..lib/stretch.ml[31,1822+3])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (lib/stretch.ml[25,1611+4]..lib/stretch.ml[25,1611+33])
+                Immutable
+                stretch_filename/1133                core_type (lib/stretch.ml[25,1611+26]..lib/stretch.ml[25,1611+32])
+                  Ttyp_poly
+                  core_type (lib/stretch.ml[25,1611+26]..lib/stretch.ml[25,1611+32])
+                    Ttyp_constr "string/15!"
+                    []
+              (lib/stretch.ml[26,1645+4]..lib/stretch.ml[26,1645+30])
+                Immutable
+                stretch_linenum/1134                core_type (lib/stretch.ml[26,1645+26]..lib/stretch.ml[26,1645+29])
+                  Ttyp_poly
+                  core_type (lib/stretch.ml[26,1645+26]..lib/stretch.ml[26,1645+29])
+                    Ttyp_constr "int/1!"
+                    []
+              (lib/stretch.ml[27,1676+4]..lib/stretch.ml[27,1676+30])
+                Immutable
+                stretch_linecount/1135                core_type (lib/stretch.ml[27,1676+26]..lib/stretch.ml[27,1676+29])
+                  Ttyp_poly
+                  core_type (lib/stretch.ml[27,1676+26]..lib/stretch.ml[27,1676+29])
+                    Ttyp_constr "int/1!"
+                    []
+              (lib/stretch.ml[28,1707+4]..lib/stretch.ml[28,1707+33])
+                Immutable
+                stretch_raw_content/1136                core_type (lib/stretch.ml[28,1707+26]..lib/stretch.ml[28,1707+32])
+                  Ttyp_poly
+                  core_type (lib/stretch.ml[28,1707+26]..lib/stretch.ml[28,1707+32])
+                    Ttyp_constr "string/15!"
+                    []
+              (lib/stretch.ml[29,1741+4]..lib/stretch.ml[29,1741+33])
+                Immutable
+                stretch_content/1137                core_type (lib/stretch.ml[29,1741+26]..lib/stretch.ml[29,1741+32])
+                  Ttyp_poly
+                  core_type (lib/stretch.ml[29,1741+26]..lib/stretch.ml[29,1741+32])
+                    Ttyp_constr "string/15!"
+                    []
+              (lib/stretch.ml[30,1775+4]..lib/stretch.ml[30,1775+46])
+                Immutable
+                stretch_keywords/1147                core_type (lib/stretch.ml[30,1775+26]..lib/stretch.ml[30,1775+46])
+                  Ttyp_poly
+                  core_type (lib/stretch.ml[30,1775+26]..lib/stretch.ml[30,1775+46])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/stretch.ml[30,1775+26]..lib/stretch.ml[30,1775+41])
+                        Ttyp_constr "Gbnf_parser!.Keyword.keyword"
+                        []
+                    ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/stretch.ml[36,1955+0]..lib/stretch.ml[38,1990+22])
+    Tstr_type Rec
+    [
+      type_declaration ocamltype/1157 (lib/stretch.ml[36,1955+0]..lib/stretch.ml[38,1990+22])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/stretch.ml[37,1972+2]..lib/stretch.ml[37,1972+17])
+                Declared/1158
+                [
+                  core_type (lib/stretch.ml[37,1972+16]..lib/stretch.ml[37,1972+17])
+                    Ttyp_constr "t/1132"
+                    []
+                ]
+                None
+              (lib/stretch.ml[38,1990+2]..lib/stretch.ml[38,1990+22])
+                Inferred/1159
+                [
+                  core_type (lib/stretch.ml[38,1990+16]..lib/stretch.ml[38,1990+22])
+                    Ttyp_constr "string/15!"
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+          Texp_apply
+          expression (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost,None)
+          ]
+    ]
+  structure_item (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+          Texp_apply
+          expression (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+          Texp_apply
+          expression (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+          Texp_apply
+          expression (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/stretch.ml[38,1990+22]..lib/stretch.ml[38,1990+22]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__Stretch>
+ "ocamltype"[type] -> <Gbnf_parser__Stretch.7>;
+ "t"[type] -> <Gbnf_parser__Stretch.0>;
+ }
+
+(seq
+  (let
+    (*match*/1163 =
+       (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Stretch"))
+    0)
+  (let
+    (*match*/1165 =
+       (apply
+         (field_imm 0
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/1167 =
+       (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+         "lib/stretch.ml"))
+    0)
+  (let
+    (*match*/1169 =
+       (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "stretch.ml"))
+    0)
+  (let
+    (*match*/1171 =
+       (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+    0)
+  (let
+    (*match*/1173 =
+       (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!))) 0))
+    0)
+  (let
+    (*match*/1175 =
+       (apply
+         (field_imm 1
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         0))
+    0)
+  (let
+    (*match*/1177 =
+       (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Stretch"))
+    0)
+  0)
+(seq
+  (let
+    (*match*/1163 =
+       (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Stretch"))
+    0)
+  (let
+    (*match*/1165 =
+       (apply
+         (field_imm 0
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/1167 =
+       (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+         "lib/stretch.ml"))
+    0)
+  (let
+    (*match*/1169 =
+       (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "stretch.ml"))
+    0)
+  (let
+    (*match*/1171 =
+       (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+    0)
+  (let
+    (*match*/1173 =
+       (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!))) 0))
+    0)
+  (let
+    (*match*/1175 =
+       (apply
+         (field_imm 1
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         0))
+    0)
+  (let
+    (*match*/1177 =
+       (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Stretch"))
+    0)
+  0)

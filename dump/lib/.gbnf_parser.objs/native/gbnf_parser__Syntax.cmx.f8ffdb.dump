@@ -1,0 +1,3411 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+          Ppat_construct "()" (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+          None
+        expression (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+          Pexp_apply
+          expression (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_start" (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+          ]
+    ]
+  structure_item (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+          Ppat_construct "()" (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+          None
+        expression (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+          Pexp_apply
+          expression (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.set" (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+          Ppat_construct "()" (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+          None
+        expression (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+          Pexp_apply
+          expression (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.set" (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+          [
+            <arg>
+            Labelled "absolute_filename"
+              expression (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+                Pexp_constant PConst_string("lib/syntax.ml",(lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+          Ppat_construct "()" (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+          None
+        expression (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+          Pexp_apply
+          expression (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+            Pexp_ident "Ppx_inline_test_lib.set_lib_and_partition" (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost,None)
+            <arg>
+            Nolabel
+              expression (lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost
+                Pexp_constant PConst_string("syntax.ml",(lib/syntax.ml[22,1383+0]..[22,1383+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/syntax.ml[22,1383+0]..[23,1401+24])
+    Pstr_type Rec
+    [
+      type_declaration "located" (lib/syntax.ml[22,1383+8]..[22,1383+15]) (lib/syntax.ml[22,1383+0]..[23,1401+24])
+        ptype_params =
+          [
+            core_type (lib/syntax.ml[22,1383+5]..[22,1383+7])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[23,1401+4]..[23,1401+24])
+              Ptyp_constr "Positions.located" (lib/syntax.ml[23,1401+7]..[23,1401+24])
+              [
+                core_type (lib/syntax.ml[23,1401+4]..[23,1401+6])
+                  Ptyp_var a
+              ]
+    ]
+  structure_item (lib/syntax.ml[29,1561+0]..[30,1577+10])
+    Pstr_type Rec
+    [
+      type_declaration "terminal" (lib/syntax.ml[29,1561+5]..[29,1561+13]) (lib/syntax.ml[29,1561+0]..[30,1577+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[30,1577+4]..[30,1577+10])
+              Ptyp_constr "string" (lib/syntax.ml[30,1577+4]..[30,1577+10])
+              []
+    ]
+  structure_item (lib/syntax.ml[32,1589+0]..[33,1608+10])
+    Pstr_type Rec
+    [
+      type_declaration "nonterminal" (lib/syntax.ml[32,1589+5]..[32,1589+16]) (lib/syntax.ml[32,1589+0]..[33,1608+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[33,1608+4]..[33,1608+10])
+              Ptyp_constr "string" (lib/syntax.ml[33,1608+4]..[33,1608+10])
+              []
+    ]
+  structure_item (lib/syntax.ml[35,1620+0]..[36,1634+10])
+    Pstr_type Rec
+    [
+      type_declaration "symbol" (lib/syntax.ml[35,1620+5]..[35,1620+11]) (lib/syntax.ml[35,1620+0]..[36,1634+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[36,1634+4]..[36,1634+10])
+              Ptyp_constr "string" (lib/syntax.ml[36,1634+4]..[36,1634+10])
+              []
+    ]
+  structure_item (lib/syntax.ml[52,2349+0]..[53,2362+17])
+    Pstr_type Rec
+    [
+      type_declaration "alias" (lib/syntax.ml[52,2349+5]..[52,2349+10]) (lib/syntax.ml[52,2349+0]..[53,2362+17])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[53,2362+4]..[53,2362+17])
+              Ptyp_constr "option" (lib/syntax.ml[53,2362+11]..[53,2362+17])
+              [
+                core_type (lib/syntax.ml[53,2362+4]..[53,2362+10])
+                  Ptyp_constr "string" (lib/syntax.ml[53,2362+4]..[53,2362+10])
+                  []
+              ]
+    ]
+  structure_item (lib/syntax.ml[58,2471+0]..[59,2489+10])
+    Pstr_type Rec
+    [
+      type_declaration "identifier" (lib/syntax.ml[58,2471+5]..[58,2471+15]) (lib/syntax.ml[58,2471+0]..[59,2489+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[59,2489+4]..[59,2489+10])
+              Ptyp_constr "string" (lib/syntax.ml[59,2489+4]..[59,2489+10])
+              []
+    ]
+  structure_item (lib/syntax.ml[63,2533+0]..[64,2549+10])
+    Pstr_type Rec
+    [
+      type_declaration "filename" (lib/syntax.ml[63,2533+5]..[63,2533+13]) (lib/syntax.ml[63,2533+0]..[64,2549+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[64,2549+4]..[64,2549+10])
+              Ptyp_constr "string" (lib/syntax.ml[64,2549+4]..[64,2549+10])
+              []
+    ]
+  structure_item (lib/syntax.ml[70,2686+0]..[71,2702+13])
+    Pstr_type Rec
+    [
+      type_declaration "postlude" (lib/syntax.ml[70,2686+5]..[70,2686+13]) (lib/syntax.ml[70,2686+0]..[71,2702+13])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[71,2702+4]..[71,2702+13])
+              Ptyp_constr "Stretch.t" (lib/syntax.ml[71,2702+4]..[71,2702+13])
+              []
+    ]
+  structure_item (lib/syntax.ml[77,2857+0]..[78,2871+12])
+    Pstr_type Rec
+    [
+      type_declaration "action" (lib/syntax.ml[77,2857+5]..[77,2857+11]) (lib/syntax.ml[77,2857+0]..[78,2871+12])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[78,2871+4]..[78,2871+12])
+              Ptyp_constr "Action.t" (lib/syntax.ml[78,2871+4]..[78,2871+12])
+              []
+    ]
+  structure_item (lib/syntax.ml[85,3100+0]..[86,3117+30])
+    Pstr_type Rec
+    [
+      type_declaration "attribute" (lib/syntax.ml[85,3100+5]..[85,3100+14]) (lib/syntax.ml[85,3100+0]..[86,3117+30])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[86,3117+4]..[86,3117+30])
+              Ptyp_tuple
+              [
+                core_type (lib/syntax.ml[86,3117+4]..[86,3117+18])
+                  Ptyp_constr "located" (lib/syntax.ml[86,3117+11]..[86,3117+18])
+                  [
+                    core_type (lib/syntax.ml[86,3117+4]..[86,3117+10])
+                      Ptyp_constr "string" (lib/syntax.ml[86,3117+4]..[86,3117+10])
+                      []
+                  ]
+                core_type (lib/syntax.ml[86,3117+21]..[86,3117+30])
+                  Ptyp_constr "Stretch.t" (lib/syntax.ml[86,3117+21]..[86,3117+30])
+                  []
+              ]
+    ]
+  structure_item (lib/syntax.ml[88,3149+0]..[89,3167+18])
+    Pstr_type Rec
+    [
+      type_declaration "attributes" (lib/syntax.ml[88,3149+5]..[88,3149+15]) (lib/syntax.ml[88,3149+0]..[89,3167+18])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[89,3167+4]..[89,3167+18])
+              Ptyp_constr "list" (lib/syntax.ml[89,3167+14]..[89,3167+18])
+              [
+                core_type (lib/syntax.ml[89,3167+4]..[89,3167+13])
+                  Ptyp_constr "attribute" (lib/syntax.ml[89,3167+4]..[89,3167+13])
+                  []
+              ]
+    ]
+  structure_item (lib/syntax.ml[109,3948+0]..[113,4017+18])
+    Pstr_type Rec
+    [
+      type_declaration "token_associativity" (lib/syntax.ml[109,3948+5]..[109,3948+24]) (lib/syntax.ml[109,3948+0]..[113,4017+18])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/syntax.ml[110,3975+4]..[110,3975+13])
+                "LeftAssoc" (lib/syntax.ml[110,3975+4]..[110,3975+13])
+                []
+                None
+              (lib/syntax.ml[111,3989+2]..[111,3989+14])
+                "RightAssoc" (lib/syntax.ml[111,3989+4]..[111,3989+14])
+                []
+                None
+              (lib/syntax.ml[112,4004+2]..[112,4004+12])
+                "NonAssoc" (lib/syntax.ml[112,4004+4]..[112,4004+12])
+                []
+                None
+              (lib/syntax.ml[113,4017+2]..[113,4017+18])
+                "UndefinedAssoc" (lib/syntax.ml[113,4017+4]..[113,4017+18])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[115,4037+0]..[122,4280+85])
+    Pstr_type Rec
+    [
+      type_declaration "precedence_level" (lib/syntax.ml[115,4037+5]..[115,4037+21]) (lib/syntax.ml[115,4037+0]..[122,4280+85])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/syntax.ml[116,4061+4]..[116,4061+23])
+                "UndefinedPrecedence" (lib/syntax.ml[116,4061+4]..[116,4061+23])
+                []
+                None
+              (lib/syntax.ml[122,4280+2]..[122,4280+85])
+                "PrecedenceLevel" (lib/syntax.ml[122,4280+4]..[122,4280+19])
+                [
+                  core_type (lib/syntax.ml[122,4280+23]..[122,4280+43])
+                    Ptyp_constr "InputFile.input_file" (lib/syntax.ml[122,4280+23]..[122,4280+43])
+                    []
+                  core_type (lib/syntax.ml[122,4280+46]..[122,4280+49])
+                    Ptyp_constr "int" (lib/syntax.ml[122,4280+46]..[122,4280+49])
+                    []
+                  core_type (lib/syntax.ml[122,4280+52]..[122,4280+67])
+                    Ptyp_constr "Lexing.position" (lib/syntax.ml[122,4280+52]..[122,4280+67])
+                    []
+                  core_type (lib/syntax.ml[122,4280+70]..[122,4280+85])
+                    Ptyp_constr "Lexing.position" (lib/syntax.ml[122,4280+70]..[122,4280+85])
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[124,4367+0]..[134,4782+5])
+    Pstr_type Rec
+    [
+      type_declaration "token_properties" (lib/syntax.ml[124,4367+5]..[124,4367+21]) (lib/syntax.ml[124,4367+0]..[134,4782+5])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (lib/syntax.ml[126,4397+15]..[126,4397+43])
+                Immutable
+                "tk_filename" (lib/syntax.ml[126,4397+15]..[126,4397+26])                core_type (lib/syntax.ml[126,4397+34]..[126,4397+42])
+                  Ptyp_constr "filename" (lib/syntax.ml[126,4397+34]..[126,4397+42])
+                  []
+              (lib/syntax.ml[127,4441+15]..[127,4441+59])
+                Immutable
+                "tk_ocamltype" (lib/syntax.ml[127,4441+15]..[127,4441+27])                core_type (lib/syntax.ml[127,4441+34]..[127,4441+58])
+                  Ptyp_constr "option" (lib/syntax.ml[127,4441+52]..[127,4441+58])
+                  [
+                    core_type (lib/syntax.ml[127,4441+34]..[127,4441+51])
+                      Ptyp_constr "Stretch.ocamltype" (lib/syntax.ml[127,4441+34]..[127,4441+51])
+                      []
+                  ]
+              (lib/syntax.ml[128,4501+15]..[128,4501+46])
+                Immutable
+                "tk_position" (lib/syntax.ml[128,4501+15]..[128,4501+26])                core_type (lib/syntax.ml[128,4501+34]..[128,4501+45])
+                  Ptyp_constr "Positions.t" (lib/syntax.ml[128,4501+34]..[128,4501+45])
+                  []
+              (lib/syntax.ml[129,4548+15]..[129,4548+40])
+                Immutable
+                "tk_alias" (lib/syntax.ml[129,4548+15]..[129,4548+23])                core_type (lib/syntax.ml[129,4548+34]..[129,4548+39])
+                  Ptyp_constr "alias" (lib/syntax.ml[129,4548+34]..[129,4548+39])
+                  []
+              (lib/syntax.ml[130,4589+15]..[130,4589+45])
+                Immutable
+                "tk_attributes" (lib/syntax.ml[130,4589+15]..[130,4589+28])                core_type (lib/syntax.ml[130,4589+34]..[130,4589+44])
+                  Ptyp_constr "attributes" (lib/syntax.ml[130,4589+34]..[130,4589+44])
+                  []
+              (lib/syntax.ml[131,4635+6]..[131,4635+54])
+                Mutable
+                "tk_associativity" (lib/syntax.ml[131,4635+15]..[131,4635+31])                core_type (lib/syntax.ml[131,4635+34]..[131,4635+53])
+                  Ptyp_constr "token_associativity" (lib/syntax.ml[131,4635+34]..[131,4635+53])
+                  []
+              (lib/syntax.ml[132,4690+6]..[132,4690+51])
+                Mutable
+                "tk_precedence" (lib/syntax.ml[132,4690+15]..[132,4690+28])                core_type (lib/syntax.ml[132,4690+34]..[132,4690+50])
+                  Ptyp_constr "precedence_level" (lib/syntax.ml[132,4690+34]..[132,4690+50])
+                  []
+              (lib/syntax.ml[133,4742+6]..[133,4742+39])
+                Mutable
+                "tk_is_declared" (lib/syntax.ml[133,4742+15]..[133,4742+29])                core_type (lib/syntax.ml[133,4742+34]..[133,4742+38])
+                  Ptyp_constr "bool" (lib/syntax.ml[133,4742+34]..[133,4742+38])
+                  []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[141,5004+0]..[142,5034+25])
+    Pstr_type Rec
+    [
+      type_declaration "branch_prec_annotation" (lib/syntax.ml[141,5004+5]..[141,5004+27]) (lib/syntax.ml[141,5004+0]..[142,5034+25])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[142,5034+4]..[142,5034+25])
+              Ptyp_constr "option" (lib/syntax.ml[142,5034+19]..[142,5034+25])
+              [
+                core_type (lib/syntax.ml[142,5034+4]..[142,5034+18])
+                  Ptyp_constr "located" (lib/syntax.ml[142,5034+11]..[142,5034+18])
+                  [
+                    core_type (lib/syntax.ml[142,5034+4]..[142,5034+10])
+                      Ptyp_constr "symbol" (lib/syntax.ml[142,5034+4]..[142,5034+10])
+                      []
+                  ]
+              ]
+    ]
+  structure_item (lib/syntax.ml[149,5290+0]..[150,5321+49])
+    Pstr_type Rec
+    [
+      type_declaration "branch_production_level" (lib/syntax.ml[149,5290+5]..[149,5290+28]) (lib/syntax.ml[149,5290+0]..[150,5321+49])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/syntax.ml[150,5321+2]..[150,5321+49])
+                "ProductionLevel" (lib/syntax.ml[150,5321+4]..[150,5321+19])
+                [
+                  core_type (lib/syntax.ml[150,5321+23]..[150,5321+43])
+                    Ptyp_constr "InputFile.input_file" (lib/syntax.ml[150,5321+23]..[150,5321+43])
+                    []
+                  core_type (lib/syntax.ml[150,5321+46]..[150,5321+49])
+                    Ptyp_constr "int" (lib/syntax.ml[150,5321+46]..[150,5321+49])
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[158,5623+0]..[159,5652+25])
+    Pstr_type Rec
+    [
+      type_declaration "on_error_reduce_level" (lib/syntax.ml[158,5623+5]..[158,5623+26]) (lib/syntax.ml[158,5623+0]..[159,5652+25])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[159,5652+2]..[159,5652+25])
+              Ptyp_constr "branch_production_level" (lib/syntax.ml[159,5652+2]..[159,5652+25])
+              []
+    ]
+  structure_item (lib/syntax.ml[171,6220+0]..[203,7367+5])
+    Pstr_type Rec
+    [
+      type_declaration "parameter" (lib/syntax.ml[171,6220+5]..[171,6220+14]) (lib/syntax.ml[171,6220+0]..[174,6320+59])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/syntax.ml[172,6237+2]..[172,6237+34])
+                "ParameterVar" (lib/syntax.ml[172,6237+4]..[172,6237+16])
+                [
+                  core_type (lib/syntax.ml[172,6237+20]..[172,6237+34])
+                    Ptyp_constr "located" (lib/syntax.ml[172,6237+27]..[172,6237+34])
+                    [
+                      core_type (lib/syntax.ml[172,6237+20]..[172,6237+26])
+                        Ptyp_constr "symbol" (lib/syntax.ml[172,6237+20]..[172,6237+26])
+                        []
+                    ]
+                ]
+                None
+              (lib/syntax.ml[173,6272+2]..[173,6272+47])
+                "ParameterApp" (lib/syntax.ml[173,6272+4]..[173,6272+16])
+                [
+                  core_type (lib/syntax.ml[173,6272+20]..[173,6272+34])
+                    Ptyp_constr "located" (lib/syntax.ml[173,6272+27]..[173,6272+34])
+                    [
+                      core_type (lib/syntax.ml[173,6272+20]..[173,6272+26])
+                        Ptyp_constr "symbol" (lib/syntax.ml[173,6272+20]..[173,6272+26])
+                        []
+                    ]
+                  core_type (lib/syntax.ml[173,6272+37]..[173,6272+47])
+                    Ptyp_constr "parameters" (lib/syntax.ml[173,6272+37]..[173,6272+47])
+                    []
+                ]
+                None
+              (lib/syntax.ml[174,6320+2]..[174,6320+59])
+                "ParameterAnonymous" (lib/syntax.ml[174,6320+4]..[174,6320+22])
+                [
+                  core_type (lib/syntax.ml[174,6320+26]..[174,6320+59])
+                    Ptyp_constr "located" (lib/syntax.ml[174,6320+52]..[174,6320+59])
+                    [
+                      core_type (lib/syntax.ml[174,6320+26]..[174,6320+51])
+                        Ptyp_constr "list" (lib/syntax.ml[174,6320+47]..[174,6320+51])
+                        [
+                          core_type (lib/syntax.ml[174,6320+26]..[174,6320+46])
+                            Ptyp_constr "parameterized_branch" (lib/syntax.ml[174,6320+26]..[174,6320+46])
+                            []
+                        ]
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration "parameters" (lib/syntax.ml[176,6381+4]..[176,6381+14]) (lib/syntax.ml[176,6381+0]..[177,6398+18])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[177,6398+4]..[177,6398+18])
+              Ptyp_constr "list" (lib/syntax.ml[177,6398+14]..[177,6398+18])
+              [
+                core_type (lib/syntax.ml[177,6398+4]..[177,6398+13])
+                  Ptyp_constr "parameter" (lib/syntax.ml[177,6398+4]..[177,6398+13])
+                  []
+              ]
+      type_declaration "producer" (lib/syntax.ml[187,6831+4]..[187,6831+12]) (lib/syntax.ml[187,6831+0]..[188,6846+47])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[188,6846+4]..[188,6846+47])
+              Ptyp_tuple
+              [
+                core_type (lib/syntax.ml[188,6846+4]..[188,6846+22])
+                  Ptyp_constr "located" (lib/syntax.ml[188,6846+15]..[188,6846+22])
+                  [
+                    core_type (lib/syntax.ml[188,6846+4]..[188,6846+14])
+                      Ptyp_constr "identifier" (lib/syntax.ml[188,6846+4]..[188,6846+14])
+                      []
+                  ]
+                core_type (lib/syntax.ml[188,6846+25]..[188,6846+34])
+                  Ptyp_constr "parameter" (lib/syntax.ml[188,6846+25]..[188,6846+34])
+                  []
+                core_type (lib/syntax.ml[188,6846+37]..[188,6846+47])
+                  Ptyp_constr "attributes" (lib/syntax.ml[188,6846+37]..[188,6846+47])
+                  []
+              ]
+      type_declaration "parameterized_branch" (lib/syntax.ml[194,7045+4]..[194,7045+24]) (lib/syntax.ml[194,7045+0]..[203,7367+5])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (lib/syntax.ml[196,7078+6]..[196,7078+49])
+                Immutable
+                "pr_branch_position" (lib/syntax.ml[196,7078+6]..[196,7078+24])                core_type (lib/syntax.ml[196,7078+37]..[196,7078+48])
+                  Ptyp_constr "Positions.t" (lib/syntax.ml[196,7078+37]..[196,7078+48])
+                  []
+              (lib/syntax.ml[197,7128+6]..[197,7128+51])
+                Immutable
+                "pr_producers" (lib/syntax.ml[197,7128+6]..[197,7128+18])                core_type (lib/syntax.ml[197,7128+37]..[197,7128+50])
+                  Ptyp_constr "list" (lib/syntax.ml[197,7128+46]..[197,7128+50])
+                  [
+                    core_type (lib/syntax.ml[197,7128+37]..[197,7128+45])
+                      Ptyp_constr "producer" (lib/syntax.ml[197,7128+37]..[197,7128+45])
+                      []
+                  ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[209,7503+0]..[218,7858+5])
+    Pstr_type Rec
+    [
+      type_declaration "parameterized_rule" (lib/syntax.ml[209,7503+5]..[209,7503+23]) (lib/syntax.ml[209,7503+0]..[218,7858+5])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (lib/syntax.ml[213,7617+6]..[213,7617+41])
+                Immutable
+                "pr_nt" (lib/syntax.ml[213,7617+6]..[213,7617+11])                core_type (lib/syntax.ml[213,7617+29]..[213,7617+40])
+                  Ptyp_constr "nonterminal" (lib/syntax.ml[213,7617+29]..[213,7617+40])
+                  []
+              (lib/syntax.ml[214,7659+6]..[214,7659+46])
+                Immutable
+                "pr_positions" (lib/syntax.ml[214,7659+6]..[214,7659+18])                core_type (lib/syntax.ml[214,7659+29]..[214,7659+45])
+                  Ptyp_constr "list" (lib/syntax.ml[214,7659+41]..[214,7659+45])
+                  [
+                    core_type (lib/syntax.ml[214,7659+29]..[214,7659+40])
+                      Ptyp_constr "Positions.t" (lib/syntax.ml[214,7659+29]..[214,7659+40])
+                      []
+                  ]
+              (lib/syntax.ml[217,7801+6]..[217,7801+56])
+                Immutable
+                "pr_branches" (lib/syntax.ml[217,7801+6]..[217,7801+17])                core_type (lib/syntax.ml[217,7801+30]..[217,7801+55])
+                  Ptyp_constr "list" (lib/syntax.ml[217,7801+51]..[217,7801+55])
+                  [
+                    core_type (lib/syntax.ml[217,7801+30]..[217,7801+50])
+                      Ptyp_constr "parameterized_branch" (lib/syntax.ml[217,7801+30]..[217,7801+50])
+                      []
+                  ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[232,8378+0]..[236,8479+31])
+    Pstr_type Rec
+    [
+      type_declaration "pattern" (lib/syntax.ml[232,8378+5]..[232,8378+12]) (lib/syntax.ml[232,8378+0]..[236,8479+31])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/syntax.ml[233,8393+2]..[233,8393+35])
+                "SemPatVar" (lib/syntax.ml[233,8393+4]..[233,8393+13])
+                [
+                  core_type (lib/syntax.ml[233,8393+17]..[233,8393+35])
+                    Ptyp_constr "located" (lib/syntax.ml[233,8393+28]..[233,8393+35])
+                    [
+                      core_type (lib/syntax.ml[233,8393+17]..[233,8393+27])
+                        Ptyp_constr "identifier" (lib/syntax.ml[233,8393+17]..[233,8393+27])
+                        []
+                    ]
+                ]
+                None
+              (lib/syntax.ml[234,8429+2]..[234,8429+18])
+                "SemPatWildcard" (lib/syntax.ml[234,8429+4]..[234,8429+18])
+                []
+                None
+              (lib/syntax.ml[235,8448+2]..[235,8448+30])
+                "SemPatTilde" (lib/syntax.ml[235,8448+4]..[235,8448+15])
+                [
+                  core_type (lib/syntax.ml[235,8448+19]..[235,8448+30])
+                    Ptyp_constr "Positions.t" (lib/syntax.ml[235,8448+19]..[235,8448+30])
+                    []
+                ]
+                None
+              (lib/syntax.ml[236,8479+2]..[236,8479+31])
+                "SemPatTuple" (lib/syntax.ml[236,8479+4]..[236,8479+15])
+                [
+                  core_type (lib/syntax.ml[236,8479+19]..[236,8479+31])
+                    Ptyp_constr "list" (lib/syntax.ml[236,8479+27]..[236,8479+31])
+                    [
+                      core_type (lib/syntax.ml[236,8479+19]..[236,8479+26])
+                        Ptyp_constr "pattern" (lib/syntax.ml[236,8479+19]..[236,8479+26])
+                        []
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[239,8548+0]..[240,8566+35])
+    Pstr_type Rec
+    [
+      type_declaration "raw_action" (lib/syntax.ml[239,8548+5]..[239,8548+15]) (lib/syntax.ml[239,8548+0]..[240,8566+35])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[240,8566+2]..[240,8566+35])
+              Ptyp_arrow
+              Nolabel
+              core_type (lib/syntax.ml[240,8566+2]..[240,8566+25])
+                Ptyp_constr "array" (lib/syntax.ml[240,8566+20]..[240,8566+25])
+                [
+                  core_type (lib/syntax.ml[240,8566+2]..[240,8566+19])
+                    Ptyp_constr "option" (lib/syntax.ml[240,8566+13]..[240,8566+19])
+                    [
+                      core_type (lib/syntax.ml[240,8566+2]..[240,8566+12])
+                        Ptyp_constr "identifier" (lib/syntax.ml[240,8566+2]..[240,8566+12])
+                        []
+                    ]
+                ]
+              core_type (lib/syntax.ml[240,8566+29]..[240,8566+35])
+                Ptyp_constr "action" (lib/syntax.ml[240,8566+29]..[240,8566+35])
+                []
+    ]
+  structure_item (lib/syntax.ml[243,8664+0]..[274,9611+35])
+    Pstr_type Rec
+    [
+      type_declaration "expression" (lib/syntax.ml[243,8664+5]..[243,8664+15]) (lib/syntax.ml[243,8664+0]..[244,8682+27])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[244,8682+2]..[244,8682+27])
+              Ptyp_constr "located" (lib/syntax.ml[244,8682+20]..[244,8682+27])
+              [
+                core_type (lib/syntax.ml[244,8682+2]..[244,8682+19])
+                  Ptyp_constr "choice_expression" (lib/syntax.ml[244,8682+2]..[244,8682+19])
+                  []
+              ]
+      type_declaration "choice_expression" (lib/syntax.ml[247,8765+4]..[247,8765+21]) (lib/syntax.ml[247,8765+0]..[248,8789+26])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/syntax.ml[248,8789+2]..[248,8789+26])
+                "EChoice" (lib/syntax.ml[248,8789+4]..[248,8789+11])
+                [
+                  core_type (lib/syntax.ml[248,8789+15]..[248,8789+26])
+                    Ptyp_constr "list" (lib/syntax.ml[248,8789+22]..[248,8789+26])
+                    [
+                      core_type (lib/syntax.ml[248,8789+15]..[248,8789+21])
+                        Ptyp_constr "branch" (lib/syntax.ml[248,8789+15]..[248,8789+21])
+                        []
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration "branch" (lib/syntax.ml[251,8868+4]..[251,8868+10]) (lib/syntax.ml[251,8868+0]..[252,8881+54])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/syntax.ml[252,8881+2]..[252,8881+54])
+                "Branch" (lib/syntax.ml[252,8881+4]..[252,8881+10])
+                [
+                  core_type (lib/syntax.ml[252,8881+14]..[252,8881+28])
+                    Ptyp_constr "seq_expression" (lib/syntax.ml[252,8881+14]..[252,8881+28])
+                    []
+                  core_type (lib/syntax.ml[252,8881+31]..[252,8881+54])
+                    Ptyp_constr "branch_production_level" (lib/syntax.ml[252,8881+31]..[252,8881+54])
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration "seq_expression" (lib/syntax.ml[256,9025+4]..[256,9025+18]) (lib/syntax.ml[256,9025+0]..[257,9046+28])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[257,9046+2]..[257,9046+28])
+              Ptyp_constr "located" (lib/syntax.ml[257,9046+21]..[257,9046+28])
+              [
+                core_type (lib/syntax.ml[257,9046+2]..[257,9046+20])
+                  Ptyp_constr "raw_seq_expression" (lib/syntax.ml[257,9046+2]..[257,9046+20])
+                  []
+              ]
+      type_declaration "raw_seq_expression" (lib/syntax.ml[259,9076+4]..[259,9076+22]) (lib/syntax.ml[259,9076+0]..[262,9195+55])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/syntax.ml[260,9101+2]..[260,9101+57])
+                "ECons" (lib/syntax.ml[260,9101+4]..[260,9101+9])
+                [
+                  core_type (lib/syntax.ml[260,9101+13]..[260,9101+20])
+                    Ptyp_constr "pattern" (lib/syntax.ml[260,9101+13]..[260,9101+20])
+                    []
+                  core_type (lib/syntax.ml[260,9101+23]..[260,9101+40])
+                    Ptyp_constr "symbol_expression" (lib/syntax.ml[260,9101+23]..[260,9101+40])
+                    []
+                  core_type (lib/syntax.ml[260,9101+43]..[260,9101+57])
+                    Ptyp_constr "seq_expression" (lib/syntax.ml[260,9101+43]..[260,9101+57])
+                    []
+                ]
+                None
+              (lib/syntax.ml[261,9159+2]..[261,9159+35])
+                "ESingleton" (lib/syntax.ml[261,9159+4]..[261,9159+14])
+                [
+                  core_type (lib/syntax.ml[261,9159+18]..[261,9159+35])
+                    Ptyp_constr "symbol_expression" (lib/syntax.ml[261,9159+18]..[261,9159+35])
+                    []
+                ]
+                None
+              (lib/syntax.ml[262,9195+2]..[262,9195+55])
+                "EAction" (lib/syntax.ml[262,9195+4]..[262,9195+11])
+                [
+                  core_type (lib/syntax.ml[262,9195+15]..[262,9195+30])
+                    Ptyp_constr "extended_action" (lib/syntax.ml[262,9195+15]..[262,9195+30])
+                    []
+                  core_type (lib/syntax.ml[262,9195+33]..[262,9195+55])
+                    Ptyp_constr "branch_prec_annotation" (lib/syntax.ml[262,9195+33]..[262,9195+55])
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration "symbol_expression" (lib/syntax.ml[267,9365+4]..[267,9365+21]) (lib/syntax.ml[267,9365+0]..[268,9389+60])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/syntax.ml[268,9389+2]..[268,9389+60])
+                "ESymbol" (lib/syntax.ml[268,9389+4]..[268,9389+11])
+                [
+                  core_type (lib/syntax.ml[268,9389+15]..[268,9389+29])
+                    Ptyp_constr "located" (lib/syntax.ml[268,9389+22]..[268,9389+29])
+                    [
+                      core_type (lib/syntax.ml[268,9389+15]..[268,9389+21])
+                        Ptyp_constr "symbol" (lib/syntax.ml[268,9389+15]..[268,9389+21])
+                        []
+                    ]
+                  core_type (lib/syntax.ml[268,9389+32]..[268,9389+47])
+                    Ptyp_constr "list" (lib/syntax.ml[268,9389+43]..[268,9389+47])
+                    [
+                      core_type (lib/syntax.ml[268,9389+32]..[268,9389+42])
+                        Ptyp_constr "expression" (lib/syntax.ml[268,9389+32]..[268,9389+42])
+                        []
+                    ]
+                  core_type (lib/syntax.ml[268,9389+50]..[268,9389+60])
+                    Ptyp_constr "attributes" (lib/syntax.ml[268,9389+50]..[268,9389+60])
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration "extended_action" (lib/syntax.ml[272,9557+4]..[272,9557+19]) (lib/syntax.ml[272,9557+0]..[274,9611+35])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/syntax.ml[273,9579+2]..[273,9579+31])
+                "XATraditional" (lib/syntax.ml[273,9579+4]..[273,9579+17])
+                [
+                  core_type (lib/syntax.ml[273,9579+21]..[273,9579+31])
+                    Ptyp_constr "raw_action" (lib/syntax.ml[273,9579+21]..[273,9579+31])
+                    []
+                ]
+                None
+              (lib/syntax.ml[274,9611+2]..[274,9611+35])
+                "XAPointFree" (lib/syntax.ml[274,9611+4]..[274,9611+15])
+                [
+                  core_type (lib/syntax.ml[274,9611+19]..[274,9611+35])
+                    Ptyp_constr "option" (lib/syntax.ml[274,9611+29]..[274,9611+35])
+                    [
+                      core_type (lib/syntax.ml[274,9611+19]..[274,9611+28])
+                        Ptyp_constr "Stretch.t" (lib/syntax.ml[274,9611+19]..[274,9611+28])
+                        []
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[279,9834+0]..[287,10030+3])
+    Pstr_type Rec
+    [
+      type_declaration "rule" (lib/syntax.ml[279,9834+5]..[279,9834+9]) (lib/syntax.ml[279,9834+0]..[287,10030+3])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (lib/syntax.ml[281,9850+4]..[281,9850+22])
+                Immutable
+                "rule_public" (lib/syntax.ml[281,9850+4]..[281,9850+15])                core_type (lib/syntax.ml[281,9850+17]..[281,9850+21])
+                  Ptyp_constr "bool" (lib/syntax.ml[281,9850+17]..[281,9850+21])
+                  []
+              (lib/syntax.ml[282,9873+4]..[282,9873+22])
+                Immutable
+                "rule_inline" (lib/syntax.ml[282,9873+4]..[282,9873+15])                core_type (lib/syntax.ml[282,9873+17]..[282,9873+21])
+                  Ptyp_constr "bool" (lib/syntax.ml[282,9873+17]..[282,9873+21])
+                  []
+              (lib/syntax.ml[283,9896+4]..[283,9896+29])
+                Immutable
+                "rule_lhs" (lib/syntax.ml[283,9896+4]..[283,9896+12])                core_type (lib/syntax.ml[283,9896+14]..[283,9896+28])
+                  Ptyp_constr "located" (lib/syntax.ml[283,9896+21]..[283,9896+28])
+                  [
+                    core_type (lib/syntax.ml[283,9896+14]..[283,9896+20])
+                      Ptyp_constr "symbol" (lib/syntax.ml[283,9896+14]..[283,9896+20])
+                      []
+                  ]
+              (lib/syntax.ml[285,9965+4]..[285,9965+38])
+                Immutable
+                "rule_formals" (lib/syntax.ml[285,9965+4]..[285,9965+16])                core_type (lib/syntax.ml[285,9965+18]..[285,9965+37])
+                  Ptyp_constr "list" (lib/syntax.ml[285,9965+33]..[285,9965+37])
+                  [
+                    core_type (lib/syntax.ml[285,9965+18]..[285,9965+32])
+                      Ptyp_constr "located" (lib/syntax.ml[285,9965+25]..[285,9965+32])
+                      [
+                        core_type (lib/syntax.ml[285,9965+18]..[285,9965+24])
+                          Ptyp_constr "symbol" (lib/syntax.ml[285,9965+18]..[285,9965+24])
+                          []
+                      ]
+                  ]
+              (lib/syntax.ml[286,10004+4]..[286,10004+25])
+                Immutable
+                "rule_rhs" (lib/syntax.ml[286,10004+4]..[286,10004+12])                core_type (lib/syntax.ml[286,10004+14]..[286,10004+24])
+                  Ptyp_constr "expression" (lib/syntax.ml[286,10004+14]..[286,10004+24])
+                  []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[294,10239+0]..[330,11044+55])
+    Pstr_type Rec
+    [
+      type_declaration "declaration" (lib/syntax.ml[294,10239+5]..[294,10239+16]) (lib/syntax.ml[294,10239+0]..[330,11044+55])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/syntax.ml[298,10286+2]..[298,10286+22])
+                "DCode" (lib/syntax.ml[298,10286+4]..[298,10286+9])
+                [
+                  core_type (lib/syntax.ml[298,10286+13]..[298,10286+22])
+                    Ptyp_constr "Stretch.t" (lib/syntax.ml[298,10286+13]..[298,10286+22])
+                    []
+                ]
+                None
+              (lib/syntax.ml[302,10350+2]..[302,10350+35])
+                "DParameter" (lib/syntax.ml[302,10350+4]..[302,10350+14])
+                [
+                  core_type (lib/syntax.ml[302,10350+18]..[302,10350+35])
+                    Ptyp_constr "Stretch.ocamltype" (lib/syntax.ml[302,10350+18]..[302,10350+35])
+                    []
+                ]
+                None
+              (lib/syntax.ml[306,10458+2]..[306,10458+70])
+                "DToken" (lib/syntax.ml[306,10458+4]..[306,10458+10])
+                [
+                  core_type (lib/syntax.ml[306,10458+14]..[306,10458+38])
+                    Ptyp_constr "option" (lib/syntax.ml[306,10458+32]..[306,10458+38])
+                    [
+                      core_type (lib/syntax.ml[306,10458+14]..[306,10458+31])
+                        Ptyp_constr "Stretch.ocamltype" (lib/syntax.ml[306,10458+14]..[306,10458+31])
+                        []
+                    ]
+                  core_type (lib/syntax.ml[306,10458+41]..[306,10458+49])
+                    Ptyp_constr "terminal" (lib/syntax.ml[306,10458+41]..[306,10458+49])
+                    []
+                  core_type (lib/syntax.ml[306,10458+52]..[306,10458+57])
+                    Ptyp_constr "alias" (lib/syntax.ml[306,10458+52]..[306,10458+57])
+                    []
+                  core_type (lib/syntax.ml[306,10458+60]..[306,10458+70])
+                    Ptyp_constr "attributes" (lib/syntax.ml[306,10458+60]..[306,10458+70])
+                    []
+                ]
+                None
+              (lib/syntax.ml[310,10567+2]..[310,10567+25])
+                "DStart" (lib/syntax.ml[310,10567+4]..[310,10567+10])
+                [
+                  core_type (lib/syntax.ml[310,10567+14]..[310,10567+25])
+                    Ptyp_constr "nonterminal" (lib/syntax.ml[310,10567+14]..[310,10567+25])
+                    []
+                ]
+                None
+              (lib/syntax.ml[314,10645+2]..[314,10645+73])
+                "DTokenProperties" (lib/syntax.ml[314,10645+4]..[314,10645+20])
+                [
+                  core_type (lib/syntax.ml[314,10645+24]..[314,10645+32])
+                    Ptyp_constr "terminal" (lib/syntax.ml[314,10645+24]..[314,10645+32])
+                    []
+                  core_type (lib/syntax.ml[314,10645+35]..[314,10645+54])
+                    Ptyp_constr "token_associativity" (lib/syntax.ml[314,10645+35]..[314,10645+54])
+                    []
+                  core_type (lib/syntax.ml[314,10645+57]..[314,10645+73])
+                    Ptyp_constr "precedence_level" (lib/syntax.ml[314,10645+57]..[314,10645+73])
+                    []
+                ]
+                None
+              (lib/syntax.ml[318,10749+2]..[318,10749+42])
+                "DType" (lib/syntax.ml[318,10749+4]..[318,10749+9])
+                [
+                  core_type (lib/syntax.ml[318,10749+13]..[318,10749+30])
+                    Ptyp_constr "Stretch.ocamltype" (lib/syntax.ml[318,10749+13]..[318,10749+30])
+                    []
+                  core_type (lib/syntax.ml[318,10749+33]..[318,10749+42])
+                    Ptyp_constr "parameter" (lib/syntax.ml[318,10749+33]..[318,10749+42])
+                    []
+                ]
+                None
+              (lib/syntax.ml[322,10841+2]..[322,10841+34])
+                "DGrammarAttribute" (lib/syntax.ml[322,10841+4]..[322,10841+21])
+                [
+                  core_type (lib/syntax.ml[322,10841+25]..[322,10841+34])
+                    Ptyp_constr "attribute" (lib/syntax.ml[322,10841+25]..[322,10841+34])
+                    []
+                ]
+                None
+              (lib/syntax.ml[326,10950+2]..[326,10950+52])
+                "DSymbolAttributes" (lib/syntax.ml[326,10950+4]..[326,10950+21])
+                [
+                  core_type (lib/syntax.ml[326,10950+25]..[326,10950+39])
+                    Ptyp_constr "list" (lib/syntax.ml[326,10950+35]..[326,10950+39])
+                    [
+                      core_type (lib/syntax.ml[326,10950+25]..[326,10950+34])
+                        Ptyp_constr "parameter" (lib/syntax.ml[326,10950+25]..[326,10950+34])
+                        []
+                    ]
+                  core_type (lib/syntax.ml[326,10950+42]..[326,10950+52])
+                    Ptyp_constr "attributes" (lib/syntax.ml[326,10950+42]..[326,10950+52])
+                    []
+                ]
+                None
+              (lib/syntax.ml[330,11044+2]..[330,11044+55])
+                "DOnErrorReduce" (lib/syntax.ml[330,11044+4]..[330,11044+18])
+                [
+                  core_type (lib/syntax.ml[330,11044+22]..[330,11044+31])
+                    Ptyp_constr "parameter" (lib/syntax.ml[330,11044+22]..[330,11044+31])
+                    []
+                  core_type (lib/syntax.ml[330,11044+34]..[330,11044+55])
+                    Ptyp_constr "on_error_reduce_level" (lib/syntax.ml[330,11044+34]..[330,11044+55])
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[336,11230+0]..[342,11467+5])
+    Pstr_type Rec
+    [
+      type_declaration "partial_grammar" (lib/syntax.ml[336,11230+5]..[336,11230+20]) (lib/syntax.ml[336,11230+0]..[342,11467+5])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (lib/syntax.ml[338,11259+6]..[338,11259+38])
+                Immutable
+                "pg_filename" (lib/syntax.ml[338,11259+6]..[338,11259+17])                core_type (lib/syntax.ml[338,11259+29]..[338,11259+37])
+                  Ptyp_constr "filename" (lib/syntax.ml[338,11259+29]..[338,11259+37])
+                  []
+              (lib/syntax.ml[341,11411+7]..[341,11411+54])
+                Immutable
+                "pg_rules" (lib/syntax.ml[341,11411+7]..[341,11411+15])                core_type (lib/syntax.ml[341,11411+30]..[341,11411+53])
+                  Ptyp_constr "list" (lib/syntax.ml[341,11411+49]..[341,11411+53])
+                  [
+                    core_type (lib/syntax.ml[341,11411+30]..[341,11411+48])
+                      Ptyp_constr "parameterized_rule" (lib/syntax.ml[341,11411+30]..[341,11411+48])
+                      []
+                  ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[358,12187+1]..[370,12769+5])
+    Pstr_type Rec
+    [
+      type_declaration "grammar" (lib/syntax.ml[358,12187+6]..[358,12187+13]) (lib/syntax.ml[358,12187+1]..[370,12769+5])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (lib/syntax.ml[360,12209+6]..[360,12209+44])
+                Immutable
+                "p_preludes" (lib/syntax.ml[360,12209+6]..[360,12209+16])                core_type (lib/syntax.ml[360,12209+29]..[360,12209+43])
+                  Ptyp_constr "list" (lib/syntax.ml[360,12209+39]..[360,12209+43])
+                  [
+                    core_type (lib/syntax.ml[360,12209+29]..[360,12209+38])
+                      Ptyp_constr "Stretch.t" (lib/syntax.ml[360,12209+29]..[360,12209+38])
+                      []
+                  ]
+              (lib/syntax.ml[361,12254+6]..[361,12254+43])
+                Immutable
+                "p_postludes" (lib/syntax.ml[361,12254+6]..[361,12254+17])                core_type (lib/syntax.ml[361,12254+29]..[361,12254+42])
+                  Ptyp_constr "list" (lib/syntax.ml[361,12254+38]..[361,12254+42])
+                  [
+                    core_type (lib/syntax.ml[361,12254+29]..[361,12254+37])
+                      Ptyp_constr "postlude" (lib/syntax.ml[361,12254+29]..[361,12254+37])
+                      []
+                  ]
+              (lib/syntax.ml[362,12298+6]..[362,12298+44])
+                Immutable
+                "p_parameters" (lib/syntax.ml[362,12298+6]..[362,12298+18])                core_type (lib/syntax.ml[362,12298+29]..[362,12298+43])
+                  Ptyp_constr "list" (lib/syntax.ml[362,12298+39]..[362,12298+43])
+                  [
+                    core_type (lib/syntax.ml[362,12298+29]..[362,12298+38])
+                      Ptyp_constr "Stretch.t" (lib/syntax.ml[362,12298+29]..[362,12298+38])
+                      []
+                  ]
+              (lib/syntax.ml[363,12343+6]..[363,12343+53])
+                Immutable
+                "p_start_symbols" (lib/syntax.ml[363,12343+6]..[363,12343+21])                core_type (lib/syntax.ml[363,12343+29]..[363,12343+52])
+                  Ptyp_constr "StringMap.t" (lib/syntax.ml[363,12343+41]..[363,12343+52])
+                  [
+                    core_type (lib/syntax.ml[363,12343+29]..[363,12343+40])
+                      Ptyp_constr "Positions.t" (lib/syntax.ml[363,12343+29]..[363,12343+40])
+                      []
+                  ]
+              (lib/syntax.ml[364,12397+6]..[364,12397+74])
+                Immutable
+                "p_types" (lib/syntax.ml[364,12397+6]..[364,12397+13])                core_type (lib/syntax.ml[364,12397+29]..[364,12397+73])
+                  Ptyp_constr "list" (lib/syntax.ml[364,12397+69]..[364,12397+73])
+                  [
+                    core_type (lib/syntax.ml[364,12397+30]..[364,12397+67])
+                      Ptyp_tuple
+                      [
+                        core_type (lib/syntax.ml[364,12397+30]..[364,12397+39])
+                          Ptyp_constr "parameter" (lib/syntax.ml[364,12397+30]..[364,12397+39])
+                          []
+                        core_type (lib/syntax.ml[364,12397+42]..[364,12397+67])
+                          Ptyp_constr "located" (lib/syntax.ml[364,12397+60]..[364,12397+67])
+                          [
+                            core_type (lib/syntax.ml[364,12397+42]..[364,12397+59])
+                              Ptyp_constr "Stretch.ocamltype" (lib/syntax.ml[364,12397+42]..[364,12397+59])
+                              []
+                          ]
+                      ]
+                  ]
+              (lib/syntax.ml[365,12472+6]..[365,12472+58])
+                Immutable
+                "p_tokens" (lib/syntax.ml[365,12472+6]..[365,12472+14])                core_type (lib/syntax.ml[365,12472+29]..[365,12472+57])
+                  Ptyp_constr "StringMap.t" (lib/syntax.ml[365,12472+46]..[365,12472+57])
+                  [
+                    core_type (lib/syntax.ml[365,12472+29]..[365,12472+45])
+                      Ptyp_constr "token_properties" (lib/syntax.ml[365,12472+29]..[365,12472+45])
+                      []
+                  ]
+              (lib/syntax.ml[366,12531+6]..[366,12531+70])
+                Immutable
+                "p_on_error_reduce" (lib/syntax.ml[366,12531+6]..[366,12531+23])                core_type (lib/syntax.ml[366,12531+29]..[366,12531+69])
+                  Ptyp_constr "list" (lib/syntax.ml[366,12531+65]..[366,12531+69])
+                  [
+                    core_type (lib/syntax.ml[366,12531+30]..[366,12531+63])
+                      Ptyp_tuple
+                      [
+                        core_type (lib/syntax.ml[366,12531+30]..[366,12531+39])
+                          Ptyp_constr "parameter" (lib/syntax.ml[366,12531+30]..[366,12531+39])
+                          []
+                        core_type (lib/syntax.ml[366,12531+42]..[366,12531+63])
+                          Ptyp_constr "on_error_reduce_level" (lib/syntax.ml[366,12531+42]..[366,12531+63])
+                          []
+                      ]
+                  ]
+              (lib/syntax.ml[367,12602+6]..[367,12602+40])
+                Immutable
+                "p_grammar_attributes" (lib/syntax.ml[367,12602+6]..[367,12602+26])                core_type (lib/syntax.ml[367,12602+29]..[367,12602+39])
+                  Ptyp_constr "attributes" (lib/syntax.ml[367,12602+29]..[367,12602+39])
+                  []
+              (lib/syntax.ml[368,12643+6]..[368,12643+64])
+                Immutable
+                "p_symbol_attributes" (lib/syntax.ml[368,12643+6]..[368,12643+25])                core_type (lib/syntax.ml[368,12643+29]..[368,12643+63])
+                  Ptyp_constr "list" (lib/syntax.ml[368,12643+59]..[368,12643+63])
+                  [
+                    core_type (lib/syntax.ml[368,12643+30]..[368,12643+57])
+                      Ptyp_tuple
+                      [
+                        core_type (lib/syntax.ml[368,12643+30]..[368,12643+44])
+                          Ptyp_constr "list" (lib/syntax.ml[368,12643+40]..[368,12643+44])
+                          [
+                            core_type (lib/syntax.ml[368,12643+30]..[368,12643+39])
+                              Ptyp_constr "parameter" (lib/syntax.ml[368,12643+30]..[368,12643+39])
+                              []
+                          ]
+                        core_type (lib/syntax.ml[368,12643+47]..[368,12643+57])
+                          Ptyp_constr "attributes" (lib/syntax.ml[368,12643+47]..[368,12643+57])
+                          []
+                      ]
+                  ]
+              (lib/syntax.ml[369,12708+6]..[369,12708+60])
+                Immutable
+                "p_rules" (lib/syntax.ml[369,12708+6]..[369,12708+13])                core_type (lib/syntax.ml[369,12708+29]..[369,12708+59])
+                  Ptyp_constr "StringMap.t" (lib/syntax.ml[369,12708+48]..[369,12708+59])
+                  [
+                    core_type (lib/syntax.ml[369,12708+29]..[369,12708+47])
+                      Ptyp_constr "parameterized_rule" (lib/syntax.ml[369,12708+29]..[369,12708+47])
+                      []
+                  ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[373,12777+1]..[373,12777+44])
+    Pstr_type Rec
+    [
+      type_declaration "mystringpos" (lib/syntax.ml[373,12777+6]..[373,12777+17]) (lib/syntax.ml[373,12777+1]..[373,12777+44])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[373,12777+20]..[373,12777+44])
+              Ptyp_constr "Positions.located" (lib/syntax.ml[373,12777+27]..[373,12777+44])
+              [
+                core_type (lib/syntax.ml[373,12777+20]..[373,12777+26])
+                  Ptyp_constr "string" (lib/syntax.ml[373,12777+20]..[373,12777+26])
+                  []
+              ]
+    ]
+  structure_item (lib/syntax.ml[375,12824+1]..[384,13006+31])
+    Pstr_type Rec
+    [
+      type_declaration "myfactor" (lib/syntax.ml[375,12824+6]..[375,12824+14]) (lib/syntax.ml[375,12824+1]..[384,13006+31])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (lib/syntax.ml[376,12841+3]..[376,12841+27])
+                "SFactor" (lib/syntax.ml[376,12841+5]..[376,12841+12])
+                [
+                  core_type (lib/syntax.ml[376,12841+16]..[376,12841+27])
+                    Ptyp_constr "mystringpos" (lib/syntax.ml[376,12841+16]..[376,12841+27])
+                    []
+                ]
+                None
+              (lib/syntax.ml[377,12869+3]..[377,12869+41])
+                "CFactor" (lib/syntax.ml[377,12869+5]..[377,12869+12])
+                [
+                  core_type (lib/syntax.ml[377,12869+16]..[377,12869+27])
+                    Ptyp_constr "mystringpos" (lib/syntax.ml[377,12869+16]..[377,12869+27])
+                    []
+                  core_type (lib/syntax.ml[377,12869+30]..[377,12869+41])
+                    Ptyp_constr "mystringpos" (lib/syntax.ml[377,12869+30]..[377,12869+41])
+                    []
+                ]
+                None
+              (lib/syntax.ml[378,12911+3]..[378,12911+25])
+                "NFactor" (lib/syntax.ml[378,12911+5]..[378,12911+12])
+                [
+                  core_type (lib/syntax.ml[378,12911+17]..[378,12911+25])
+                    Ptyp_constr "myfactor" (lib/syntax.ml[378,12911+17]..[378,12911+25])
+                    []
+                ]
+                None
+              (lib/syntax.ml[379,12937+3]..[379,12937+9])
+                "Star" (lib/syntax.ml[379,12937+5]..[379,12937+9])
+                []
+                None
+              (lib/syntax.ml[380,12947+3]..[380,12947+13])
+                "Question" (lib/syntax.ml[380,12947+5]..[380,12947+13])
+                []
+                None
+              (lib/syntax.ml[381,12961+3]..[381,12961+9])
+                "Plus" (lib/syntax.ml[381,12961+5]..[381,12961+9])
+                []
+                None
+              (lib/syntax.ml[382,12971+3]..[382,12971+19])
+                "CharInt" (lib/syntax.ml[382,12971+5]..[382,12971+12])
+                [
+                  core_type (lib/syntax.ml[382,12971+16]..[382,12971+19])
+                    Ptyp_constr "int" (lib/syntax.ml[382,12971+16]..[382,12971+19])
+                    []
+                ]
+                None
+              (lib/syntax.ml[383,12991+3]..[383,12991+14])
+                "CharClass" (lib/syntax.ml[383,12991+5]..[383,12991+14])
+                []
+                None
+              (lib/syntax.ml[384,13006+3]..[384,13006+31])
+                "Rule" (lib/syntax.ml[384,13006+5]..[384,13006+9])
+                [
+                  core_type (lib/syntax.ml[384,13006+13]..[384,13006+31])
+                    Ptyp_constr "parameterized_rule" (lib/syntax.ml[384,13006+13]..[384,13006+31])
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+          Ppat_construct "()" (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+          None
+        expression (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+          Pexp_apply
+          expression (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+            Pexp_ident "Ppx_inline_test_lib.unset_lib" (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+                Pexp_constant PConst_string("gbnf_parser",(lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost,None)
+          ]
+    ]
+  structure_item (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+          Ppat_construct "()" (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+          None
+        expression (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+          Pexp_apply
+          expression (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+            Pexp_ident "Expect_test_collector.Current_file.unset" (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+                Pexp_construct "()" (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+          Ppat_construct "()" (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+          None
+        expression (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+          Pexp_apply
+          expression (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+            Pexp_ident "Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset" (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+                Pexp_construct "()" (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+                None
+          ]
+    ]
+  structure_item (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+          Ppat_construct "()" (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+          None
+        expression (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+          Pexp_apply
+          expression (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+            Pexp_ident "Ppx_module_timer_runtime.record_until" (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+          [
+            <arg>
+            Nolabel
+              expression (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+                Pexp_ident "Ppx_module_timer_runtime.__MODULE__" (lib/syntax.ml[384,13006+31]..[384,13006+31]) ghost
+          ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = [("inline_tests", "enabled"); ("library-name", "gbnf_parser")]
+  }]
+let () =
+  Ppx_module_timer_runtime.record_start Ppx_module_timer_runtime.__MODULE__
+let () =
+  Ppx_bench_lib.Benchmark_accumulator.Current_libname.set "gbnf_parser"
+let () =
+  Expect_test_collector.Current_file.set ~absolute_filename:"lib/syntax.ml"
+let () = Ppx_inline_test_lib.set_lib_and_partition "gbnf_parser" "syntax.ml"
+type 'a located = 'a Positions.located
+type terminal = string
+type nonterminal = string
+type symbol = string
+type alias = string option
+type identifier = string
+type filename = string
+type postlude = Stretch.t
+type action = Action.t
+type attribute = (string located * Stretch.t)
+type attributes = attribute list
+type token_associativity =
+  | LeftAssoc 
+  | RightAssoc 
+  | NonAssoc 
+  | UndefinedAssoc 
+type precedence_level =
+  | UndefinedPrecedence 
+  | PrecedenceLevel of InputFile.input_file * int * Lexing.position *
+  Lexing.position 
+type token_properties =
+  {
+  tk_filename: filename ;
+  tk_ocamltype: Stretch.ocamltype option ;
+  tk_position: Positions.t ;
+  tk_alias: alias ;
+  tk_attributes: attributes ;
+  mutable tk_associativity: token_associativity ;
+  mutable tk_precedence: precedence_level ;
+  mutable tk_is_declared: bool }
+type branch_prec_annotation = symbol located option
+type branch_production_level =
+  | ProductionLevel of InputFile.input_file * int 
+type on_error_reduce_level = branch_production_level
+type parameter =
+  | ParameterVar of symbol located 
+  | ParameterApp of symbol located * parameters 
+  | ParameterAnonymous of parameterized_branch list located 
+and parameters = parameter list
+and producer = (identifier located * parameter * attributes)
+and parameterized_branch =
+  {
+  pr_branch_position: Positions.t ;
+  pr_producers: producer list }
+type parameterized_rule =
+  {
+  pr_nt: nonterminal ;
+  pr_positions: Positions.t list ;
+  pr_branches: parameterized_branch list }
+type pattern =
+  | SemPatVar of identifier located 
+  | SemPatWildcard 
+  | SemPatTilde of Positions.t 
+  | SemPatTuple of pattern list 
+type raw_action = identifier option array -> action
+type expression = choice_expression located
+and choice_expression =
+  | EChoice of branch list 
+and branch =
+  | Branch of seq_expression * branch_production_level 
+and seq_expression = raw_seq_expression located
+and raw_seq_expression =
+  | ECons of pattern * symbol_expression * seq_expression 
+  | ESingleton of symbol_expression 
+  | EAction of extended_action * branch_prec_annotation 
+and symbol_expression =
+  | ESymbol of symbol located * expression list * attributes 
+and extended_action =
+  | XATraditional of raw_action 
+  | XAPointFree of Stretch.t option 
+type rule =
+  {
+  rule_public: bool ;
+  rule_inline: bool ;
+  rule_lhs: symbol located ;
+  rule_formals: symbol located list ;
+  rule_rhs: expression }
+type declaration =
+  | DCode of Stretch.t 
+  | DParameter of Stretch.ocamltype 
+  | DToken of Stretch.ocamltype option * terminal * alias * attributes 
+  | DStart of nonterminal 
+  | DTokenProperties of terminal * token_associativity * precedence_level 
+  | DType of Stretch.ocamltype * parameter 
+  | DGrammarAttribute of attribute 
+  | DSymbolAttributes of parameter list * attributes 
+  | DOnErrorReduce of parameter * on_error_reduce_level 
+type partial_grammar =
+  {
+  pg_filename: filename ;
+  pg_rules: parameterized_rule list }
+type grammar =
+  {
+  p_preludes: Stretch.t list ;
+  p_postludes: postlude list ;
+  p_parameters: Stretch.t list ;
+  p_start_symbols: Positions.t StringMap.t ;
+  p_types: (parameter * Stretch.ocamltype located) list ;
+  p_tokens: token_properties StringMap.t ;
+  p_on_error_reduce: (parameter * on_error_reduce_level) list ;
+  p_grammar_attributes: attributes ;
+  p_symbol_attributes: (parameter list * attributes) list ;
+  p_rules: parameterized_rule StringMap.t }
+type mystringpos = string Positions.located
+type myfactor =
+  | SFactor of mystringpos 
+  | CFactor of mystringpos * mystringpos 
+  | NFactor of myfactor 
+  | Star 
+  | Question 
+  | Plus 
+  | CharInt of int 
+  | CharClass 
+  | Rule of parameterized_rule 
+let () = Ppx_inline_test_lib.unset_lib "gbnf_parser"
+let () = Expect_test_collector.Current_file.unset ()
+let () = Ppx_bench_lib.Benchmark_accumulator.Current_libname.unset ()
+let () =
+  Ppx_module_timer_runtime.record_until Ppx_module_timer_runtime.__MODULE__
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                Some
+                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                    Pexp_tuple
+                    [
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_tuple
+                        [
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_constant PConst_string("inline_tests",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                          expression (<command-line>[1,0+0]..[1,0+9])
+                            Pexp_constant PConst_string("enabled",(<command-line>[1,0+1]..[1,0+8]),None)
+                        ]
+                      expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Pexp_construct "::" (_none_[0,0+-1]..[0,0+-1]) ghost
+                        Some
+                          expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                            Pexp_tuple
+                            [
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                    Pexp_constant PConst_string("library-name",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+                                  expression (<command-line>[1,0+0]..[1,0+13])
+                                    Pexp_constant PConst_string("gbnf_parser",(<command-line>[1,0+1]..[1,0+12]),None)
+                                ]
+                              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                                None
+                            ]
+                    ]
+          ]
+          None
+    ]
+  structure_item (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+          Texp_apply
+          expression (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_start"
+          [
+            <arg>
+              Nolabel
+              expression (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+  structure_item (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+          Texp_apply
+          expression (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.set"
+          [
+            <arg>
+              Nolabel
+              expression (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+          Texp_apply
+          expression (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.set"
+          [
+            <arg>
+              Labelled "absolute_filename"
+              expression (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+                Texp_constant Const_string("lib/syntax.ml",(lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+          Texp_apply
+          expression (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+            Texp_ident "Ppx_inline_test_lib!.set_lib_and_partition"
+          [
+            <arg>
+              Nolabel
+              expression (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost,None)
+            <arg>
+              Nolabel
+              expression (lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost
+                Texp_constant Const_string("syntax.ml",(lib/syntax.ml[22,1383+0]..lib/syntax.ml[22,1383+0]) ghost,None)
+          ]
+    ]
+  structure_item (lib/syntax.ml[22,1383+0]..lib/syntax.ml[23,1401+24])
+    Tstr_type Rec
+    [
+      type_declaration located/1132 (lib/syntax.ml[22,1383+0]..lib/syntax.ml[23,1401+24])
+        ptype_params =
+          [
+            core_type (lib/syntax.ml[22,1383+5]..lib/syntax.ml[22,1383+7])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[23,1401+4]..lib/syntax.ml[23,1401+24])
+              Ttyp_constr "Gbnf_parser!.Positions.located"
+              [
+                core_type (lib/syntax.ml[23,1401+4]..lib/syntax.ml[23,1401+6])
+                  Ttyp_var a
+              ]
+    ]
+  structure_item (lib/syntax.ml[29,1561+0]..lib/syntax.ml[30,1577+10])
+    Tstr_type Rec
+    [
+      type_declaration terminal/1203 (lib/syntax.ml[29,1561+0]..lib/syntax.ml[30,1577+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[30,1577+4]..lib/syntax.ml[30,1577+10])
+              Ttyp_constr "string/15!"
+              []
+    ]
+  structure_item (lib/syntax.ml[32,1589+0]..lib/syntax.ml[33,1608+10])
+    Tstr_type Rec
+    [
+      type_declaration nonterminal/1204 (lib/syntax.ml[32,1589+0]..lib/syntax.ml[33,1608+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[33,1608+4]..lib/syntax.ml[33,1608+10])
+              Ttyp_constr "string/15!"
+              []
+    ]
+  structure_item (lib/syntax.ml[35,1620+0]..lib/syntax.ml[36,1634+10])
+    Tstr_type Rec
+    [
+      type_declaration symbol/1205 (lib/syntax.ml[35,1620+0]..lib/syntax.ml[36,1634+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[36,1634+4]..lib/syntax.ml[36,1634+10])
+              Ttyp_constr "string/15!"
+              []
+    ]
+  structure_item (lib/syntax.ml[52,2349+0]..lib/syntax.ml[53,2362+17])
+    Tstr_type Rec
+    [
+      type_declaration alias/1206 (lib/syntax.ml[52,2349+0]..lib/syntax.ml[53,2362+17])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[53,2362+4]..lib/syntax.ml[53,2362+17])
+              Ttyp_constr "option/10!"
+              [
+                core_type (lib/syntax.ml[53,2362+4]..lib/syntax.ml[53,2362+10])
+                  Ttyp_constr "string/15!"
+                  []
+              ]
+    ]
+  structure_item (lib/syntax.ml[58,2471+0]..lib/syntax.ml[59,2489+10])
+    Tstr_type Rec
+    [
+      type_declaration identifier/1207 (lib/syntax.ml[58,2471+0]..lib/syntax.ml[59,2489+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[59,2489+4]..lib/syntax.ml[59,2489+10])
+              Ttyp_constr "string/15!"
+              []
+    ]
+  structure_item (lib/syntax.ml[63,2533+0]..lib/syntax.ml[64,2549+10])
+    Tstr_type Rec
+    [
+      type_declaration filename/1208 (lib/syntax.ml[63,2533+0]..lib/syntax.ml[64,2549+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[64,2549+4]..lib/syntax.ml[64,2549+10])
+              Ttyp_constr "string/15!"
+              []
+    ]
+  structure_item (lib/syntax.ml[70,2686+0]..lib/syntax.ml[71,2702+13])
+    Tstr_type Rec
+    [
+      type_declaration postlude/1209 (lib/syntax.ml[70,2686+0]..lib/syntax.ml[71,2702+13])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[71,2702+4]..lib/syntax.ml[71,2702+13])
+              Ttyp_constr "Gbnf_parser!.Stretch.t"
+              []
+    ]
+  structure_item (lib/syntax.ml[77,2857+0]..lib/syntax.ml[78,2871+12])
+    Tstr_type Rec
+    [
+      type_declaration action/1214 (lib/syntax.ml[77,2857+0]..lib/syntax.ml[78,2871+12])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[78,2871+4]..lib/syntax.ml[78,2871+12])
+              Ttyp_constr "Gbnf_parser!.Action.t"
+              []
+    ]
+  structure_item (lib/syntax.ml[85,3100+0]..lib/syntax.ml[86,3117+30])
+    Tstr_type Rec
+    [
+      type_declaration attribute/1279 (lib/syntax.ml[85,3100+0]..lib/syntax.ml[86,3117+30])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[86,3117+4]..lib/syntax.ml[86,3117+30])
+              Ttyp_tuple
+              [
+                core_type (lib/syntax.ml[86,3117+4]..lib/syntax.ml[86,3117+18])
+                  Ttyp_constr "located/1132"
+                  [
+                    core_type (lib/syntax.ml[86,3117+4]..lib/syntax.ml[86,3117+10])
+                      Ttyp_constr "string/15!"
+                      []
+                  ]
+                core_type (lib/syntax.ml[86,3117+21]..lib/syntax.ml[86,3117+30])
+                  Ttyp_constr "Gbnf_parser!.Stretch.t"
+                  []
+              ]
+    ]
+  structure_item (lib/syntax.ml[88,3149+0]..lib/syntax.ml[89,3167+18])
+    Tstr_type Rec
+    [
+      type_declaration attributes/1280 (lib/syntax.ml[88,3149+0]..lib/syntax.ml[89,3167+18])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[89,3167+4]..lib/syntax.ml[89,3167+18])
+              Ttyp_constr "list/9!"
+              [
+                core_type (lib/syntax.ml[89,3167+4]..lib/syntax.ml[89,3167+13])
+                  Ttyp_constr "attribute/1279"
+                  []
+              ]
+    ]
+  structure_item (lib/syntax.ml[109,3948+0]..lib/syntax.ml[113,4017+18])
+    Tstr_type Rec
+    [
+      type_declaration token_associativity/1281 (lib/syntax.ml[109,3948+0]..lib/syntax.ml[113,4017+18])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/syntax.ml[110,3975+4]..lib/syntax.ml[110,3975+13])
+                LeftAssoc/1282
+                []
+                None
+              (lib/syntax.ml[111,3989+2]..lib/syntax.ml[111,3989+14])
+                RightAssoc/1283
+                []
+                None
+              (lib/syntax.ml[112,4004+2]..lib/syntax.ml[112,4004+12])
+                NonAssoc/1284
+                []
+                None
+              (lib/syntax.ml[113,4017+2]..lib/syntax.ml[113,4017+18])
+                UndefinedAssoc/1285
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[115,4037+0]..lib/syntax.ml[122,4280+85])
+    Tstr_type Rec
+    [
+      type_declaration precedence_level/1286 (lib/syntax.ml[115,4037+0]..lib/syntax.ml[122,4280+85])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/syntax.ml[116,4061+4]..lib/syntax.ml[116,4061+23])
+                UndefinedPrecedence/1287
+                []
+                None
+              (lib/syntax.ml[122,4280+2]..lib/syntax.ml[122,4280+85])
+                PrecedenceLevel/1288
+                [
+                  core_type (lib/syntax.ml[122,4280+23]..lib/syntax.ml[122,4280+43])
+                    Ttyp_constr "Gbnf_parser!.InputFile.input_file"
+                    []
+                  core_type (lib/syntax.ml[122,4280+46]..lib/syntax.ml[122,4280+49])
+                    Ttyp_constr "int/1!"
+                    []
+                  core_type (lib/syntax.ml[122,4280+52]..lib/syntax.ml[122,4280+67])
+                    Ttyp_constr "Stdlib!.Lexing.position"
+                    []
+                  core_type (lib/syntax.ml[122,4280+70]..lib/syntax.ml[122,4280+85])
+                    Ttyp_constr "Stdlib!.Lexing.position"
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[124,4367+0]..lib/syntax.ml[134,4782+5])
+    Tstr_type Rec
+    [
+      type_declaration token_properties/1365 (lib/syntax.ml[124,4367+0]..lib/syntax.ml[134,4782+5])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (lib/syntax.ml[126,4397+15]..lib/syntax.ml[126,4397+43])
+                Immutable
+                tk_filename/1366                core_type (lib/syntax.ml[126,4397+34]..lib/syntax.ml[126,4397+42])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[126,4397+34]..lib/syntax.ml[126,4397+42])
+                    Ttyp_constr "filename/1208"
+                    []
+              (lib/syntax.ml[127,4441+15]..lib/syntax.ml[127,4441+59])
+                Immutable
+                tk_ocamltype/1367                core_type (lib/syntax.ml[127,4441+34]..lib/syntax.ml[127,4441+58])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[127,4441+34]..lib/syntax.ml[127,4441+58])
+                    Ttyp_constr "option/10!"
+                    [
+                      core_type (lib/syntax.ml[127,4441+34]..lib/syntax.ml[127,4441+51])
+                        Ttyp_constr "Gbnf_parser!.Stretch.ocamltype"
+                        []
+                    ]
+              (lib/syntax.ml[128,4501+15]..lib/syntax.ml[128,4501+46])
+                Immutable
+                tk_position/1368                core_type (lib/syntax.ml[128,4501+34]..lib/syntax.ml[128,4501+45])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[128,4501+34]..lib/syntax.ml[128,4501+45])
+                    Ttyp_constr "Gbnf_parser!.Positions.t"
+                    []
+              (lib/syntax.ml[129,4548+15]..lib/syntax.ml[129,4548+40])
+                Immutable
+                tk_alias/1369                core_type (lib/syntax.ml[129,4548+34]..lib/syntax.ml[129,4548+39])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[129,4548+34]..lib/syntax.ml[129,4548+39])
+                    Ttyp_constr "alias/1206"
+                    []
+              (lib/syntax.ml[130,4589+15]..lib/syntax.ml[130,4589+45])
+                Immutable
+                tk_attributes/1370                core_type (lib/syntax.ml[130,4589+34]..lib/syntax.ml[130,4589+44])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[130,4589+34]..lib/syntax.ml[130,4589+44])
+                    Ttyp_constr "attributes/1280"
+                    []
+              (lib/syntax.ml[131,4635+6]..lib/syntax.ml[131,4635+54])
+                Mutable
+                tk_associativity/1371                core_type (lib/syntax.ml[131,4635+34]..lib/syntax.ml[131,4635+53])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[131,4635+34]..lib/syntax.ml[131,4635+53])
+                    Ttyp_constr "token_associativity/1281"
+                    []
+              (lib/syntax.ml[132,4690+6]..lib/syntax.ml[132,4690+51])
+                Mutable
+                tk_precedence/1372                core_type (lib/syntax.ml[132,4690+34]..lib/syntax.ml[132,4690+50])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[132,4690+34]..lib/syntax.ml[132,4690+50])
+                    Ttyp_constr "precedence_level/1286"
+                    []
+              (lib/syntax.ml[133,4742+6]..lib/syntax.ml[133,4742+39])
+                Mutable
+                tk_is_declared/1373                core_type (lib/syntax.ml[133,4742+34]..lib/syntax.ml[133,4742+38])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[133,4742+34]..lib/syntax.ml[133,4742+38])
+                    Ttyp_constr "bool/5!"
+                    []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[141,5004+0]..lib/syntax.ml[142,5034+25])
+    Tstr_type Rec
+    [
+      type_declaration branch_prec_annotation/1374 (lib/syntax.ml[141,5004+0]..lib/syntax.ml[142,5034+25])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[142,5034+4]..lib/syntax.ml[142,5034+25])
+              Ttyp_constr "option/10!"
+              [
+                core_type (lib/syntax.ml[142,5034+4]..lib/syntax.ml[142,5034+18])
+                  Ttyp_constr "located/1132"
+                  [
+                    core_type (lib/syntax.ml[142,5034+4]..lib/syntax.ml[142,5034+10])
+                      Ttyp_constr "symbol/1205"
+                      []
+                  ]
+              ]
+    ]
+  structure_item (lib/syntax.ml[149,5290+0]..lib/syntax.ml[150,5321+49])
+    Tstr_type Rec
+    [
+      type_declaration branch_production_level/1375 (lib/syntax.ml[149,5290+0]..lib/syntax.ml[150,5321+49])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/syntax.ml[150,5321+2]..lib/syntax.ml[150,5321+49])
+                ProductionLevel/1376
+                [
+                  core_type (lib/syntax.ml[150,5321+23]..lib/syntax.ml[150,5321+43])
+                    Ttyp_constr "Gbnf_parser!.InputFile.input_file"
+                    []
+                  core_type (lib/syntax.ml[150,5321+46]..lib/syntax.ml[150,5321+49])
+                    Ttyp_constr "int/1!"
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[158,5623+0]..lib/syntax.ml[159,5652+25])
+    Tstr_type Rec
+    [
+      type_declaration on_error_reduce_level/1377 (lib/syntax.ml[158,5623+0]..lib/syntax.ml[159,5652+25])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[159,5652+2]..lib/syntax.ml[159,5652+25])
+              Ttyp_constr "branch_production_level/1375"
+              []
+    ]
+  structure_item (lib/syntax.ml[171,6220+0]..lib/syntax.ml[203,7367+5])
+    Tstr_type Rec
+    [
+      type_declaration parameter/1378 (lib/syntax.ml[171,6220+0]..lib/syntax.ml[174,6320+59])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/syntax.ml[172,6237+2]..lib/syntax.ml[172,6237+34])
+                ParameterVar/1382
+                [
+                  core_type (lib/syntax.ml[172,6237+20]..lib/syntax.ml[172,6237+34])
+                    Ttyp_constr "located/1132"
+                    [
+                      core_type (lib/syntax.ml[172,6237+20]..lib/syntax.ml[172,6237+26])
+                        Ttyp_constr "symbol/1205"
+                        []
+                    ]
+                ]
+                None
+              (lib/syntax.ml[173,6272+2]..lib/syntax.ml[173,6272+47])
+                ParameterApp/1383
+                [
+                  core_type (lib/syntax.ml[173,6272+20]..lib/syntax.ml[173,6272+34])
+                    Ttyp_constr "located/1132"
+                    [
+                      core_type (lib/syntax.ml[173,6272+20]..lib/syntax.ml[173,6272+26])
+                        Ttyp_constr "symbol/1205"
+                        []
+                    ]
+                  core_type (lib/syntax.ml[173,6272+37]..lib/syntax.ml[173,6272+47])
+                    Ttyp_constr "parameters/1379"
+                    []
+                ]
+                None
+              (lib/syntax.ml[174,6320+2]..lib/syntax.ml[174,6320+59])
+                ParameterAnonymous/1384
+                [
+                  core_type (lib/syntax.ml[174,6320+26]..lib/syntax.ml[174,6320+59])
+                    Ttyp_constr "located/1132"
+                    [
+                      core_type (lib/syntax.ml[174,6320+26]..lib/syntax.ml[174,6320+51])
+                        Ttyp_constr "list/9!"
+                        [
+                          core_type (lib/syntax.ml[174,6320+26]..lib/syntax.ml[174,6320+46])
+                            Ttyp_constr "parameterized_branch/1381"
+                            []
+                        ]
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration parameters/1379 (lib/syntax.ml[176,6381+0]..lib/syntax.ml[177,6398+18])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[177,6398+4]..lib/syntax.ml[177,6398+18])
+              Ttyp_constr "list/9!"
+              [
+                core_type (lib/syntax.ml[177,6398+4]..lib/syntax.ml[177,6398+13])
+                  Ttyp_constr "parameter/1378"
+                  []
+              ]
+      type_declaration producer/1380 (lib/syntax.ml[187,6831+0]..lib/syntax.ml[188,6846+47])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[188,6846+4]..lib/syntax.ml[188,6846+47])
+              Ttyp_tuple
+              [
+                core_type (lib/syntax.ml[188,6846+4]..lib/syntax.ml[188,6846+22])
+                  Ttyp_constr "located/1132"
+                  [
+                    core_type (lib/syntax.ml[188,6846+4]..lib/syntax.ml[188,6846+14])
+                      Ttyp_constr "identifier/1207"
+                      []
+                  ]
+                core_type (lib/syntax.ml[188,6846+25]..lib/syntax.ml[188,6846+34])
+                  Ttyp_constr "parameter/1378"
+                  []
+                core_type (lib/syntax.ml[188,6846+37]..lib/syntax.ml[188,6846+47])
+                  Ttyp_constr "attributes/1280"
+                  []
+              ]
+      type_declaration parameterized_branch/1381 (lib/syntax.ml[194,7045+0]..lib/syntax.ml[203,7367+5])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (lib/syntax.ml[196,7078+6]..lib/syntax.ml[196,7078+49])
+                Immutable
+                pr_branch_position/1385                core_type (lib/syntax.ml[196,7078+37]..lib/syntax.ml[196,7078+48])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[196,7078+37]..lib/syntax.ml[196,7078+48])
+                    Ttyp_constr "Gbnf_parser!.Positions.t"
+                    []
+              (lib/syntax.ml[197,7128+6]..lib/syntax.ml[197,7128+51])
+                Immutable
+                pr_producers/1386                core_type (lib/syntax.ml[197,7128+37]..lib/syntax.ml[197,7128+50])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[197,7128+37]..lib/syntax.ml[197,7128+50])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/syntax.ml[197,7128+37]..lib/syntax.ml[197,7128+45])
+                        Ttyp_constr "producer/1380"
+                        []
+                    ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[209,7503+0]..lib/syntax.ml[218,7858+5])
+    Tstr_type Rec
+    [
+      type_declaration parameterized_rule/1387 (lib/syntax.ml[209,7503+0]..lib/syntax.ml[218,7858+5])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (lib/syntax.ml[213,7617+6]..lib/syntax.ml[213,7617+41])
+                Immutable
+                pr_nt/1388                core_type (lib/syntax.ml[213,7617+29]..lib/syntax.ml[213,7617+40])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[213,7617+29]..lib/syntax.ml[213,7617+40])
+                    Ttyp_constr "nonterminal/1204"
+                    []
+              (lib/syntax.ml[214,7659+6]..lib/syntax.ml[214,7659+46])
+                Immutable
+                pr_positions/1389                core_type (lib/syntax.ml[214,7659+29]..lib/syntax.ml[214,7659+45])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[214,7659+29]..lib/syntax.ml[214,7659+45])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/syntax.ml[214,7659+29]..lib/syntax.ml[214,7659+40])
+                        Ttyp_constr "Gbnf_parser!.Positions.t"
+                        []
+                    ]
+              (lib/syntax.ml[217,7801+6]..lib/syntax.ml[217,7801+56])
+                Immutable
+                pr_branches/1390                core_type (lib/syntax.ml[217,7801+30]..lib/syntax.ml[217,7801+55])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[217,7801+30]..lib/syntax.ml[217,7801+55])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/syntax.ml[217,7801+30]..lib/syntax.ml[217,7801+50])
+                        Ttyp_constr "parameterized_branch/1381"
+                        []
+                    ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[232,8378+0]..lib/syntax.ml[236,8479+31])
+    Tstr_type Rec
+    [
+      type_declaration pattern/1391 (lib/syntax.ml[232,8378+0]..lib/syntax.ml[236,8479+31])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/syntax.ml[233,8393+2]..lib/syntax.ml[233,8393+35])
+                SemPatVar/1392
+                [
+                  core_type (lib/syntax.ml[233,8393+17]..lib/syntax.ml[233,8393+35])
+                    Ttyp_constr "located/1132"
+                    [
+                      core_type (lib/syntax.ml[233,8393+17]..lib/syntax.ml[233,8393+27])
+                        Ttyp_constr "identifier/1207"
+                        []
+                    ]
+                ]
+                None
+              (lib/syntax.ml[234,8429+2]..lib/syntax.ml[234,8429+18])
+                SemPatWildcard/1393
+                []
+                None
+              (lib/syntax.ml[235,8448+2]..lib/syntax.ml[235,8448+30])
+                SemPatTilde/1394
+                [
+                  core_type (lib/syntax.ml[235,8448+19]..lib/syntax.ml[235,8448+30])
+                    Ttyp_constr "Gbnf_parser!.Positions.t"
+                    []
+                ]
+                None
+              (lib/syntax.ml[236,8479+2]..lib/syntax.ml[236,8479+31])
+                SemPatTuple/1395
+                [
+                  core_type (lib/syntax.ml[236,8479+19]..lib/syntax.ml[236,8479+31])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/syntax.ml[236,8479+19]..lib/syntax.ml[236,8479+26])
+                        Ttyp_constr "pattern/1391"
+                        []
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[239,8548+0]..lib/syntax.ml[240,8566+35])
+    Tstr_type Rec
+    [
+      type_declaration raw_action/1396 (lib/syntax.ml[239,8548+0]..lib/syntax.ml[240,8566+35])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[240,8566+2]..lib/syntax.ml[240,8566+35])
+              Ttyp_arrow
+              Nolabel
+              core_type (lib/syntax.ml[240,8566+2]..lib/syntax.ml[240,8566+25])
+                Ttyp_constr "array/8!"
+                [
+                  core_type (lib/syntax.ml[240,8566+2]..lib/syntax.ml[240,8566+19])
+                    Ttyp_constr "option/10!"
+                    [
+                      core_type (lib/syntax.ml[240,8566+2]..lib/syntax.ml[240,8566+12])
+                        Ttyp_constr "identifier/1207"
+                        []
+                    ]
+                ]
+              core_type (lib/syntax.ml[240,8566+29]..lib/syntax.ml[240,8566+35])
+                Ttyp_constr "action/1214"
+                []
+    ]
+  structure_item (lib/syntax.ml[243,8664+0]..lib/syntax.ml[274,9611+35])
+    Tstr_type Rec
+    [
+      type_declaration expression/1397 (lib/syntax.ml[243,8664+0]..lib/syntax.ml[244,8682+27])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[244,8682+2]..lib/syntax.ml[244,8682+27])
+              Ttyp_constr "located/1132"
+              [
+                core_type (lib/syntax.ml[244,8682+2]..lib/syntax.ml[244,8682+19])
+                  Ttyp_constr "choice_expression/1398"
+                  []
+              ]
+      type_declaration choice_expression/1398 (lib/syntax.ml[247,8765+0]..lib/syntax.ml[248,8789+26])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/syntax.ml[248,8789+2]..lib/syntax.ml[248,8789+26])
+                EChoice/1404
+                [
+                  core_type (lib/syntax.ml[248,8789+15]..lib/syntax.ml[248,8789+26])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/syntax.ml[248,8789+15]..lib/syntax.ml[248,8789+21])
+                        Ttyp_constr "branch/1399"
+                        []
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration branch/1399 (lib/syntax.ml[251,8868+0]..lib/syntax.ml[252,8881+54])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/syntax.ml[252,8881+2]..lib/syntax.ml[252,8881+54])
+                Branch/1405
+                [
+                  core_type (lib/syntax.ml[252,8881+14]..lib/syntax.ml[252,8881+28])
+                    Ttyp_constr "seq_expression/1400"
+                    []
+                  core_type (lib/syntax.ml[252,8881+31]..lib/syntax.ml[252,8881+54])
+                    Ttyp_constr "branch_production_level/1375"
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration seq_expression/1400 (lib/syntax.ml[256,9025+0]..lib/syntax.ml[257,9046+28])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[257,9046+2]..lib/syntax.ml[257,9046+28])
+              Ttyp_constr "located/1132"
+              [
+                core_type (lib/syntax.ml[257,9046+2]..lib/syntax.ml[257,9046+20])
+                  Ttyp_constr "raw_seq_expression/1401"
+                  []
+              ]
+      type_declaration raw_seq_expression/1401 (lib/syntax.ml[259,9076+0]..lib/syntax.ml[262,9195+55])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/syntax.ml[260,9101+2]..lib/syntax.ml[260,9101+57])
+                ECons/1406
+                [
+                  core_type (lib/syntax.ml[260,9101+13]..lib/syntax.ml[260,9101+20])
+                    Ttyp_constr "pattern/1391"
+                    []
+                  core_type (lib/syntax.ml[260,9101+23]..lib/syntax.ml[260,9101+40])
+                    Ttyp_constr "symbol_expression/1402"
+                    []
+                  core_type (lib/syntax.ml[260,9101+43]..lib/syntax.ml[260,9101+57])
+                    Ttyp_constr "seq_expression/1400"
+                    []
+                ]
+                None
+              (lib/syntax.ml[261,9159+2]..lib/syntax.ml[261,9159+35])
+                ESingleton/1407
+                [
+                  core_type (lib/syntax.ml[261,9159+18]..lib/syntax.ml[261,9159+35])
+                    Ttyp_constr "symbol_expression/1402"
+                    []
+                ]
+                None
+              (lib/syntax.ml[262,9195+2]..lib/syntax.ml[262,9195+55])
+                EAction/1408
+                [
+                  core_type (lib/syntax.ml[262,9195+15]..lib/syntax.ml[262,9195+30])
+                    Ttyp_constr "extended_action/1403"
+                    []
+                  core_type (lib/syntax.ml[262,9195+33]..lib/syntax.ml[262,9195+55])
+                    Ttyp_constr "branch_prec_annotation/1374"
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration symbol_expression/1402 (lib/syntax.ml[267,9365+0]..lib/syntax.ml[268,9389+60])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/syntax.ml[268,9389+2]..lib/syntax.ml[268,9389+60])
+                ESymbol/1409
+                [
+                  core_type (lib/syntax.ml[268,9389+15]..lib/syntax.ml[268,9389+29])
+                    Ttyp_constr "located/1132"
+                    [
+                      core_type (lib/syntax.ml[268,9389+15]..lib/syntax.ml[268,9389+21])
+                        Ttyp_constr "symbol/1205"
+                        []
+                    ]
+                  core_type (lib/syntax.ml[268,9389+32]..lib/syntax.ml[268,9389+47])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/syntax.ml[268,9389+32]..lib/syntax.ml[268,9389+42])
+                        Ttyp_constr "expression/1397"
+                        []
+                    ]
+                  core_type (lib/syntax.ml[268,9389+50]..lib/syntax.ml[268,9389+60])
+                    Ttyp_constr "attributes/1280"
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration extended_action/1403 (lib/syntax.ml[272,9557+0]..lib/syntax.ml[274,9611+35])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/syntax.ml[273,9579+2]..lib/syntax.ml[273,9579+31])
+                XATraditional/1410
+                [
+                  core_type (lib/syntax.ml[273,9579+21]..lib/syntax.ml[273,9579+31])
+                    Ttyp_constr "raw_action/1396"
+                    []
+                ]
+                None
+              (lib/syntax.ml[274,9611+2]..lib/syntax.ml[274,9611+35])
+                XAPointFree/1411
+                [
+                  core_type (lib/syntax.ml[274,9611+19]..lib/syntax.ml[274,9611+35])
+                    Ttyp_constr "option/10!"
+                    [
+                      core_type (lib/syntax.ml[274,9611+19]..lib/syntax.ml[274,9611+28])
+                        Ttyp_constr "Gbnf_parser!.Stretch.t"
+                        []
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[279,9834+0]..lib/syntax.ml[287,10030+3])
+    Tstr_type Rec
+    [
+      type_declaration rule/1412 (lib/syntax.ml[279,9834+0]..lib/syntax.ml[287,10030+3])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (lib/syntax.ml[281,9850+4]..lib/syntax.ml[281,9850+22])
+                Immutable
+                rule_public/1413                core_type (lib/syntax.ml[281,9850+17]..lib/syntax.ml[281,9850+21])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[281,9850+17]..lib/syntax.ml[281,9850+21])
+                    Ttyp_constr "bool/5!"
+                    []
+              (lib/syntax.ml[282,9873+4]..lib/syntax.ml[282,9873+22])
+                Immutable
+                rule_inline/1414                core_type (lib/syntax.ml[282,9873+17]..lib/syntax.ml[282,9873+21])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[282,9873+17]..lib/syntax.ml[282,9873+21])
+                    Ttyp_constr "bool/5!"
+                    []
+              (lib/syntax.ml[283,9896+4]..lib/syntax.ml[283,9896+29])
+                Immutable
+                rule_lhs/1415                core_type (lib/syntax.ml[283,9896+14]..lib/syntax.ml[283,9896+28])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[283,9896+14]..lib/syntax.ml[283,9896+28])
+                    Ttyp_constr "located/1132"
+                    [
+                      core_type (lib/syntax.ml[283,9896+14]..lib/syntax.ml[283,9896+20])
+                        Ttyp_constr "symbol/1205"
+                        []
+                    ]
+              (lib/syntax.ml[285,9965+4]..lib/syntax.ml[285,9965+38])
+                Immutable
+                rule_formals/1416                core_type (lib/syntax.ml[285,9965+18]..lib/syntax.ml[285,9965+37])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[285,9965+18]..lib/syntax.ml[285,9965+37])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/syntax.ml[285,9965+18]..lib/syntax.ml[285,9965+32])
+                        Ttyp_constr "located/1132"
+                        [
+                          core_type (lib/syntax.ml[285,9965+18]..lib/syntax.ml[285,9965+24])
+                            Ttyp_constr "symbol/1205"
+                            []
+                        ]
+                    ]
+              (lib/syntax.ml[286,10004+4]..lib/syntax.ml[286,10004+25])
+                Immutable
+                rule_rhs/1417                core_type (lib/syntax.ml[286,10004+14]..lib/syntax.ml[286,10004+24])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[286,10004+14]..lib/syntax.ml[286,10004+24])
+                    Ttyp_constr "expression/1397"
+                    []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[294,10239+0]..lib/syntax.ml[330,11044+55])
+    Tstr_type Rec
+    [
+      type_declaration declaration/1418 (lib/syntax.ml[294,10239+0]..lib/syntax.ml[330,11044+55])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/syntax.ml[298,10286+2]..lib/syntax.ml[298,10286+22])
+                DCode/1419
+                [
+                  core_type (lib/syntax.ml[298,10286+13]..lib/syntax.ml[298,10286+22])
+                    Ttyp_constr "Gbnf_parser!.Stretch.t"
+                    []
+                ]
+                None
+              (lib/syntax.ml[302,10350+2]..lib/syntax.ml[302,10350+35])
+                DParameter/1420
+                [
+                  core_type (lib/syntax.ml[302,10350+18]..lib/syntax.ml[302,10350+35])
+                    Ttyp_constr "Gbnf_parser!.Stretch.ocamltype"
+                    []
+                ]
+                None
+              (lib/syntax.ml[306,10458+2]..lib/syntax.ml[306,10458+70])
+                DToken/1421
+                [
+                  core_type (lib/syntax.ml[306,10458+14]..lib/syntax.ml[306,10458+38])
+                    Ttyp_constr "option/10!"
+                    [
+                      core_type (lib/syntax.ml[306,10458+14]..lib/syntax.ml[306,10458+31])
+                        Ttyp_constr "Gbnf_parser!.Stretch.ocamltype"
+                        []
+                    ]
+                  core_type (lib/syntax.ml[306,10458+41]..lib/syntax.ml[306,10458+49])
+                    Ttyp_constr "terminal/1203"
+                    []
+                  core_type (lib/syntax.ml[306,10458+52]..lib/syntax.ml[306,10458+57])
+                    Ttyp_constr "alias/1206"
+                    []
+                  core_type (lib/syntax.ml[306,10458+60]..lib/syntax.ml[306,10458+70])
+                    Ttyp_constr "attributes/1280"
+                    []
+                ]
+                None
+              (lib/syntax.ml[310,10567+2]..lib/syntax.ml[310,10567+25])
+                DStart/1422
+                [
+                  core_type (lib/syntax.ml[310,10567+14]..lib/syntax.ml[310,10567+25])
+                    Ttyp_constr "nonterminal/1204"
+                    []
+                ]
+                None
+              (lib/syntax.ml[314,10645+2]..lib/syntax.ml[314,10645+73])
+                DTokenProperties/1423
+                [
+                  core_type (lib/syntax.ml[314,10645+24]..lib/syntax.ml[314,10645+32])
+                    Ttyp_constr "terminal/1203"
+                    []
+                  core_type (lib/syntax.ml[314,10645+35]..lib/syntax.ml[314,10645+54])
+                    Ttyp_constr "token_associativity/1281"
+                    []
+                  core_type (lib/syntax.ml[314,10645+57]..lib/syntax.ml[314,10645+73])
+                    Ttyp_constr "precedence_level/1286"
+                    []
+                ]
+                None
+              (lib/syntax.ml[318,10749+2]..lib/syntax.ml[318,10749+42])
+                DType/1424
+                [
+                  core_type (lib/syntax.ml[318,10749+13]..lib/syntax.ml[318,10749+30])
+                    Ttyp_constr "Gbnf_parser!.Stretch.ocamltype"
+                    []
+                  core_type (lib/syntax.ml[318,10749+33]..lib/syntax.ml[318,10749+42])
+                    Ttyp_constr "parameter/1378"
+                    []
+                ]
+                None
+              (lib/syntax.ml[322,10841+2]..lib/syntax.ml[322,10841+34])
+                DGrammarAttribute/1425
+                [
+                  core_type (lib/syntax.ml[322,10841+25]..lib/syntax.ml[322,10841+34])
+                    Ttyp_constr "attribute/1279"
+                    []
+                ]
+                None
+              (lib/syntax.ml[326,10950+2]..lib/syntax.ml[326,10950+52])
+                DSymbolAttributes/1426
+                [
+                  core_type (lib/syntax.ml[326,10950+25]..lib/syntax.ml[326,10950+39])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/syntax.ml[326,10950+25]..lib/syntax.ml[326,10950+34])
+                        Ttyp_constr "parameter/1378"
+                        []
+                    ]
+                  core_type (lib/syntax.ml[326,10950+42]..lib/syntax.ml[326,10950+52])
+                    Ttyp_constr "attributes/1280"
+                    []
+                ]
+                None
+              (lib/syntax.ml[330,11044+2]..lib/syntax.ml[330,11044+55])
+                DOnErrorReduce/1427
+                [
+                  core_type (lib/syntax.ml[330,11044+22]..lib/syntax.ml[330,11044+31])
+                    Ttyp_constr "parameter/1378"
+                    []
+                  core_type (lib/syntax.ml[330,11044+34]..lib/syntax.ml[330,11044+55])
+                    Ttyp_constr "on_error_reduce_level/1377"
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[336,11230+0]..lib/syntax.ml[342,11467+5])
+    Tstr_type Rec
+    [
+      type_declaration partial_grammar/1428 (lib/syntax.ml[336,11230+0]..lib/syntax.ml[342,11467+5])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (lib/syntax.ml[338,11259+6]..lib/syntax.ml[338,11259+38])
+                Immutable
+                pg_filename/1429                core_type (lib/syntax.ml[338,11259+29]..lib/syntax.ml[338,11259+37])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[338,11259+29]..lib/syntax.ml[338,11259+37])
+                    Ttyp_constr "filename/1208"
+                    []
+              (lib/syntax.ml[341,11411+7]..lib/syntax.ml[341,11411+54])
+                Immutable
+                pg_rules/1430                core_type (lib/syntax.ml[341,11411+30]..lib/syntax.ml[341,11411+53])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[341,11411+30]..lib/syntax.ml[341,11411+53])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/syntax.ml[341,11411+30]..lib/syntax.ml[341,11411+48])
+                        Ttyp_constr "parameterized_rule/1387"
+                        []
+                    ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[358,12187+1]..lib/syntax.ml[370,12769+5])
+    Tstr_type Rec
+    [
+      type_declaration grammar/1431 (lib/syntax.ml[358,12187+1]..lib/syntax.ml[370,12769+5])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (lib/syntax.ml[360,12209+6]..lib/syntax.ml[360,12209+44])
+                Immutable
+                p_preludes/1432                core_type (lib/syntax.ml[360,12209+29]..lib/syntax.ml[360,12209+43])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[360,12209+29]..lib/syntax.ml[360,12209+43])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/syntax.ml[360,12209+29]..lib/syntax.ml[360,12209+38])
+                        Ttyp_constr "Gbnf_parser!.Stretch.t"
+                        []
+                    ]
+              (lib/syntax.ml[361,12254+6]..lib/syntax.ml[361,12254+43])
+                Immutable
+                p_postludes/1433                core_type (lib/syntax.ml[361,12254+29]..lib/syntax.ml[361,12254+42])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[361,12254+29]..lib/syntax.ml[361,12254+42])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/syntax.ml[361,12254+29]..lib/syntax.ml[361,12254+37])
+                        Ttyp_constr "postlude/1209"
+                        []
+                    ]
+              (lib/syntax.ml[362,12298+6]..lib/syntax.ml[362,12298+44])
+                Immutable
+                p_parameters/1434                core_type (lib/syntax.ml[362,12298+29]..lib/syntax.ml[362,12298+43])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[362,12298+29]..lib/syntax.ml[362,12298+43])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/syntax.ml[362,12298+29]..lib/syntax.ml[362,12298+38])
+                        Ttyp_constr "Gbnf_parser!.Stretch.t"
+                        []
+                    ]
+              (lib/syntax.ml[363,12343+6]..lib/syntax.ml[363,12343+53])
+                Immutable
+                p_start_symbols/1483                core_type (lib/syntax.ml[363,12343+29]..lib/syntax.ml[363,12343+52])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[363,12343+29]..lib/syntax.ml[363,12343+52])
+                    Ttyp_constr "Gbnf_parser!.StringMap.t"
+                    [
+                      core_type (lib/syntax.ml[363,12343+29]..lib/syntax.ml[363,12343+40])
+                        Ttyp_constr "Gbnf_parser!.Positions.t"
+                        []
+                    ]
+              (lib/syntax.ml[364,12397+6]..lib/syntax.ml[364,12397+74])
+                Immutable
+                p_types/1484                core_type (lib/syntax.ml[364,12397+29]..lib/syntax.ml[364,12397+73])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[364,12397+29]..lib/syntax.ml[364,12397+73])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/syntax.ml[364,12397+30]..lib/syntax.ml[364,12397+67])
+                        Ttyp_tuple
+                        [
+                          core_type (lib/syntax.ml[364,12397+30]..lib/syntax.ml[364,12397+39])
+                            Ttyp_constr "parameter/1378"
+                            []
+                          core_type (lib/syntax.ml[364,12397+42]..lib/syntax.ml[364,12397+67])
+                            Ttyp_constr "located/1132"
+                            [
+                              core_type (lib/syntax.ml[364,12397+42]..lib/syntax.ml[364,12397+59])
+                                Ttyp_constr "Gbnf_parser!.Stretch.ocamltype"
+                                []
+                            ]
+                        ]
+                    ]
+              (lib/syntax.ml[365,12472+6]..lib/syntax.ml[365,12472+58])
+                Immutable
+                p_tokens/1485                core_type (lib/syntax.ml[365,12472+29]..lib/syntax.ml[365,12472+57])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[365,12472+29]..lib/syntax.ml[365,12472+57])
+                    Ttyp_constr "Gbnf_parser!.StringMap.t"
+                    [
+                      core_type (lib/syntax.ml[365,12472+29]..lib/syntax.ml[365,12472+45])
+                        Ttyp_constr "token_properties/1365"
+                        []
+                    ]
+              (lib/syntax.ml[366,12531+6]..lib/syntax.ml[366,12531+70])
+                Immutable
+                p_on_error_reduce/1486                core_type (lib/syntax.ml[366,12531+29]..lib/syntax.ml[366,12531+69])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[366,12531+29]..lib/syntax.ml[366,12531+69])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/syntax.ml[366,12531+30]..lib/syntax.ml[366,12531+63])
+                        Ttyp_tuple
+                        [
+                          core_type (lib/syntax.ml[366,12531+30]..lib/syntax.ml[366,12531+39])
+                            Ttyp_constr "parameter/1378"
+                            []
+                          core_type (lib/syntax.ml[366,12531+42]..lib/syntax.ml[366,12531+63])
+                            Ttyp_constr "on_error_reduce_level/1377"
+                            []
+                        ]
+                    ]
+              (lib/syntax.ml[367,12602+6]..lib/syntax.ml[367,12602+40])
+                Immutable
+                p_grammar_attributes/1487                core_type (lib/syntax.ml[367,12602+29]..lib/syntax.ml[367,12602+39])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[367,12602+29]..lib/syntax.ml[367,12602+39])
+                    Ttyp_constr "attributes/1280"
+                    []
+              (lib/syntax.ml[368,12643+6]..lib/syntax.ml[368,12643+64])
+                Immutable
+                p_symbol_attributes/1488                core_type (lib/syntax.ml[368,12643+29]..lib/syntax.ml[368,12643+63])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[368,12643+29]..lib/syntax.ml[368,12643+63])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (lib/syntax.ml[368,12643+30]..lib/syntax.ml[368,12643+57])
+                        Ttyp_tuple
+                        [
+                          core_type (lib/syntax.ml[368,12643+30]..lib/syntax.ml[368,12643+44])
+                            Ttyp_constr "list/9!"
+                            [
+                              core_type (lib/syntax.ml[368,12643+30]..lib/syntax.ml[368,12643+39])
+                                Ttyp_constr "parameter/1378"
+                                []
+                            ]
+                          core_type (lib/syntax.ml[368,12643+47]..lib/syntax.ml[368,12643+57])
+                            Ttyp_constr "attributes/1280"
+                            []
+                        ]
+                    ]
+              (lib/syntax.ml[369,12708+6]..lib/syntax.ml[369,12708+60])
+                Immutable
+                p_rules/1489                core_type (lib/syntax.ml[369,12708+29]..lib/syntax.ml[369,12708+59])
+                  Ttyp_poly
+                  core_type (lib/syntax.ml[369,12708+29]..lib/syntax.ml[369,12708+59])
+                    Ttyp_constr "Gbnf_parser!.StringMap.t"
+                    [
+                      core_type (lib/syntax.ml[369,12708+29]..lib/syntax.ml[369,12708+47])
+                        Ttyp_constr "parameterized_rule/1387"
+                        []
+                    ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[373,12777+1]..lib/syntax.ml[373,12777+44])
+    Tstr_type Rec
+    [
+      type_declaration mystringpos/1630 (lib/syntax.ml[373,12777+1]..lib/syntax.ml[373,12777+44])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (lib/syntax.ml[373,12777+20]..lib/syntax.ml[373,12777+44])
+              Ttyp_constr "Gbnf_parser!.Positions.located"
+              [
+                core_type (lib/syntax.ml[373,12777+20]..lib/syntax.ml[373,12777+26])
+                  Ttyp_constr "string/15!"
+                  []
+              ]
+    ]
+  structure_item (lib/syntax.ml[375,12824+1]..lib/syntax.ml[384,13006+31])
+    Tstr_type Rec
+    [
+      type_declaration myfactor/1631 (lib/syntax.ml[375,12824+1]..lib/syntax.ml[384,13006+31])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (lib/syntax.ml[376,12841+3]..lib/syntax.ml[376,12841+27])
+                SFactor/1632
+                [
+                  core_type (lib/syntax.ml[376,12841+16]..lib/syntax.ml[376,12841+27])
+                    Ttyp_constr "mystringpos/1630"
+                    []
+                ]
+                None
+              (lib/syntax.ml[377,12869+3]..lib/syntax.ml[377,12869+41])
+                CFactor/1633
+                [
+                  core_type (lib/syntax.ml[377,12869+16]..lib/syntax.ml[377,12869+27])
+                    Ttyp_constr "mystringpos/1630"
+                    []
+                  core_type (lib/syntax.ml[377,12869+30]..lib/syntax.ml[377,12869+41])
+                    Ttyp_constr "mystringpos/1630"
+                    []
+                ]
+                None
+              (lib/syntax.ml[378,12911+3]..lib/syntax.ml[378,12911+25])
+                NFactor/1634
+                [
+                  core_type (lib/syntax.ml[378,12911+17]..lib/syntax.ml[378,12911+25])
+                    Ttyp_constr "myfactor/1631"
+                    []
+                ]
+                None
+              (lib/syntax.ml[379,12937+3]..lib/syntax.ml[379,12937+9])
+                Star/1635
+                []
+                None
+              (lib/syntax.ml[380,12947+3]..lib/syntax.ml[380,12947+13])
+                Question/1636
+                []
+                None
+              (lib/syntax.ml[381,12961+3]..lib/syntax.ml[381,12961+9])
+                Plus/1637
+                []
+                None
+              (lib/syntax.ml[382,12971+3]..lib/syntax.ml[382,12971+19])
+                CharInt/1638
+                [
+                  core_type (lib/syntax.ml[382,12971+16]..lib/syntax.ml[382,12971+19])
+                    Ttyp_constr "int/1!"
+                    []
+                ]
+                None
+              (lib/syntax.ml[383,12991+3]..lib/syntax.ml[383,12991+14])
+                CharClass/1639
+                []
+                None
+              (lib/syntax.ml[384,13006+3]..lib/syntax.ml[384,13006+31])
+                Rule/1640
+                [
+                  core_type (lib/syntax.ml[384,13006+13]..lib/syntax.ml[384,13006+31])
+                    Ttyp_constr "parameterized_rule/1387"
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+          Texp_apply
+          expression (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+            Texp_ident "Ppx_inline_test_lib!.unset_lib"
+          [
+            <arg>
+              Nolabel
+              expression (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+                Texp_constant Const_string("gbnf_parser",(lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost,None)
+          ]
+    ]
+  structure_item (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+          Texp_apply
+          expression (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+            Texp_ident "Expect_test_collector!.Current_file.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+          Texp_apply
+          expression (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+            Texp_ident "Ppx_bench_lib!.Benchmark_accumulator.Current_libname.unset"
+          [
+            <arg>
+              Nolabel
+              expression (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+          Texp_apply
+          expression (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+            Texp_ident "Ppx_module_timer_runtime!.record_until"
+          [
+            <arg>
+              Nolabel
+              expression (lib/syntax.ml[384,13006+31]..lib/syntax.ml[384,13006+31]) ghost
+                Texp_ident "Ppx_module_timer_runtime!.__MODULE__"
+          ]
+    ]
+]
+
+{<Gbnf_parser__Syntax>
+ "action"[type] -> <Gbnf_parser__Syntax.8>;
+ "alias"[type] -> <Gbnf_parser__Syntax.4>;
+ "attribute"[type] -> <Gbnf_parser__Syntax.9>;
+ "attributes"[type] -> <Gbnf_parser__Syntax.10>;
+ "branch"[type] -> <Gbnf_parser__Syntax.53>;
+ "branch_prec_annotation"[type] -> <Gbnf_parser__Syntax.28>;
+ "branch_production_level"[type] -> <Gbnf_parser__Syntax.29>;
+ "choice_expression"[type] -> <Gbnf_parser__Syntax.52>;
+ "declaration"[type] -> <Gbnf_parser__Syntax.72>;
+ "expression"[type] -> <Gbnf_parser__Syntax.51>;
+ "extended_action"[type] -> <Gbnf_parser__Syntax.57>;
+ "filename"[type] -> <Gbnf_parser__Syntax.6>;
+ "grammar"[type] -> <Gbnf_parser__Syntax.85>;
+ "identifier"[type] -> <Gbnf_parser__Syntax.5>;
+ "located"[type] -> <Gbnf_parser__Syntax.0>;
+ "myfactor"[type] -> <Gbnf_parser__Syntax.97>;
+ "mystringpos"[type] -> <Gbnf_parser__Syntax.96>;
+ "nonterminal"[type] -> <Gbnf_parser__Syntax.2>;
+ "on_error_reduce_level"[type] -> <Gbnf_parser__Syntax.31>;
+ "parameter"[type] -> <Gbnf_parser__Syntax.32>;
+ "parameterized_branch"[type] -> <Gbnf_parser__Syntax.35>;
+ "parameterized_rule"[type] -> <Gbnf_parser__Syntax.41>;
+ "parameters"[type] -> <Gbnf_parser__Syntax.33>;
+ "partial_grammar"[type] -> <Gbnf_parser__Syntax.82>;
+ "pattern"[type] -> <Gbnf_parser__Syntax.45>;
+ "postlude"[type] -> <Gbnf_parser__Syntax.7>;
+ "precedence_level"[type] -> <Gbnf_parser__Syntax.16>;
+ "producer"[type] -> <Gbnf_parser__Syntax.34>;
+ "raw_action"[type] -> <Gbnf_parser__Syntax.50>;
+ "raw_seq_expression"[type] -> <Gbnf_parser__Syntax.55>;
+ "rule"[type] -> <Gbnf_parser__Syntax.66>;
+ "seq_expression"[type] -> <Gbnf_parser__Syntax.54>;
+ "symbol"[type] -> <Gbnf_parser__Syntax.3>;
+ "symbol_expression"[type] -> <Gbnf_parser__Syntax.56>;
+ "terminal"[type] -> <Gbnf_parser__Syntax.1>;
+ "token_associativity"[type] -> <Gbnf_parser__Syntax.11>;
+ "token_properties"[type] -> <Gbnf_parser__Syntax.19>;
+ }
+
+(seq
+  (let
+    (*match*/1679 =
+       (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Syntax"))
+    0)
+  (let
+    (*match*/1681 =
+       (apply
+         (field_imm 0
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/1683 =
+       (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+         "lib/syntax.ml"))
+    0)
+  (let
+    (*match*/1685 =
+       (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "syntax.ml"))
+    0)
+  (let
+    (*match*/1687 =
+       (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+    0)
+  (let
+    (*match*/1689 =
+       (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!))) 0))
+    0)
+  (let
+    (*match*/1691 =
+       (apply
+         (field_imm 1
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         0))
+    0)
+  (let
+    (*match*/1693 =
+       (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Syntax"))
+    0)
+  0)
+(seq
+  (let
+    (*match*/1679 =
+       (apply (field_imm 3 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Syntax"))
+    0)
+  (let
+    (*match*/1681 =
+       (apply
+         (field_imm 0
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         "gbnf_parser"))
+    0)
+  (let
+    (*match*/1683 =
+       (apply (field_imm 0 (field_imm 5 (global Expect_test_collector!)))
+         "lib/syntax.ml"))
+    0)
+  (let
+    (*match*/1685 =
+       (apply (field_imm 4 (global Ppx_inline_test_lib!)) "gbnf_parser"
+         "syntax.ml"))
+    0)
+  (let
+    (*match*/1687 =
+       (apply (field_imm 5 (global Ppx_inline_test_lib!)) "gbnf_parser"))
+    0)
+  (let
+    (*match*/1689 =
+       (apply (field_imm 1 (field_imm 5 (global Expect_test_collector!))) 0))
+    0)
+  (let
+    (*match*/1691 =
+       (apply
+         (field_imm 1
+           (field_imm 0 (global Ppx_bench_lib__Benchmark_accumulator!)))
+         0))
+    0)
+  (let
+    (*match*/1693 =
+       (apply (field_imm 4 (global Ppx_module_timer_runtime!))
+         #"Gbnf_parser__Syntax"))
+    0)
+  0)
